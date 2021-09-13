@@ -63,6 +63,7 @@ namespace CLASE05.Formularios.Usuarios
             // btn_buscar
             // 
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
+            this.btn_buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_patron_KeyPress);
             // 
             // btn_alta
             // 
@@ -180,6 +181,7 @@ namespace CLASE05.Formularios.Usuarios
             this.txt_id_usuario.Size = new System.Drawing.Size(48, 25);
             this.txt_id_usuario.TabIndex = 17;
             this.txt_id_usuario.Click += new System.EventHandler(this.txt_id_usuario_Click);
+            this.txt_id_usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_patron_KeyPress);
             // 
             // label2
             // 
@@ -203,6 +205,7 @@ namespace CLASE05.Formularios.Usuarios
             this.txt_patron.Size = new System.Drawing.Size(129, 25);
             this.txt_patron.TabIndex = 11;
             this.txt_patron.Click += new System.EventHandler(this.txt_patron_Click);
+            this.txt_patron.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_patron_KeyPress);
             // 
             // grid_usuarios
             // 
@@ -227,7 +230,7 @@ namespace CLASE05.Formularios.Usuarios
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(669, 439);
             this.Controls.Add(this.grid_usuarios);
-            this.Location = new System.Drawing.Point(32, 58);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Frm_ABM_Usuario_Entrada";
             this.Load += new System.EventHandler(this.Frm_ABM_Usuario_Load);
             this.Controls.SetChildIndex(this.btn_consultar, 0);

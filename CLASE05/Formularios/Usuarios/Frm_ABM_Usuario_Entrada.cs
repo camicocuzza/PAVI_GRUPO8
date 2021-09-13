@@ -149,7 +149,31 @@ namespace CLASE05.Formularios.Usuarios
             txt_id_usuario.SelectionStart = txt_id_usuario.Text.Length;
         }
 
-        
+        private void txt_patron_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NE_Usuarios usu = new NE_Usuarios();
+
+            string columna = "";
+
+            if (txt_patron.Text != string.Empty)
+            {
+                if (rb_n_usuario.Checked == true)
+                    columna = rb_n_usuario.Text;
+
+                grid_usuarios.Cargar(usu.BuscarUsuario(txt_patron.Text, columna));
+                if (grid_usuarios.Rows.Count == 0)
+                    MessageBox.Show("No se encontró ningún usuario", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (txt_id_usuario.Text != string.Empty)
+            {
+                grid_usuarios.Cargar(usu.BuscarUsuario(txt_id_usuario.Text));
+                if (grid_usuarios.Rows.Count == 0)
+                    MessageBox.Show("No se encontró ningún usuario", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            MessageBox.Show("No hay parámetros de búsqueda", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
     }
 }
 
