@@ -11,6 +11,7 @@ namespace CLASE05.Formularios.Usuarios
 {
     public partial class Frm_ABM_Usuario_Entrada : CLASE05.Formularios.FrmBASE.FrmBase_ABM_Entrada
     {
+        NE_Usuarios usu = new NE_Usuarios();
         public Frm_ABM_Usuario_Entrada()
         {
             InitializeComponent();
@@ -23,11 +24,14 @@ namespace CLASE05.Formularios.Usuarios
 
         private void btn_blan_patron_Click(object sender, EventArgs e)
         {
-            this.txt_patron.Text = string.Empty;
-            this.txt_id_usuario.Text = string.Empty;
-            txt_id_usuario.Enabled = false;
-            txt_patron.Enabled = false;
-           // btn_buscar.Enabled = true;
+            txt_patron.Text = string.Empty;
+            txt_id_usuario.Text = string.Empty;
+            rb_id_usuario.Checked = false;
+            rb_n_usuario.Checked = false;
+
+            //txt_id_usuario.Enabled = false;
+            //txt_patron.Enabled = false;
+            // btn_buscar.Enabled = true;
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
@@ -35,27 +39,38 @@ namespace CLASE05.Formularios.Usuarios
             NE_Usuarios usu = new NE_Usuarios();
 
             string columna = "";
+            MaskedTextBox cuadroTexto = null;
 
-            if (txt_patron.Text != string.Empty)
+            if (rb_id_usuario.Checked == false & rb_n_usuario.Checked == false)
             {
-                if (rb_n_usuario.Checked == true)
-                    columna = rb_n_usuario.Text;
-                
-                grid_usuarios.Cargar(usu.BuscarUsuario(txt_patron.Text, columna));
-                if (grid_usuarios.Rows.Count == 0)
-                    MessageBox.Show("Búsqueda sin resultados", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Marcar atributo de búsqueda");
+                grid_usuarios.Cargar(usu.BuscarUsuario("", rb_id_usuario.Text));
                 return;
             }
-            if (txt_id_usuario.Text != string.Empty)
+            if (rb_n_usuario.Checked == true)
             {
-                grid_usuarios.Cargar(usu.BuscarUsuario(txt_id_usuario.Text));
-                if (grid_usuarios.Rows.Count == 0)
-                    MessageBox.Show("Búsqueda sin resultados", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                columna = rb_n_usuario.Text;
+                cuadroTexto = txt_patron;
             }
-            MessageBox.Show("No hay parámetros de búsqueda", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-           // btn_buscar.Enabled = false;
+            if (rb_id_usuario.Checked == true)
+            {
+                columna = rb_id_usuario.Text;
+                cuadroTexto = txt_id_usuario;
+            }
+            if (cuadroTexto.Text == "")
+            {
+                MessageBox.Show("Ingresar patrón de búsqueda");
+            }
+            else
+            {
+                grid_usuarios.Cargar(usu.BuscarUsuario(cuadroTexto.Text, columna));
+                if (grid_usuarios.Rows.Count == 0)
+                {
+                    MessageBox.Show("Búsqueda sin resultados", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+            }
+            return;                
         }
 
         private void btn_alta_Click(object sender, EventArgs e)
@@ -121,22 +136,22 @@ namespace CLASE05.Formularios.Usuarios
 
         private void rb_n_usuario_CheckedChanged(object sender, EventArgs e)
         {
-            if (rb_n_usuario.Checked == true)
-            {
-                txt_id_usuario.Enabled = false;
-                txt_id_usuario.Clear();
-                txt_patron.Enabled = true;
-            }
+            //if (rb_n_usuario.Checked == true)
+            //{
+            //    txt_id_usuario.Enabled = false;
+            //    txt_id_usuario.Clear();
+            //    txt_patron.Enabled = true;
+            //}
         }
         
         private void rb_id_usuario_CheckedChanged(object sender, EventArgs e)
         {
-            if (rb_id_usuario.Checked == true)
-            {
-                txt_id_usuario.Enabled = true;
-                txt_patron.Enabled = false;
-                txt_patron.Clear();
-            }
+            //if (rb_id_usuario.Checked == true)
+            //{
+            //    txt_id_usuario.Enabled = true;
+            //    txt_patron.Enabled = false;
+            //    txt_patron.Clear();
+            //}
         }
         private void txt_patron_Click(object sender, EventArgs e)
         {
@@ -150,28 +165,44 @@ namespace CLASE05.Formularios.Usuarios
 
         private void txt_patron_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NE_Usuarios usu = new NE_Usuarios();
-
-            string columna = "";
-
-            if (txt_patron.Text != string.Empty)
+            if (e.KeyChar == (char)13)
             {
+                NE_Usuarios usu = new NE_Usuarios();
+
+                string columna = "";
+                MaskedTextBox cuadroTexto = null;
+
+                if (rb_id_usuario.Checked == false & rb_n_usuario.Checked == false)
+                {
+                    //MessageBox.Show("Marcar atributo de búsqueda");
+                    grid_usuarios.Cargar(usu.BuscarUsuario("", rb_id_usuario.Text));
+                    return;
+                }
                 if (rb_n_usuario.Checked == true)
+                {
                     columna = rb_n_usuario.Text;
-
-                grid_usuarios.Cargar(usu.BuscarUsuario(txt_patron.Text, columna));
-                if (grid_usuarios.Rows.Count == 0)
-                    MessageBox.Show("No se encontró ningún usuario", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cuadroTexto = txt_patron;
+                }
+                if (rb_id_usuario.Checked == true)
+                {
+                    columna = rb_id_usuario.Text;
+                    cuadroTexto = txt_id_usuario;
+                }
+                if (cuadroTexto.Text == "")
+                {
+                    MessageBox.Show("Ingresar patrón de búsqueda");
+                }
+                else
+                {
+                    grid_usuarios.Cargar(usu.BuscarUsuario(cuadroTexto.Text, columna));
+                    if (grid_usuarios.Rows.Count == 0)
+                    {
+                        MessageBox.Show("Búsqueda sin resultados", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                }
                 return;
             }
-            if (txt_id_usuario.Text != string.Empty)
-            {
-                grid_usuarios.Cargar(usu.BuscarUsuario(txt_id_usuario.Text));
-                if (grid_usuarios.Rows.Count == 0)
-                    MessageBox.Show("No se encontró ningún usuario", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            MessageBox.Show("No hay parámetros de búsqueda", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }

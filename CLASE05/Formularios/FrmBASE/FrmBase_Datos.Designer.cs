@@ -42,11 +42,14 @@ namespace CLASE05.Formularios.FrmBASE
             // 
             // btn_minimizar
             // 
+            this.btn_minimizar.Enabled = false;
             this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_minimizar.Location = new System.Drawing.Point(325, 2);
             // 
             // btn_maximizar
             // 
+            this.btn_maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_maximizar.Enabled = false;
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_maximizar.Location = new System.Drawing.Point(360, 2);
             // 

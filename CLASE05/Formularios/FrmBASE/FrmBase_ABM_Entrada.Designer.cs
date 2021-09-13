@@ -48,11 +48,13 @@
             // btn_minimizar
             // 
             this.btn_minimizar.BackgroundImage = global::CLASE05.Properties.Resources.btn_minimizar;
+            this.btn_minimizar.Enabled = false;
             this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_minimizar.Location = new System.Drawing.Point(564, 1);
             // 
             // btn_maximizar
             // 
+            this.btn_maximizar.Enabled = false;
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_maximizar.Location = new System.Drawing.Point(599, 1);
             // 
@@ -69,19 +71,21 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.AutoSize = true;
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.groupBox1.Controls.Add(this.btn_buscar);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft JhengHei", 12.75F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.Color.Gainsboro;
             this.groupBox1.Location = new System.Drawing.Point(12, 81);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(645, 113);
+            this.groupBox1.Size = new System.Drawing.Size(645, 136);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Restricciones de Búsqueda";
             // 
             // btn_buscar
             // 
+            this.btn_buscar.AutoSize = true;
             this.btn_buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.btn_buscar.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold);
             this.btn_buscar.ForeColor = System.Drawing.Color.Silver;
@@ -94,6 +98,7 @@
             // 
             // btn_alta
             // 
+            this.btn_alta.AutoSize = true;
             this.btn_alta.BackColor = System.Drawing.Color.Transparent;
             this.btn_alta.BackgroundImage = global::CLASE05.Properties.Resources.btn_añadir__8_;
             this.btn_alta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -111,6 +116,7 @@
             // 
             // btn_modificar
             // 
+            this.btn_modificar.AutoSize = true;
             this.btn_modificar.BackColor = System.Drawing.Color.Transparent;
             this.btn_modificar.BackgroundImage = global::CLASE05.Properties.Resources.btn_modificar__1_;
             this.btn_modificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -128,6 +134,7 @@
             // 
             // btn_borrar
             // 
+            this.btn_borrar.AutoSize = true;
             this.btn_borrar.BackColor = System.Drawing.Color.Transparent;
             this.btn_borrar.BackgroundImage = global::CLASE05.Properties.Resources.btn_eliminar__2_;
             this.btn_borrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -145,6 +152,7 @@
             // 
             // btn_consultar
             // 
+            this.btn_consultar.AutoSize = true;
             this.btn_consultar.BackColor = System.Drawing.Color.Transparent;
             this.btn_consultar.BackgroundImage = global::CLASE05.Properties.Resources.btn_consultar__3_;
             this.btn_consultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -163,6 +171,7 @@
             // FrmBase_ABM_Entrada
             // 
             this._FormularioMovil = true;
+            this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(669, 439);
@@ -186,6 +195,7 @@
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
