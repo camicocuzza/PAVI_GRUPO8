@@ -43,9 +43,14 @@ namespace CLASE05.Clases
         {
             BE_Acceso_Datos _BD = new BE_Acceso_Datos();
             seleccion += 1;
-            string sql = @"SELECT e." + _tabla_cargar_pk + ", e." + _tabla_cargar_descriptor + " FROM " + _tabla_cargar_combo + " e";
-            sql += " INNER JOIN " + _tabla_join + " p ON e." + _tabla_join_pk + " = p." + _tabla_join_pk;
-            sql += " WHERE p." + _tabla_join_pk + " = " + seleccion;
+
+            //string sql = @"SELECT e." + _tabla_cargar_pk + ", e." + _tabla_cargar_descriptor + " FROM " + _tabla_cargar_combo + " e";
+            //sql += " INNER JOIN " + _tabla_join + " p ON e." + _tabla_join_pk + " = p." + _tabla_join_pk;
+            //sql += " WHERE p." + _tabla_join_pk + " = " + seleccion;
+
+            string sql = @"SELECT e.id_estado_provincia, e.nombre_estado_provincia 
+                           FROM estado_provincia e INNER JOIN pais p ON e.id_pais = p.id_pais
+                           WHERE p.id_pais = " + seleccion;
 
             //string sql1 = @"SELECT e.id_estado_pais, e.nombre_estado_pais FROM estado_pais e
             //              WHERE E.id_estado_pais = p.id_pais
