@@ -105,6 +105,18 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Clases\TratamientosEspeciales.cs" />
+    <Compile Include="Formularios\Clientes\Frm_ABM_Cliente_Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Clientes\Frm_ABM_Cliente_Entrada.Designer.cs">
+      <DependentUpon>Frm_ABM_Cliente_Entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Clientes\Frm_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Clientes\Frm_Cliente.Designer.cs">
+      <DependentUpon>Frm_Cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmBASE\FrmBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +128,12 @@
     </Compile>
     <Compile Include="Formularios\FrmBASE\FrmBase_ABM_Entrada.Designer.cs">
       <DependentUpon>FrmBase_ABM_Entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmBASE\FrmBase_Datos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmBASE\FrmBase_Datos.Designer.cs">
+      <DependentUpon>FrmBase_Datos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\InicioSistema\Frm_Login.cs">
       <SubType>Form</SubType>
@@ -171,6 +189,7 @@
     <Compile Include="Formularios\Usuarios\Frm_Usuario_Modificacion.Designer.cs">
       <DependentUpon>Frm_Usuario_Modificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Negocios\NE_Clientes.cs" />
     <Compile Include="Negocios\NE_Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -186,11 +205,20 @@
     <EmbeddedResource Include="Clases\TextBox02.resx">
       <DependentUpon>TextBox02.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Clientes\Frm_ABM_Cliente_Entrada.resx">
+      <DependentUpon>Frm_ABM_Cliente_Entrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente.resx">
+      <DependentUpon>Frm_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmBASE\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmBASE\FrmBase_ABM_Entrada.resx">
       <DependentUpon>FrmBase_ABM_Entrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmBASE\FrmBase_Datos.resx">
+      <DependentUpon>FrmBase_Datos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\InicioSistema\Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
@@ -288,5 +316,6 @@
   <ItemGroup>
     <None Include="Resources\btn_consultar %283%29.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -70,7 +70,7 @@ namespace CLASE05.Formularios.Usuarios
             this.lbl_titulo.AutoSize = true;
             this.lbl_titulo.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Bold);
             this.lbl_titulo.ForeColor = System.Drawing.Color.White;
-            this.lbl_titulo.Location = new System.Drawing.Point(12, 42);
+            this.lbl_titulo.Location = new System.Drawing.Point(4, 38);
             this.lbl_titulo.Name = "lbl_titulo";
             this.lbl_titulo.Size = new System.Drawing.Size(81, 31);
             this.lbl_titulo.TabIndex = 25;
@@ -81,7 +81,7 @@ namespace CLASE05.Formularios.Usuarios
             this.txt_password._Ancho = 10;
             this.txt_password._Decimales = 2;
             this.txt_password._Etiqueta = "Password";
-            this.txt_password._Mask = "CCCCCCCCCCCCCCCCCCCC";
+            this.txt_password._Mask = "CCCCCCCCCC";
             this.txt_password._MensajeError = "El password esta vácio";
             this.txt_password._Nombre_campo = null;
             this.txt_password._Nombre_tabla = null;
@@ -104,7 +104,7 @@ namespace CLASE05.Formularios.Usuarios
             this.txt_n_usuario._Ancho = 30;
             this.txt_n_usuario._Decimales = 2;
             this.txt_n_usuario._Etiqueta = "Nombre Usuario";
-            this.txt_n_usuario._Mask = "CCCCCCCCCCCCCCCCCCCC";
+            this.txt_n_usuario._Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
             this.txt_n_usuario._MensajeError = "El nombre del usuario está vácio";
             this.txt_n_usuario._Nombre_campo = "n_usuario";
             this.txt_n_usuario._Nombre_tabla = null;
@@ -162,6 +162,7 @@ namespace CLASE05.Formularios.Usuarios
             // Frm_Usuario
             // 
             this._FormularioMovil = true;
+            this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(432, 384);

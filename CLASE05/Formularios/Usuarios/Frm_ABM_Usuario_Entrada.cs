@@ -43,14 +43,14 @@ namespace CLASE05.Formularios.Usuarios
                 
                 grid_usuarios.Cargar(usu.BuscarUsuario(txt_patron.Text, columna));
                 if (grid_usuarios.Rows.Count == 0)
-                    MessageBox.Show("No se encontró ningún usuario", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Búsqueda sin resultados", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (txt_id_usuario.Text != string.Empty)
             {
                 grid_usuarios.Cargar(usu.BuscarUsuario(txt_id_usuario.Text));
                 if (grid_usuarios.Rows.Count == 0)
-                    MessageBox.Show("No se encontró ningún usuario", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Búsqueda sin resultados", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             MessageBox.Show("No hay parámetros de búsqueda", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -68,12 +68,12 @@ namespace CLASE05.Formularios.Usuarios
         {
             if (grid_usuarios.Rows.Count == 0)
             {
-                MessageBox.Show("Falta buscar usuarios", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Falta buscar registros", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
             if (grid_usuarios.CurrentCell.RowIndex == -1)
             {
-                MessageBox.Show("Falta seleccionar un usuario", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Falta seleccionar un registro", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
 
@@ -85,12 +85,12 @@ namespace CLASE05.Formularios.Usuarios
         {
             if (grid_usuarios.Rows.Count == 0)
             {
-                MessageBox.Show("Falta buscar usuarios", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Falta buscar registros", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
             if (grid_usuarios.CurrentCell.RowIndex == -1)
             {
-                MessageBox.Show("Falta seleccionar un usuario", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Falta seleccionar un registro", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
 
@@ -105,15 +105,14 @@ namespace CLASE05.Formularios.Usuarios
         {
             if (grid_usuarios.Rows.Count == 0)
             {
-                MessageBox.Show("Falta buscar usuarios", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Falta buscar registros", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
             if (grid_usuarios.CurrentCell.RowIndex == -1)
             {
-                MessageBox.Show("Falta seleccionar un usuario", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Falta seleccionar un registro", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
-
             Frm_Usuario_Consulta frm_consulta = new Frm_Usuario_Consulta();
             frm_consulta.id_usuario = grid_usuarios.CurrentRow.Cells[0].Value.ToString();
             frm_consulta.ShowDialog();

@@ -9,7 +9,7 @@ using CLASE05.Negocios;
 
 namespace CLASE05.Formularios.Usuarios
 {
-    public partial class Prof_Frm_ABM_Usuario_Entrada : CLASE05.Formularios.FrmBASE.FrmBase_AMB_Entrada
+    public partial class Prof_Frm_ABM_Usuario_Entrada : CLASE05.Formularios.FrmBASE.FrmBase_ABM_Entrada
     {
 
         public Prof_Frm_ABM_Usuario_Entrada()
