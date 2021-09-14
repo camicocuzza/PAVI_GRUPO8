@@ -68,7 +68,7 @@ namespace CLASE05.Formularios.Clientes
                 cli.ciudad = txt_ciudad._Text;
 
                 cli.Modificar();
-                MessageBox.Show("Se modificó correctamente el cliente " + txt_cuit_cliente.Text, "Importante");
+                MessageBox.Show("Se modificó correctamente el cliente " + txt_razon_social.Text, "Importante");
 
             }
         }
