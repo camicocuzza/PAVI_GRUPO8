@@ -46,8 +46,7 @@ namespace CLASE05.Formularios.Clientes
             // 
             // btn_aceptar
             // 
-            this.btn_aceptar.Location = new System.Drawing.Point(195, 467);
-            this.btn_aceptar.Size = new System.Drawing.Size(95, 28);
+           
             // 
             // lbl_titulo
             // 
@@ -325,7 +324,7 @@ namespace CLASE05.Formularios.Clientes
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Frm_e";
             this.Load += new System.EventHandler(this.Frm_Cliente_Load);
-            this.Controls.SetChildIndex(this.btn_aceptar, 0);
+            
             this.Controls.SetChildIndex(this.txt_nombre_contacto, 0);
             this.Controls.SetChildIndex(this.txt_direccion, 0);
             this.Controls.SetChildIndex(this.txt_razon_social, 0);
