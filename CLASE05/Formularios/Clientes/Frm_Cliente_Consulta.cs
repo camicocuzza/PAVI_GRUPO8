@@ -9,7 +9,7 @@ using CLASE05.Negocios;
 
 namespace CLASE05.Formularios.Clientes
 {
-    public partial class Frm_Cliente_Consulta : CLASE05.Formularios.Clientes.Frm_Cliente
+    public partial class Frm_Cliente_Consulta : CLASE05.Formularios.Clientes.Frm_e
     {
         public Frm_Cliente_Consulta()
         {

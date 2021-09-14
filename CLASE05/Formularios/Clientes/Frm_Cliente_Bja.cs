@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace CLASE05.Formularios.Clientes
 {
-    public partial class Frm_Cliente_Alta : CLASE05.Formularios.Clientes.Frm_Cliente
+    public partial class Frm_Cliente_Baja : CLASE05.Formularios.Clientes.Frm_Cliente
     {
-        public Frm_Cliente_Alta()
+        public Frm_Cliente_Baja()
         {
             InitializeComponent();
         }

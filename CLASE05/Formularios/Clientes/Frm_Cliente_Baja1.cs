@@ -9,17 +9,17 @@ using CLASE05.Clases;
 using CLASE05.Negocios;
 
 namespace CLASE05.Formularios.Clientes
-{   
-    public partial class Frm_Cliente_Baja : CLASE05.Formularios.Clientes.Frm_e
-    { 
+{
+    public partial class Frm_Cliente_Baja1 : CLASE05.Formularios.Clientes.Frm_e
+    {
         NE_Clientes cli = new NE_Clientes();
-        public Frm_Cliente_Baja()
+        public Frm_Cliente_Baja1()
         {
             InitializeComponent();
         }
 
-        private void Frm_Cliente_Baja_Load(object sender, EventArgs e)
-        {          
+        private void Frm_Cliente_Baja1_Load(object sender, EventArgs e)
+        {
             CargarFormulario(cli.RecuperarCliente(cuit_cliente));
         }
         private void CargarFormulario(DataTable tabla)

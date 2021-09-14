@@ -1,7 +1,7 @@
 ﻿
 namespace CLASE05.Formularios.Clientes
 {
-    partial class Frm_Cliente_Alta
+    partial class Frm_Cliente_Baja1
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,7 +29,23 @@ namespace CLASE05.Formularios.Clientes
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cliente_Baja1));
             this.SuspendLayout();
+            // 
+            // cmb_pais
+            // 
+            this.cmb_pais.DisplayMember = "nombre_pais";
+            this.cmb_pais.ValueMember = "id_pais";
+            // 
+            // cmb_estado_provincia
+            // 
+            this.cmb_estado_provincia.DisplayMember = "nombre_estado_provincia";
+            this.cmb_estado_provincia.Text = "";
+            this.cmb_estado_provincia.ValueMember = "id_estado_provincia";
+            // 
+            // btn_aceptar
+            // 
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // btn_cerrar
             // 
@@ -43,12 +59,13 @@ namespace CLASE05.Formularios.Clientes
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             // 
-            // Frm_Cliente_Alta
+            // Frm_Cliente_Baja1
             // 
             this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(516, 516);
-            this.Name = "Frm_Cliente_Alta";
+            this.Name = "Frm_Cliente_Baja1";
+            this.Load += new System.EventHandler(this.Frm_Cliente_Baja1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

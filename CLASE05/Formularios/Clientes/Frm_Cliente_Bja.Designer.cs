@@ -1,7 +1,7 @@
 ﻿
 namespace CLASE05.Formularios.Clientes
 {
-    partial class Frm_Cliente_Alta
+    partial class Frm_Cliente_Baja
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,29 +29,7 @@ namespace CLASE05.Formularios.Clientes
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // btn_cerrar
-            // 
-            this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            // 
-            // btn_minimizar
-            // 
-            this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            // 
-            // btn_maximizar
-            // 
-            this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            // 
-            // Frm_Cliente_Alta
-            // 
-            this._PosiciónVisible = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(516, 516);
-            this.Name = "Frm_Cliente_Alta";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            this.components = new System.ComponentModel.Container();
         }
 
         #endregion
