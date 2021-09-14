@@ -43,6 +43,15 @@ namespace CLASE05.Clases
                         }
                     //}
                 }
+                if (item.GetType().Name == "MaskedTextBox")
+                {
+                    if (((MaskedTextBox)item).Text == string.Empty)
+                    {
+                        MessageBox.Show(((MaskedTextBox)item).Tag.ToString());
+                        ((MaskedTextBox)item).Focus();
+                        return RespuestaValidacion.Error;
+                    }
+                }
             }
             return RespuestaValidacion.Correcta;
         }
