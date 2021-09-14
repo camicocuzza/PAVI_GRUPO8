@@ -1,7 +1,7 @@
 ﻿
 namespace CLASE05.Formularios.Clientes
 {
-    partial class Frm_Cliente_Baja1
+    partial class Frm_Cliente_Consulta
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.Clientes
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cliente_Baja1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cliente_Consulta));
             this.SuspendLayout();
             // 
             // cmb_pais
@@ -47,11 +47,6 @@ namespace CLASE05.Formularios.Clientes
             // 
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
-            // lbl_titulo
-            // 
-            this.lbl_titulo.Size = new System.Drawing.Size(197, 31);
-            this.lbl_titulo.Text = "Bajas de Cliente";
-            // 
             // btn_cerrar
             // 
             this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
@@ -64,14 +59,13 @@ namespace CLASE05.Formularios.Clientes
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             // 
-            // Frm_Cliente_Baja1
+            // Frm_Cliente_Consulta1
             // 
             this._PosiciónVisible = true;
-            this._Titulo = "Bajas de Cliente";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(516, 516);
-            this.Name = "Frm_Cliente_Baja1";
-            this.Load += new System.EventHandler(this.Frm_Cliente_Baja1_Load);
+            this.Name = "Frm_Cliente_Consulta1";
+            this.Load += new System.EventHandler(this.Frm_Cliente_Consulta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

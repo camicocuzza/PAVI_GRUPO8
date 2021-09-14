@@ -97,7 +97,7 @@ namespace CLASE05.Formularios.Clientes
                 MessageBox.Show("Falta seleccionar un registro", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
-            Frm_Cliente_Modificacion1 frm_modificar = new Frm_Cliente_Modificacion1();
+            Frm_Cliente_Modificacion frm_modificar = new Frm_Cliente_Modificacion();
             frm_modificar.cuit_cliente = grid_clientes.CurrentRow.Cells[0].Value.ToString();
             frm_modificar.ShowDialog();
         }
@@ -113,7 +113,7 @@ namespace CLASE05.Formularios.Clientes
                 MessageBox.Show("Falta seleccionar un registro", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
-            Frm_Cliente_Baja1 frm_baja = new Frm_Cliente_Baja1();
+            Frm_Cliente_Baja frm_baja = new Frm_Cliente_Baja();
             frm_baja.cuit_cliente = grid_clientes.CurrentRow.Cells[0].Value.ToString();
             frm_baja.ShowDialog();
 
@@ -131,7 +131,7 @@ namespace CLASE05.Formularios.Clientes
                 MessageBox.Show("Falta seleccionar un registro", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
-            Frm_Cliente_Consulta1 frm_consulta = new Frm_Cliente_Consulta1();
+            Frm_Cliente_Consulta frm_consulta = new Frm_Cliente_Consulta();
             frm_consulta.cuit_cliente = grid_clientes.CurrentRow.Cells[0].Value.ToString();
             frm_consulta.ShowDialog();
         }

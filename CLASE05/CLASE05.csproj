@@ -117,11 +117,11 @@
     <Compile Include="Formularios\Clientes\Frm_Cliente_Alta.Designer.cs">
       <DependentUpon>Frm_Cliente_Alta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Clientes\Frm_Cliente_Baja1.cs">
+    <Compile Include="Formularios\Clientes\Frm_Cliente_Baja.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Clientes\Frm_Cliente_Baja1.Designer.cs">
-      <DependentUpon>Frm_Cliente_Baja1.cs</DependentUpon>
+    <Compile Include="Formularios\Clientes\Frm_Cliente_Baja.Designer.cs">
+      <DependentUpon>Frm_Cliente_Baja.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Clientes\Frm_ABM_Cliente_Entrada.cs">
       <SubType>Form</SubType>
@@ -129,17 +129,17 @@
     <Compile Include="Formularios\Clientes\Frm_ABM_Cliente_Entrada.Designer.cs">
       <DependentUpon>Frm_ABM_Cliente_Entrada.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Clientes\Frm_Cliente_Consulta1.cs">
+    <Compile Include="Formularios\Clientes\Frm_Cliente_Consulta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Clientes\Frm_Cliente_Consulta1.Designer.cs">
-      <DependentUpon>Frm_Cliente_Consulta1.cs</DependentUpon>
+    <Compile Include="Formularios\Clientes\Frm_Cliente_Consulta.Designer.cs">
+      <DependentUpon>Frm_Cliente_Consulta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Clientes\Frm_Cliente_Modificacion1.cs">
+    <Compile Include="Formularios\Clientes\Frm_Cliente_Modificacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Clientes\Frm_Cliente_Modificacion1.Designer.cs">
-      <DependentUpon>Frm_Cliente_Modificacion1.cs</DependentUpon>
+    <Compile Include="Formularios\Clientes\Frm_Cliente_Modificacion.Designer.cs">
+      <DependentUpon>Frm_Cliente_Modificacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Clientes\Frm_e.cs">
       <SubType>Form</SubType>
@@ -238,14 +238,14 @@
     <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente_Alta.resx">
       <DependentUpon>Frm_Cliente_Alta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente_Baja1.resx">
-      <DependentUpon>Frm_Cliente_Baja1.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente_Baja.resx">
+      <DependentUpon>Frm_Cliente_Baja.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente_Consulta1.resx">
-      <DependentUpon>Frm_Cliente_Consulta1.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente_Consulta.resx">
+      <DependentUpon>Frm_Cliente_Consulta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente_Modificacion1.resx">
-      <DependentUpon>Frm_Cliente_Modificacion1.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente_Modificacion.resx">
+      <DependentUpon>Frm_Cliente_Modificacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Clientes\Frm_e.resx">
       <DependentUpon>Frm_e.cs</DependentUpon>

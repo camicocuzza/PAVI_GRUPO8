@@ -1,7 +1,7 @@
 ﻿
 namespace CLASE05.Formularios.Clientes
 {
-    partial class Frm_Cliente_Modificacion1
+    partial class Frm_Cliente_Modificacion
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.Clientes
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cliente_Modificacion1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cliente_Modificacion));
             this.SuspendLayout();
             // 
             // cmb_pais

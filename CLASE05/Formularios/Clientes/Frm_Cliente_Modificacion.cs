@@ -10,15 +10,15 @@ using CLASE05.Negocios;
 
 namespace CLASE05.Formularios.Clientes
 {
-    public partial class Frm_Cliente_Baja1 : CLASE05.Formularios.Clientes.Frm_e
+    public partial class Frm_Cliente_Modificacion : CLASE05.Formularios.Clientes.Frm_e
     {
         NE_Clientes cli = new NE_Clientes();
-        public Frm_Cliente_Baja1()
+        public Frm_Cliente_Modificacion()
         {
             InitializeComponent();
         }
 
-        private void Frm_Cliente_Baja1_Load(object sender, EventArgs e)
+        private void Frm_Cliente_Modificacion_Load(object sender, EventArgs e)
         {
             CargarFormulario(cli.RecuperarCliente(cuit_cliente));
         }
@@ -39,7 +39,7 @@ namespace CLASE05.Formularios.Clientes
             //int id_estado_provincia = int.Parse(tabla.Rows[0]["id_estado_provincia"].ToString());
 
             //int id_pais = ne_prov.ObtenerIdPais();
-            //cmb_pais.SelectedValue = id_pais.ToString()); 
+            //cmb_pais.SelectedValue = id_pais.ToString());   
         }
 
         private void btn_aceptar_Click(object sender, EventArgs e)
@@ -48,18 +48,37 @@ namespace CLASE05.Formularios.Clientes
 
             if (_TE.Validar(this.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
             {
-                cli.cuit_cliente = txt_cuit_cliente.Text;
+                //// VALIDACION ESPECIFICA
+                //if (_TE.ValidarEmail(txt_email._Text) == TratamientosEspeciales.RespuestaValidacion.Error)
+                //{
+                //    MessageBox.Show("El formato de correo es invalido");
+                //    txt_email.Focus();
+                //    return;
+                //}
 
-                if (MessageBox.Show("¿Está seguro de que desea eliminar al cliente " + txt_razon_social._Text + "?", "Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    cli.Borrar();
-                    MessageBox.Show("Se eliminó correctamente el cliente " + txt_razon_social._Text, "Importante");
-                    this.Dispose();
-                }
-                else
-                    MessageBox.Show("Eliminación cancelada");
+                // GRABAR NUEVO REGISTRO
+
+                cli.cuit_cliente = txt_cuit_cliente.Text;
+                cli.razon_social = txt_razon_social._Text;
+                cli.limite_credito = txt_limite_credito.Text;
+                cli.nombre_contacto = txt_nombre_contacto._Text;
+                cli.legajo_empleado = txt_legajo_empleado._Text;
+                cli.direccion = txt_direccion._Text;
+                cli.id_estado_provincia = cmb_estado_provincia.SelectedValue.ToString();
+                cli.ciudad = txt_ciudad._Text;
+
+                cli.Modificar();
+                MessageBox.Show("Se modificó correctamente el cliente " + txt_cuit_cliente.Text, "Importante");
 
             }
+        }
+        private void txt_limite_credito_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
+
+        private void btn_maximizar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
