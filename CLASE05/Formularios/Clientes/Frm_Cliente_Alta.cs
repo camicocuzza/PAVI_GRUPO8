@@ -49,7 +49,7 @@ namespace CLASE05.Formularios.Clientes
                 cli.ciudad = txt_ciudad._Text;
 
                 cli.Insertar();
-                MessageBox.Show("Se grabó correctamente el cliente " + txt_razon_social, "Importante");
+                MessageBox.Show("Se grabó correctamente el cliente " + txt_razon_social._Text, "Importante");
 
             }
         } 

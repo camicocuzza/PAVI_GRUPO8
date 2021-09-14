@@ -49,7 +49,6 @@ namespace CLASE05.Formularios.Clientes
             // btn_cerrar
             // 
             this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_cerrar.Location = new System.Drawing.Point(479, 2);
             // 
             // btn_minimizar
             // 
@@ -307,6 +306,7 @@ namespace CLASE05.Formularios.Clientes
             this.label3.Size = new System.Drawing.Size(81, 31);
             this.label3.TabIndex = 52;
             this.label3.Text = "Titulo";
+            this.label3.Visible = false;
             // 
             // btn_aceptar
             // 
@@ -341,8 +341,10 @@ namespace CLASE05.Formularios.Clientes
             this.Controls.Add(this.txt_razon_social);
             this.Controls.Add(this.txt_direccion);
             this.Controls.Add(this.txt_nombre_contacto);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Frm_Cliente";
             this.Load += new System.EventHandler(this.Frm_Cliente_Load);
+            this.Controls.SetChildIndex(this.lbl_titulo, 0);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);

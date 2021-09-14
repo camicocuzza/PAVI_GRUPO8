@@ -135,12 +135,6 @@
     <Compile Include="Formularios\Clientes\Frm_Cliente_Modificacion.Designer.cs">
       <DependentUpon>Frm_Cliente_Modificacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Clientes\Frm_e.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Clientes\Frm_e.Designer.cs">
-      <DependentUpon>Frm_e.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\FrmBASE\FrmBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,9 +231,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente_Modificacion.resx">
       <DependentUpon>Frm_Cliente_Modificacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Clientes\Frm_e.resx">
-      <DependentUpon>Frm_e.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmBASE\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
