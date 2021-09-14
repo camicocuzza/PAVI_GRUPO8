@@ -44,6 +44,16 @@ namespace CLASE05.Formularios.Clientes
             this.cmb_estado_provincia.Text = "";
             this.cmb_estado_provincia.ValueMember = "id_estado_provincia";
             // 
+            // txt_cuit_cliente
+            // 
+            this.txt_cuit_cliente.Enabled = false;
+            // 
+            // txt_limite_credito
+            // 
+            this.txt_limite_credito.Mask = "9999999999";
+            this.txt_limite_credito.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txt_limite_credito.Size = new System.Drawing.Size(101, 25);
+            // 
             // btn_aceptar
             // 
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);

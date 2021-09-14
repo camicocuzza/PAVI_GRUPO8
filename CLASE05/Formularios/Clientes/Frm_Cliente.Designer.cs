@@ -49,6 +49,7 @@ namespace CLASE05.Formularios.Clientes
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.Controls.Add(this.txt_limite_credito);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txt_cuit_cliente);
@@ -305,7 +306,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_cuit_cliente.Culture = new System.Globalization.CultureInfo("en-US");
             this.txt_cuit_cliente.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
             this.txt_cuit_cliente.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_cuit_cliente.Location = new System.Drawing.Point(149, 28);
+            this.txt_cuit_cliente.Location = new System.Drawing.Point(148, 28);
             this.txt_cuit_cliente.Mask = "99-99999999-9";
             this.txt_cuit_cliente.Name = "txt_cuit_cliente";
             this.txt_cuit_cliente.Size = new System.Drawing.Size(119, 25);
@@ -339,9 +340,9 @@ namespace CLASE05.Formularios.Clientes
             this.txt_limite_credito.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
             this.txt_limite_credito.ForeColor = System.Drawing.Color.Gainsboro;
             this.txt_limite_credito.Location = new System.Drawing.Point(150, 111);
-            this.txt_limite_credito.Mask = "9999999999";
+            this.txt_limite_credito.Mask = "9999999999.99";
             this.txt_limite_credito.Name = "txt_limite_credito";
-            this.txt_limite_credito.Size = new System.Drawing.Size(101, 25);
+            this.txt_limite_credito.Size = new System.Drawing.Size(118, 25);
             this.txt_limite_credito.TabIndex = 38;
             // 
             // Frm_Cliente

@@ -72,5 +72,8 @@ namespace CLASE05.Formularios.Clientes
 
             }
         }
+        private void txt_limite_credito_KeyPress(object sender, KeyPressEventArgs e)
+        {           
+        }
     }
 }

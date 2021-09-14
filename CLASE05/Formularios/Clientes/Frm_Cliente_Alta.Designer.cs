@@ -44,6 +44,14 @@ namespace CLASE05.Formularios.Clientes
             this.cmb_estado_provincia.Text = "";
             this.cmb_estado_provincia.ValueMember = "id_estado_provincia";
             // 
+            // txt_cuit_cliente
+            // 
+            this.txt_cuit_cliente.Location = new System.Drawing.Point(148, 32);
+            // 
+            // txt_limite_credito
+            // 
+            this.txt_limite_credito.Location = new System.Drawing.Point(148, 111);
+            // 
             // btn_aceptar
             // 
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
