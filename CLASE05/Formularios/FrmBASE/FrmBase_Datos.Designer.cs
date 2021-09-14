@@ -29,7 +29,6 @@ namespace CLASE05.Formularios.FrmBASE
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_aceptar = new System.Windows.Forms.Button();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -51,18 +50,6 @@ namespace CLASE05.Formularios.FrmBASE
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_maximizar.Location = new System.Drawing.Point(445, 2);
             // 
-            // btn_aceptar
-            // 
-            this.btn_aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btn_aceptar.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_aceptar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_aceptar.Location = new System.Drawing.Point(204, 476);
-            this.btn_aceptar.Name = "btn_aceptar";
-            this.btn_aceptar.Size = new System.Drawing.Size(95, 31);
-            this.btn_aceptar.TabIndex = 22;
-            this.btn_aceptar.Text = "Aceptar";
-            this.btn_aceptar.UseVisualStyleBackColor = false;
-            // 
             // lbl_titulo
             // 
             this.lbl_titulo.AutoSize = true;
@@ -81,12 +68,10 @@ namespace CLASE05.Formularios.FrmBASE
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(516, 516);
-            this.Controls.Add(this.btn_aceptar);
             this.Controls.Add(this.lbl_titulo);
             this.Location = new System.Drawing.Point(766, 183);
             this.Name = "FrmBase_Datos";
             this.Controls.SetChildIndex(this.lbl_titulo, 0);
-            this.Controls.SetChildIndex(this.btn_aceptar, 0);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
@@ -97,7 +82,6 @@ namespace CLASE05.Formularios.FrmBASE
         }
 
         #endregion
-        public System.Windows.Forms.Button btn_aceptar;
         public System.Windows.Forms.Label lbl_titulo;
     }
 }
