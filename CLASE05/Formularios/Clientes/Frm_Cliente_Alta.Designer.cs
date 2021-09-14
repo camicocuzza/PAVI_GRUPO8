@@ -72,6 +72,11 @@ namespace CLASE05.Formularios.Clientes
             // 
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
+            // label3
+            // 
+            this.label3.Size = new System.Drawing.Size(195, 31);
+            this.label3.Text = "Altas de Cliente";
+            // 
             // btn_cerrar
             // 
             this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;

@@ -75,7 +75,7 @@ namespace CLASE05.Negocios
         {
             string sqlInsert = "";
 
-            sqlInsert = @"INSERT INTO usuario (cuit_cliente, razon_social, limite_credito, nombre_contacto, 
+            sqlInsert = @"INSERT INTO cliente (cuit_cliente, razon_social, limite_credito, nombre_contacto, 
                                            legajo_empleado, direccion, id_estado_provincia, ciudad) VALUES (";
 
             sqlInsert += "'" + cuit_cliente + "'";

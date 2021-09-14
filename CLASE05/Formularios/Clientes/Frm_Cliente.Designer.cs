@@ -342,6 +342,7 @@ namespace CLASE05.Formularios.Clientes
             this.Controls.Add(this.txt_direccion);
             this.Controls.Add(this.txt_nombre_contacto);
             this.Name = "Frm_Cliente";
+            this.Load += new System.EventHandler(this.Frm_Cliente_Load);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);

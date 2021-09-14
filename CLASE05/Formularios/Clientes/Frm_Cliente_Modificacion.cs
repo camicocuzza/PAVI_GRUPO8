@@ -10,7 +10,7 @@ using CLASE05.Negocios;
 
 namespace CLASE05.Formularios.Clientes
 {
-    public partial class Frm_Cliente_Modificacion : CLASE05.Formularios.Clientes.Frm_e
+    public partial class Frm_Cliente_Modificacion : CLASE05.Formularios.Clientes.Frm_Cliente
     {
         NE_Clientes cli = new NE_Clientes();
         public Frm_Cliente_Modificacion()
