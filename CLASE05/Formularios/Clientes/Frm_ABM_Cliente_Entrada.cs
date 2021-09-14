@@ -129,9 +129,9 @@ namespace CLASE05.Formularios.Clientes
                 MessageBox.Show("Falta seleccionar un registro", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
-            //Frm_Cliente_Consulta frm_consulta = new Frm_Cliente_Consulta();
-            //frm_consulta.cuit_cliente = grid_clientes.CurrentRow.Cells[0].Value.ToString();
-            //frm_consulta.ShowDialog();
+            Frm_Cliente_Consulta frm_consulta = new Frm_Cliente_Consulta();
+            frm_consulta.cuit_cliente = grid_clientes.CurrentRow.Cells[0].Value.ToString();
+            frm_consulta.ShowDialog();
         }
 
         private void txt_cuit_cliente_Click(object sender, EventArgs e)

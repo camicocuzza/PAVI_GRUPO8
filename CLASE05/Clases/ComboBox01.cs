@@ -52,9 +52,6 @@ namespace CLASE05.Clases
                            FROM estado_provincia e INNER JOIN pais p ON e.id_pais = p.id_pais
                            WHERE p.id_pais = " + seleccion;
 
-            //string sql1 = @"SELECT e.id_estado_pais, e.nombre_estado_pais FROM estado_pais e
-            //              WHERE E.id_estado_pais = p.id_pais
-            //               WHERE .id_pais = " + seleccion;
             this.DisplayMember = _tabla_cargar_descriptor;
             this.ValueMember = _tabla_cargar_pk;
             this.DataSource = _BD.EjecutarSelect(sql);

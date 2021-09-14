@@ -30,7 +30,6 @@ namespace CLASE05.Formularios.Usuarios
             txt_id_usuario._Text = tabla.Rows[0]["id_usuario"].ToString();
             txt_n_usuario._Text = tabla.Rows[0]["n_usuario"].ToString();
             txt_password._Text = tabla.Rows[0]["password"].ToString();
-
         }
     }    
 }

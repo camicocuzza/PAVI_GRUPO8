@@ -23,39 +23,33 @@ namespace CLASE05.Negocios
         public string ciudad { get; set; }
 
         BE_Acceso_Datos _BD = new BE_Acceso_Datos();
+        public string RecuperarCuit(string razon_social, string nombre_contacto)
+        {
+            string sql = @"SELECT cuit_cliente FROM usuario
+                         WHERE razon_social = '" + razon_social + "'"
+                        + " AND nombre_contacto = '" + nombre_contacto + "'";
 
-        //public Validacion Validar(string n_usuario, string password)
-        //{
-        //    string sql = @"SELECT * FROM cliente
-        //                  WHERE n_usuario = '" + n_usuario + "'"
-        //                 + " AND password = '" + password + "'";
+            DataTable tabla = new DataTable();
+            tabla = _BD.EjecutarSelect(sql);
 
-        //    DataTable tabla = new DataTable();
-        //    tabla = _BD.EjecutarSelect(sql);
+            if (tabla.Rows.Count == 1)
+                return tabla.Rows[0][0].ToString();
+            else
+                return "";
+        }
+        public string RecuperarCuit(string razon_social)
+        {
+            string sql = @"SELECT cuit_cliente FROM usuario
+                         WHERE razon_social = '" + razon_social + "'";
 
-        //    if (tabla.Rows.Count == 1)
-        //    {
-        //        return Validacion.correcta;
-        //    }
-        //    else
-        //    {
-        //        return Validacion.incorrecta;
-        //    }
-        //}
-        //public int RecuperarId(string nombre, string password)
-        //{
-        //    string sql = @"SELECT id_usuario FROM usuario
-        //                 WHERE n_usuario = '" + nombre + "'"
-        //                + " AND password = '" + password + "'";
+            DataTable tabla = new DataTable();
+            tabla = _BD.EjecutarSelect(sql);
 
-        //    DataTable tabla = new DataTable();
-        //    tabla = _BD.EjecutarSelect(sql);
-
-        //    if (tabla.Rows.Count == 1)
-        //        return int.Parse(tabla.Rows[0][0].ToString());
-        //    else
-        //        return 0;
-        //}
+            if (tabla.Rows.Count == 1)
+                return tabla.Rows[0][0].ToString();
+            else
+                return "";
+        }
         public DataTable BuscarCliente(string patron, string columna)
         {
             string sql = @"SELECT cuit_cliente, razon_social, nombre_contacto  
@@ -66,14 +60,14 @@ namespace CLASE05.Negocios
         public DataTable BuscarCliente(string cuit_cliente)
         {
             string sql = @"SELECT cuit_cliente, razon_social 
-                          FROM cliente WHERE cuit_cliente = " + cuit_cliente;
+                          FROM cliente WHERE cuit_cliente = '" + cuit_cliente + "'";
 
             return _BD.EjecutarSelect(sql);
         }
         public DataTable RecuperarCliente(string cuit_cliente)
         {
             string sql = @"SELECT * 
-                          FROM cliente WHERE cuit_cliente = " + cuit_cliente;
+                          FROM cliente WHERE cuit_cliente = '" + cuit_cliente + "'"; 
 
             return _BD.EjecutarSelect(sql);
         }
@@ -109,13 +103,13 @@ namespace CLASE05.Negocios
             sqlUpdate += ", direccion = '" + direccion + "'";
             sqlUpdate += ", id_estado_provincia = " + id_estado_provincia;
             sqlUpdate += ", ciudad = '" + ciudad + "')";
-            sqlUpdate += " WHERE cuit_cliente = " + cuit_cliente;
+            sqlUpdate += " WHERE cuit_cliente = '" + cuit_cliente + "'";
 
             _BD.Modificar(sqlUpdate);
         }
         public void Borrar()
         {
-            string sqlDelete = "DELETE FROM cliente WHERE cuit_cliente = " + cuit_cliente;
+            string sqlDelete = "DELETE FROM cliente WHERE cuit_cliente = '" + cuit_cliente + "'";
 
             _BD.Borrar(sqlDelete);
         }

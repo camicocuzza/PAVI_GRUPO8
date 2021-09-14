@@ -204,7 +204,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_legajo_empleado.Location = new System.Drawing.Point(-1, 171);
             this.txt_legajo_empleado.Margin = new System.Windows.Forms.Padding(4);
             this.txt_legajo_empleado.Name = "txt_legajo_empleado";
-            this.txt_legajo_empleado.Size = new System.Drawing.Size(228, 30);
+            this.txt_legajo_empleado.Size = new System.Drawing.Size(252, 30);
             this.txt_legajo_empleado.TabIndex = 28;
             // 
             // txt_direccion
@@ -326,7 +326,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_cuit_cliente.Location = new System.Drawing.Point(148, 28);
             this.txt_cuit_cliente.Mask = "99-99999999-9";
             this.txt_cuit_cliente.Name = "txt_cuit_cliente";
-            this.txt_cuit_cliente.Size = new System.Drawing.Size(95, 25);
+            this.txt_cuit_cliente.Size = new System.Drawing.Size(119, 25);
             this.txt_cuit_cliente.TabIndex = 35;
             this.txt_cuit_cliente.Click += new System.EventHandler(this.txt_cuit_cliente_Click);
             // 
@@ -346,17 +346,17 @@ namespace CLASE05.Formularios.Clientes
         }
 
         #endregion
-        private Clases.ComboBox01 cmb_pais;
-        private Clases.LabelText02 txt_ciudad;
-        private Clases.LabelText02 txt_direccion;
-        private Clases.LabelText02 txt_legajo_empleado;
-        private Clases.LabelText02 txt_nombre_contacto;
-        private Clases.LabelText02 txt_limite_credito;
-        private Clases.LabelText02 txt_razon_social;
         private System.Windows.Forms.Label lbl_estado_provincia;
-        private Clases.ComboBox01 cmb_estado_provincia;
         private System.Windows.Forms.Label lbl_pais;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox txt_cuit_cliente;
+        public Clases.ComboBox01 cmb_pais;
+        public Clases.LabelText02 txt_ciudad;
+        public Clases.LabelText02 txt_direccion;
+        public Clases.LabelText02 txt_legajo_empleado;
+        public Clases.LabelText02 txt_nombre_contacto;
+        public Clases.LabelText02 txt_limite_credito;
+        public Clases.LabelText02 txt_razon_social;
+        public Clases.ComboBox01 cmb_estado_provincia;
+        public System.Windows.Forms.MaskedTextBox txt_cuit_cliente;
     }
 }
