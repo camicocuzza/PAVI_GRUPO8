@@ -46,9 +46,7 @@ namespace CLASE05.Formularios.Clientes
         {
             TratamientosEspeciales _TE = new TratamientosEspeciales();
            
-           
-
-            if (_TE.Validar(this.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
+            if (_TE.Validar(base.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
             {
                 // VALIDACION ESPECIFICA
                 if (_TE.ValidarCuit(txt_cuit_cliente.Text) == TratamientosEspeciales.RespuestaValidacion.Error)

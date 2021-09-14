@@ -89,12 +89,6 @@
     <Compile Include="Clases\Grid01.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Clases\LabelText01.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Clases\LabelText01.designer.cs">
-      <DependentUpon>LabelText01.cs</DependentUpon>
-    </Compile>
     <Compile Include="Clases\LabelText02.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -219,9 +213,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Clases\ComboBox01.resx">
       <DependentUpon>ComboBox01.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Clases\LabelText01.resx">
-      <DependentUpon>LabelText01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clases\LabelText02.resx">
       <DependentUpon>LabelText02.cs</DependentUpon>

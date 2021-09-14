@@ -19,7 +19,7 @@ namespace CLASE05.Clases
             get { return lblEtiqueta.Text; }
             set { lblEtiqueta.Text = value; }
         }
-        public bool _Validable { get; set; }
+        public bool _Validable { get; set; } = true;
         public string _Nombre_campo { get; set; }
         public string _Nombre_tabla { get; set; }
         public string _MensajeError { get; set; }

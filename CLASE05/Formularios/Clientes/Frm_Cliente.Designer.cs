@@ -122,7 +122,7 @@ namespace CLASE05.Formularios.Clientes
             this.cmb_pais._tabla_cargar_pk = "id_pais";
             this.cmb_pais._tabla_join = null;
             this.cmb_pais._tabla_join_pk = null;
-            this.cmb_pais._Validable = false;
+            this.cmb_pais._Validable = true;
             this.cmb_pais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.cmb_pais.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.cmb_pais.ForeColor = System.Drawing.Color.Gainsboro;
@@ -156,7 +156,7 @@ namespace CLASE05.Formularios.Clientes
             this.cmb_estado_provincia._tabla_cargar_pk = "id_estado_provincia";
             this.cmb_estado_provincia._tabla_join = "pais";
             this.cmb_estado_provincia._tabla_join_pk = "id_pais";
-            this.cmb_estado_provincia._Validable = false;
+            this.cmb_estado_provincia._Validable = true;
             this.cmb_estado_provincia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.cmb_estado_provincia.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.cmb_estado_provincia.ForeColor = System.Drawing.Color.Gainsboro;
@@ -193,7 +193,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_legajo_empleado._Text = "";
             this.txt_legajo_empleado._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_legajo_empleado._TipoDato = CLASE05.Clases.LabelText02.TipoDato.mascaraEditada;
-            this.txt_legajo_empleado._Validable = false;
+            this.txt_legajo_empleado._Validable = true;
             this.txt_legajo_empleado.BackColor = System.Drawing.Color.Transparent;
             this.txt_legajo_empleado.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_legajo_empleado.ForeColor = System.Drawing.Color.Gainsboro;
@@ -216,7 +216,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_ciudad._Text = "";
             this.txt_ciudad._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_ciudad._TipoDato = CLASE05.Clases.LabelText02.TipoDato.mascaraEditada;
-            this.txt_ciudad._Validable = false;
+            this.txt_ciudad._Validable = true;
             this.txt_ciudad.BackColor = System.Drawing.Color.Transparent;
             this.txt_ciudad.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_ciudad.ForeColor = System.Drawing.Color.Gainsboro;
@@ -239,7 +239,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_razon_social._Text = "";
             this.txt_razon_social._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_razon_social._TipoDato = CLASE05.Clases.LabelText02.TipoDato.mascaraEditada;
-            this.txt_razon_social._Validable = false;
+            this.txt_razon_social._Validable = true;
             this.txt_razon_social.BackColor = System.Drawing.Color.Transparent;
             this.txt_razon_social.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_razon_social.ForeColor = System.Drawing.Color.Gainsboro;
@@ -262,7 +262,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_direccion._Text = "";
             this.txt_direccion._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_direccion._TipoDato = CLASE05.Clases.LabelText02.TipoDato.mascaraEditada;
-            this.txt_direccion._Validable = false;
+            this.txt_direccion._Validable = true;
             this.txt_direccion.BackColor = System.Drawing.Color.Transparent;
             this.txt_direccion.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_direccion.ForeColor = System.Drawing.Color.Gainsboro;
@@ -285,7 +285,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_nombre_contacto._Text = "";
             this.txt_nombre_contacto._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_nombre_contacto._TipoDato = CLASE05.Clases.LabelText02.TipoDato.mascaraEditada;
-            this.txt_nombre_contacto._Validable = false;
+            this.txt_nombre_contacto._Validable = true;
             this.txt_nombre_contacto.BackColor = System.Drawing.Color.Transparent;
             this.txt_nombre_contacto.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_nombre_contacto.ForeColor = System.Drawing.Color.Gainsboro;
