@@ -118,7 +118,7 @@ namespace CLASE05.Clases
                     {
                         for (int i = 0; i < entero - blanco; i++)
                         {
-                            TxtDato.Text = " " + TxtDato.Text;
+                            TxtDato.Text = "0" + TxtDato.Text;
                         }
                     }
 

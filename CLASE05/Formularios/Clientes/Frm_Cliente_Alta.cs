@@ -14,5 +14,10 @@ namespace CLASE05.Formularios.Clientes
         {
             InitializeComponent();
         }
+
+        private void btn_aceptar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

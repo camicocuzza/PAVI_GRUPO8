@@ -95,14 +95,14 @@ namespace CLASE05.Negocios
             string sqlUpdate = "";
 
             sqlUpdate = "UPDATE cliente SET ";
-            sqlUpdate += ", cuit_cliente = '" + cuit_cliente + "'";
+            sqlUpdate += "cuit_cliente = '" + cuit_cliente + "'";
             sqlUpdate += ", razon_social = '" + razon_social + "'";
             sqlUpdate += ", limite_credito =  " + limite_credito;
             sqlUpdate += ", nombre_contacto = '" + nombre_contacto + "'";
             sqlUpdate += ", legajo_empleado = " + legajo_empleado;
             sqlUpdate += ", direccion = '" + direccion + "'";
             sqlUpdate += ", id_estado_provincia = " + id_estado_provincia;
-            sqlUpdate += ", ciudad = '" + ciudad + "')";
+            sqlUpdate += ", ciudad = '" + ciudad + "'";
             sqlUpdate += " WHERE cuit_cliente = '" + cuit_cliente + "'";
 
             _BD.Modificar(sqlUpdate);

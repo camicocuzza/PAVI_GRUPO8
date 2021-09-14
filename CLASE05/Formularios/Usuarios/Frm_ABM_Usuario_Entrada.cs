@@ -113,7 +113,7 @@ namespace CLASE05.Formularios.Usuarios
             frm_baja.id_usuario = grid_usuarios.CurrentRow.Cells[0].Value.ToString();
             frm_baja.ShowDialog();
 
-            grid_usuarios.Rows.Clear();
+            //grid_usuarios.Rows.Clear();
         }
 
         private void btn_consultar_Click(object sender, EventArgs e)

@@ -30,7 +30,7 @@ namespace CLASE05.Formularios.Clientes
         {
             txt_cuit_cliente.Text = tabla.Rows[0]["cuit_cliente"].ToString();
             txt_razon_social._Text = tabla.Rows[0]["razon_social"].ToString();
-            txt_limite_credito._Text = tabla.Rows[0]["limite_credito"].ToString();
+            txt_limite_credito.Text = tabla.Rows[0]["limite_credito"].ToString();
             txt_nombre_contacto._Text = tabla.Rows[0]["nombre_contacto"].ToString();
             txt_legajo_empleado._Text = tabla.Rows[0]["legajo_empleado"].ToString();
             txt_direccion._Text = tabla.Rows[0]["direccion"].ToString();

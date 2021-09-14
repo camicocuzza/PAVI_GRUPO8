@@ -29,7 +29,48 @@ namespace CLASE05.Formularios.Clientes
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cliente_Alta));
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // cmb_pais
+            // 
+            this.cmb_pais.DisplayMember = "nombre_pais";
+            this.cmb_pais.ValueMember = "id_pais";
+            // 
+            // cmb_estado_provincia
+            // 
+            this.cmb_estado_provincia.DisplayMember = "nombre_estado_provincia";
+            this.cmb_estado_provincia.Text = "";
+            this.cmb_estado_provincia.ValueMember = "id_estado_provincia";
+            // 
+            // btn_aceptar
+            // 
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
+            // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            // 
+            // btn_minimizar
+            // 
+            this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            // 
+            // btn_maximizar
+            // 
+            this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            // 
+            // Frm_Cliente_Alta
+            // 
+            this._PosiciónVisible = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(449, 546);
+            this.Name = "Frm_Cliente_Alta";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

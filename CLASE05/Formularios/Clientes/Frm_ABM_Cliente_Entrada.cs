@@ -117,7 +117,7 @@ namespace CLASE05.Formularios.Clientes
             frm_baja.cuit_cliente = grid_clientes.CurrentRow.Cells[0].Value.ToString();
             frm_baja.ShowDialog();
 
-            grid_clientes.Rows.Clear();
+            //grid_clientes.Rows.Clear();
         }
         private void btn_consultar_Click(object sender, EventArgs e)
         {

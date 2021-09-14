@@ -34,14 +34,14 @@ namespace CLASE05.Formularios.Usuarios
                 // GRABAR NUEVO REGISTRO
                 NE_Usuarios usu = new NE_Usuarios();
 
-                //usu.id_perfil = cmb_perfiles.SelectedValue.ToString();
-                //usu.n_usario = txt_n_usuario._Text;
-                //usu.passsword = txt_password._Text;
-                //usu.email = txt_email._Text;
-                //usu.apellido = txt_apellido._Text;
-                //usu.nombres = txt_nombres._Text;
-                //usu.cuil = txt_cuil._Text;
-                //usu.id_estado = cmb_estadosUsuarios.SelectedValue.ToString();
+                usu.id_perfil = cmb_perfiles.SelectedValue.ToString();
+                usu.n_usario = txt_n_usuario._Text;
+                usu.passsword = txt_password._Text;
+                usu.email = txt_email._Text;
+                usu.apellido = txt_apellido._Text;
+                usu.nombres = txt_nombres._Text;
+                usu.cuil = txt_cuil._Text;
+                usu.id_estado = cmb_estadosUsuarios.SelectedValue.ToString();
 
 
 

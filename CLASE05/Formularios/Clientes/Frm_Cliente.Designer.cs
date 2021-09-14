@@ -29,9 +29,9 @@ namespace CLASE05.Formularios.Clientes
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cmb_pais = new CLASE05.Clases.ComboBox01();
             this.txt_razon_social = new CLASE05.Clases.LabelText02();
-            this.txt_limite_credito = new CLASE05.Clases.LabelText02();
             this.txt_nombre_contacto = new CLASE05.Clases.LabelText02();
             this.txt_legajo_empleado = new CLASE05.Clases.LabelText02();
             this.txt_direccion = new CLASE05.Clases.LabelText02();
@@ -41,11 +41,16 @@ namespace CLASE05.Formularios.Clientes
             this.cmb_estado_provincia = new CLASE05.Clases.ComboBox01();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_cuit_cliente = new System.Windows.Forms.MaskedTextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_limite_credito = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txt_limite_credito);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txt_cuit_cliente);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.cmb_pais);
@@ -56,12 +61,10 @@ namespace CLASE05.Formularios.Clientes
             this.panel1.Controls.Add(this.txt_direccion);
             this.panel1.Controls.Add(this.txt_legajo_empleado);
             this.panel1.Controls.Add(this.txt_nombre_contacto);
-            this.panel1.Controls.Add(this.txt_limite_credito);
             this.panel1.Controls.Add(this.txt_razon_social);
             this.panel1.Size = new System.Drawing.Size(427, 450);
             this.panel1.Controls.SetChildIndex(this.btn_aceptar, 0);
             this.panel1.Controls.SetChildIndex(this.txt_razon_social, 0);
-            this.panel1.Controls.SetChildIndex(this.txt_limite_credito, 0);
             this.panel1.Controls.SetChildIndex(this.txt_nombre_contacto, 0);
             this.panel1.Controls.SetChildIndex(this.txt_legajo_empleado, 0);
             this.panel1.Controls.SetChildIndex(this.txt_direccion, 0);
@@ -72,6 +75,8 @@ namespace CLASE05.Formularios.Clientes
             this.panel1.Controls.SetChildIndex(this.cmb_pais, 0);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
             this.panel1.Controls.SetChildIndex(this.txt_cuit_cliente, 0);
+            this.panel1.Controls.SetChildIndex(this.label2, 0);
+            this.panel1.Controls.SetChildIndex(this.txt_limite_credito, 0);
             // 
             // btn_aceptar
             // 
@@ -119,7 +124,7 @@ namespace CLASE05.Formularios.Clientes
             // 
             this.txt_razon_social._Ancho = 50;
             this.txt_razon_social._Decimales = 2;
-            this.txt_razon_social._Etiqueta = "Razon social";
+            this.txt_razon_social._Etiqueta = "Razón social";
             this.txt_razon_social._Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
             this.txt_razon_social._MensajeError = null;
             this.txt_razon_social._Nombre_campo = null;
@@ -137,29 +142,6 @@ namespace CLASE05.Formularios.Clientes
             this.txt_razon_social.Name = "txt_razon_social";
             this.txt_razon_social.Size = new System.Drawing.Size(341, 30);
             this.txt_razon_social.TabIndex = 25;
-            // 
-            // txt_limite_credito
-            // 
-            this.txt_limite_credito._Ancho = 13;
-            this.txt_limite_credito._Decimales = 2;
-            this.txt_limite_credito._Etiqueta = "Límite crédito";
-            this.txt_limite_credito._Mask = "9999999999.99";
-            this.txt_limite_credito._MensajeError = null;
-            this.txt_limite_credito._Nombre_campo = null;
-            this.txt_limite_credito._Nombre_tabla = null;
-            this.txt_limite_credito._ReadOnly = false;
-            this.txt_limite_credito._Text = "          .";
-            this.txt_limite_credito._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.txt_limite_credito._TipoDato = CLASE05.Clases.LabelText02.TipoDato.numero;
-            this.txt_limite_credito._Validable = false;
-            this.txt_limite_credito.BackColor = System.Drawing.Color.Transparent;
-            this.txt_limite_credito.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txt_limite_credito.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_limite_credito.Location = new System.Drawing.Point(-1, 103);
-            this.txt_limite_credito.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_limite_credito.Name = "txt_limite_credito";
-            this.txt_limite_credito.Size = new System.Drawing.Size(252, 30);
-            this.txt_limite_credito.TabIndex = 26;
             // 
             // txt_nombre_contacto
             // 
@@ -330,6 +312,38 @@ namespace CLASE05.Formularios.Clientes
             this.txt_cuit_cliente.TabIndex = 35;
             this.txt_cuit_cliente.Click += new System.EventHandler(this.txt_cuit_cliente_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label2.Location = new System.Drawing.Point(-3, 112);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(144, 20);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Límite crédito ($)";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txt_limite_credito
+            // 
+            this.txt_limite_credito.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_limite_credito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txt_limite_credito.Culture = new System.Globalization.CultureInfo("en-US");
+            this.txt_limite_credito.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
+            this.txt_limite_credito.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_limite_credito.Location = new System.Drawing.Point(150, 111);
+            this.txt_limite_credito.Mask = "9999999999";
+            this.txt_limite_credito.Name = "txt_limite_credito";
+            this.txt_limite_credito.Size = new System.Drawing.Size(101, 25);
+            this.txt_limite_credito.TabIndex = 38;
+            // 
             // Frm_Cliente
             // 
             this._PosiciónVisible = true;
@@ -338,6 +352,12 @@ namespace CLASE05.Formularios.Clientes
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Frm_Cliente";
             this.Load += new System.EventHandler(this.Frm_Cliente_Load);
+            this.Controls.SetChildIndex(this.btn_cerrar, 0);
+            this.Controls.SetChildIndex(this.btn_maximizar, 0);
+            this.Controls.SetChildIndex(this.btn_minimizar, 0);
+            this.Controls.SetChildIndex(this.lbl_posicion, 0);
+            this.Controls.SetChildIndex(this.lbl_titulo, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -354,9 +374,11 @@ namespace CLASE05.Formularios.Clientes
         public Clases.LabelText02 txt_direccion;
         public Clases.LabelText02 txt_legajo_empleado;
         public Clases.LabelText02 txt_nombre_contacto;
-        public Clases.LabelText02 txt_limite_credito;
         public Clases.LabelText02 txt_razon_social;
         public Clases.ComboBox01 cmb_estado_provincia;
         public System.Windows.Forms.MaskedTextBox txt_cuit_cliente;
+        public System.Windows.Forms.MaskedTextBox txt_limite_credito;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

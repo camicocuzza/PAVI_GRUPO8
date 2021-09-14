@@ -229,11 +229,17 @@
     <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente.resx">
       <DependentUpon>Frm_Cliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente_Alta.resx">
+      <DependentUpon>Frm_Cliente_Alta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente_Baja.resx">
       <DependentUpon>Frm_Cliente_Baja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente_Consulta.resx">
       <DependentUpon>Frm_Cliente_Consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente_Modificacion.resx">
+      <DependentUpon>Frm_Cliente_Modificacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmBASE\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
