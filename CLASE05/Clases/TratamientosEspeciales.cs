@@ -74,6 +74,13 @@ namespace CLASE05.Clases
                 return RespuestaValidacion.Error;
             }
         }
+        public RespuestaValidacion ValidarCuit(string cuit)
+        {
+            if (cuit.Length < 13)
+                return RespuestaValidacion.Error;
+            else
+                return RespuestaValidacion.Correcta;
+        }
 
     }
 }

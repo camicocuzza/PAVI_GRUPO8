@@ -45,16 +45,18 @@ namespace CLASE05.Formularios.Clientes
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
             TratamientosEspeciales _TE = new TratamientosEspeciales();
+           
+           
 
             if (_TE.Validar(this.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
             {
-                //// VALIDACION ESPECIFICA
-                //if (_TE.ValidarEmail(txt_email._Text) == TratamientosEspeciales.RespuestaValidacion.Error)
-                //{
-                //    MessageBox.Show("El formato de correo es invalido");
-                //    txt_email.Focus();
-                //    return;
-                //}
+                // VALIDACION ESPECIFICA
+                if (_TE.ValidarCuit(txt_cuit_cliente.Text) == TratamientosEspeciales.RespuestaValidacion.Error)
+                {
+                    MessageBox.Show("El cuit ingresado está incompleto");
+                    txt_cuit_cliente.Focus();
+                    return;
+                }
 
                 // GRABAR NUEVO REGISTRO
 
