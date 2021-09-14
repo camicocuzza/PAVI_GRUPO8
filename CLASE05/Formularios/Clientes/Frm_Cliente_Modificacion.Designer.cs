@@ -46,7 +46,6 @@ namespace CLASE05.Formularios.Clientes
             // txt_cuit_cliente
             // 
             this.txt_cuit_cliente.Enabled = false;
-            this.txt_cuit_cliente.Size = new System.Drawing.Size(318, 25);
             // 
             // txt_limite_credito
             // 
@@ -54,7 +53,6 @@ namespace CLASE05.Formularios.Clientes
             // 
             // btn_aceptar
             // 
-            this.btn_aceptar.Location = new System.Drawing.Point(204, 475);
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // lbl_titulo

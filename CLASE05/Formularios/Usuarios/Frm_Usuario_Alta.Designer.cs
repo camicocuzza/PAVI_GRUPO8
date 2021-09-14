@@ -29,7 +29,6 @@ namespace CLASE05.Formularios.Usuarios
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_aceptar
@@ -41,30 +40,30 @@ namespace CLASE05.Formularios.Usuarios
             this.lbl_titulo.Size = new System.Drawing.Size(198, 31);
             this.lbl_titulo.Text = "Altas de usuario";
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(12, 85);
-            // 
             // btn_cerrar
             // 
             this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_cerrar.Location = new System.Drawing.Point(397, 2);
             // 
             // btn_minimizar
             // 
             this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_minimizar.Location = new System.Drawing.Point(327, 2);
             // 
             // btn_maximizar
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_maximizar.Location = new System.Drawing.Point(362, 2);
             // 
             // Frm_Usuario_Alta
             // 
+            this._PosiciónVisible = true;
             this._Titulo = "Altas de usuario";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(432, 384);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Frm_Usuario_Alta";
             this.Load += new System.EventHandler(this.Frm_Usuario_Alta_Load);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

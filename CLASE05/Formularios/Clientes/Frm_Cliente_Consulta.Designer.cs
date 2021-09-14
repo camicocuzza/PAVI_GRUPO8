@@ -69,7 +69,6 @@ namespace CLASE05.Formularios.Clientes
             // txt_cuit_cliente
             // 
             this.txt_cuit_cliente.Enabled = false;
-            this.txt_cuit_cliente.Size = new System.Drawing.Size(318, 25);
             // 
             // txt_limite_credito
             // 

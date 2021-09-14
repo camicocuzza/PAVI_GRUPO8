@@ -34,33 +34,32 @@ namespace CLASE05.Formularios.Usuarios
             this.txt_password = new CLASE05.Clases.LabelText02();
             this.txt_n_usuario = new CLASE05.Clases.LabelText02();
             this.txt_id_usuario = new CLASE05.Clases.LabelText02();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_cerrar
             // 
             this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_cerrar.Location = new System.Drawing.Point(395, 2);
+            this.btn_cerrar.Location = new System.Drawing.Point(405, 2);
             // 
             // btn_minimizar
             // 
             this.btn_minimizar.Enabled = false;
             this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_minimizar.Location = new System.Drawing.Point(325, 2);
+            this.btn_minimizar.Location = new System.Drawing.Point(335, 2);
             // 
             // btn_maximizar
             // 
             this.btn_maximizar.Enabled = false;
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_maximizar.Location = new System.Drawing.Point(360, 2);
+            this.btn_maximizar.Location = new System.Drawing.Point(370, 2);
             // 
             // btn_aceptar
             // 
+            this.btn_aceptar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.btn_aceptar.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold);
             this.btn_aceptar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_aceptar.Location = new System.Drawing.Point(156, 238);
+            this.btn_aceptar.Location = new System.Drawing.Point(164, 329);
             this.btn_aceptar.Name = "btn_aceptar";
             this.btn_aceptar.Size = new System.Drawing.Size(95, 31);
             this.btn_aceptar.TabIndex = 22;
@@ -72,7 +71,7 @@ namespace CLASE05.Formularios.Usuarios
             this.lbl_titulo.AutoSize = true;
             this.lbl_titulo.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Bold);
             this.lbl_titulo.ForeColor = System.Drawing.Color.White;
-            this.lbl_titulo.Location = new System.Drawing.Point(4, 38);
+            this.lbl_titulo.Location = new System.Drawing.Point(44, 48);
             this.lbl_titulo.Name = "lbl_titulo";
             this.lbl_titulo.Size = new System.Drawing.Size(81, 31);
             this.lbl_titulo.TabIndex = 25;
@@ -80,10 +79,10 @@ namespace CLASE05.Formularios.Usuarios
             // 
             // txt_password
             // 
-            this.txt_password._Ancho = 10;
+            this.txt_password._Ancho = 20;
             this.txt_password._Decimales = 2;
             this.txt_password._Etiqueta = "Password";
-            this.txt_password._Mask = "CCCCCCCCCC";
+            this.txt_password._Mask = "CCCCCCCCCCCCCCCCCCCC";
             this.txt_password._MensajeError = "El password esta vácio";
             this.txt_password._Nombre_campo = null;
             this.txt_password._Nombre_tabla = null;
@@ -95,18 +94,18 @@ namespace CLASE05.Formularios.Usuarios
             this.txt_password.BackColor = System.Drawing.Color.Transparent;
             this.txt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_password.Location = new System.Drawing.Point(0, 147);
+            this.txt_password.Location = new System.Drawing.Point(4, 232);
             this.txt_password.Margin = new System.Windows.Forms.Padding(4);
             this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(353, 53);
+            this.txt_password.Size = new System.Drawing.Size(327, 53);
             this.txt_password.TabIndex = 15;
             // 
             // txt_n_usuario
             // 
-            this.txt_n_usuario._Ancho = 30;
+            this.txt_n_usuario._Ancho = 20;
             this.txt_n_usuario._Decimales = 2;
             this.txt_n_usuario._Etiqueta = "Nombre Usuario";
-            this.txt_n_usuario._Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
+            this.txt_n_usuario._Mask = "CCCCCCCCCCCCCCCCCCCC";
             this.txt_n_usuario._MensajeError = "El nombre del usuario está vácio";
             this.txt_n_usuario._Nombre_campo = "n_usuario";
             this.txt_n_usuario._Nombre_tabla = null;
@@ -118,18 +117,18 @@ namespace CLASE05.Formularios.Usuarios
             this.txt_n_usuario.BackColor = System.Drawing.Color.Transparent;
             this.txt_n_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_n_usuario.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_n_usuario.Location = new System.Drawing.Point(0, 95);
+            this.txt_n_usuario.Location = new System.Drawing.Point(4, 180);
             this.txt_n_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.txt_n_usuario.Name = "txt_n_usuario";
-            this.txt_n_usuario.Size = new System.Drawing.Size(353, 53);
+            this.txt_n_usuario.Size = new System.Drawing.Size(327, 53);
             this.txt_n_usuario.TabIndex = 14;
             // 
             // txt_id_usuario
             // 
-            this.txt_id_usuario._Ancho = 2;
+            this.txt_id_usuario._Ancho = 5;
             this.txt_id_usuario._Decimales = 0;
             this.txt_id_usuario._Etiqueta = "Id Usuario";
-            this.txt_id_usuario._Mask = "99";
+            this.txt_id_usuario._Mask = "99999";
             this.txt_id_usuario._MensajeError = null;
             this.txt_id_usuario._Nombre_campo = "id_usuario";
             this.txt_id_usuario._Nombre_tabla = null;
@@ -142,33 +141,23 @@ namespace CLASE05.Formularios.Usuarios
             this.txt_id_usuario.Enabled = false;
             this.txt_id_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_id_usuario.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_id_usuario.Location = new System.Drawing.Point(0, 44);
+            this.txt_id_usuario.Location = new System.Drawing.Point(4, 129);
             this.txt_id_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.txt_id_usuario.Name = "txt_id_usuario";
-            this.txt_id_usuario.Size = new System.Drawing.Size(197, 28);
+            this.txt_id_usuario.Size = new System.Drawing.Size(216, 28);
             this.txt_id_usuario.TabIndex = 13;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.txt_password);
-            this.panel1.Controls.Add(this.txt_id_usuario);
-            this.panel1.Controls.Add(this.txt_n_usuario);
-            this.panel1.Controls.Add(this.btn_aceptar);
-            this.panel1.Location = new System.Drawing.Point(10, 84);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(410, 288);
-            this.panel1.TabIndex = 26;
             // 
             // Frm_Usuario
             // 
             this._FormularioMovil = true;
             this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(432, 384);
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.ClientSize = new System.Drawing.Size(442, 384);
+            this.Controls.Add(this.txt_password);
+            this.Controls.Add(this.txt_id_usuario);
+            this.Controls.Add(this.txt_n_usuario);
+            this.Controls.Add(this.btn_aceptar);
             this.Controls.Add(this.lbl_titulo);
             this.Location = new System.Drawing.Point(766, 183);
             this.Name = "Frm_Usuario";
@@ -176,9 +165,11 @@ namespace CLASE05.Formularios.Usuarios
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
+            this.Controls.SetChildIndex(this.btn_aceptar, 0);
+            this.Controls.SetChildIndex(this.txt_n_usuario, 0);
             this.Controls.SetChildIndex(this.lbl_posicion, 0);
-            this.Controls.SetChildIndex(this.panel1, 0);
-            this.panel1.ResumeLayout(false);
+            this.Controls.SetChildIndex(this.txt_id_usuario, 0);
+            this.Controls.SetChildIndex(this.txt_password, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,6 +182,5 @@ namespace CLASE05.Formularios.Usuarios
         public Clases.LabelText02 txt_password;
         public Clases.LabelText02 txt_n_usuario;
         public Clases.LabelText02 txt_id_usuario;
-        public System.Windows.Forms.Panel panel1;
     }
 }
