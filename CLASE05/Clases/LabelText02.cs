@@ -23,6 +23,10 @@ namespace CLASE05.Clases
         public string _Nombre_campo { get; set; }
         public string _Nombre_tabla { get; set; }
         public string _MensajeError { get; set; }
+        //public string _Startencero { get; set; }
+
+
+
         //-----------------------------
         public int _Ancho { get; set; } = 10;
         public int _Decimales { get; set; } = 2;

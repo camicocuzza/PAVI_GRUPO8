@@ -106,7 +106,7 @@ namespace CLASE05.Formularios.Usuarios
             this.txt_n_usuario._Decimales = 2;
             this.txt_n_usuario._Etiqueta = "Nombre Usuario";
             this.txt_n_usuario._Mask = "CCCCCCCCCCCCCCCCCCCC";
-            this.txt_n_usuario._MensajeError = "El nombre del usuario está vácio";
+            this.txt_n_usuario._MensajeError = "El nombre de usuario está vácio";
             this.txt_n_usuario._Nombre_campo = "n_usuario";
             this.txt_n_usuario._Nombre_tabla = null;
             this.txt_n_usuario._ReadOnly = false;
