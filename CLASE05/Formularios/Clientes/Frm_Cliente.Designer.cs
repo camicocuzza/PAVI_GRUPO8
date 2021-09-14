@@ -72,6 +72,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_limite_credito.Name = "txt_limite_credito";
             this.txt_limite_credito.Size = new System.Drawing.Size(190, 25);
             this.txt_limite_credito.TabIndex = 51;
+            this.txt_limite_credito.Click += new System.EventHandler(this.txt_limite_credito_Click);
             // 
             // label2
             // 
@@ -380,7 +381,7 @@ namespace CLASE05.Formularios.Clientes
         public Clases.LabelText02 txt_razon_social;
         public Clases.LabelText02 txt_direccion;
         public Clases.LabelText02 txt_nombre_contacto;
-        private System.Windows.Forms.Label label3;
         public System.Windows.Forms.Button btn_aceptar;
+        public System.Windows.Forms.Label label3;
     }
 }

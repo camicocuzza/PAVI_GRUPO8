@@ -31,6 +31,43 @@ namespace CLASE05.Formularios.Clientes
         {
             this.SuspendLayout();
             // 
+            // txt_limite_credito
+            // 
+            this.txt_limite_credito.TabIndex = 3;
+            this.txt_limite_credito.Tag = "Límite de crédito está vacío";
+            // 
+            // txt_cuit_cliente
+            // 
+            this.txt_cuit_cliente.TabIndex = 1;
+            // 
+            // cmb_pais
+            // 
+            this.cmb_pais.TabIndex = 7;
+            // 
+            // cmb_estado_provincia
+            // 
+            this.cmb_estado_provincia.TabIndex = 8;
+            // 
+            // txt_legajo_empleado
+            // 
+            this.txt_legajo_empleado.TabIndex = 5;
+            // 
+            // txt_ciudad
+            // 
+            this.txt_ciudad.TabIndex = 9;
+            // 
+            // txt_razon_social
+            // 
+            this.txt_razon_social.TabIndex = 2;
+            // 
+            // txt_direccion
+            // 
+            this.txt_direccion.TabIndex = 6;
+            // 
+            // txt_nombre_contacto
+            // 
+            this.txt_nombre_contacto.TabIndex = 4;
+            // 
             // btn_aceptar
             // 
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);

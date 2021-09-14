@@ -14,5 +14,10 @@ namespace CLASE05.Formularios.Clientes
         {
             InitializeComponent();
         }
+
+        private void txt_limite_credito_Click(object sender, EventArgs e)
+        {
+            txt_limite_credito.SelectionStart = txt_limite_credito.Text.Length;
+        }
     }
 }
