@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.Clientes
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
             this.rb_cuit_cliente = new System.Windows.Forms.RadioButton();
             this.btn_blan_patron = new System.Windows.Forms.Button();
@@ -130,7 +130,7 @@ namespace CLASE05.Formularios.Clientes
             // 
             this.rb_cuit_cliente.AutoSize = true;
             this.rb_cuit_cliente.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.rb_cuit_cliente.Location = new System.Drawing.Point(101, 79);
+            this.rb_cuit_cliente.Location = new System.Drawing.Point(51, 80);
             this.rb_cuit_cliente.Name = "rb_cuit_cliente";
             this.rb_cuit_cliente.Size = new System.Drawing.Size(98, 21);
             this.rb_cuit_cliente.TabIndex = 23;
@@ -172,14 +172,14 @@ namespace CLASE05.Formularios.Clientes
             // txt_cuit_cliente
             // 
             this.txt_cuit_cliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.txt_cuit_cliente.Enabled = false;
             this.txt_cuit_cliente.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cuit_cliente.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.txt_cuit_cliente.Location = new System.Drawing.Point(216, 76);
+            this.txt_cuit_cliente.Location = new System.Drawing.Point(166, 77);
             this.txt_cuit_cliente.Mask = "99-99999999-9";
             this.txt_cuit_cliente.Name = "txt_cuit_cliente";
-            this.txt_cuit_cliente.Size = new System.Drawing.Size(92, 25);
+            this.txt_cuit_cliente.Size = new System.Drawing.Size(142, 25);
             this.txt_cuit_cliente.TabIndex = 24;
+            this.txt_cuit_cliente.Click += new System.EventHandler(this.txt_cuit_cliente_Click);
             // 
             // label2
             // 
@@ -194,7 +194,6 @@ namespace CLASE05.Formularios.Clientes
             // txt_patron
             // 
             this.txt_patron.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.txt_patron.Enabled = false;
             this.txt_patron.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_patron.ForeColor = System.Drawing.Color.Gainsboro;
             this.txt_patron.Location = new System.Drawing.Point(125, 39);
@@ -202,6 +201,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_patron.Name = "txt_patron";
             this.txt_patron.Size = new System.Drawing.Size(183, 25);
             this.txt_patron.TabIndex = 20;
+            this.txt_patron.Click += new System.EventHandler(this.txt_patron_Click);
             // 
             // rb_nombre_contacto
             // 
@@ -221,8 +221,8 @@ namespace CLASE05.Formularios.Clientes
             this.grid_clientes._tamannoLetraHeader = 9;
             this.grid_clientes.AllowUserToAddRows = false;
             this.grid_clientes.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_clientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_clientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.grid_clientes.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_clientes.Location = new System.Drawing.Point(12, 203);

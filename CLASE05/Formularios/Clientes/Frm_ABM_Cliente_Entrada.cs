@@ -20,13 +20,14 @@ namespace CLASE05.Formularios.Clientes
         {
             this.txt_patron.Text = string.Empty;
             this.txt_cuit_cliente.Text = string.Empty;
-            txt_cuit_cliente.Enabled = false;
-            txt_patron.Enabled = false;
+            rb_cuit_cliente.Checked = false;
+            rb_razon_social.Checked = false;
+            rb_nombre_contacto.Checked = false;
         }
 
         private void Frm_ABM_Cliente_Entrada_Load(object sender, EventArgs e)
         {
-            this.grid_clientes.Formatear("cuit_cliente, 100, C; razon_social, 170, I; nombre_contacto, 170, I");
+            this.grid_clientes.Formatear("cuit_cliente, 100, C; razon_social, 200, I; nombre_contacto, 170, I");
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
@@ -34,31 +35,45 @@ namespace CLASE05.Formularios.Clientes
             NE_Clientes cli = new NE_Clientes();
 
             string columna = "";
+            MaskedTextBox cuadroTexto = null;
 
-            if (txt_patron.Text != string.Empty)
+            if (rb_cuit_cliente.Checked == false & rb_razon_social.Checked == false & rb_nombre_contacto.Checked == false)
             {
-                if (rb_razon_social.Checked == true)
-                    columna = rb_razon_social.Text;
-                if (rb_nombre_contacto.Checked == true)
-                    columna = rb_nombre_contacto.Text;
-
-                grid_clientes.Cargar(cli.BuscarCliente(txt_patron.Text, columna));
-                if (grid_clientes.Rows.Count == 0)
-                    MessageBox.Show("Búsqueda sin resultados", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Marcar atributo de búsqueda");
+                grid_clientes.Cargar(cli.BuscarCliente("", rb_cuit_cliente.Text));
                 return;
             }
-            if (txt_cuit_cliente.Text != string.Empty)
+            if (rb_cuit_cliente.Checked == true)
             {
-                grid_clientes.Cargar(cli.BuscarCliente(txt_cuit_cliente.Text));
-                if (grid_clientes.Rows.Count == 0)
-                    MessageBox.Show("Búsqueda sin resultados", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                columna = rb_cuit_cliente.Text;
+                cuadroTexto = txt_cuit_cliente;
             }
-            MessageBox.Show("No hay parámetros de búsqueda", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            if (rb_razon_social.Checked == true)
+            {
+                columna = rb_razon_social.Text;
+                cuadroTexto = txt_patron;
+            }
+            if (rb_nombre_contacto.Checked == true)
+            {
+                columna = rb_nombre_contacto.Text;
+                cuadroTexto = txt_patron;
+            }
+
+            if (cuadroTexto.Text == "")
+            {
+                MessageBox.Show("Ingresar patrón de búsqueda");
+            }
+            else
+            {
+                grid_clientes.Cargar(cli.BuscarCliente(cuadroTexto.Text, columna));
+                if (grid_clientes.Rows.Count == 0)
+                {
+                    MessageBox.Show("Búsqueda sin resultados", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+            }
+            return;
         }
-
-
-
         private void btn_alta_Click(object sender, EventArgs e)
         {
             //Frm_Cliente_Alta frm_altas = new Frm_Cliente_Alta();
@@ -119,7 +134,15 @@ namespace CLASE05.Formularios.Clientes
             //frm_consulta.ShowDialog();
         }
 
+        private void txt_cuit_cliente_Click(object sender, EventArgs e)
+        {
+            txt_cuit_cliente.SelectionStart = 0;
+        }
 
+        private void txt_patron_Click(object sender, EventArgs e)
+        {
+            txt_patron.SelectionStart = txt_patron.Text.Length;
+        }
     }    
     
 }

@@ -147,12 +147,6 @@
     <Compile Include="Formularios\InicioSistema\Frm_Escritorio.Designer.cs">
       <DependentUpon>Frm_Escritorio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\InicioSistema\FrmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\InicioSistema\FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Usuarios\Frm_ABM_Usuario_Entrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,9 +219,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\InicioSistema\Frm_Escritorio.resx">
       <DependentUpon>Frm_Escritorio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\InicioSistema\FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Usuarios\Frm_ABM_Usuario_Entrada.resx">
       <DependentUpon>Frm_ABM_Usuario_Entrada.cs</DependentUpon>
