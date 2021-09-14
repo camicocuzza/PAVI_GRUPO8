@@ -47,6 +47,11 @@ namespace CLASE05.Formularios.Clientes
             // 
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
+            // lbl_titulo
+            // 
+            this.lbl_titulo.Size = new System.Drawing.Size(290, 31);
+            this.lbl_titulo.Text = "Modificación de Cliente";
+            // 
             // btn_cerrar
             // 
             this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
@@ -59,12 +64,13 @@ namespace CLASE05.Formularios.Clientes
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             // 
-            // Frm_Cliente_Modificacion1
+            // Frm_Cliente_Modificacion
             // 
             this._PosiciónVisible = true;
+            this._Titulo = "Modificación de Clientes";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(516, 516);
-            this.Name = "Frm_Cliente_Modificacion1";
+            this.Name = "Frm_Cliente_Modificacion";
             this.Load += new System.EventHandler(this.Frm_Cliente_Modificacion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
