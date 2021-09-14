@@ -21,20 +21,20 @@ namespace CLASE05.Clases
             {
                 if (item.GetType().Name == "LabelText02")
                 {
-                    //if(((LabelText02)item)._Validable==true)
-                    //{
+                    if(((LabelText02)item)._Validable==true)
+                    {
                         if(((LabelText02)item)._Text==string.Empty)
                         {
                             MessageBox.Show(((LabelText02)item)._MensajeError);
                             ((LabelText02)item).Focus();
                             return RespuestaValidacion.Error;
                         }
-                    //}
+                    }
                 }
                 if (item.GetType().Name == "ComboBox01")
                 {
-                  //if (((ComboBox01)item)._Validable == true)
-                  //  {
+                  if (((ComboBox01)item)._Validable == true)
+                    {
                         if(((ComboBox01)item).SelectedIndex == -1)
                         {
                             MessageBox.Show(((ComboBox01)item)._MensajeError);
