@@ -23,11 +23,12 @@ namespace CLASE05.Formularios.Clientes
             rb_cuit_cliente.Checked = false;
             rb_razon_social.Checked = false;
             rb_nombre_contacto.Checked = false;
+            rb_legajo_empleado.Checked = false;
         }
 
         private void Frm_ABM_Cliente_Entrada_Load(object sender, EventArgs e)
         {
-            this.grid_clientes.Formatear("cuit_cliente, 100, C; razon_social, 200, I; nombre_contacto, 170, I");
+            this.grid_clientes.Formatear("cuit_cliente, 100, C; razon_social, 170, I; nombre_contacto, 170, I; legajo_empleado, 150, I");
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
@@ -37,7 +38,7 @@ namespace CLASE05.Formularios.Clientes
             string columna = "";
             MaskedTextBox cuadroTexto = null;
 
-            if (rb_cuit_cliente.Checked == false & rb_razon_social.Checked == false & rb_nombre_contacto.Checked == false)
+            if (rb_cuit_cliente.Checked == false & rb_razon_social.Checked == false & rb_nombre_contacto.Checked == false & rb_legajo_empleado.Checked == false)
             {
                 //MessageBox.Show("Marcar atributo de búsqueda");
                 grid_clientes.Cargar(cli.BuscarCliente("", rb_cuit_cliente.Text));
@@ -56,6 +57,11 @@ namespace CLASE05.Formularios.Clientes
             if (rb_nombre_contacto.Checked == true)
             {
                 columna = rb_nombre_contacto.Text;
+                cuadroTexto = txt_patron;
+            }
+            if (rb_legajo_empleado.Checked == true)
+            {
+                columna = rb_legajo_empleado.Text;
                 cuadroTexto = txt_patron;
             }
 
@@ -142,6 +148,13 @@ namespace CLASE05.Formularios.Clientes
         private void txt_patron_Click(object sender, EventArgs e)
         {
             txt_patron.SelectionStart = txt_patron.Text.Length;
+            if(rb_legajo_empleado.Checked == true)
+            {
+                txt_patron.Mask = "999999";
+            }
+            else
+                txt_patron.Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
+
         }
     }    
     

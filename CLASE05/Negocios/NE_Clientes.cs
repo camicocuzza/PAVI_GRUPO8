@@ -52,14 +52,14 @@ namespace CLASE05.Negocios
         }
         public DataTable BuscarCliente(string patron, string columna)
         {
-            string sql = @"SELECT cuit_cliente, razon_social, nombre_contacto  
+            string sql = @"SELECT cuit_cliente, razon_social, nombre_contacto, legajo_empleado  
                           FROM cliente WHERE " + columna + " like '%" + patron + "%'";
 
             return _BD.EjecutarSelect(sql);
         }
         public DataTable BuscarCliente(string cuit_cliente)
         {
-            string sql = @"SELECT cuit_cliente, razon_social 
+            string sql = @"SELECT cuit_cliente, razon_social,
                           FROM cliente WHERE cuit_cliente = '" + cuit_cliente + "'";
 
             return _BD.EjecutarSelect(sql);

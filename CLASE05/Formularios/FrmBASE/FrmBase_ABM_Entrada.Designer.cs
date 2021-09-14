@@ -60,7 +60,6 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Silver;
             this.label1.Location = new System.Drawing.Point(34, 26);
@@ -71,7 +70,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.AutoSize = true;
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.groupBox1.Controls.Add(this.btn_buscar);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft JhengHei", 12.75F, System.Drawing.FontStyle.Bold);
@@ -85,11 +83,10 @@
             // 
             // btn_buscar
             // 
-            this.btn_buscar.AutoSize = true;
             this.btn_buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.btn_buscar.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold);
             this.btn_buscar.ForeColor = System.Drawing.Color.Silver;
-            this.btn_buscar.Location = new System.Drawing.Point(552, 77);
+            this.btn_buscar.Location = new System.Drawing.Point(552, 100);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(85, 30);
             this.btn_buscar.TabIndex = 0;
@@ -98,7 +95,6 @@
             // 
             // btn_alta
             // 
-            this.btn_alta.AutoSize = true;
             this.btn_alta.BackColor = System.Drawing.Color.Transparent;
             this.btn_alta.BackgroundImage = global::CLASE05.Properties.Resources.btn_añadir__8_;
             this.btn_alta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -116,7 +112,6 @@
             // 
             // btn_modificar
             // 
-            this.btn_modificar.AutoSize = true;
             this.btn_modificar.BackColor = System.Drawing.Color.Transparent;
             this.btn_modificar.BackgroundImage = global::CLASE05.Properties.Resources.btn_modificar__1_;
             this.btn_modificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -134,7 +129,6 @@
             // 
             // btn_borrar
             // 
-            this.btn_borrar.AutoSize = true;
             this.btn_borrar.BackColor = System.Drawing.Color.Transparent;
             this.btn_borrar.BackgroundImage = global::CLASE05.Properties.Resources.btn_eliminar__2_;
             this.btn_borrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -152,7 +146,6 @@
             // 
             // btn_consultar
             // 
-            this.btn_consultar.AutoSize = true;
             this.btn_consultar.BackColor = System.Drawing.Color.Transparent;
             this.btn_consultar.BackgroundImage = global::CLASE05.Properties.Resources.btn_consultar__3_;
             this.btn_consultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -195,20 +188,19 @@
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        protected System.Windows.Forms.GroupBox groupBox1;
-        protected System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.ToolTip toolTip1;
         public System.Windows.Forms.Button btn_alta;
         public System.Windows.Forms.Button btn_modificar;
         public System.Windows.Forms.Button btn_borrar;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button btn_consultar;
+        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.Button btn_buscar;
     }
 }

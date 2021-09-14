@@ -109,7 +109,7 @@ namespace CLASE05.Formularios.Clientes
             this.cmb_pais.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.cmb_pais.ForeColor = System.Drawing.Color.Gainsboro;
             this.cmb_pais.FormattingEnabled = true;
-            this.cmb_pais.Location = new System.Drawing.Point(152, 250);
+            this.cmb_pais.Location = new System.Drawing.Point(150, 267);
             this.cmb_pais.Name = "cmb_pais";
             this.cmb_pais.Size = new System.Drawing.Size(159, 25);
             this.cmb_pais.TabIndex = 23;
@@ -132,7 +132,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_razon_social.BackColor = System.Drawing.Color.Transparent;
             this.txt_razon_social.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_razon_social.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_razon_social.Location = new System.Drawing.Point(-1, 57);
+            this.txt_razon_social.Location = new System.Drawing.Point(-2, 64);
             this.txt_razon_social.Margin = new System.Windows.Forms.Padding(4);
             this.txt_razon_social.Name = "txt_razon_social";
             this.txt_razon_social.Size = new System.Drawing.Size(341, 30);
@@ -155,7 +155,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_limite_credito.BackColor = System.Drawing.Color.Transparent;
             this.txt_limite_credito.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_limite_credito.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_limite_credito.Location = new System.Drawing.Point(-1, 95);
+            this.txt_limite_credito.Location = new System.Drawing.Point(-1, 103);
             this.txt_limite_credito.Margin = new System.Windows.Forms.Padding(4);
             this.txt_limite_credito.Name = "txt_limite_credito";
             this.txt_limite_credito.Size = new System.Drawing.Size(252, 30);
@@ -178,7 +178,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_nombre_contacto.BackColor = System.Drawing.Color.Transparent;
             this.txt_nombre_contacto.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_nombre_contacto.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_nombre_contacto.Location = new System.Drawing.Point(-1, 133);
+            this.txt_nombre_contacto.Location = new System.Drawing.Point(-1, 143);
             this.txt_nombre_contacto.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nombre_contacto.Name = "txt_nombre_contacto";
             this.txt_nombre_contacto.Size = new System.Drawing.Size(341, 30);
@@ -201,7 +201,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_legajo_empleado.BackColor = System.Drawing.Color.Transparent;
             this.txt_legajo_empleado.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_legajo_empleado.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_legajo_empleado.Location = new System.Drawing.Point(-1, 171);
+            this.txt_legajo_empleado.Location = new System.Drawing.Point(-1, 183);
             this.txt_legajo_empleado.Margin = new System.Windows.Forms.Padding(4);
             this.txt_legajo_empleado.Name = "txt_legajo_empleado";
             this.txt_legajo_empleado.Size = new System.Drawing.Size(252, 30);
@@ -224,7 +224,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_direccion.BackColor = System.Drawing.Color.Transparent;
             this.txt_direccion.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_direccion.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_direccion.Location = new System.Drawing.Point(-1, 209);
+            this.txt_direccion.Location = new System.Drawing.Point(-1, 224);
             this.txt_direccion.Margin = new System.Windows.Forms.Padding(4);
             this.txt_direccion.Name = "txt_direccion";
             this.txt_direccion.Size = new System.Drawing.Size(341, 30);
@@ -247,7 +247,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_ciudad.BackColor = System.Drawing.Color.Transparent;
             this.txt_ciudad.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_ciudad.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_ciudad.Location = new System.Drawing.Point(-1, 323);
+            this.txt_ciudad.Location = new System.Drawing.Point(-1, 343);
             this.txt_ciudad.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ciudad.Name = "txt_ciudad";
             this.txt_ciudad.Size = new System.Drawing.Size(341, 30);
@@ -257,7 +257,7 @@ namespace CLASE05.Formularios.Clientes
             // 
             this.lbl_pais.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.lbl_pais.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lbl_pais.Location = new System.Drawing.Point(-3, 251);
+            this.lbl_pais.Location = new System.Drawing.Point(-3, 265);
             this.lbl_pais.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_pais.Name = "lbl_pais";
             this.lbl_pais.Size = new System.Drawing.Size(144, 20);
@@ -270,7 +270,7 @@ namespace CLASE05.Formularios.Clientes
             this.lbl_estado_provincia.BackColor = System.Drawing.Color.Transparent;
             this.lbl_estado_provincia.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.lbl_estado_provincia.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lbl_estado_provincia.Location = new System.Drawing.Point(-3, 287);
+            this.lbl_estado_provincia.Location = new System.Drawing.Point(-3, 306);
             this.lbl_estado_provincia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_estado_provincia.Name = "lbl_estado_provincia";
             this.lbl_estado_provincia.Size = new System.Drawing.Size(144, 20);
@@ -294,7 +294,7 @@ namespace CLASE05.Formularios.Clientes
             this.cmb_estado_provincia.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.cmb_estado_provincia.ForeColor = System.Drawing.Color.Gainsboro;
             this.cmb_estado_provincia.FormattingEnabled = true;
-            this.cmb_estado_provincia.Location = new System.Drawing.Point(152, 287);
+            this.cmb_estado_provincia.Location = new System.Drawing.Point(150, 307);
             this.cmb_estado_provincia.Name = "cmb_estado_provincia";
             this.cmb_estado_provincia.Size = new System.Drawing.Size(159, 25);
             this.cmb_estado_provincia.TabIndex = 32;
@@ -323,7 +323,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_cuit_cliente.Culture = new System.Globalization.CultureInfo("en-US");
             this.txt_cuit_cliente.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
             this.txt_cuit_cliente.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_cuit_cliente.Location = new System.Drawing.Point(148, 28);
+            this.txt_cuit_cliente.Location = new System.Drawing.Point(149, 28);
             this.txt_cuit_cliente.Mask = "99-99999999-9";
             this.txt_cuit_cliente.Name = "txt_cuit_cliente";
             this.txt_cuit_cliente.Size = new System.Drawing.Size(119, 25);
