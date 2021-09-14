@@ -45,12 +45,8 @@ namespace CLASE05.Formularios.Clientes
             // 
             // txt_cuit_cliente
             // 
-            this.txt_cuit_cliente.Location = new System.Drawing.Point(156, 99);
-            this.txt_cuit_cliente.Size = new System.Drawing.Size(318, 25);
-            // 
-            // txt_limite_credito
-            // 
-            this.txt_limite_credito.Location = new System.Drawing.Point(156, 176);
+            this.txt_cuit_cliente.Location = new System.Drawing.Point(144, 99);
+            this.txt_cuit_cliente.Size = new System.Drawing.Size(190, 25);
             // 
             // btn_aceptar
             // 
@@ -58,7 +54,6 @@ namespace CLASE05.Formularios.Clientes
             // 
             // lbl_titulo
             // 
-            this.lbl_titulo.Location = new System.Drawing.Point(31, 44);
             this.lbl_titulo.Size = new System.Drawing.Size(195, 31);
             this.lbl_titulo.Text = "Altas de Cliente";
             // 

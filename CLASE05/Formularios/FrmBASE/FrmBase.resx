@@ -198,9 +198,6 @@
   <data name="btn_cerrar.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
-  <data name="btn_cerrar.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="btn_cerrar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -556,9 +553,6 @@
         /+AH////////4Af////////gB////////+AH////////4Af////////gB////////+AD////////wIAA
         AAAAAAABgAAAAAAAAAHAAAAAAAAAA+AAAAAAAAAH+AAAAAAAAB8=
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
