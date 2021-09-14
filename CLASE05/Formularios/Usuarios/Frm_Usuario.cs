@@ -23,10 +23,6 @@ namespace CLASE05.Formularios.Usuarios
 
         private void Frm_Usuario_Load(object sender, EventArgs e)
         {
-        //public void CargarCombos()
-        //{
-        //    cmb_estadosUsuarios._Cargar();
-        //    cmb_perfiles._Cargar();
         }
     }
 }

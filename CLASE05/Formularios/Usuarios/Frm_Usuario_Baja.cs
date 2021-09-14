@@ -34,22 +34,22 @@ namespace CLASE05.Formularios.Usuarios
         {
             TratamientosEspeciales _TE = new TratamientosEspeciales();
 
-            if (_TE.Validar(this.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
+            //if (_TE.Validar(this.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
+            //{
+            NE_Usuarios usu = new NE_Usuarios();
+
+            usu.id_usuario = txt_id_usuario._Text;
+
+            if (MessageBox.Show("¿Está seguro de que desea eliminar al usuario " + txt_n_usuario._Text + "?", "Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                NE_Usuarios usu = new NE_Usuarios();
-
-                usu.id_usuario = txt_id_usuario._Text;
-
-                if (MessageBox.Show("¿Está seguro de que desea eliminar al usuario " + txt_n_usuario._Text + "?", "Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    usu.Borrar();
-                    MessageBox.Show("Se eliminó correctamente el usuario " + txt_n_usuario._Text, "Importante");
-                    this.Dispose();
-                }
-                else
-                    MessageBox.Show("Eliminación cancelada");
-
+                usu.Borrar();
+                MessageBox.Show("Se eliminó correctamente el usuario " + txt_n_usuario._Text, "Importante");
+                this.Dispose();
             }
+            else
+                MessageBox.Show("Eliminación cancelada");
+
+            //}
 
         }
 

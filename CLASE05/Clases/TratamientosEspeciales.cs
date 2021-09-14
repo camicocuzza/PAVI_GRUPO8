@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 
-
-
-
 namespace CLASE05.Clases
 {
     class TratamientosEspeciales

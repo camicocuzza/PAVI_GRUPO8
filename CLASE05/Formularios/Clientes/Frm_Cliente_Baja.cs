@@ -46,8 +46,8 @@ namespace CLASE05.Formularios.Clientes
         {
             TratamientosEspeciales _TE = new TratamientosEspeciales();
 
-            if (_TE.Validar(this.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
-            {
+            //if (_TE.Validar(this.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
+            //{
                 cli.cuit_cliente = txt_cuit_cliente.Text;
 
                 if (MessageBox.Show("¿Está seguro de que desea eliminar al cliente " + txt_razon_social._Text + "?", "Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -59,7 +59,7 @@ namespace CLASE05.Formularios.Clientes
                 else
                     MessageBox.Show("Eliminación cancelada");
 
-            }
+            //}
         }
     }
 }
