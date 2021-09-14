@@ -23,6 +23,23 @@ namespace CLASE05.Negocios
         public string ciudad { get; set; }
 
         BE_Acceso_Datos _BD = new BE_Acceso_Datos();
+        public Validacion ValidarExistencia(string cuit_cliente)
+        {
+            string sql = @"SELECT * FROM usuario
+                          WHERE cuit_cliente = '" + cuit_cliente + "'";
+
+            DataTable tabla = new DataTable();
+            tabla = _BD.EjecutarSelect(sql);
+
+            if (tabla.Rows.Count == 1)
+            {
+                return Validacion.correcta;
+            }
+            else
+            {
+                return Validacion.incorrecta;
+            }
+        }
         public string RecuperarCuit(string razon_social, string nombre_contacto)
         {
             string sql = @"SELECT cuit_cliente FROM usuario

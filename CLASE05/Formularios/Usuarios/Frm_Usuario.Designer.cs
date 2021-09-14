@@ -83,7 +83,7 @@ namespace CLASE05.Formularios.Usuarios
             this.txt_password._Decimales = 2;
             this.txt_password._Etiqueta = "Password";
             this.txt_password._Mask = "CCCCCCCCCCCCCCCCCCCC";
-            this.txt_password._MensajeError = "El password esta vácio";
+            this.txt_password._MensajeError = "Ingresar password";
             this.txt_password._Nombre_campo = null;
             this.txt_password._Nombre_tabla = null;
             this.txt_password._ReadOnly = false;
@@ -106,7 +106,7 @@ namespace CLASE05.Formularios.Usuarios
             this.txt_n_usuario._Decimales = 2;
             this.txt_n_usuario._Etiqueta = "Nombre Usuario";
             this.txt_n_usuario._Mask = "CCCCCCCCCCCCCCCCCCCC";
-            this.txt_n_usuario._MensajeError = "El nombre de usuario está vácio";
+            this.txt_n_usuario._MensajeError = "Ingresar nombre de usuario";
             this.txt_n_usuario._Nombre_campo = "n_usuario";
             this.txt_n_usuario._Nombre_tabla = null;
             this.txt_n_usuario._ReadOnly = false;
