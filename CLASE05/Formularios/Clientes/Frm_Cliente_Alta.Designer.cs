@@ -45,33 +45,44 @@ namespace CLASE05.Formularios.Clientes
             // 
             // txt_cuit_cliente
             // 
-            this.txt_cuit_cliente.Location = new System.Drawing.Point(148, 32);
+            this.txt_cuit_cliente.Location = new System.Drawing.Point(156, 99);
+            this.txt_cuit_cliente.Size = new System.Drawing.Size(318, 25);
             // 
             // txt_limite_credito
             // 
-            this.txt_limite_credito.Location = new System.Drawing.Point(148, 111);
+            this.txt_limite_credito.Location = new System.Drawing.Point(156, 176);
             // 
             // btn_aceptar
             // 
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
+            // lbl_titulo
+            // 
+            this.lbl_titulo.Location = new System.Drawing.Point(31, 44);
+            this.lbl_titulo.Size = new System.Drawing.Size(195, 31);
+            this.lbl_titulo.Text = "Altas de Cliente";
+            // 
             // btn_cerrar
             // 
             this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_cerrar.Location = new System.Drawing.Point(478, 4);
             // 
             // btn_minimizar
             // 
             this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_minimizar.Location = new System.Drawing.Point(410, 4);
             // 
             // btn_maximizar
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_maximizar.Location = new System.Drawing.Point(444, 4);
             // 
             // Frm_Cliente_Alta
             // 
             this._PosiciónVisible = true;
+            this._Titulo = "Altas de Cliente";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(449, 546);
+            this.ClientSize = new System.Drawing.Size(516, 516);
             this.Name = "Frm_Cliente_Alta";
             this.ResumeLayout(false);
             this.PerformLayout();
