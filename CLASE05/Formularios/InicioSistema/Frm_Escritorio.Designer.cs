@@ -33,29 +33,29 @@
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirDeSistemaConLoginActivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aBMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gráficosEstadísticosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
-            this.editarToolStripMenuItem,
             this.aBMToolStripMenuItem,
             this.procesosToolStripMenuItem,
             this.reporteToolStripMenuItem,
             this.gráficosEstadísticosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(656, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(656, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -65,10 +65,10 @@
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem,
             this.salirDeSistemaConLoginActivoToolStripMenuItem});
-            this.archivoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.archivoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.archivoToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(75, 25);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // salirToolStripMenuItem
@@ -77,7 +77,7 @@
             this.salirToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.Silver;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -87,67 +87,62 @@
             this.salirDeSistemaConLoginActivoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.salirDeSistemaConLoginActivoToolStripMenuItem.ForeColor = System.Drawing.Color.Silver;
             this.salirDeSistemaConLoginActivoToolStripMenuItem.Name = "salirDeSistemaConLoginActivoToolStripMenuItem";
-            this.salirDeSistemaConLoginActivoToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.salirDeSistemaConLoginActivoToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.salirDeSistemaConLoginActivoToolStripMenuItem.Text = "Cerrar sesión";
             this.salirDeSistemaConLoginActivoToolStripMenuItem.Click += new System.EventHandler(this.salirDeSistemaConLoginActivoToolStripMenuItem_Click);
-            // 
-            // editarToolStripMenuItem
-            // 
-            this.editarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.editarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.editarToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
-            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
-            this.editarToolStripMenuItem.Text = "Editar";
             // 
             // aBMToolStripMenuItem
             // 
             this.aBMToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuariosToolStripMenuItem});
-            this.aBMToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.usuariosToolStripMenuItem,
+            this.clientesToolStripMenuItem});
+            this.aBMToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.aBMToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
             this.aBMToolStripMenuItem.Name = "aBMToolStripMenuItem";
-            this.aBMToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.aBMToolStripMenuItem.Size = new System.Drawing.Size(55, 25);
             this.aBMToolStripMenuItem.Text = "ABM";
             // 
             // usuariosToolStripMenuItem
             // 
+            this.usuariosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.usuariosToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // procesosToolStripMenuItem
             // 
-            this.procesosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.procesosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.procesosToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
-            this.procesosToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.procesosToolStripMenuItem.Size = new System.Drawing.Size(84, 25);
             this.procesosToolStripMenuItem.Text = "Procesos";
             // 
             // reporteToolStripMenuItem
             // 
-            this.reporteToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.reporteToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.reporteToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
             this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
-            this.reporteToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
+            this.reporteToolStripMenuItem.Size = new System.Drawing.Size(84, 25);
             this.reporteToolStripMenuItem.Text = "Reportes";
             // 
             // gráficosEstadísticosToolStripMenuItem
             // 
-            this.gráficosEstadísticosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aToolStripMenuItem2});
-            this.gráficosEstadísticosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.gráficosEstadísticosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.gráficosEstadísticosToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
             this.gráficosEstadísticosToolStripMenuItem.Name = "gráficosEstadísticosToolStripMenuItem";
-            this.gráficosEstadísticosToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
+            this.gráficosEstadísticosToolStripMenuItem.Size = new System.Drawing.Size(163, 25);
             this.gráficosEstadísticosToolStripMenuItem.Text = "Gráficos Estadísticos";
             // 
-            // aToolStripMenuItem2
+            // clientesToolStripMenuItem
             // 
-            this.aToolStripMenuItem2.Name = "aToolStripMenuItem2";
-            this.aToolStripMenuItem2.Size = new System.Drawing.Size(86, 24);
-            this.aToolStripMenuItem2.Text = "a";
+            this.clientesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.clientesToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // Frm_Escritorio
             // 
@@ -179,14 +174,13 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aBMToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem procesosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gráficosEstadísticosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirDeSistemaConLoginActivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
     }
 }
 

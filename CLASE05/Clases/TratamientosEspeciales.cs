@@ -41,6 +41,15 @@ namespace CLASE05.Clases
                             ((ComboBox01)item).Focus();
                             return RespuestaValidacion.Error;
                         }
+                  }
+                }
+                if (item.GetType().Name == "MaskedTextBox")
+                {
+                    if (((MaskedTextBox)item).Text == string.Empty)
+                    {
+                        MessageBox.Show("Límite de crédito está vacío");
+                        ((MaskedTextBox)item).Focus();
+                        return RespuestaValidacion.Error;
                     }
                 }
             }
@@ -73,6 +82,13 @@ namespace CLASE05.Clases
             {
                 return RespuestaValidacion.Error;
             }
+        }
+        public RespuestaValidacion ValidarCuit(string cuit)
+        {
+            if (cuit.Length < 13)
+                return RespuestaValidacion.Error;
+            else
+                return RespuestaValidacion.Correcta;
         }
 
     }

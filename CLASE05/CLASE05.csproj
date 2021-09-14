@@ -89,12 +89,6 @@
     <Compile Include="Clases\Grid01.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Clases\LabelText01.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Clases\LabelText01.designer.cs">
-      <DependentUpon>LabelText01.cs</DependentUpon>
-    </Compile>
     <Compile Include="Clases\LabelText02.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -105,6 +99,42 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Clases\TratamientosEspeciales.cs" />
+    <Compile Include="Formularios\Clientes\Frm_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Clientes\Frm_Cliente.Designer.cs">
+      <DependentUpon>Frm_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Clientes\Frm_Cliente_Alta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Clientes\Frm_Cliente_Alta.Designer.cs">
+      <DependentUpon>Frm_Cliente_Alta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Clientes\Frm_Cliente_Baja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Clientes\Frm_Cliente_Baja.Designer.cs">
+      <DependentUpon>Frm_Cliente_Baja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Clientes\Frm_ABM_Cliente_Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Clientes\Frm_ABM_Cliente_Entrada.Designer.cs">
+      <DependentUpon>Frm_ABM_Cliente_Entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Clientes\Frm_Cliente_Consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Clientes\Frm_Cliente_Consulta.Designer.cs">
+      <DependentUpon>Frm_Cliente_Consulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Clientes\Frm_Cliente_Modificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Clientes\Frm_Cliente_Modificacion.Designer.cs">
+      <DependentUpon>Frm_Cliente_Modificacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmBASE\FrmBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +147,12 @@
     <Compile Include="Formularios\FrmBASE\FrmBase_ABM_Entrada.Designer.cs">
       <DependentUpon>FrmBase_ABM_Entrada.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmBASE\FrmBase_Datos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmBASE\FrmBase_Datos.Designer.cs">
+      <DependentUpon>FrmBase_Datos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\InicioSistema\Frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,12 +164,6 @@
     </Compile>
     <Compile Include="Formularios\InicioSistema\Frm_Escritorio.Designer.cs">
       <DependentUpon>Frm_Escritorio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\InicioSistema\FrmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\InicioSistema\FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Usuarios\Frm_ABM_Usuario_Entrada.cs">
       <SubType>Form</SubType>
@@ -171,14 +201,12 @@
     <Compile Include="Formularios\Usuarios\Frm_Usuario_Modificacion.Designer.cs">
       <DependentUpon>Frm_Usuario_Modificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Negocios\NE_Clientes.cs" />
     <Compile Include="Negocios\NE_Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Clases\ComboBox01.resx">
       <DependentUpon>ComboBox01.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Clases\LabelText01.resx">
-      <DependentUpon>LabelText01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clases\LabelText02.resx">
       <DependentUpon>LabelText02.cs</DependentUpon>
@@ -186,20 +214,38 @@
     <EmbeddedResource Include="Clases\TextBox02.resx">
       <DependentUpon>TextBox02.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Clientes\Frm_ABM_Cliente_Entrada.resx">
+      <DependentUpon>Frm_ABM_Cliente_Entrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente.resx">
+      <DependentUpon>Frm_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente_Alta.resx">
+      <DependentUpon>Frm_Cliente_Alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente_Baja.resx">
+      <DependentUpon>Frm_Cliente_Baja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente_Consulta.resx">
+      <DependentUpon>Frm_Cliente_Consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente_Modificacion.resx">
+      <DependentUpon>Frm_Cliente_Modificacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmBASE\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmBASE\FrmBase_ABM_Entrada.resx">
       <DependentUpon>FrmBase_ABM_Entrada.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmBASE\FrmBase_Datos.resx">
+      <DependentUpon>FrmBase_Datos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\InicioSistema\Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\InicioSistema\Frm_Escritorio.resx">
       <DependentUpon>Frm_Escritorio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\InicioSistema\FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Usuarios\Frm_ABM_Usuario_Entrada.resx">
       <DependentUpon>Frm_ABM_Usuario_Entrada.cs</DependentUpon>
@@ -288,5 +334,6 @@
   <ItemGroup>
     <None Include="Resources\btn_consultar %283%29.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

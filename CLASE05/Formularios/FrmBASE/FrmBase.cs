@@ -86,6 +86,20 @@ namespace CLASE05.Formularios.FrmBASE
         {
             this.cerrar();
         }
+
+        private void btn_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_maximizar_Click(object sender, EventArgs e)
+        {
+            if(this.WindowState == FormWindowState.Maximized)
+                this.WindowState = FormWindowState.Normal;
+            else
+                this.WindowState = FormWindowState.Maximized;
+        }
+       
         public void cerrar()
         {
             this.Close();

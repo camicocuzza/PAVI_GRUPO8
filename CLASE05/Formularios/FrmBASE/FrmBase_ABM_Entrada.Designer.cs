@@ -48,17 +48,18 @@
             // btn_minimizar
             // 
             this.btn_minimizar.BackgroundImage = global::CLASE05.Properties.Resources.btn_minimizar;
+            this.btn_minimizar.Enabled = false;
             this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_minimizar.Location = new System.Drawing.Point(564, 1);
             // 
             // btn_maximizar
             // 
+            this.btn_maximizar.Enabled = false;
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_maximizar.Location = new System.Drawing.Point(599, 1);
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Silver;
             this.label1.Location = new System.Drawing.Point(34, 26);
@@ -75,7 +76,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Gainsboro;
             this.groupBox1.Location = new System.Drawing.Point(12, 81);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(645, 113);
+            this.groupBox1.Size = new System.Drawing.Size(645, 136);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Restricciones de Búsqueda";
@@ -85,7 +86,7 @@
             this.btn_buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.btn_buscar.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold);
             this.btn_buscar.ForeColor = System.Drawing.Color.Silver;
-            this.btn_buscar.Location = new System.Drawing.Point(552, 77);
+            this.btn_buscar.Location = new System.Drawing.Point(552, 100);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(85, 30);
             this.btn_buscar.TabIndex = 0;
@@ -173,7 +174,7 @@
             this.Controls.Add(this.btn_alta);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Location = new System.Drawing.Point(200, 90);
+            this.Location = new System.Drawing.Point(471, 76);
             this.Name = "FrmBase_ABM_Entrada";
             this.toolTip1.SetToolTip(this, "Permite ingresar al formulario de Altas de registros\r\n");
             this.Controls.SetChildIndex(this.label1, 0);
@@ -193,13 +194,13 @@
         }
 
         #endregion
-        protected System.Windows.Forms.GroupBox groupBox1;
-        protected System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.ToolTip toolTip1;
         public System.Windows.Forms.Button btn_alta;
         public System.Windows.Forms.Button btn_modificar;
         public System.Windows.Forms.Button btn_borrar;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button btn_consultar;
+        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.Button btn_buscar;
     }
 }

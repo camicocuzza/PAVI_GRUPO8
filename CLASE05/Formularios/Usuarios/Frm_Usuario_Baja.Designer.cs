@@ -29,7 +29,6 @@ namespace CLASE05.Formularios.Usuarios
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_aceptar
@@ -52,23 +51,27 @@ namespace CLASE05.Formularios.Usuarios
             // btn_cerrar
             // 
             this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_cerrar.Location = new System.Drawing.Point(397, 2);
             // 
             // btn_minimizar
             // 
             this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_minimizar.Location = new System.Drawing.Point(327, 2);
             // 
             // btn_maximizar
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_maximizar.Location = new System.Drawing.Point(362, 2);
             // 
             // Frm_Usuario_Baja
             // 
+            this._PosiciónVisible = true;
             this._Titulo = "Bajas de Usuario";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(432, 384);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Frm_Usuario_Baja";
             this.Load += new System.EventHandler(this.Frm_Usuario_Baja_Load);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

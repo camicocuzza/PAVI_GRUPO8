@@ -70,8 +70,7 @@
             this.ClientSize = new System.Drawing.Size(420, 415);
             this.Location = new System.Drawing.Point(512, 161);
             this.Name = "Frm_Usuario_Alta";
-            this.Activated += new System.EventHandler(this.Frm_Usuario_Alta_Activated);
-            this.Load += new System.EventHandler(this.Frm_Usuario_Alta_Load);
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -44,6 +44,7 @@
             this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.UseVisualStyleBackColor = false;
+            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
             this.btn_minimizar.MouseLeave += new System.EventHandler(this.btn_minimizar_MouseLeave);
             this.btn_minimizar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_minimizar_MouseMove);
             // 
@@ -54,6 +55,7 @@
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_maximizar.Name = "btn_maximizar";
             this.btn_maximizar.UseVisualStyleBackColor = false;
+            this.btn_maximizar.Click += new System.EventHandler(this.btn_maximizar_Click);
             this.btn_maximizar.MouseLeave += new System.EventHandler(this.btn_maximizar_MouseLeave);
             this.btn_maximizar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_maximizar_MouseMove);
             // 

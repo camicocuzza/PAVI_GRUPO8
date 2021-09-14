@@ -1,7 +1,7 @@
 ﻿
-namespace CLASE05.Formularios.Usuarios
+namespace CLASE05.Formularios.Clientes
 {
-    partial class Frm_Usuario_Consulta
+    partial class Frm_Cliente_Consulta
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,7 +29,19 @@ namespace CLASE05.Formularios.Usuarios
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cliente_Consulta));
             this.SuspendLayout();
+            // 
+            // cmb_pais
+            // 
+            this.cmb_pais.DisplayMember = "nombre_pais";
+            this.cmb_pais.ValueMember = "id_pais";
+            // 
+            // cmb_estado_provincia
+            // 
+            this.cmb_estado_provincia.DisplayMember = "nombre_estado_provincia";
+            this.cmb_estado_provincia.Text = "";
+            this.cmb_estado_provincia.ValueMember = "id_estado_provincia";
             // 
             // btn_aceptar
             // 
@@ -37,45 +49,29 @@ namespace CLASE05.Formularios.Usuarios
             // 
             // lbl_titulo
             // 
-            this.lbl_titulo.Size = new System.Drawing.Size(218, 31);
-            this.lbl_titulo.Text = "Datos del Usuario";
-            // 
-            // txt_password
-            // 
-            this.txt_password.Enabled = false;
-            // 
-            // txt_n_usuario
-            // 
-            this.txt_n_usuario.Enabled = false;
-            // 
-            // txt_id_usuario
-            // 
-            this.txt_id_usuario.Enabled = false;
+            this.lbl_titulo.Size = new System.Drawing.Size(205, 31);
+            this.lbl_titulo.Text = "Datos de Cliente";
             // 
             // btn_cerrar
             // 
             this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_cerrar.Location = new System.Drawing.Point(397, 2);
             // 
             // btn_minimizar
             // 
             this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_minimizar.Location = new System.Drawing.Point(327, 2);
             // 
             // btn_maximizar
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_maximizar.Location = new System.Drawing.Point(362, 2);
             // 
-            // Frm_Usuario_Consulta
+            // Frm_Cliente_Consulta
             // 
             this._PosiciónVisible = true;
-            this._Titulo = "Datos del Usuario";
+            this._Titulo = "Datos de Cliente";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(432, 384);
-            this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "Frm_Usuario_Consulta";
-            this.Load += new System.EventHandler(this.Frm_Usuario_Consulta_Load);
+            this.ClientSize = new System.Drawing.Size(516, 516);
+            this.Name = "Frm_Cliente_Consulta";
+            this.Load += new System.EventHandler(this.Frm_Cliente_Consulta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

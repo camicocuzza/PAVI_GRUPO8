@@ -23,8 +23,8 @@ namespace CLASE05.Negocios
         public Validacion Validar (string n_usuario, string password)
         {
             string sql = @"SELECT * FROM usuario
-                         WHERE n_usuario = '" + n_usuario +"'"
-                         + " AND password = " + password;
+                          WHERE n_usuario = '" + n_usuario + "'"
+                         + " AND password = '" + password + "'";
 
             DataTable tabla = new DataTable(); 
             tabla =  _BD.EjecutarSelect(sql);
@@ -42,7 +42,7 @@ namespace CLASE05.Negocios
         {
             string sql = @"SELECT id_usuario FROM usuario
                          WHERE n_usuario = '" + nombre + "'"
-                        + " AND password = " + password;
+                        + " AND password = '" + password + "'";
 
             DataTable tabla = new DataTable();
             tabla = _BD.EjecutarSelect(sql);

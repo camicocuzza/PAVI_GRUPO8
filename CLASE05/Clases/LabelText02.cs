@@ -19,10 +19,14 @@ namespace CLASE05.Clases
             get { return lblEtiqueta.Text; }
             set { lblEtiqueta.Text = value; }
         }
-        public bool _Validable { get; set; }
+        public bool _Validable { get; set; } = true;
         public string _Nombre_campo { get; set; }
         public string _Nombre_tabla { get; set; }
         public string _MensajeError { get; set; }
+        //public string _Startencero { get; set; }
+
+
+
         //-----------------------------
         public int _Ancho { get; set; } = 10;
         public int _Decimales { get; set; } = 2;
@@ -118,7 +122,7 @@ namespace CLASE05.Clases
                     {
                         for (int i = 0; i < entero - blanco; i++)
                         {
-                            TxtDato.Text = " " + TxtDato.Text;
+                            TxtDato.Text = "0" + TxtDato.Text;
                         }
                     }
 
@@ -129,9 +133,15 @@ namespace CLASE05.Clases
 
         private void TxtDato_Click(object sender, EventArgs e)
         {
-            TxtDato.SelectionStart = TxtDato.Text.Length;
+            if (this._TipoDato.ToString() == "mascaraEditada")
+            {
+                TxtDato.SelectionStart = TxtDato.Text.Length;
+            }
+            else
+            {
+                TxtDato.SelectionStart = 0;
+            }
         }
-
         private void LabelText02_EnabledChanged(object sender, EventArgs e)
         {
             if (this.Enabled == false)

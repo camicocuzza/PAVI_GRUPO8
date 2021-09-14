@@ -26,40 +26,40 @@ namespace CLASE05.Formularios.Usuarios
             //N1 si validacion da error => ir a corregir el error
             TratamientosEspeciales _TE = new TratamientosEspeciales();
 
-            if (_TE.Validar(this.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
-            {
-                // VALIDACION ESPECIFICA
-                if (_TE.ValidarEmail(txt_email._Text)== TratamientosEspeciales.RespuestaValidacion.Error)
-                {
-                    MessageBox.Show("El formato de correo es invalido");
-                    txt_email.Focus();
-                    return;
-                }
+            //if (_TE.Validar(this.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
+            //{
+            //    // VALIDACION ESPECIFICA
+            //    if (_TE.ValidarEmail(txt_email._Text)== TratamientosEspeciales.RespuestaValidacion.Error)
+            //    {
+            //        MessageBox.Show("El formato de correo es invalido");
+            //        txt_email.Focus();
+            //        return;
+            //    }
                 
-                // GRABAR NUEVO REGISTRO
-                NE_Usuarios usu = new NE_Usuarios();
+                //// GRABAR NUEVO REGISTRO
+                //NE_Usuarios usu = new NE_Usuarios();
 
-                usu.id_perfil = cmb_perfiles.SelectedValue.ToString();
-                usu.n_usario = txt_n_usuario._Text;
-                usu.passsword = txt_password._Text;
-                usu.email = txt_email._Text;
-                usu.apellido = txt_apellido._Text;
-                usu.nombres = txt_nombres._Text;
-                usu.cuil = txt_cuil._Text;
-                usu.id_estado = cmb_estadosUsuarios.SelectedValue.ToString();
+                //usu.id_perfil = cmb_perfiles.SelectedValue.ToString();
+                //usu.n_usario = txt_n_usuario._Text;
+                //usu.passsword = txt_password._Text;
+                //usu.email = txt_email._Text;
+                //usu.apellido = txt_apellido._Text;
+                //usu.nombres = txt_nombres._Text;
+                //usu.cuil = txt_cuil._Text;
+                //usu.id_estado = cmb_estadosUsuarios.SelectedValue.ToString();
 
-                usu.Isertar();
-                MessageBox.Show("Se Grabó correctamente", "Importante");
+                //usu.Isertar();
+                //MessageBox.Show("Se Grabó correctamente", "Importante");
             }
         }
-        private void Frm_Usuario_Alta_Activated(object sender, EventArgs e)
-        {
-            this.txt_n_usuario.Focus();
-        }
+        //private void Prof_Frm_Usuario_Alta_Activated(object sender, EventArgs e)
+        //{
+        //    //this.txt_n_usuario.Focus();
+        //}
 
-        private void Frm_Usuario_Alta_Load(object sender, EventArgs e)
-        {
-            //maskedTextBox1.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
-        }
+        //private void Prof_Frm_Usuario_Alta_Activated(object sender, EventArgs e)
+        //{
+        //    //maskedTextBox1.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+        //}
     }
-}
+

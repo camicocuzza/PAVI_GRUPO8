@@ -135,7 +135,7 @@
             this.flowLayoutPanel_contraseña.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowLayoutPanel_contraseña.Location = new System.Drawing.Point(423, 107);
             this.flowLayoutPanel_contraseña.Name = "flowLayoutPanel_contraseña";
-            this.flowLayoutPanel_contraseña.Size = new System.Drawing.Size(26, 29);
+            this.flowLayoutPanel_contraseña.Size = new System.Drawing.Size(26, 28);
             this.flowLayoutPanel_contraseña.TabIndex = 5;
             // 
             // flowLayoutPanel_usuario
@@ -153,14 +153,15 @@
             this.txt_clave.AcceptsTab = true;
             this.txt_clave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txt_clave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_clave.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold);
+            this.txt_clave.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_clave.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.txt_clave.Location = new System.Drawing.Point(181, 107);
+            this.txt_clave.Location = new System.Drawing.Point(181, 108);
             this.txt_clave.Name = "txt_clave";
             this.txt_clave.PasswordChar = '*';
-            this.txt_clave.Size = new System.Drawing.Size(236, 29);
+            this.txt_clave.Size = new System.Drawing.Size(236, 27);
             this.txt_clave.TabIndex = 2;
             this.txt_clave.UseSystemPasswordChar = true;
+            this.txt_clave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_clave_KeyPress);
             // 
             // txt_usuario
             // 
@@ -201,7 +202,7 @@
             // 
             // Frm_Login
             // 
-            this._PosiciónVisible = true;
+            this._FormularioMovil = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(557, 237);

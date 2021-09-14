@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CLASE05.Negocios;
 using CLASE05.Formularios.Usuarios;
+using CLASE05.Formularios.Clientes;
 using CLASE05.Formularios.FrmBASE;
 
 namespace CLASE05.Formularios.InicioSistema
@@ -65,6 +66,13 @@ namespace CLASE05.Formularios.InicioSistema
         {
             Frm_ABM_Usuario_Entrada frm_usuario = new Frm_ABM_Usuario_Entrada();
             frm_usuario.ShowDialog();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_ABM_Cliente_Entrada frm_usuario = new Frm_ABM_Cliente_Entrada();
+            frm_usuario.ShowDialog();
+
         }
     }
 }

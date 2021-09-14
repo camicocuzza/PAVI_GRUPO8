@@ -62,5 +62,34 @@ namespace CLASE05.Formularios.InicioSistema
             txt_clave.Text = "";
             this.Close();
         }
+
+        private void txt_clave_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)13)
+            {
+                if (txt_usuario.Text == "")
+                {
+                    MessageBox.Show("Ingresar nombre de usuario", "Importante"
+                                  , MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    return;
+                }
+                if (txt_clave.Text == "")
+                {
+                    MessageBox.Show("Ingresar clave de usuario", "Importante"
+                   , MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    return;
+                }
+                NE_Usuarios usuario = new NE_Usuarios();
+
+                if (usuario.Validar(txt_usuario.Text, txt_clave.Text) == NE_Usuarios.Validacion.correcta)
+                {
+                    //MessageBox.Show("¡Bienvenido!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    this.Close();
+                }
+                else
+                    MessageBox.Show("Los datos ingresados son incorrectos", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+            }
+        }
     }
 }
