@@ -30,7 +30,6 @@ namespace CLASE05.Formularios.Clientes
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cliente_Alta));
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmb_pais
@@ -74,8 +73,6 @@ namespace CLASE05.Formularios.Clientes
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(449, 546);
             this.Name = "Frm_Cliente_Alta";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

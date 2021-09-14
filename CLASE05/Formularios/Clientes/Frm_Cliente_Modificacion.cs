@@ -75,5 +75,10 @@ namespace CLASE05.Formularios.Clientes
         private void txt_limite_credito_KeyPress(object sender, KeyPressEventArgs e)
         {           
         }
+
+        private void btn_maximizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

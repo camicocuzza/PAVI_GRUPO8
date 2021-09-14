@@ -30,7 +30,6 @@ namespace CLASE05.Formularios.Clientes
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cliente_Modificacion));
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmb_pais
@@ -47,12 +46,12 @@ namespace CLASE05.Formularios.Clientes
             // txt_cuit_cliente
             // 
             this.txt_cuit_cliente.Enabled = false;
+            this.txt_cuit_cliente.Size = new System.Drawing.Size(318, 25);
             // 
             // txt_limite_credito
             // 
-            this.txt_limite_credito.Mask = "9999999999";
             this.txt_limite_credito.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txt_limite_credito.Size = new System.Drawing.Size(101, 25);
+            this.txt_limite_credito.Size = new System.Drawing.Size(300, 25);
             // 
             // btn_aceptar
             // 
@@ -60,31 +59,34 @@ namespace CLASE05.Formularios.Clientes
             // 
             // lbl_titulo
             // 
+            this.lbl_titulo.Location = new System.Drawing.Point(150, 33);
             this.lbl_titulo.Size = new System.Drawing.Size(315, 31);
             this.lbl_titulo.Text = "Modificaciones de Cliente";
             // 
             // btn_cerrar
             // 
             this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_cerrar.Location = new System.Drawing.Point(1409, 2);
             // 
             // btn_minimizar
             // 
             this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_minimizar.Location = new System.Drawing.Point(1339, 2);
             // 
             // btn_maximizar
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_maximizar.Location = new System.Drawing.Point(923, 2);
+            this.btn_maximizar.Click += new System.EventHandler(this.btn_maximizar_Click);
             // 
             // Frm_Cliente_Modificacion
             // 
             this._PosiciónVisible = true;
             this._Titulo = "Modificaciones de Cliente";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(449, 546);
+            this.ClientSize = new System.Drawing.Size(1244, 692);
             this.Name = "Frm_Cliente_Modificacion";
             this.Load += new System.EventHandler(this.Frm_Cliente_Modificacion_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

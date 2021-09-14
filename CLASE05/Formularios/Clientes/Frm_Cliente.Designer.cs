@@ -44,60 +44,32 @@ namespace CLASE05.Formularios.Clientes
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.txt_limite_credito = new System.Windows.Forms.MaskedTextBox();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.Controls.Add(this.txt_limite_credito);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txt_cuit_cliente);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.cmb_pais);
-            this.panel1.Controls.Add(this.lbl_estado_provincia);
-            this.panel1.Controls.Add(this.cmb_estado_provincia);
-            this.panel1.Controls.Add(this.lbl_pais);
-            this.panel1.Controls.Add(this.txt_ciudad);
-            this.panel1.Controls.Add(this.txt_direccion);
-            this.panel1.Controls.Add(this.txt_legajo_empleado);
-            this.panel1.Controls.Add(this.txt_nombre_contacto);
-            this.panel1.Controls.Add(this.txt_razon_social);
-            this.panel1.Size = new System.Drawing.Size(427, 450);
-            this.panel1.Controls.SetChildIndex(this.btn_aceptar, 0);
-            this.panel1.Controls.SetChildIndex(this.txt_razon_social, 0);
-            this.panel1.Controls.SetChildIndex(this.txt_nombre_contacto, 0);
-            this.panel1.Controls.SetChildIndex(this.txt_legajo_empleado, 0);
-            this.panel1.Controls.SetChildIndex(this.txt_direccion, 0);
-            this.panel1.Controls.SetChildIndex(this.txt_ciudad, 0);
-            this.panel1.Controls.SetChildIndex(this.lbl_pais, 0);
-            this.panel1.Controls.SetChildIndex(this.cmb_estado_provincia, 0);
-            this.panel1.Controls.SetChildIndex(this.lbl_estado_provincia, 0);
-            this.panel1.Controls.SetChildIndex(this.cmb_pais, 0);
-            this.panel1.Controls.SetChildIndex(this.label1, 0);
-            this.panel1.Controls.SetChildIndex(this.txt_cuit_cliente, 0);
-            this.panel1.Controls.SetChildIndex(this.label2, 0);
-            this.panel1.Controls.SetChildIndex(this.txt_limite_credito, 0);
             // 
             // btn_aceptar
             // 
-            this.btn_aceptar.Location = new System.Drawing.Point(156, 405);
+            this.btn_aceptar.Location = new System.Drawing.Point(204, 476);
             this.btn_aceptar.Size = new System.Drawing.Size(95, 28);
+            // 
+            // lbl_titulo
+            // 
+            this.lbl_titulo.Location = new System.Drawing.Point(207, 33);
             // 
             // btn_cerrar
             // 
             this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_cerrar.Location = new System.Drawing.Point(412, 2);
+            this.btn_cerrar.Location = new System.Drawing.Point(479, 2);
             // 
             // btn_minimizar
             // 
             this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_minimizar.Location = new System.Drawing.Point(342, 2);
+            this.btn_minimizar.Location = new System.Drawing.Point(411, 2);
             // 
             // btn_maximizar
             // 
+            this.btn_maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_maximizar.Location = new System.Drawing.Point(377, 2);
+            this.btn_maximizar.Location = new System.Drawing.Point(445, 2);
             // 
             // cmb_pais
             // 
@@ -115,9 +87,9 @@ namespace CLASE05.Formularios.Clientes
             this.cmb_pais.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.cmb_pais.ForeColor = System.Drawing.Color.Gainsboro;
             this.cmb_pais.FormattingEnabled = true;
-            this.cmb_pais.Location = new System.Drawing.Point(150, 267);
+            this.cmb_pais.Location = new System.Drawing.Point(156, 331);
             this.cmb_pais.Name = "cmb_pais";
-            this.cmb_pais.Size = new System.Drawing.Size(159, 25);
+            this.cmb_pais.Size = new System.Drawing.Size(190, 25);
             this.cmb_pais.TabIndex = 23;
             this.cmb_pais.SelectedIndexChanged += new System.EventHandler(this.cmb_pais_SelectedIndexChanged);
             // 
@@ -138,10 +110,10 @@ namespace CLASE05.Formularios.Clientes
             this.txt_razon_social.BackColor = System.Drawing.Color.Transparent;
             this.txt_razon_social.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_razon_social.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_razon_social.Location = new System.Drawing.Point(-2, 64);
+            this.txt_razon_social.Location = new System.Drawing.Point(4, 132);
             this.txt_razon_social.Margin = new System.Windows.Forms.Padding(4);
             this.txt_razon_social.Name = "txt_razon_social";
-            this.txt_razon_social.Size = new System.Drawing.Size(341, 30);
+            this.txt_razon_social.Size = new System.Drawing.Size(473, 30);
             this.txt_razon_social.TabIndex = 25;
             // 
             // txt_nombre_contacto
@@ -161,10 +133,10 @@ namespace CLASE05.Formularios.Clientes
             this.txt_nombre_contacto.BackColor = System.Drawing.Color.Transparent;
             this.txt_nombre_contacto.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_nombre_contacto.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_nombre_contacto.Location = new System.Drawing.Point(-1, 143);
+            this.txt_nombre_contacto.Location = new System.Drawing.Point(5, 207);
             this.txt_nombre_contacto.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nombre_contacto.Name = "txt_nombre_contacto";
-            this.txt_nombre_contacto.Size = new System.Drawing.Size(341, 30);
+            this.txt_nombre_contacto.Size = new System.Drawing.Size(473, 30);
             this.txt_nombre_contacto.TabIndex = 27;
             // 
             // txt_legajo_empleado
@@ -184,10 +156,10 @@ namespace CLASE05.Formularios.Clientes
             this.txt_legajo_empleado.BackColor = System.Drawing.Color.Transparent;
             this.txt_legajo_empleado.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_legajo_empleado.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_legajo_empleado.Location = new System.Drawing.Point(-1, 183);
+            this.txt_legajo_empleado.Location = new System.Drawing.Point(5, 247);
             this.txt_legajo_empleado.Margin = new System.Windows.Forms.Padding(4);
             this.txt_legajo_empleado.Name = "txt_legajo_empleado";
-            this.txt_legajo_empleado.Size = new System.Drawing.Size(252, 30);
+            this.txt_legajo_empleado.Size = new System.Drawing.Size(341, 30);
             this.txt_legajo_empleado.TabIndex = 28;
             // 
             // txt_direccion
@@ -207,10 +179,10 @@ namespace CLASE05.Formularios.Clientes
             this.txt_direccion.BackColor = System.Drawing.Color.Transparent;
             this.txt_direccion.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_direccion.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_direccion.Location = new System.Drawing.Point(-1, 224);
+            this.txt_direccion.Location = new System.Drawing.Point(5, 288);
             this.txt_direccion.Margin = new System.Windows.Forms.Padding(4);
             this.txt_direccion.Name = "txt_direccion";
-            this.txt_direccion.Size = new System.Drawing.Size(341, 30);
+            this.txt_direccion.Size = new System.Drawing.Size(473, 30);
             this.txt_direccion.TabIndex = 29;
             // 
             // txt_ciudad
@@ -230,17 +202,17 @@ namespace CLASE05.Formularios.Clientes
             this.txt_ciudad.BackColor = System.Drawing.Color.Transparent;
             this.txt_ciudad.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_ciudad.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_ciudad.Location = new System.Drawing.Point(-1, 343);
+            this.txt_ciudad.Location = new System.Drawing.Point(5, 407);
             this.txt_ciudad.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ciudad.Name = "txt_ciudad";
-            this.txt_ciudad.Size = new System.Drawing.Size(341, 30);
+            this.txt_ciudad.Size = new System.Drawing.Size(472, 30);
             this.txt_ciudad.TabIndex = 30;
             // 
             // lbl_pais
             // 
             this.lbl_pais.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.lbl_pais.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lbl_pais.Location = new System.Drawing.Point(-3, 265);
+            this.lbl_pais.Location = new System.Drawing.Point(3, 329);
             this.lbl_pais.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_pais.Name = "lbl_pais";
             this.lbl_pais.Size = new System.Drawing.Size(144, 20);
@@ -253,7 +225,7 @@ namespace CLASE05.Formularios.Clientes
             this.lbl_estado_provincia.BackColor = System.Drawing.Color.Transparent;
             this.lbl_estado_provincia.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.lbl_estado_provincia.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lbl_estado_provincia.Location = new System.Drawing.Point(-3, 306);
+            this.lbl_estado_provincia.Location = new System.Drawing.Point(3, 370);
             this.lbl_estado_provincia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_estado_provincia.Name = "lbl_estado_provincia";
             this.lbl_estado_provincia.Size = new System.Drawing.Size(144, 20);
@@ -277,9 +249,9 @@ namespace CLASE05.Formularios.Clientes
             this.cmb_estado_provincia.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.cmb_estado_provincia.ForeColor = System.Drawing.Color.Gainsboro;
             this.cmb_estado_provincia.FormattingEnabled = true;
-            this.cmb_estado_provincia.Location = new System.Drawing.Point(150, 307);
+            this.cmb_estado_provincia.Location = new System.Drawing.Point(156, 371);
             this.cmb_estado_provincia.Name = "cmb_estado_provincia";
-            this.cmb_estado_provincia.Size = new System.Drawing.Size(159, 25);
+            this.cmb_estado_provincia.Size = new System.Drawing.Size(190, 25);
             this.cmb_estado_provincia.TabIndex = 32;
             this.cmb_estado_provincia.Tag = "";
             this.cmb_estado_provincia.Text = "Seleccionar país...";
@@ -290,7 +262,7 @@ namespace CLASE05.Formularios.Clientes
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(-3, 33);
+            this.label1.Location = new System.Drawing.Point(3, 100);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 20);
@@ -300,16 +272,14 @@ namespace CLASE05.Formularios.Clientes
             // 
             // txt_cuit_cliente
             // 
-            this.txt_cuit_cliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_cuit_cliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txt_cuit_cliente.Culture = new System.Globalization.CultureInfo("en-US");
             this.txt_cuit_cliente.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
             this.txt_cuit_cliente.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_cuit_cliente.Location = new System.Drawing.Point(148, 28);
+            this.txt_cuit_cliente.Location = new System.Drawing.Point(154, 95);
             this.txt_cuit_cliente.Mask = "99-99999999-9";
             this.txt_cuit_cliente.Name = "txt_cuit_cliente";
-            this.txt_cuit_cliente.Size = new System.Drawing.Size(119, 25);
+            this.txt_cuit_cliente.Size = new System.Drawing.Size(192, 25);
             this.txt_cuit_cliente.TabIndex = 35;
             this.txt_cuit_cliente.Click += new System.EventHandler(this.txt_cuit_cliente_Click);
             // 
@@ -323,7 +293,7 @@ namespace CLASE05.Formularios.Clientes
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(-3, 112);
+            this.label2.Location = new System.Drawing.Point(3, 176);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 20);
@@ -333,34 +303,56 @@ namespace CLASE05.Formularios.Clientes
             // 
             // txt_limite_credito
             // 
-            this.txt_limite_credito.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_limite_credito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txt_limite_credito.Culture = new System.Globalization.CultureInfo("en-US");
             this.txt_limite_credito.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
             this.txt_limite_credito.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_limite_credito.Location = new System.Drawing.Point(150, 111);
-            this.txt_limite_credito.Mask = "9999999999.99";
+            this.txt_limite_credito.Location = new System.Drawing.Point(156, 175);
+            this.txt_limite_credito.Mask = "9999999999";
             this.txt_limite_credito.Name = "txt_limite_credito";
-            this.txt_limite_credito.Size = new System.Drawing.Size(118, 25);
+            this.txt_limite_credito.Size = new System.Drawing.Size(190, 25);
             this.txt_limite_credito.TabIndex = 38;
             // 
             // Frm_Cliente
             // 
             this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(449, 546);
-            this.Location = new System.Drawing.Point(0, 0);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.ClientSize = new System.Drawing.Size(516, 516);
+            this.Controls.Add(this.txt_limite_credito);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txt_cuit_cliente);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmb_pais);
+            this.Controls.Add(this.lbl_estado_provincia);
+            this.Controls.Add(this.cmb_estado_provincia);
+            this.Controls.Add(this.lbl_pais);
+            this.Controls.Add(this.txt_legajo_empleado);
+            this.Controls.Add(this.txt_ciudad);
+            this.Controls.Add(this.txt_razon_social);
+            this.Controls.Add(this.txt_direccion);
+            this.Controls.Add(this.txt_nombre_contacto);
             this.Name = "Frm_Cliente";
             this.Load += new System.EventHandler(this.Frm_Cliente_Load);
+            this.Controls.SetChildIndex(this.btn_aceptar, 0);
+            this.Controls.SetChildIndex(this.txt_nombre_contacto, 0);
+            this.Controls.SetChildIndex(this.txt_direccion, 0);
+            this.Controls.SetChildIndex(this.txt_razon_social, 0);
+            this.Controls.SetChildIndex(this.txt_ciudad, 0);
+            this.Controls.SetChildIndex(this.txt_legajo_empleado, 0);
+            this.Controls.SetChildIndex(this.lbl_pais, 0);
+            this.Controls.SetChildIndex(this.cmb_estado_provincia, 0);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
+            this.Controls.SetChildIndex(this.lbl_estado_provincia, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
+            this.Controls.SetChildIndex(this.cmb_pais, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.lbl_posicion, 0);
+            this.Controls.SetChildIndex(this.txt_cuit_cliente, 0);
             this.Controls.SetChildIndex(this.lbl_titulo, 0);
-            this.Controls.SetChildIndex(this.panel1, 0);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.txt_limite_credito, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
