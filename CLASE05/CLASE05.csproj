@@ -229,6 +229,9 @@
     <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente.resx">
       <DependentUpon>Frm_Cliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente_Baja.resx">
+      <DependentUpon>Frm_Cliente_Baja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente_Consulta.resx">
       <DependentUpon>Frm_Cliente_Consulta.cs</DependentUpon>
     </EmbeddedResource>

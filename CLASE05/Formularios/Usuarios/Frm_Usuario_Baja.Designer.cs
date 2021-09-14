@@ -63,9 +63,11 @@ namespace CLASE05.Formularios.Usuarios
             // 
             // Frm_Usuario_Baja
             // 
+            this._PosiciónVisible = true;
             this._Titulo = "Bajas de Usuario";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(432, 384);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Frm_Usuario_Baja";
             this.Load += new System.EventHandler(this.Frm_Usuario_Baja_Load);
             this.panel1.ResumeLayout(false);

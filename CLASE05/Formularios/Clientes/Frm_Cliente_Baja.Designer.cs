@@ -29,7 +29,85 @@ namespace CLASE05.Formularios.Clientes
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cliente_Baja));
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // cmb_pais
+            // 
+            this.cmb_pais.DisplayMember = "nombre_pais";
+            this.cmb_pais.Enabled = false;
+            this.cmb_pais.ValueMember = "id_pais";
+            // 
+            // txt_ciudad
+            // 
+            this.txt_ciudad.Enabled = false;
+            // 
+            // txt_direccion
+            // 
+            this.txt_direccion.Enabled = false;
+            // 
+            // txt_legajo_empleado
+            // 
+            this.txt_legajo_empleado.Enabled = false;
+            // 
+            // txt_nombre_contacto
+            // 
+            this.txt_nombre_contacto.Enabled = false;
+            // 
+            // txt_limite_credito
+            // 
+            this.txt_limite_credito.Enabled = false;
+            // 
+            // txt_razon_social
+            // 
+            this.txt_razon_social.Enabled = false;
+            // 
+            // cmb_estado_provincia
+            // 
+            this.cmb_estado_provincia.DisplayMember = "nombre_estado_provincia";
+            this.cmb_estado_provincia.Enabled = false;
+            this.cmb_estado_provincia.Text = "";
+            this.cmb_estado_provincia.ValueMember = "id_estado_provincia";
+            // 
+            // txt_cuit_cliente
+            // 
+            this.txt_cuit_cliente.Enabled = false;
+            // 
+            // btn_aceptar
+            // 
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
+            // 
+            // lbl_titulo
+            // 
+            this.lbl_titulo.Size = new System.Drawing.Size(197, 31);
+            this.lbl_titulo.Text = "Bajas de Cliente";
+            // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            // 
+            // btn_minimizar
+            // 
+            this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            // 
+            // btn_maximizar
+            // 
+            this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            // 
+            // Frm_Cliente_Baja
+            // 
+            this._PosiciónVisible = true;
+            this._Titulo = "Bajas de Cliente";
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(449, 546);
+            this.Name = "Frm_Cliente_Baja";
+            this.Load += new System.EventHandler(this.Frm_Cliente_Baja_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

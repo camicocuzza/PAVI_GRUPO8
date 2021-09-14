@@ -82,8 +82,8 @@ namespace CLASE05.Formularios.Clientes
         }
         private void btn_alta_Click(object sender, EventArgs e)
         {
-            //Frm_Cliente_Alta frm_altas = new Frm_Cliente_Alta();
-            //frm_altas.ShowDialog();
+            Frm_Cliente_Alta frm_altas = new Frm_Cliente_Alta();
+            frm_altas.ShowDialog();
         }
         private void btn_modificar_Click(object sender, EventArgs e)
         {
@@ -97,11 +97,9 @@ namespace CLASE05.Formularios.Clientes
                 MessageBox.Show("Falta seleccionar un registro", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
-
-            //Frm_Cliente_Modificacion frm_modificar = new Frm_Cliente_Modificacion();
-            //frm_modificar.cuit_cliente = grid_clientes.CurrentRow.Cells[0].Value.ToString();
-            //frm_modificar.ShowDialog();
-
+            Frm_Cliente_Modificacion frm_modificar = new Frm_Cliente_Modificacion();
+            frm_modificar.cuit_cliente = grid_clientes.CurrentRow.Cells[0].Value.ToString();
+            frm_modificar.ShowDialog();
         }
         private void btn_borrar_Click(object sender, EventArgs e)
         {
@@ -115,14 +113,12 @@ namespace CLASE05.Formularios.Clientes
                 MessageBox.Show("Falta seleccionar un registro", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
-
-            ////Frm_Cliente_Baja frm_baja = new Frm_Cliente_Baja();
-            //frm_baja.cuit_cliente = grid_clientes.CurrentRow.Cells[0].Value.ToString();
-            //frm_baja.ShowDialog();
+            Frm_Cliente_Baja frm_baja = new Frm_Cliente_Baja();
+            frm_baja.cuit_cliente = grid_clientes.CurrentRow.Cells[0].Value.ToString();
+            frm_baja.ShowDialog();
 
             grid_clientes.Rows.Clear();
         }
-
         private void btn_consultar_Click(object sender, EventArgs e)
         {
             if (grid_clientes.Rows.Count == 0)
@@ -139,12 +135,10 @@ namespace CLASE05.Formularios.Clientes
             frm_consulta.cuit_cliente = grid_clientes.CurrentRow.Cells[0].Value.ToString();
             frm_consulta.ShowDialog();
         }
-
         private void txt_cuit_cliente_Click(object sender, EventArgs e)
         {
             txt_cuit_cliente.SelectionStart = 0;
         }
-
         private void txt_patron_Click(object sender, EventArgs e)
         {
             txt_patron.SelectionStart = txt_patron.Text.Length;
@@ -154,7 +148,6 @@ namespace CLASE05.Formularios.Clientes
             }
             else
                 txt_patron.Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
-
         }
     }    
     
