@@ -44,6 +44,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_nombre_contacto = new CLASE05.Clases.LabelText02();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_aceptar = new System.Windows.Forms.Button();
+            this.txt_decimales = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // btn_cerrar
@@ -325,12 +326,25 @@ namespace CLASE05.Formularios.Clientes
             this.btn_aceptar.Text = "Aceptar";
             this.btn_aceptar.UseVisualStyleBackColor = false;
             // 
+            // txt_decimales
+            // 
+            this.txt_decimales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txt_decimales.Culture = new System.Globalization.CultureInfo("en-US");
+            this.txt_decimales.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
+            this.txt_decimales.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_decimales.Location = new System.Drawing.Point(351, 177);
+            this.txt_decimales.Mask = "99";
+            this.txt_decimales.Name = "txt_decimales";
+            this.txt_decimales.Size = new System.Drawing.Size(76, 25);
+            this.txt_decimales.TabIndex = 54;
+            // 
             // Frm_Cliente
             // 
             this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(516, 516);
+            this.Controls.Add(this.txt_decimales);
             this.Controls.Add(this.btn_aceptar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_limite_credito);
@@ -369,6 +383,7 @@ namespace CLASE05.Formularios.Clientes
             this.Controls.SetChildIndex(this.txt_limite_credito, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.btn_aceptar, 0);
+            this.Controls.SetChildIndex(this.txt_decimales, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,5 +406,6 @@ namespace CLASE05.Formularios.Clientes
         public Clases.LabelText02 txt_nombre_contacto;
         public System.Windows.Forms.Button btn_aceptar;
         public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.MaskedTextBox txt_decimales;
     }
 }

@@ -21,6 +21,7 @@ namespace CLASE05.Negocios
         public string direccion { get; set; }
         public string id_estado_provincia { get; set; }
         public string ciudad { get; set; }
+        public string decimales { get; set; }
 
         BE_Acceso_Datos _BD = new BE_Acceso_Datos();
         public bool ValidarExistencia(string cuit_cliente)
@@ -69,7 +70,7 @@ namespace CLASE05.Negocios
         }
         public DataTable BuscarCliente(string patron, string columna)
         {
-            string sql = @"SELECT cuit_cliente, razon_social, nombre_contacto, legajo_empleado  
+            string sql = @"SELECT cuit_cliente, razon_social, limite_credito, nombre_contacto, legajo_empleado  
                           FROM cliente WHERE " + columna + " like '%" + patron + "%'";
 
             return _BD.EjecutarSelect(sql);

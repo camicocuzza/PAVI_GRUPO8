@@ -55,6 +55,14 @@ namespace CLASE05.Formularios.Clientes
                 cli.id_estado_provincia = cmb_estado_provincia.SelectedValue.ToString();
                 cli.ciudad = txt_ciudad._Text;
 
+                cli.decimales = txt_decimales.Text;
+
+                int ent = int.Parse(txt_limite_credito.Text);
+                int dec = (int.Parse(txt_decimales.Text))/100;
+
+                cli.limite_credito = (ent+dec).ToString();
+                MessageBox.Show(cli.limite_credito);
+
                 cli.Insertar();
                 MessageBox.Show("Se grabó correctamente el cliente " + txt_razon_social._Text, "Importante");
 
