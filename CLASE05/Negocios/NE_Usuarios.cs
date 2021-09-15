@@ -38,7 +38,7 @@ namespace CLASE05.Negocios
                 return Validacion.incorrecta;
             }
         }
-        public bool ValidarExistencia(string n_usuario)
+        public bool ValidarExistenciaNombre(string n_usuario)
         {
             string sql = @"SELECT * FROM usuario
                           WHERE n_usuario = '" + n_usuario + "'";                    

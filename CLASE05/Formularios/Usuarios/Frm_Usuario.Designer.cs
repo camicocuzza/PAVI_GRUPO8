@@ -87,6 +87,7 @@ namespace CLASE05.Formularios.Usuarios
             this.txt_password._Nombre_campo = null;
             this.txt_password._Nombre_tabla = null;
             this.txt_password._ReadOnly = false;
+            this.txt_password._StartEnCero = false;
             this.txt_password._Text = "";
             this.txt_password._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_password._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
@@ -110,6 +111,7 @@ namespace CLASE05.Formularios.Usuarios
             this.txt_n_usuario._Nombre_campo = "n_usuario";
             this.txt_n_usuario._Nombre_tabla = null;
             this.txt_n_usuario._ReadOnly = false;
+            this.txt_n_usuario._StartEnCero = false;
             this.txt_n_usuario._Text = "";
             this.txt_n_usuario._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_n_usuario._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
@@ -133,9 +135,10 @@ namespace CLASE05.Formularios.Usuarios
             this.txt_id_usuario._Nombre_campo = "id_usuario";
             this.txt_id_usuario._Nombre_tabla = null;
             this.txt_id_usuario._ReadOnly = false;
+            this.txt_id_usuario._StartEnCero = false;
             this.txt_id_usuario._Text = "";
             this.txt_id_usuario._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.txt_id_usuario._TipoDato = CLASE05.Clases.LabelText02.TipoDato.numero;
+            this.txt_id_usuario._TipoDato = CLASE05.Clases.LabelText02.TipoDato.mascaraEditada;
             this.txt_id_usuario._Validable = false;
             this.txt_id_usuario.BackColor = System.Drawing.Color.Transparent;
             this.txt_id_usuario.Enabled = false;

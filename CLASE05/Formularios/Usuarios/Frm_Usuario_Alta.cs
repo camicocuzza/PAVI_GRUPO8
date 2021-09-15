@@ -26,7 +26,7 @@ namespace CLASE05.Formularios.Usuarios
             //N1 si validacion da error => ir a corregir el error
             TratamientosEspeciales _TE = new TratamientosEspeciales();
 
-            if(usu.ValidarExistencia(txt_n_usuario._Text) == true)
+            if(usu.ValidarExistenciaNombre(txt_n_usuario._Text) == true)
             {
                 MessageBox.Show("El nombre de usuario '" + txt_n_usuario._Text + "' ya está registrado", "Importante");
                 txt_n_usuario.Focus();

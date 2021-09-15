@@ -27,6 +27,13 @@ namespace CLASE05.Formularios.Clientes
         {
             TratamientosEspeciales _TE = new TratamientosEspeciales();
 
+            if (cli.ValidarExistencia(txt_cuit_cliente.Text) == true)
+            {
+                MessageBox.Show("El cuit de cliente '" + txt_cuit_cliente.Text + "' ya está registrado", "Importante");
+                txt_cuit_cliente.Focus();
+                return;
+            }
+
             if (_TE.Validar(base.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
             {
                 // VALIDACION ESPECIFICA

@@ -36,23 +36,14 @@ namespace CLASE05.Formularios.Usuarios
 
             TratamientosEspeciales _TE = new TratamientosEspeciales();
 
-            if (usu.ValidarExistencia(txt_n_usuario._Text) == true)
+            if (usu.ValidarExistenciaNombre(txt_n_usuario._Text) == true)
             {
                 MessageBox.Show("El nombre de usuario '" + txt_n_usuario._Text + "' ya está registrado", "Importante");
                 txt_n_usuario.Focus();
                 return;
             }
-
             if (_TE.Validar(this.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
-            {
-                //// VALIDACION ESPECIFICA
-                //if (_TE.ValidarEmail(txt_email._Text) == TratamientosEspeciales.RespuestaValidacion.Error)
-                //{
-                //    MessageBox.Show("El formato de correo es invalido");
-                //    txt_email.Focus();
-                //    return;
-                //}
-
+            {  
                 // GRABAR NUEVO REGISTRO             
 
                 usu.id_usuario = txt_id_usuario._Text;

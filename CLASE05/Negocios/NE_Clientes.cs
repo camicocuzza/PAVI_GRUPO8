@@ -25,7 +25,7 @@ namespace CLASE05.Negocios
         BE_Acceso_Datos _BD = new BE_Acceso_Datos();
         public bool ValidarExistencia(string cuit_cliente)
         {
-            string sql = @"SELECT * FROM usuario
+            string sql = @"SELECT * FROM cliente
                           WHERE cuit_cliente = '" + cuit_cliente + "'";
 
             DataTable tabla = new DataTable();

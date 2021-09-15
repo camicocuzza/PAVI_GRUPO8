@@ -190,6 +190,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_legajo_empleado._Nombre_campo = null;
             this.txt_legajo_empleado._Nombre_tabla = null;
             this.txt_legajo_empleado._ReadOnly = false;
+            this.txt_legajo_empleado._StartEnCero = false;
             this.txt_legajo_empleado._Text = "";
             this.txt_legajo_empleado._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_legajo_empleado._TipoDato = CLASE05.Clases.LabelText02.TipoDato.mascaraEditada;
@@ -213,6 +214,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_ciudad._Nombre_campo = null;
             this.txt_ciudad._Nombre_tabla = null;
             this.txt_ciudad._ReadOnly = false;
+            this.txt_ciudad._StartEnCero = false;
             this.txt_ciudad._Text = "";
             this.txt_ciudad._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_ciudad._TipoDato = CLASE05.Clases.LabelText02.TipoDato.mascaraEditada;
@@ -236,6 +238,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_razon_social._Nombre_campo = null;
             this.txt_razon_social._Nombre_tabla = null;
             this.txt_razon_social._ReadOnly = false;
+            this.txt_razon_social._StartEnCero = false;
             this.txt_razon_social._Text = "";
             this.txt_razon_social._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_razon_social._TipoDato = CLASE05.Clases.LabelText02.TipoDato.mascaraEditada;
@@ -259,6 +262,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_direccion._Nombre_campo = null;
             this.txt_direccion._Nombre_tabla = null;
             this.txt_direccion._ReadOnly = false;
+            this.txt_direccion._StartEnCero = false;
             this.txt_direccion._Text = "";
             this.txt_direccion._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_direccion._TipoDato = CLASE05.Clases.LabelText02.TipoDato.mascaraEditada;
@@ -277,11 +281,12 @@ namespace CLASE05.Formularios.Clientes
             this.txt_nombre_contacto._Ancho = 50;
             this.txt_nombre_contacto._Decimales = 2;
             this.txt_nombre_contacto._Etiqueta = "Nombre contacto";
-            this.txt_nombre_contacto._Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
+            this.txt_nombre_contacto._Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
             this.txt_nombre_contacto._MensajeError = null;
             this.txt_nombre_contacto._Nombre_campo = null;
             this.txt_nombre_contacto._Nombre_tabla = null;
             this.txt_nombre_contacto._ReadOnly = false;
+            this.txt_nombre_contacto._StartEnCero = false;
             this.txt_nombre_contacto._Text = "";
             this.txt_nombre_contacto._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_nombre_contacto._TipoDato = CLASE05.Clases.LabelText02.TipoDato.mascaraEditada;
