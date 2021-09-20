@@ -25,8 +25,8 @@ namespace CLASE05.Formularios.Clientes
         }
         private void Frm_Cliente_Load(object sender, EventArgs e)
         {
-            cmb_pais._Cargar();
-            cmb_estado_provincia._Cargar();
+            //cmb_pais._Cargar();
+            //cmb_estado_provincia._Cargar();
         }
 
         private void cmb_estado_provincia_Click(object sender, EventArgs e)

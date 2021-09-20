@@ -98,6 +98,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_cuit_cliente.Name = "txt_cuit_cliente";
             this.txt_cuit_cliente.Size = new System.Drawing.Size(192, 25);
             this.txt_cuit_cliente.TabIndex = 49;
+            this.txt_cuit_cliente.Click += new System.EventHandler(this.txt_cuit_cliente_Click);
             // 
             // label1
             // 

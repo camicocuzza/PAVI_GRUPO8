@@ -20,7 +20,8 @@ namespace CLASE05.Formularios.Clientes
 
         private void Frm_Cliente_Alta_Load(object sender, EventArgs e)
         {
-
+            cmb_pais._Cargar();
+            
         }
 
         private void btn_aceptar_Click(object sender, EventArgs e)
