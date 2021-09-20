@@ -136,9 +136,6 @@
   <data name="pc-icon-32255" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pc-icon-32255.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="modificar01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\modificar01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="btn_cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_cerrar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -147,6 +144,9 @@
   </data>
   <data name="candado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\candado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_consultar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_consultar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="minimizar_g" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimizar_g.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -162,6 +162,9 @@
   </data>
   <data name="agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_consultar (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_consultar (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="maximizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maximizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -180,6 +183,9 @@
   </data>
   <data name="btn_modificar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_modificar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_consultar (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_consultar (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_modificar (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_modificar (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,14 +211,17 @@
   <data name="btn_eliminar (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_eliminar (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cancelar4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancelar4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="btn_maximizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_maximizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_eliminar (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_eliminar (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cancelar4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancelar4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="modificar01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\modificar01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,13 +232,52 @@
   <data name="btn_eliminar (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_eliminar (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn_consultar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_consultar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="img_escritorio (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_escritorio (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn_consultar (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_consultar (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="img_escritorio (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_escritorio (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn_consultar (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_consultar (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="img_escritorio (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_escritorio (3).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_escritorio (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_escritorio (4).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_escritorio (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_escritorio (5).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_escritorio (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_escritorio (6).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_escritorio (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_escritorio (7).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_escritorio (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_escritorio (8).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_escritorio (9)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_escritorio (9).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_escritorio (10)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_escritorio (10).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_escritorio (11)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_escritorio (11).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_escritorio (12)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_escritorio (12).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_escritorio (13)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_escritorio (13).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_escritorio (14)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_escritorio (14).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_escritorio (15)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_escritorio (15).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_escritorio (16)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_escritorio (16).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
