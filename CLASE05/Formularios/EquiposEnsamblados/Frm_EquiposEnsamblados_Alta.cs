@@ -26,7 +26,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
                 // GRABAR NUEVO REGISTRO
                 NE_EquiposEnsamblados equipo = new NE_EquiposEnsamblados();
 
-                equipo.cod_prod_ensamblado = txt_cod_p_ensamblado._Text;
+                equipo.cod_prod_ensamblado = "E" + txt_cod_p_ensamblado._Text;
                 equipo.precio = txt_precio._Text;
                 equipo.stock = txt_stock._Text;
 

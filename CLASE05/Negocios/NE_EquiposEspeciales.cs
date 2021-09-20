@@ -53,6 +53,7 @@ namespace CLASE05.Negocios
             sqlUpdate = "UPDATE equipo_especial SET ";
             sqlUpdate += "cod_prod_ensamblado = '" + cod_prod_ensamblado + "'";
             sqlUpdate += ", cuit_cliente = " + cuit_cliente;
+            sqlUpdate += " WHERE cod_prod_ensamblado = '" + cod_prod_ensamblado + "'";
 
 
             MessageBox.Show(sqlUpdate);

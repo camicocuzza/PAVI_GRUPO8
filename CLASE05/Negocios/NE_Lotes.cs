@@ -58,6 +58,7 @@ namespace CLASE05.Negocios
             sqlUpdate += "num_lote = '" + num_lote + "'";
             sqlUpdate += ", nro_remito_proveedor = '" + nro_remito_proveedor + "'";
             sqlUpdate += ", fecha_compra = '" + fecha_compra + "'";
+            sqlUpdate += " WHERE num_lote = '" + num_lote + "'";
 
 
             MessageBox.Show(sqlUpdate);

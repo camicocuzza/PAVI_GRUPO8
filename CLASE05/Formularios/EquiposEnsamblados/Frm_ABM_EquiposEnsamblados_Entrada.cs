@@ -24,7 +24,12 @@ namespace CLASE05.Formularios.EquiposEnsamblados
         private void btn_buscar_Click(object sender, EventArgs e)
         {
             NE_EquiposEnsamblados producto = new NE_EquiposEnsamblados();
-
+            
+            if (rb_todos.Checked == true)
+            {
+                grid_equiposEnsamblados.Cargar(producto.BuscarEquipoEnsamblado(""));
+                return;
+            }
             if (txt_patron.Text != string.Empty)
             {
                 grid_equiposEnsamblados.Cargar(producto.BuscarEquipoEnsamblado(txt_patron.Text));
@@ -84,6 +89,23 @@ namespace CLASE05.Formularios.EquiposEnsamblados
         private void btn_blan_patron_Click(object sender, EventArgs e)
         {
             this.txt_patron.Text = string.Empty;
+        }
+
+        private void btn_consultar_Click(object sender, EventArgs e)
+        {
+            if (grid_equiposEnsamblados.Rows.Count == 0)
+            {
+                MessageBox.Show("Falta buscar registros", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+            if (grid_equiposEnsamblados.CurrentCell.RowIndex == -1)
+            {
+                MessageBox.Show("Falta seleccionar un registro", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+            Frm_EquiposEnsamblados_Consulta frm_consulta = new Frm_EquiposEnsamblados_Consulta();
+            frm_consulta.cod_prod_ensamblado = grid_equiposEnsamblados.CurrentRow.Cells[0].Value.ToString();
+            frm_consulta.ShowDialog();
         }
     }
 }
