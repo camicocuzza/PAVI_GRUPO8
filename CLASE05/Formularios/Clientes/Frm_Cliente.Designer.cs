@@ -133,6 +133,7 @@ namespace CLASE05.Formularios.Clientes
             this.cmb_pais.Name = "cmb_pais";
             this.cmb_pais.Size = new System.Drawing.Size(190, 25);
             this.cmb_pais.TabIndex = 39;
+            this.cmb_pais.SelectedIndexChanged += new System.EventHandler(this.cmb_pais_SelectedIndexChanged);
             // 
             // lbl_estado_provincia
             // 

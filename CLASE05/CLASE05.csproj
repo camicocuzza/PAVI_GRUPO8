@@ -208,6 +208,7 @@
       <DependentUpon>Frm_Usuario_Modificacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Negocios\NE_Clientes.cs" />
+    <Compile Include="Negocios\NE_Empleados.cs" />
     <Compile Include="Negocios\NE_Estados_Provincias.cs" />
     <Compile Include="Negocios\NE_Paises.cs" />
     <Compile Include="Negocios\NE_Usuarios.cs" />

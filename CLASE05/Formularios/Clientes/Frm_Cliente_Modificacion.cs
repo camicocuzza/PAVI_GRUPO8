@@ -12,6 +12,7 @@ namespace CLASE05.Formularios.Clientes
 {
     public partial class Frm_Cliente_Modificacion : CLASE05.Formularios.Clientes.Frm_Cliente
     {
+        int contador = 0;
         NE_Clientes cli = new NE_Clientes();
         public Frm_Cliente_Modificacion()
         {
@@ -21,8 +22,11 @@ namespace CLASE05.Formularios.Clientes
         private void Frm_Cliente_Modificacion_Load(object sender, EventArgs e)
         {
             cmb_pais._Cargar();
-            cmb_estado_provincia._Cargar();
+            //cmb_estado_provincia._Cargar();
+            cmb_estado_provincia.Enabled = false;
+
             CargarFormulario(cli.RecuperarCliente(cuit_cliente));
+
         }
         private void CargarFormulario(DataTable tabla)
         {
@@ -81,6 +85,24 @@ namespace CLASE05.Formularios.Clientes
         private void btn_maximizar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmb_pais_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            contador += 1;
+
+            // MessageBox.Show(cmb_pais.SelectedIndex.ToString() + contador);
+            if (cmb_pais.SelectedIndex != -1 & contador > 2)
+            {
+                cmb_estado_provincia.Enabled = true;
+                cmb_estado_provincia._CargarConJoin(cmb_pais.SelectedIndex);
+
+                //NE_Paises p = NE_Paises;
+                //string nombre_pais = cmb_pais.SelectedText;
+                //p.RecuperarId(nombre_pais);
+
+                //cmb_estado_provincia._CargarConJoin(p.RecuperarId(nombre_pais);
+            }
         }
     }
 }

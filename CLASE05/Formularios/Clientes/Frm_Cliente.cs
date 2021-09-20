@@ -31,12 +31,7 @@ namespace CLASE05.Formularios.Clientes
 
         private void cmb_estado_provincia_Click(object sender, EventArgs e)
         {
-            if (cmb_pais.SelectedIndex == -1)
-            {
-                cmb_estado_provincia._tabla_cargar_combo = "";
-                cmb_estado_provincia._tabla_cargar_descriptor = "";
-                cmb_estado_provincia._tabla_cargar_pk = "";
-            }
+
         }
 
         private void cmb_pais_SelectedIndexChanged(object sender, EventArgs e)

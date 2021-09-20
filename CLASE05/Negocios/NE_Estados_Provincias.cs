@@ -79,7 +79,7 @@ namespace CLASE05.Negocios
         public DataTable RecuperarNombrePais(string id_estado_provincia)
         {
             string sql = @"SELECT p.nombre_pais 
-                          FROM ep.estado_provincia INNER JOIN p.pais ON ep.id_estado_provincia = p.id_pais 
+                          FROM estado_provincia ep INNER JOIN pais p ON ep.id_pais = p.id_pais 
                           WHERE ep.id_estado_provincia = " + id_estado_provincia;
 
             return _BD.EjecutarSelect(sql);

@@ -29,7 +29,6 @@ namespace CLASE05.Formularios.Clientes
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cliente_Modificacion));
             this.SuspendLayout();
             // 
             // txt_limite_credito
@@ -44,10 +43,12 @@ namespace CLASE05.Formularios.Clientes
             // 
             this.cmb_pais.DisplayMember = "nombre_pais";
             this.cmb_pais.ValueMember = "id_pais";
+            this.cmb_pais.SelectedIndexChanged += new System.EventHandler(this.cmb_pais_SelectedIndexChanged);
             // 
             // cmb_estado_provincia
             // 
             this.cmb_estado_provincia.DisplayMember = "nombre_estado_provincia";
+            this.cmb_estado_provincia.Enabled = false;
             this.cmb_estado_provincia.Text = "";
             this.cmb_estado_provincia.ValueMember = "id_estado_provincia";
             // 
