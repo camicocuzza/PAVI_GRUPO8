@@ -34,7 +34,7 @@ namespace CLASE05.Formularios.Clientes
             txt_nombre_contacto._Text = tabla.Rows[0]["nombre_contacto"].ToString();
             txt_legajo_empleado._Text = tabla.Rows[0]["legajo_empleado"].ToString();
             txt_direccion._Text = tabla.Rows[0]["direccion"].ToString();
-            //cmb_pais.SelectedValue = int.Parse(tabla.Rows[0]["id_pais"].ToString());
+            cmb_pais.SelectedValue = int.Parse(tabla.Rows[0]["id_pais"].ToString());
             cmb_estado_provincia.SelectedValue = int.Parse(tabla.Rows[0]["id_estado_provincia"].ToString());
             txt_ciudad._Text = tabla.Rows[0]["ciudad"].ToString();
 

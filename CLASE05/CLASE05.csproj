@@ -165,6 +165,12 @@
     <Compile Include="Formularios\InicioSistema\Frm_Escritorio.Designer.cs">
       <DependentUpon>Frm_Escritorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Países\Frm_ABM_Pais_Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Países\Frm_ABM_Pais_Entrada.Designer.cs">
+      <DependentUpon>Frm_ABM_Pais_Entrada.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Usuarios\Frm_ABM_Usuario_Entrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,7 @@
       <DependentUpon>Frm_Usuario_Modificacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Negocios\NE_Clientes.cs" />
+    <Compile Include="Negocios\NE_Estados_Provincias.cs" />
     <Compile Include="Negocios\NE_Paises.cs" />
     <Compile Include="Negocios\NE_Usuarios.cs" />
     <Compile Include="Program.cs" />
@@ -383,8 +390,6 @@
   <ItemGroup>
     <None Include="Resources\img_escritorio %2816%29.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Formularios\Países\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
