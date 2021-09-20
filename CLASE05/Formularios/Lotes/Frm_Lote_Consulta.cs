@@ -28,5 +28,10 @@ namespace CLASE05.Formularios.Lotes
             txt_fecha_compra._Text = tabla.Rows[0]["fecha_compra"].ToString();
 
         }
+
+        private void btn_aceptar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

@@ -29,6 +29,7 @@ namespace CLASE05.Formularios.Empleados
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Empleado_Consulta));
             this.SuspendLayout();
             // 
             // txt_nombre
@@ -37,11 +38,15 @@ namespace CLASE05.Formularios.Empleados
             // 
             // cmb_tipo_documento
             // 
+            this.cmb_tipo_documento.DisplayMember = "nombre";
             this.cmb_tipo_documento.Enabled = false;
+            this.cmb_tipo_documento.ValueMember = "id_tipo_documento";
             // 
             // cmb_estado_provincia
             // 
+            this.cmb_estado_provincia.DisplayMember = "nombre_estado_provincia";
             this.cmb_estado_provincia.Enabled = false;
+            this.cmb_estado_provincia.ValueMember = "id_estado_provincia";
             // 
             // txt_ciudad
             // 
@@ -70,6 +75,10 @@ namespace CLASE05.Formularios.Empleados
             // txt_apellido
             // 
             this.txt_apellido.Enabled = false;
+            // 
+            // btn_aceptar
+            // 
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // btn_cerrar
             // 

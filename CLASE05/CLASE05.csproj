@@ -267,6 +267,12 @@
     <Compile Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Baja.Designer.cs">
       <DependentUpon>Frm_EquiposEspeciales_Baja.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Consulta.Designer.cs">
+      <DependentUpon>Frm_EquiposEspeciales_Consulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Modificacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -513,6 +519,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Baja.resx">
       <DependentUpon>Frm_EquiposEspeciales_Baja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Consulta.resx">
+      <DependentUpon>Frm_EquiposEspeciales_Consulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Modificacion.resx">
       <DependentUpon>Frm_EquiposEspeciales_Modificacion.cs</DependentUpon>

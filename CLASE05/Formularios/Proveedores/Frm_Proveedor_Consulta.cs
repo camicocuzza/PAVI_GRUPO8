@@ -32,5 +32,10 @@ namespace CLASE05.Formularios.Proveedores
             txt_ciudad._Text = tabla.Rows[0]["ciudad"].ToString();
 
         }
+
+        private void btn_aceptar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

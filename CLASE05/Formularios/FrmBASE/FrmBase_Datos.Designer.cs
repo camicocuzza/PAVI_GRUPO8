@@ -71,6 +71,7 @@ namespace CLASE05.Formularios.FrmBASE
             this.Controls.Add(this.lbl_titulo);
             this.Location = new System.Drawing.Point(766, 183);
             this.Name = "FrmBase_Datos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Controls.SetChildIndex(this.lbl_titulo, 0);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);

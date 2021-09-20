@@ -39,6 +39,7 @@ namespace CLASE05.Formularios.Articulos
 
                 articulo.Modificar();
                 MessageBox.Show("Se modificó correctamente el artículo " + txt_nombre._Text, "Importante");
+                this.Dispose();
             }
         }
 

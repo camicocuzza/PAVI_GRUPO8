@@ -33,6 +33,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
 
                 equipo.Modificar();
                 MessageBox.Show("Se modificó correctamente el artículo " + txt_cod_p_ensamblado._Text, "Importante");
+                this.Dispose();
             }
         }
 

@@ -30,15 +30,16 @@ namespace CLASE05.Formularios.EquiposEspeciales
         private void InitializeComponent()
         {
             this.ofdSeleccionar = new System.Windows.Forms.OpenFileDialog();
-            this.pb_imagen = new System.Windows.Forms.PictureBox();
             this.btn_seleccionar = new System.Windows.Forms.Button();
             this.txt_file = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pb_imagen = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_imagen)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_aceptar
             // 
+            this.btn_aceptar.Location = new System.Drawing.Point(159, 429);
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // btn_cerrar
@@ -56,15 +57,6 @@ namespace CLASE05.Formularios.EquiposEspeciales
             // ofdSeleccionar
             // 
             this.ofdSeleccionar.FileName = "openFileDialog1";
-            // 
-            // pb_imagen
-            // 
-            this.pb_imagen.Location = new System.Drawing.Point(81, 236);
-            this.pb_imagen.Name = "pb_imagen";
-            this.pb_imagen.Size = new System.Drawing.Size(241, 127);
-            this.pb_imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_imagen.TabIndex = 81;
-            this.pb_imagen.TabStop = false;
             // 
             // btn_seleccionar
             // 
@@ -98,15 +90,25 @@ namespace CLASE05.Formularios.EquiposEspeciales
             this.label2.TabIndex = 83;
             this.label2.Text = "Logo del Cliente";
             // 
+            // pb_imagen
+            // 
+            this.pb_imagen.Enabled = false;
+            this.pb_imagen.Location = new System.Drawing.Point(110, 227);
+            this.pb_imagen.Name = "pb_imagen";
+            this.pb_imagen.Size = new System.Drawing.Size(208, 183);
+            this.pb_imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_imagen.TabIndex = 89;
+            this.pb_imagen.TabStop = false;
+            // 
             // Frm_EquiposEspeciales_Alta
             // 
             this._PosiciónVisible = true;
             this._Titulo = "Alta de Equipo Especial";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(420, 444);
+            this.ClientSize = new System.Drawing.Size(420, 482);
+            this.Controls.Add(this.pb_imagen);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_file);
-            this.Controls.Add(this.pb_imagen);
             this.Controls.Add(this.btn_seleccionar);
             this.Name = "Frm_EquiposEspeciales_Alta";
             this.Load += new System.EventHandler(this.Frm_EquiposEspeciales_Alta_Load);
@@ -120,9 +122,9 @@ namespace CLASE05.Formularios.EquiposEspeciales
             this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.Controls.SetChildIndex(this.btn_seleccionar, 0);
             this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.pb_imagen, 0);
             this.Controls.SetChildIndex(this.txt_file, 0);
             this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.pb_imagen, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pb_imagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -132,10 +134,10 @@ namespace CLASE05.Formularios.EquiposEspeciales
         #endregion
 
         private System.Windows.Forms.OpenFileDialog ofdSeleccionar;
-        private System.Windows.Forms.PictureBox pb_imagen;
 
         public System.Windows.Forms.Button btn_seleccionar;
         private System.Windows.Forms.TextBox txt_file;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pb_imagen;
     }
 }

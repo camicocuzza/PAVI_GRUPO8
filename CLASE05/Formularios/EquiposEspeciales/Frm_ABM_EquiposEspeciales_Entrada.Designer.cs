@@ -37,6 +37,7 @@ namespace CLASE05.Formularios.EquiposEspeciales
             this.rb_cuit_cliente = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.rb_cod_prodEnsamblado = new System.Windows.Forms.RadioButton();
+            this.rb_todos = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_equiposEspeciales)).BeginInit();
             this.SuspendLayout();
@@ -76,9 +77,11 @@ namespace CLASE05.Formularios.EquiposEspeciales
             this.btn_consultar.FlatAppearance.BorderSize = 0;
             this.btn_consultar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btn_consultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rb_todos);
             this.groupBox1.Controls.Add(this.rb_cuit_cliente);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.rb_cod_prodEnsamblado);
@@ -92,6 +95,7 @@ namespace CLASE05.Formularios.EquiposEspeciales
             this.groupBox1.Controls.SetChildIndex(this.rb_cod_prodEnsamblado, 0);
             this.groupBox1.Controls.SetChildIndex(this.label4, 0);
             this.groupBox1.Controls.SetChildIndex(this.rb_cuit_cliente, 0);
+            this.groupBox1.Controls.SetChildIndex(this.rb_todos, 0);
             // 
             // btn_buscar
             // 
@@ -199,6 +203,18 @@ namespace CLASE05.Formularios.EquiposEspeciales
             this.rb_cod_prodEnsamblado.Text = "Código Producto Ensamblado";
             this.rb_cod_prodEnsamblado.UseVisualStyleBackColor = true;
             // 
+            // rb_todos
+            // 
+            this.rb_todos.AutoSize = true;
+            this.rb_todos.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.rb_todos.Location = new System.Drawing.Point(351, 77);
+            this.rb_todos.Name = "rb_todos";
+            this.rb_todos.Size = new System.Drawing.Size(64, 21);
+            this.rb_todos.TabIndex = 27;
+            this.rb_todos.TabStop = true;
+            this.rb_todos.Text = "Todos";
+            this.rb_todos.UseVisualStyleBackColor = true;
+            // 
             // Frm_ABM_EquiposEspeciales_Entrada
             // 
             this._PosiciónVisible = true;
@@ -208,6 +224,7 @@ namespace CLASE05.Formularios.EquiposEspeciales
             this.Controls.Add(this.grid_equiposEspeciales);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Frm_ABM_EquiposEspeciales_Entrada";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Frm_ABM_EquiposEspeciales_Entrada_Load);
             this.Controls.SetChildIndex(this.grid_equiposEspeciales, 0);
             this.Controls.SetChildIndex(this.label1, 0);
@@ -237,5 +254,6 @@ namespace CLASE05.Formularios.EquiposEspeciales
         private System.Windows.Forms.RadioButton rb_cuit_cliente;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton rb_cod_prodEnsamblado;
+        private System.Windows.Forms.RadioButton rb_todos;
     }
 }

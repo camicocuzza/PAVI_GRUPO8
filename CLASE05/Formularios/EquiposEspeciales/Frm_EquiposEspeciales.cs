@@ -29,7 +29,8 @@ namespace CLASE05.Formularios.EquiposEspeciales
 
         private void Frm_EquiposEspeciales_Load(object sender, EventArgs e)
         {
-
+            cmb_clientes._Cargar();
+            cmb_equipos._Cargar();
         }
     }
 }

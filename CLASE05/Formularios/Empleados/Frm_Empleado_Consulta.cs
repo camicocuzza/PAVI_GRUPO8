@@ -37,5 +37,10 @@ namespace CLASE05.Formularios.Empleados
             txt_telefono._Text = tabla.Rows[0]["telefono"].ToString();
 
         }
+
+        private void btn_aceptar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

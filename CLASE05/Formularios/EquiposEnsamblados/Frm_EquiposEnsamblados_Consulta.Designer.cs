@@ -43,6 +43,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             // btn_aceptar
             // 
             this.btn_aceptar.Location = new System.Drawing.Point(251, 474);
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // txt_precio
             // 

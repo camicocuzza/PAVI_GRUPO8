@@ -51,5 +51,10 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             frm_articulo.cod_articulo = grid_articulos.CurrentRow.Cells[0].Value.ToString();
             frm_articulo.ShowDialog();
         }
+
+        private void btn_aceptar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
