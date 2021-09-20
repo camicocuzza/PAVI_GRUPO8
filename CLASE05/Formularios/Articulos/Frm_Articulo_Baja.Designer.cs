@@ -54,9 +54,7 @@ namespace CLASE05.Formularios.Articulos
             this.cmb_rubros.Enabled = false;
             this.cmb_rubros.ValueMember = "id_rubro";
             // 
-            // txt_cuit_p
-            // 
-            this.txt_cuit_p.Enabled = false;
+
             // 
             // txt_nombre
             // 
@@ -66,9 +64,7 @@ namespace CLASE05.Formularios.Articulos
             // 
             this.txt_tiempo_envio.Enabled = false;
             // 
-            // txt_num_lote
-            // 
-            this.txt_num_lote.Enabled = false;
+
             // 
             // txt_cod_articulo
             // 

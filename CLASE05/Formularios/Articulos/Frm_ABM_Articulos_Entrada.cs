@@ -30,7 +30,11 @@ namespace CLASE05.Formularios.Articulos
         {
             NE_Articulos articulos = new NE_Articulos();
             string columna = "";
-
+            if (rb_todos.Checked == true)
+            {
+                grid_articulos.Cargar(articulos.BuscarArticulo("", "cod_articulo"));
+                return;
+            }
             if (txt_patron.Text != string.Empty)
             {
                 if (rb_cod_articulo.Checked == true)

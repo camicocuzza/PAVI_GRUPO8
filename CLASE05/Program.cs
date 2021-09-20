@@ -8,6 +8,7 @@ using CLASE05.Formularios.FrmBASE;
 using CLASE05.Formularios.Usuarios;
 using CLASE05.Formularios.Clientes;
 using CLASE05.Formularios.Lotes;
+using CLASE05.Formularios.Proveedores;
 
 namespace CLASE05
 {
@@ -32,7 +33,9 @@ namespace CLASE05
             //Application.Run(new Frm_ABM_Articulos_Entrada());
             //Application.Run(new Frm_Articulo_Alta());
             //Application.Run(new Frm_EquiposEspeciales_Alta());
+            //Application.Run(new Frm_ABM_Proveedores_Entrada());
             //Application.Run(new Frm_ABM_Lote_Entrada());
+            //Application.Run(new Frm_Proveedor_Consulta());
 
         }
     }

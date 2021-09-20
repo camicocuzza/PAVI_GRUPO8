@@ -69,7 +69,7 @@ namespace CLASE05.Formularios.Lotes
             this.txt_n_lote._Decimales = 0;
             this.txt_n_lote._Etiqueta = "Número de lote";
             this.txt_n_lote._Mask = "999999";
-            this.txt_n_lote._MensajeError = null;
+            this.txt_n_lote._MensajeError = "El número de lote esta vacío";
             this.txt_n_lote._Nombre_campo = null;
             this.txt_n_lote._Nombre_tabla = null;
             this.txt_n_lote._ReadOnly = false;
@@ -91,8 +91,8 @@ namespace CLASE05.Formularios.Lotes
             this.txt_n_remito._Ancho = 8;
             this.txt_n_remito._Decimales = 0;
             this.txt_n_remito._Etiqueta = "Número remito";
-            this.txt_n_remito._Mask = "9999999999";
-            this.txt_n_remito._MensajeError = null;
+            this.txt_n_remito._Mask = "99999999";
+            this.txt_n_remito._MensajeError = "El número de remito esta vacío";
             this.txt_n_remito._Nombre_campo = null;
             this.txt_n_remito._Nombre_tabla = null;
             this.txt_n_remito._ReadOnly = false;
@@ -115,7 +115,7 @@ namespace CLASE05.Formularios.Lotes
             this.txt_fecha_compra._Decimales = 2;
             this.txt_fecha_compra._Etiqueta = "Fecha de compra";
             this.txt_fecha_compra._Mask = "00/00/0000";
-            this.txt_fecha_compra._MensajeError = null;
+            this.txt_fecha_compra._MensajeError = "La fecha de compra esta vacía";
             this.txt_fecha_compra._Nombre_campo = null;
             this.txt_fecha_compra._Nombre_tabla = null;
             this.txt_fecha_compra._ReadOnly = false;

@@ -1,7 +1,7 @@
 ﻿
-namespace CLASE05.Formularios.Articulos
+namespace CLASE05.Formularios.Empleados
 {
-    partial class Frm_Articulo_Consulta
+    partial class Frm_Empleado_Modificacion
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,48 +29,15 @@ namespace CLASE05.Formularios.Articulos
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Articulo_Consulta));
             this.SuspendLayout();
             // 
-            // txt_num_serie
+            // txt_legajo
             // 
-            this.txt_num_serie.Enabled = false;
+            this.txt_legajo.Enabled = false;
             // 
-            // cmb_paises
+            // btn_aceptar
             // 
-            this.cmb_paises.DisplayMember = "nombre_pais";
-            this.cmb_paises.Enabled = false;
-            this.cmb_paises.ValueMember = "id_pais";
-            // 
-            // cmb_rubros
-            // 
-            this.cmb_rubros.DisplayMember = "nombre";
-            this.cmb_rubros.Enabled = false;
-            this.cmb_rubros.ValueMember = "id_rubro";
-            // 
-
-            // 
-            // txt_nombre
-            // 
-            this.txt_nombre.Enabled = false;
-            // 
-            // txt_tiempo_envio
-            // 
-            this.txt_tiempo_envio.Enabled = false;
-            // 
-
-            // 
-            // txt_cod_articulo
-            // 
-            this.txt_cod_articulo.Enabled = false;
-            // 
-            // txt_plazo_pago
-            // 
-            this.txt_plazo_pago.Enabled = false;
-            // 
-            // txt_precio
-            // 
-            this.txt_precio.Enabled = false;
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // btn_cerrar
             // 
@@ -84,14 +51,14 @@ namespace CLASE05.Formularios.Articulos
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             // 
-            // Frm_Articulo_Consulta
+            // Frm_Empleado_Modificacion
             // 
             this._PosiciónVisible = true;
-            this._Titulo = "Datos del Artículo";
+            this._Titulo = "Modificación de empleado";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(584, 424);
-            this.Name = "Frm_Articulo_Consulta";
-            this.Load += new System.EventHandler(this.Frm_Articulo_Consulta_Load);
+            this.ClientSize = new System.Drawing.Size(546, 446);
+            this.Name = "Frm_Empleado_Modificacion";
+            this.Load += new System.EventHandler(this.Frm_Empleado_Modificacion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

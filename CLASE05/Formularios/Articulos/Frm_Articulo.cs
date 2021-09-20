@@ -31,6 +31,8 @@ namespace CLASE05.Formularios.Articulos
         {
             cmb_paises._Cargar();
             cmb_rubros._Cargar();
+            cmb_proveedor._Cargar();
+            cmb_lote._Cargar();
 
 
         }

@@ -35,14 +35,14 @@ namespace CLASE05.Formularios.Articulos
                 
                 articulo.cod_articulo = txt_cod_articulo._Text;
                 articulo.num_serie = txt_num_serie._Text.ToString();
-                articulo.num_lote = txt_num_lote._Text.ToString();
+                articulo.num_lote = cmb_lote.SelectedValue.ToString();
                 articulo.precio = txt_precio._Text;
                 articulo.tiempo_envio = txt_tiempo_envio._Text;
                 articulo.plazo_pago = txt_plazo_pago._Text.ToString();
                 articulo.nombre = txt_nombre._Text;
                 articulo.id_rubro = cmb_rubros.SelectedValue.ToString();
                 articulo.id_pais = cmb_paises.SelectedValue.ToString();
-                articulo.cuit_proveedor = txt_cuit_p._Text;
+                articulo.cuit_proveedor = cmb_proveedor.SelectedValue.ToString();
 
                 articulo.Insertar();
                 MessageBox.Show("Se grabó correctamente", "Importante");
@@ -53,6 +53,11 @@ namespace CLASE05.Formularios.Articulos
         private void txt_plazo_pago_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void Frm_Articulo_Alta_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

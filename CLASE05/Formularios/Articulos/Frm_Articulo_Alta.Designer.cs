@@ -69,6 +69,7 @@ namespace CLASE05.Formularios.Articulos
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(584, 424);
             this.Name = "Frm_Articulo_Alta";
+            this.Load += new System.EventHandler(this.Frm_Articulo_Alta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

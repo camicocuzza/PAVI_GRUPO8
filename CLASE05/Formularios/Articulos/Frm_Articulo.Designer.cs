@@ -35,14 +35,16 @@ namespace CLASE05.Formularios.Articulos
             this.label1 = new System.Windows.Forms.Label();
             this.cmb_paises = new CLASE05.Clases.ComboBox01();
             this.cmb_rubros = new CLASE05.Clases.ComboBox01();
-            this.txt_cuit_p = new CLASE05.Clases.LabelText02();
             this.txt_nombre = new CLASE05.Clases.LabelText02();
             this.txt_tiempo_envio = new CLASE05.Clases.LabelText02();
-            this.txt_num_lote = new CLASE05.Clases.LabelText02();
             this.txt_cod_articulo = new CLASE05.Clases.LabelText02();
             this.txt_plazo_pago = new CLASE05.Clases.LabelText02();
             this.txt_precio = new CLASE05.Clases.LabelText02();
             this.btn_aceptar = new System.Windows.Forms.Button();
+            this.cmb_lote = new CLASE05.Clases.ComboBox01();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmb_proveedor = new CLASE05.Clases.ComboBox01();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_cerrar
@@ -76,14 +78,14 @@ namespace CLASE05.Formularios.Articulos
             this.txt_num_serie._Ancho = 10;
             this.txt_num_serie._Decimales = 0;
             this.txt_num_serie._Etiqueta = "Número de serie";
-            this.txt_num_serie._Mask = "9999999999";
+            this.txt_num_serie._Mask = "CCCCCCCCCC";
             this.txt_num_serie._MensajeError = "El número de serie está vacío";
             this.txt_num_serie._Nombre_campo = "num_serie";
             this.txt_num_serie._Nombre_tabla = null;
             this.txt_num_serie._ReadOnly = false;
             this.txt_num_serie._Text = "";
             this.txt_num_serie._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.txt_num_serie._TipoDato = CLASE05.Clases.LabelText02.TipoDato.numero;
+            this.txt_num_serie._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
             this.txt_num_serie._Validable = true;
             this.txt_num_serie.BackColor = System.Drawing.Color.Transparent;
             this.txt_num_serie.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
@@ -158,29 +160,6 @@ namespace CLASE05.Formularios.Articulos
             this.cmb_rubros.Size = new System.Drawing.Size(107, 25);
             this.cmb_rubros.TabIndex = 50;
             // 
-            // txt_cuit_p
-            // 
-            this.txt_cuit_p._Ancho = 13;
-            this.txt_cuit_p._Decimales = 2;
-            this.txt_cuit_p._Etiqueta = "CUIT Proveedor";
-            this.txt_cuit_p._Mask = "99-99999999-9";
-            this.txt_cuit_p._MensajeError = "El CUIT del proveedor está vacío";
-            this.txt_cuit_p._Nombre_campo = "cuit_proveedor";
-            this.txt_cuit_p._Nombre_tabla = null;
-            this.txt_cuit_p._ReadOnly = false;
-            this.txt_cuit_p._Text = "";
-            this.txt_cuit_p._TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.txt_cuit_p._TipoDato = CLASE05.Clases.LabelText02.TipoDato.mascaraEditada;
-            this.txt_cuit_p._Validable = true;
-            this.txt_cuit_p.BackColor = System.Drawing.Color.Transparent;
-            this.txt_cuit_p.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txt_cuit_p.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_cuit_p.Location = new System.Drawing.Point(18, 292);
-            this.txt_cuit_p.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_cuit_p.Name = "txt_cuit_p";
-            this.txt_cuit_p.Size = new System.Drawing.Size(260, 30);
-            this.txt_cuit_p.TabIndex = 48;
-            // 
             // txt_nombre
             // 
             this.txt_nombre._Ancho = 50;
@@ -226,29 +205,6 @@ namespace CLASE05.Formularios.Articulos
             this.txt_tiempo_envio.Name = "txt_tiempo_envio";
             this.txt_tiempo_envio.Size = new System.Drawing.Size(260, 30);
             this.txt_tiempo_envio.TabIndex = 46;
-            // 
-            // txt_num_lote
-            // 
-            this.txt_num_lote._Ancho = 10;
-            this.txt_num_lote._Decimales = 0;
-            this.txt_num_lote._Etiqueta = "Número de lote";
-            this.txt_num_lote._Mask = "9999999999";
-            this.txt_num_lote._MensajeError = "El número de lote está vacío";
-            this.txt_num_lote._Nombre_campo = "num_lote";
-            this.txt_num_lote._Nombre_tabla = null;
-            this.txt_num_lote._ReadOnly = false;
-            this.txt_num_lote._Text = "";
-            this.txt_num_lote._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.txt_num_lote._TipoDato = CLASE05.Clases.LabelText02.TipoDato.numero;
-            this.txt_num_lote._Validable = true;
-            this.txt_num_lote.BackColor = System.Drawing.Color.Transparent;
-            this.txt_num_lote.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txt_num_lote.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_num_lote.Location = new System.Drawing.Point(245, 184);
-            this.txt_num_lote.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_num_lote.Name = "txt_num_lote";
-            this.txt_num_lote.Size = new System.Drawing.Size(257, 30);
-            this.txt_num_lote.TabIndex = 45;
             // 
             // txt_cod_articulo
             // 
@@ -331,6 +287,70 @@ namespace CLASE05.Formularios.Articulos
             this.btn_aceptar.Text = "Aceptar";
             this.btn_aceptar.UseVisualStyleBackColor = false;
             // 
+            // cmb_lote
+            // 
+            this.cmb_lote._ComboSinSeleccion = true;
+            this.cmb_lote._MensajeError = "Seleccionar país";
+            this.cmb_lote._Nombre_campo = null;
+            this.cmb_lote._Nombre_tabla = "";
+            this.cmb_lote._tabla_cargar_combo = "lote";
+            this.cmb_lote._tabla_cargar_descriptor = "num_lote";
+            this.cmb_lote._tabla_cargar_pk = "num_lote";
+            this.cmb_lote._tabla_join = null;
+            this.cmb_lote._tabla_join_pk = null;
+            this.cmb_lote._Validable = true;
+            this.cmb_lote.BackColor = System.Drawing.SystemColors.WindowText;
+            this.cmb_lote.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cmb_lote.ForeColor = System.Drawing.Color.Gainsboro;
+            this.cmb_lote.FormattingEnabled = true;
+            this.cmb_lote.Location = new System.Drawing.Point(395, 184);
+            this.cmb_lote.Name = "cmb_lote";
+            this.cmb_lote.Size = new System.Drawing.Size(107, 25);
+            this.cmb_lote.TabIndex = 55;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label3.Location = new System.Drawing.Point(285, 187);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 17);
+            this.label3.TabIndex = 56;
+            this.label3.Text = "Número de lote";
+            // 
+            // cmb_proveedor
+            // 
+            this.cmb_proveedor._ComboSinSeleccion = true;
+            this.cmb_proveedor._MensajeError = "Seleccionar rubro";
+            this.cmb_proveedor._Nombre_campo = null;
+            this.cmb_proveedor._Nombre_tabla = "";
+            this.cmb_proveedor._tabla_cargar_combo = "proveedor";
+            this.cmb_proveedor._tabla_cargar_descriptor = "razon_social";
+            this.cmb_proveedor._tabla_cargar_pk = "cuit_proveedor";
+            this.cmb_proveedor._tabla_join = null;
+            this.cmb_proveedor._tabla_join_pk = null;
+            this.cmb_proveedor._Validable = true;
+            this.cmb_proveedor.BackColor = System.Drawing.SystemColors.InfoText;
+            this.cmb_proveedor.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cmb_proveedor.ForeColor = System.Drawing.Color.Gainsboro;
+            this.cmb_proveedor.FormattingEnabled = true;
+            this.cmb_proveedor.Location = new System.Drawing.Point(171, 291);
+            this.cmb_proveedor.Name = "cmb_proveedor";
+            this.cmb_proveedor.Size = new System.Drawing.Size(107, 25);
+            this.cmb_proveedor.TabIndex = 57;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label4.Location = new System.Drawing.Point(94, 294);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 17);
+            this.label4.TabIndex = 58;
+            this.label4.Text = "Proveedor";
+            // 
             // Frm_Articulo
             // 
             this._FormularioMovil = true;
@@ -338,15 +358,17 @@ namespace CLASE05.Formularios.Articulos
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(584, 424);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cmb_proveedor);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cmb_lote);
             this.Controls.Add(this.txt_num_serie);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_paises);
             this.Controls.Add(this.cmb_rubros);
-            this.Controls.Add(this.txt_cuit_p);
             this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.txt_tiempo_envio);
-            this.Controls.Add(this.txt_num_lote);
             this.Controls.Add(this.txt_cod_articulo);
             this.Controls.Add(this.txt_plazo_pago);
             this.Controls.Add(this.txt_precio);
@@ -360,10 +382,8 @@ namespace CLASE05.Formularios.Articulos
             this.Controls.SetChildIndex(this.txt_precio, 0);
             this.Controls.SetChildIndex(this.txt_plazo_pago, 0);
             this.Controls.SetChildIndex(this.txt_cod_articulo, 0);
-            this.Controls.SetChildIndex(this.txt_num_lote, 0);
             this.Controls.SetChildIndex(this.txt_tiempo_envio, 0);
             this.Controls.SetChildIndex(this.txt_nombre, 0);
-            this.Controls.SetChildIndex(this.txt_cuit_p, 0);
             this.Controls.SetChildIndex(this.cmb_rubros, 0);
             this.Controls.SetChildIndex(this.cmb_paises, 0);
             this.Controls.SetChildIndex(this.label1, 0);
@@ -373,6 +393,10 @@ namespace CLASE05.Formularios.Articulos
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
             this.Controls.SetChildIndex(this.lbl_posicion, 0);
+            this.Controls.SetChildIndex(this.cmb_lote, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.cmb_proveedor, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,13 +409,15 @@ namespace CLASE05.Formularios.Articulos
         private System.Windows.Forms.Label label1;
         public Clases.ComboBox01 cmb_paises;
         public Clases.ComboBox01 cmb_rubros;
-        public Clases.LabelText02 txt_cuit_p;
         protected Clases.LabelText02 txt_nombre;
         public Clases.LabelText02 txt_tiempo_envio;
-        public Clases.LabelText02 txt_num_lote;
         public Clases.LabelText02 txt_cod_articulo;
         public Clases.LabelText02 txt_plazo_pago;
         public Clases.LabelText02 txt_precio;
         public System.Windows.Forms.Button btn_aceptar;
+        public Clases.ComboBox01 cmb_lote;
+        public System.Windows.Forms.Label label3;
+        public Clases.ComboBox01 cmb_proveedor;
+        private System.Windows.Forms.Label label4;
     }
 }

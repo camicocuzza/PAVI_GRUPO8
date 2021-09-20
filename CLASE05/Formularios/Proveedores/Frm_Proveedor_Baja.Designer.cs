@@ -1,7 +1,7 @@
 ﻿
-namespace CLASE05.Formularios.Articulos
+namespace CLASE05.Formularios.Proveedores
 {
-    partial class Frm_Articulo_Consulta
+    partial class Frm_Proveedor_Baja
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,48 +29,40 @@ namespace CLASE05.Formularios.Articulos
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Articulo_Consulta));
             this.SuspendLayout();
             // 
-            // txt_num_serie
+            // txt_razon_social
             // 
-            this.txt_num_serie.Enabled = false;
+            this.txt_razon_social.Enabled = false;
             // 
-            // cmb_paises
+            // cmb_empleado
             // 
-            this.cmb_paises.DisplayMember = "nombre_pais";
-            this.cmb_paises.Enabled = false;
-            this.cmb_paises.ValueMember = "id_pais";
+            this.cmb_empleado.Enabled = false;
             // 
-            // cmb_rubros
+            // cmb_estado_provincia
             // 
-            this.cmb_rubros.DisplayMember = "nombre";
-            this.cmb_rubros.Enabled = false;
-            this.cmb_rubros.ValueMember = "id_rubro";
+            this.cmb_estado_provincia.Enabled = false;
             // 
-
+            // txt_ciudad
             // 
-            // txt_nombre
+            this.txt_ciudad.Enabled = false;
             // 
-            this.txt_nombre.Enabled = false;
+            // txt_direccion
             // 
-            // txt_tiempo_envio
+            this.txt_direccion.Enabled = false;
             // 
-            this.txt_tiempo_envio.Enabled = false;
+            // txt_fecha_inicio
             // 
-
+            this.txt_fecha_inicio.Enabled = false;
             // 
-            // txt_cod_articulo
+            // btn_aceptar
             // 
-            this.txt_cod_articulo.Enabled = false;
+            this.btn_aceptar.Text = "Borrar";
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
-            // txt_plazo_pago
+            // txt_cuit_p
             // 
-            this.txt_plazo_pago.Enabled = false;
-            // 
-            // txt_precio
-            // 
-            this.txt_precio.Enabled = false;
+            this.txt_cuit_p.Enabled = false;
             // 
             // btn_cerrar
             // 
@@ -84,14 +76,14 @@ namespace CLASE05.Formularios.Articulos
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             // 
-            // Frm_Articulo_Consulta
+            // Frm_Proveedor_Baja
             // 
             this._PosiciónVisible = true;
-            this._Titulo = "Datos del Artículo";
+            this._Titulo = "Baja de proveedor";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(584, 424);
-            this.Name = "Frm_Articulo_Consulta";
-            this.Load += new System.EventHandler(this.Frm_Articulo_Consulta_Load);
+            this.ClientSize = new System.Drawing.Size(547, 434);
+            this.Name = "Frm_Proveedor_Baja";
+            this.Load += new System.EventHandler(this.Frm_Proveedor_Baja_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

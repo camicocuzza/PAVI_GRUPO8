@@ -25,14 +25,14 @@ namespace CLASE05.Formularios.Articulos
         {
             txt_cod_articulo._Text = tabla.Rows[0]["cod_articulo"].ToString();
             txt_num_serie._Text = tabla.Rows[0]["num_serie"].ToString();
-            txt_num_lote._Text = tabla.Rows[0]["num_lote"].ToString();
+            cmb_lote.SelectedValue = tabla.Rows[0]["num_lote"].ToString();
             txt_precio._Text = tabla.Rows[0]["precio"].ToString();
             txt_tiempo_envio._Text = tabla.Rows[0]["tiempo_envio"].ToString();
             txt_plazo_pago._Text = tabla.Rows[0]["plazo_pago"].ToString();
             txt_nombre._Text = tabla.Rows[0]["nombre"].ToString();
             cmb_rubros.SelectedValue = int.Parse(tabla.Rows[0]["id_rubro"].ToString());
-            cmb_rubros.SelectedValue = int.Parse(tabla.Rows[0]["id_pais"].ToString());
-            txt_cuit_p._Text = tabla.Rows[0]["cuit_proveedor"].ToString();
+            cmb_paises.SelectedValue = int.Parse(tabla.Rows[0]["id_pais"].ToString());
+            cmb_proveedor.SelectedValue = tabla.Rows[0]["cuit_proveedor"].ToString();
 
         }
     }

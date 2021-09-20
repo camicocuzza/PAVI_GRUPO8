@@ -70,7 +70,6 @@ namespace CLASE05.Negocios
             string sqlUpdate = "";
 
             sqlUpdate = "UPDATE articulo SET ";
-            //sqlUpdate += "cod_articulo = '" + cod_articulo + "'";
             sqlUpdate += "num_serie = '" + num_serie + "'";
             sqlUpdate += ", num_lote = '" + num_lote + "'";
             sqlUpdate += ", precio = " + precio;
@@ -79,7 +78,8 @@ namespace CLASE05.Negocios
             sqlUpdate += ", nombre = '" + nombre + "'";
             sqlUpdate += ", id_rubro = " + id_rubro;
             sqlUpdate += ", id_pais = " + id_pais;
-            sqlUpdate += ", cuit_proveedor = '" + cuit_proveedor;
+            sqlUpdate += ", cuit_proveedor = '" + cuit_proveedor + "'";
+            sqlUpdate += " WHERE cod_articulo = '" + cod_articulo + "'";
 
             MessageBox.Show(sqlUpdate);
             _BD.Modificar(sqlUpdate);

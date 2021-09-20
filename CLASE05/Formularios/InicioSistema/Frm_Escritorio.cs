@@ -15,6 +15,8 @@ using CLASE05.Formularios.Articulos;
 using CLASE05.Formularios.EquiposEnsamblados;
 using CLASE05.Formularios.EquiposEspeciales;
 using CLASE05.Formularios.Lotes;
+using CLASE05.Formularios.Empleados;
+using CLASE05.Formularios.Proveedores;
 
 namespace CLASE05.Formularios.InicioSistema
 {
@@ -101,6 +103,18 @@ namespace CLASE05.Formularios.InicioSistema
         {
             Frm_ABM_Lote_Entrada frm_lotes = new Frm_ABM_Lote_Entrada();
             frm_lotes.ShowDialog();
+        }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_ABM_Empleados_Entrada frm_empleados = new Frm_ABM_Empleados_Entrada();
+            frm_empleados.ShowDialog();
+        }
+
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_ABM_Proveedores_Entrada frm_proveedores = new Frm_ABM_Proveedores_Entrada();
+            frm_proveedores.ShowDialog();
         }
     }
 }

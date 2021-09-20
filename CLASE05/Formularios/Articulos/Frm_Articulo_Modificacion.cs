@@ -26,16 +26,16 @@ namespace CLASE05.Formularios.Articulos
 
                 NE_Articulos articulo = new NE_Articulos();
 
-                //articulo.cod_articulo = txt_cod_articulo._Text;
+                articulo.cod_articulo = txt_cod_articulo._Text;
                 articulo.num_serie = txt_num_serie._Text.ToString();
-                articulo.num_lote = txt_num_lote._Text.ToString();
+                articulo.num_lote = cmb_lote.SelectedValue.ToString();
                 articulo.precio = txt_precio._Text;
                 articulo.tiempo_envio = txt_tiempo_envio._Text;
                 articulo.plazo_pago = txt_plazo_pago._Text.ToString();
                 articulo.nombre = txt_nombre._Text;
                 articulo.id_rubro = cmb_rubros.SelectedValue.ToString();
                 articulo.id_pais = cmb_paises.SelectedValue.ToString();
-                articulo.cuit_proveedor = txt_cuit_p._Text;
+                articulo.cuit_proveedor = cmb_proveedor.SelectedValue.ToString();
 
                 articulo.Modificar();
                 MessageBox.Show("Se modificó correctamente el artículo " + txt_nombre._Text, "Importante");
@@ -51,14 +51,14 @@ namespace CLASE05.Formularios.Articulos
         {
             txt_cod_articulo._Text = tabla.Rows[0]["cod_articulo"].ToString();
             txt_num_serie._Text = tabla.Rows[0]["num_serie"].ToString();
-            txt_num_lote._Text = tabla.Rows[0]["num_lote"].ToString();
+            cmb_lote.SelectedValue = tabla.Rows[0]["num_lote"].ToString();
             txt_precio._Text = tabla.Rows[0]["precio"].ToString();
             txt_tiempo_envio._Text = tabla.Rows[0]["tiempo_envio"].ToString();
             txt_plazo_pago._Text = tabla.Rows[0]["plazo_pago"].ToString();
             txt_nombre._Text = tabla.Rows[0]["nombre"].ToString();
             cmb_rubros.SelectedValue = int.Parse(tabla.Rows[0]["id_rubro"].ToString());
-            cmb_rubros.SelectedValue = int.Parse(tabla.Rows[0]["id_pais"].ToString());
-            txt_cuit_p._Text = tabla.Rows[0]["cuit_proveedor"].ToString();
+            cmb_paises.SelectedValue = int.Parse(tabla.Rows[0]["id_pais"].ToString());
+            cmb_proveedor.SelectedValue = tabla.Rows[0]["cuit_proveedor"].ToString();
 
         }
     }
