@@ -71,7 +71,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_limite_credito.Location = new System.Drawing.Point(155, 177);
             this.txt_limite_credito.Mask = "9999999999";
             this.txt_limite_credito.Name = "txt_limite_credito";
-            this.txt_limite_credito.Size = new System.Drawing.Size(118, 25);
+            this.txt_limite_credito.Size = new System.Drawing.Size(92, 25);
             this.txt_limite_credito.TabIndex = 51;
             this.txt_limite_credito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_limite_credito.Click += new System.EventHandler(this.txt_limite_credito_Click);
@@ -336,7 +336,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_decimales.Culture = new System.Globalization.CultureInfo("en-US");
             this.txt_decimales.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
             this.txt_decimales.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_decimales.Location = new System.Drawing.Point(284, 177);
+            this.txt_decimales.Location = new System.Drawing.Point(257, 177);
             this.txt_decimales.Mask = "99";
             this.txt_decimales.Name = "txt_decimales";
             this.txt_decimales.Size = new System.Drawing.Size(32, 25);
@@ -351,7 +351,7 @@ namespace CLASE05.Formularios.Clientes
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(271, 176);
+            this.label4.Location = new System.Drawing.Point(244, 176);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(16, 24);

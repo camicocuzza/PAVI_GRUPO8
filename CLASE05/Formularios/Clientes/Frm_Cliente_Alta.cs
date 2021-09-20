@@ -68,7 +68,7 @@ namespace CLASE05.Formularios.Clientes
                 float dec = (float.Parse(txt_decimales.Text)) / 100;
 
                 cli.limite_credito = (ent + dec).ToString().Replace(",", "."); ;
-                MessageBox.Show(cli.limite_credito);
+               //MessageBox.Show(cli.limite_credito);
 
                 cli.Insertar();
                 MessageBox.Show("Se grabó correctamente el cliente " + txt_razon_social._Text, "Importante");
