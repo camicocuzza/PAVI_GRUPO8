@@ -64,8 +64,8 @@ namespace CLASE05.Formularios.Clientes
 
                 cli.decimales = txt_decimales.Text;
 
-                float ent = float.Parse(txt_limite_credito.Text);
-                float dec = (float.Parse(txt_decimales.Text)) / 100;
+                double ent = double.Parse(txt_limite_credito.Text);
+                double dec = (double.Parse(txt_decimales.Text)) / 100;
 
                 cli.limite_credito = (ent + dec).ToString().Replace(",", "."); ;
                //MessageBox.Show(cli.limite_credito);
