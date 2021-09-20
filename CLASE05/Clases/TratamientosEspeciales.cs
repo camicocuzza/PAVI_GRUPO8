@@ -41,7 +41,7 @@ namespace CLASE05.Clases
                     }
                 }
                 if (item.GetType().Name == "MaskedTextBox")
-                {
+                {                       
                     if (((MaskedTextBox)item).Text == string.Empty)
                     {
                         MessageBox.Show("Límite de crédito está vacío");

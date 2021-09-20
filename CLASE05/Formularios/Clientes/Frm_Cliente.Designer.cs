@@ -45,6 +45,7 @@ namespace CLASE05.Formularios.Clientes
             this.label3 = new System.Windows.Forms.Label();
             this.btn_aceptar = new System.Windows.Forms.Button();
             this.txt_decimales = new System.Windows.Forms.MaskedTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_cerrar
@@ -70,8 +71,9 @@ namespace CLASE05.Formularios.Clientes
             this.txt_limite_credito.Location = new System.Drawing.Point(155, 177);
             this.txt_limite_credito.Mask = "9999999999";
             this.txt_limite_credito.Name = "txt_limite_credito";
-            this.txt_limite_credito.Size = new System.Drawing.Size(190, 25);
+            this.txt_limite_credito.Size = new System.Drawing.Size(118, 25);
             this.txt_limite_credito.TabIndex = 51;
+            this.txt_limite_credito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_limite_credito.Click += new System.EventHandler(this.txt_limite_credito_Click);
             // 
             // label2
@@ -189,7 +191,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_legajo_empleado._Decimales = 2;
             this.txt_legajo_empleado._Etiqueta = "Legajo empleado";
             this.txt_legajo_empleado._Mask = "99999999";
-            this.txt_legajo_empleado._MensajeError = null;
+            this.txt_legajo_empleado._MensajeError = "Legajo empleado está vacío";
             this.txt_legajo_empleado._Nombre_campo = null;
             this.txt_legajo_empleado._Nombre_tabla = null;
             this.txt_legajo_empleado._ReadOnly = false;
@@ -213,7 +215,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_ciudad._Decimales = 2;
             this.txt_ciudad._Etiqueta = "Ciudad";
             this.txt_ciudad._Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
-            this.txt_ciudad._MensajeError = null;
+            this.txt_ciudad._MensajeError = "Ciudad está vacía";
             this.txt_ciudad._Nombre_campo = null;
             this.txt_ciudad._Nombre_tabla = null;
             this.txt_ciudad._ReadOnly = false;
@@ -237,7 +239,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_razon_social._Decimales = 2;
             this.txt_razon_social._Etiqueta = "Razón social";
             this.txt_razon_social._Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
-            this.txt_razon_social._MensajeError = null;
+            this.txt_razon_social._MensajeError = "Razón social está vacía";
             this.txt_razon_social._Nombre_campo = null;
             this.txt_razon_social._Nombre_tabla = null;
             this.txt_razon_social._ReadOnly = false;
@@ -261,7 +263,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_direccion._Decimales = 2;
             this.txt_direccion._Etiqueta = "Dirección";
             this.txt_direccion._Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
-            this.txt_direccion._MensajeError = null;
+            this.txt_direccion._MensajeError = "Dirección está vacía";
             this.txt_direccion._Nombre_campo = null;
             this.txt_direccion._Nombre_tabla = null;
             this.txt_direccion._ReadOnly = false;
@@ -285,7 +287,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_nombre_contacto._Decimales = 2;
             this.txt_nombre_contacto._Etiqueta = "Nombre contacto";
             this.txt_nombre_contacto._Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
-            this.txt_nombre_contacto._MensajeError = null;
+            this.txt_nombre_contacto._MensajeError = "Nombre contacto esá vacío";
             this.txt_nombre_contacto._Nombre_campo = null;
             this.txt_nombre_contacto._Nombre_tabla = null;
             this.txt_nombre_contacto._ReadOnly = false;
@@ -334,11 +336,28 @@ namespace CLASE05.Formularios.Clientes
             this.txt_decimales.Culture = new System.Globalization.CultureInfo("en-US");
             this.txt_decimales.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
             this.txt_decimales.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_decimales.Location = new System.Drawing.Point(351, 177);
+            this.txt_decimales.Location = new System.Drawing.Point(284, 177);
             this.txt_decimales.Mask = "99";
             this.txt_decimales.Name = "txt_decimales";
-            this.txt_decimales.Size = new System.Drawing.Size(76, 25);
+            this.txt_decimales.Size = new System.Drawing.Size(32, 25);
             this.txt_decimales.TabIndex = 54;
+            this.txt_decimales.Tag = "noValidar";
+            this.txt_decimales.Text = "00";
+            this.txt_decimales.Click += new System.EventHandler(this.txt_decimales_Click);
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label4.Location = new System.Drawing.Point(271, 176);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(16, 24);
+            this.label4.TabIndex = 55;
+            this.label4.Text = ".";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Frm_Cliente
             // 
@@ -362,9 +381,11 @@ namespace CLASE05.Formularios.Clientes
             this.Controls.Add(this.txt_razon_social);
             this.Controls.Add(this.txt_direccion);
             this.Controls.Add(this.txt_nombre_contacto);
+            this.Controls.Add(this.label4);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Frm_Cliente";
             this.Load += new System.EventHandler(this.Frm_Cliente_Load);
+            this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.lbl_titulo, 0);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
@@ -409,5 +430,6 @@ namespace CLASE05.Formularios.Clientes
         public System.Windows.Forms.Button btn_aceptar;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.MaskedTextBox txt_decimales;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -35,11 +35,15 @@ namespace CLASE05.Formularios.Clientes
             string id_estado_provincia = tabla.Rows[0]["id_estado_provincia"].ToString();
             DataTable tabla_IdPais = ne_prov.RecuperarIdPais(id_estado_provincia);
             string id_pais = tabla_IdPais.Rows[0]["id_pais"].ToString();
-
-
+            
+            float num = float.Parse(tabla.Rows[0]["limite_credito"].ToString());
+            double enteros = Math.Truncate(num);
+            int decimales = (int)(((decimal)num % 1) * 100);
+            
             txt_cuit_cliente.Text = tabla.Rows[0]["cuit_cliente"].ToString();
             txt_razon_social._Text = tabla.Rows[0]["razon_social"].ToString();
-            txt_limite_credito.Text = tabla.Rows[0]["limite_credito"].ToString();
+            txt_limite_credito.Text = enteros.ToString();
+            txt_decimales.Text = decimales.ToString();
             txt_nombre_contacto._Text = tabla.Rows[0]["nombre_contacto"].ToString();
             txt_legajo_empleado._Text = tabla.Rows[0]["legajo_empleado"].ToString();
             txt_direccion._Text = tabla.Rows[0]["direccion"].ToString();
@@ -51,14 +55,16 @@ namespace CLASE05.Formularios.Clientes
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
             TratamientosEspeciales _TE = new TratamientosEspeciales();
-           
+            NE_Empleados ne_emp = new NE_Empleados();
+
             if (_TE.Validar(base.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
             {
                 // VALIDACION ESPECIFICA
-                if (_TE.ValidarCuit(txt_cuit_cliente.Text) == TratamientosEspeciales.RespuestaValidacion.Error)
+                          
+                if (ne_emp.ValidarExistencia(txt_legajo_empleado._Text) == false)
                 {
-                    MessageBox.Show("El cuit ingresado está incompleto");
-                    txt_cuit_cliente.Focus();
+                    MessageBox.Show("El legajo '" + txt_legajo_empleado._Text + "' no corresponde a un empleado activo", "Importante");
+                    txt_legajo_empleado.Focus();
                     return;
                 }
 
@@ -73,7 +79,15 @@ namespace CLASE05.Formularios.Clientes
                 cli.id_estado_provincia = cmb_estado_provincia.SelectedValue.ToString();
                 cli.ciudad = txt_ciudad._Text;
 
+                cli.decimales = txt_decimales.Text;
+
+                float ent = float.Parse(txt_limite_credito.Text);
+                float dec = (float.Parse(txt_decimales.Text)) / 100;
+
+                cli.limite_credito = (ent + dec).ToString().Replace(",", "."); ;
+                MessageBox.Show(cli.limite_credito);
                 cli.Modificar();
+
                 MessageBox.Show("Se modificó correctamente el cliente " + txt_razon_social.Text, "Importante");
 
             }
