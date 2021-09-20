@@ -11,6 +11,10 @@ using CLASE05.Negocios;
 using CLASE05.Formularios.Usuarios;
 using CLASE05.Formularios.Clientes;
 using CLASE05.Formularios.FrmBASE;
+using CLASE05.Formularios.Articulos;
+using CLASE05.Formularios.EquiposEnsamblados;
+using CLASE05.Formularios.EquiposEspeciales;
+using CLASE05.Formularios.Lotes;
 
 namespace CLASE05.Formularios.InicioSistema
 {
@@ -73,6 +77,30 @@ namespace CLASE05.Formularios.InicioSistema
             Frm_ABM_Cliente_Entrada frm_usuario = new Frm_ABM_Cliente_Entrada();
             frm_usuario.ShowDialog();
 
+        }
+
+        private void artículosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_ABM_Articulos_Entrada frm_articulos = new Frm_ABM_Articulos_Entrada();
+            frm_articulos.ShowDialog();
+        }
+
+        private void ensambladosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_ABM_EquiposEnsamblados_Entrada frm_equiposEnsamblados = new Frm_ABM_EquiposEnsamblados_Entrada();
+            frm_equiposEnsamblados.ShowDialog();
+        }
+
+        private void especialesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_ABM_EquiposEspeciales_Entrada frm_equiposEspeciales = new Frm_ABM_EquiposEspeciales_Entrada();
+            frm_equiposEspeciales.ShowDialog();
+        }
+
+        private void lotesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_ABM_Lote_Entrada frm_lotes = new Frm_ABM_Lote_Entrada();
+            frm_lotes.ShowDialog();
         }
     }
 }

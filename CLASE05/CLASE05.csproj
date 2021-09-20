@@ -99,6 +99,42 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Clases\TratamientosEspeciales.cs" />
+    <Compile Include="Formularios\Articulos\Frm_ABM_Articulos_Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Articulos\Frm_ABM_Articulos_Entrada.Designer.cs">
+      <DependentUpon>Frm_ABM_Articulos_Entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Articulos\Frm_Articulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Articulos\Frm_Articulo.Designer.cs">
+      <DependentUpon>Frm_Articulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Articulos\Frm_Articulo_Alta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Articulos\Frm_Articulo_Alta.Designer.cs">
+      <DependentUpon>Frm_Articulo_Alta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Articulos\Frm_Articulo_Baja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Articulos\Frm_Articulo_Baja.Designer.cs">
+      <DependentUpon>Frm_Articulo_Baja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Articulos\Frm_Articulo_Consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Articulos\Frm_Articulo_Consulta.Designer.cs">
+      <DependentUpon>Frm_Articulo_Consulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Articulos\Frm_Articulo_Modificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Articulos\Frm_Articulo_Modificacion.Designer.cs">
+      <DependentUpon>Frm_Articulo_Modificacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Clientes\Frm_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +171,66 @@
     <Compile Include="Formularios\Clientes\Frm_Cliente_Modificacion.Designer.cs">
       <DependentUpon>Frm_Cliente_Modificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\EquiposEnsamblados\Frm_ABM_EquiposEnsamblados_Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EquiposEnsamblados\Frm_ABM_EquiposEnsamblados_Entrada.Designer.cs">
+      <DependentUpon>Frm_ABM_EquiposEnsamblados_Entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EquiposEnsamblados\Frm_EquiposEnsamblados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EquiposEnsamblados\Frm_EquiposEnsamblados.Designer.cs">
+      <DependentUpon>Frm_EquiposEnsamblados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EquiposEnsamblados\Frm_EquiposEnsamblados_Alta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EquiposEnsamblados\Frm_EquiposEnsamblados_Alta.Designer.cs">
+      <DependentUpon>Frm_EquiposEnsamblados_Alta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EquiposEnsamblados\Frm_EquiposEnsamblados_Baja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EquiposEnsamblados\Frm_EquiposEnsamblados_Baja.Designer.cs">
+      <DependentUpon>Frm_EquiposEnsamblados_Baja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EquiposEnsamblados\Frm_EquiposEnsamblados_Modificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EquiposEnsamblados\Frm_EquiposEnsamblados_Modificacion.Designer.cs">
+      <DependentUpon>Frm_EquiposEnsamblados_Modificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EquiposEspeciales\Frm_ABM_EquiposEspeciales_Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EquiposEspeciales\Frm_ABM_EquiposEspeciales_Entrada.Designer.cs">
+      <DependentUpon>Frm_ABM_EquiposEspeciales_Entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales.Designer.cs">
+      <DependentUpon>Frm_EquiposEspeciales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Alta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Alta.Designer.cs">
+      <DependentUpon>Frm_EquiposEspeciales_Alta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Baja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Baja.Designer.cs">
+      <DependentUpon>Frm_EquiposEspeciales_Baja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Modificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Modificacion.Designer.cs">
+      <DependentUpon>Frm_EquiposEspeciales_Modificacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmBASE\FrmBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +260,42 @@
     </Compile>
     <Compile Include="Formularios\InicioSistema\Frm_Escritorio.Designer.cs">
       <DependentUpon>Frm_Escritorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lotes\Frm_ABM_Lote_Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lotes\Frm_ABM_Lote_Entrada.Designer.cs">
+      <DependentUpon>Frm_ABM_Lote_Entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lotes\Frm_Lote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lotes\Frm_Lote.Designer.cs">
+      <DependentUpon>Frm_Lote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lotes\Frm_Lote_Alta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lotes\Frm_Lote_Alta.Designer.cs">
+      <DependentUpon>Frm_Lote_Alta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lotes\Frm_Lote_Baja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lotes\Frm_Lote_Baja.Designer.cs">
+      <DependentUpon>Frm_Lote_Baja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lotes\Frm_Lote_Consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lotes\Frm_Lote_Consulta.Designer.cs">
+      <DependentUpon>Frm_Lote_Consulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lotes\Frm_Lote_Modificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lotes\Frm_Lote_Modificacion.Designer.cs">
+      <DependentUpon>Frm_Lote_Modificacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Usuarios\Frm_ABM_Usuario_Entrada.cs">
       <SubType>Form</SubType>
@@ -201,7 +333,11 @@
     <Compile Include="Formularios\Usuarios\Frm_Usuario_Modificacion.Designer.cs">
       <DependentUpon>Frm_Usuario_Modificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Negocios\NE_Articulos.cs" />
     <Compile Include="Negocios\NE_Clientes.cs" />
+    <Compile Include="Negocios\NE_Lotes.cs" />
+    <Compile Include="Negocios\NE_EquiposEnsamblados.cs" />
+    <Compile Include="Negocios\NE_EquiposEspeciales.cs" />
     <Compile Include="Negocios\NE_Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -213,6 +349,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clases\TextBox02.resx">
       <DependentUpon>TextBox02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Articulos\Frm_ABM_Articulos_Entrada.resx">
+      <DependentUpon>Frm_ABM_Articulos_Entrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Articulos\Frm_Articulo.resx">
+      <DependentUpon>Frm_Articulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Articulos\Frm_Articulo_Alta.resx">
+      <DependentUpon>Frm_Articulo_Alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Articulos\Frm_Articulo_Baja.resx">
+      <DependentUpon>Frm_Articulo_Baja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Articulos\Frm_Articulo_Consulta.resx">
+      <DependentUpon>Frm_Articulo_Consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Articulos\Frm_Articulo_Modificacion.resx">
+      <DependentUpon>Frm_Articulo_Modificacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Clientes\Frm_ABM_Cliente_Entrada.resx">
       <DependentUpon>Frm_ABM_Cliente_Entrada.cs</DependentUpon>
@@ -232,6 +386,36 @@
     <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente_Modificacion.resx">
       <DependentUpon>Frm_Cliente_Modificacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EquiposEnsamblados\Frm_ABM_EquiposEnsamblados_Entrada.resx">
+      <DependentUpon>Frm_ABM_EquiposEnsamblados_Entrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EquiposEnsamblados\Frm_EquiposEnsamblados.resx">
+      <DependentUpon>Frm_EquiposEnsamblados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EquiposEnsamblados\Frm_EquiposEnsamblados_Alta.resx">
+      <DependentUpon>Frm_EquiposEnsamblados_Alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EquiposEnsamblados\Frm_EquiposEnsamblados_Baja.resx">
+      <DependentUpon>Frm_EquiposEnsamblados_Baja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EquiposEnsamblados\Frm_EquiposEnsamblados_Modificacion.resx">
+      <DependentUpon>Frm_EquiposEnsamblados_Modificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EquiposEspeciales\Frm_ABM_EquiposEspeciales_Entrada.resx">
+      <DependentUpon>Frm_ABM_EquiposEspeciales_Entrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales.resx">
+      <DependentUpon>Frm_EquiposEspeciales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Alta.resx">
+      <DependentUpon>Frm_EquiposEspeciales_Alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Baja.resx">
+      <DependentUpon>Frm_EquiposEspeciales_Baja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Modificacion.resx">
+      <DependentUpon>Frm_EquiposEspeciales_Modificacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmBASE\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,6 +430,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\InicioSistema\Frm_Escritorio.resx">
       <DependentUpon>Frm_Escritorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lotes\Frm_ABM_Lote_Entrada.resx">
+      <DependentUpon>Frm_ABM_Lote_Entrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lotes\Frm_Lote.resx">
+      <DependentUpon>Frm_Lote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lotes\Frm_Lote_Alta.resx">
+      <DependentUpon>Frm_Lote_Alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lotes\Frm_Lote_Baja.resx">
+      <DependentUpon>Frm_Lote_Baja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lotes\Frm_Lote_Consulta.resx">
+      <DependentUpon>Frm_Lote_Consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lotes\Frm_Lote_Modificacion.resx">
+      <DependentUpon>Frm_Lote_Modificacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Usuarios\Frm_ABM_Usuario_Entrada.resx">
       <DependentUpon>Frm_ABM_Usuario_Entrada.cs</DependentUpon>

@@ -16,9 +16,10 @@ namespace CLASE05.Clases
 
        
         //string cadena_conexion = "Data Source = 200.69.137.167,11333; Initial Catalog = BD3K7G15_2021; User ID = BD3K7G15_2021; Password=BDG15_3922";
-        string cadena_conexion = "Data Source = 200.69.137.167,11333; Initial Catalog = BD3K3G03_2021; User ID = BD3K3G03_2021; Password=BDG03_3355";
-                                  
-        
+        string cadena_conexion = "Data Source=200.69.137.167,11333;Initial Catalog=BD3K3G08_2021;Persist Security Info=True;User ID=BD3K3G08_2021;Password=BDG08_3214";
+
+
+
         private void Conectar()
         {
             Conexion.ConnectionString = cadena_conexion;
