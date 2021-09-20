@@ -202,6 +202,7 @@
       <DependentUpon>Frm_Usuario_Modificacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Negocios\NE_Clientes.cs" />
+    <Compile Include="Negocios\NE_Paises.cs" />
     <Compile Include="Negocios\NE_Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -381,6 +382,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\img_escritorio %2816%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Formularios\Países\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
