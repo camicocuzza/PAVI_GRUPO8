@@ -12,6 +12,7 @@ namespace CLASE05.Formularios.Usuarios
 {
     public partial class Frm_Usuario_Modificacion : CLASE05.Formularios.Usuarios.Frm_Usuario
     {
+        NE_Usuarios usu = new NE_Usuarios();
         public Frm_Usuario_Modificacion()
         {
             InitializeComponent();
@@ -32,20 +33,18 @@ namespace CLASE05.Formularios.Usuarios
 
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
+
             TratamientosEspeciales _TE = new TratamientosEspeciales();
 
-            if (_TE.Validar(this.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
+            if (usu.ValidarExistenciaNombre(txt_n_usuario._Text) == true)
             {
-                //// VALIDACION ESPECIFICA
-                //if (_TE.ValidarEmail(txt_email._Text) == TratamientosEspeciales.RespuestaValidacion.Error)
-                //{
-                //    MessageBox.Show("El formato de correo es invalido");
-                //    txt_email.Focus();
-                //    return;
-                //}
-
-                // GRABAR NUEVO REGISTRO
-                NE_Usuarios usu = new NE_Usuarios();
+                MessageBox.Show("El nombre de usuario '" + txt_n_usuario._Text + "' ya está registrado", "Importante");
+                txt_n_usuario.Focus();
+                return;
+            }
+            if (_TE.Validar(this.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
+            {  
+                // GRABAR NUEVO REGISTRO             
 
                 usu.id_usuario = txt_id_usuario._Text;
                 usu.n_usuario = txt_n_usuario._Text;

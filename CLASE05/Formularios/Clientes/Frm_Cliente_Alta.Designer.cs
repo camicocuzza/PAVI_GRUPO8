@@ -76,6 +76,11 @@ namespace CLASE05.Formularios.Clientes
             // 
             this.label3.Size = new System.Drawing.Size(195, 31);
             this.label3.Text = "Altas de Cliente";
+            this.label3.Visible = true;
+            // 
+            // lbl_titulo
+            // 
+            this.lbl_titulo.Visible = false;
             // 
             // btn_cerrar
             // 

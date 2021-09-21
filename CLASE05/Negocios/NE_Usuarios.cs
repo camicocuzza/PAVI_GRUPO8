@@ -38,6 +38,23 @@ namespace CLASE05.Negocios
                 return Validacion.incorrecta;
             }
         }
+        public bool ValidarExistenciaNombre(string n_usuario)
+        {
+            string sql = @"SELECT * FROM usuario
+                          WHERE n_usuario = '" + n_usuario + "'";                    
+
+            DataTable tabla = new DataTable();
+            tabla = _BD.EjecutarSelect(sql);
+
+            if (tabla.Rows.Count == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public int RecuperarId (string nombre, string password)
         {
             string sql = @"SELECT id_usuario FROM usuario

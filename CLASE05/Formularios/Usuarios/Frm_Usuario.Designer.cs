@@ -83,10 +83,11 @@ namespace CLASE05.Formularios.Usuarios
             this.txt_password._Decimales = 2;
             this.txt_password._Etiqueta = "Password";
             this.txt_password._Mask = "CCCCCCCCCCCCCCCCCCCC";
-            this.txt_password._MensajeError = "El password esta vácio";
+            this.txt_password._MensajeError = "Ingresar password";
             this.txt_password._Nombre_campo = null;
             this.txt_password._Nombre_tabla = null;
             this.txt_password._ReadOnly = false;
+            this.txt_password._StartEnCero = false;
             this.txt_password._Text = "";
             this.txt_password._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_password._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
@@ -106,10 +107,11 @@ namespace CLASE05.Formularios.Usuarios
             this.txt_n_usuario._Decimales = 2;
             this.txt_n_usuario._Etiqueta = "Nombre Usuario";
             this.txt_n_usuario._Mask = "CCCCCCCCCCCCCCCCCCCC";
-            this.txt_n_usuario._MensajeError = "El nombre de usuario está vácio";
+            this.txt_n_usuario._MensajeError = "Ingresar nombre de usuario";
             this.txt_n_usuario._Nombre_campo = "n_usuario";
             this.txt_n_usuario._Nombre_tabla = null;
             this.txt_n_usuario._ReadOnly = false;
+            this.txt_n_usuario._StartEnCero = false;
             this.txt_n_usuario._Text = "";
             this.txt_n_usuario._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_n_usuario._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
@@ -133,9 +135,10 @@ namespace CLASE05.Formularios.Usuarios
             this.txt_id_usuario._Nombre_campo = "id_usuario";
             this.txt_id_usuario._Nombre_tabla = null;
             this.txt_id_usuario._ReadOnly = false;
+            this.txt_id_usuario._StartEnCero = false;
             this.txt_id_usuario._Text = "";
             this.txt_id_usuario._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.txt_id_usuario._TipoDato = CLASE05.Clases.LabelText02.TipoDato.numero;
+            this.txt_id_usuario._TipoDato = CLASE05.Clases.LabelText02.TipoDato.mascaraEditada;
             this.txt_id_usuario._Validable = false;
             this.txt_id_usuario.BackColor = System.Drawing.Color.Transparent;
             this.txt_id_usuario.Enabled = false;

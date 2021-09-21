@@ -165,6 +165,12 @@
     <Compile Include="Formularios\InicioSistema\Frm_Escritorio.Designer.cs">
       <DependentUpon>Frm_Escritorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Países\Frm_ABM_Pais_Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Países\Frm_ABM_Pais_Entrada.Designer.cs">
+      <DependentUpon>Frm_ABM_Pais_Entrada.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Usuarios\Frm_ABM_Usuario_Entrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,9 @@
       <DependentUpon>Frm_Usuario_Modificacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Negocios\NE_Clientes.cs" />
+    <Compile Include="Negocios\NE_Empleados.cs" />
+    <Compile Include="Negocios\NE_Estados_Provincias.cs" />
+    <Compile Include="Negocios\NE_Paises.cs" />
     <Compile Include="Negocios\NE_Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -333,6 +342,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\btn_consultar %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_escritorio %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_escritorio %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_escritorio %283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_escritorio %284%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_escritorio %285%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_escritorio %286%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_escritorio %287%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_escritorio %288%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_escritorio %289%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_escritorio %2810%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_escritorio %2811%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_escritorio %2812%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_escritorio %2813%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_escritorio %2814%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_escritorio %2815%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_escritorio %2816%29.jpg" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

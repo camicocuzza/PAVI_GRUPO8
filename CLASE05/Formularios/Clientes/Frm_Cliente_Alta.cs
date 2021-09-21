@@ -20,12 +20,14 @@ namespace CLASE05.Formularios.Clientes
 
         private void Frm_Cliente_Alta_Load(object sender, EventArgs e)
         {
-
+            cmb_pais._Cargar();
+            
         }
 
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
             TratamientosEspeciales _TE = new TratamientosEspeciales();
+            NE_Empleados ne_emp = new NE_Empleados();           
 
             if (_TE.Validar(base.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
             {
@@ -34,6 +36,18 @@ namespace CLASE05.Formularios.Clientes
                 {
                     MessageBox.Show("El cuit ingresado está incompleto");
                     txt_cuit_cliente.Focus();
+                    return;
+                }
+                if (cli.ValidarExistencia(txt_cuit_cliente.Text) == true)
+                {
+                    MessageBox.Show("El cuit de cliente '" + txt_cuit_cliente.Text + "' ya está registrado", "Importante");
+                    txt_cuit_cliente.Focus();
+                    return;
+                }
+                if (ne_emp.ValidarExistencia(txt_legajo_empleado._Text) == false)
+                {
+                    MessageBox.Show("El legajo '" + txt_legajo_empleado._Text + "' no corresponde a un empleado activo", "Importante");
+                    txt_legajo_empleado.Focus();
                     return;
                 }
 
@@ -47,6 +61,14 @@ namespace CLASE05.Formularios.Clientes
                 cli.direccion = txt_direccion._Text;
                 cli.id_estado_provincia = cmb_estado_provincia.SelectedValue.ToString();
                 cli.ciudad = txt_ciudad._Text;
+
+                cli.decimales = txt_decimales.Text;
+
+                double ent = double.Parse(txt_limite_credito.Text);
+                double dec = (double.Parse(txt_decimales.Text)) / 100;
+
+                cli.limite_credito = (ent + dec).ToString().Replace(",", "."); ;
+               //MessageBox.Show(cli.limite_credito);
 
                 cli.Insertar();
                 MessageBox.Show("Se grabó correctamente el cliente " + txt_razon_social._Text, "Importante");

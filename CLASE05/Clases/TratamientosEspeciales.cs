@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 
-
-
-
 namespace CLASE05.Clases
 {
     class TratamientosEspeciales
@@ -21,9 +18,9 @@ namespace CLASE05.Clases
             {
                 if (item.GetType().Name == "LabelText02")
                 {
-                    if(((LabelText02)item)._Validable==true)
+                    if (((LabelText02)item)._Validable == true)
                     {
-                        if(((LabelText02)item)._Text==string.Empty)
+                        if (((LabelText02)item)._Text == string.Empty)
                         {
                             MessageBox.Show(((LabelText02)item)._MensajeError);
                             ((LabelText02)item).Focus();
@@ -33,9 +30,9 @@ namespace CLASE05.Clases
                 }
                 if (item.GetType().Name == "ComboBox01")
                 {
-                  if (((ComboBox01)item)._Validable == true)
+                    if (((ComboBox01)item)._Validable == true)
                     {
-                        if(((ComboBox01)item).SelectedIndex == -1)
+                        if (((ComboBox01)item).SelectedIndex == -1)
                         {
                             MessageBox.Show(((ComboBox01)item)._MensajeError);
                             ((ComboBox01)item).Focus();
@@ -52,6 +49,15 @@ namespace CLASE05.Clases
                         return RespuestaValidacion.Error;
                     }
                 }
+                if (item.GetType().Name == "MaskedTextBox")
+                {                       
+                    if (((MaskedTextBox)item).Text == string.Empty)
+                    {
+                        MessageBox.Show("Límite de crédito está vacío");
+                        ((MaskedTextBox)item).Focus();
+                        return RespuestaValidacion.Error;
+                    }                    
+                }             
             }
             return RespuestaValidacion.Correcta;
         }

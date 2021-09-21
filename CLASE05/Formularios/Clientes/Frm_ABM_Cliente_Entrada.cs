@@ -28,7 +28,7 @@ namespace CLASE05.Formularios.Clientes
 
         private void Frm_ABM_Cliente_Entrada_Load(object sender, EventArgs e)
         {
-            this.grid_clientes.Formatear("cuit_cliente, 100, C; razon_social, 170, I; nombre_contacto, 170, I; legajo_empleado, 150, I");
+            this.grid_clientes.Formatear("cuit_cliente, 100, C; razon_social, 130, I; limite_credito, 100, I; nombre_contacto, 130, I; legajo_empleado, 120, I") ;
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)

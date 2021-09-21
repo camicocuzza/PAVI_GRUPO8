@@ -40,6 +40,10 @@ namespace CLASE05.Formularios.Usuarios
             this.lbl_titulo.Size = new System.Drawing.Size(198, 31);
             this.lbl_titulo.Text = "Altas de usuario";
             // 
+            // txt_id_usuario
+            // 
+            this.txt_id_usuario.Enabled = false;
+            // 
             // btn_cerrar
             // 
             this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;

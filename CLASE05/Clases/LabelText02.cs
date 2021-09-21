@@ -23,7 +23,10 @@ namespace CLASE05.Clases
         public string _Nombre_campo { get; set; }
         public string _Nombre_tabla { get; set; }
         public string _MensajeError { get; set; }
-        //public string _Startencero { get; set; }
+
+        //StartEnCero = true -> TxtDato empieza la escritura desde la posición 0 (para cuit, fecha, etc)
+        //StartEnCero = false -> TxtDato empieza la escritura desde la posición al final del texto
+        public bool _StartEnCero { get; set; } = false;
 
 
 
@@ -133,7 +136,7 @@ namespace CLASE05.Clases
 
         private void TxtDato_Click(object sender, EventArgs e)
         {
-            if (this._TipoDato.ToString() == "mascaraEditada")
+            if (this._StartEnCero == false)
             {
                 TxtDato.SelectionStart = TxtDato.Text.Length;
             }

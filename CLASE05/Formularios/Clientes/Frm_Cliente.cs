@@ -25,18 +25,13 @@ namespace CLASE05.Formularios.Clientes
         }
         private void Frm_Cliente_Load(object sender, EventArgs e)
         {
-            cmb_pais._Cargar();
-            cmb_estado_provincia._Cargar();
+            //cmb_pais._Cargar();
+            //cmb_estado_provincia._Cargar();
         }
 
         private void cmb_estado_provincia_Click(object sender, EventArgs e)
         {
-            if (cmb_pais.SelectedIndex == -1)
-            {
-                cmb_estado_provincia._tabla_cargar_combo = "";
-                cmb_estado_provincia._tabla_cargar_descriptor = "";
-                cmb_estado_provincia._tabla_cargar_pk = "";
-            }
+
         }
 
         private void cmb_pais_SelectedIndexChanged(object sender, EventArgs e)
@@ -63,6 +58,11 @@ namespace CLASE05.Formularios.Clientes
         private void txt_limite_credito_Click(object sender, EventArgs e)
         {
             txt_limite_credito.SelectionStart = txt_limite_credito.Text.Length;
+        }
+
+        private void txt_decimales_Click(object sender, EventArgs e)
+        {
+            txt_decimales.SelectionStart = txt_decimales.Text.Length;
         }
     }
 }

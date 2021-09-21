@@ -32,16 +32,46 @@ namespace CLASE05.Formularios.Clientes
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cliente_Baja));
             this.SuspendLayout();
             // 
+            // txt_limite_credito
+            // 
+            this.txt_limite_credito.Enabled = false;
+            // 
+            // txt_cuit_cliente
+            // 
+            this.txt_cuit_cliente.Enabled = false;
+            // 
             // cmb_pais
             // 
             this.cmb_pais.DisplayMember = "nombre_pais";
+            this.cmb_pais.Enabled = false;
             this.cmb_pais.ValueMember = "id_pais";
             // 
             // cmb_estado_provincia
             // 
             this.cmb_estado_provincia.DisplayMember = "nombre_estado_provincia";
+            this.cmb_estado_provincia.Enabled = false;
             this.cmb_estado_provincia.Text = "";
             this.cmb_estado_provincia.ValueMember = "id_estado_provincia";
+            // 
+            // txt_legajo_empleado
+            // 
+            this.txt_legajo_empleado.Enabled = false;
+            // 
+            // txt_ciudad
+            // 
+            this.txt_ciudad.Enabled = false;
+            // 
+            // txt_razon_social
+            // 
+            this.txt_razon_social.Enabled = false;
+            // 
+            // txt_direccion
+            // 
+            this.txt_direccion.Enabled = false;
+            // 
+            // txt_nombre_contacto
+            // 
+            this.txt_nombre_contacto.Enabled = false;
             // 
             // btn_aceptar
             // 
@@ -64,13 +94,13 @@ namespace CLASE05.Formularios.Clientes
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             // 
-            // Frm_Cliente_Baja1
+            // Frm_Cliente_Baja
             // 
             this._PosiciónVisible = true;
             this._Titulo = "Bajas de Cliente";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(516, 516);
-            this.Name = "Frm_Cliente_Baja1";
+            this.Name = "Frm_Cliente_Baja";
             this.Load += new System.EventHandler(this.Frm_Cliente_Baja1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

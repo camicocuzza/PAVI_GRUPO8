@@ -12,6 +12,7 @@ namespace CLASE05.Formularios.Usuarios
 {
     public partial class Frm_Usuario_Alta : CLASE05.Formularios.Usuarios.Frm_Usuario
     {
+        NE_Usuarios usu = new NE_Usuarios();
         public Frm_Usuario_Alta()
         {
             InitializeComponent();
@@ -25,6 +26,13 @@ namespace CLASE05.Formularios.Usuarios
             //N1 si validacion da error => ir a corregir el error
             TratamientosEspeciales _TE = new TratamientosEspeciales();
 
+            if(usu.ValidarExistenciaNombre(txt_n_usuario._Text) == true)
+            {
+                MessageBox.Show("El nombre de usuario '" + txt_n_usuario._Text + "' ya está registrado", "Importante");
+                txt_n_usuario.Focus();
+                return;
+            }
+
             if (_TE.Validar(this.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
             {
                 // VALIDACION ESPECIFICA
@@ -35,8 +43,7 @@ namespace CLASE05.Formularios.Usuarios
                 //    return;
                 //}
 
-                // GRABAR NUEVO REGISTRO
-                NE_Usuarios usu = new NE_Usuarios();
+                // GRABAR NUEVO REGISTRO           
 
                 
                 usu.n_usuario = txt_n_usuario._Text;
