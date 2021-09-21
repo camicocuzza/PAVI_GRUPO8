@@ -74,6 +74,7 @@ namespace CLASE05.Negocios
             string sql = @"SELECT id_usuario, n_usuario 
                           FROM usuario WHERE " + columna + " like '%" + patron + "%'";
 
+            MessageBox.Show(sql);
             return _BD.EjecutarSelect(sql);
         }
         public DataTable BuscarUsuario(string id_usuario)
@@ -81,6 +82,7 @@ namespace CLASE05.Negocios
             string sql = @"SELECT id_usuario, n_usuario 
                           FROM usuario WHERE id_usuario = " + id_usuario;
 
+            //MessageBox.Show(sql);
             return _BD.EjecutarSelect(sql);
         }
         public DataTable RecuperarUsuario(string id_usuario)
