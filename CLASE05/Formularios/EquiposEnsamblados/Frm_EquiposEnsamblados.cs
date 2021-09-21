@@ -28,5 +28,10 @@ namespace CLASE05.Formularios.EquiposEnsamblados
         {
 
         }
+
+        private void txt_precio_Click(object sender, EventArgs e)
+        {
+      
+        }
     }
 }

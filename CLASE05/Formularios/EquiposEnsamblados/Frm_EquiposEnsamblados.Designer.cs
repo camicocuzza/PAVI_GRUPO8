@@ -61,6 +61,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.txt_cod_p_ensamblado._Nombre_campo = null;
             this.txt_cod_p_ensamblado._Nombre_tabla = null;
             this.txt_cod_p_ensamblado._ReadOnly = false;
+            this.txt_cod_p_ensamblado._StartEnCero = false;
             this.txt_cod_p_ensamblado._Text = "";
             this.txt_cod_p_ensamblado._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_cod_p_ensamblado._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
@@ -107,6 +108,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.txt_precio._Nombre_campo = "precio";
             this.txt_precio._Nombre_tabla = null;
             this.txt_precio._ReadOnly = false;
+            this.txt_precio._StartEnCero = true;
             this.txt_precio._Text = "       .";
             this.txt_precio._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_precio._TipoDato = CLASE05.Clases.LabelText02.TipoDato.numero;
@@ -119,6 +121,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.txt_precio.Name = "txt_precio";
             this.txt_precio.Size = new System.Drawing.Size(257, 30);
             this.txt_precio.TabIndex = 68;
+            this.txt_precio.Click += new System.EventHandler(this.txt_precio_Click);
             // 
             // txt_stock
             // 
@@ -130,6 +133,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.txt_stock._Nombre_campo = "stock";
             this.txt_stock._Nombre_tabla = null;
             this.txt_stock._ReadOnly = false;
+            this.txt_stock._StartEnCero = false;
             this.txt_stock._Text = "";
             this.txt_stock._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_stock._TipoDato = CLASE05.Clases.LabelText02.TipoDato.numero;

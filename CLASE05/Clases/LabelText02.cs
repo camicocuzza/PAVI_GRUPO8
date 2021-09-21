@@ -136,7 +136,7 @@ namespace CLASE05.Clases
 
         private void TxtDato_Click(object sender, EventArgs e)
         {
-            if (this._StartEnCero == false || this._TipoDato.ToString() == "mascaraEditada")
+            if (this._StartEnCero == false)
             {
                 TxtDato.SelectionStart = TxtDato.Text.Length;
             }
