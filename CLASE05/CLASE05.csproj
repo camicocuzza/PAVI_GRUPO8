@@ -831,5 +831,131 @@
   <ItemGroup>
     <None Include="Resources\neon_icon_cliente %288%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_camionabast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_carro_compra %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_character %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_character %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_character %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cliente %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cliente %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cliente %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cliente %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cliente %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_componente %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_componente %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_compra_venta %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_compra_venta %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_compra_venta %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_compra_venta %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_compra_venta %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_compra_venta %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_compra_venta %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_empleado %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_empleado %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_empleado %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_factura %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_impresora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_inventario %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_inventario %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_inventario %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_inventario %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_pais %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_pc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_proveedor %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_proveedor %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_proveedor %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_reportes %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_reportes %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_reportes %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_tipoDocumento %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_tipoDocumento %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_tipoDocumento %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_usuario %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-comercio-electrónico-100.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
