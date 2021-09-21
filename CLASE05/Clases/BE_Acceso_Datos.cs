@@ -127,5 +127,37 @@ namespace CLASE05.Clases
         {
             EjecutarNoSelect(sql);
         }
+
+        public void InsertarEquipoEspecial(string cod_prod_en, string cuit_cliente, PictureBox imagen)
+        {
+            Conectar();
+            Cmd.CommandText = "INSERT INTO equipo_especial (cod_prod_ensamblado, cuit_cliente, logo_cliente) VALUES (@cod_prod_ensamblado, @cuit_cliente, @logo_cliente)";
+            Cmd.Parameters.Add("@cod_prod_ensamblado", SqlDbType.NVarChar);
+            Cmd.Parameters.Add("@cuit_cliente", SqlDbType.NVarChar);
+            Cmd.Parameters.Add("@logo_cliente", SqlDbType.Image);
+            Cmd.Parameters["@cod_prod_ensamblado"].Value = cod_prod_en;
+            Cmd.Parameters["@cuit_cliente"].Value = cuit_cliente;
+            System.IO.MemoryStream ms = new System.IO.MemoryStream();
+            imagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+            Cmd.Parameters["@logo_cliente"].Value = ms.GetBuffer();
+            Cmd.ExecuteNonQuery();
+            Cerrar();
+        }
+
+        public void ModificarEquipoEspecial(string cod_prod_en, string cuit_cliente, PictureBox imagen)
+        {
+            Conectar();
+            Cmd.CommandText = "UPDATE equipo_especial SET cod_prod_ensamblado = @cod_prod_ensamblado, cuit_cliente = @cuit_cliente, logo_cliente = @logo_cliente WHERE cod_prod_ensamblado = '" + cod_prod_en + "'";
+            Cmd.Parameters.Add("@cod_prod_ensamblado", SqlDbType.NVarChar);
+            Cmd.Parameters.Add("@cuit_cliente", SqlDbType.NVarChar);
+            Cmd.Parameters.Add("@logo_cliente", SqlDbType.Image);
+            Cmd.Parameters["@cod_prod_ensamblado"].Value = cod_prod_en;
+            Cmd.Parameters["@cuit_cliente"].Value = cuit_cliente;
+            System.IO.MemoryStream ms = new System.IO.MemoryStream();
+            imagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+            Cmd.Parameters["@logo_cliente"].Value = ms.GetBuffer();
+            Cmd.ExecuteNonQuery();
+            Cerrar();
+        }
     }
 }

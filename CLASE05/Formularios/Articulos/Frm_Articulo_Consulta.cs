@@ -35,5 +35,10 @@ namespace CLASE05.Formularios.Articulos
             cmb_proveedor.SelectedValue = tabla.Rows[0]["cuit_proveedor"].ToString();
 
         }
+
+        private void btn_aceptar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

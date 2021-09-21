@@ -33,38 +33,21 @@ namespace CLASE05.Negocios
 
             return _BD.EjecutarSelect(sql);
         }
-        public void Insertar()
-        {
-            string sqlInsert = "";
-
-            sqlInsert = @"INSERT INTO equipo_especial (cod_prod_ensamblado, cuit_cliente, logo_cliente) VALUES (";
-            sqlInsert += "'" + cod_prod_ensamblado + "'";
-            sqlInsert += ", '" + cuit_cliente + "'";
-            sqlInsert += ", " + logo_cliente + ")";
-
-            MessageBox.Show(sqlInsert);
-            //_BD.Insertar(sqlInsert);
+        public void Insertar(PictureBox imagen)
+        { 
+            _BD.InsertarEquipoEspecial(cod_prod_ensamblado, cuit_cliente, imagen);
         }
 
-        public void Modificar()
+        public void Modificar(PictureBox imagen)
         {
-            string sqlUpdate = "";
-
-            sqlUpdate = "UPDATE equipo_especial SET ";
-            sqlUpdate += "cod_prod_ensamblado = '" + cod_prod_ensamblado + "'";
-            sqlUpdate += ", cuit_cliente = " + cuit_cliente;
-
-
-            MessageBox.Show(sqlUpdate);
-            //_BD.Modificar(sqlUpdate);
+            _BD.ModificarEquipoEspecial(cod_prod_ensamblado, cuit_cliente, imagen);
+            
         }
 
         public void Borrar()
         {
             string sqlDelete = "DELETE FROM equipo_especial WHERE cod_prod_ensamblado = '" + cod_prod_ensamblado + "'";
 
-            MessageBox.Show(sqlDelete);
-            //_BD.Borrar(sqlDelete);
 
         }
 

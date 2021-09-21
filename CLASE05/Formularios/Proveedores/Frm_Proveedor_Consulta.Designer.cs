@@ -60,6 +60,10 @@ namespace CLASE05.Formularios.Proveedores
             // 
             this.txt_fecha_inicio.Enabled = false;
             // 
+            // btn_aceptar
+            // 
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
+            // 
             // txt_cuit_p
             // 
             this.txt_cuit_p.Enabled = false;

@@ -22,19 +22,18 @@ namespace CLASE05.Formularios.EquiposEspeciales
 
         private void btn_seleccionar_Click(object sender, EventArgs e)
         {
+            
             ofdSeleccionar.InitialDirectory = "c:\\";
             ofdSeleccionar.Filter = "Imagenes jpg (*.jpg)|*.jpg|Imagenes png (*.png)|*.png";
             ofdSeleccionar.FilterIndex = 1;
             ofdSeleccionar.RestoreDirectory = true;
-
-            //OpenFileDialog ofdeSeleccionar = new OpenFileDialog();
-            //ofdeSeleccionar.Filter = "Imagenes|*.jpg; *.png";
-            //ofdeSeleccionar.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-            //ofdeSeleccionar.Title = "Seleccionar imagen";
+            ofdSeleccionar.Title = "Seleccionar imagen";
 
             if (ofdSeleccionar.ShowDialog() == DialogResult.OK)
             {
                 txt_file.Text = ofdSeleccionar.FileName;
+                pb_imagen.Load(ofdSeleccionar.FileName);
+                pb_imagen.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
 
@@ -57,23 +56,13 @@ namespace CLASE05.Formularios.EquiposEspeciales
                     return;
                 }
 
-                byte[] file = null;
-                Stream myStream = ofdSeleccionar.OpenFile();
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    myStream.CopyTo(ms);
-                    file = ms.ToArray();
-                }
-               
                 // GRABAR NUEVO REGISTRO
                 NE_EquiposEspeciales equipo = new NE_EquiposEspeciales();
 
                 equipo.cod_prod_ensamblado = cmb_equipos.SelectedValue.ToString();
                 equipo.cuit_cliente = cmb_clientes.SelectedValue.ToString();
-                equipo.logo_cliente = file;
-                
 
-                equipo.Insertar();
+                equipo.Insertar(pb_imagen);
                 MessageBox.Show("Se grabó correctamente", "Importante");
                 this.Dispose();
             }

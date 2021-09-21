@@ -25,7 +25,11 @@ namespace CLASE05.Formularios.EquiposEspeciales
         {
             NE_EquiposEspeciales producto = new NE_EquiposEspeciales();
             string columna = "";
-
+            if (rb_todos.Checked == true)
+            {
+                grid_equiposEspeciales.Cargar(producto.BuscarEquipoEspecial("", "cod_prod_ensamblado"));
+                return;
+            }
 
             if (txt_patron.Text != string.Empty)
             {
@@ -86,6 +90,23 @@ namespace CLASE05.Formularios.EquiposEspeciales
         private void btn_blan_patron_Click(object sender, EventArgs e)
         {
             this.txt_patron.Text = string.Empty;
+        }
+
+        private void btn_consultar_Click(object sender, EventArgs e)
+        {
+            if (grid_equiposEspeciales.Rows.Count == 0)
+            {
+                MessageBox.Show("Falta buscar equipos", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+            if (grid_equiposEspeciales.CurrentCell.RowIndex == -1)
+            {
+                MessageBox.Show("Falta seleccionar un Equipo", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+            Frm_EquiposEspeciales_Consulta frm_consulta = new Frm_EquiposEspeciales_Consulta();
+            frm_consulta.cod_prod_ensamblado = grid_equiposEspeciales.CurrentRow.Cells[0].Value.ToString();
+            frm_consulta.ShowDialog();
         }
     }
 }

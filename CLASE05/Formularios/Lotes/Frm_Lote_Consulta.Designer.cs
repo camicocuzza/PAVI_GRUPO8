@@ -31,6 +31,10 @@ namespace CLASE05.Formularios.Lotes
         {
             this.SuspendLayout();
             // 
+            // btn_aceptar
+            // 
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
+            // 
             // txt_n_lote
             // 
             this.txt_n_lote.Enabled = false;

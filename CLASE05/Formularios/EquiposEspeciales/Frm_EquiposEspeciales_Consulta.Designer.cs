@@ -1,7 +1,7 @@
 ﻿
 namespace CLASE05.Formularios.EquiposEspeciales
 {
-    partial class Frm_EquiposEspeciales_Baja
+    partial class Frm_EquiposEspeciales_Consulta
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -36,27 +36,16 @@ namespace CLASE05.Formularios.EquiposEspeciales
             // 
             // btn_aceptar
             // 
-            this.btn_aceptar.Location = new System.Drawing.Point(159, 402);
-            this.btn_aceptar.Text = "Borrar";
+            this.btn_aceptar.Location = new System.Drawing.Point(159, 407);
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
-            // 
-            // label3
-            // 
-            this.label3.Enabled = false;
             // 
             // cmb_equipos
             // 
-            this.cmb_equipos._ComboSinSeleccion = false;
             this.cmb_equipos.Enabled = false;
             // 
             // cmb_clientes
             // 
-            this.cmb_clientes._ComboSinSeleccion = false;
             this.cmb_clientes.Enabled = false;
-            // 
-            // label1
-            // 
-            this.label1.Enabled = false;
             // 
             // btn_cerrar
             // 
@@ -75,32 +64,32 @@ namespace CLASE05.Formularios.EquiposEspeciales
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(67, 199);
+            this.label2.Location = new System.Drawing.Point(65, 199);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 17);
-            this.label2.TabIndex = 87;
+            this.label2.TabIndex = 89;
             this.label2.Text = "Logo";
             // 
             // pb_imagen
             // 
             this.pb_imagen.Enabled = false;
-            this.pb_imagen.Location = new System.Drawing.Point(112, 199);
+            this.pb_imagen.Location = new System.Drawing.Point(110, 199);
             this.pb_imagen.Name = "pb_imagen";
             this.pb_imagen.Size = new System.Drawing.Size(208, 183);
             this.pb_imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_imagen.TabIndex = 86;
+            this.pb_imagen.TabIndex = 88;
             this.pb_imagen.TabStop = false;
             // 
-            // Frm_EquiposEspeciales_Baja
+            // Frm_EquiposEspeciales_Consulta
             // 
             this._PosiciónVisible = true;
-            this._Titulo = "Baja de Equipo Especial";
+            this._Titulo = "Datos del equipo especial";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(420, 456);
+            this.ClientSize = new System.Drawing.Size(420, 464);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pb_imagen);
-            this.Name = "Frm_EquiposEspeciales_Baja";
-            this.Load += new System.EventHandler(this.Frm_EquiposEspeciales_Baja_Load);
+            this.Name = "Frm_EquiposEspeciales_Consulta";
+            this.Load += new System.EventHandler(this.Frm_EquiposEspeciales_Consulta_Load);
             this.Controls.SetChildIndex(this.btn_aceptar, 0);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);

@@ -40,7 +40,8 @@ namespace CLASE05.Formularios.Lotes
 
                 lote.Modificar();
                 MessageBox.Show("Se modificó correctamente el lote " + txt_n_lote._Text, "Importante");
-                
+                this.Dispose();
+
             }
         }
 

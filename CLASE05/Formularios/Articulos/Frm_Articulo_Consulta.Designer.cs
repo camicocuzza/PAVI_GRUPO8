@@ -48,8 +48,6 @@ namespace CLASE05.Formularios.Articulos
             this.cmb_rubros.Enabled = false;
             this.cmb_rubros.ValueMember = "id_rubro";
             // 
-
-            // 
             // txt_nombre
             // 
             this.txt_nombre.Enabled = false;
@@ -57,8 +55,6 @@ namespace CLASE05.Formularios.Articulos
             // txt_tiempo_envio
             // 
             this.txt_tiempo_envio.Enabled = false;
-            // 
-
             // 
             // txt_cod_articulo
             // 
@@ -71,6 +67,20 @@ namespace CLASE05.Formularios.Articulos
             // txt_precio
             // 
             this.txt_precio.Enabled = false;
+            // 
+            // btn_aceptar
+            // 
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
+            // 
+            // cmb_lote
+            // 
+            this.cmb_lote.DisplayMember = "num_lote";
+            this.cmb_lote.ValueMember = "num_lote";
+            // 
+            // cmb_proveedor
+            // 
+            this.cmb_proveedor.DisplayMember = "razon_social";
+            this.cmb_proveedor.ValueMember = "cuit_proveedor";
             // 
             // btn_cerrar
             // 

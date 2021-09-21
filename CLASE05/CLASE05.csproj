@@ -231,6 +231,12 @@
     <Compile Include="Formularios\EquiposEnsamblados\Frm_EquiposEnsamblados_Baja.Designer.cs">
       <DependentUpon>Frm_EquiposEnsamblados_Baja.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\EquiposEnsamblados\Frm_EquiposEnsamblados_Consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EquiposEnsamblados\Frm_EquiposEnsamblados_Consulta.Designer.cs">
+      <DependentUpon>Frm_EquiposEnsamblados_Consulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\EquiposEnsamblados\Frm_EquiposEnsamblados_Modificacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,6 +266,12 @@
     </Compile>
     <Compile Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Baja.Designer.cs">
       <DependentUpon>Frm_EquiposEspeciales_Baja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Consulta.Designer.cs">
+      <DependentUpon>Frm_EquiposEspeciales_Consulta.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Modificacion.cs">
       <SubType>Form</SubType>
@@ -498,6 +510,9 @@
     <EmbeddedResource Include="Formularios\EquiposEnsamblados\Frm_EquiposEnsamblados_Baja.resx">
       <DependentUpon>Frm_EquiposEnsamblados_Baja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EquiposEnsamblados\Frm_EquiposEnsamblados_Consulta.resx">
+      <DependentUpon>Frm_EquiposEnsamblados_Consulta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\EquiposEnsamblados\Frm_EquiposEnsamblados_Modificacion.resx">
       <DependentUpon>Frm_EquiposEnsamblados_Modificacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -512,6 +527,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Baja.resx">
       <DependentUpon>Frm_EquiposEspeciales_Baja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Consulta.resx">
+      <DependentUpon>Frm_EquiposEspeciales_Consulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Modificacion.resx">
       <DependentUpon>Frm_EquiposEspeciales_Modificacion.cs</DependentUpon>
