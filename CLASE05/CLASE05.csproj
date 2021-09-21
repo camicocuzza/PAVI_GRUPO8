@@ -720,6 +720,116 @@
   <ItemGroup>
     <None Include="Resources\img_escritorio %2816%29.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\neon_icon_carro_compra %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_character %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_character %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_character %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_componente %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_componente %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_componente %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_compra_venta %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_compra_venta %2812%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_compra_venta %2813%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_empleado %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_empleado %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_factura %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_factura %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_factura %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_inventario %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_inventario %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_inventario %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_pais %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_pc %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_pc %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_pc %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_proveedor %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_recepcion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_reportes %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_reportes %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_reportes %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_reportes %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_reportes %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_reportes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_tipoDocumento %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_tipoDocumento %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_usuario %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_cliente %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon_icon_cliente %288%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
