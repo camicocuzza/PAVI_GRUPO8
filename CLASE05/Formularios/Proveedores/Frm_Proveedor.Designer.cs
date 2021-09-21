@@ -67,6 +67,7 @@ namespace CLASE05.Formularios.Proveedores
             this.txt_razon_social._Nombre_campo = "";
             this.txt_razon_social._Nombre_tabla = null;
             this.txt_razon_social._ReadOnly = false;
+            this.txt_razon_social._StartEnCero = false;
             this.txt_razon_social._Text = "";
             this.txt_razon_social._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_razon_social._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
@@ -154,6 +155,7 @@ namespace CLASE05.Formularios.Proveedores
             this.txt_ciudad._Nombre_campo = "";
             this.txt_ciudad._Nombre_tabla = null;
             this.txt_ciudad._ReadOnly = false;
+            this.txt_ciudad._StartEnCero = false;
             this.txt_ciudad._Text = "";
             this.txt_ciudad._TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txt_ciudad._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
@@ -177,6 +179,7 @@ namespace CLASE05.Formularios.Proveedores
             this.txt_direccion._Nombre_campo = "num_lote";
             this.txt_direccion._Nombre_tabla = null;
             this.txt_direccion._ReadOnly = false;
+            this.txt_direccion._StartEnCero = false;
             this.txt_direccion._Text = "";
             this.txt_direccion._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_direccion._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
@@ -200,6 +203,7 @@ namespace CLASE05.Formularios.Proveedores
             this.txt_fecha_inicio._Nombre_campo = "";
             this.txt_fecha_inicio._Nombre_tabla = null;
             this.txt_fecha_inicio._ReadOnly = false;
+            this.txt_fecha_inicio._StartEnCero = true;
             this.txt_fecha_inicio._Text = "  /  /";
             this.txt_fecha_inicio._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_fecha_inicio._TipoDato = CLASE05.Clases.LabelText02.TipoDato.fecha;
@@ -246,6 +250,7 @@ namespace CLASE05.Formularios.Proveedores
             this.txt_cuit_p._Nombre_campo = "cuit_proveedor";
             this.txt_cuit_p._Nombre_tabla = null;
             this.txt_cuit_p._ReadOnly = false;
+            this.txt_cuit_p._StartEnCero = true;
             this.txt_cuit_p._Text = "";
             this.txt_cuit_p._TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txt_cuit_p._TipoDato = CLASE05.Clases.LabelText02.TipoDato.mascaraEditada;

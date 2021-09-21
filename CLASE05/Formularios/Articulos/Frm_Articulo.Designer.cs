@@ -83,6 +83,7 @@ namespace CLASE05.Formularios.Articulos
             this.txt_num_serie._Nombre_campo = "num_serie";
             this.txt_num_serie._Nombre_tabla = null;
             this.txt_num_serie._ReadOnly = false;
+            this.txt_num_serie._StartEnCero = false;
             this.txt_num_serie._Text = "";
             this.txt_num_serie._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_num_serie._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
@@ -170,6 +171,7 @@ namespace CLASE05.Formularios.Articulos
             this.txt_nombre._Nombre_campo = null;
             this.txt_nombre._Nombre_tabla = null;
             this.txt_nombre._ReadOnly = false;
+            this.txt_nombre._StartEnCero = false;
             this.txt_nombre._Text = "";
             this.txt_nombre._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_nombre._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
@@ -193,6 +195,7 @@ namespace CLASE05.Formularios.Articulos
             this.txt_tiempo_envio._Nombre_campo = "tiempo_envio";
             this.txt_tiempo_envio._Nombre_tabla = null;
             this.txt_tiempo_envio._ReadOnly = false;
+            this.txt_tiempo_envio._StartEnCero = false;
             this.txt_tiempo_envio._Text = "";
             this.txt_tiempo_envio._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_tiempo_envio._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
@@ -216,6 +219,7 @@ namespace CLASE05.Formularios.Articulos
             this.txt_cod_articulo._Nombre_campo = "cod_articulo";
             this.txt_cod_articulo._Nombre_tabla = null;
             this.txt_cod_articulo._ReadOnly = false;
+            this.txt_cod_articulo._StartEnCero = false;
             this.txt_cod_articulo._Text = "";
             this.txt_cod_articulo._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_cod_articulo._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
@@ -239,6 +243,7 @@ namespace CLASE05.Formularios.Articulos
             this.txt_plazo_pago._Nombre_campo = "plazo_pago";
             this.txt_plazo_pago._Nombre_tabla = null;
             this.txt_plazo_pago._ReadOnly = false;
+            this.txt_plazo_pago._StartEnCero = true;
             this.txt_plazo_pago._Text = "  /  /";
             this.txt_plazo_pago._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_plazo_pago._TipoDato = CLASE05.Clases.LabelText02.TipoDato.fecha;
@@ -262,6 +267,7 @@ namespace CLASE05.Formularios.Articulos
             this.txt_precio._Nombre_campo = "precio";
             this.txt_precio._Nombre_tabla = null;
             this.txt_precio._ReadOnly = false;
+            this.txt_precio._StartEnCero = true;
             this.txt_precio._Text = "       .";
             this.txt_precio._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_precio._TipoDato = CLASE05.Clases.LabelText02.TipoDato.numero;

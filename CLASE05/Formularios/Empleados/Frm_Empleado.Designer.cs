@@ -70,6 +70,7 @@ namespace CLASE05.Formularios.Empleados
             this.txt_nombre._Nombre_campo = "";
             this.txt_nombre._Nombre_tabla = null;
             this.txt_nombre._ReadOnly = false;
+            this.txt_nombre._StartEnCero = false;
             this.txt_nombre._Text = "";
             this.txt_nombre._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_nombre._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
@@ -157,6 +158,7 @@ namespace CLASE05.Formularios.Empleados
             this.txt_ciudad._Nombre_campo = "";
             this.txt_ciudad._Nombre_tabla = null;
             this.txt_ciudad._ReadOnly = false;
+            this.txt_ciudad._StartEnCero = false;
             this.txt_ciudad._Text = "";
             this.txt_ciudad._TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txt_ciudad._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
@@ -180,6 +182,7 @@ namespace CLASE05.Formularios.Empleados
             this.txt_legajo._Nombre_campo = null;
             this.txt_legajo._Nombre_tabla = null;
             this.txt_legajo._ReadOnly = false;
+            this.txt_legajo._StartEnCero = false;
             this.txt_legajo._Text = "";
             this.txt_legajo._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_legajo._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
@@ -204,6 +207,7 @@ namespace CLASE05.Formularios.Empleados
             this.txt_telefono._Nombre_campo = "";
             this.txt_telefono._Nombre_tabla = null;
             this.txt_telefono._ReadOnly = false;
+            this.txt_telefono._StartEnCero = false;
             this.txt_telefono._Text = "";
             this.txt_telefono._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_telefono._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
@@ -227,6 +231,7 @@ namespace CLASE05.Formularios.Empleados
             this.txt_direccion._Nombre_campo = "num_lote";
             this.txt_direccion._Nombre_tabla = null;
             this.txt_direccion._ReadOnly = false;
+            this.txt_direccion._StartEnCero = false;
             this.txt_direccion._Text = "";
             this.txt_direccion._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_direccion._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
@@ -250,6 +255,7 @@ namespace CLASE05.Formularios.Empleados
             this.txt_n_documento._Nombre_campo = "";
             this.txt_n_documento._Nombre_tabla = null;
             this.txt_n_documento._ReadOnly = false;
+            this.txt_n_documento._StartEnCero = false;
             this.txt_n_documento._Text = "";
             this.txt_n_documento._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_n_documento._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
@@ -273,6 +279,7 @@ namespace CLASE05.Formularios.Empleados
             this.txt_fecha_ingreso._Nombre_campo = "";
             this.txt_fecha_ingreso._Nombre_tabla = null;
             this.txt_fecha_ingreso._ReadOnly = false;
+            this.txt_fecha_ingreso._StartEnCero = true;
             this.txt_fecha_ingreso._Text = "  /  /";
             this.txt_fecha_ingreso._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_fecha_ingreso._TipoDato = CLASE05.Clases.LabelText02.TipoDato.fecha;
@@ -296,6 +303,7 @@ namespace CLASE05.Formularios.Empleados
             this.txt_apellido._Nombre_campo = "";
             this.txt_apellido._Nombre_tabla = null;
             this.txt_apellido._ReadOnly = false;
+            this.txt_apellido._StartEnCero = false;
             this.txt_apellido._Text = "";
             this.txt_apellido._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_apellido._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;

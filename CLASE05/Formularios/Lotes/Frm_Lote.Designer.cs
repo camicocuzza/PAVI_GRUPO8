@@ -73,6 +73,7 @@ namespace CLASE05.Formularios.Lotes
             this.txt_n_lote._Nombre_campo = null;
             this.txt_n_lote._Nombre_tabla = null;
             this.txt_n_lote._ReadOnly = false;
+            this.txt_n_lote._StartEnCero = false;
             this.txt_n_lote._Text = "";
             this.txt_n_lote._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_n_lote._TipoDato = CLASE05.Clases.LabelText02.TipoDato.numero;
@@ -96,6 +97,7 @@ namespace CLASE05.Formularios.Lotes
             this.txt_n_remito._Nombre_campo = null;
             this.txt_n_remito._Nombre_tabla = null;
             this.txt_n_remito._ReadOnly = false;
+            this.txt_n_remito._StartEnCero = false;
             this.txt_n_remito._Text = "";
             this.txt_n_remito._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_n_remito._TipoDato = CLASE05.Clases.LabelText02.TipoDato.numero;
@@ -119,6 +121,7 @@ namespace CLASE05.Formularios.Lotes
             this.txt_fecha_compra._Nombre_campo = null;
             this.txt_fecha_compra._Nombre_tabla = null;
             this.txt_fecha_compra._ReadOnly = false;
+            this.txt_fecha_compra._StartEnCero = true;
             this.txt_fecha_compra._Text = "  /  /";
             this.txt_fecha_compra._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_fecha_compra._TipoDato = CLASE05.Clases.LabelText02.TipoDato.fecha;
