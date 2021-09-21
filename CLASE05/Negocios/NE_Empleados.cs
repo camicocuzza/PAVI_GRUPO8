@@ -43,6 +43,13 @@ namespace CLASE05.Negocios
                 return false;
             }
         }
+        public DataTable RecuperarEmpleado(string legajo_empleado)
+        {
+            string sql = @"SELECT * 
+                          FROM empleado WHERE legajo_empleado = '" + legajo_empleado + "'";
+
+            return _BD.EjecutarSelect(sql);
+        }
         public string RecuperarLegajo(string id_tipo_documento, string nro_documento)
         {
             string sql = @"SELECT legajo_empleado FROM empleado
