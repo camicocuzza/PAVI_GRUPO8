@@ -164,7 +164,6 @@
             // FrmBase_ABM_Entrada
             // 
             this._FormularioMovil = true;
-            this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(669, 439);
@@ -176,7 +175,6 @@
             this.Controls.Add(this.label1);
             this.Location = new System.Drawing.Point(471, 76);
             this.Name = "FrmBase_ABM_Entrada";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.toolTip1.SetToolTip(this, "Permite ingresar al formulario de Altas de registros\r\n");
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);

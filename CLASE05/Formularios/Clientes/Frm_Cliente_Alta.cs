@@ -27,7 +27,12 @@ namespace CLASE05.Formularios.Clientes
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
             TratamientosEspeciales _TE = new TratamientosEspeciales();
-            NE_Empleados ne_emp = new NE_Empleados();           
+            NE_Empleados ne_emp = new NE_Empleados();   
+            
+            if(txt_decimales.Text == "")
+            {
+                txt_decimales.Text = "00";
+            }
 
             if (_TE.Validar(base.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
             {

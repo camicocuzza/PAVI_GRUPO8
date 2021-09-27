@@ -64,14 +64,12 @@ namespace CLASE05.Formularios.FrmBASE
             // FrmBase_Datos
             // 
             this._FormularioMovil = true;
-            this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(516, 516);
             this.Controls.Add(this.lbl_titulo);
             this.Location = new System.Drawing.Point(766, 183);
             this.Name = "FrmBase_Datos";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Controls.SetChildIndex(this.lbl_titulo, 0);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);

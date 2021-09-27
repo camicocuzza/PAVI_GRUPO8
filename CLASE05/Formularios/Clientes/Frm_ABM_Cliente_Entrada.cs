@@ -36,11 +36,16 @@ namespace CLASE05.Formularios.Clientes
             NE_Clientes cli = new NE_Clientes();
 
             string columna = "";
-            MaskedTextBox cuadroTexto = null;
+            MaskedTextBox cuadroTexto = new MaskedTextBox();
+            cuadroTexto.Text = "";
 
-            if (rb_cuit_cliente.Checked == false & rb_razon_social.Checked == false & rb_nombre_contacto.Checked == false & rb_legajo_empleado.Checked == false)
+            if (rb_cuit_cliente.Checked == false & rb_razon_social.Checked == false & rb_nombre_contacto.Checked == false & rb_legajo_empleado.Checked == false & rb_todos.Checked == false)
             {
-                //MessageBox.Show("Marcar atributo de búsqueda");
+                MessageBox.Show("No hay parámetros de búsqueda", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (rb_todos.Checked == true)
+            {
                 grid_clientes.Cargar(cli.BuscarCliente("", rb_cuit_cliente.Text));
                 return;
             }
@@ -64,10 +69,10 @@ namespace CLASE05.Formularios.Clientes
                 columna = rb_legajo_empleado.Text;
                 cuadroTexto = txt_patron;
             }
-
             if (cuadroTexto.Text == "")
             {
                 MessageBox.Show("Ingresar patrón de búsqueda");
+                return;
             }
             else
             {

@@ -105,7 +105,6 @@ namespace CLASE05.Negocios
             sqlInsert += ", " + id_estado_provincia;
             sqlInsert += ", '" + ciudad + "')";
 
-            //MessageBox.Show(sqlInsert);
             _BD.Insertar(sqlInsert);
         }
         public void Modificar()

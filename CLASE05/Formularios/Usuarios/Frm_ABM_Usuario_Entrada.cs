@@ -39,11 +39,16 @@ namespace CLASE05.Formularios.Usuarios
             NE_Usuarios usu = new NE_Usuarios();
 
             string columna = "";
-            MaskedTextBox cuadroTexto = null;
+            MaskedTextBox cuadroTexto = new MaskedTextBox();
+            cuadroTexto.Text = "";
 
-            if (rb_id_usuario.Checked == false & rb_n_usuario.Checked == false)
+            if (rb_id_usuario.Checked == false & rb_n_usuario.Checked == false & rb_todos.Checked == false)
             {
-                //MessageBox.Show("Marcar atributo de búsqueda");
+                MessageBox.Show("No hay parámetros de búsqueda", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (rb_todos.Checked == true)
+            {
                 grid_usuarios.Cargar(usu.BuscarUsuario("", rb_id_usuario.Text));
                 return;
             }
@@ -60,6 +65,7 @@ namespace CLASE05.Formularios.Usuarios
             if (cuadroTexto.Text == "")
             {
                 MessageBox.Show("Ingresar patrón de búsqueda");
+                return;
             }
             else
             {
@@ -113,7 +119,7 @@ namespace CLASE05.Formularios.Usuarios
             frm_baja.id_usuario = grid_usuarios.CurrentRow.Cells[0].Value.ToString();
             frm_baja.ShowDialog();
 
-            //grid_usuarios.Rows.Clear();
+            grid_usuarios.Rows.Clear();
         }
 
         private void btn_consultar_Click(object sender, EventArgs e)
@@ -136,22 +142,12 @@ namespace CLASE05.Formularios.Usuarios
 
         private void rb_n_usuario_CheckedChanged(object sender, EventArgs e)
         {
-            //if (rb_n_usuario.Checked == true)
-            //{
-            //    txt_id_usuario.Enabled = false;
-            //    txt_id_usuario.Clear();
-            //    txt_patron.Enabled = true;
-            //}
+            
         }
         
         private void rb_id_usuario_CheckedChanged(object sender, EventArgs e)
         {
-            //if (rb_id_usuario.Checked == true)
-            //{
-            //    txt_id_usuario.Enabled = true;
-            //    txt_patron.Enabled = false;
-            //    txt_patron.Clear();
-            //}
+           
         }
         private void txt_patron_Click(object sender, EventArgs e)
         {
@@ -170,11 +166,16 @@ namespace CLASE05.Formularios.Usuarios
                 NE_Usuarios usu = new NE_Usuarios();
 
                 string columna = "";
-                MaskedTextBox cuadroTexto = null;
+                MaskedTextBox cuadroTexto = new MaskedTextBox();
+                cuadroTexto.Text = "";
 
-                if (rb_id_usuario.Checked == false & rb_n_usuario.Checked == false)
+                if (rb_id_usuario.Checked == false & rb_n_usuario.Checked == false & rb_todos.Checked == false)
                 {
-                    //MessageBox.Show("Marcar atributo de búsqueda");
+                    MessageBox.Show("No hay parámetros de búsqueda", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (rb_todos.Checked == true)
+                {
                     grid_usuarios.Cargar(usu.BuscarUsuario("", rb_id_usuario.Text));
                     return;
                 }

@@ -59,7 +59,6 @@ namespace CLASE05.Negocios
             sqlInsert += ", " + precio;
             sqlInsert += ", " + stock + ")";
 
-            MessageBox.Show(sqlInsert);
             _BD.Insertar(sqlInsert);
         }
 
@@ -72,7 +71,6 @@ namespace CLASE05.Negocios
             sqlInsert += ", '" + cod_prod_ensamblado + "'";
             sqlInsert += ", " + cantidad + ")";
 
-            MessageBox.Show(sqlInsert);
             _BD.Insertar(sqlInsert);
         }
 
@@ -85,8 +83,6 @@ namespace CLASE05.Negocios
             sqlUpdate += ", stock = " + stock;
             sqlUpdate += " WHERE cod_prod_ensamblado = '" + cod_prod_ensamblado + "'";
 
-
-            MessageBox.Show(sqlUpdate);
             _BD.Modificar(sqlUpdate);
         }
 
@@ -94,7 +90,6 @@ namespace CLASE05.Negocios
         {
             string sqlDelete = "DELETE FROM producto_ensamblado WHERE cod_prod_ensamblado = '" + cod_prod_ensamblado + "'";
 
-            MessageBox.Show(sqlDelete);
             _BD.Borrar(sqlDelete);
 
         }
@@ -102,7 +97,6 @@ namespace CLASE05.Negocios
         {
             string sqlDelete = "DELETE FROM detalle_prod_ensamblado WHERE cod_articulo = '" + cod_art + "'";
 
-            MessageBox.Show(sqlDelete);
             _BD.Borrar(sqlDelete);
 
         }

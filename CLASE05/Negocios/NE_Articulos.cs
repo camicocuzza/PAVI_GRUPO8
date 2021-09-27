@@ -89,7 +89,6 @@ namespace CLASE05.Negocios
         {
             string sqlDelete = "DELETE FROM articulo WHERE cod_articulo = '" + cod_articulo + "'";
 
-            MessageBox.Show(sqlDelete);
             //_BD.Borrar(sqlDelete);
 
         }

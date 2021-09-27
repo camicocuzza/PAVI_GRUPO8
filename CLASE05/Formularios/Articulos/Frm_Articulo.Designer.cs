@@ -360,7 +360,6 @@ namespace CLASE05.Formularios.Articulos
             // Frm_Articulo
             // 
             this._FormularioMovil = true;
-            this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(584, 424);
@@ -381,7 +380,6 @@ namespace CLASE05.Formularios.Articulos
             this.Controls.Add(this.btn_aceptar);
             this.Controls.Add(this.lbl_titulo);
             this.Name = "Frm_Articulo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Frm_Articulo_Load);
             this.Controls.SetChildIndex(this.lbl_titulo, 0);
             this.Controls.SetChildIndex(this.btn_aceptar, 0);

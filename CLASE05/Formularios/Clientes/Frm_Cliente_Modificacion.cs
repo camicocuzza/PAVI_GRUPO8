@@ -23,7 +23,6 @@ namespace CLASE05.Formularios.Clientes
         {
             cmb_pais._Cargar();
             //cmb_estado_provincia._Cargar();
-            cmb_estado_provincia.Enabled = false;
 
             CargarFormulario(cli.RecuperarCliente(cuit_cliente));
 
@@ -56,6 +55,11 @@ namespace CLASE05.Formularios.Clientes
         {
             TratamientosEspeciales _TE = new TratamientosEspeciales();
             NE_Empleados ne_emp = new NE_Empleados();
+
+            if (txt_decimales.Text == "")
+            {
+                txt_decimales.Text = "00";
+            }
 
             if (_TE.Validar(base.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
             {
