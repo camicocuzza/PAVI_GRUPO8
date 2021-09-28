@@ -31,10 +31,6 @@ namespace CLASE05.Formularios.Clientes
         {
             this.SuspendLayout();
             // 
-            // txt_limite_credito
-            // 
-            //this.txt_limite_credito.Enabled = false;
-            // 
             // txt_cuit_cliente
             // 
             this.txt_cuit_cliente.Enabled = false;
