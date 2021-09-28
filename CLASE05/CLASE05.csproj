@@ -957,5 +957,47 @@
   <ItemGroup>
     <None Include="Resources\icons8-comercio-electrónico-100.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_compra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_usuario %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_usuario %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_usuario %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_usuario %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_eqpersonal %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_eqpersonal %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_eqpersonal %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_eqpersonal %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_eqpersonal %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_articulo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_articulo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_empleado %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_empleado %283%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

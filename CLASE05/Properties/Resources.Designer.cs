@@ -343,6 +343,26 @@ namespace CLASE05.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_articulo {
+            get {
+                object obj = ResourceManager.GetObject("icon_articulo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_articulo__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icon_articulo (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_camionabast {
             get {
                 object obj = ResourceManager.GetObject("icon_camionabast", resourceCulture);
@@ -473,6 +493,16 @@ namespace CLASE05.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_compra {
+            get {
+                object obj = ResourceManager.GetObject("icon_compra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_compra_venta__10_ {
             get {
                 object obj = ResourceManager.GetObject("icon_compra_venta (10)", resourceCulture);
@@ -543,6 +573,16 @@ namespace CLASE05.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_empleado__3_ {
+            get {
+                object obj = ResourceManager.GetObject("icon_empleado (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_empleado__4_ {
             get {
                 object obj = ResourceManager.GetObject("icon_empleado (4)", resourceCulture);
@@ -566,6 +606,66 @@ namespace CLASE05.Properties {
         internal static System.Drawing.Bitmap icon_empleado__8_ {
             get {
                 object obj = ResourceManager.GetObject("icon_empleado (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_empleado__9_ {
+            get {
+                object obj = ResourceManager.GetObject("icon_empleado (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_eqpersonal__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icon_eqpersonal (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_eqpersonal__2_ {
+            get {
+                object obj = ResourceManager.GetObject("icon_eqpersonal (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_eqpersonal__3_ {
+            get {
+                object obj = ResourceManager.GetObject("icon_eqpersonal (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_eqpersonal__4_ {
+            get {
+                object obj = ResourceManager.GetObject("icon_eqpersonal (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_eqpersonal__5_ {
+            get {
+                object obj = ResourceManager.GetObject("icon_eqpersonal (5)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -746,6 +846,46 @@ namespace CLASE05.Properties {
         internal static System.Drawing.Bitmap icon_usuario__1_ {
             get {
                 object obj = ResourceManager.GetObject("icon_usuario (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_usuario__2_ {
+            get {
+                object obj = ResourceManager.GetObject("icon_usuario (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_usuario__3_ {
+            get {
+                object obj = ResourceManager.GetObject("icon_usuario (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_usuario__4_ {
+            get {
+                object obj = ResourceManager.GetObject("icon_usuario (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_usuario__5_ {
+            get {
+                object obj = ResourceManager.GetObject("icon_usuario (5)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
