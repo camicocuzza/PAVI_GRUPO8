@@ -149,6 +149,7 @@ namespace CLASE05.Formularios.EquiposEspeciales
             this.txt_patron.Name = "txt_patron";
             this.txt_patron.Size = new System.Drawing.Size(129, 25);
             this.txt_patron.TabIndex = 16;
+            this.txt_patron.Click += new System.EventHandler(this.txt_patron_Click);
             // 
             // btn_blan_patron
             // 
@@ -224,7 +225,6 @@ namespace CLASE05.Formularios.EquiposEspeciales
             this.Controls.Add(this.grid_equiposEspeciales);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Frm_ABM_EquiposEspeciales_Entrada";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Frm_ABM_EquiposEspeciales_Entrada_Load);
             this.Controls.SetChildIndex(this.grid_equiposEspeciales, 0);
             this.Controls.SetChildIndex(this.label1, 0);

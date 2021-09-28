@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.Proveedores
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rb_todos = new System.Windows.Forms.RadioButton();
             this.rb_razon_social = new System.Windows.Forms.RadioButton();
             this.txt_patron = new System.Windows.Forms.MaskedTextBox();
@@ -147,6 +147,7 @@ namespace CLASE05.Formularios.Proveedores
             this.txt_patron.Name = "txt_patron";
             this.txt_patron.Size = new System.Drawing.Size(129, 25);
             this.txt_patron.TabIndex = 32;
+            this.txt_patron.Click += new System.EventHandler(this.txt_patron_Click);
             // 
             // label4
             // 
@@ -204,8 +205,8 @@ namespace CLASE05.Formularios.Proveedores
             this.grid_proveedores._tamannoLetraHeader = 9;
             this.grid_proveedores.AllowUserToAddRows = false;
             this.grid_proveedores.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_proveedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_proveedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grid_proveedores.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_proveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_proveedores.Location = new System.Drawing.Point(10, 223);

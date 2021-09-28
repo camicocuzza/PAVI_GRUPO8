@@ -111,5 +111,10 @@ namespace CLASE05.Formularios.Lotes
             frm_consulta.num_lote = grid_lotes.CurrentRow.Cells[0].Value.ToString();
             frm_consulta.ShowDialog();
         }
+
+        private void txt_patron_Click(object sender, EventArgs e)
+        {
+            txt_patron.SelectionStart = txt_patron.Text.Length;
+        }
     }
 }

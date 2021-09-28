@@ -115,5 +115,10 @@ namespace CLASE05.Formularios.Articulos
             frm_consulta.cod_articulo = grid_articulos.CurrentRow.Cells[0].Value.ToString();
             frm_consulta.ShowDialog();
         }
+
+        private void txt_patron_Click(object sender, EventArgs e)
+        {
+            txt_patron.SelectionStart = txt_patron.Text.Length;
+        }
     }
 }

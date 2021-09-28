@@ -108,5 +108,10 @@ namespace CLASE05.Formularios.EquiposEspeciales
             frm_consulta.cod_prod_ensamblado = grid_equiposEspeciales.CurrentRow.Cells[0].Value.ToString();
             frm_consulta.ShowDialog();
         }
+
+        private void txt_patron_Click(object sender, EventArgs e)
+        {
+            txt_patron.SelectionStart = txt_patron.Text.Length;
+        }
     }
 }

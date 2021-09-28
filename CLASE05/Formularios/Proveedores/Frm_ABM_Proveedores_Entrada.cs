@@ -103,5 +103,10 @@ namespace CLASE05.Formularios.Proveedores
             frm_baja.cuit_proveedor = grid_proveedores.CurrentRow.Cells[0].Value.ToString();
             frm_baja.ShowDialog();
         }
+
+        private void txt_patron_Click(object sender, EventArgs e)
+        {
+            txt_patron.SelectionStart = txt_patron.Text.Length;
+        }
     }
 }

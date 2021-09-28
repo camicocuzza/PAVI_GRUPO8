@@ -105,5 +105,10 @@ namespace CLASE05.Formularios.Empleados
             frm_baja.legajo_empleado = grid_empleados.CurrentRow.Cells[0].Value.ToString();
             frm_baja.ShowDialog();
         }
+
+        private void txt_patron_Click(object sender, EventArgs e)
+        {
+            txt_patron.SelectionStart = txt_patron.Text.Length;
+        }
     }
 }

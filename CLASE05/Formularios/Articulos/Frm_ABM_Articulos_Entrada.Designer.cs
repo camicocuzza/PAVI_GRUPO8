@@ -142,6 +142,7 @@ namespace CLASE05.Formularios.Articulos
             this.txt_patron.Name = "txt_patron";
             this.txt_patron.Size = new System.Drawing.Size(129, 25);
             this.txt_patron.TabIndex = 12;
+            this.txt_patron.Click += new System.EventHandler(this.txt_patron_Click);
             // 
             // label2
             // 
