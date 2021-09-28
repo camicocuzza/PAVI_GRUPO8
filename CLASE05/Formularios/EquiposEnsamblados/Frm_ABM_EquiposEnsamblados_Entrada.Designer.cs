@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grid_equiposEnsamblados = new CLASE05.Clases.Grid01();
             this.txt_patron = new System.Windows.Forms.MaskedTextBox();
             this.btn_blan_patron = new System.Windows.Forms.Button();
@@ -113,8 +113,8 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.grid_equiposEnsamblados._tamannoLetraHeader = 9;
             this.grid_equiposEnsamblados.AllowUserToAddRows = false;
             this.grid_equiposEnsamblados.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_equiposEnsamblados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_equiposEnsamblados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.grid_equiposEnsamblados.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_equiposEnsamblados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_equiposEnsamblados.Location = new System.Drawing.Point(12, 223);
