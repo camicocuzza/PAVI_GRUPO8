@@ -25,8 +25,6 @@ namespace CLASE05.Negocios
             sql = @"SELECT num_lote, nro_remito_proveedor, fecha_compra 
                           FROM lote WHERE " + columna + " like '%" + patron + "%'";
 
-
-
             return _BD.EjecutarSelect(sql);
         }
 
@@ -46,7 +44,6 @@ namespace CLASE05.Negocios
             sqlInsert += ", '" + nro_remito_proveedor + "'";
             sqlInsert += ", '" + fecha_compra + "')";
 
-            MessageBox.Show(sqlInsert);
             _BD.Insertar(sqlInsert);
         }
 
@@ -60,8 +57,6 @@ namespace CLASE05.Negocios
             sqlUpdate += ", fecha_compra = '" + fecha_compra + "'";
             sqlUpdate += " WHERE num_lote = '" + num_lote + "'";
 
-
-            MessageBox.Show(sqlUpdate);
             _BD.Modificar(sqlUpdate);
         }
 
@@ -69,7 +64,6 @@ namespace CLASE05.Negocios
         {
             string sqlDelete = "DELETE FROM lote WHERE num_lote = '" + num_lote + "'";
 
-            MessageBox.Show(sqlDelete);
             _BD.Borrar(sqlDelete);
 
         }

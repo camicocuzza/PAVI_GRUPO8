@@ -17,37 +17,6 @@ namespace CLASE05.Negocios
         public string nombre_estado_provincia{ get; set; }
 
         BE_Acceso_Datos _BD = new BE_Acceso_Datos();
-
-        //public bool ValidarExistenciaNombre(string nombre_estado_provincia)
-        //{
-        //    string sql = @"SELECT * FROM estado_provincia
-        //                  WHERE nombre_estado_provincia = '" + nombre_estado_provincia + "'";
-
-        //    DataTable tabla = new DataTable();
-        //    tabla = _BD.EjecutarSelect(sql);
-
-        //    if (tabla.Rows.Count >= 1)
-        //    {
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
-        //public int RecuperarId(string nombre_pais)
-        //{
-        //    string sql = @"SELECT id_usuario FROM pais
-        //                 WHERE nombre_pais = '" + nombre_pais + "'";
-
-        //    DataTable tabla = new DataTable();
-        //    tabla = _BD.EjecutarSelect(sql);
-
-        //    if (tabla.Rows.Count == 1)
-        //        return int.Parse(tabla.Rows[0][0].ToString());
-        //    else
-        //        return 0;
-        //}
         public DataTable BuscarEstadoProvincia(string patron, string columna)
         {
             string sql = @"SELECT id_estado_provincia, nombre_estado_provincia 

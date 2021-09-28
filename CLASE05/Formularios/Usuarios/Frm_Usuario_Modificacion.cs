@@ -12,6 +12,8 @@ namespace CLASE05.Formularios.Usuarios
 {
     public partial class Frm_Usuario_Modificacion : CLASE05.Formularios.Usuarios.Frm_Usuario
     {
+        string n_usuario_anterior;
+
         NE_Usuarios usu = new NE_Usuarios();
         public Frm_Usuario_Modificacion()
         {
@@ -28,7 +30,8 @@ namespace CLASE05.Formularios.Usuarios
             txt_id_usuario._Text = tabla.Rows[0]["id_usuario"].ToString();
             txt_n_usuario._Text = tabla.Rows[0]["n_usuario"].ToString();
             txt_password._Text = tabla.Rows[0]["password"].ToString();
-        
+
+            n_usuario_anterior = txt_n_usuario._Text;
         }
 
         private void btn_aceptar_Click(object sender, EventArgs e)
@@ -36,11 +39,14 @@ namespace CLASE05.Formularios.Usuarios
 
             TratamientosEspeciales _TE = new TratamientosEspeciales();
 
-            if (usu.ValidarExistenciaNombre(txt_n_usuario._Text) == true)
+            if (txt_n_usuario._Text != n_usuario_anterior)
             {
-                MessageBox.Show("El nombre de usuario '" + txt_n_usuario._Text + "' ya está registrado", "Importante");
-                txt_n_usuario.Focus();
-                return;
+                if (usu.ValidarExistenciaNombre(txt_n_usuario._Text) == true)
+                {
+                    MessageBox.Show("El nombre de usuario '" + txt_n_usuario._Text + "' ya está registrado", "Importante");
+                    txt_n_usuario.Focus();
+                    return;
+                }
             }
             if (_TE.Validar(this.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
             {  

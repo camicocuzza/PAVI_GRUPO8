@@ -18,7 +18,7 @@ namespace CLASE05.Formularios.Empleados
 
         private void Frm_ABM_Empleados_Entrada_Load(object sender, EventArgs e)
         {
-            this.grid_empleados.Formatear("Legajo, 100, C; Nro Documento, 100, I; Apellido, 100, I; Nombre, 100, I");
+            this.grid_empleados.Formatear("Legajo, 100, C; Tipo Doc, 50, I; Nro Documento, 100, I; Apellido, 100, I; Nombre, 100, I; Teléfono, 100, I");
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)

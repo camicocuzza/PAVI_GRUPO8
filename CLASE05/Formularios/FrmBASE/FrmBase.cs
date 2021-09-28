@@ -35,7 +35,7 @@ namespace CLASE05.Formularios.FrmBASE
         {
             InitializeComponent();
         }
-
+                
         private void btn_minimizar_MouseMove(object sender, MouseEventArgs e)
         {
             this.btn_minimizar.BackgroundImage = CLASE05.Properties.Resources.btn_minimizar;

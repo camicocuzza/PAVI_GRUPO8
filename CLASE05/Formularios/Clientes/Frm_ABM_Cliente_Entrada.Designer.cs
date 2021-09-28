@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.Clientes
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
             this.rb_cuit_cliente = new System.Windows.Forms.RadioButton();
             this.btn_blan_patron = new System.Windows.Forms.Button();
@@ -40,6 +40,7 @@ namespace CLASE05.Formularios.Clientes
             this.rb_nombre_contacto = new System.Windows.Forms.RadioButton();
             this.grid_clientes = new CLASE05.Clases.Grid01();
             this.rb_legajo_empleado = new System.Windows.Forms.RadioButton();
+            this.rb_todos = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_clientes)).BeginInit();
             this.SuspendLayout();
@@ -73,7 +74,7 @@ namespace CLASE05.Formularios.Clientes
             // label1
             // 
             this.label1.Size = new System.Drawing.Size(158, 31);
-            this.label1.Text = "ABM Cliente";
+            this.label1.Text = "Clientes";
             // 
             // btn_consultar
             // 
@@ -85,6 +86,7 @@ namespace CLASE05.Formularios.Clientes
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rb_todos);
             this.groupBox1.Controls.Add(this.rb_legajo_empleado);
             this.groupBox1.Controls.Add(this.rb_nombre_contacto);
             this.groupBox1.Controls.Add(this.label4);
@@ -105,6 +107,7 @@ namespace CLASE05.Formularios.Clientes
             this.groupBox1.Controls.SetChildIndex(this.rb_nombre_contacto, 0);
             this.groupBox1.Controls.SetChildIndex(this.rb_legajo_empleado, 0);
             this.groupBox1.Controls.SetChildIndex(this.btn_buscar, 0);
+            this.groupBox1.Controls.SetChildIndex(this.rb_todos, 0);
             // 
             // btn_buscar
             // 
@@ -228,8 +231,8 @@ namespace CLASE05.Formularios.Clientes
             this.grid_clientes._tamannoLetraHeader = 9;
             this.grid_clientes.AllowUserToAddRows = false;
             this.grid_clientes.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_clientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_clientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grid_clientes.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_clientes.Location = new System.Drawing.Point(12, 203);
@@ -250,10 +253,22 @@ namespace CLASE05.Formularios.Clientes
             this.rb_legajo_empleado.Text = "legajo_empleado";
             this.rb_legajo_empleado.UseVisualStyleBackColor = true;
             // 
+            // rb_todos
+            // 
+            this.rb_todos.AutoSize = true;
+            this.rb_todos.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.rb_todos.Location = new System.Drawing.Point(379, 89);
+            this.rb_todos.Name = "rb_todos";
+            this.rb_todos.Size = new System.Drawing.Size(64, 21);
+            this.rb_todos.TabIndex = 29;
+            this.rb_todos.TabStop = true;
+            this.rb_todos.Text = "Todos";
+            this.rb_todos.UseVisualStyleBackColor = true;
+            // 
             // Frm_ABM_Cliente_Entrada
             // 
             this._PosiciónVisible = true;
-            this._titulo = "ABM Cliente";
+            this._titulo = "Clientes";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(669, 439);
             this.Controls.Add(this.grid_clientes);
@@ -291,5 +306,6 @@ namespace CLASE05.Formularios.Clientes
         private System.Windows.Forms.RadioButton rb_nombre_contacto;
         private Clases.Grid01 grid_clientes;
         private System.Windows.Forms.RadioButton rb_legajo_empleado;
+        private System.Windows.Forms.RadioButton rb_todos;
     }
 }

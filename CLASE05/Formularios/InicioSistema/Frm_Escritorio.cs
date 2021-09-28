@@ -116,5 +116,69 @@ namespace CLASE05.Formularios.InicioSistema
             Frm_ABM_Proveedores_Entrada frm_proveedores = new Frm_ABM_Proveedores_Entrada();
             frm_proveedores.ShowDialog();
         }
+
+        private void btn_articulos_Click(object sender, EventArgs e)
+        {
+            Frm_ABM_Articulos_Entrada frm_articulos = new Frm_ABM_Articulos_Entrada();
+            frm_articulos.ShowDialog();
+        }
+
+        private void btn_ensamblados_Click(object sender, EventArgs e)
+        {
+            Frm_ABM_EquiposEnsamblados_Entrada frm_equiposEnsamblados = new Frm_ABM_EquiposEnsamblados_Entrada();
+            frm_equiposEnsamblados.ShowDialog();
+        }
+
+        private void btn_especiales_Click(object sender, EventArgs e)
+        {
+            Frm_ABM_EquiposEspeciales_Entrada frm_equiposEspeciales = new Frm_ABM_EquiposEspeciales_Entrada();
+            frm_equiposEspeciales.ShowDialog();
+
+        }
+
+        private void btn_compras_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_proveedores_Click(object sender, EventArgs e)
+        {
+            Frm_ABM_Proveedores_Entrada frm_proveedores = new Frm_ABM_Proveedores_Entrada();
+            frm_proveedores.ShowDialog();
+        }
+
+        private void btn_reportes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_clientes_Click(object sender, EventArgs e)
+        {
+            Frm_ABM_Cliente_Entrada frm_usuario = new Frm_ABM_Cliente_Entrada();
+            frm_usuario.ShowDialog();
+
+        }
+
+        private void btn_ventas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_empleados_Click(object sender, EventArgs e)
+        {
+            Frm_ABM_Empleados_Entrada frm_empleados = new Frm_ABM_Empleados_Entrada();
+            frm_empleados.ShowDialog();
+        }
+
+        private void btn_inventario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_usuarios_Click(object sender, EventArgs e)
+        {
+            Frm_ABM_Usuario_Entrada frm_usuario = new Frm_ABM_Usuario_Entrada();
+            frm_usuario.ShowDialog();
+        }       
     }
 }

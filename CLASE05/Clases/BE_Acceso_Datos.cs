@@ -95,7 +95,7 @@ namespace CLASE05.Clases
             return tabla;
         }
 
-        public void EjecutarNoSelect(string sql)
+        public EstadoTransaccion EjecutarNoSelect(string sql)
         {
             Conectar();
             Cmd.CommandText = sql;
@@ -108,9 +108,10 @@ namespace CLASE05.Clases
                 MessageBox.Show("Error en ejecución de comando.\n\n"
                                 + sql
                                 + "\n Mensaje del error: \n" + e.Message);
-                ControlTransaccion = EstadoTransaccion.error;
+                ControlTransaccion = EstadoTransaccion.error;                
             }
             Cerrar();
+            return ControlTransaccion;
         }
 
         public void Insertar(string sql)

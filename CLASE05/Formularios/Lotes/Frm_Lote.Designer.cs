@@ -148,7 +148,7 @@ namespace CLASE05.Formularios.Lotes
             // 
             // Frm_Lote
             // 
-            this._PosiciónVisible = true;
+            this._FormularioMovil = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(438, 341);
             this.Controls.Add(this.lbl_titulo);

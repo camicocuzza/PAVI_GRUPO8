@@ -31,10 +31,6 @@ namespace CLASE05.Formularios.Clientes
         {
             this.SuspendLayout();
             // 
-            // txt_limite_credito
-            // 
-            this.txt_limite_credito.Tag = "Límite de crédito está vacío";
-            // 
             // txt_cuit_cliente
             // 
             this.txt_cuit_cliente.Enabled = false;
@@ -48,25 +44,12 @@ namespace CLASE05.Formularios.Clientes
             // cmb_estado_provincia
             // 
             this.cmb_estado_provincia.DisplayMember = "nombre_estado_provincia";
-            this.cmb_estado_provincia.Enabled = false;
             this.cmb_estado_provincia.Text = "";
             this.cmb_estado_provincia.ValueMember = "id_estado_provincia";
             // 
             // txt_legajo_empleado
             // 
             this.txt_legajo_empleado._MensajeError = "Legajo del empleado está vacío";
-            // 
-            // txt_ciudad
-            // 
-            this.txt_ciudad._MensajeError = "Ciudad está vacía";
-            // 
-            // txt_razon_social
-            // 
-            this.txt_razon_social._MensajeError = "Razón social está vacía";
-            // 
-            // txt_direccion
-            // 
-            this.txt_direccion._MensajeError = "Dirección está vacía";
             // 
             // txt_nombre_contacto
             // 

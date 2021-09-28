@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.Usuarios
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rb_id_usuario = new System.Windows.Forms.RadioButton();
             this.btn_blan_patron = new System.Windows.Forms.Button();
             this.rb_n_usuario = new System.Windows.Forms.RadioButton();
@@ -38,6 +38,7 @@ namespace CLASE05.Formularios.Usuarios
             this.txt_patron = new System.Windows.Forms.MaskedTextBox();
             this.grid_usuarios = new CLASE05.Clases.Grid01();
             this.label4 = new System.Windows.Forms.Label();
+            this.rb_todos = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_usuarios)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +70,7 @@ namespace CLASE05.Formularios.Usuarios
             // label1
             // 
             this.label1.Size = new System.Drawing.Size(164, 31);
-            this.label1.Text = "ABM Usuario";
+            this.label1.Text = "Usuarios";
             // 
             // btn_consultar
             // 
@@ -81,6 +82,7 @@ namespace CLASE05.Formularios.Usuarios
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rb_todos);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.rb_id_usuario);
             this.groupBox1.Controls.Add(this.btn_blan_patron);
@@ -97,6 +99,7 @@ namespace CLASE05.Formularios.Usuarios
             this.groupBox1.Controls.SetChildIndex(this.btn_blan_patron, 0);
             this.groupBox1.Controls.SetChildIndex(this.rb_id_usuario, 0);
             this.groupBox1.Controls.SetChildIndex(this.label4, 0);
+            this.groupBox1.Controls.SetChildIndex(this.rb_todos, 0);
             // 
             // btn_buscar
             // 
@@ -120,7 +123,7 @@ namespace CLASE05.Formularios.Usuarios
             // 
             this.rb_id_usuario.AutoSize = true;
             this.rb_id_usuario.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.rb_id_usuario.Location = new System.Drawing.Point(56, 88);
+            this.rb_id_usuario.Location = new System.Drawing.Point(56, 85);
             this.rb_id_usuario.Name = "rb_id_usuario";
             this.rb_id_usuario.Size = new System.Drawing.Size(90, 21);
             this.rb_id_usuario.TabIndex = 16;
@@ -166,7 +169,7 @@ namespace CLASE05.Formularios.Usuarios
             this.txt_id_usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txt_id_usuario.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_id_usuario.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.txt_id_usuario.Location = new System.Drawing.Point(152, 84);
+            this.txt_id_usuario.Location = new System.Drawing.Point(152, 81);
             this.txt_id_usuario.Mask = "99999";
             this.txt_id_usuario.Name = "txt_id_usuario";
             this.txt_id_usuario.Size = new System.Drawing.Size(48, 25);
@@ -203,8 +206,8 @@ namespace CLASE05.Formularios.Usuarios
             this.grid_usuarios._tamannoLetraHeader = 9;
             this.grid_usuarios.AllowUserToAddRows = false;
             this.grid_usuarios.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_usuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_usuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grid_usuarios.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_usuarios.Location = new System.Drawing.Point(12, 204);
@@ -223,10 +226,22 @@ namespace CLASE05.Formularios.Usuarios
             this.label4.TabIndex = 27;
             this.label4.Text = "Columna de búsqueda";
             // 
+            // rb_todos
+            // 
+            this.rb_todos.AutoSize = true;
+            this.rb_todos.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.rb_todos.Location = new System.Drawing.Point(368, 74);
+            this.rb_todos.Name = "rb_todos";
+            this.rb_todos.Size = new System.Drawing.Size(64, 21);
+            this.rb_todos.TabIndex = 30;
+            this.rb_todos.TabStop = true;
+            this.rb_todos.Text = "Todos";
+            this.rb_todos.UseVisualStyleBackColor = true;
+            // 
             // Frm_ABM_Usuario_Entrada
             // 
             this._PosiciónVisible = true;
-            this._titulo = "ABM Usuario";
+            this._titulo = "Usuarios";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(669, 439);
             this.Controls.Add(this.grid_usuarios);
@@ -261,5 +276,6 @@ namespace CLASE05.Formularios.Usuarios
         private System.Windows.Forms.MaskedTextBox txt_patron;
         private Clases.Grid01 grid_usuarios;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RadioButton rb_todos;
     }
 }

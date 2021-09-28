@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmb_articulo = new CLASE05.Clases.ComboBox01();
             this.btn_agregar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -77,7 +77,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             // 
             // cmb_articulo
             // 
-            this.cmb_articulo._ComboSinSeleccion = true;
+            this.cmb_articulo._ComboSinSeleccion = false;
             this.cmb_articulo._MensajeError = "Seleccionar país";
             this.cmb_articulo._Nombre_campo = null;
             this.cmb_articulo._Nombre_tabla = "";
@@ -130,6 +130,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.txt_cantidad._Nombre_campo = "stock";
             this.txt_cantidad._Nombre_tabla = null;
             this.txt_cantidad._ReadOnly = false;
+            this.txt_cantidad._StartEnCero = false;
             this.txt_cantidad._Text = "";
             this.txt_cantidad._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_cantidad._TipoDato = CLASE05.Clases.LabelText02.TipoDato.numero;
@@ -149,8 +150,8 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.grid_articulos._tamannoLetraHeader = 9;
             this.grid_articulos.AllowUserToAddRows = false;
             this.grid_articulos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_articulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_articulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grid_articulos.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_articulos.Location = new System.Drawing.Point(70, 282);

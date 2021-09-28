@@ -29,8 +29,6 @@ namespace CLASE05.Formularios.Clientes
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt_limite_credito = new System.Windows.Forms.MaskedTextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txt_cuit_cliente = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmb_pais = new CLASE05.Clases.ComboBox01();
@@ -44,8 +42,7 @@ namespace CLASE05.Formularios.Clientes
             this.txt_nombre_contacto = new CLASE05.Clases.LabelText02();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_aceptar = new System.Windows.Forms.Button();
-            this.txt_decimales = new System.Windows.Forms.MaskedTextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.txt_limite = new CLASE05.Clases.LabelText02();
             this.SuspendLayout();
             // 
             // btn_cerrar
@@ -61,33 +58,6 @@ namespace CLASE05.Formularios.Clientes
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_maximizar.Location = new System.Drawing.Point(444, 2);
-            // 
-            // txt_limite_credito
-            // 
-            this.txt_limite_credito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.txt_limite_credito.Culture = new System.Globalization.CultureInfo("en-US");
-            this.txt_limite_credito.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.txt_limite_credito.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_limite_credito.Location = new System.Drawing.Point(155, 177);
-            this.txt_limite_credito.Mask = "9999999999";
-            this.txt_limite_credito.Name = "txt_limite_credito";
-            this.txt_limite_credito.Size = new System.Drawing.Size(92, 25);
-            this.txt_limite_credito.TabIndex = 51;
-            this.txt_limite_credito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt_limite_credito.Click += new System.EventHandler(this.txt_limite_credito_Click);
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(2, 178);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 20);
-            this.label2.TabIndex = 50;
-            this.label2.Text = "Límite crédito ($)";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txt_cuit_cliente
             // 
@@ -330,34 +300,29 @@ namespace CLASE05.Formularios.Clientes
             this.btn_aceptar.Text = "Aceptar";
             this.btn_aceptar.UseVisualStyleBackColor = false;
             // 
-            // txt_decimales
+            // txt_limite
             // 
-            this.txt_decimales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.txt_decimales.Culture = new System.Globalization.CultureInfo("en-US");
-            this.txt_decimales.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.txt_decimales.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_decimales.Location = new System.Drawing.Point(257, 177);
-            this.txt_decimales.Mask = "99";
-            this.txt_decimales.Name = "txt_decimales";
-            this.txt_decimales.Size = new System.Drawing.Size(32, 25);
-            this.txt_decimales.TabIndex = 54;
-            this.txt_decimales.Tag = "noValidar";
-            this.txt_decimales.Text = "00";
-            this.txt_decimales.Click += new System.EventHandler(this.txt_decimales_Click);
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(244, 176);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(16, 24);
-            this.label4.TabIndex = 55;
-            this.label4.Text = ".";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.txt_limite._Ancho = 10;
+            this.txt_limite._Decimales = 2;
+            this.txt_limite._Etiqueta = "Límite crédito ($)";
+            this.txt_limite._Mask = "999999999.99";
+            this.txt_limite._MensajeError = null;
+            this.txt_limite._Nombre_campo = null;
+            this.txt_limite._Nombre_tabla = null;
+            this.txt_limite._ReadOnly = false;
+            this.txt_limite._StartEnCero = true;
+            this.txt_limite._Text = "         .";
+            this.txt_limite._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txt_limite._TipoDato = CLASE05.Clases.LabelText02.TipoDato.numero;
+            this.txt_limite._Validable = true;
+            this.txt_limite.BackColor = System.Drawing.Color.Transparent;
+            this.txt_limite.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txt_limite.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_limite.Location = new System.Drawing.Point(4, 171);
+            this.txt_limite.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_limite.Name = "txt_limite";
+            this.txt_limite.Size = new System.Drawing.Size(279, 30);
+            this.txt_limite.TabIndex = 56;
             // 
             // Frm_Cliente
             // 
@@ -365,11 +330,9 @@ namespace CLASE05.Formularios.Clientes
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(516, 516);
-            this.Controls.Add(this.txt_decimales);
+            this.Controls.Add(this.txt_limite);
             this.Controls.Add(this.btn_aceptar);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txt_limite_credito);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_cuit_cliente);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_pais);
@@ -381,11 +344,9 @@ namespace CLASE05.Formularios.Clientes
             this.Controls.Add(this.txt_razon_social);
             this.Controls.Add(this.txt_direccion);
             this.Controls.Add(this.txt_nombre_contacto);
-            this.Controls.Add(this.label4);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Frm_Cliente";
             this.Load += new System.EventHandler(this.Frm_Cliente_Load);
-            this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.lbl_titulo, 0);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
@@ -402,20 +363,15 @@ namespace CLASE05.Formularios.Clientes
             this.Controls.SetChildIndex(this.cmb_pais, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.txt_cuit_cliente, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.txt_limite_credito, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.btn_aceptar, 0);
-            this.Controls.SetChildIndex(this.txt_decimales, 0);
+            this.Controls.SetChildIndex(this.txt_limite, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        public System.Windows.Forms.MaskedTextBox txt_limite_credito;
-        private System.Windows.Forms.Label label2;
         public System.Windows.Forms.MaskedTextBox txt_cuit_cliente;
         private System.Windows.Forms.Label label1;
         public Clases.ComboBox01 cmb_pais;
@@ -429,7 +385,6 @@ namespace CLASE05.Formularios.Clientes
         public Clases.LabelText02 txt_nombre_contacto;
         public System.Windows.Forms.Button btn_aceptar;
         public System.Windows.Forms.Label label3;
-        public System.Windows.Forms.MaskedTextBox txt_decimales;
-        private System.Windows.Forms.Label label4;
+        public Clases.LabelText02 txt_limite;
     }
 }

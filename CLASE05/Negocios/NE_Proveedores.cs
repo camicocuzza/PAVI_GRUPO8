@@ -29,8 +29,6 @@ namespace CLASE05.Negocios
             sql = @"SELECT cuit_proveedor, razon_social, fecha_inicio_operacion
                           FROM proveedor WHERE " + columna + " like '%" + patron + "%'";
 
-
-
             return _BD.EjecutarSelect(sql);
         }
 
@@ -55,7 +53,6 @@ namespace CLASE05.Negocios
             sqlInsert += ", " + id_estado_provincia;
             sqlInsert += ", '" + ciudad + "')";
 
-            MessageBox.Show(sqlInsert);
             _BD.Insertar(sqlInsert);
         }
 
@@ -73,7 +70,6 @@ namespace CLASE05.Negocios
             sqlUpdate += ", ciudad = '" + ciudad + "'";
             sqlUpdate += " WHERE cuit_proveedor = " + cuit_proveedor;
 
-            MessageBox.Show(sqlUpdate);
             _BD.Modificar(sqlUpdate);
         }
 
@@ -81,7 +77,6 @@ namespace CLASE05.Negocios
         {
             string sqlDelete = "DELETE FROM proveedor WHERE cuit_proveedor = '" + cuit_proveedor + "'";
 
-            MessageBox.Show(sqlDelete);
             _BD.Borrar(sqlDelete);
 
         }

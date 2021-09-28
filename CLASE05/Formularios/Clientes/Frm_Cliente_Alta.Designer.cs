@@ -31,11 +31,6 @@ namespace CLASE05.Formularios.Clientes
         {
             this.SuspendLayout();
             // 
-            // txt_limite_credito
-            // 
-            this.txt_limite_credito.TabIndex = 3;
-            this.txt_limite_credito.Tag = "Límite de crédito está vacío";
-            // 
             // txt_cuit_cliente
             // 
             this.txt_cuit_cliente.TabIndex = 1;
