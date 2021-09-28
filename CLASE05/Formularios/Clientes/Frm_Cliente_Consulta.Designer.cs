@@ -29,7 +29,6 @@ namespace CLASE05.Formularios.Clientes
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cliente_Consulta));
             this.SuspendLayout();
             // 
             // txt_limite_credito
@@ -76,6 +75,10 @@ namespace CLASE05.Formularios.Clientes
             // btn_aceptar
             // 
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
+            // 
+            // txt_limite
+            // 
+            this.txt_limite.Enabled = false;
             // 
             // lbl_titulo
             // 
