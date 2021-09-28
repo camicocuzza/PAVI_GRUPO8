@@ -65,6 +65,7 @@ namespace CLASE05.Formularios.Empleados
                 empleado.telefono = txt_telefono._Text;
 
                 empleado.Modificar();
+                
                 MessageBox.Show("Se modificó correctamente el empleado " + txt_legajo._Text, "Importante");
                 this.Dispose();
             }

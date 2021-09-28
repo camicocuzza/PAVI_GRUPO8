@@ -70,7 +70,7 @@ namespace CLASE05.Formularios.Usuarios
             // label1
             // 
             this.label1.Size = new System.Drawing.Size(164, 31);
-            this.label1.Text = "ABM Usuario";
+            this.label1.Text = "Usuarios";
             // 
             // btn_consultar
             // 
@@ -241,7 +241,7 @@ namespace CLASE05.Formularios.Usuarios
             // Frm_ABM_Usuario_Entrada
             // 
             this._PosiciónVisible = true;
-            this._titulo = "ABM Usuario";
+            this._titulo = "Usuarios";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(669, 439);
             this.Controls.Add(this.grid_usuarios);

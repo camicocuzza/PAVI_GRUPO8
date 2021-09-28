@@ -74,7 +74,7 @@ namespace CLASE05.Formularios.Clientes
             // label1
             // 
             this.label1.Size = new System.Drawing.Size(158, 31);
-            this.label1.Text = "ABM Cliente";
+            this.label1.Text = "Clientes";
             // 
             // btn_consultar
             // 
@@ -268,7 +268,7 @@ namespace CLASE05.Formularios.Clientes
             // Frm_ABM_Cliente_Entrada
             // 
             this._PosiciónVisible = true;
-            this._titulo = "ABM Cliente";
+            this._titulo = "Clientes";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(669, 439);
             this.Controls.Add(this.grid_clientes);

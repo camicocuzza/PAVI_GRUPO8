@@ -67,7 +67,7 @@ namespace CLASE05.Negocios
         
         public DataTable BuscarEmpleado(string patron, string columna)
         {
-            string sql = @"SELECT legajo_empleado, id_tipo_documento, nro_documento, apellido, nombre, fecha_ingreso, telefono  
+            string sql = @"SELECT legajo_empleado, id_tipo_documento, nro_documento, apellido, nombre, telefono  
                           FROM empleado WHERE " + columna + " like '%" + patron + "%'";
 
             return _BD.EjecutarSelect(sql);
