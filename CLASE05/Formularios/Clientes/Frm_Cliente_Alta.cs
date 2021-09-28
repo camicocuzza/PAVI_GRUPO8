@@ -29,10 +29,10 @@ namespace CLASE05.Formularios.Clientes
             TratamientosEspeciales _TE = new TratamientosEspeciales();
             NE_Empleados ne_emp = new NE_Empleados();   
             
-            if(txt_decimales.Text == "")
-            {
-                txt_decimales.Text = "00";
-            }
+            //if(txt_decimales.Text == "")
+            //{
+            //    txt_decimales.Text = "00";
+            //}
 
             if (_TE.Validar(base.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
             {

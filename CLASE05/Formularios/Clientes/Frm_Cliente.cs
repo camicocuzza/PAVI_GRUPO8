@@ -55,15 +55,15 @@ namespace CLASE05.Formularios.Clientes
         {
             txt_cuit_cliente.SelectionStart = 0;
         }
-        private void txt_limite_credito_Click(object sender, EventArgs e)
-        {
-            txt_limite_credito.SelectionStart = txt_limite_credito.Text.Length;
-        }
+        //private void txt_limite_credito_Click(object sender, EventArgs e)
+        //{
+        //    txt_limite_credito.SelectionStart = txt_limite_credito.Text.Length;
+        //}
 
-        private void txt_decimales_Click(object sender, EventArgs e)
-        {
-            txt_decimales.SelectionStart = txt_decimales.Text.Length;
-        }
+        //private void txt_decimales_Click(object sender, EventArgs e)
+        //{
+        //    txt_decimales.SelectionStart = txt_decimales.Text.Length;
+        //}
     }
 }
 

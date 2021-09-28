@@ -33,7 +33,7 @@ namespace CLASE05.Formularios.Clientes
             // 
             // txt_limite_credito
             // 
-            this.txt_limite_credito.Enabled = false;
+            //this.txt_limite_credito.Enabled = false;
             // 
             // txt_cuit_cliente
             // 
