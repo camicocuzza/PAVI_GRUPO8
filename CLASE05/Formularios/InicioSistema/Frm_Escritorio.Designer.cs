@@ -247,9 +247,7 @@
             // 
             // btn_clientes
             // 
-            this.btn_clientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_clientes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_clientes.BackColor = System.Drawing.Color.Transparent;
             this.btn_clientes.BackgroundImage = global::CLASE05.Properties.Resources.icon_cliente__1_;
             this.btn_clientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -269,9 +267,7 @@
             // 
             // btn_compras
             // 
-            this.btn_compras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_compras.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_compras.BackColor = System.Drawing.Color.Transparent;
             this.btn_compras.BackgroundImage = global::CLASE05.Properties.Resources.icon_camionabast;
             this.btn_compras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -339,9 +335,7 @@
             // 
             // btn_ventas
             // 
-            this.btn_ventas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_ventas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_ventas.BackColor = System.Drawing.Color.Transparent;
             this.btn_ventas.BackgroundImage = global::CLASE05.Properties.Resources.icon_compra_venta__2_;
             this.btn_ventas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -378,9 +372,7 @@
             // 
             // btn_usuarios
             // 
-            this.btn_usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_usuarios.BackColor = System.Drawing.Color.Transparent;
             this.btn_usuarios.BackgroundImage = global::CLASE05.Properties.Resources.icon_usuario__4_;
             this.btn_usuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -400,9 +392,7 @@
             // 
             // btn_empleados
             // 
-            this.btn_empleados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_empleados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_empleados.BackColor = System.Drawing.Color.Transparent;
             this.btn_empleados.BackgroundImage = global::CLASE05.Properties.Resources.icon_empleado__4_;
             this.btn_empleados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -470,9 +460,7 @@
             // 
             // btn_articulos
             // 
-            this.btn_articulos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_articulos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_articulos.BackColor = System.Drawing.Color.Transparent;
             this.btn_articulos.BackgroundImage = global::CLASE05.Properties.Resources.icon_articulo__1_;
             this.btn_articulos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -492,9 +480,7 @@
             // 
             // btn_ensamblados
             // 
-            this.btn_ensamblados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_ensamblados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_ensamblados.BackColor = System.Drawing.Color.Transparent;
             this.btn_ensamblados.BackgroundImage = global::CLASE05.Properties.Resources.icon_pc;
             this.btn_ensamblados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -514,9 +500,7 @@
             // 
             // btn_inventario
             // 
-            this.btn_inventario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_inventario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_inventario.BackColor = System.Drawing.Color.Transparent;
             this.btn_inventario.BackgroundImage = global::CLASE05.Properties.Resources.icon_inventario__9_;
             this.btn_inventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -537,9 +521,7 @@
             // 
             // btn_proveedores
             // 
-            this.btn_proveedores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_proveedores.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_proveedores.BackColor = System.Drawing.Color.Transparent;
             this.btn_proveedores.BackgroundImage = global::CLASE05.Properties.Resources.icon_proveedor__2_;
             this.btn_proveedores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -591,9 +573,7 @@
             // 
             // btn_reportes
             // 
-            this.btn_reportes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_reportes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_reportes.BackColor = System.Drawing.Color.Transparent;
             this.btn_reportes.BackgroundImage = global::CLASE05.Properties.Resources.icon_reportes__3_;
             this.btn_reportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -630,9 +610,7 @@
             // 
             // btn_especiales
             // 
-            this.btn_especiales.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_especiales.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_especiales.BackColor = System.Drawing.Color.Transparent;
             this.btn_especiales.BackgroundImage = global::CLASE05.Properties.Resources.icon_eqpersonal__4_;
             this.btn_especiales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
