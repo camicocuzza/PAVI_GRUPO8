@@ -435,8 +435,9 @@
     <Compile Include="Formularios\Usuarios\Frm_Usuario_Modificacion.Designer.cs">
       <DependentUpon>Frm_Usuario_Modificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Negocios\NE_DetalleFactura_EquiposEnsamblados.cs" />
     <Compile Include="Negocios\NE_Facturas.cs" />
-    <Compile Include="Negocios\NE_Detalle_Factura_Articulos.cs" />
+    <Compile Include="Negocios\NE_DetalleFactura_Articulos.cs" />
     <Compile Include="Negocios\NE_Proveedores.cs" />
     <Compile Include="Negocios\NE_Empleados.cs" />
     <Compile Include="Negocios\NE_Articulos.cs" />
