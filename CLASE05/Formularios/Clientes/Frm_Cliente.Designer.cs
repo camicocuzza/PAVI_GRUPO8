@@ -82,7 +82,7 @@ namespace CLASE05.Formularios.Clientes
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 20);
             this.label1.TabIndex = 48;
-            this.label1.Text = "Cuit Cliente";
+            this.label1.Text = "CUIT";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cmb_pais
@@ -305,13 +305,13 @@ namespace CLASE05.Formularios.Clientes
             this.txt_limite._Ancho = 10;
             this.txt_limite._Decimales = 2;
             this.txt_limite._Etiqueta = "Límite crédito ($)";
-            this.txt_limite._Mask = "999999999.99";
+            this.txt_limite._Mask = "9999999.99";
             this.txt_limite._MensajeError = null;
             this.txt_limite._Nombre_campo = null;
             this.txt_limite._Nombre_tabla = null;
             this.txt_limite._ReadOnly = false;
             this.txt_limite._StartEnCero = true;
-            this.txt_limite._Text = "         .";
+            this.txt_limite._Text = "       .";
             this.txt_limite._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_limite._TipoDato = CLASE05.Clases.LabelText02.TipoDato.numero;
             this.txt_limite._Validable = true;

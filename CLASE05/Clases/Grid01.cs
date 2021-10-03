@@ -9,7 +9,7 @@ using System.Drawing;
 
 namespace CLASE05.Clases
 {
-    class Grid01 : DataGridView
+    public class Grid01 : DataGridView
     {
         public int _tamannoLetraHeader { get { return tamLet; } set { tamLet = value; } }
         public FontStyle _formatoLetraHeader { get { return forLet; } set { forLet = value; }  }   

@@ -279,6 +279,18 @@
     <Compile Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Modificacion.Designer.cs">
       <DependentUpon>Frm_EquiposEspeciales_Modificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Facturas\Frm_BaseFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Facturas\Frm_BaseFactura.Designer.cs">
+      <DependentUpon>Frm_BaseFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Facturas\Frm_Sistema_Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Facturas\Frm_Sistema_Factura.Designer.cs">
+      <DependentUpon>Frm_Sistema_Factura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmBASE\FrmBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -423,6 +435,8 @@
     <Compile Include="Formularios\Usuarios\Frm_Usuario_Modificacion.Designer.cs">
       <DependentUpon>Frm_Usuario_Modificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Negocios\NE_Facturas.cs" />
+    <Compile Include="Negocios\NE_Detalle_Factura_Articulos.cs" />
     <Compile Include="Negocios\NE_Proveedores.cs" />
     <Compile Include="Negocios\NE_Empleados.cs" />
     <Compile Include="Negocios\NE_Articulos.cs" />
@@ -432,6 +446,7 @@
     <Compile Include="Negocios\NE_EquiposEspeciales.cs" />
     <Compile Include="Negocios\NE_Estados_Provincias.cs" />
     <Compile Include="Negocios\NE_Paises.cs" />
+    <Compile Include="Negocios\NE_Stock.cs" />
     <Compile Include="Negocios\NE_Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -533,6 +548,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Modificacion.resx">
       <DependentUpon>Frm_EquiposEspeciales_Modificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Facturas\Frm_BaseFactura.resx">
+      <DependentUpon>Frm_BaseFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Facturas\Frm_Sistema_Factura.resx">
+      <DependentUpon>Frm_Sistema_Factura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmBASE\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
@@ -998,6 +1019,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_empleado %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_guardar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_guardar %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

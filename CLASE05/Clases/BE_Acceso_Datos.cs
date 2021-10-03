@@ -20,8 +20,9 @@ namespace CLASE05.Clases
 
         public EstadoTransaccion ControlTransaccion { get; set; } = EstadoTransaccion.correcto;
         public TipoConexion ControlConexion { get; set; } = TipoConexion.simple;
-
-       string cadena_conexion = "Data Source = 200.69.137.167,11333; Initial Catalog = BD3K3G08_2021; User ID = BD3K3G08_2021; Password=BDG08_3214";
+        public enum RecuperacionPk { recuperar, no_recuperar }
+        public RecuperacionPk _RecuperarId { get; set; } = RecuperacionPk.no_recuperar;
+        string cadena_conexion = "Data Source = 200.69.137.167,11333; Initial Catalog = BD3K3G08_2021; User ID = BD3K3G08_2021; Password=BDG08_3214";
 
         public void IniciarTransaccion()
         {
@@ -94,8 +95,7 @@ namespace CLASE05.Clases
             Cerrar();
             return tabla;
         }
-
-        public EstadoTransaccion EjecutarNoSelect(string sql)
+        private void EjecutarNoSelect(string sql)
         {
             Conectar();
             Cmd.CommandText = sql;
@@ -108,10 +108,40 @@ namespace CLASE05.Clases
                 MessageBox.Show("Error en ejecución de comando.\n\n"
                                 + sql
                                 + "\n Mensaje del error: \n" + e.Message);
-                ControlTransaccion = EstadoTransaccion.error;                
+                ControlTransaccion = EstadoTransaccion.error;
             }
             Cerrar();
-            return ControlTransaccion;
+        }
+        private string EjecutarNoSelect(string sql, RecuperacionPk RecuperarId)
+        {
+            Conectar();
+            Cmd.CommandText = sql;
+            try
+            {
+                Cmd.ExecuteNonQuery();
+                if (RecuperarId == RecuperacionPk.recuperar)
+                {
+                    DataTable tabla = new DataTable();
+                    Cmd.CommandText = "SELECT SCOPE_IDENTITY()";
+                    tabla.Load(Cmd.ExecuteReader());
+                    Cerrar();
+                    return tabla.Rows[0][0].ToString();
+                }
+                {
+                    Cerrar();
+                    return "";
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error en ejecución de comando.\n\n"
+                 + sql
+                 + "\n Mensaje del error: \n" + e.Message);
+                ControlTransaccion = EstadoTransaccion.error;
+                Cerrar();
+                return "";
+            }
+
         }
 
         public void Insertar(string sql)
@@ -119,16 +149,18 @@ namespace CLASE05.Clases
             EjecutarNoSelect(sql);
         }
 
-        public void Borrar(string sql)
+        public string Insertar(string sql, RecuperacionPk RecuperarId)
         {
-            EjecutarNoSelect(sql);
+            return EjecutarNoSelect(sql, RecuperarId);
         }
-
         public void Modificar(string sql)
         {
             EjecutarNoSelect(sql);
         }
-
+        public void Borrar(string sql)
+        {
+            EjecutarNoSelect(sql);
+        }
         public void InsertarEquipoEspecial(string cod_prod_en, string cuit_cliente, PictureBox imagen)
         {
             Conectar();

@@ -32,8 +32,6 @@ namespace CLASE05.Negocios
             sql = @"SELECT cod_articulo, num_lote, precio, nombre, id_pais, cuit_proveedor 
                           FROM articulo WHERE " + columna + " like '%" + patron + "%'";
 
-
-
             return _BD.EjecutarSelect(sql);
         }
 
@@ -84,7 +82,17 @@ namespace CLASE05.Negocios
             MessageBox.Show(sqlUpdate);
             _BD.Modificar(sqlUpdate);
         }
+        public DataTable ObtenerStock(string cod_articulo)
+        {
+            string sql = @"SELECT s.cantidad 
+                          FROM articulo a JOIN stock s ON a.cod_articulo = s.cod_articulo
+                          WHERE cod_articulo = '" + cod_articulo + "' " +
+                          "AND s.fecha = (SELECT max(s1.fecha) FROM stock s1 " +
+                                          "WHERE s1.cod_articulo = s.cod_articulo)";
 
+            return _BD.EjecutarSelect(sql);
+        }
+        
         public void Borrar()
         {
             string sqlDelete = "DELETE FROM articulo WHERE cod_articulo = '" + cod_articulo + "'";
