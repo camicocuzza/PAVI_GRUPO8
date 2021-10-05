@@ -36,8 +36,8 @@ namespace CLASE05.Formularios.Facturas
         }
         public void Inicio()
         {
-            grid_articulos.Formatear("Id, 40, C; Artículo, 150, I; Cantidad, 70, C; Precio, 70, C; Subtotal, 70, C");
-            grid_ensamblados.Formatear("Id, 40, C; Equipo Ensamblado, 150, I; Cantidad, 70, C; Precio, 70, C; Subtotal, 70, C");
+            grid_articulos.Formatear("Id, 40, C; Artículo, 150, I; Cantidad, 70, C; Precio, 70, C; Subtotal Artículo, 90, C");
+            grid_ensamblados.Formatear("Id, 40, C; Equipo Ensamblado, 150, I; Cantidad, 70, C; Precio, 70, C; Subtotal Artículo, 90, C");
             //ne_articulos.CargarCombo(ref cmb_articulos);
             //ne_ensamblados.CargarCombo(ref cmb_ensamblados);
             cmb_articulos._Cargar();
