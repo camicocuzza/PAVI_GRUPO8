@@ -36,8 +36,8 @@ namespace CLASE05.Formularios.Facturas
         }
         public void Inicio()
         {
-            grid_articulos.Formatear("Id, 40, C; Artículo, 150, C; Cantidad, 70, D; Precio, 70, D");
-            grid_ensamblados.Formatear("Id, 40, C; Equipo Ensamblado, 150, C; Cantidad, 70, D; Precio, 70, D");
+            grid_articulos.Formatear("Id, 40, C; Artículo, 150, I; Cantidad, 70, C; Precio, 70, C; Subtotal, 70, C");
+            grid_ensamblados.Formatear("Id, 40, C; Equipo Ensamblado, 150, I; Cantidad, 70, C; Precio, 70, C; Subtotal, 70, C");
             //ne_articulos.CargarCombo(ref cmb_articulos);
             //ne_ensamblados.CargarCombo(ref cmb_ensamblados);
             cmb_articulos._Cargar();
@@ -75,28 +75,6 @@ namespace CLASE05.Formularios.Facturas
             txt_ciudad._Text = tabla.Rows[0]["ciudad"].ToString();
             return EstadoCarga.correcto;
         }
-
-        //private void grid_asingacion_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    if (MessageBox.Show("Esta seguro de borrar esta fila"
-        //        , "Importante"
-        //        , MessageBoxButtons.YesNo
-        //        , MessageBoxIcon.Question) == DialogResult.Yes)
-        //    {
-        //        grid_asingacion.Rows.Remove(grid_asingacion.Rows[grid_asingacion.CurrentRow.Index]);
-        //    }
-        //}
-
-        //private void grid_descuento_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    if (MessageBox.Show("Esta seguro de borrar esta fila"
-        //         , "Importante"
-        //         , MessageBoxButtons.YesNo
-        //         , MessageBoxIcon.Question) == DialogResult.Yes)
-        //    {
-        //        grid_descuento.Rows.Remove(grid_descuento.Rows[grid_descuento.CurrentRow.Index]);
-        //    }
-        //}
         public void CalcularTotalVenta()
         {
             double sumarArticulos = 0;
@@ -112,10 +90,6 @@ namespace CLASE05.Formularios.Facturas
                 sumarEnsamblados += double.Parse(grid_ensamblados.Rows[i].Cells[2].Value.ToString().Replace(".", ","))
                 * double.Parse(grid_ensamblados.Rows[i].Cells[3].Value.ToString().Replace(".", ","));
             }
-
-            
-
-
             txt_total_venta.Text = "$"+ (sumarArticulos + sumarEnsamblados).ToString();
         }
         private void btn_agregar_articulo_Click(object sender, EventArgs e)
@@ -166,7 +140,8 @@ namespace CLASE05.Formularios.Facturas
             grid_articulos.Rows.Add(cmb_articulos.SelectedValue.ToString()
                                      , cmb_articulos.Text
                                      , txt_cantidad_articulo.Text
-                                     , txt_precio_articulo.Text);
+                                     , txt_precio_articulo.Text
+                                     , double.Parse(txt_cantidad_articulo.Text) * double.Parse(txt_precio_articulo.Text));
         }
         private ResultadoBusqueda BuscarRepetido(string id, Grid01 Grid)
         {
@@ -242,7 +217,8 @@ namespace CLASE05.Formularios.Facturas
             grid_ensamblados.Rows.Add(cmb_ensamblados.SelectedValue.ToString()
                                      , cmb_ensamblados.Text
                                      , txt_cantidad_ensamblado.Text
-                                     , txt_precio_ensamblado.Text);
+                                     , txt_precio_ensamblado.Text
+                                     , double.Parse(txt_cantidad_ensamblado.Text) * double.Parse(txt_precio_ensamblado.Text));
         }
         private void btn_buscar_Click(object sender, EventArgs e)
         {            
