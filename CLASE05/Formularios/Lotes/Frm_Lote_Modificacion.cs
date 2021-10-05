@@ -16,7 +16,11 @@ namespace CLASE05.Formularios.Lotes
         {
             InitializeComponent();
         }
-
+        private void Frm_Lote_Modificacion_Load(object sender, EventArgs e)
+        {
+            NE_Lotes lote = new NE_Lotes();
+            CargarFormulario(lote.RecuperarLote(num_lote));
+        }
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
             TratamientosEspeciales _TE = new TratamientosEspeciales();
@@ -43,12 +47,6 @@ namespace CLASE05.Formularios.Lotes
                 this.Dispose();
 
             }
-        }
-
-        private void Frm_Lote_Modificacion_Load(object sender, EventArgs e)
-        {
-            NE_Lotes lote = new NE_Lotes();
-            CargarFormulario(lote.RecuperarLote(num_lote));
         }
         private void CargarFormulario(DataTable tabla)
         {

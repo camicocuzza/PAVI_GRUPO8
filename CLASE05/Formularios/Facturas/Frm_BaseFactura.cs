@@ -12,6 +12,7 @@ namespace CLASE05.Formularios.Facturas
 {
     public partial class Frm_BaseFactura : CLASE05.Formularios.FrmBASE.FrmBase
     {
+        TratamientosEspeciales _TE = new TratamientosEspeciales();
         public enum ResultadoBusqueda { encontre, no_encontre }
         public enum EstadoCarga { correcto, incorrecto }
 
@@ -41,6 +42,9 @@ namespace CLASE05.Formularios.Facturas
             //ne_ensamblados.CargarCombo(ref cmb_ensamblados);
             cmb_articulos._Cargar();
             cmb_ensamblados._Cargar();
+            cmb_pais._Cargar();
+            cmb_estado_provincia._Cargar();
+            txt_fechaActual.Text = _TE.RecuperarFechaSistema();
         }
         public EstadoCarga RecuperarDatosCliente(string cuit)
         { 
@@ -93,27 +97,27 @@ namespace CLASE05.Formularios.Facturas
         //        grid_descuento.Rows.Remove(grid_descuento.Rows[grid_descuento.CurrentRow.Index]);
         //    }
         //}
-        //public void CalcularSueldoNeto()
-        //{
-        //    if (txt_sueldo_bruto._Text.Trim() == ".")
-        //        return;
+        public void CalcularTotalVenta()
+        {
+            double sumarArticulos = 0;
+            double sumarEnsamblados = 0;
 
-        //    double sumar = 0;
-        //    double restar = 0;
+            for (int i = 0; i < grid_articulos.Rows.Count-1; i++)
+            {   
+                sumarArticulos += double.Parse(grid_articulos.Rows[i].Cells[2].Value.ToString().Replace(".", ","))
+                * double.Parse(grid_articulos.Rows[i].Cells[3].Value.ToString().Replace(".", ","));
+            }
+            for (int i = 0; i < grid_ensamblados.Rows.Count-1; i++)
+            {
+                sumarEnsamblados += double.Parse(grid_ensamblados.Rows[i].Cells[2].Value.ToString().Replace(".", ","))
+                * double.Parse(grid_ensamblados.Rows[i].Cells[3].Value.ToString().Replace(".", ","));
+            }
 
-        //    for (int i = 0; i < grid_asingacion.Rows.Count; i++)
-        //    {
-        //        sumar += double.Parse(grid_asingacion.Rows[i].Cells[2].Value.ToString().Replace(".", ","))
-        //            * double.Parse(grid_asingacion.Rows[i].Cells[3].Value.ToString().Replace(".", ","));
-        //    }
-        //    for (int i = 0; i < grid_descuento.Rows.Count; i++)
-        //    {
-        //        restar += double.Parse(grid_descuento.Rows[i].Cells[2].Value.ToString().Replace(".", ","))
-        //            * double.Parse(grid_descuento.Rows[i].Cells[3].Value.ToString().Replace(".", ","));
-        //    }
+            
 
-        //    txt_sueldo_neto._Text = (double.Parse(txt_sueldo_bruto._Text.Replace(".", ",")) + sumar + restar).ToString();
-        //}
+
+            txt_total_venta.Text = "$"+ (sumarArticulos + sumarEnsamblados).ToString();
+        }
         private void btn_agregar_articulo_Click(object sender, EventArgs e)
         {
             if (cmb_articulos.SelectedIndex == -1)
@@ -127,17 +131,28 @@ namespace CLASE05.Formularios.Facturas
                 return;
             }
             AgregarFilaGrillaArticulo();
-            //CalcularSueldoNeto();
+            CalcularTotalVenta();
         }
         private void btn_quitar_articulo_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro de quitar la fila correspondiente al artículo '" + grid_articulos.CurrentRow.Cells[1] + "'?"
+            if(grid_articulos.CurrentRow == null)
+            {
+                MessageBox.Show("No se seleccionó fila a eliminar", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if(grid_articulos.CurrentRow.Cells[0].Value == null)
+            {
+                MessageBox.Show("No se seleccionó fila a eliminar", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (MessageBox.Show("¿Está seguro de quitar la fila correspondiente al artículo '" + grid_articulos.CurrentRow.Cells[1].Value.ToString() + "'?"
                 , "Importante"
                 , MessageBoxButtons.YesNo
                 , MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 grid_articulos.Rows.Remove(grid_articulos.Rows[grid_articulos.CurrentRow.Index]);
             }
+            CalcularTotalVenta();
 
         }
         private void AgregarFilaGrillaArticulo()
@@ -193,17 +208,28 @@ namespace CLASE05.Formularios.Facturas
                 return;
             }
             AgregarFilaGrillaEnsamblados();
-            //CalcularSueldoNeto();
+            CalcularTotalVenta();
         }
         private void btn_quitar_ensamblado_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro de quitar la fila correspondiente al equipo ensamblado '" + grid_ensamblados.CurrentRow.Cells[1] +"'?"
+            if (grid_ensamblados.CurrentRow == null)
+            {
+                MessageBox.Show("No se seleccionó fila a eliminar", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (grid_ensamblados.CurrentRow.Cells[0].Value == null)
+            {
+                MessageBox.Show("No se seleccionó fila a eliminar", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (MessageBox.Show("¿Está seguro de quitar la fila correspondiente al equipo ensamblado '" + grid_ensamblados.CurrentRow.Cells[1].Value.ToString() + "'?"
                 , "Importante"
                 , MessageBoxButtons.YesNo
                 , MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 grid_ensamblados.Rows.Remove(grid_ensamblados.Rows[grid_ensamblados.CurrentRow.Index]);
             }
+            CalcularTotalVenta();
         }
         private void AgregarFilaGrillaEnsamblados()
         {
@@ -218,6 +244,55 @@ namespace CLASE05.Formularios.Facturas
                                      , txt_cantidad_ensamblado.Text
                                      , txt_precio_ensamblado.Text);
         }
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {            
+            if (txt_cuit_cliente.Text.Length < 13)
+            {
+                MessageBox.Show("Ingresar CUIT completo de cliente", "importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }            
+            if (txt_cuit_cliente.Text != "")
+                if (RecuperarDatosCliente(txt_cuit_cliente.Text) == EstadoCarga.incorrecto)
+                    return;
+        }
+        private void txt_cantidad_ensamblado_Click(object sender, EventArgs e)
+        {
+            txt_cantidad_ensamblado.SelectionStart = txt_cantidad_ensamblado.Text.Length;
+        }
+        private void txt_cantidad_articulo_Click(object sender, EventArgs e)
+        {
+            txt_cantidad_articulo.SelectionStart = txt_cantidad_articulo.Text.Length;
+        }
 
+        private void txt_cuit_cliente_Click(object sender, EventArgs e)
+        {
+            txt_cuit_cliente.SelectionStart = 0;
+        }
+
+        private void btnNuevaVenta_Click(object sender, EventArgs e)
+        {
+            foreach (var item in this.Controls)
+            {                
+                if (item.GetType().Name == "MaskedTextBox")
+                {
+                    ((MaskedTextBox)item).Text = "";
+                }
+                if (item.GetType().Name == "ComboBox01")
+                {
+                    ((ComboBox01)item).SelectedIndex = -1;
+                }
+                if (item.GetType().Name == "Grid01")
+                {
+                    ((Grid01)item).Rows.Clear();
+                }
+                if (item.GetType().Name == "LabelText02")
+                {
+                    ((LabelText02)item)._Text = "";
+                }
+            }
+            txt_total_venta.Text = "$0";
+            txt_fechaActual.Text = _TE.RecuperarFechaSistema();
+        }
     }
 }
+

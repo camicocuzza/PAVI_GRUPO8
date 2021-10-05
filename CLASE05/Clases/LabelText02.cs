@@ -74,8 +74,8 @@ namespace CLASE05.Clases
         }
 
          public string _Text
-        {
-            get =>  TxtDato.Text;
+         {
+            get => TxtDato.Text;
             set
             {
                 if (TipoD != TipoDato.numero)
@@ -83,15 +83,28 @@ namespace CLASE05.Clases
 
                 if (TipoD == TipoDato.numero)
                 {
-                    if (_Decimales==0)
-                        TxtDato.Text = string.Format("{0:" + TxtDato.Mask.Replace('9', '0') + "}", int.Parse(value));
-                    else
-                        TxtDato.Text = string.Format("{0:" + TxtDato.Mask.Replace('9', '0') + "}", double.Parse(value));
-                    // String.Format("{0:000000.00}", double.Parse("10,25")) => 000010.25
-                    // error 102500.00
+                    value = value.Replace(",", ".");
+                    if (value.IndexOf(".") == -1 && _Decimales != 0)
+                    {
+                        value = value + "." + RepetirCaracter("0", _Decimales);
+                    }
+                    if (value.IndexOf(".") != -1 && _Decimales == 0)
+                    {
+                        value = value.Substring(0, value.IndexOf("."));
+                    }
+                    TxtDato.Text = value.PadLeft(_Ancho, ' ');
                 }
             }
 
+         }
+        private string RepetirCaracter(string caracter, int cantidad)
+        {
+            string texto = "";
+            for (int i = 0; i < cantidad; i++)
+            {
+                texto += caracter;
+            }
+            return texto;
         }
         public bool _MaskFull => TxtDato.MaskFull;
         public bool _ReadOnly

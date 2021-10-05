@@ -12,6 +12,7 @@ namespace CLASE05.Formularios.Clientes
 {
     public partial class Frm_Cliente_Alta : CLASE05.Formularios.Clientes.Frm_Cliente
     {
+        TratamientosEspeciales _TE = new TratamientosEspeciales();
         NE_Clientes cli = new NE_Clientes();
         public Frm_Cliente_Alta()
         {
@@ -69,11 +70,8 @@ namespace CLASE05.Formularios.Clientes
                 cli.ciudad = txt_ciudad._Text;
 
                 //cli.decimales = txt_decimales.Text;
-
                 //double ent = double.Parse(txt_limite_credito.Text);
-                //double dec = (double.Parse(txt_decimales.Text)) / 100;
-
-                
+                //double dec = (double.Parse(txt_decimales.Text)) / 100;                
                 //cli.limite_credito = (ent + dec).ToString().Replace(",", "."); ;
                 //MessageBox.Show(cli.limite_credito);
                 

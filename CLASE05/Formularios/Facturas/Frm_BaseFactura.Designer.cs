@@ -119,6 +119,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_limite._TipoDato = CLASE05.Clases.LabelText02.TipoDato.numero;
             this.txt_limite._Validable = true;
             this.txt_limite.BackColor = System.Drawing.Color.Transparent;
+            this.txt_limite.Enabled = false;
             this.txt_limite.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_limite.ForeColor = System.Drawing.Color.Gainsboro;
             this.txt_limite.Location = new System.Drawing.Point(-96, 321);
@@ -138,6 +139,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_cuit_cliente.Name = "txt_cuit_cliente";
             this.txt_cuit_cliente.Size = new System.Drawing.Size(220, 25);
             this.txt_cuit_cliente.TabIndex = 67;
+            this.txt_cuit_cliente.Click += new System.EventHandler(this.txt_cuit_cliente_Click);
             // 
             // cmb_pais
             // 
@@ -152,6 +154,7 @@ namespace CLASE05.Formularios.Facturas
             this.cmb_pais._tabla_join_pk = null;
             this.cmb_pais._Validable = true;
             this.cmb_pais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.cmb_pais.Enabled = false;
             this.cmb_pais.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.cmb_pais.ForeColor = System.Drawing.Color.Gainsboro;
             this.cmb_pais.FormattingEnabled = true;
@@ -186,6 +189,7 @@ namespace CLASE05.Formularios.Facturas
             this.cmb_estado_provincia._tabla_join_pk = "id_pais";
             this.cmb_estado_provincia._Validable = true;
             this.cmb_estado_provincia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.cmb_estado_provincia.Enabled = false;
             this.cmb_estado_provincia.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.cmb_estado_provincia.ForeColor = System.Drawing.Color.Gainsboro;
             this.cmb_estado_provincia.FormattingEnabled = true;
@@ -223,6 +227,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_ciudad._TipoDato = CLASE05.Clases.LabelText02.TipoDato.mascaraEditada;
             this.txt_ciudad._Validable = true;
             this.txt_ciudad.BackColor = System.Drawing.Color.Transparent;
+            this.txt_ciudad.Enabled = false;
             this.txt_ciudad.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_ciudad.ForeColor = System.Drawing.Color.Gainsboro;
             this.txt_ciudad.Location = new System.Drawing.Point(-97, 487);
@@ -247,6 +252,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_razon_social._TipoDato = CLASE05.Clases.LabelText02.TipoDato.mascaraEditada;
             this.txt_razon_social._Validable = true;
             this.txt_razon_social.BackColor = System.Drawing.Color.Transparent;
+            this.txt_razon_social.Enabled = false;
             this.txt_razon_social.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_razon_social.ForeColor = System.Drawing.Color.Gainsboro;
             this.txt_razon_social.Location = new System.Drawing.Point(-97, 266);
@@ -272,6 +278,7 @@ namespace CLASE05.Formularios.Facturas
             this.btn_buscar.TabStop = false;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = false;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // label8
             // 
@@ -375,6 +382,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.txt_total_venta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txt_total_venta.Culture = new System.Globalization.CultureInfo("en-US");
+            this.txt_total_venta.Enabled = false;
             this.txt_total_venta.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
             this.txt_total_venta.ForeColor = System.Drawing.Color.Gainsboro;
             this.txt_total_venta.Location = new System.Drawing.Point(927, 592);
@@ -433,6 +441,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_cantidad_articulo.Name = "txt_cantidad_articulo";
             this.txt_cantidad_articulo.Size = new System.Drawing.Size(97, 25);
             this.txt_cantidad_articulo.TabIndex = 87;
+            this.txt_cantidad_articulo.Click += new System.EventHandler(this.txt_cantidad_articulo_Click);
             // 
             // label6
             // 
@@ -540,6 +549,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_cantidad_ensamblado.Name = "txt_cantidad_ensamblado";
             this.txt_cantidad_ensamblado.Size = new System.Drawing.Size(97, 25);
             this.txt_cantidad_ensamblado.TabIndex = 95;
+            this.txt_cantidad_ensamblado.Click += new System.EventHandler(this.txt_cantidad_ensamblado_Click);
             // 
             // label13
             // 
@@ -571,6 +581,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.txt_fechaActual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txt_fechaActual.Culture = new System.Globalization.CultureInfo("en-US");
+            this.txt_fechaActual.Enabled = false;
             this.txt_fechaActual.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
             this.txt_fechaActual.ForeColor = System.Drawing.Color.Gainsboro;
             this.txt_fechaActual.Location = new System.Drawing.Point(54, 110);
@@ -683,6 +694,7 @@ namespace CLASE05.Formularios.Facturas
             this.btnNuevaVenta.TabStop = false;
             this.btnNuevaVenta.Text = "Nueva Venta";
             this.btnNuevaVenta.UseVisualStyleBackColor = false;
+            this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click);
             // 
             // btn_alta
             // 
@@ -720,6 +732,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.txt_precio_ensamblado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txt_precio_ensamblado.Culture = new System.Globalization.CultureInfo("en-US");
+            this.txt_precio_ensamblado.Enabled = false;
             this.txt_precio_ensamblado.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
             this.txt_precio_ensamblado.ForeColor = System.Drawing.Color.Gainsboro;
             this.txt_precio_ensamblado.Location = new System.Drawing.Point(483, 409);
@@ -731,6 +744,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.txt_precio_articulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txt_precio_articulo.Culture = new System.Globalization.CultureInfo("en-US");
+            this.txt_precio_articulo.Enabled = false;
             this.txt_precio_articulo.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
             this.txt_precio_articulo.ForeColor = System.Drawing.Color.Gainsboro;
             this.txt_precio_articulo.Location = new System.Drawing.Point(483, 136);

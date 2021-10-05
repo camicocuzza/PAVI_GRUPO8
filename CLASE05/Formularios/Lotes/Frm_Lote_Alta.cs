@@ -20,6 +20,7 @@ namespace CLASE05.Formularios.Lotes
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
             TratamientosEspeciales _TE = new TratamientosEspeciales();
+            
             if (_TE.Validar(this.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
             {
 
@@ -34,8 +35,7 @@ namespace CLASE05.Formularios.Lotes
 
                 lote.num_lote = txt_n_lote._Text.ToString();
                 lote.nro_remito_proveedor = txt_n_remito._Text.ToString();
-                lote.fecha_compra = txt_fecha_compra._Text.ToString();
-                
+                lote.fecha_compra = txt_fecha_compra._Text.ToString();                
 
                 lote.Insertar();
                 MessageBox.Show("Se grabó correctamente", "Importante");

@@ -109,7 +109,7 @@ namespace CLASE05.Negocios
         public string RecuperarPrecioArticulo(string cod_articulo)
         {
             string sql = "SELECT precio FROM articulo WHERE cod_articulo = '" + cod_articulo + "'";
-            return _BD.EjecutarSelect(sql).Rows[0][0].ToString().Trim();
+            return _BD.EjecutarSelect(sql).Rows[0][0].ToString().Trim();  //.Replace(",", ".");
         }
     }
 }

@@ -89,6 +89,13 @@ namespace CLASE05.Negocios
 
             return _BD.EjecutarSelect(sql);
         }
+        public DataTable RecuperarCliente_x_RazonSocial(string razon_social)
+        {
+            string sql = @"SELECT * 
+                          FROM cliente WHERE razon_social = '" + razon_social + "'";
+
+            return _BD.EjecutarSelect(sql);
+        }
         public void Insertar()
         {
             string sqlInsert = "";
