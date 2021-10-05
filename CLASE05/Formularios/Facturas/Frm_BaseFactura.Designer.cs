@@ -45,34 +45,34 @@ namespace CLASE05.Formularios.Facturas
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.grid011 = new CLASE05.Clases.Grid01();
-            this.grid012 = new CLASE05.Clases.Grid01();
+            this.grid_articulos = new CLASE05.Clases.Grid01();
+            this.grid_ensamblados = new CLASE05.Clases.Grid01();
             this.txt_total_venta = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.txt_cantidad_articulo = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox011 = new CLASE05.Clases.ComboBox01();
+            this.cmb_articulos = new CLASE05.Clases.ComboBox01();
             this.btn_agregar_articulo = new System.Windows.Forms.Button();
             this.btn_agregar_ensamblado = new System.Windows.Forms.Button();
-            this.comboBox012 = new CLASE05.Clases.ComboBox01();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.cmb_ensamblados = new CLASE05.Clases.ComboBox01();
+            this.txt_cantidad_ensamblado = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
+            this.txt_fechaActual = new System.Windows.Forms.MaskedTextBox();
             this.btn_quitar_ensamblado = new System.Windows.Forms.Button();
             this.btn_quitar_articulo = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.btnGenerarFactura = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnGenerarVenta = new System.Windows.Forms.Button();
+            this.btnNuevaVenta = new System.Windows.Forms.Button();
             this.btn_alta = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.grid011)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grid012)).BeginInit();
+            this.txt_precio_ensamblado = new System.Windows.Forms.MaskedTextBox();
+            this.txt_precio_articulo = new System.Windows.Forms.MaskedTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_articulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_ensamblados)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_cerrar
@@ -194,7 +194,6 @@ namespace CLASE05.Formularios.Facturas
             this.cmb_estado_provincia.Size = new System.Drawing.Size(322, 25);
             this.cmb_estado_provincia.TabIndex = 64;
             this.cmb_estado_provincia.Tag = "";
-            this.cmb_estado_provincia.Text = "Seleccionar país...";
             // 
             // lbl_pais
             // 
@@ -260,7 +259,6 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.btn_buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btn_buscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_buscar.Enabled = false;
             this.btn_buscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btn_buscar.FlatAppearance.BorderSize = 2;
             this.btn_buscar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
@@ -353,25 +351,25 @@ namespace CLASE05.Formularios.Facturas
             this.label11.Text = "Total de la venta";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // grid011
+            // grid_articulos
             // 
-            this.grid011._formatoLetraHeader = System.Drawing.FontStyle.Regular;
-            this.grid011._tamannoLetraHeader = 9;
-            this.grid011.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid011.Location = new System.Drawing.Point(587, 115);
-            this.grid011.Name = "grid011";
-            this.grid011.Size = new System.Drawing.Size(463, 165);
-            this.grid011.TabIndex = 79;
+            this.grid_articulos._formatoLetraHeader = System.Drawing.FontStyle.Regular;
+            this.grid_articulos._tamannoLetraHeader = 9;
+            this.grid_articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_articulos.Location = new System.Drawing.Point(587, 115);
+            this.grid_articulos.Name = "grid_articulos";
+            this.grid_articulos.Size = new System.Drawing.Size(463, 165);
+            this.grid_articulos.TabIndex = 79;
             // 
-            // grid012
+            // grid_ensamblados
             // 
-            this.grid012._formatoLetraHeader = System.Drawing.FontStyle.Regular;
-            this.grid012._tamannoLetraHeader = 9;
-            this.grid012.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid012.Location = new System.Drawing.Point(586, 386);
-            this.grid012.Name = "grid012";
-            this.grid012.Size = new System.Drawing.Size(463, 167);
-            this.grid012.TabIndex = 80;
+            this.grid_ensamblados._formatoLetraHeader = System.Drawing.FontStyle.Regular;
+            this.grid_ensamblados._tamannoLetraHeader = 9;
+            this.grid_ensamblados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_ensamblados.Location = new System.Drawing.Point(586, 386);
+            this.grid_ensamblados.Name = "grid_ensamblados";
+            this.grid_ensamblados.Size = new System.Drawing.Size(463, 167);
+            this.grid_ensamblados.TabIndex = 80;
             // 
             // txt_total_venta
             // 
@@ -411,17 +409,6 @@ namespace CLASE05.Formularios.Facturas
             this.label4.Text = "Equipos Ensamblados";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.maskedTextBox1.Culture = new System.Globalization.CultureInfo("en-US");
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.maskedTextBox1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.maskedTextBox1.Location = new System.Drawing.Point(483, 136);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(97, 25);
-            this.maskedTextBox1.TabIndex = 85;
-            // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
@@ -435,16 +422,17 @@ namespace CLASE05.Formularios.Facturas
             this.label5.Text = "Precio";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // maskedTextBox2
+            // txt_cantidad_articulo
             // 
-            this.maskedTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.maskedTextBox2.Culture = new System.Globalization.CultureInfo("en-US");
-            this.maskedTextBox2.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.maskedTextBox2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.maskedTextBox2.Location = new System.Drawing.Point(483, 187);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(97, 25);
-            this.maskedTextBox2.TabIndex = 87;
+            this.txt_cantidad_articulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txt_cantidad_articulo.Culture = new System.Globalization.CultureInfo("en-US");
+            this.txt_cantidad_articulo.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
+            this.txt_cantidad_articulo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_cantidad_articulo.Location = new System.Drawing.Point(483, 187);
+            this.txt_cantidad_articulo.Mask = "9999999";
+            this.txt_cantidad_articulo.Name = "txt_cantidad_articulo";
+            this.txt_cantidad_articulo.Size = new System.Drawing.Size(97, 25);
+            this.txt_cantidad_articulo.TabIndex = 87;
             // 
             // label6
             // 
@@ -459,32 +447,32 @@ namespace CLASE05.Formularios.Facturas
             this.label6.Text = "Cantidad";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox011
+            // cmb_articulos
             // 
-            this.comboBox011._ComboSinSeleccion = true;
-            this.comboBox011._MensajeError = "No se ha seleccionado país";
-            this.comboBox011._Nombre_campo = "";
-            this.comboBox011._Nombre_tabla = "";
-            this.comboBox011._tabla_cargar_combo = "pais";
-            this.comboBox011._tabla_cargar_descriptor = "nombre_pais";
-            this.comboBox011._tabla_cargar_pk = "id_pais";
-            this.comboBox011._tabla_join = null;
-            this.comboBox011._tabla_join_pk = null;
-            this.comboBox011._Validable = true;
-            this.comboBox011.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.comboBox011.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.comboBox011.ForeColor = System.Drawing.Color.Gainsboro;
-            this.comboBox011.FormattingEnabled = true;
-            this.comboBox011.Location = new System.Drawing.Point(587, 67);
-            this.comboBox011.Name = "comboBox011";
-            this.comboBox011.Size = new System.Drawing.Size(286, 25);
-            this.comboBox011.TabIndex = 88;
+            this.cmb_articulos._ComboSinSeleccion = true;
+            this.cmb_articulos._MensajeError = "No se ha seleccionado país";
+            this.cmb_articulos._Nombre_campo = "";
+            this.cmb_articulos._Nombre_tabla = "";
+            this.cmb_articulos._tabla_cargar_combo = "articulo";
+            this.cmb_articulos._tabla_cargar_descriptor = "nombre";
+            this.cmb_articulos._tabla_cargar_pk = "cod_articulo";
+            this.cmb_articulos._tabla_join = null;
+            this.cmb_articulos._tabla_join_pk = null;
+            this.cmb_articulos._Validable = true;
+            this.cmb_articulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.cmb_articulos.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cmb_articulos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.cmb_articulos.FormattingEnabled = true;
+            this.cmb_articulos.Location = new System.Drawing.Point(587, 67);
+            this.cmb_articulos.Name = "cmb_articulos";
+            this.cmb_articulos.Size = new System.Drawing.Size(286, 25);
+            this.cmb_articulos.TabIndex = 88;
+            this.cmb_articulos.SelectionChangeCommitted += new System.EventHandler(this.cmb_articulos_SelectionChangeCommitted);
             // 
             // btn_agregar_articulo
             // 
             this.btn_agregar_articulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btn_agregar_articulo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_agregar_articulo.Enabled = false;
             this.btn_agregar_articulo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btn_agregar_articulo.FlatAppearance.BorderSize = 2;
             this.btn_agregar_articulo.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
@@ -498,12 +486,12 @@ namespace CLASE05.Formularios.Facturas
             this.btn_agregar_articulo.TabStop = false;
             this.btn_agregar_articulo.Text = "Agregar";
             this.btn_agregar_articulo.UseVisualStyleBackColor = false;
+            this.btn_agregar_articulo.Click += new System.EventHandler(this.btn_agregar_articulo_Click);
             // 
             // btn_agregar_ensamblado
             // 
             this.btn_agregar_ensamblado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btn_agregar_ensamblado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_agregar_ensamblado.Enabled = false;
             this.btn_agregar_ensamblado.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btn_agregar_ensamblado.FlatAppearance.BorderSize = 2;
             this.btn_agregar_ensamblado.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
@@ -517,38 +505,41 @@ namespace CLASE05.Formularios.Facturas
             this.btn_agregar_ensamblado.TabStop = false;
             this.btn_agregar_ensamblado.Text = "Agregar";
             this.btn_agregar_ensamblado.UseVisualStyleBackColor = false;
+            this.btn_agregar_ensamblado.Click += new System.EventHandler(this.btn_agregar_ensamblado_Click);
             // 
-            // comboBox012
+            // cmb_ensamblados
             // 
-            this.comboBox012._ComboSinSeleccion = true;
-            this.comboBox012._MensajeError = "No se ha seleccionado país";
-            this.comboBox012._Nombre_campo = "";
-            this.comboBox012._Nombre_tabla = "";
-            this.comboBox012._tabla_cargar_combo = "pais";
-            this.comboBox012._tabla_cargar_descriptor = "nombre_pais";
-            this.comboBox012._tabla_cargar_pk = "id_pais";
-            this.comboBox012._tabla_join = null;
-            this.comboBox012._tabla_join_pk = null;
-            this.comboBox012._Validable = true;
-            this.comboBox012.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.comboBox012.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.comboBox012.ForeColor = System.Drawing.Color.Gainsboro;
-            this.comboBox012.FormattingEnabled = true;
-            this.comboBox012.Location = new System.Drawing.Point(586, 339);
-            this.comboBox012.Name = "comboBox012";
-            this.comboBox012.Size = new System.Drawing.Size(287, 25);
-            this.comboBox012.TabIndex = 96;
+            this.cmb_ensamblados._ComboSinSeleccion = true;
+            this.cmb_ensamblados._MensajeError = "No se ha seleccionado país";
+            this.cmb_ensamblados._Nombre_campo = "";
+            this.cmb_ensamblados._Nombre_tabla = "";
+            this.cmb_ensamblados._tabla_cargar_combo = "producto_ensamblado";
+            this.cmb_ensamblados._tabla_cargar_descriptor = "cod_prod_ensamblado";
+            this.cmb_ensamblados._tabla_cargar_pk = "cod_prod_ensamblado";
+            this.cmb_ensamblados._tabla_join = null;
+            this.cmb_ensamblados._tabla_join_pk = null;
+            this.cmb_ensamblados._Validable = true;
+            this.cmb_ensamblados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.cmb_ensamblados.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cmb_ensamblados.ForeColor = System.Drawing.Color.Gainsboro;
+            this.cmb_ensamblados.FormattingEnabled = true;
+            this.cmb_ensamblados.Location = new System.Drawing.Point(586, 339);
+            this.cmb_ensamblados.Name = "cmb_ensamblados";
+            this.cmb_ensamblados.Size = new System.Drawing.Size(287, 25);
+            this.cmb_ensamblados.TabIndex = 96;
+            this.cmb_ensamblados.SelectionChangeCommitted += new System.EventHandler(this.cmb_ensamblados_SelectionChangeCommitted);
             // 
-            // maskedTextBox3
+            // txt_cantidad_ensamblado
             // 
-            this.maskedTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.maskedTextBox3.Culture = new System.Globalization.CultureInfo("en-US");
-            this.maskedTextBox3.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.maskedTextBox3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.maskedTextBox3.Location = new System.Drawing.Point(483, 460);
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(97, 25);
-            this.maskedTextBox3.TabIndex = 95;
+            this.txt_cantidad_ensamblado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txt_cantidad_ensamblado.Culture = new System.Globalization.CultureInfo("en-US");
+            this.txt_cantidad_ensamblado.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
+            this.txt_cantidad_ensamblado.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_cantidad_ensamblado.Location = new System.Drawing.Point(483, 460);
+            this.txt_cantidad_ensamblado.Mask = "9999999";
+            this.txt_cantidad_ensamblado.Name = "txt_cantidad_ensamblado";
+            this.txt_cantidad_ensamblado.Size = new System.Drawing.Size(97, 25);
+            this.txt_cantidad_ensamblado.TabIndex = 95;
             // 
             // label13
             // 
@@ -563,17 +554,6 @@ namespace CLASE05.Formularios.Facturas
             this.label13.Text = "Cantidad";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // maskedTextBox4
-            // 
-            this.maskedTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.maskedTextBox4.Culture = new System.Globalization.CultureInfo("en-US");
-            this.maskedTextBox4.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.maskedTextBox4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.maskedTextBox4.Location = new System.Drawing.Point(483, 409);
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(97, 25);
-            this.maskedTextBox4.TabIndex = 93;
-            // 
             // label14
             // 
             this.label14.BackColor = System.Drawing.Color.Transparent;
@@ -587,23 +567,22 @@ namespace CLASE05.Formularios.Facturas
             this.label14.Text = "Precio";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // maskedTextBox5
+            // txt_fechaActual
             // 
-            this.maskedTextBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.maskedTextBox5.Culture = new System.Globalization.CultureInfo("en-US");
-            this.maskedTextBox5.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.maskedTextBox5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.maskedTextBox5.Location = new System.Drawing.Point(54, 110);
-            this.maskedTextBox5.Mask = "99/99/9999";
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(128, 25);
-            this.maskedTextBox5.TabIndex = 97;
+            this.txt_fechaActual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txt_fechaActual.Culture = new System.Globalization.CultureInfo("en-US");
+            this.txt_fechaActual.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
+            this.txt_fechaActual.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_fechaActual.Location = new System.Drawing.Point(54, 110);
+            this.txt_fechaActual.Mask = "99/99/9999";
+            this.txt_fechaActual.Name = "txt_fechaActual";
+            this.txt_fechaActual.Size = new System.Drawing.Size(128, 25);
+            this.txt_fechaActual.TabIndex = 97;
             // 
             // btn_quitar_ensamblado
             // 
             this.btn_quitar_ensamblado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btn_quitar_ensamblado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_quitar_ensamblado.Enabled = false;
             this.btn_quitar_ensamblado.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btn_quitar_ensamblado.FlatAppearance.BorderSize = 2;
             this.btn_quitar_ensamblado.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
@@ -617,12 +596,12 @@ namespace CLASE05.Formularios.Facturas
             this.btn_quitar_ensamblado.TabStop = false;
             this.btn_quitar_ensamblado.Text = "Quitar";
             this.btn_quitar_ensamblado.UseVisualStyleBackColor = false;
+            this.btn_quitar_ensamblado.Click += new System.EventHandler(this.btn_quitar_ensamblado_Click);
             // 
             // btn_quitar_articulo
             // 
             this.btn_quitar_articulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btn_quitar_articulo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_quitar_articulo.Enabled = false;
             this.btn_quitar_articulo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btn_quitar_articulo.FlatAppearance.BorderSize = 2;
             this.btn_quitar_articulo.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
@@ -636,6 +615,7 @@ namespace CLASE05.Formularios.Facturas
             this.btn_quitar_articulo.TabStop = false;
             this.btn_quitar_articulo.Text = "Quitar";
             this.btn_quitar_articulo.UseVisualStyleBackColor = false;
+            this.btn_quitar_articulo.Click += new System.EventHandler(this.btn_quitar_articulo_Click);
             // 
             // label16
             // 
@@ -654,7 +634,6 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.btnGenerarFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btnGenerarFactura.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGenerarFactura.Enabled = false;
             this.btnGenerarFactura.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btnGenerarFactura.FlatAppearance.BorderSize = 2;
             this.btnGenerarFactura.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
@@ -673,7 +652,6 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardar.Enabled = false;
             this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btnGuardar.FlatAppearance.BorderSize = 2;
             this.btnGuardar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
@@ -688,23 +666,23 @@ namespace CLASE05.Formularios.Facturas
             this.btnGuardar.Text = "Grabar Venta";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
-            // btnGenerarVenta
+            // btnNuevaVenta
             // 
-            this.btnGenerarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
-            this.btnGenerarVenta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGenerarVenta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
-            this.btnGenerarVenta.FlatAppearance.BorderSize = 2;
-            this.btnGenerarVenta.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.btnGenerarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerarVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarVenta.ForeColor = System.Drawing.Color.White;
-            this.btnGenerarVenta.Location = new System.Drawing.Point(309, 623);
-            this.btnGenerarVenta.Name = "btnGenerarVenta";
-            this.btnGenerarVenta.Size = new System.Drawing.Size(123, 29);
-            this.btnGenerarVenta.TabIndex = 103;
-            this.btnGenerarVenta.TabStop = false;
-            this.btnGenerarVenta.Text = "Nueva Venta";
-            this.btnGenerarVenta.UseVisualStyleBackColor = false;
+            this.btnNuevaVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.btnNuevaVenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevaVenta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.btnNuevaVenta.FlatAppearance.BorderSize = 2;
+            this.btnNuevaVenta.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.btnNuevaVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevaVenta.ForeColor = System.Drawing.Color.White;
+            this.btnNuevaVenta.Location = new System.Drawing.Point(309, 623);
+            this.btnNuevaVenta.Name = "btnNuevaVenta";
+            this.btnNuevaVenta.Size = new System.Drawing.Size(123, 29);
+            this.btnNuevaVenta.TabIndex = 103;
+            this.btnNuevaVenta.TabStop = false;
+            this.btnNuevaVenta.Text = "Nueva Venta";
+            this.btnNuevaVenta.UseVisualStyleBackColor = false;
             // 
             // btn_alta
             // 
@@ -738,8 +716,31 @@ namespace CLASE05.Formularios.Facturas
             this.button1.TabIndex = 112;
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // txt_precio_ensamblado
+            // 
+            this.txt_precio_ensamblado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txt_precio_ensamblado.Culture = new System.Globalization.CultureInfo("en-US");
+            this.txt_precio_ensamblado.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
+            this.txt_precio_ensamblado.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_precio_ensamblado.Location = new System.Drawing.Point(483, 409);
+            this.txt_precio_ensamblado.Name = "txt_precio_ensamblado";
+            this.txt_precio_ensamblado.Size = new System.Drawing.Size(97, 25);
+            this.txt_precio_ensamblado.TabIndex = 93;
+            // 
+            // txt_precio_articulo
+            // 
+            this.txt_precio_articulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txt_precio_articulo.Culture = new System.Globalization.CultureInfo("en-US");
+            this.txt_precio_articulo.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
+            this.txt_precio_articulo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_precio_articulo.Location = new System.Drawing.Point(483, 136);
+            this.txt_precio_articulo.Name = "txt_precio_articulo";
+            this.txt_precio_articulo.Size = new System.Drawing.Size(97, 25);
+            this.txt_precio_articulo.TabIndex = 85;
+            // 
             // Frm_BaseFactura
             // 
+            this._FormularioMovil = true;
             this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1086, 663);
@@ -747,28 +748,28 @@ namespace CLASE05.Formularios.Facturas
             this.Controls.Add(this.btn_alta);
             this.Controls.Add(this.btnGenerarFactura);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.btnGenerarVenta);
+            this.Controls.Add(this.btnNuevaVenta);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.btn_quitar_articulo);
             this.Controls.Add(this.btn_quitar_ensamblado);
-            this.Controls.Add(this.maskedTextBox5);
-            this.Controls.Add(this.comboBox012);
-            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.txt_fechaActual);
+            this.Controls.Add(this.cmb_ensamblados);
+            this.Controls.Add(this.txt_cantidad_ensamblado);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.maskedTextBox4);
+            this.Controls.Add(this.txt_precio_ensamblado);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.btn_agregar_ensamblado);
             this.Controls.Add(this.btn_agregar_articulo);
-            this.Controls.Add(this.comboBox011);
-            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.cmb_articulos);
+            this.Controls.Add(this.txt_cantidad_articulo);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.txt_precio_articulo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_total_venta);
-            this.Controls.Add(this.grid012);
-            this.Controls.Add(this.grid011);
+            this.Controls.Add(this.grid_ensamblados);
+            this.Controls.Add(this.grid_articulos);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label3);
@@ -786,6 +787,7 @@ namespace CLASE05.Formularios.Facturas
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
             this.Name = "Frm_BaseFactura";
+            this.Load += new System.EventHandler(this.Frm_BaseFactura_Load);
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.txt_razon_social, 0);
@@ -799,41 +801,41 @@ namespace CLASE05.Formularios.Facturas
             this.Controls.SetChildIndex(this.txt_limite, 0);
             this.Controls.SetChildIndex(this.btn_buscar, 0);
             this.Controls.SetChildIndex(this.label8, 0);
-            this.Controls.SetChildIndex(this.btn_cerrar, 0);
-            this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.btn_minimizar, 0);
             this.Controls.SetChildIndex(this.label10, 0);
-            this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.Controls.SetChildIndex(this.label11, 0);
-            this.Controls.SetChildIndex(this.grid011, 0);
-            this.Controls.SetChildIndex(this.grid012, 0);
+            this.Controls.SetChildIndex(this.grid_articulos, 0);
+            this.Controls.SetChildIndex(this.grid_ensamblados, 0);
             this.Controls.SetChildIndex(this.txt_total_venta, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.label5, 0);
-            this.Controls.SetChildIndex(this.maskedTextBox1, 0);
+            this.Controls.SetChildIndex(this.txt_precio_articulo, 0);
             this.Controls.SetChildIndex(this.label6, 0);
-            this.Controls.SetChildIndex(this.maskedTextBox2, 0);
-            this.Controls.SetChildIndex(this.comboBox011, 0);
+            this.Controls.SetChildIndex(this.txt_cantidad_articulo, 0);
+            this.Controls.SetChildIndex(this.cmb_articulos, 0);
             this.Controls.SetChildIndex(this.btn_agregar_articulo, 0);
             this.Controls.SetChildIndex(this.btn_agregar_ensamblado, 0);
             this.Controls.SetChildIndex(this.label14, 0);
-            this.Controls.SetChildIndex(this.maskedTextBox4, 0);
+            this.Controls.SetChildIndex(this.txt_precio_ensamblado, 0);
             this.Controls.SetChildIndex(this.label13, 0);
-            this.Controls.SetChildIndex(this.maskedTextBox3, 0);
-            this.Controls.SetChildIndex(this.comboBox012, 0);
-            this.Controls.SetChildIndex(this.maskedTextBox5, 0);
+            this.Controls.SetChildIndex(this.txt_cantidad_ensamblado, 0);
+            this.Controls.SetChildIndex(this.cmb_ensamblados, 0);
+            this.Controls.SetChildIndex(this.txt_fechaActual, 0);
             this.Controls.SetChildIndex(this.btn_quitar_ensamblado, 0);
             this.Controls.SetChildIndex(this.btn_quitar_articulo, 0);
             this.Controls.SetChildIndex(this.label16, 0);
-            this.Controls.SetChildIndex(this.btnGenerarVenta, 0);
+            this.Controls.SetChildIndex(this.btnNuevaVenta, 0);
             this.Controls.SetChildIndex(this.btnGuardar, 0);
             this.Controls.SetChildIndex(this.btnGenerarFactura, 0);
             this.Controls.SetChildIndex(this.btn_alta, 0);
             this.Controls.SetChildIndex(this.button1, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.grid011)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grid012)).EndInit();
+            this.Controls.SetChildIndex(this.btn_cerrar, 0);
+            this.Controls.SetChildIndex(this.btn_maximizar, 0);
+            this.Controls.SetChildIndex(this.btn_minimizar, 0);
+            this.Controls.SetChildIndex(this.lbl_posicion, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.grid_articulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_ensamblados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -844,43 +846,43 @@ namespace CLASE05.Formularios.Facturas
         public Clases.LabelText02 txt_limite;
         public System.Windows.Forms.MaskedTextBox txt_cuit_cliente;
         public Clases.ComboBox01 cmb_pais;
-        private System.Windows.Forms.Label lbl_estado_provincia;
         public Clases.ComboBox01 cmb_estado_provincia;
-        private System.Windows.Forms.Label lbl_pais;
         public Clases.LabelText02 txt_ciudad;
         public Clases.LabelText02 txt_razon_social;
-        private System.Windows.Forms.Button btn_buscar;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label11;
-        private Clases.Grid01 grid011;
-        private Clases.Grid01 grid012;
         public System.Windows.Forms.MaskedTextBox txt_total_venta;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Label label5;
-        public System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.Label label6;
-        public Clases.ComboBox01 comboBox011;
-        private System.Windows.Forms.Button btn_agregar_articulo;
-        private System.Windows.Forms.Button btn_agregar_ensamblado;
-        public Clases.ComboBox01 comboBox012;
-        public System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.Label label13;
-        public System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.Label label14;
-        public System.Windows.Forms.MaskedTextBox maskedTextBox5;
-        private System.Windows.Forms.Button btn_quitar_ensamblado;
-        private System.Windows.Forms.Button btn_quitar_articulo;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button btnGenerarFactura;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnGenerarVenta;
+        public System.Windows.Forms.MaskedTextBox txt_cantidad_articulo;
+        public Clases.ComboBox01 cmb_articulos;
+        public Clases.ComboBox01 cmb_ensamblados;
+        public System.Windows.Forms.MaskedTextBox txt_cantidad_ensamblado;
+        public System.Windows.Forms.MaskedTextBox txt_fechaActual;
         public System.Windows.Forms.Button btn_alta;
         public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Label lbl_estado_provincia;
+        public System.Windows.Forms.Label lbl_pais;
+        public System.Windows.Forms.Button btn_buscar;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label label11;
+        public Clases.Grid01 grid_articulos;
+        public Clases.Grid01 grid_ensamblados;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Button btn_agregar_articulo;
+        public System.Windows.Forms.Button btn_agregar_ensamblado;
+        public System.Windows.Forms.Label label13;
+        public System.Windows.Forms.Label label14;
+        public System.Windows.Forms.Button btn_quitar_ensamblado;
+        public System.Windows.Forms.Button btn_quitar_articulo;
+        public System.Windows.Forms.Label label16;
+        public System.Windows.Forms.Button btnGenerarFactura;
+        public System.Windows.Forms.Button btnGuardar;
+        public System.Windows.Forms.Button btnNuevaVenta;
+        public System.Windows.Forms.MaskedTextBox txt_precio_ensamblado;
+        public System.Windows.Forms.MaskedTextBox txt_precio_articulo;
     }
 }

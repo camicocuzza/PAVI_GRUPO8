@@ -1,7 +1,7 @@
 ﻿
 namespace CLASE05.Formularios.Facturas
 {
-    partial class Frm_Sistema_Factura
+    partial class Frm_SistemaFacturas_Entrada
     {
         /// <summary>
         /// Variable del diseñador necesaria.

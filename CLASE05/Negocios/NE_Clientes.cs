@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace CLASE05.Negocios
 {
-    class NE_Clientes
+    public class NE_Clientes
     {
         public enum Validacion { correcta, incorrecta }
 

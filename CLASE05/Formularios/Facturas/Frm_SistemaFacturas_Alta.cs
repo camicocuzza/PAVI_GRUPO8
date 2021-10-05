@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace CLASE05.Formularios.Facturas
 {
-    public partial class Frm_Sistema_Factura : CLASE05.Formularios.FrmBASE.FrmBase_ABM_Entrada
+    public partial class Frm_SistemaFacturas_Alta : CLASE05.Formularios.Facturas.Frm_BaseFactura
     {
-        public Frm_Sistema_Factura()
+        public Frm_SistemaFacturas_Alta()
         {
             InitializeComponent();
         }

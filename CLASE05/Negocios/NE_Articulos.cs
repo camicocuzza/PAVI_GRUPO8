@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CLASE05.Negocios
 {
-    class NE_Articulos
+    public class NE_Articulos
     {
         public string cod_articulo { get; set; }
         public string num_serie { get; set; }
@@ -24,7 +24,12 @@ namespace CLASE05.Negocios
         public string cuit_proveedor { get; set; }
 
         BE_Acceso_Datos _BD = new BE_Acceso_Datos();
-
+        public void CargarCombo(ref ComboBox01 combo)
+        {
+            combo.DisplayMember = "nombre";
+            combo.ValueMember = "cod_articulo";
+            combo.DataSource = _BD.EjecutarSelect("SELECT nombre, cod_articulo FROM articulo");
+        }
         public DataTable BuscarArticulo(string patron, string columna)
         {
             string sql = "";
@@ -99,6 +104,12 @@ namespace CLASE05.Negocios
 
             //_BD.Borrar(sqlDelete);
 
+        }
+
+        public string RecuperarPrecioArticulo(string cod_articulo)
+        {
+            string sql = "SELECT precio FROM articulo WHERE cod_articulo = '" + cod_articulo + "'";
+            return _BD.EjecutarSelect(sql).Rows[0][0].ToString().Trim();
         }
     }
 }

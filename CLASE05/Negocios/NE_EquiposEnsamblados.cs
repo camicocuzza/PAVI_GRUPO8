@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CLASE05.Negocios
 {
-    class NE_EquiposEnsamblados
+    public class NE_EquiposEnsamblados
     {
         public string cod_prod_ensamblado { get; set; }
         public string precio { get; set; }
@@ -20,6 +20,12 @@ namespace CLASE05.Negocios
 
 
         BE_Acceso_Datos _BD = new BE_Acceso_Datos();
+        public void CargarCombo(ref ComboBox01 combo)
+        {
+            combo.DisplayMember = "cod_prod_ensamblado";
+            combo.ValueMember = "cod_prod_ensamblado";
+            combo.DataSource = _BD.EjecutarSelect("SELECT cod_prod_ensamblado, cod_prod_ensamblado FROM producto_ensamblado");
+        }
 
         public DataTable BuscarEquipoEnsamblado (string cod_eq_en)
         {
@@ -99,6 +105,11 @@ namespace CLASE05.Negocios
 
             _BD.Borrar(sqlDelete);
 
+        }
+        public string RecuperarPrecioProdEnsamblado(string cod_prod_ensamblado)
+        {
+            string sql = "SELECT precio FROM producto_ensamblado WHERE cod_prod_ensamblado = '" + cod_prod_ensamblado + "'";
+            return _BD.EjecutarSelect(sql).Rows[0][0].ToString().Trim();
         }
 
     }

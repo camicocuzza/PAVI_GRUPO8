@@ -7,7 +7,7 @@ using CLASE05.Clases;
 
 namespace CLASE05.Negocios
 {
-    class NE_DetalleFactura_Articulos
+    public class NE_DetalleFactura_Articulos
     {
         BE_Acceso_Datos _BD = new BE_Acceso_Datos();
 

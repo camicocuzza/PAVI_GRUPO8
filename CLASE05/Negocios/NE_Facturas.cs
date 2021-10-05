@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace CLASE05.Negocios
 {
-    class NE_Facturas
+    public class NE_Facturas
     {
         BE_Acceso_Datos _BD = new BE_Acceso_Datos();
         TratamientosEspeciales _TE = new TratamientosEspeciales();

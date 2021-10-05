@@ -279,17 +279,23 @@
     <Compile Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Modificacion.Designer.cs">
       <DependentUpon>Frm_EquiposEspeciales_Modificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Facturas\Frm_SistemaFacturas_Alta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Facturas\Frm_SistemaFacturas_Alta.Designer.cs">
+      <DependentUpon>Frm_SistemaFacturas_Alta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Facturas\Frm_BaseFactura.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Facturas\Frm_BaseFactura.Designer.cs">
       <DependentUpon>Frm_BaseFactura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Facturas\Frm_Sistema_Factura.cs">
+    <Compile Include="Formularios\Facturas\Frm_SistemaFacturas_Entrada.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Facturas\Frm_Sistema_Factura.Designer.cs">
-      <DependentUpon>Frm_Sistema_Factura.cs</DependentUpon>
+    <Compile Include="Formularios\Facturas\Frm_SistemaFacturas_Entrada.Designer.cs">
+      <DependentUpon>Frm_SistemaFacturas_Entrada.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmBASE\FrmBase.cs">
       <SubType>Form</SubType>
@@ -553,8 +559,11 @@
     <EmbeddedResource Include="Formularios\Facturas\Frm_BaseFactura.resx">
       <DependentUpon>Frm_BaseFactura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Facturas\Frm_Sistema_Factura.resx">
-      <DependentUpon>Frm_Sistema_Factura.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Facturas\Frm_SistemaFacturas_Alta.resx">
+      <DependentUpon>Frm_SistemaFacturas_Alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Facturas\Frm_SistemaFacturas_Entrada.resx">
+      <DependentUpon>Frm_SistemaFacturas_Entrada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmBASE\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
