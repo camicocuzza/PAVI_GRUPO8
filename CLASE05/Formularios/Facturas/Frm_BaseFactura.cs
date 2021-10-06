@@ -70,7 +70,8 @@ namespace CLASE05.Formularios.Facturas
             string id_pais = tabla_IdPais.Rows[0]["id_pais"].ToString();           
             txt_cuit_cliente.Text = tabla.Rows[0]["cuit_cliente"].ToString();
             txt_razon_social._Text = tabla.Rows[0]["razon_social"].ToString();
-            txt_limite._Text = tabla.Rows[0]["limite_credito"].ToString();  
+            txt_limite._Text = tabla.Rows[0]["limite_credito"].ToString();
+            txt_legajo_empleado.Text = tabla.Rows[0]["legajo_empleado"].ToString();
             cmb_pais.SelectedValue = id_pais.ToString();
             cmb_estado_provincia.SelectedValue = int.Parse(tabla.Rows[0]["id_estado_provincia"].ToString());
             txt_ciudad._Text = tabla.Rows[0]["ciudad"].ToString();
@@ -162,10 +163,10 @@ namespace CLASE05.Formularios.Facturas
 
         private void cmb_articulos_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            string cod_articulo = cmb_articulos.SelectedIndex.ToString();
             txt_precio_articulo.Text = ne_articulos.RecuperarPrecioArticulo(cmb_articulos.SelectedValue.ToString());
+           // txt_stock_articulo.Text = ne_articulos.ObtenerStock(cod_articulo).Rows[0][0].ToString();
         }
-
-
         private void cmb_ensamblados_SelectionChangeCommitted(object sender, EventArgs e)
         {
             txt_precio_ensamblado.Text = ne_ensamblados.RecuperarPrecioProdEnsamblado(cmb_ensamblados.SelectedValue.ToString());

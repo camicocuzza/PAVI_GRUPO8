@@ -102,7 +102,28 @@ namespace CLASE05.Clases
 
             string sql = "SELECT convert(char(10), GETDATE(), 103)";
             return _BD.EjecutarSelect(sql).Rows[0][0].ToString();
-        }      
+        }
+
+        public string FormatearDato(string dato, string TipoDato)
+        {
+            switch (TipoDato)
+            {
+                case "texto":
+                case "System.String":
+                    return "'" + dato.Trim() + "'";
+                case "numero":
+                case "System.Int16":
+                case "System.Int32":
+                case "System.Int64":
+                case "System.Double":
+                    return dato.Replace(",", ".").Trim();
+                case "fecha":
+                case "System.DateTime":
+                    return "convert(date, '" + dato + "', 103)";
+                default:
+                    return dato;
+            }
+        }
 
     }
 }

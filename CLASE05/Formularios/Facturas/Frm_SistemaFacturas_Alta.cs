@@ -30,17 +30,14 @@ namespace CLASE05.Formularios.Facturas
                 return;
             }
 
-            if (grid_articulos.Rows.Count == 0 && grid_ensamblados.Rows.Count == 0)
+            if (grid_articulos.Rows.Count == 1 && grid_ensamblados.Rows.Count == 1)
             {
                 MessageBox.Show("No se ha incluido ningún producto en la venta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
-            ne_facturas.GenerarFactura(cmb_tipo_factura.SelectedIndex, txt_fechaActual.Text, txt_total_venta.Text, txt_cuit_cliente.Text,
+            
+            ne_facturas.GenerarFactura(cmb_tipo_factura.SelectedIndex+1, txt_fechaActual.Text, txt_total_venta.Text.Replace("$", "").Replace(",","."), txt_cuit_cliente.Text,
                 txt_legajo_empleado.Text, grid_articulos, grid_ensamblados);
-            int num_factura, int id_tipo_factura, DateTime fecha, float monto_total,
-            string cuit_cliente, int legajo_empleado, Grid01 Grid_Detalle_Articulo, 
-            Grid01 Grid_Detalle_Ensamblado, Grid01 Grid_Stock
         }
     }
     

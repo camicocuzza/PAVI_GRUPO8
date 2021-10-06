@@ -75,6 +75,8 @@ namespace CLASE05.Formularios.Facturas
             this.label12 = new System.Windows.Forms.Label();
             this.cmb_tipo_factura = new CLASE05.Clases.ComboBox01();
             this.label17 = new System.Windows.Forms.Label();
+            this.txt_stock_articulo = new System.Windows.Forms.MaskedTextBox();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grid_articulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_ensamblados)).BeginInit();
             this.SuspendLayout();
@@ -760,6 +762,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.txt_legajo_empleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txt_legajo_empleado.Culture = new System.Globalization.CultureInfo("en-US");
+            this.txt_legajo_empleado.Enabled = false;
             this.txt_legajo_empleado.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
             this.txt_legajo_empleado.ForeColor = System.Drawing.Color.Gainsboro;
             this.txt_legajo_empleado.Location = new System.Drawing.Point(54, 546);
@@ -816,12 +819,39 @@ namespace CLASE05.Formularios.Facturas
             this.label17.Text = "Tipo factura";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // txt_stock_articulo
+            // 
+            this.txt_stock_articulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txt_stock_articulo.Culture = new System.Globalization.CultureInfo("en-US");
+            this.txt_stock_articulo.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
+            this.txt_stock_articulo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_stock_articulo.Location = new System.Drawing.Point(906, 67);
+            this.txt_stock_articulo.Mask = "9999999";
+            this.txt_stock_articulo.Name = "txt_stock_articulo";
+            this.txt_stock_articulo.Size = new System.Drawing.Size(97, 25);
+            this.txt_stock_articulo.TabIndex = 119;
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label15.Location = new System.Drawing.Point(903, 45);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(100, 20);
+            this.label15.TabIndex = 118;
+            this.label15.Text = "Stock actual";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Frm_BaseFactura
             // 
             this._FormularioMovil = true;
             this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1086, 663);
+            this.Controls.Add(this.txt_stock_articulo);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.cmb_tipo_factura);
             this.Controls.Add(this.txt_legajo_empleado);
@@ -920,6 +950,8 @@ namespace CLASE05.Formularios.Facturas
             this.Controls.SetChildIndex(this.txt_legajo_empleado, 0);
             this.Controls.SetChildIndex(this.cmb_tipo_factura, 0);
             this.Controls.SetChildIndex(this.label17, 0);
+            this.Controls.SetChildIndex(this.label15, 0);
+            this.Controls.SetChildIndex(this.txt_stock_articulo, 0);
             ((System.ComponentModel.ISupportInitialize)(this.grid_articulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_ensamblados)).EndInit();
             this.ResumeLayout(false);
@@ -974,5 +1006,7 @@ namespace CLASE05.Formularios.Facturas
         public System.Windows.Forms.Label label12;
         public Clases.ComboBox01 cmb_tipo_factura;
         public System.Windows.Forms.Label label17;
+        public System.Windows.Forms.MaskedTextBox txt_stock_articulo;
+        public System.Windows.Forms.Label label15;
     }
 }

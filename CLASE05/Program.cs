@@ -41,7 +41,7 @@ namespace CLASE05
             //Application.Run(new Frm_ABM_Proveedores_Entrada());
             //Application.Run(new Frm_ABM_Lote_Entrada());
             //Application.Run(new Frm_Proveedor_Consulta());
-            Application.Run(new Frm_BaseFactura());
+            Application.Run(new Frm_SistemaFacturas_Alta());
         }
     }
 }

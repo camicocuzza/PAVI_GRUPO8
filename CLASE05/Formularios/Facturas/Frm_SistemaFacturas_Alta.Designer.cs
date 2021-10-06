@@ -105,7 +105,7 @@ namespace CLASE05.Formularios.Facturas
             this.btn_quitar_articulo.FlatAppearance.BorderSize = 2;
             this.btn_quitar_articulo.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             // 
-            // btnGenerarFactura
+            // btnMostrarFactura
             // 
             this.btnMostrarFactura.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btnMostrarFactura.FlatAppearance.BorderSize = 2;
@@ -123,6 +123,11 @@ namespace CLASE05.Formularios.Facturas
             this.btnNuevaVenta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btnNuevaVenta.FlatAppearance.BorderSize = 2;
             this.btnNuevaVenta.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            // 
+            // cmb_tipo_factura
+            // 
+            this.cmb_tipo_factura.DisplayMember = "nombre";
+            this.cmb_tipo_factura.ValueMember = "id_tipo_factura";
             // 
             // btn_cerrar
             // 
