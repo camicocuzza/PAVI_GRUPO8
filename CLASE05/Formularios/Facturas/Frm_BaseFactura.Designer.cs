@@ -591,9 +591,8 @@ namespace CLASE05.Formularios.Facturas
             this.txt_fechaActual.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
             this.txt_fechaActual.ForeColor = System.Drawing.Color.Gainsboro;
             this.txt_fechaActual.Location = new System.Drawing.Point(54, 102);
-            this.txt_fechaActual.Mask = "99/99/9999";
             this.txt_fechaActual.Name = "txt_fechaActual";
-            this.txt_fechaActual.Size = new System.Drawing.Size(128, 25);
+            this.txt_fechaActual.Size = new System.Drawing.Size(76, 25);
             this.txt_fechaActual.TabIndex = 97;
             // 
             // btn_quitar_ensamblado

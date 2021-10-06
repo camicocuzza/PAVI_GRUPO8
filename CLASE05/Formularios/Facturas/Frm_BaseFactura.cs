@@ -22,6 +22,7 @@ namespace CLASE05.Formularios.Facturas
         public NE_EquiposEnsamblados ne_ensamblados = new NE_EquiposEnsamblados();
         public NE_Facturas ne_facturas = new NE_Facturas();
         public NE_Clientes ne_clientes = new NE_Clientes();
+        NE_Stock ne_stock = new NE_Stock();
         //public string id_perfil = "";
         public string cuit_cliente { get; set; }
 
@@ -101,9 +102,19 @@ namespace CLASE05.Formularios.Facturas
                 MessageBox.Show("No seleccionó artículo", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (txt_cantidad_articulo.Text == "")
+            if (txt_cantidad_articulo.Text == "" || txt_cantidad_articulo.Text == "0")
             {
                 MessageBox.Show("No ingresó cantidad del artículo", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if(txt_stock_articulo.Text == "0")
+            {
+                MessageBox.Show("No hay stock disponible del artículo seleccionado", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (int.Parse(txt_stock_articulo.Text) < int.Parse(txt_cantidad_articulo.Text) )
+            {
+                MessageBox.Show("No hay stock suficiente para la cantidad ingresada", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             AgregarFilaGrillaArticulo();
@@ -163,9 +174,10 @@ namespace CLASE05.Formularios.Facturas
 
         private void cmb_articulos_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            string cod_articulo = cmb_articulos.SelectedIndex.ToString();
+            string cod_articulo = cmb_articulos.SelectedValue.ToString();
             txt_precio_articulo.Text = ne_articulos.RecuperarPrecioArticulo(cmb_articulos.SelectedValue.ToString());
-           // txt_stock_articulo.Text = ne_articulos.ObtenerStock(cod_articulo).Rows[0][0].ToString();
+            ne_stock.ObtenerStock(cod_articulo).Rows[0][0].ToString();
+            txt_stock_articulo.Text = ne_stock.ObtenerStock(cod_articulo).Rows[0][0].ToString();
         }
         private void cmb_ensamblados_SelectionChangeCommitted(object sender, EventArgs e)
         {

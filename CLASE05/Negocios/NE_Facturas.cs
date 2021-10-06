@@ -71,8 +71,9 @@ namespace CLASE05.Negocios
                 (id_tipo_factura, fecha, monto_total, cuit_cliente, legajo_empleado) VALUES (";
            //string[] dataFecha = fecha.Split('/');            
             sqlInsert += id_tipo_factura;
-            sqlInsert += ", " + _TE.FormatearDato(fecha, "fecha"); 
+            //sqlInsert += ", " + _TE.FormatearDato(fecha, "fecha");
             //sqlInsert += ", " + fecha;
+            sqlInsert += ", GETDATE()";
             sqlInsert += ", " + total_venta;
             sqlInsert += ", '" + cuit_cliente + "'";
             sqlInsert += ", " + legajo_empleado;   

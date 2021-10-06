@@ -100,7 +100,7 @@ namespace CLASE05.Clases
         {
             BE_Acceso_Datos _BD = new BE_Acceso_Datos();
 
-            string sql = "SELECT convert(char(10), GETDATE(), 103)";
+            string sql = "SELECT GETDATE()"; 
             return _BD.EjecutarSelect(sql).Rows[0][0].ToString();
         }
 
@@ -119,7 +119,7 @@ namespace CLASE05.Clases
                     return dato.Replace(",", ".").Trim();
                 case "fecha":
                 case "System.DateTime":
-                    return "convert(date, '" + dato + "', 103)";
+                    return "convert(datetime, '" + dato + "', 103)";
                 default:
                     return dato;
             }
