@@ -761,7 +761,6 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.txt_legajo_empleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txt_legajo_empleado.Culture = new System.Globalization.CultureInfo("en-US");
-            this.txt_legajo_empleado.Enabled = false;
             this.txt_legajo_empleado.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
             this.txt_legajo_empleado.ForeColor = System.Drawing.Color.Gainsboro;
             this.txt_legajo_empleado.Location = new System.Drawing.Point(54, 546);

@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
+﻿using CLASE05.Clases;
+using CLASE05.Negocios;
+using System;
 using System.Windows.Forms;
-using CLASE05.Clases;
 
 namespace CLASE05.Formularios.Facturas
 {
     public partial class Frm_SistemaFacturas_Alta : CLASE05.Formularios.Facturas.Frm_BaseFactura
     {
+        NE_Empleados ne_empleados = new NE_Empleados();
         TratamientosEspeciales _TE = new TratamientosEspeciales();
         public Frm_SistemaFacturas_Alta()
         {
@@ -29,16 +26,29 @@ namespace CLASE05.Formularios.Facturas
                 MessageBox.Show("No se seleccionado tipo de factura", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
+            if (txt_legajo_empleado.Text == "")
+            {
+                MessageBox.Show("Falta ingresar legajo de empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (ne_empleados.ValidarExistencia(txt_legajo_empleado.Text) == false)
+            {
+                MessageBox.Show("El legajo '" + txt_legajo_empleado.Text + "' no corresponde a un empleado activo", "Importante");
+                txt_legajo_empleado.Focus();
+                return;
+            }
             if (grid_articulos.Rows.Count == 1 && grid_ensamblados.Rows.Count == 1)
             {
                 MessageBox.Show("No se ha incluido ningún producto en la venta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            
-            ne_facturas.GenerarFactura(cmb_tipo_factura.SelectedIndex+1, txt_fechaActual.Text, txt_total_venta.Text.Replace("$", "").Replace(",","."), txt_cuit_cliente.Text,
+
+            ne_facturas.GenerarFactura(cmb_tipo_factura.SelectedIndex + 1, txt_fechaActual.Text, txt_total_venta.Text.Replace("$", "").Replace(",", "."), txt_cuit_cliente.Text,
                 txt_legajo_empleado.Text, grid_articulos, grid_ensamblados);
+
+            this.Inicio();
+            limpiarformulario();            
         }
     }
-    
+
 }

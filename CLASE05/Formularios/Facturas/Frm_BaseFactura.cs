@@ -262,8 +262,13 @@ namespace CLASE05.Formularios.Facturas
 
         private void btnNuevaVenta_Click(object sender, EventArgs e)
         {
+            limpiarformulario();
+        }
+
+        protected void limpiarformulario()
+        {
             foreach (var item in this.Controls)
-            {                
+            {
                 if (item.GetType().Name == "MaskedTextBox")
                 {
                     ((MaskedTextBox)item).Text = "";
