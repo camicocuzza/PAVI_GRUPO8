@@ -119,11 +119,11 @@ namespace CLASE05.Negocios
                     string sqlInsertDE = @"INSERT INTO detalle_factura_prodEnsamblado (cod_prod_ensamblado, num_factura, id_tipo_factura, 
                                         cantidad, precio) VALUES (";
 
-                    sqlInsertDE += Grid_Detalle_Articulo.Rows[i].Cells[0].Value.ToString();
+                    sqlInsertDE += "'" + Grid_Detalle_Ensamblado.Rows[i].Cells[1].Value.ToString() + "'";
                     sqlInsertDE += ", " + num_factura;
                     sqlInsertDE += ", " + id_tipo_factura;
-                    sqlInsertDE += ", " + Grid_Detalle_Articulo.Rows[i].Cells[2].Value.ToString();
-                    sqlInsertDE += ", " + Grid_Detalle_Articulo.Rows[i].Cells[3].Value.ToString().Replace(',', '.');
+                    sqlInsertDE += ", " + Grid_Detalle_Ensamblado.Rows[i].Cells[2].Value.ToString();
+                    sqlInsertDE += ", " + Grid_Detalle_Ensamblado.Rows[i].Cells[3].Value.ToString().Replace(',', '.');
                     sqlInsertDE += ")";
 
                     _BD.Insertar(sqlInsertDE, BE_Acceso_Datos.RecuperacionPk.no_recuperar);

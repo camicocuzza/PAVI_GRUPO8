@@ -244,6 +244,7 @@ namespace CLASE05.Formularios.Facturas
             if (txt_cuit_cliente.Text != "")
                 if (RecuperarDatosCliente(txt_cuit_cliente.Text) == EstadoCarga.incorrecto)
                     return;
+            txt_cuit_cliente.Enabled = false;
         }
         private void txt_cantidad_ensamblado_Click(object sender, EventArgs e)
         {
@@ -282,6 +283,7 @@ namespace CLASE05.Formularios.Facturas
             }
             txt_total_venta.Text = "$0";
             txt_fechaActual.Text = _TE.RecuperarFechaSistema();
+            txt_cuit_cliente.Enabled = true;
         }
     }
 }
