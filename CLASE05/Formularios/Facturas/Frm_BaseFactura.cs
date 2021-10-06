@@ -42,6 +42,7 @@ namespace CLASE05.Formularios.Facturas
             //ne_ensamblados.CargarCombo(ref cmb_ensamblados);
             cmb_articulos._Cargar();
             cmb_ensamblados._Cargar();
+            cmb_tipo_factura._Cargar();
             cmb_pais._Cargar();
             cmb_estado_provincia._Cargar();
             txt_fechaActual.Text = _TE.RecuperarFechaSistema();

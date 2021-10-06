@@ -36,5 +36,36 @@ namespace CLASE05.Negocios
             _BD.Insertar(sqlInsert);
         }
 
+        public void ActualizarStockVenta(string cod_articulo, string fecha, int cantidad)
+        {
+            string sqlInsert = "";
+
+            int stockanterior = int.Parse(this.ObtenerStock(cod_articulo).Rows[0][0].ToString());
+            int stockactual = stockanterior - cantidad;
+
+            sqlInsert = @"INSERT INTO stock (cod_articulo, fecha, cantidad) VALUES (";
+            sqlInsert += "'" + cod_articulo + "'";
+            sqlInsert += ", '" + fecha + "'";
+            sqlInsert += ", " + stockactual + ")";
+
+            MessageBox.Show(sqlInsert);
+            _BD.Insertar(sqlInsert);
+        }
+        public void ActualizarStockCompra(string cod_articulo, string fecha, int cantidad)
+        {
+            string sqlInsert = "";
+
+            int stockanterior =  int.Parse(this.ObtenerStock(cod_articulo).Rows[0][0].ToString());
+            int stockactual = stockanterior + cantidad;
+
+            sqlInsert = @"INSERT INTO stock (cod_articulo, fecha, cantidad) VALUES (";
+            sqlInsert += "'" + cod_articulo + "'";
+            sqlInsert += ", '" + fecha + "'";
+            sqlInsert += ", " + stockactual + ")";
+
+            MessageBox.Show(sqlInsert);
+            _BD.Insertar(sqlInsert);
+        }
+
     }
 }

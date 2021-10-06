@@ -107,9 +107,9 @@ namespace CLASE05.Formularios.Facturas
             // 
             // btnGenerarFactura
             // 
-            this.btnGenerarFactura.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
-            this.btnGenerarFactura.FlatAppearance.BorderSize = 2;
-            this.btnGenerarFactura.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.btnMostrarFactura.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.btnMostrarFactura.FlatAppearance.BorderSize = 2;
+            this.btnMostrarFactura.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             // 
             // btnGuardar
             // 

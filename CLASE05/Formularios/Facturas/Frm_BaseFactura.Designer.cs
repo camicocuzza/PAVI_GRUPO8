@@ -64,14 +64,14 @@ namespace CLASE05.Formularios.Facturas
             this.btn_quitar_ensamblado = new System.Windows.Forms.Button();
             this.btn_quitar_articulo = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
-            this.btnGenerarFactura = new System.Windows.Forms.Button();
+            this.btnMostrarFactura = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevaVenta = new System.Windows.Forms.Button();
             this.btn_alta = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txt_precio_ensamblado = new System.Windows.Forms.MaskedTextBox();
             this.txt_precio_articulo = new System.Windows.Forms.MaskedTextBox();
-            this.legajo_empleado = new System.Windows.Forms.MaskedTextBox();
+            this.txt_legajo_empleado = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cmb_tipo_factura = new CLASE05.Clases.ComboBox01();
             this.label17 = new System.Windows.Forms.Label();
@@ -645,23 +645,23 @@ namespace CLASE05.Formularios.Facturas
             this.label16.Text = "Fecha Actual";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnGenerarFactura
+            // btnMostrarFactura
             // 
-            this.btnGenerarFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
-            this.btnGenerarFactura.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGenerarFactura.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
-            this.btnGenerarFactura.FlatAppearance.BorderSize = 2;
-            this.btnGenerarFactura.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.btnGenerarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerarFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarFactura.ForeColor = System.Drawing.Color.White;
-            this.btnGenerarFactura.Location = new System.Drawing.Point(457, 623);
-            this.btnGenerarFactura.Name = "btnGenerarFactura";
-            this.btnGenerarFactura.Size = new System.Drawing.Size(123, 29);
-            this.btnGenerarFactura.TabIndex = 107;
-            this.btnGenerarFactura.TabStop = false;
-            this.btnGenerarFactura.Text = "Generar Factura";
-            this.btnGenerarFactura.UseVisualStyleBackColor = false;
+            this.btnMostrarFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.btnMostrarFactura.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMostrarFactura.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.btnMostrarFactura.FlatAppearance.BorderSize = 2;
+            this.btnMostrarFactura.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.btnMostrarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrarFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarFactura.ForeColor = System.Drawing.Color.White;
+            this.btnMostrarFactura.Location = new System.Drawing.Point(457, 623);
+            this.btnMostrarFactura.Name = "btnMostrarFactura";
+            this.btnMostrarFactura.Size = new System.Drawing.Size(123, 29);
+            this.btnMostrarFactura.TabIndex = 107;
+            this.btnMostrarFactura.TabStop = false;
+            this.btnMostrarFactura.Text = "Mostrar Factura";
+            this.btnMostrarFactura.UseVisualStyleBackColor = false;
             // 
             // btnGuardar
             // 
@@ -756,17 +756,17 @@ namespace CLASE05.Formularios.Facturas
             this.txt_precio_articulo.Size = new System.Drawing.Size(97, 25);
             this.txt_precio_articulo.TabIndex = 85;
             // 
-            // legajo_empleado
+            // txt_legajo_empleado
             // 
-            this.legajo_empleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.legajo_empleado.Culture = new System.Globalization.CultureInfo("en-US");
-            this.legajo_empleado.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.legajo_empleado.ForeColor = System.Drawing.Color.Gainsboro;
-            this.legajo_empleado.Location = new System.Drawing.Point(54, 546);
-            this.legajo_empleado.Mask = "999999";
-            this.legajo_empleado.Name = "legajo_empleado";
-            this.legajo_empleado.Size = new System.Drawing.Size(220, 25);
-            this.legajo_empleado.TabIndex = 113;
+            this.txt_legajo_empleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txt_legajo_empleado.Culture = new System.Globalization.CultureInfo("en-US");
+            this.txt_legajo_empleado.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
+            this.txt_legajo_empleado.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_legajo_empleado.Location = new System.Drawing.Point(54, 546);
+            this.txt_legajo_empleado.Mask = "999999";
+            this.txt_legajo_empleado.Name = "txt_legajo_empleado";
+            this.txt_legajo_empleado.Size = new System.Drawing.Size(220, 25);
+            this.txt_legajo_empleado.TabIndex = 113;
             // 
             // label12
             // 
@@ -788,13 +788,12 @@ namespace CLASE05.Formularios.Facturas
             this.cmb_tipo_factura._Nombre_campo = null;
             this.cmb_tipo_factura._Nombre_tabla = null;
             this.cmb_tipo_factura._tabla_cargar_combo = "tipo_factura";
-            this.cmb_tipo_factura._tabla_cargar_descriptor = "nombre_tipo_factura";
+            this.cmb_tipo_factura._tabla_cargar_descriptor = "nombre";
             this.cmb_tipo_factura._tabla_cargar_pk = "id_tipo_factura";
             this.cmb_tipo_factura._tabla_join = "pais";
             this.cmb_tipo_factura._tabla_join_pk = "id_pais";
             this.cmb_tipo_factura._Validable = true;
             this.cmb_tipo_factura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.cmb_tipo_factura.Enabled = false;
             this.cmb_tipo_factura.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.cmb_tipo_factura.ForeColor = System.Drawing.Color.Gainsboro;
             this.cmb_tipo_factura.FormattingEnabled = true;
@@ -825,11 +824,11 @@ namespace CLASE05.Formularios.Facturas
             this.ClientSize = new System.Drawing.Size(1086, 663);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.cmb_tipo_factura);
-            this.Controls.Add(this.legajo_empleado);
+            this.Controls.Add(this.txt_legajo_empleado);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_alta);
-            this.Controls.Add(this.btnGenerarFactura);
+            this.Controls.Add(this.btnMostrarFactura);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnNuevaVenta);
             this.Controls.Add(this.label16);
@@ -910,7 +909,7 @@ namespace CLASE05.Formularios.Facturas
             this.Controls.SetChildIndex(this.label16, 0);
             this.Controls.SetChildIndex(this.btnNuevaVenta, 0);
             this.Controls.SetChildIndex(this.btnGuardar, 0);
-            this.Controls.SetChildIndex(this.btnGenerarFactura, 0);
+            this.Controls.SetChildIndex(this.btnMostrarFactura, 0);
             this.Controls.SetChildIndex(this.btn_alta, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
@@ -918,7 +917,7 @@ namespace CLASE05.Formularios.Facturas
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
             this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.Controls.SetChildIndex(this.label12, 0);
-            this.Controls.SetChildIndex(this.legajo_empleado, 0);
+            this.Controls.SetChildIndex(this.txt_legajo_empleado, 0);
             this.Controls.SetChildIndex(this.cmb_tipo_factura, 0);
             this.Controls.SetChildIndex(this.label17, 0);
             ((System.ComponentModel.ISupportInitialize)(this.grid_articulos)).EndInit();
@@ -966,12 +965,12 @@ namespace CLASE05.Formularios.Facturas
         public System.Windows.Forms.Button btn_quitar_ensamblado;
         public System.Windows.Forms.Button btn_quitar_articulo;
         public System.Windows.Forms.Label label16;
-        public System.Windows.Forms.Button btnGenerarFactura;
+        public System.Windows.Forms.Button btnMostrarFactura;
         public System.Windows.Forms.Button btnGuardar;
         public System.Windows.Forms.Button btnNuevaVenta;
         public System.Windows.Forms.MaskedTextBox txt_precio_ensamblado;
         public System.Windows.Forms.MaskedTextBox txt_precio_articulo;
-        public System.Windows.Forms.MaskedTextBox legajo_empleado;
+        public System.Windows.Forms.MaskedTextBox txt_legajo_empleado;
         public System.Windows.Forms.Label label12;
         public Clases.ComboBox01 cmb_tipo_factura;
         public System.Windows.Forms.Label label17;

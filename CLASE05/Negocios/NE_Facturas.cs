@@ -38,6 +38,13 @@ namespace CLASE05.Negocios
                           WHERE f.num_factura = " + num_factura + " AND tf.id_tipo_factura = " + id_tipo_factura;
             return _BD.EjecutarSelect(sql);
         }
+        public DataTable Recuperar_num_factura(string cuit_cliente, string fecha)
+        {
+            string sql = @"SELECT num_factura
+                          FROM factura
+                          WHERE cuit_cliente = '" + cuit_cliente + "' AND fecha = '" + fecha + "'";
+            return _BD.EjecutarSelect(sql);
+        }
         public DataTable Buscar_x_legajo(int legajo_empleado)
         {
             string sql = @"SELECT f.num_factura, f.id_tipo_factura, f.fecha, f.monto_total, f.cuit_cliente, f.legajo_empleado
@@ -55,14 +62,13 @@ namespace CLASE05.Negocios
 
             return _BD.EjecutarSelect(sql);
         }
-        public void GenerarFactura(int num_factura, int id_tipo_factura, DateTime fecha, float total_venta, 
+        public void GenerarFactura(int id_tipo_factura, DateTime fecha, float total_venta, 
             string cuit_cliente, int legajo_empleado, Grid01 Grid_Detalle_Articulo, 
-            Grid01 Grid_Detalle_Ensamblado, Grid01 Grid_Stock)
+            Grid01 Grid_Detalle_Ensamblado)
         {
             string sqlInsert = @"INSERT INTO factura 
-                (num_factura, id_tipo_factura, fecha, monto_total, cuit_cliente, legajo_empleado) VALUES (";
-           //string[] dataFecha = fecha.Split('/');
-            sqlInsert += num_factura;
+                (id_tipo_factura, fecha, monto_total, cuit_cliente, legajo_empleado) VALUES (";
+           //string[] dataFecha = fecha.Split('/');            
             sqlInsert += ", " + id_tipo_factura;
             sqlInsert += ", " + fecha;
             sqlInsert += ", " + total_venta;
