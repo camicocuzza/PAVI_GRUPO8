@@ -55,7 +55,7 @@ namespace CLASE05.Negocios
 
             return _BD.EjecutarSelect(sql);
         }
-        public void GenerarFactura(int num_factura, int id_tipo_factura, DateTime fecha, float monto_total, 
+        public void GenerarFactura(int num_factura, int id_tipo_factura, DateTime fecha, float total_venta, 
             string cuit_cliente, int legajo_empleado, Grid01 Grid_Detalle_Articulo, 
             Grid01 Grid_Detalle_Ensamblado, Grid01 Grid_Stock)
         {
@@ -65,7 +65,7 @@ namespace CLASE05.Negocios
             sqlInsert += num_factura;
             sqlInsert += ", " + id_tipo_factura;
             sqlInsert += ", " + fecha;
-            sqlInsert += ", " + monto_total;
+            sqlInsert += ", " + total_venta;
             sqlInsert += ", '" + cuit_cliente + "'";
             sqlInsert += ", " + legajo_empleado;
             //sqlInsert += ", " + _TE.FormatearDato(fecha, "fecha");    
@@ -111,9 +111,7 @@ namespace CLASE05.Negocios
 
                 _BD.Insertar(sqlInsertDE, BE_Acceso_Datos.RecuperacionPk.no_recuperar);
 
-            }
-
-            
+            }        
 
             if (_BD.CerrarTransaccion() == BE_Acceso_Datos.EstadoTransaccion.correcto)
             {

@@ -71,6 +71,10 @@ namespace CLASE05.Formularios.Facturas
             this.button1 = new System.Windows.Forms.Button();
             this.txt_precio_ensamblado = new System.Windows.Forms.MaskedTextBox();
             this.txt_precio_articulo = new System.Windows.Forms.MaskedTextBox();
+            this.legajo_empleado = new System.Windows.Forms.MaskedTextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cmb_tipo_factura = new CLASE05.Clases.ComboBox01();
+            this.label17 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grid_articulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_ensamblados)).BeginInit();
             this.SuspendLayout();
@@ -584,7 +588,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_fechaActual.Enabled = false;
             this.txt_fechaActual.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
             this.txt_fechaActual.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_fechaActual.Location = new System.Drawing.Point(54, 110);
+            this.txt_fechaActual.Location = new System.Drawing.Point(54, 102);
             this.txt_fechaActual.Mask = "99/99/9999";
             this.txt_fechaActual.Name = "txt_fechaActual";
             this.txt_fechaActual.Size = new System.Drawing.Size(128, 25);
@@ -633,7 +637,7 @@ namespace CLASE05.Formularios.Facturas
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label16.Location = new System.Drawing.Point(26, 75);
+            this.label16.Location = new System.Drawing.Point(47, 79);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(122, 20);
@@ -752,12 +756,77 @@ namespace CLASE05.Formularios.Facturas
             this.txt_precio_articulo.Size = new System.Drawing.Size(97, 25);
             this.txt_precio_articulo.TabIndex = 85;
             // 
+            // legajo_empleado
+            // 
+            this.legajo_empleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.legajo_empleado.Culture = new System.Globalization.CultureInfo("en-US");
+            this.legajo_empleado.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
+            this.legajo_empleado.ForeColor = System.Drawing.Color.Gainsboro;
+            this.legajo_empleado.Location = new System.Drawing.Point(54, 546);
+            this.legajo_empleado.Mask = "999999";
+            this.legajo_empleado.Name = "legajo_empleado";
+            this.legajo_empleado.Size = new System.Drawing.Size(220, 25);
+            this.legajo_empleado.TabIndex = 113;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label12.Location = new System.Drawing.Point(52, 525);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(130, 20);
+            this.label12.TabIndex = 114;
+            this.label12.Text = "Legajo empleado";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cmb_tipo_factura
+            // 
+            this.cmb_tipo_factura._ComboSinSeleccion = true;
+            this.cmb_tipo_factura._MensajeError = "No se ha seleccionado estado/provincia";
+            this.cmb_tipo_factura._Nombre_campo = null;
+            this.cmb_tipo_factura._Nombre_tabla = null;
+            this.cmb_tipo_factura._tabla_cargar_combo = "tipo_factura";
+            this.cmb_tipo_factura._tabla_cargar_descriptor = "nombre_tipo_factura";
+            this.cmb_tipo_factura._tabla_cargar_pk = "id_tipo_factura";
+            this.cmb_tipo_factura._tabla_join = "pais";
+            this.cmb_tipo_factura._tabla_join_pk = "id_pais";
+            this.cmb_tipo_factura._Validable = true;
+            this.cmb_tipo_factura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.cmb_tipo_factura.Enabled = false;
+            this.cmb_tipo_factura.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cmb_tipo_factura.ForeColor = System.Drawing.Color.Gainsboro;
+            this.cmb_tipo_factura.FormattingEnabled = true;
+            this.cmb_tipo_factura.Location = new System.Drawing.Point(219, 102);
+            this.cmb_tipo_factura.Name = "cmb_tipo_factura";
+            this.cmb_tipo_factura.Size = new System.Drawing.Size(158, 25);
+            this.cmb_tipo_factura.TabIndex = 115;
+            this.cmb_tipo_factura.Tag = "";
+            // 
+            // label17
+            // 
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label17.Location = new System.Drawing.Point(215, 79);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(122, 20);
+            this.label17.TabIndex = 117;
+            this.label17.Text = "Tipo factura";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Frm_BaseFactura
             // 
             this._FormularioMovil = true;
             this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1086, 663);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.cmb_tipo_factura);
+            this.Controls.Add(this.legajo_empleado);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_alta);
             this.Controls.Add(this.btnGenerarFactura);
@@ -848,6 +917,10 @@ namespace CLASE05.Formularios.Facturas
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
             this.Controls.SetChildIndex(this.lbl_posicion, 0);
+            this.Controls.SetChildIndex(this.label12, 0);
+            this.Controls.SetChildIndex(this.legajo_empleado, 0);
+            this.Controls.SetChildIndex(this.cmb_tipo_factura, 0);
+            this.Controls.SetChildIndex(this.label17, 0);
             ((System.ComponentModel.ISupportInitialize)(this.grid_articulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_ensamblados)).EndInit();
             this.ResumeLayout(false);
@@ -898,5 +971,9 @@ namespace CLASE05.Formularios.Facturas
         public System.Windows.Forms.Button btnNuevaVenta;
         public System.Windows.Forms.MaskedTextBox txt_precio_ensamblado;
         public System.Windows.Forms.MaskedTextBox txt_precio_articulo;
+        public System.Windows.Forms.MaskedTextBox legajo_empleado;
+        public System.Windows.Forms.Label label12;
+        public Clases.ComboBox01 cmb_tipo_factura;
+        public System.Windows.Forms.Label label17;
     }
 }

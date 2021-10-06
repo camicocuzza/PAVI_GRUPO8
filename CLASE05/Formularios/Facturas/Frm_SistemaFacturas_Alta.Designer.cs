@@ -29,12 +29,37 @@ namespace CLASE05.Formularios.Facturas
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_SistemaFacturas_Alta));
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.Size = new System.Drawing.Size(161, 31);
             this.label2.Text = "Alta Facturas";
+            // 
+            // cmb_pais
+            // 
+            this.cmb_pais.DisplayMember = "nombre_pais";
+            this.cmb_pais.ValueMember = "id_pais";
+            // 
+            // cmb_estado_provincia
+            // 
+            this.cmb_estado_provincia.DisplayMember = "nombre_estado_provincia";
+            this.cmb_estado_provincia.ValueMember = "id_estado_provincia";
+            // 
+            // cmb_articulos
+            // 
+            this.cmb_articulos.DisplayMember = "nombre";
+            this.cmb_articulos.ValueMember = "cod_articulo";
+            // 
+            // cmb_ensamblados
+            // 
+            this.cmb_ensamblados.DisplayMember = "cod_prod_ensamblado";
+            this.cmb_ensamblados.ValueMember = "cod_prod_ensamblado";
+            // 
+            // txt_fechaActual
+            // 
+            this.txt_fechaActual.Text = "06102021";
             // 
             // btn_alta
             // 
@@ -91,8 +116,9 @@ namespace CLASE05.Formularios.Facturas
             this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btnGuardar.FlatAppearance.BorderSize = 2;
             this.btnGuardar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnGenerarVenta
+            // btnNuevaVenta
             // 
             this.btnNuevaVenta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btnNuevaVenta.FlatAppearance.BorderSize = 2;
