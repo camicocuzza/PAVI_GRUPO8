@@ -822,6 +822,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.txt_stock_articulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txt_stock_articulo.Culture = new System.Globalization.CultureInfo("en-US");
+            this.txt_stock_articulo.Enabled = false;
             this.txt_stock_articulo.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
             this.txt_stock_articulo.ForeColor = System.Drawing.Color.Gainsboro;
             this.txt_stock_articulo.Location = new System.Drawing.Point(906, 67);
