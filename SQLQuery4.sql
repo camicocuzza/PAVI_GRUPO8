@@ -1,5 +1,9 @@
-﻿SELECT s.cantidad 
-                          FROM articulo a JOIN stock s ON a.cod_articulo = s.cod_articulo
-                          WHERE a.cod_articulo = '1' 
-                          AND s.fecha = (SELECT max(s1.fecha) FROM stock s1
-                                         WHERE s1.cod_articulo = s.cod_articulo);
+﻿
+SELECT d.cod_prod_ensamblado, a.cod_prod_ensamblado, d.cantidad, d.precio, d.cantidad * d.precio as subtotal
+FROM factura f, detalle_factura_prodEnsamblado d, producto_ensamblado a
+WHERE d.cod_prod_ensamblado = a.cod_prod_ensamblado AND
+	f.num_factura = d.num_factura AND
+	f.id_tipo_factura = d.id_tipo_factura AND
+	f.id_tipo_factura = d.id_tipo_factura AND 
+	f.id_tipo_factura = 1 AND f.num_factura = 21;
+

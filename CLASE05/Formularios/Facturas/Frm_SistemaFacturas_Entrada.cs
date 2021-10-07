@@ -25,6 +25,7 @@ namespace CLASE05.Formularios.Facturas
         private void btn_borrar_Click(object sender, EventArgs e)
         {
             Frm_SistemaFacturas_Baja frm_bajas = new Frm_SistemaFacturas_Baja();
+            frm_bajas.cuit_cliente = "1";
             frm_bajas.ShowDialog();
         }
     }
