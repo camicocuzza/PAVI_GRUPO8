@@ -297,11 +297,23 @@
     <Compile Include="Formularios\Facturas\Frm_SistemaFacturas_Baja.Designer.cs">
       <DependentUpon>Frm_SistemaFacturas_Baja.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Facturas\Frm_SistemaFacturas_Consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Facturas\Frm_SistemaFacturas_Consulta.Designer.cs">
+      <DependentUpon>Frm_SistemaFacturas_Consulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Facturas\Frm_SistemaFacturas_Entrada.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Facturas\Frm_SistemaFacturas_Entrada.Designer.cs">
       <DependentUpon>Frm_SistemaFacturas_Entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Facturas\Frm_SistemaFacturas_Modificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Facturas\Frm_SistemaFacturas_Modificacion.Designer.cs">
+      <DependentUpon>Frm_SistemaFacturas_Modificacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmBASE\FrmBase.cs">
       <SubType>Form</SubType>
@@ -571,8 +583,14 @@
     <EmbeddedResource Include="Formularios\Facturas\Frm_SistemaFacturas_Baja.resx">
       <DependentUpon>Frm_SistemaFacturas_Baja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Facturas\Frm_SistemaFacturas_Consulta.resx">
+      <DependentUpon>Frm_SistemaFacturas_Consulta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Facturas\Frm_SistemaFacturas_Entrada.resx">
       <DependentUpon>Frm_SistemaFacturas_Entrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Facturas\Frm_SistemaFacturas_Modificacion.resx">
+      <DependentUpon>Frm_SistemaFacturas_Modificacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmBASE\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>

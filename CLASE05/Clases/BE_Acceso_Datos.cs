@@ -161,6 +161,7 @@ namespace CLASE05.Clases
         {
             EjecutarNoSelect(sql);
         }
+
         public void InsertarEquipoEspecial(string cod_prod_en, string cuit_cliente, PictureBox imagen)
         {
             Conectar();

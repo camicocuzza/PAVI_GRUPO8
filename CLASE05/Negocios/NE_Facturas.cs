@@ -15,6 +15,27 @@ namespace CLASE05.Negocios
         TratamientosEspeciales _TE = new TratamientosEspeciales();
         NE_Stock ne_stock = new NE_Stock();
         //num_factura, id_tipo_factura, fecha, monto_total, cuit_cliente, legajo_empleado
+        public DataTable BuscarFactura(string patron, string columna)
+        {
+            string sql = @"SELECT *  
+                          FROM factura WHERE " + columna + " = '" + patron + "'";
+
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable BuscarTodas()
+        {
+            string sql = @"SELECT *  
+                          FROM factura";
+
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable BuscarFacturaNum(string num_factura)
+        {
+            string sql = @"SELECT *  
+                          FROM factura WHERE num_factura = " + num_factura;
+
+            return _BD.EjecutarSelect(sql);
+        }
         public DataTable Buscar_x_Cuit_Cliente(string cuit_cliente)
         {
             string sql = @"SELECT f.num_factura, f.id_tipo_factura, f.fecha, f.monto_total, f.cuit_cliente, f.legajo_empleado
@@ -84,12 +105,12 @@ namespace CLASE05.Negocios
 	                    f.num_factura = d.num_factura AND
 	                    f.id_tipo_factura = d.id_tipo_factura AND
 	                    f.id_tipo_factura = d.id_tipo_factura AND 
-	                    AND f.num_factura = " + num_factura + " AND f.id_tipo_factura = " + id_tipo_factura;
+	                    f.num_factura = " + num_factura + " AND f.id_tipo_factura = " + id_tipo_factura;
 
             return _BD.EjecutarSelect(sql);
         }
 
-        public void GenerarFactura(int id_tipo_factura, string fecha, string total_venta, 
+        public void InsertarFactura(int id_tipo_factura, string fecha, string total_venta, 
             string cuit_cliente, string legajo_empleado, Grid01 Grid_Detalle_Articulo, 
             Grid01 Grid_Detalle_Ensamblado)
         {
@@ -167,6 +188,37 @@ namespace CLASE05.Negocios
             {
                 MessageBox.Show("No se grabó la venta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
+        }
+
+
+        public void BorrarFactura(string num_factura, string fecha)
+        {
+            
+           // string sqlDelete = @"DELETE FROM factura WHERE num_factura = " + num_factura;
+
+
+           // _BD.IniciarTransaccion();
+           // _BD.Borrar(sqlDelete);
+
+           // string sqlDeleteStock = @"DELETE FROM stock WHERE fecha = '" + fecha +"'";
+
+
+           //string sqlDeleteDA = @"DELETE FROM detalle_factura_articulo 
+           //                                WHERE num_factura = " + num_factura;
+
+           // _BD.Borrar(sqlDeleteDA);
+
+           // string sqlDeleteDE = @"DELETE FROM detalle_factura_prodEnsamblado 
+           //                                WHERE num_factura = " + num_factura;
+
+           // if (_BD.CerrarTransaccion() == BE_Acceso_Datos.EstadoTransaccion.correcto)
+           // {
+           //     MessageBox.Show("Se eliminó correctamente la venta nro" + num_factura);
+           // }
+           // else
+           // {
+           //     MessageBox.Show("No se eliminó la venta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+           // }
         }
     }
 }

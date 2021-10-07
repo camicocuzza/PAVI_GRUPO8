@@ -791,8 +791,8 @@ namespace CLASE05.Formularios.Facturas
             this.cmb_tipo_factura._tabla_cargar_combo = "tipo_factura";
             this.cmb_tipo_factura._tabla_cargar_descriptor = "nombre";
             this.cmb_tipo_factura._tabla_cargar_pk = "id_tipo_factura";
-            this.cmb_tipo_factura._tabla_join = "pais";
-            this.cmb_tipo_factura._tabla_join_pk = "id_pais";
+            this.cmb_tipo_factura._tabla_join = "";
+            this.cmb_tipo_factura._tabla_join_pk = "";
             this.cmb_tipo_factura._Validable = true;
             this.cmb_tipo_factura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.cmb_tipo_factura.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);

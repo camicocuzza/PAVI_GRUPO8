@@ -25,6 +25,12 @@ namespace CLASE05.Formularios.Facturas
         NE_Stock ne_stock = new NE_Stock();
         //public string id_perfil = "";
         public string cuit_cliente { get; set; }
+        public string num_factura { get; set; }
+        public string id_tipo_factura { get; set; }
+        public string fecha { get; set; }
+
+
+
 
         public Frm_BaseFactura()
         {
@@ -52,20 +58,21 @@ namespace CLASE05.Formularios.Facturas
         public void RecuperarDatosFormulario()
         {
             RecuperarDatosCliente(cuit_cliente);
+            RecuperarDatosVenta(num_factura, id_tipo_factura);
 
         }
-        public EstadoCarga RecuperarDatosCliente(string cuit)
+        public EstadoCarga RecuperarDatosCliente(string cuit_cliente)
         { 
             DataTable tabla = new DataTable();
             NE_Estados_Provincias ne_prov = new NE_Estados_Provincias();
             NE_Paises ne_pais = new NE_Paises();
-            if (cuit == "")
+            if (cuit_cliente == "")
             {
                 MessageBox.Show("Falta ingresar CUIT de cliente");
                 return EstadoCarga.incorrecto;
             }
             
-            tabla = ne_clientes.RecuperarCliente(cuit);
+            tabla = ne_clientes.RecuperarCliente(cuit_cliente);
 
             if (tabla.Rows.Count == 0)
             {
@@ -106,6 +113,8 @@ namespace CLASE05.Formularios.Facturas
                                          , tabla_detallesEnsamblados.Rows[0]["precio"].ToString()
                                          , tabla_detallesEnsamblados.Rows[0]["subtotal"].ToString());
             }
+            cmb_tipo_factura.SelectedValue = id_tipo_factura;
+            CalcularTotalVenta();
         }
         public void CalcularTotalVenta()
         {
