@@ -182,7 +182,7 @@ namespace CLASE05.Negocios
             }
             if (_BD.CerrarTransaccion() == BE_Acceso_Datos.EstadoTransaccion.correcto)
             {
-                MessageBox.Show("Se grabó correctamente la venta nro" + num_factura);
+                MessageBox.Show("Se grabó correctamente la venta Nro. " + num_factura);
             }
             else
             {

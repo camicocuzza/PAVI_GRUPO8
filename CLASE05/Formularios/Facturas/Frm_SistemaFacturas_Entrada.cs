@@ -104,12 +104,12 @@ namespace CLASE05.Formularios.Facturas
                 MessageBox.Show("Falta seleccionar un registro", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
-            Frm_SistemaFacturas_Modificacion frm_modificacion = new Frm_SistemaFacturas_Modificacion();
-            frm_modificacion.num_factura = grid_facturas.CurrentRow.Cells[0].Value.ToString();
-            frm_modificacion.id_tipo_factura = grid_facturas.CurrentRow.Cells[1].Value.ToString();
-            frm_modificacion.cuit_cliente = grid_facturas.CurrentRow.Cells[4].Value.ToString();
-            frm_modificacion.fecha = grid_facturas.CurrentRow.Cells[2].Value.ToString();
-            frm_modificacion.ShowDialog();
+            Frm_SistemaFacturas_Consulta frm_consulta = new Frm_SistemaFacturas_Consulta();
+            frm_consulta.num_factura = grid_facturas.CurrentRow.Cells[0].Value.ToString();
+            frm_consulta.id_tipo_factura = grid_facturas.CurrentRow.Cells[1].Value.ToString();
+            frm_consulta.cuit_cliente = grid_facturas.CurrentRow.Cells[4].Value.ToString();
+            frm_consulta.fecha = grid_facturas.CurrentRow.Cells[2].Value.ToString();
+            frm_consulta.ShowDialog();            
         }
 
         private void btn_modificar_Click(object sender, EventArgs e)
@@ -124,12 +124,13 @@ namespace CLASE05.Formularios.Facturas
                 MessageBox.Show("Falta seleccionar un registro", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
-            Frm_SistemaFacturas_Consulta frm_consulta = new Frm_SistemaFacturas_Consulta();
-            frm_consulta.num_factura = grid_facturas.CurrentRow.Cells[0].Value.ToString();
-            frm_consulta.id_tipo_factura = grid_facturas.CurrentRow.Cells[1].Value.ToString();
-            frm_consulta.cuit_cliente = grid_facturas.CurrentRow.Cells[4].Value.ToString();
-            frm_consulta.fecha = grid_facturas.CurrentRow.Cells[2].Value.ToString();
-            frm_consulta.ShowDialog();
+            Frm_SistemaFacturas_Modificacion frm_modificacion = new Frm_SistemaFacturas_Modificacion();
+            frm_modificacion.num_factura = grid_facturas.CurrentRow.Cells[0].Value.ToString();
+            frm_modificacion.id_tipo_factura = grid_facturas.CurrentRow.Cells[1].Value.ToString();
+            frm_modificacion.cuit_cliente = grid_facturas.CurrentRow.Cells[4].Value.ToString();
+            frm_modificacion.fecha = grid_facturas.CurrentRow.Cells[2].Value.ToString();
+            frm_modificacion.ShowDialog();
+
         }
         private void btn_borrar_Click(object sender, EventArgs e)
         {

@@ -703,6 +703,36 @@ namespace CLASE05.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_factura__2_ {
+            get {
+                object obj = ResourceManager.GetObject("icon_factura (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_factura__3_ {
+            get {
+                object obj = ResourceManager.GetObject("icon_factura (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_factura__4_ {
+            get {
+                object obj = ResourceManager.GetObject("icon_factura (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_impresora {
             get {
                 object obj = ResourceManager.GetObject("icon_impresora", resourceCulture);
@@ -796,6 +826,16 @@ namespace CLASE05.Properties {
         internal static System.Drawing.Bitmap icon_proveedor__4_ {
             get {
                 object obj = ResourceManager.GetObject("icon_proveedor (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_reload__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icon_reload (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

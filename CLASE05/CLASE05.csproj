@@ -315,22 +315,22 @@
     <Compile Include="Formularios\Facturas\Frm_SistemaFacturas_Modificacion.Designer.cs">
       <DependentUpon>Frm_SistemaFacturas_Modificacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmBASE\FrmBase.cs">
+    <Compile Include="Formularios\_FrmBASE\FrmBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmBASE\FrmBase.Designer.cs">
+    <Compile Include="Formularios\_FrmBASE\FrmBase.Designer.cs">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmBASE\FrmBase_ABM_Entrada.cs">
+    <Compile Include="Formularios\_FrmBASE\FrmBase_ABM_Entrada.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmBASE\FrmBase_ABM_Entrada.Designer.cs">
+    <Compile Include="Formularios\_FrmBASE\FrmBase_ABM_Entrada.Designer.cs">
       <DependentUpon>FrmBase_ABM_Entrada.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmBASE\FrmBase_Datos.cs">
+    <Compile Include="Formularios\_FrmBASE\FrmBase_Datos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmBASE\FrmBase_Datos.Designer.cs">
+    <Compile Include="Formularios\_FrmBASE\FrmBase_Datos.Designer.cs">
       <DependentUpon>FrmBase_Datos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\InicioSistema\Frm_Login.cs">
@@ -416,12 +416,6 @@
     </Compile>
     <Compile Include="Formularios\Proveedores\Frm_Proveedor_Modificacion.Designer.cs">
       <DependentUpon>Frm_Proveedor_Modificacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Países\Frm_ABM_Pais_Entrada.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Países\Frm_ABM_Pais_Entrada.Designer.cs">
-      <DependentUpon>Frm_ABM_Pais_Entrada.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Usuarios\Frm_ABM_Usuario_Entrada.cs">
       <SubType>Form</SubType>
@@ -592,13 +586,13 @@
     <EmbeddedResource Include="Formularios\Facturas\Frm_SistemaFacturas_Modificacion.resx">
       <DependentUpon>Frm_SistemaFacturas_Modificacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmBASE\FrmBase.resx">
+    <EmbeddedResource Include="Formularios\_FrmBASE\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmBASE\FrmBase_ABM_Entrada.resx">
+    <EmbeddedResource Include="Formularios\_FrmBASE\FrmBase_ABM_Entrada.resx">
       <DependentUpon>FrmBase_ABM_Entrada.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmBASE\FrmBase_Datos.resx">
+    <EmbeddedResource Include="Formularios\_FrmBASE\FrmBase_Datos.resx">
       <DependentUpon>FrmBase_Datos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\InicioSistema\Frm_Login.resx">
@@ -1062,6 +1056,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\btn_guardar %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_factura %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_factura %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_factura %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_reload %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -46,8 +46,7 @@ namespace CLASE05.Formularios.Facturas
             ne_facturas.InsertarFactura(cmb_tipo_factura.SelectedIndex + 1, txt_fechaActual.Text, txt_total_venta.Text.Replace("$", "").Replace(",", "."), txt_cuit_cliente.Text,
                 txt_legajo_empleado.Text, grid_articulos, grid_ensamblados);
 
-            this.Inicio();
-            limpiarformulario();            
+            this.Inicio();   
         }
     }
 
