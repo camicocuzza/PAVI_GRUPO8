@@ -48,6 +48,12 @@ namespace CLASE05.Formularios.Facturas
             cmb_estado_provincia._Cargar();
             txt_fechaActual.Text = _TE.RecuperarFechaSistema();
         }
+
+        public void RecuperarDatosFormulario()
+        {
+            RecuperarDatosCliente(cuit_cliente);
+
+        }
         public EstadoCarga RecuperarDatosCliente(string cuit)
         { 
             DataTable tabla = new DataTable();
@@ -77,6 +83,29 @@ namespace CLASE05.Formularios.Facturas
             cmb_estado_provincia.SelectedValue = int.Parse(tabla.Rows[0]["id_estado_provincia"].ToString());
             txt_ciudad._Text = tabla.Rows[0]["ciudad"].ToString();
             return EstadoCarga.correcto;
+        }
+        public void RecuperarDatosVenta(string num_factura, string id_tipo_factura)
+        {
+            DataTable tabla_detallesArticulos = ne_facturas.RecuperarDetallesArticulos(num_factura, id_tipo_factura);
+            DataTable tabla_detallesEnsamblados = ne_facturas.RecuperarDetallesEnsamblados(num_factura, id_tipo_factura);
+
+            //d.cod_prod_ensamblado, a.cod_prod_ensamblado, d.cantidad, d.precio, d.cantidad* d.precio as subtotal
+            for (int i = 0; i < tabla_detallesArticulos.Rows.Count; i++)
+            {
+                grid_articulos.Rows.Add(tabla_detallesArticulos.Rows[0]["cod_articulo"].ToString()
+                                         , tabla_detallesArticulos.Rows[0]["nombre"].ToString()
+                                         , tabla_detallesArticulos.Rows[0]["cantidad"].ToString()
+                                         , tabla_detallesArticulos.Rows[0]["precio"].ToString()
+                                         , tabla_detallesArticulos.Rows[0]["subtotal"].ToString());
+            }
+            for (int i = 0; i < tabla_detallesEnsamblados.Rows.Count; i++)
+            {
+                grid_ensamblados.Rows.Add(tabla_detallesEnsamblados.Rows[0]["cod_prod_ensamblado"].ToString()
+                                         , tabla_detallesEnsamblados.Rows[0]["cod_prod_ensamblado"].ToString()
+                                         , tabla_detallesEnsamblados.Rows[0]["cantidad"].ToString()
+                                         , tabla_detallesEnsamblados.Rows[0]["precio"].ToString()
+                                         , tabla_detallesEnsamblados.Rows[0]["subtotal"].ToString());
+            }
         }
         public void CalcularTotalVenta()
         {

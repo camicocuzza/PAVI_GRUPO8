@@ -291,6 +291,12 @@
     <Compile Include="Formularios\Facturas\Frm_BaseFactura.Designer.cs">
       <DependentUpon>Frm_BaseFactura.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Facturas\Frm_SistemaFacturas_Baja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Facturas\Frm_SistemaFacturas_Baja.Designer.cs">
+      <DependentUpon>Frm_SistemaFacturas_Baja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Facturas\Frm_SistemaFacturas_Entrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -561,6 +567,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Facturas\Frm_SistemaFacturas_Alta.resx">
       <DependentUpon>Frm_SistemaFacturas_Alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Facturas\Frm_SistemaFacturas_Baja.resx">
+      <DependentUpon>Frm_SistemaFacturas_Baja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Facturas\Frm_SistemaFacturas_Entrada.resx">
       <DependentUpon>Frm_SistemaFacturas_Entrada.cs</DependentUpon>

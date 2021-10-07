@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.Facturas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rb_todos = new System.Windows.Forms.RadioButton();
             this.rb_legajo_empleado = new System.Windows.Forms.RadioButton();
             this.rb_nombre_contacto = new System.Windows.Forms.RadioButton();
@@ -49,6 +49,7 @@ namespace CLASE05.Formularios.Facturas
             this.btn_alta.FlatAppearance.BorderSize = 0;
             this.btn_alta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btn_alta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btn_alta.Click += new System.EventHandler(this.btn_alta_Click);
             // 
             // btn_modificar
             // 
@@ -63,6 +64,7 @@ namespace CLASE05.Formularios.Facturas
             this.btn_borrar.FlatAppearance.BorderSize = 0;
             this.btn_borrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btn_borrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
             // 
             // label1
             // 
@@ -207,8 +209,8 @@ namespace CLASE05.Formularios.Facturas
             this.grid_clientes._tamannoLetraHeader = 9;
             this.grid_clientes.AllowUserToAddRows = false;
             this.grid_clientes.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_clientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_clientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grid_clientes.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_clientes.Location = new System.Drawing.Point(12, 205);
@@ -227,7 +229,7 @@ namespace CLASE05.Formularios.Facturas
             this.label3.TabIndex = 40;
             this.label3.Text = "Patrón de Búsqueda";
             // 
-            // Frm_Sistema_Factura
+            // Frm_SistemaFacturas_Entrada
             // 
             this._PosiciónVisible = true;
             this._titulo = "Sistema de Facturación";
@@ -235,7 +237,7 @@ namespace CLASE05.Formularios.Facturas
             this.ClientSize = new System.Drawing.Size(669, 439);
             this.Controls.Add(this.grid_clientes);
             this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "Frm_Sistema_Factura";
+            this.Name = "Frm_SistemaFacturas_Entrada";
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.grid_clientes, 0);

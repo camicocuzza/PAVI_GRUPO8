@@ -63,6 +63,32 @@ namespace CLASE05.Negocios
 
             return _BD.EjecutarSelect(sql);
         }
+
+        public DataTable RecuperarDetallesArticulos(string num_factura, string id_tipo_factura)
+        {
+            string sql = @"SELECT d.cod_articulo, a.nombre, d.cantidad, d.precio, d.cantidad * d.precio as subtotal
+                            FROM factura f, detalle_factura_articulo d, articulo a
+                            WHERE d.cod_articulo = a.cod_articulo AND
+	                        f.num_factura = d.num_factura AND
+	                        f.id_tipo_factura = d.id_tipo_factura AND
+	                        f.id_tipo_factura = d.id_tipo_factura AND 
+                            f.num_factura = " + num_factura + " AND f.id_tipo_factura = " + id_tipo_factura;
+
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable RecuperarDetallesEnsamblados(string num_factura, string id_tipo_factura)
+        {
+            string sql = @"SELECT d.cod_prod_ensamblado, e.cod_prod_ensamblado, d.cantidad, d.precio, d.cantidad * d.precio as subtotal
+                        FROM factura f, detalle_factura_prodEnsamblado d, producto_ensamblado e
+                        WHERE d.cod_prod_ensamblado = e.cod_prod_ensamblado AND
+	                    f.num_factura = d.num_factura AND
+	                    f.id_tipo_factura = d.id_tipo_factura AND
+	                    f.id_tipo_factura = d.id_tipo_factura AND 
+	                    AND f.num_factura = " + num_factura + " AND f.id_tipo_factura = " + id_tipo_factura;
+
+            return _BD.EjecutarSelect(sql);
+        }
+
         public void GenerarFactura(int id_tipo_factura, string fecha, string total_venta, 
             string cuit_cliente, string legajo_empleado, Grid01 Grid_Detalle_Articulo, 
             Grid01 Grid_Detalle_Ensamblado)
@@ -99,6 +125,9 @@ namespace CLASE05.Negocios
                     sqlInsertDA += ", " + id_tipo_factura;
                     sqlInsertDA += ", " + Grid_Detalle_Articulo.Rows[i].Cells[2].Value.ToString();
                     sqlInsertDA += ", " + Grid_Detalle_Articulo.Rows[i].Cells[3].Value.ToString().Replace(',', '.');
+
+                    
+
                     sqlInsertDA += ")";
 
                     _BD.Insertar(sqlInsertDA, BE_Acceso_Datos.RecuperacionPk.no_recuperar);
@@ -132,11 +161,11 @@ namespace CLASE05.Negocios
             }
             if (_BD.CerrarTransaccion() == BE_Acceso_Datos.EstadoTransaccion.correcto)
             {
-                MessageBox.Show("Se grabó correctamente la Liquidacion del Sueldo");
+                MessageBox.Show("Se grabó correctamente la venta nro" + num_factura);
             }
             else
             {
-                MessageBox.Show("No se grabó la Liquidación del Sueldo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("No se grabó la venta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
     }
