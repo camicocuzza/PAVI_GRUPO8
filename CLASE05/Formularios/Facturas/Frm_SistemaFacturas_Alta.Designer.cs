@@ -61,9 +61,6 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.txt_fechaActual.Text = "06102021";
             // 
-            // btn_alta
-            // 
-            
             // btn_buscar
             // 
             this.btn_buscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
@@ -118,26 +115,26 @@ namespace CLASE05.Formularios.Facturas
             this.cmb_tipo_factura.DisplayMember = "nombre";
             this.cmb_tipo_factura.ValueMember = "id_tipo_factura";
             // 
-            // button2
-            // 
-           
             // btn_cerrar
             // 
             this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_cerrar.Location = new System.Drawing.Point(1024, 2);
             // 
             // btn_minimizar
             // 
             this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_minimizar.Location = new System.Drawing.Point(954, 2);
             // 
             // btn_maximizar
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_maximizar.Location = new System.Drawing.Point(989, 2);
             // 
             // Frm_SistemaFacturas_Alta
             // 
             this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1086, 663);
+            this.ClientSize = new System.Drawing.Size(1063, 625);
             this.Name = "Frm_SistemaFacturas_Alta";
             this.ResumeLayout(false);
             this.PerformLayout();

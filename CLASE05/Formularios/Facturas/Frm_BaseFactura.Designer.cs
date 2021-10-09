@@ -84,17 +84,17 @@ namespace CLASE05.Formularios.Facturas
             // btn_cerrar
             // 
             this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_cerrar.Location = new System.Drawing.Point(1019, 2);
+            this.btn_cerrar.Location = new System.Drawing.Point(1026, 2);
             // 
             // btn_minimizar
             // 
             this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_minimizar.Location = new System.Drawing.Point(949, 2);
+            this.btn_minimizar.Location = new System.Drawing.Point(956, 2);
             // 
             // btn_maximizar
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_maximizar.Location = new System.Drawing.Point(984, 2);
+            this.btn_maximizar.Location = new System.Drawing.Point(991, 2);
             // 
             // label2
             // 
@@ -842,7 +842,7 @@ namespace CLASE05.Formularios.Facturas
             this._FormularioMovil = true;
             this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1056, 625);
+            this.ClientSize = new System.Drawing.Size(1063, 625);
             this.Controls.Add(this.txt_stock_ensamblado);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.txt_stock_articulo);
