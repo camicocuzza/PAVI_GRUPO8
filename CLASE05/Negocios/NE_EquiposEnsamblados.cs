@@ -26,11 +26,18 @@ namespace CLASE05.Negocios
             combo.ValueMember = "cod_prod_ensamblado";
             combo.DataSource = _BD.EjecutarSelect("SELECT nombre, cod_prod_ensamblado FROM producto_ensamblado");
         }
+        public DataTable BuscarEnsambladoNombre(string patron)
+        {
+            string sql = "";
 
+            sql = @"SELECT * FROM producto_ensamblado WHERE nombre like '%" + patron + "%'";
+
+            return _BD.EjecutarSelect(sql);
+        }
         public DataTable BuscarEquipoEnsamblado (string cod_eq_en)
         {
             string sql = @"SELECT cod_prod_ensamblado, nombre, precio 
-                          FROM producto_ensamblado WHERE cod_prod_ensamblado like '%" + cod_eq_en + "%'";
+                          FROM producto_ensamblado WHERE cod_prod_ensamblado = '" + cod_eq_en + "'";
 
             return _BD.EjecutarSelect(sql);
         }

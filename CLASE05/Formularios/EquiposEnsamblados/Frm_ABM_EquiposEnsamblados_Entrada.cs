@@ -18,13 +18,14 @@ namespace CLASE05.Formularios.EquiposEnsamblados
 
         private void Frm_ABM_EquiposEnsamblados_Entrada_Load(object sender, EventArgs e)
         {
-            this.grid_equiposEnsamblados.Formatear("cod_prod_ensamblado, 100, C; nombre, 200, I, precio, 100, I");
+            this.grid_equiposEnsamblados.Formatear("cod_prod_ensamblado, 100, C; nombre, 250, I; precio, 100, I");
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
             NE_EquiposEnsamblados producto = new NE_EquiposEnsamblados();
-            
+            string columna = "";
+
             if (rb_todos.Checked == true)
             {
                 grid_equiposEnsamblados.Cargar(producto.BuscarEquipoEnsamblado(""));
@@ -32,7 +33,19 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             }
             if (txt_patron.Text != string.Empty)
             {
-                grid_equiposEnsamblados.Cargar(producto.BuscarEquipoEnsamblado(txt_patron.Text));
+                if (rb_id.Checked == true)
+                { 
+                    columna = "cod_prod_ensamblado"; 
+                    grid_equiposEnsamblados.Cargar(producto.BuscarEquipoEnsamblado(txt_patron.Text));
+
+                }
+                   
+                if (rb_nombre.Checked == true)
+                {
+                    columna = "nombre";
+                    grid_equiposEnsamblados.Cargar(producto.BuscarEnsambladoNombre(txt_patron.Text));
+                }    
+
                 if (grid_equiposEnsamblados.Rows.Count == 0)
                     MessageBox.Show("No se encontró ningún equipo", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;

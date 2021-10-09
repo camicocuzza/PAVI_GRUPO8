@@ -36,6 +36,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.rb_todos = new System.Windows.Forms.RadioButton();
             this.rb_id = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
+            this.rb_nombre = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_equiposEnsamblados)).BeginInit();
             this.SuspendLayout();
@@ -79,6 +80,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rb_nombre);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.rb_id);
             this.groupBox1.Controls.Add(this.rb_todos);
@@ -90,6 +92,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.groupBox1.Controls.SetChildIndex(this.rb_todos, 0);
             this.groupBox1.Controls.SetChildIndex(this.rb_id, 0);
             this.groupBox1.Controls.SetChildIndex(this.label2, 0);
+            this.groupBox1.Controls.SetChildIndex(this.rb_nombre, 0);
             // 
             // btn_buscar
             // 
@@ -158,7 +161,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             // 
             this.rb_todos.AutoSize = true;
             this.rb_todos.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.rb_todos.Location = new System.Drawing.Point(108, 86);
+            this.rb_todos.Location = new System.Drawing.Point(214, 86);
             this.rb_todos.Name = "rb_todos";
             this.rb_todos.Size = new System.Drawing.Size(64, 21);
             this.rb_todos.TabIndex = 25;
@@ -187,6 +190,18 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.label2.Size = new System.Drawing.Size(130, 17);
             this.label2.TabIndex = 27;
             this.label2.Text = "Patrón de Búsqueda";
+            // 
+            // rb_nombre
+            // 
+            this.rb_nombre.AutoSize = true;
+            this.rb_nombre.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.rb_nombre.Location = new System.Drawing.Point(120, 86);
+            this.rb_nombre.Name = "rb_nombre";
+            this.rb_nombre.Size = new System.Drawing.Size(77, 21);
+            this.rb_nombre.TabIndex = 28;
+            this.rb_nombre.TabStop = true;
+            this.rb_nombre.Text = "Nombre";
+            this.rb_nombre.UseVisualStyleBackColor = true;
             // 
             // Frm_ABM_EquiposEnsamblados_Entrada
             // 
@@ -225,5 +240,6 @@ namespace CLASE05.Formularios.EquiposEnsamblados
         private System.Windows.Forms.RadioButton rb_todos;
         private System.Windows.Forms.RadioButton rb_id;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton rb_nombre;
     }
 }
