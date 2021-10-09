@@ -65,8 +65,13 @@ namespace CLASE05.Negocios
             string sqlDelete = "DELETE FROM lote WHERE num_lote = '" + num_lote + "'";
 
             _BD.Borrar(sqlDelete);
-
         }
+        public DataTable RecuperarEliminados()
+        {
+            string sql = @"SELECT * 
+                          FROM lote WHERE eliminado = 1";
 
+            return _BD.EjecutarSelect(sql);
+        }
     }
 }

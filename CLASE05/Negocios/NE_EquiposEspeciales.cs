@@ -48,7 +48,15 @@ namespace CLASE05.Negocios
         {
             string sqlDelete = "DELETE FROM equipo_especial WHERE cod_prod_ensamblado = '" + cod_prod_ensamblado + "'";
 
+            _BD.Borrar(sqlDelete);
+        }
 
+        public DataTable RecuperarEliminados()
+        {
+            string sql = @"SELECT * 
+                          FROM equipo_especial WHERE eliminado = 1";
+
+            return _BD.EjecutarSelect(sql);
         }
 
     }

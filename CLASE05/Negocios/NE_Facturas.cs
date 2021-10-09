@@ -20,21 +20,21 @@ namespace CLASE05.Negocios
         public DataTable BuscarFactura(string patron, string columna)
         {
             string sql = @"SELECT *  
-                          FROM factura WHERE " + columna + " = '" + patron + "'";
+                          FROM factura WHERE " + columna + " = '" + patron + "' AND eliminado = 0";
 
             return _BD.EjecutarSelect(sql);
         }
         public DataTable BuscarTodas()
         {
             string sql = @"SELECT *  
-                          FROM factura";
+                          FROM factura WHERE eliminado = 0";
 
             return _BD.EjecutarSelect(sql);
         }
         public DataTable BuscarFacturaNum(string num_factura)
         {
             string sql = @"SELECT *  
-                          FROM factura WHERE num_factura = " + num_factura;
+                          FROM factura WHERE num_factura = " + num_factura + " AND eliminado = 0";
 
             return _BD.EjecutarSelect(sql);
         }
@@ -43,7 +43,7 @@ namespace CLASE05.Negocios
             string sql = @"SELECT f.num_factura, f.id_tipo_factura, f.fecha, f.monto_total, f.cuit_cliente, f.legajo_empleado
                           c.cuit_cliente, c.razon_social
                           FROM factura f JOIN cliente c ON f.cuit_cliente = c.cuit_cliente
-                          WHERE c.cuit_cliente = '" + cuit_cliente + "'";
+                          WHERE c.cuit_cliente = '" + cuit_cliente + "' AND eliminado = 0";
             return _BD.EjecutarSelect(sql);
         }
         public DataTable Buscar_x_Razon_Social(string razon_social)
@@ -51,22 +51,23 @@ namespace CLASE05.Negocios
             string sql = @"SELECT f.num_factura, f.id_tipo_factura, f.fecha, f.monto_total, f.cuit_cliente, f.legajo_empleado
                           c.cuit_cliente, c.razon_social
                           FROM factura f JOIN cliente c ON f.cuit_cliente = c.cuit_cliente
-                          WHERE c.razon_social = '" + razon_social + "'";
+                          WHERE c.razon_social = '" + razon_social + "' AND eliminado = 0";
             return _BD.EjecutarSelect(sql);
         }
         public DataTable Buscar_x_Num_Factura_tipo_factura(int num_factura, int id_tipo_factura)
         {
             string sql = @"SELECT *
                           FROM factura f JOIN tipo_factura tf ON f.id_tipo_factura = tf.id_tipo_factura
-                          WHERE f.num_factura = " + num_factura + " AND tf.id_tipo_factura = " + id_tipo_factura;
+                          WHERE f.num_factura = " + num_factura + " AND tf.id_tipo_factura = " + id_tipo_factura + " AND eliminado = 0";
             return _BD.EjecutarSelect(sql);
         }
         public DataTable Recuperar_num_factura(string cuit_cliente, string fecha)
         {
             string sql = @"SELECT f.num_factura
                           FROM factura f
-                          WHERE f.cuit_cliente = '" + cuit_cliente + "' AND fecha = (SELECT max(f1.fecha) FROM factura f1 " +
-                                                                        "WHERE f1.cuit_cliente = f.cuit_cliente)";
+                          WHERE f.cuit_cliente = '" + cuit_cliente + "' AND eliminado = 0 " +
+                          "                         AND fecha = (SELECT max(f1.fecha) FROM factura f1 " +
+                                                    "WHERE f1.cuit_cliente = f.cuit_cliente)";
             return _BD.EjecutarSelect(sql);
         }
         public DataTable Buscar_x_legajo(int legajo_empleado)
@@ -74,7 +75,7 @@ namespace CLASE05.Negocios
             string sql = @"SELECT f.num_factura, f.id_tipo_factura, f.fecha, f.monto_total, f.cuit_cliente, f.legajo_empleado
                           e.id_tipo_documento, e.nro_documento, e.apellido, e.nombre 
                           FROM factura f JOIN empleado e ON f.legajo_empleado = e.legajo_empleado
-                          WHERE e.legajo_empleado = " + legajo_empleado;
+                          WHERE e.legajo_empleado = " + legajo_empleado + " AND eliminado = 0";
             return _BD.EjecutarSelect(sql);
         }       
         public DataTable ConsultarListadoFacturasPorFecha(string fechaDesde, string fechaHasta)
@@ -82,7 +83,7 @@ namespace CLASE05.Negocios
             string sql = @"SELECT f.id_tipo_factura, f.numero_factura, c.cuit_cliente, c.razon_social,  FORMAT(f.fecha, 'dd/MM/yyyy') as fecha
                          FROM factura f, cliente c, empleado e
                          WHERE f.cuit_cliente = c.cuit_cliente AND f.legajo_empleado = e.legajo_empleado
-                        AND f.fecha BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "'";
+                        AND f.fecha BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "' AND eliminado = 0";
 
             return _BD.EjecutarSelect(sql);
         }
@@ -95,7 +96,7 @@ namespace CLASE05.Negocios
 	                        f.num_factura = d.num_factura AND
 	                        f.id_tipo_factura = d.id_tipo_factura AND
 	                        f.id_tipo_factura = d.id_tipo_factura AND 
-                            f.num_factura = " + num_factura + " AND f.id_tipo_factura = " + id_tipo_factura;
+                            f.num_factura = " + num_factura + " AND f.id_tipo_factura = " + id_tipo_factura + " AND eliminado = 0";
 
             return _BD.EjecutarSelect(sql);
         }
@@ -107,7 +108,7 @@ namespace CLASE05.Negocios
 	                    f.num_factura = d.num_factura AND
 	                    f.id_tipo_factura = d.id_tipo_factura AND
 	                    f.id_tipo_factura = d.id_tipo_factura AND 
-	                    f.num_factura = " + num_factura + " AND f.id_tipo_factura = " + id_tipo_factura;
+	                    f.num_factura = " + num_factura + " AND f.id_tipo_factura = " + id_tipo_factura + " AND eliminado = 0";
 
             return _BD.EjecutarSelect(sql);
         }
@@ -123,10 +124,10 @@ namespace CLASE05.Negocios
             sqlInsert += ", GETDATE()";
             sqlInsert += ", " + total_venta;
             sqlInsert += ", '" + cuit_cliente + "'";
-            sqlInsert += ", " + legajo_empleado;   
-            sqlInsert += ")";
+            sqlInsert += ", " + legajo_empleado;
+            sqlInsert += ", eliminado = 0)";
 
-            
+
             _BD.IniciarTransaccion();
             _BD.Insertar(sqlInsert, BE_Acceso_Datos.RecuperacionPk.no_recuperar);
 
@@ -146,7 +147,7 @@ namespace CLASE05.Negocios
                     sqlInsertDA += ", " + id_tipo_factura;
                     sqlInsertDA += ", " + Grid_Detalle_Articulo.Rows[i].Cells[2].Value.ToString();
                     sqlInsertDA += ", " + Grid_Detalle_Articulo.Rows[i].Cells[3].Value.ToString().Replace(',', '.');
-                    sqlInsertDA += ")";
+                    sqlInsertDA += ", eliminado = 0)";
 
                     _BD.Insertar(sqlInsertDA, BE_Acceso_Datos.RecuperacionPk.no_recuperar);
                     
@@ -171,8 +172,8 @@ namespace CLASE05.Negocios
                     sqlInsertDE += ", " + id_tipo_factura;
                     sqlInsertDE += ", " + Grid_Detalle_Ensamblado.Rows[i].Cells[2].Value.ToString();
                     sqlInsertDE += ", " + Grid_Detalle_Ensamblado.Rows[i].Cells[3].Value.ToString().Replace(',', '.');
-                    sqlInsertDE += ")";
-                    
+                    sqlInsertDE += ", eliminado = 0)";
+
                     _BD.Insertar(sqlInsertDE, BE_Acceso_Datos.RecuperacionPk.no_recuperar);
 
                     //STOCK
@@ -223,6 +224,14 @@ namespace CLASE05.Negocios
            // {
            //     MessageBox.Show("No se eliminó la venta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
            // }
+        }
+
+        public DataTable RecuperarEliminados()
+        {
+            string sql = @"SELECT * 
+                          FROM factura WHERE eliminado = 1";
+
+            return _BD.EjecutarSelect(sql);
         }
     }
 }

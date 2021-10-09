@@ -65,5 +65,13 @@ namespace CLASE05.Negocios
             MessageBox.Show(sqlInsert);
             _BD.Insertar(sqlInsert);
         }
+
+        public DataTable RecuperarEliminados()
+        {
+            string sql = @"SELECT * 
+                          FROM stock WHERE eliminado = 1";
+
+            return _BD.EjecutarSelect(sql);
+        }
     }
 }

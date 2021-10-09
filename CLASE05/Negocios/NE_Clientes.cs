@@ -27,7 +27,7 @@ namespace CLASE05.Negocios
         public bool ValidarExistencia(string cuit_cliente)
         {
             string sql = @"SELECT * FROM cliente
-                          WHERE cuit_cliente = '" + cuit_cliente + "'";
+                          WHERE cuit_cliente = '" + cuit_cliente + "' AND eliminado = 0";
 
             DataTable tabla = new DataTable();
             tabla = _BD.EjecutarSelect(sql);
@@ -43,9 +43,9 @@ namespace CLASE05.Negocios
         }
         public string RecuperarCuit(string razon_social, string nombre_contacto)
         {
-            string sql = @"SELECT cuit_cliente FROM usuario
-                         WHERE razon_social = '" + razon_social + "'"
-                        + " AND nombre_contacto = '" + nombre_contacto + "'";
+            string sql = @"SELECT cuit_cliente FROM cliente
+                         WHERE razon_social = '" + razon_social + "'" 
+                        + " AND nombre_contacto = '" + nombre_contacto + "' AND eliminado = 0";
 
             DataTable tabla = new DataTable();
             tabla = _BD.EjecutarSelect(sql);
@@ -58,7 +58,7 @@ namespace CLASE05.Negocios
         public string RecuperarCuit(string razon_social)
         {
             string sql = @"SELECT cuit_cliente FROM usuario
-                         WHERE razon_social = '" + razon_social + "'";
+                         WHERE razon_social = '" + razon_social + "' AND eliminado = 0";
 
             DataTable tabla = new DataTable();
             tabla = _BD.EjecutarSelect(sql);
@@ -71,28 +71,35 @@ namespace CLASE05.Negocios
         public DataTable BuscarCliente(string patron, string columna)
         {
             string sql = @"SELECT cuit_cliente, razon_social, limite_credito, nombre_contacto, legajo_empleado  
-                          FROM cliente WHERE " + columna + " like '%" + patron + "%'";
+                          FROM cliente WHERE " + columna + " like '%" + patron + "%' AND eliminado = 0";
 
             return _BD.EjecutarSelect(sql);
         }
         public DataTable BuscarCliente(string cuit_cliente)
         {
             string sql = @"SELECT cuit_cliente, razon_social,
-                          FROM cliente WHERE cuit_cliente = '" + cuit_cliente + "'";
+                          FROM cliente WHERE cuit_cliente = '" + cuit_cliente + "' AND eliminado = 0";
 
             return _BD.EjecutarSelect(sql);
         }
         public DataTable RecuperarCliente(string cuit_cliente)
         {
             string sql = @"SELECT * 
-                          FROM cliente WHERE cuit_cliente = '" + cuit_cliente + "'"; 
+                          FROM cliente WHERE cuit_cliente = '" + cuit_cliente + "' AND eliminado = 0"; 
 
             return _BD.EjecutarSelect(sql);
         }
         public DataTable RecuperarCliente_x_RazonSocial(string razon_social)
         {
             string sql = @"SELECT * 
-                          FROM cliente WHERE razon_social = '" + razon_social + "'";
+                          FROM cliente WHERE razon_social = '" + razon_social + "' AND eliminado = 0";
+
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable RecuperarEliminados()
+        {
+            string sql = @"SELECT * 
+                          FROM cliente WHERE eliminado = 1";
 
             return _BD.EjecutarSelect(sql);
         }
@@ -110,7 +117,8 @@ namespace CLASE05.Negocios
             sqlInsert += ", " + legajo_empleado;
             sqlInsert += ", '" + direccion + "'";
             sqlInsert += ", " + id_estado_provincia;
-            sqlInsert += ", '" + ciudad + "')";
+            sqlInsert += ", '" + ciudad + "'";
+            sqlInsert += ", eliminado = 0)";
 
             _BD.Insertar(sqlInsert);
         }
@@ -126,14 +134,15 @@ namespace CLASE05.Negocios
             sqlUpdate += ", legajo_empleado = " + legajo_empleado;
             sqlUpdate += ", direccion = '" + direccion + "'";
             sqlUpdate += ", id_estado_provincia = " + id_estado_provincia;
-            sqlUpdate += ", ciudad = '" + ciudad + "'";
+            sqlUpdate += ", ciudad = '" + ciudad + "'";            
             sqlUpdate += " WHERE cuit_cliente = '" + cuit_cliente + "'";
 
             _BD.Modificar(sqlUpdate);
         }
         public void Borrar()
         {
-            string sqlDelete = "DELETE FROM cliente WHERE cuit_cliente = '" + cuit_cliente + "'";
+            //string sqlDelete = "DELETE FROM cliente WHERE cuit_cliente = '" + cuit_cliente + "'";
+            string sqlDelete = "UPDATE articulo SET eliminado = 1 WHERE cuit_cliente = '" + cuit_cliente + "'";
 
             _BD.Borrar(sqlDelete);
         }

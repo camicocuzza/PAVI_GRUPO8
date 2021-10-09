@@ -129,7 +129,13 @@ namespace CLASE05.Negocios
 
             _BD.Borrar(sqlDelete);
         }
+        public DataTable RecuperarEliminados()
+        {
+            string sql = @"SELECT * 
+                          FROM empleado WHERE eliminado = 1";
 
+            return _BD.EjecutarSelect(sql);
+        }
     }
 }
 

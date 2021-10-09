@@ -29,7 +29,7 @@ namespace CLASE05.Clases
         public void _Cargar()
         {            
             BE_Acceso_Datos _BD = new BE_Acceso_Datos();
-            string sql = "SELECT " + _tabla_cargar_pk + ", " + _tabla_cargar_descriptor + " FROM " + _tabla_cargar_combo;
+            string sql = "SELECT " + _tabla_cargar_pk + ", " + _tabla_cargar_descriptor + " FROM " + _tabla_cargar_combo + " WHERE eliminado = 0";
             this.DisplayMember = _tabla_cargar_descriptor;
             this.ValueMember = _tabla_cargar_pk;
             this.DataSource = _BD.EjecutarSelect(sql);
@@ -41,7 +41,7 @@ namespace CLASE05.Clases
         public void _Cargar_Ordenado_x_Columna(string columna)
         {
             BE_Acceso_Datos _BD = new BE_Acceso_Datos();
-            string sql = "SELECT " + _tabla_cargar_pk + ", " + _tabla_cargar_descriptor + " FROM " + _tabla_cargar_combo + " ORDER BY " + columna;
+            string sql = "SELECT " + _tabla_cargar_pk + ", " + _tabla_cargar_descriptor + " FROM " + _tabla_cargar_combo + " WHERE eliminado = 0 ORDER BY " + columna;
             this.DisplayMember = _tabla_cargar_descriptor;
             this.ValueMember = _tabla_cargar_pk;
             this.DataSource = _BD.EjecutarSelect(sql);

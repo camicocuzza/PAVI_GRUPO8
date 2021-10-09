@@ -78,6 +78,12 @@ namespace CLASE05.Negocios
 
             _BD.Borrar(sqlDelete);
         }
+        public DataTable RecuperarEliminados()
+        {
+            string sql = @"SELECT * 
+                          FROM estado_provincia WHERE eliminado = 1";
 
+            return _BD.EjecutarSelect(sql);
+        }
     }
 }

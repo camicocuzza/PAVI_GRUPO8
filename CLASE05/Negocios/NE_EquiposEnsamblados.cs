@@ -118,6 +118,12 @@ namespace CLASE05.Negocios
             string sql = "SELECT precio FROM producto_ensamblado WHERE cod_prod_ensamblado = '" + cod_prod_ensamblado + "'";
             return _BD.EjecutarSelect(sql).Rows[0][0].ToString().Trim();
         }
+        public DataTable RecuperarEliminados()
+        {
+            string sql = @"SELECT * 
+                          FROM cliente producto_ensamblado eliminado = 1";
 
+            return _BD.EjecutarSelect(sql);
+        }
     }
 }

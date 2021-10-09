@@ -72,14 +72,14 @@ namespace CLASE05.Negocios
         public DataTable BuscarUsuario (string patron, string columna)
         {
             string sql = @"SELECT id_usuario, n_usuario 
-                          FROM usuario WHERE " + columna + " like '%" + patron + "%'";
+                          FROM usuario WHERE " + columna + " like '%" + patron + "%' AND eliminado = 0";
 
             return _BD.EjecutarSelect(sql);
         }
         public DataTable BuscarUsuario(string id_usuario)
         {
             string sql = @"SELECT id_usuario, n_usuario 
-                          FROM usuario WHERE id_usuario = " + id_usuario;
+                          FROM usuario WHERE id_usuario = " + id_usuario + " AND eliminado = 0";
 
                        return _BD.EjecutarSelect(sql);
         }
@@ -96,7 +96,8 @@ namespace CLASE05.Negocios
 
             sqlInsert = @"INSERT INTO usuario (n_usuario, password) VALUES (";
             sqlInsert += "'" + n_usuario + "'";
-            sqlInsert += ", '" + password + "')";
+            sqlInsert += ", '" + password + "'";
+            sqlInsert += ", eliminado = 0)";
 
             _BD.Insertar(sqlInsert);
         }
@@ -113,9 +114,17 @@ namespace CLASE05.Negocios
         }
         public void Borrar()
         {
-            string sqlDelete = "DELETE FROM usuario WHERE id_usuario = " + id_usuario;
-
+            //string sqlDelete = "DELETE FROM usuario WHERE id_usuario = " + id_usuario;
+            string sqlDelete = "UPDATE usuario SET eliminado = 1 WHERE id_usuario = " + id_usuario;
             _BD.Borrar(sqlDelete);
+        }
+
+        public DataTable RecuperarEliminados()
+        {
+            string sql = @"SELECT * 
+                          FROM usuario WHERE eliminado = 1";
+
+            return _BD.EjecutarSelect(sql);
         }
 
     }

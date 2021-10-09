@@ -40,10 +40,10 @@ namespace CLASE05.Formularios.Usuarios
 
             usu.id_usuario = txt_id_usuario._Text;
 
-            if (MessageBox.Show("¿Está seguro de que desea eliminar al usuario " + txt_n_usuario._Text + "?", "Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Está seguro de que desea eliminar al usuario '" + txt_n_usuario._Text + "'?", "Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 usu.Borrar();
-                MessageBox.Show("Se eliminó correctamente el usuario " + txt_n_usuario._Text, "Importante");
+                MessageBox.Show("Se eliminó correctamente el usuario '" + txt_n_usuario._Text + "'", "Importante");
                 this.Dispose();
             }
             else

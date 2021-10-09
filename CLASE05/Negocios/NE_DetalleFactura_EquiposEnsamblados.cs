@@ -31,5 +31,12 @@ namespace CLASE05.Negocios
 
             return _BD.EjecutarSelect(sql);
         }
+        public DataTable RecuperarEliminados()
+        {
+            string sql = @"SELECT * 
+                          FROM detalle_prod_ensamblado WHERE eliminado = 1";
+
+            return _BD.EjecutarSelect(sql);
+        }
     }
 }
