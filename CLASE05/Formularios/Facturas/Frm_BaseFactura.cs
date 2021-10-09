@@ -22,16 +22,14 @@ namespace CLASE05.Formularios.Facturas
         public NE_EquiposEnsamblados ne_ensamblados = new NE_EquiposEnsamblados();
         public NE_Facturas ne_facturas = new NE_Facturas();
         public NE_Clientes ne_clientes = new NE_Clientes();
+
+        NE_Stock_Ensamblados ne_stock_ens = new NE_Stock_Ensamblados();
         NE_Stock ne_stock = new NE_Stock();
       
         public string cuit_cliente { get; set; }
         public string num_factura { get; set; }
         public string id_tipo_factura { get; set; }
         public string fecha { get; set; }
-
-
-
-
         public Frm_BaseFactura()
         {
             InitializeComponent();
@@ -45,7 +43,7 @@ namespace CLASE05.Formularios.Facturas
         {
             grid_articulos.Formatear("Id, 40, C; Artículo, 150, I; Cantidad, 70, C; Precio, 70, C; Subtotal, 90, C");
             grid_ensamblados.Formatear("Id, 40, C; Equipo Ensamblado, 150, I; Cantidad, 70, C; Precio, 70, C; Subtotal, 90, C");
-            cmb_articulos._Cargar();
+            cmb_articulos._Cargar_Ordenado_x_Columna("id_rubro");
             cmb_ensamblados._Cargar();
             cmb_tipo_factura._Cargar();
             cmb_pais._Cargar();
@@ -212,14 +210,14 @@ namespace CLASE05.Formularios.Facturas
         {
             string cod_articulo = cmb_articulos.SelectedValue.ToString();
             txt_precio_articulo.Text = ne_articulos.RecuperarPrecioArticulo(cmb_articulos.SelectedValue.ToString());
-            ne_stock.ObtenerStock(cod_articulo).Rows[0][0].ToString();
             txt_stock_articulo.Text = ne_stock.ObtenerStock(cod_articulo).Rows[0][0].ToString();
         }
         private void cmb_ensamblados_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            string cod_prod_ensamblado = cmb_ensamblados.SelectedValue.ToString();
             txt_precio_ensamblado.Text = ne_ensamblados.RecuperarPrecioProdEnsamblado(cmb_ensamblados.SelectedValue.ToString());
+            txt_stock_ensamblado.Text = ne_stock_ens.ObtenerStock(cod_prod_ensamblado).Rows[0][0].ToString();            
         }
-
         private void btn_agregar_ensamblado_Click(object sender, EventArgs e)
         {
             if (cmb_ensamblados.SelectedIndex == -1)
@@ -227,14 +225,26 @@ namespace CLASE05.Formularios.Facturas
                 MessageBox.Show("No seleccionó un equipo ensamblado", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (txt_cantidad_ensamblado.Text == "")
+            if (txt_cantidad_ensamblado.Text == "" || txt_cantidad_ensamblado.Text == "0")
             {
                 MessageBox.Show("No ingresó cantidad del equipo ensamblado", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            if (txt_stock_ensamblado.Text == "0")
+            {
+                MessageBox.Show("No hay stock disponible del equipo seleccionado", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (int.Parse(txt_stock_ensamblado.Text) < int.Parse(txt_cantidad_ensamblado.Text))
+            {
+                MessageBox.Show("No hay stock suficiente para la cantidad ingresada", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             AgregarFilaGrillaEnsamblados();
             CalcularTotalVenta();
         }
+
         private void btn_quitar_ensamblado_Click(object sender, EventArgs e)
         {
             if (grid_ensamblados.CurrentRow == null)

@@ -466,6 +466,7 @@
     <Compile Include="Negocios\NE_Estados_Provincias.cs" />
     <Compile Include="Negocios\NE_Paises.cs" />
     <Compile Include="Negocios\NE_Stock.cs" />
+    <Compile Include="Negocios\NE_Stock_Ensamblados.cs" />
     <Compile Include="Negocios\NE_Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

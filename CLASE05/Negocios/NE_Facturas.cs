@@ -14,6 +14,8 @@ namespace CLASE05.Negocios
         BE_Acceso_Datos _BD = new BE_Acceso_Datos();
         TratamientosEspeciales _TE = new TratamientosEspeciales();
         NE_Stock ne_stock = new NE_Stock();
+        NE_Stock_Ensamblados ne_stock_ens = new NE_Stock_Ensamblados();
+        NE_EquiposEnsamblados ne_ens = new NE_EquiposEnsamblados();
         //num_factura, id_tipo_factura, fecha, monto_total, cuit_cliente, legajo_empleado
         public DataTable BuscarFactura(string patron, string columna)
         {
@@ -116,10 +118,8 @@ namespace CLASE05.Negocios
         {
             string sqlInsert = @"INSERT INTO factura 
                 (id_tipo_factura, fecha, monto_total, cuit_cliente, legajo_empleado) VALUES (";
-           //string[] dataFecha = fecha.Split('/');            
-            sqlInsert += id_tipo_factura;
-            //sqlInsert += ", " + _TE.FormatearDato(fecha, "fecha");
-            //sqlInsert += ", " + fecha;
+
+            sqlInsert += id_tipo_factura;         
             sqlInsert += ", GETDATE()";
             sqlInsert += ", " + total_venta;
             sqlInsert += ", '" + cuit_cliente + "'";
@@ -146,15 +146,12 @@ namespace CLASE05.Negocios
                     sqlInsertDA += ", " + id_tipo_factura;
                     sqlInsertDA += ", " + Grid_Detalle_Articulo.Rows[i].Cells[2].Value.ToString();
                     sqlInsertDA += ", " + Grid_Detalle_Articulo.Rows[i].Cells[3].Value.ToString().Replace(',', '.');
-
-                    
-
                     sqlInsertDA += ")";
 
                     _BD.Insertar(sqlInsertDA, BE_Acceso_Datos.RecuperacionPk.no_recuperar);
-
-                    int cantidadVendida = int.Parse(Grid_Detalle_Articulo.Rows[i].Cells[2].Value.ToString());
+                    
                     //STOCK
+                    int cantidadVendida = int.Parse(Grid_Detalle_Articulo.Rows[i].Cells[2].Value.ToString());                    
                     DataTable tablastock = ne_stock.ObtenerStock(Grid_Detalle_Articulo.Rows[i].Cells[0].Value.ToString());
                     int cantidadanterior = int.Parse(tablastock.Rows[0]["cantidad"].ToString());
                     int nuevaCantidad = cantidadanterior - cantidadVendida;
@@ -169,15 +166,22 @@ namespace CLASE05.Negocios
                     string sqlInsertDE = @"INSERT INTO detalle_factura_prodEnsamblado (cod_prod_ensamblado, num_factura, id_tipo_factura, 
                                         cantidad, precio) VALUES (";
 
-                    sqlInsertDE += "'" + Grid_Detalle_Ensamblado.Rows[i].Cells[1].Value.ToString() + "'";
+                    sqlInsertDE += "'" + Grid_Detalle_Ensamblado.Rows[i].Cells[0].Value.ToString() + "'";
                     sqlInsertDE += ", " + num_factura;
                     sqlInsertDE += ", " + id_tipo_factura;
                     sqlInsertDE += ", " + Grid_Detalle_Ensamblado.Rows[i].Cells[2].Value.ToString();
                     sqlInsertDE += ", " + Grid_Detalle_Ensamblado.Rows[i].Cells[3].Value.ToString().Replace(',', '.');
                     sqlInsertDE += ")";
-
+                    
                     _BD.Insertar(sqlInsertDE, BE_Acceso_Datos.RecuperacionPk.no_recuperar);
 
+                    //STOCK
+                    int cantidadVendida = int.Parse(Grid_Detalle_Ensamblado.Rows[i].Cells[2].Value.ToString());
+                    DataTable tablastock = ne_stock_ens.ObtenerStock(Grid_Detalle_Ensamblado.Rows[i].Cells[0].Value.ToString());
+                    int cantidadanterior = int.Parse(tablastock.Rows[0]["cantidad"].ToString());
+                    int nuevaCantidad = cantidadanterior - cantidadVendida;
+
+                    ne_stock_ens.Insertar(Grid_Detalle_Ensamblado.Rows[i].Cells[0].Value.ToString(), _TE.RecuperarFechaSistema(), nuevaCantidad);
                 }
             }
             if (_BD.CerrarTransaccion() == BE_Acceso_Datos.EstadoTransaccion.correcto)

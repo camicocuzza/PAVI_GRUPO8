@@ -65,6 +65,5 @@ namespace CLASE05.Negocios
             MessageBox.Show(sqlInsert);
             _BD.Insertar(sqlInsert);
         }
-
     }
 }

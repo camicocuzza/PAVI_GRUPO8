@@ -22,7 +22,6 @@ namespace CLASE05.Formularios.Clientes
         private void Frm_Cliente_Modificacion_Load(object sender, EventArgs e)
         {
             cmb_pais._Cargar();
-            //cmb_estado_provincia._Cargar();
 
             CargarFormulario(cli.RecuperarCliente(cuit_cliente));
 
@@ -35,14 +34,9 @@ namespace CLASE05.Formularios.Clientes
             DataTable tabla_IdPais = ne_prov.RecuperarIdPais(id_estado_provincia);
             string id_pais = tabla_IdPais.Rows[0]["id_pais"].ToString();
             
-            //float num = float.Parse(tabla.Rows[0]["limite_credito"].ToString());
-            //double enteros = Math.Truncate(num);
-            //int decimales = (int)(((decimal)num % 1) * 100);
-            
             txt_cuit_cliente.Text = tabla.Rows[0]["cuit_cliente"].ToString();
             txt_razon_social._Text = tabla.Rows[0]["razon_social"].ToString();
-            txt_limite._Text = tabla.Rows[0]["limite_credito"].ToString();
-            //txt_decimales.Text = decimales.ToString();
+            txt_limite._Text = tabla.Rows[0]["limite_credito"].ToString();        
             txt_nombre_contacto._Text = tabla.Rows[0]["nombre_contacto"].ToString();
             txt_legajo_empleado._Text = tabla.Rows[0]["legajo_empleado"].ToString();
             txt_direccion._Text = tabla.Rows[0]["direccion"].ToString();
@@ -55,12 +49,7 @@ namespace CLASE05.Formularios.Clientes
         {
             TratamientosEspeciales _TE = new TratamientosEspeciales();
             NE_Empleados ne_emp = new NE_Empleados();
-
-            //if (txt_decimales.Text == "")
-            //{
-            //    txt_decimales.Text = "00";
-            //}
-
+          
             if (_TE.Validar(base.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
             {
                 // VALIDACION ESPECIFICA
@@ -77,20 +66,12 @@ namespace CLASE05.Formularios.Clientes
                 cli.cuit_cliente = txt_cuit_cliente.Text;
                 cli.razon_social = txt_razon_social._Text;
                 cli.limite_credito = txt_limite._Text;
-                //cli.limite_credito = txt_limite_credito.Text;
                 cli.nombre_contacto = txt_nombre_contacto._Text;
                 cli.legajo_empleado = txt_legajo_empleado._Text;
                 cli.direccion = txt_direccion._Text;
                 cli.id_estado_provincia = cmb_estado_provincia.SelectedValue.ToString();
                 cli.ciudad = txt_ciudad._Text;
 
-                //cli.decimales = txt_decimales.Text;
-
-                //double ent = double.Parse(txt_limite_credito.Text);
-                //double dec = (double.Parse(txt_decimales.Text)) / 100;
-
-                //cli.limite_credito = (ent + dec).ToString().Replace(",", "."); ;
-                //MessageBox.Show(cli.limite_credito);
                 cli.Modificar();
 
                 MessageBox.Show("Se modificó correctamente el cliente " + txt_razon_social.Text, "Importante");
@@ -110,17 +91,11 @@ namespace CLASE05.Formularios.Clientes
         {
             contador += 1;
 
-            // MessageBox.Show(cmb_pais.SelectedIndex.ToString() + contador);
             if (cmb_pais.SelectedIndex != -1 & contador > 2)
             {
                 cmb_estado_provincia.Enabled = true;
-                cmb_estado_provincia._CargarConJoin(cmb_pais.SelectedIndex);
-
-                //NE_Paises p = NE_Paises;
-                //string nombre_pais = cmb_pais.SelectedText;
-                //p.RecuperarId(nombre_pais);
-
-                //cmb_estado_provincia._CargarConJoin(p.RecuperarId(nombre_pais);
+                cmb_estado_provincia._CargarConJoin(int.Parse(cmb_pais.SelectedValue.ToString()));
+     
             }
         }
     }

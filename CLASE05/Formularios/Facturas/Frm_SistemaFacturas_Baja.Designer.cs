@@ -85,17 +85,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             // btn_alta
             // 
-            this.btn_alta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.btn_alta.FlatAppearance.BorderSize = 0;
-            this.btn_alta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.btn_alta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            
             // 
             // btn_buscar
             // 
@@ -242,8 +232,7 @@ namespace CLASE05.Formularios.Facturas
             this.Controls.SetChildIndex(this.btnNuevaVenta, 0);
             this.Controls.SetChildIndex(this.btnGuardar, 0);
             this.Controls.SetChildIndex(this.btnMostrarFactura, 0);
-            this.Controls.SetChildIndex(this.btn_alta, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
+          
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);

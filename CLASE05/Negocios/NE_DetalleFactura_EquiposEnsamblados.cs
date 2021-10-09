@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CLASE05.Clases;
+using System.Data;
+using System.Windows.Forms;
 
 namespace CLASE05.Negocios
 {
@@ -21,6 +23,13 @@ namespace CLASE05.Negocios
         {
             string sql = "SELECT precio FROM producto_ensamblado WHERE cod_prod_ensamblado = " + cod_prod_ensamblado;
             return _BD.EjecutarSelect(sql).Rows[0][0].ToString();
+        }
+        public DataTable BuscarDetalles(string cod_prod_ensamblado)
+        {
+            string sql = @"SELECT cod_articulo, cantidad 
+                          FROM detalle_prod_ensamblado WHERE cod_prod_ensamblado = '" + cod_prod_ensamblado + "'";
+
+            return _BD.EjecutarSelect(sql);
         }
     }
 }

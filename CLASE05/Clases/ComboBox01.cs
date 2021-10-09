@@ -37,8 +37,20 @@ namespace CLASE05.Clases
                 this.SelectedIndex = -1;
             else
                 this.SelectedIndex = 0;
-        }                      
-    
+        }
+        public void _Cargar_Ordenado_x_Columna(string columna)
+        {
+            BE_Acceso_Datos _BD = new BE_Acceso_Datos();
+            string sql = "SELECT " + _tabla_cargar_pk + ", " + _tabla_cargar_descriptor + " FROM " + _tabla_cargar_combo + " ORDER BY " + columna;
+            this.DisplayMember = _tabla_cargar_descriptor;
+            this.ValueMember = _tabla_cargar_pk;
+            this.DataSource = _BD.EjecutarSelect(sql);
+            if (_ComboSinSeleccion == true)
+                this.SelectedIndex = -1;
+            else
+                this.SelectedIndex = 0;
+        }
+
         public void _CargarConJoin(int seleccion)
         {
             BE_Acceso_Datos _BD = new BE_Acceso_Datos();

@@ -67,8 +67,6 @@ namespace CLASE05.Formularios.Facturas
             this.btnMostrarFactura = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevaVenta = new System.Windows.Forms.Button();
-            this.btn_alta = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.txt_precio_ensamblado = new System.Windows.Forms.MaskedTextBox();
             this.txt_precio_articulo = new System.Windows.Forms.MaskedTextBox();
             this.txt_legajo_empleado = new System.Windows.Forms.MaskedTextBox();
@@ -77,9 +75,8 @@ namespace CLASE05.Formularios.Facturas
             this.label17 = new System.Windows.Forms.Label();
             this.txt_stock_articulo = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.txt_stock_ensamblado = new System.Windows.Forms.MaskedTextBox();
+            this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grid_articulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_ensamblados)).BeginInit();
             this.SuspendLayout();
@@ -382,7 +379,7 @@ namespace CLASE05.Formularios.Facturas
             this.grid_ensamblados._formatoLetraHeader = System.Drawing.FontStyle.Regular;
             this.grid_ensamblados._tamannoLetraHeader = 9;
             this.grid_ensamblados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_ensamblados.Location = new System.Drawing.Point(558, 353);
+            this.grid_ensamblados.Location = new System.Drawing.Point(558, 342);
             this.grid_ensamblados.Name = "grid_ensamblados";
             this.grid_ensamblados.Size = new System.Drawing.Size(463, 167);
             this.grid_ensamblados.TabIndex = 80;
@@ -516,7 +513,7 @@ namespace CLASE05.Formularios.Facturas
             this.btn_agregar_ensamblado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_agregar_ensamblado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_agregar_ensamblado.ForeColor = System.Drawing.Color.White;
-            this.btn_agregar_ensamblado.Location = new System.Drawing.Point(455, 458);
+            this.btn_agregar_ensamblado.Location = new System.Drawing.Point(455, 447);
             this.btn_agregar_ensamblado.Name = "btn_agregar_ensamblado";
             this.btn_agregar_ensamblado.Size = new System.Drawing.Size(97, 28);
             this.btn_agregar_ensamblado.TabIndex = 90;
@@ -553,7 +550,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_cantidad_ensamblado.Culture = new System.Globalization.CultureInfo("en-US");
             this.txt_cantidad_ensamblado.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
             this.txt_cantidad_ensamblado.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_cantidad_ensamblado.Location = new System.Drawing.Point(455, 427);
+            this.txt_cantidad_ensamblado.Location = new System.Drawing.Point(455, 416);
             this.txt_cantidad_ensamblado.Mask = "9999999";
             this.txt_cantidad_ensamblado.Name = "txt_cantidad_ensamblado";
             this.txt_cantidad_ensamblado.Size = new System.Drawing.Size(97, 25);
@@ -565,7 +562,7 @@ namespace CLASE05.Formularios.Facturas
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label13.Location = new System.Drawing.Point(452, 404);
+            this.label13.Location = new System.Drawing.Point(452, 393);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(73, 20);
@@ -578,7 +575,7 @@ namespace CLASE05.Formularios.Facturas
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label14.Location = new System.Drawing.Point(452, 353);
+            this.label14.Location = new System.Drawing.Point(452, 342);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(100, 20);
@@ -608,7 +605,7 @@ namespace CLASE05.Formularios.Facturas
             this.btn_quitar_ensamblado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_quitar_ensamblado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_quitar_ensamblado.ForeColor = System.Drawing.Color.White;
-            this.btn_quitar_ensamblado.Location = new System.Drawing.Point(455, 492);
+            this.btn_quitar_ensamblado.Location = new System.Drawing.Point(455, 481);
             this.btn_quitar_ensamblado.Name = "btn_quitar_ensamblado";
             this.btn_quitar_ensamblado.Size = new System.Drawing.Size(97, 28);
             this.btn_quitar_ensamblado.TabIndex = 98;
@@ -704,38 +701,6 @@ namespace CLASE05.Formularios.Facturas
             this.btnNuevaVenta.UseVisualStyleBackColor = false;
             this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click);
             // 
-            // btn_alta
-            // 
-            this.btn_alta.BackColor = System.Drawing.Color.Transparent;
-            this.btn_alta.BackgroundImage = global::CLASE05.Properties.Resources.btn_añadir__8_;
-            this.btn_alta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_alta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.btn_alta.FlatAppearance.BorderSize = 0;
-            this.btn_alta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.btn_alta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.btn_alta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_alta.Location = new System.Drawing.Point(356, 557);
-            this.btn_alta.Name = "btn_alta";
-            this.btn_alta.Size = new System.Drawing.Size(50, 50);
-            this.btn_alta.TabIndex = 110;
-            this.btn_alta.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::CLASE05.Properties.Resources.btn_guardar__1_;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(682, 547);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 60);
-            this.button1.TabIndex = 112;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // txt_precio_ensamblado
             // 
             this.txt_precio_ensamblado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
@@ -743,7 +708,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_precio_ensamblado.Enabled = false;
             this.txt_precio_ensamblado.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
             this.txt_precio_ensamblado.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_precio_ensamblado.Location = new System.Drawing.Point(455, 376);
+            this.txt_precio_ensamblado.Location = new System.Drawing.Point(455, 365);
             this.txt_precio_ensamblado.Name = "txt_precio_ensamblado";
             this.txt_precio_ensamblado.Size = new System.Drawing.Size(97, 25);
             this.txt_precio_ensamblado.TabIndex = 93;
@@ -846,53 +811,31 @@ namespace CLASE05.Formularios.Facturas
             this.label15.Text = "Stock actual";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button2
+            // txt_stock_ensamblado
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::CLASE05.Properties.Resources.icon_factura__3_;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(524, 553);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(54, 54);
-            this.button2.TabIndex = 120;
-            this.button2.UseVisualStyleBackColor = false;
+            this.txt_stock_ensamblado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txt_stock_ensamblado.Culture = new System.Globalization.CultureInfo("en-US");
+            this.txt_stock_ensamblado.Enabled = false;
+            this.txt_stock_ensamblado.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
+            this.txt_stock_ensamblado.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_stock_ensamblado.Location = new System.Drawing.Point(878, 306);
+            this.txt_stock_ensamblado.Mask = "9999999";
+            this.txt_stock_ensamblado.Name = "txt_stock_ensamblado";
+            this.txt_stock_ensamblado.Size = new System.Drawing.Size(97, 25);
+            this.txt_stock_ensamblado.TabIndex = 124;
             // 
-            // button3
+            // label18
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::CLASE05.Properties.Resources.icon_factura__4_;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(412, 553);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(54, 54);
-            this.button3.TabIndex = 121;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::CLASE05.Properties.Resources.icon_factura__2_;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(468, 553);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(54, 54);
-            this.button4.TabIndex = 122;
-            this.button4.UseVisualStyleBackColor = false;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label18.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label18.Location = new System.Drawing.Point(875, 284);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(100, 20);
+            this.label18.TabIndex = 123;
+            this.label18.Text = "Stock actual";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Frm_BaseFactura
             // 
@@ -900,17 +843,14 @@ namespace CLASE05.Formularios.Facturas
             this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1056, 625);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btn_alta);
+            this.Controls.Add(this.txt_stock_ensamblado);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.txt_stock_articulo);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.cmb_tipo_factura);
             this.Controls.Add(this.txt_legajo_empleado);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnMostrarFactura);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnNuevaVenta);
@@ -993,7 +933,6 @@ namespace CLASE05.Formularios.Facturas
             this.Controls.SetChildIndex(this.btnNuevaVenta, 0);
             this.Controls.SetChildIndex(this.btnGuardar, 0);
             this.Controls.SetChildIndex(this.btnMostrarFactura, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
@@ -1004,10 +943,8 @@ namespace CLASE05.Formularios.Facturas
             this.Controls.SetChildIndex(this.label17, 0);
             this.Controls.SetChildIndex(this.label15, 0);
             this.Controls.SetChildIndex(this.txt_stock_articulo, 0);
-            this.Controls.SetChildIndex(this.btn_alta, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
-            this.Controls.SetChildIndex(this.button3, 0);
-            this.Controls.SetChildIndex(this.button4, 0);
+            this.Controls.SetChildIndex(this.label18, 0);
+            this.Controls.SetChildIndex(this.txt_stock_ensamblado, 0);
             ((System.ComponentModel.ISupportInitialize)(this.grid_articulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_ensamblados)).EndInit();
             this.ResumeLayout(false);
@@ -1030,8 +967,6 @@ namespace CLASE05.Formularios.Facturas
         public Clases.ComboBox01 cmb_ensamblados;
         public System.Windows.Forms.MaskedTextBox txt_cantidad_ensamblado;
         public System.Windows.Forms.MaskedTextBox txt_fechaActual;
-        public System.Windows.Forms.Button btn_alta;
-        public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Label lbl_estado_provincia;
         public System.Windows.Forms.Label lbl_pais;
         public System.Windows.Forms.Button btn_buscar;
@@ -1064,8 +999,7 @@ namespace CLASE05.Formularios.Facturas
         public System.Windows.Forms.Label label17;
         public System.Windows.Forms.MaskedTextBox txt_stock_articulo;
         public System.Windows.Forms.Label label15;
-        public System.Windows.Forms.Button button2;
-        public System.Windows.Forms.Button button3;
-        public System.Windows.Forms.Button button4;
+        public System.Windows.Forms.MaskedTextBox txt_stock_ensamblado;
+        public System.Windows.Forms.Label label18;
     }
 }

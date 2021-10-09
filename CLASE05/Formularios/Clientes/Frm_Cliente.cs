@@ -24,46 +24,25 @@ namespace CLASE05.Formularios.Clientes
             InitializeComponent();
         }
         private void Frm_Cliente_Load(object sender, EventArgs e)
-        {
-            //cmb_pais._Cargar();
-            //cmb_estado_provincia._Cargar();
+        {            
         }
-
         private void cmb_estado_provincia_Click(object sender, EventArgs e)
         {
 
         }
-
         private void cmb_pais_SelectedIndexChanged(object sender, EventArgs e)
         {
             contador += 1;
 
-            // MessageBox.Show(cmb_pais.SelectedIndex.ToString() + contador);
             if (cmb_pais.SelectedIndex != -1 & contador > 2)
             {
-                cmb_estado_provincia._CargarConJoin(cmb_pais.SelectedIndex);
-
-                //NE_Paises p = NE_Paises;
-                //string nombre_pais = cmb_pais.SelectedText;
-                //p.RecuperarId(nombre_pais);
-
-                //cmb_estado_provincia._CargarConJoin(p.RecuperarId(nombre_pais);
+                cmb_estado_provincia._CargarConJoin(int.Parse(cmb_pais.SelectedValue.ToString()));
             }
         }
-
         private void txt_cuit_cliente_Click(object sender, EventArgs e)
         {
             txt_cuit_cliente.SelectionStart = 0;
-        }
-        //private void txt_limite_credito_Click(object sender, EventArgs e)
-        //{
-        //    txt_limite_credito.SelectionStart = txt_limite_credito.Text.Length;
-        //}
-
-        //private void txt_decimales_Click(object sender, EventArgs e)
-        //{
-        //    txt_decimales.SelectionStart = txt_decimales.Text.Length;
-        //}
+        }      
     }
 }
 

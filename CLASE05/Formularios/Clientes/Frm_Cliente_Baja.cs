@@ -31,15 +31,10 @@ namespace CLASE05.Formularios.Clientes
             string id_estado_provincia = tabla.Rows[0]["id_estado_provincia"].ToString();
             DataTable tabla_IdPais = ne_prov.RecuperarIdPais(id_estado_provincia);
             string id_pais = tabla_IdPais.Rows[0]["id_pais"].ToString();
-           
-            //float num = float.Parse(tabla.Rows[0]["limite_credito"].ToString());
-            //double enteros = Math.Truncate(num);
-            //int decimales = (int)(((decimal)num % 1) * 100);
-
+            
             txt_cuit_cliente.Text = tabla.Rows[0]["cuit_cliente"].ToString();
             txt_razon_social._Text = tabla.Rows[0]["razon_social"].ToString();
             txt_limite._Text = tabla.Rows[0]["limite_credito"].ToString();
-            //txt_decimales.Text = decimales.ToString();
             txt_nombre_contacto._Text = tabla.Rows[0]["nombre_contacto"].ToString();
             txt_legajo_empleado._Text = tabla.Rows[0]["legajo_empleado"].ToString();
             txt_direccion._Text = tabla.Rows[0]["direccion"].ToString();
@@ -52,8 +47,6 @@ namespace CLASE05.Formularios.Clientes
         {
             TratamientosEspeciales _TE = new TratamientosEspeciales();
 
-            //if (_TE.Validar(this.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
-            //{
                 cli.cuit_cliente = txt_cuit_cliente.Text;
 
                 if (MessageBox.Show("¿Está seguro de que desea eliminar al cliente " + txt_razon_social._Text + "?", "Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -64,8 +57,6 @@ namespace CLASE05.Formularios.Clientes
                 }
                 else
                     MessageBox.Show("Eliminación cancelada");
-
-            //}
         }
     }
 }

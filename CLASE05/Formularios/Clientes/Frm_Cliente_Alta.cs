@@ -24,16 +24,10 @@ namespace CLASE05.Formularios.Clientes
             cmb_pais._Cargar();
             
         }
-
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
             TratamientosEspeciales _TE = new TratamientosEspeciales();
             NE_Empleados ne_emp = new NE_Empleados();   
-            
-            //if(txt_decimales.Text == "")
-            //{
-            //    txt_decimales.Text = "00";
-            //}
 
             if (_TE.Validar(base.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
             {
@@ -61,19 +55,12 @@ namespace CLASE05.Formularios.Clientes
 
                 cli.cuit_cliente = txt_cuit_cliente.Text;
                 cli.razon_social = txt_razon_social._Text;
-                cli.limite_credito = txt_limite._Text;
-                //cli.limite_credito = txt_limite_credito.Text;
+                cli.limite_credito = txt_limite._Text;           
                 cli.nombre_contacto = txt_nombre_contacto._Text;
                 cli.legajo_empleado = txt_legajo_empleado._Text;
                 cli.direccion = txt_direccion._Text;
                 cli.id_estado_provincia = cmb_estado_provincia.SelectedValue.ToString();
-                cli.ciudad = txt_ciudad._Text;
-
-                //cli.decimales = txt_decimales.Text;
-                //double ent = double.Parse(txt_limite_credito.Text);
-                //double dec = (double.Parse(txt_decimales.Text)) / 100;                
-                //cli.limite_credito = (ent + dec).ToString().Replace(",", "."); ;
-                //MessageBox.Show(cli.limite_credito);
+                cli.ciudad = txt_ciudad._Text;               
                 
                 cli.Insertar();
                 MessageBox.Show("Se grabó correctamente el cliente " + txt_razon_social._Text, "Importante");
