@@ -532,7 +532,7 @@ namespace CLASE05.Formularios.Facturas
             this.cmb_ensamblados._Nombre_campo = "";
             this.cmb_ensamblados._Nombre_tabla = "";
             this.cmb_ensamblados._tabla_cargar_combo = "producto_ensamblado";
-            this.cmb_ensamblados._tabla_cargar_descriptor = "cod_prod_ensamblado";
+            this.cmb_ensamblados._tabla_cargar_descriptor = "nombre";
             this.cmb_ensamblados._tabla_cargar_pk = "cod_prod_ensamblado";
             this.cmb_ensamblados._tabla_join = null;
             this.cmb_ensamblados._tabla_join_pk = null;

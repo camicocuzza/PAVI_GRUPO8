@@ -14,7 +14,7 @@ namespace CLASE05.Negocios
     {
         public string cod_prod_ensamblado { get; set; }
         public string precio { get; set; }
-        public string stock { get; set; }
+        public string nombre { get; set; }
         public string cod_articulo { get; set; }
         public string cantidad { get; set; }
 
@@ -22,14 +22,14 @@ namespace CLASE05.Negocios
         BE_Acceso_Datos _BD = new BE_Acceso_Datos();
         public void CargarCombo(ref ComboBox01 combo)
         {
-            combo.DisplayMember = "cod_prod_ensamblado";
+            combo.DisplayMember = "nombre";
             combo.ValueMember = "cod_prod_ensamblado";
-            combo.DataSource = _BD.EjecutarSelect("SELECT cod_prod_ensamblado, cod_prod_ensamblado FROM producto_ensamblado");
+            combo.DataSource = _BD.EjecutarSelect("SELECT nombre, cod_prod_ensamblado FROM producto_ensamblado");
         }
 
         public DataTable BuscarEquipoEnsamblado (string cod_eq_en)
         {
-            string sql = @"SELECT cod_prod_ensamblado, precio, stock 
+            string sql = @"SELECT cod_prod_ensamblado, nombre, precio 
                           FROM producto_ensamblado WHERE cod_prod_ensamblado like '%" + cod_eq_en + "%'";
 
             return _BD.EjecutarSelect(sql);
@@ -60,10 +60,10 @@ namespace CLASE05.Negocios
         {
             string sqlInsert = "";
 
-            sqlInsert = @"INSERT INTO producto_ensamblado (cod_prod_ensamblado, precio, stock) VALUES (";
+            sqlInsert = @"INSERT INTO producto_ensamblado (cod_prod_ensamblado, nombre, precio) VALUES (";
             sqlInsert += "'" + cod_prod_ensamblado + "'";
-            sqlInsert += ", " + precio;
-            sqlInsert += ", " + stock + ")";
+            sqlInsert += ", " + nombre;
+            sqlInsert += ", " + precio + ")";
 
             _BD.Insertar(sqlInsert);
         }
@@ -72,7 +72,7 @@ namespace CLASE05.Negocios
         {
             string sqlInsert = "";
 
-            sqlInsert = @"INSERT INTO detalle_prod_ensamblado (cod_articulo, cod_prod_ensamblado,cantidad) VALUES (";
+            sqlInsert = @"INSERT INTO detalle_prod_ensamblado (cod_articulo, cod_prod_ensamblado, cantidad) VALUES (";
             sqlInsert += "'" + cod_articulo + "'";
             sqlInsert += ", '" + cod_prod_ensamblado + "'";
             sqlInsert += ", " + cantidad + ")";
@@ -85,8 +85,8 @@ namespace CLASE05.Negocios
             string sqlUpdate = "";
 
             sqlUpdate = "UPDATE producto_ensamblado SET ";
-            sqlUpdate += "precio = " + precio;
-            sqlUpdate += ", stock = " + stock;
+            sqlUpdate += ", nombre = " + nombre;
+            sqlUpdate += "precio = " + precio;            
             sqlUpdate += " WHERE cod_prod_ensamblado = '" + cod_prod_ensamblado + "'";
 
             _BD.Modificar(sqlUpdate);

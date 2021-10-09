@@ -23,7 +23,7 @@ namespace CLASE05.Formularios.Facturas
         public NE_Facturas ne_facturas = new NE_Facturas();
         public NE_Clientes ne_clientes = new NE_Clientes();
         NE_Stock ne_stock = new NE_Stock();
-        //public string id_perfil = "";
+      
         public string cuit_cliente { get; set; }
         public string num_factura { get; set; }
         public string id_tipo_factura { get; set; }
@@ -43,10 +43,8 @@ namespace CLASE05.Formularios.Facturas
         }
         public void Inicio()
         {
-            grid_articulos.Formatear("Id, 40, C; Artículo, 150, I; Cantidad, 70, C; Precio, 70, C; Subtotal Artículo, 90, C");
-            grid_ensamblados.Formatear("Id, 40, C; Equipo Ensamblado, 150, I; Cantidad, 70, C; Precio, 70, C; Subtotal Artículo, 90, C");
-            //ne_articulos.CargarCombo(ref cmb_articulos);
-            //ne_ensamblados.CargarCombo(ref cmb_ensamblados);
+            grid_articulos.Formatear("Id, 40, C; Artículo, 150, I; Cantidad, 70, C; Precio, 70, C; Subtotal, 90, C");
+            grid_ensamblados.Formatear("Id, 40, C; Equipo Ensamblado, 150, I; Cantidad, 70, C; Precio, 70, C; Subtotal, 90, C");
             cmb_articulos._Cargar();
             cmb_ensamblados._Cargar();
             cmb_tipo_factura._Cargar();

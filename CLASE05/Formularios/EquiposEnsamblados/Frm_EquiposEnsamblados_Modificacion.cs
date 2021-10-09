@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
 
                 equipo.cod_prod_ensamblado = txt_cod_p_ensamblado._Text;
                 equipo.precio = txt_precio._Text;
-                equipo.stock = txt_stock._Text;
+                equipo.nombre = txt_stock._Text;
 
                 equipo.Modificar();
                 MessageBox.Show("Se modificó correctamente el artículo " + txt_cod_p_ensamblado._Text, "Importante");

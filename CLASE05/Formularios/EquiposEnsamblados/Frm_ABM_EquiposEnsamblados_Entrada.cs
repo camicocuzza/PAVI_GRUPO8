@@ -18,7 +18,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
 
         private void Frm_ABM_EquiposEnsamblados_Entrada_Load(object sender, EventArgs e)
         {
-            this.grid_equiposEnsamblados.Formatear("cod_prod_ensamblado, 100, C; precio, 100, I; stock, 100, I");
+            this.grid_equiposEnsamblados.Formatear("cod_prod_ensamblado, 100, C; nombre, 200, I, precio, 100, I");
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
