@@ -57,10 +57,6 @@ namespace CLASE05.Formularios.Facturas
             this.cmb_ensamblados.DisplayMember = "cod_prod_ensamblado";
             this.cmb_ensamblados.ValueMember = "cod_prod_ensamblado";
             // 
-            // txt_fechaActual
-            // 
-            this.txt_fechaActual.Text = "7/10/2021 02:05:41";
-            // 
             // btn_buscar
             // 
             this.btn_buscar.Enabled = false;

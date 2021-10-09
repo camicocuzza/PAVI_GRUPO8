@@ -842,7 +842,7 @@ namespace CLASE05.Formularios.Facturas
             this._FormularioMovil = true;
             this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1063, 625);
+            this.ClientSize = new System.Drawing.Size(1063, 613);
             this.Controls.Add(this.txt_stock_ensamblado);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.txt_stock_articulo);

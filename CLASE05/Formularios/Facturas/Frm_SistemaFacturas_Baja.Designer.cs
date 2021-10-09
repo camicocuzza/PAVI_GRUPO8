@@ -79,10 +79,6 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.txt_cantidad_ensamblado.Enabled = false;
             // 
-            // txt_fechaActual
-            // 
-            this.txt_fechaActual.Text = "6/10/2021 22:29:30";
-            // 
             // btn_buscar
             // 
             this.btn_buscar.Enabled = false;

@@ -57,10 +57,6 @@ namespace CLASE05.Formularios.Facturas
             this.cmb_ensamblados.DisplayMember = "cod_prod_ensamblado";
             this.cmb_ensamblados.ValueMember = "cod_prod_ensamblado";
             // 
-            // txt_fechaActual
-            // 
-            this.txt_fechaActual.Text = "06102021";
-            // 
             // btn_buscar
             // 
             this.btn_buscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
