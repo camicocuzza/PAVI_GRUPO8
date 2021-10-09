@@ -48,7 +48,7 @@ namespace CLASE05.Formularios.Facturas
             cmb_tipo_factura._Cargar();
             cmb_pais._Cargar();
             cmb_estado_provincia._Cargar();
-            txt_fechaActual.Text = _TE.RecuperarFechaSistema();
+            txt_fechaActual.Text = _TE.RecuperarFechaSistema().Substring(0,9);
         }
 
         public void RecuperarDatosFormulario()
