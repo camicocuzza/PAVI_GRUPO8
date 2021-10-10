@@ -249,6 +249,9 @@ namespace CLASE05.Negocios
                     int cantidadanterior = int.Parse(tablastock.Rows[0]["cantidad"].ToString());
                     int nuevaCantidad = cantidadanterior + cantidadVendida;
 
+                    string sqlmodifstock = "UPDATE stock_prod_ensamblado SET fecha = 1/1/2000 WHERE cod_prod_ensamblado = '" + Grid_Detalle_Articulo.Rows[i].Cells[0].Value.ToString() + "' AND fecha = '" + fecha + "'";
+                    _BD.Modificar(sqlmodifstock);
+
                     ne_stock_ens.Insertar(Grid_Detalle_Ensamblado.Rows[i].Cells[0].Value.ToString(), _TE.RecuperarFechaSistema(), nuevaCantidad);
                 }
             }

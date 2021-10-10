@@ -79,6 +79,10 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.txt_cantidad_ensamblado.Enabled = false;
             // 
+            // txt_fechaActual
+            // 
+            this.txt_fechaActual.Text = "10/10/202";
+            // 
             // btn_buscar
             // 
             this.btn_buscar.Enabled = false;
@@ -178,7 +182,7 @@ namespace CLASE05.Formularios.Facturas
             this.btn_eliminar_venta.Size = new System.Drawing.Size(123, 29);
             this.btn_eliminar_venta.TabIndex = 120;
             this.btn_eliminar_venta.TabStop = false;
-            this.btn_eliminar_venta.Text = "Eliminar Venta";
+            this.btn_eliminar_venta.Text = "Anular Venta";
             this.btn_eliminar_venta.UseVisualStyleBackColor = false;
             this.btn_eliminar_venta.Click += new System.EventHandler(this.btn_eliminar_venta_Click);
             // 
@@ -186,7 +190,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1063, 667);
+            this.ClientSize = new System.Drawing.Size(1063, 611);
             this.Controls.Add(this.btn_eliminar_venta);
             this.Name = "Frm_SistemaFacturas_Baja";
             this.Load += new System.EventHandler(this.Frm_SistemaFacturas_Baja_Load);
