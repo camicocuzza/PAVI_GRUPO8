@@ -32,6 +32,11 @@ namespace CLASE05.Formularios.Facturas
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_SistemaFacturas_Consulta));
             this.SuspendLayout();
             // 
+            // label2
+            // 
+            this.label2.Size = new System.Drawing.Size(333, 31);
+            this.label2.Text = "Consulta Sistema de Ventas";
+            // 
             // txt_cuit_cliente
             // 
             this.txt_cuit_cliente.Enabled = false;
@@ -45,6 +50,10 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.cmb_estado_provincia.DisplayMember = "nombre_estado_provincia";
             this.cmb_estado_provincia.ValueMember = "id_estado_provincia";
+            // 
+            // txt_total_venta
+            // 
+            this.txt_total_venta.Location = new System.Drawing.Point(900, 551);
             // 
             // txt_cantidad_articulo
             // 
@@ -76,6 +85,10 @@ namespace CLASE05.Formularios.Facturas
             this.btn_buscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btn_buscar.FlatAppearance.BorderSize = 2;
             this.btn_buscar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            // 
+            // label11
+            // 
+            this.label11.Location = new System.Drawing.Point(897, 528);
             // 
             // btn_agregar_articulo
             // 
@@ -110,7 +123,8 @@ namespace CLASE05.Formularios.Facturas
             this.btnMostrarFactura.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btnMostrarFactura.FlatAppearance.BorderSize = 2;
             this.btnMostrarFactura.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.btnMostrarFactura.Location = new System.Drawing.Point(441, 564);
+            this.btnMostrarFactura.Location = new System.Drawing.Point(455, 555);
+            this.btnMostrarFactura.Size = new System.Drawing.Size(189, 29);
             this.btnMostrarFactura.Click += new System.EventHandler(this.btnMostrarFactura_Click);
             // 
             // btnGuardar
@@ -119,6 +133,7 @@ namespace CLASE05.Formularios.Facturas
             this.btnGuardar.FlatAppearance.BorderSize = 2;
             this.btnGuardar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.btnGuardar.Location = new System.Drawing.Point(200, 564);
+            this.btnGuardar.Size = new System.Drawing.Size(10, 29);
             this.btnGuardar.Visible = false;
             // 
             // btnNuevaVenta
@@ -127,6 +142,7 @@ namespace CLASE05.Formularios.Facturas
             this.btnNuevaVenta.FlatAppearance.BorderSize = 2;
             this.btnNuevaVenta.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.btnNuevaVenta.Location = new System.Drawing.Point(200, 564);
+            this.btnNuevaVenta.Size = new System.Drawing.Size(10, 29);
             this.btnNuevaVenta.Visible = false;
             // 
             // cmb_tipo_factura
@@ -163,7 +179,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1063, 625);
+            this.ClientSize = new System.Drawing.Size(1063, 596);
             this.Name = "Frm_SistemaFacturas_Consulta";
             this.Load += new System.EventHandler(this.Frm_SistemaFacturas_Consulta_Load);
             this.ResumeLayout(false);

@@ -114,22 +114,22 @@ namespace CLASE05.Formularios.Facturas
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-            if (grid_facturas.Rows.Count == 0)
-            {
-                MessageBox.Show("Falta buscar registros", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                return;
-            }
-            if (grid_facturas.CurrentCell.RowIndex == -1)
-            {
-                MessageBox.Show("Falta seleccionar un registro", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                return;
-            }
-            Frm_SistemaFacturas_Modificacion frm_modificacion = new Frm_SistemaFacturas_Modificacion();
-            frm_modificacion.num_factura = grid_facturas.CurrentRow.Cells[0].Value.ToString();
-            frm_modificacion.id_tipo_factura = grid_facturas.CurrentRow.Cells[1].Value.ToString();
-            frm_modificacion.cuit_cliente = grid_facturas.CurrentRow.Cells[4].Value.ToString();
-            frm_modificacion.fecha = grid_facturas.CurrentRow.Cells[2].Value.ToString();
-            frm_modificacion.ShowDialog();
+            //if (grid_facturas.Rows.Count == 0)
+            //{
+            //    MessageBox.Show("Falta buscar registros", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            //    return;
+            //}
+            //if (grid_facturas.CurrentCell.RowIndex == -1)
+            //{
+            //    MessageBox.Show("Falta seleccionar un registro", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            //    return;
+            //}
+            //Frm_SistemaFacturas_Modificacion frm_modificacion = new Frm_SistemaFacturas_Modificacion();
+            //frm_modificacion.num_factura = grid_facturas.CurrentRow.Cells[0].Value.ToString();
+            //frm_modificacion.id_tipo_factura = grid_facturas.CurrentRow.Cells[1].Value.ToString();
+            //frm_modificacion.cuit_cliente = grid_facturas.CurrentRow.Cells[4].Value.ToString();
+            //frm_modificacion.fecha = grid_facturas.CurrentRow.Cells[2].Value.ToString();
+            //frm_modificacion.ShowDialog();
 
         }
         private void btn_borrar_Click(object sender, EventArgs e)

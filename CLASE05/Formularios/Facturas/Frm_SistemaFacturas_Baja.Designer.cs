@@ -33,6 +33,11 @@ namespace CLASE05.Formularios.Facturas
             this.btn_eliminar_venta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // label2
+            // 
+            this.label2.Size = new System.Drawing.Size(280, 31);
+            this.label2.Text = "Baja Sistema de Ventas";
+            // 
             // txt_limite
             // 
             this.txt_limite.Enabled = false;
@@ -123,7 +128,8 @@ namespace CLASE05.Formularios.Facturas
             this.btnMostrarFactura.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btnMostrarFactura.FlatAppearance.BorderSize = 2;
             this.btnMostrarFactura.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.btnMostrarFactura.Location = new System.Drawing.Point(164, 562);
+            this.btnMostrarFactura.Location = new System.Drawing.Point(235, 563);
+            this.btnMostrarFactura.Size = new System.Drawing.Size(142, 29);
             this.btnMostrarFactura.Visible = false;
             this.btnMostrarFactura.Click += new System.EventHandler(this.btnMostrarFactura_Click);
             // 
@@ -132,7 +138,8 @@ namespace CLASE05.Formularios.Facturas
             this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btnGuardar.FlatAppearance.BorderSize = 2;
             this.btnGuardar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.btnGuardar.Location = new System.Drawing.Point(164, 563);
+            this.btnGuardar.Location = new System.Drawing.Point(455, 22);
+            this.btnGuardar.Size = new System.Drawing.Size(10, 29);
             this.btnGuardar.Visible = false;
             // 
             // btnNuevaVenta
@@ -140,7 +147,8 @@ namespace CLASE05.Formularios.Facturas
             this.btnNuevaVenta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btnNuevaVenta.FlatAppearance.BorderSize = 2;
             this.btnNuevaVenta.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.btnNuevaVenta.Location = new System.Drawing.Point(164, 563);
+            this.btnNuevaVenta.Location = new System.Drawing.Point(455, 22);
+            this.btnNuevaVenta.Size = new System.Drawing.Size(10, 29);
             this.btnNuevaVenta.Visible = false;
             // 
             // txt_legajo_empleado
@@ -178,9 +186,9 @@ namespace CLASE05.Formularios.Facturas
             this.btn_eliminar_venta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_eliminar_venta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_eliminar_venta.ForeColor = System.Drawing.Color.White;
-            this.btn_eliminar_venta.Location = new System.Drawing.Point(476, 563);
+            this.btn_eliminar_venta.Location = new System.Drawing.Point(732, 564);
             this.btn_eliminar_venta.Name = "btn_eliminar_venta";
-            this.btn_eliminar_venta.Size = new System.Drawing.Size(123, 29);
+            this.btn_eliminar_venta.Size = new System.Drawing.Size(142, 29);
             this.btn_eliminar_venta.TabIndex = 120;
             this.btn_eliminar_venta.TabStop = false;
             this.btn_eliminar_venta.Text = "Anular Venta";
@@ -191,7 +199,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1063, 611);
+            this.ClientSize = new System.Drawing.Size(1063, 610);
             this.Controls.Add(this.btn_eliminar_venta);
             this.Name = "Frm_SistemaFacturas_Baja";
             this.Load += new System.EventHandler(this.Frm_SistemaFacturas_Baja_Load);

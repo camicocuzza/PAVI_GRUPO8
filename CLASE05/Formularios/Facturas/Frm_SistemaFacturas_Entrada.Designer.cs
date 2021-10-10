@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.Facturas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rb_todas = new System.Windows.Forms.RadioButton();
             this.rb_cuit_cliente = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -72,8 +72,9 @@ namespace CLASE05.Formularios.Facturas
             // 
             // label1
             // 
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Size = new System.Drawing.Size(280, 31);
-            this.label1.Text = "Sistema de Facturación";
+            this.label1.Text = "Sistema de Ventas";
             // 
             // btn_consultar
             // 
@@ -205,8 +206,8 @@ namespace CLASE05.Formularios.Facturas
             this.grid_facturas._tamannoLetraHeader = 9;
             this.grid_facturas.AllowUserToAddRows = false;
             this.grid_facturas.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_facturas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_facturas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.grid_facturas.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_facturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_facturas.Location = new System.Drawing.Point(12, 205);

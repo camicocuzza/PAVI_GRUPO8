@@ -41,17 +41,17 @@ namespace CLASE05.Formularios.Facturas
             // btn_cerrar
             // 
             this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_cerrar.Location = new System.Drawing.Point(814, 2);
+            this.btn_cerrar.Location = new System.Drawing.Point(805, 2);
             // 
             // btn_minimizar
             // 
             this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_minimizar.Location = new System.Drawing.Point(744, 2);
+            this.btn_minimizar.Location = new System.Drawing.Point(735, 2);
             // 
             // btn_maximizar
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_maximizar.Location = new System.Drawing.Point(779, 2);
+            this.btn_maximizar.Location = new System.Drawing.Point(770, 2);
             // 
             // reportViewer1
             // 
@@ -67,7 +67,12 @@ namespace CLASE05.Formularios.Facturas
             this.rvListado.Location = new System.Drawing.Point(14, 36);
             this.rvListado.Name = "rvListado";
             this.rvListado.ServerReport.BearerToken = null;
-            this.rvListado.Size = new System.Drawing.Size(825, 547);
+            this.rvListado.ShowBackButton = false;
+            this.rvListado.ShowParameterPrompts = false;
+            this.rvListado.ShowPromptAreaButton = false;
+            this.rvListado.ShowRefreshButton = false;
+            this.rvListado.ShowStopButton = false;
+            this.rvListado.Size = new System.Drawing.Size(811, 547);
             this.rvListado.TabIndex = 2;
             // 
             // txtEmail
@@ -152,7 +157,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(851, 675);
+            this.ClientSize = new System.Drawing.Size(842, 675);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblInformes);
             this.Controls.Add(this.btnEmail);
