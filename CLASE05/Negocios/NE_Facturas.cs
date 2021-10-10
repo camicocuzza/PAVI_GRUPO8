@@ -265,7 +265,7 @@ namespace CLASE05.Negocios
                 MessageBox.Show("No se eliminó la venta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
-
+        
         public DataTable RecuperarEliminados()
         {
             string sql = @"SELECT * 
