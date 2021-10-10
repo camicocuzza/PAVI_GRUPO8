@@ -27,7 +27,7 @@ namespace CLASE05.Negocios
             string sql = "";
 
             sql = @"SELECT cuit_proveedor, razon_social, fecha_inicio_operacion
-                          FROM proveedor WHERE " + columna + " like '%" + patron + "%'";
+                          FROM proveedor WHERE eliminado = 0 AND " + columna + " like '%" + patron + "%'";
 
             return _BD.EjecutarSelect(sql);
         }
@@ -35,7 +35,7 @@ namespace CLASE05.Negocios
         public DataTable RecuperarProveedor(string cuit_proveedor)
         {
             string sql = @"SELECT * 
-                          FROM proveedor WHERE cuit_proveedor = '" + cuit_proveedor + "'";
+                          FROM proveedor WHERE eliminado = 0 AND cuit_proveedor = '" + cuit_proveedor + "'";
 
             return _BD.EjecutarSelect(sql);
         }
@@ -44,14 +44,15 @@ namespace CLASE05.Negocios
         {
             string sqlInsert = "";
 
-            sqlInsert = @"INSERT INTO proveedor (cuit_proveedor, razon_social, fecha_inicio_operacion, legajo_empleado, direccion, id_estado_provincia, ciudad) VALUES (";
+            sqlInsert = @"INSERT INTO proveedor (cuit_proveedor, razon_social, fecha_inicio_operacion, legajo_empleado, direccion, id_estado_provincia, ciudad, eliminado) VALUES (";
             sqlInsert += "'" + cuit_proveedor + "'";
             sqlInsert += ", '" + razon_social + "'";
             sqlInsert += ", '" + fecha_inicio_operacion + "'";
             sqlInsert += ", " + legajo_empleado;
             sqlInsert += ", '" + direccion + "'";
             sqlInsert += ", " + id_estado_provincia;
-            sqlInsert += ", '" + ciudad + "')";
+            sqlInsert += ", '" + ciudad + "'";
+            sqlInsert += ", 0)";
 
             _BD.Insertar(sqlInsert);
         }
@@ -75,7 +76,7 @@ namespace CLASE05.Negocios
 
         public void Borrar()
         {
-            string sqlDelete = "DELETE FROM proveedor WHERE cuit_proveedor = '" + cuit_proveedor + "'";
+            string sqlDelete = "UPDATE proveedor SET eliminado = 1 WHERE cuit_proveedor = '" + cuit_proveedor + "'";
 
             _BD.Borrar(sqlDelete);
 

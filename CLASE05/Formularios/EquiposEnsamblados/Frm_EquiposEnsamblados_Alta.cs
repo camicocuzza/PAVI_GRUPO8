@@ -28,7 +28,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
 
                 equipo.cod_prod_ensamblado = "E" + txt_cod_p_ensamblado._Text;
                 equipo.precio = txt_precio._Text;
-                equipo.nombre = txt_stock._Text;
+                equipo.nombre = txt_nombre._Text;
 
 
                 equipo.Insertar();

@@ -46,14 +46,14 @@ namespace CLASE05.Negocios
         public DataTable RecuperarEmpleado(string legajo_empleado)
         {
             string sql = @"SELECT * 
-                          FROM empleado WHERE legajo_empleado = '" + legajo_empleado + "'";
+                          FROM empleado WHERE eliminado = 0 AND legajo_empleado = '" + legajo_empleado + "'";
 
             return _BD.EjecutarSelect(sql);
         }
         public string RecuperarLegajo(string id_tipo_documento, string nro_documento)
         {
             string sql = @"SELECT legajo_empleado FROM empleado
-                         WHERE id_tipo_documento = " + id_tipo_documento +
+                         WHERE eliminado = 0 AND id_tipo_documento = " + id_tipo_documento +
                         " AND nro_documento = '" + nro_documento + "'";
 
             DataTable tabla = new DataTable();
@@ -68,21 +68,21 @@ namespace CLASE05.Negocios
         public DataTable BuscarEmpleado(string patron, string columna)
         {
             string sql = @"SELECT legajo_empleado, id_tipo_documento, nro_documento, apellido, nombre, telefono  
-                          FROM empleado WHERE " + columna + " like '%" + patron + "%'";
+                          FROM empleado WHERE eliminado = 0 AND " + columna + " like '%" + patron + "%'";
 
             return _BD.EjecutarSelect(sql);
         }
         public DataTable BuscarEmpleado(string legajo_empleado)
         {
             string sql = @"SELECT legajo_empleado, id_tipo_documento, nro_documento, apellido, nombre, fecha_ingreso, telefono
-                          FROM empleado WHERE legajo_empleado = " + legajo_empleado;
+                          FROM empleado WHERE eliminado = 0 AND legajo_empleado = " + legajo_empleado;
 
             return _BD.EjecutarSelect(sql);
         }
         public DataTable RecuperarCliente(string cuit_cliente)
         {
             string sql = @"SELECT * 
-                          FROM empleado WHERE legajo_empleado = " + legajo_empleado;
+                          FROM empleado WHERE eliminado = 0 AND legajo_empleado = " + legajo_empleado;
 
             return _BD.EjecutarSelect(sql);
         }
@@ -91,7 +91,7 @@ namespace CLASE05.Negocios
             string sqlInsert = "";
 
             sqlInsert = @"INSERT INTO empleado (id_tipo_documento, nro_documento, apellido, nombre, fecha_ingreso, 
-                        direccion, id_estado_provincia, ciudad, telefono) VALUES (";
+                        direccion, id_estado_provincia, ciudad, telefono, eliminado) VALUES (";
             sqlInsert += id_tipo_documento;
             sqlInsert += ", '" + nro_documento + "'";
             sqlInsert += ", '" + apellido + "'";
@@ -100,9 +100,9 @@ namespace CLASE05.Negocios
             sqlInsert += ", '" + direccion + "'";
             sqlInsert += ", " + id_estado_provincia;
             sqlInsert += ", '" + ciudad + "'";
-            sqlInsert += ", '" + telefono + "')";
+            sqlInsert += ", '" + telefono + "'";
+            sqlInsert += ", 0)";
 
-            //MessageBox.Show(sqlInsert);
             _BD.Insertar(sqlInsert);
         }
         public void Modificar()
@@ -125,7 +125,7 @@ namespace CLASE05.Negocios
         }
         public void Borrar()
         {
-            string sqlDelete = "DELETE FROM empleado WHERE legajo_empleado = " + legajo_empleado;
+            string sqlDelete = "UPDATE empleado SET eliminado = 1 WHERE legajo_empleado = " + legajo_empleado;
 
             _BD.Borrar(sqlDelete);
         }

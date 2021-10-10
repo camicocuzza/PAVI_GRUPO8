@@ -94,10 +94,10 @@ namespace CLASE05.Negocios
         {
             string sqlInsert = "";
 
-            sqlInsert = @"INSERT INTO usuario (n_usuario, password) VALUES (";
+            sqlInsert = @"INSERT INTO usuario (n_usuario, password, eliminado) VALUES (";
             sqlInsert += "'" + n_usuario + "'";
             sqlInsert += ", '" + password + "'";
-            sqlInsert += ", eliminado = 0)";
+            sqlInsert += ", 0)";
 
             _BD.Insertar(sqlInsert);
         }

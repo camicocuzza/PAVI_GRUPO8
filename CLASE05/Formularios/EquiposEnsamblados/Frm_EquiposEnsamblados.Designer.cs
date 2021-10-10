@@ -33,7 +33,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.btn_aceptar = new System.Windows.Forms.Button();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.txt_precio = new CLASE05.Clases.LabelText02();
-            this.txt_stock = new CLASE05.Clases.LabelText02();
+            this.txt_nombre = new CLASE05.Clases.LabelText02();
             this.SuspendLayout();
             // 
             // btn_cerrar
@@ -123,42 +123,41 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.txt_precio.TabIndex = 68;
             this.txt_precio.Click += new System.EventHandler(this.txt_precio_Click);
             // 
-            // txt_stock
+            // txt_nombre
             // 
-            this.txt_stock._Ancho = 10;
-            this.txt_stock._Decimales = 0;
-            this.txt_stock._Etiqueta = "Stock";
-            this.txt_stock._Mask = "9999999999";
-            this.txt_stock._MensajeError = "El stock está vacío";
-            this.txt_stock._Nombre_campo = "stock";
-            this.txt_stock._Nombre_tabla = null;
-            this.txt_stock._ReadOnly = false;
-            this.txt_stock._StartEnCero = false;
-            this.txt_stock._Text = "";
-            this.txt_stock._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.txt_stock._TipoDato = CLASE05.Clases.LabelText02.TipoDato.numero;
-            this.txt_stock._Validable = true;
-            this.txt_stock.BackColor = System.Drawing.Color.Transparent;
-            this.txt_stock.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txt_stock.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_stock.Location = new System.Drawing.Point(38, 188);
-            this.txt_stock.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_stock.Name = "txt_stock";
-            this.txt_stock.Size = new System.Drawing.Size(260, 30);
-            this.txt_stock.TabIndex = 69;
+            this.txt_nombre._Ancho = 50;
+            this.txt_nombre._Decimales = 0;
+            this.txt_nombre._Etiqueta = "Nombre";
+            this.txt_nombre._Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
+            this.txt_nombre._MensajeError = "El stock está vacío";
+            this.txt_nombre._Nombre_campo = "stock";
+            this.txt_nombre._Nombre_tabla = null;
+            this.txt_nombre._ReadOnly = false;
+            this.txt_nombre._StartEnCero = false;
+            this.txt_nombre._Text = "";
+            this.txt_nombre._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txt_nombre._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
+            this.txt_nombre._Validable = true;
+            this.txt_nombre.BackColor = System.Drawing.Color.Transparent;
+            this.txt_nombre.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txt_nombre.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_nombre.Location = new System.Drawing.Point(38, 188);
+            this.txt_nombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Size = new System.Drawing.Size(260, 30);
+            this.txt_nombre.TabIndex = 69;
             // 
             // Frm_EquiposEnsamblados
             // 
             this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(414, 360);
-            this.Controls.Add(this.txt_stock);
+            this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.txt_precio);
             this.Controls.Add(this.txt_cod_p_ensamblado);
             this.Controls.Add(this.btn_aceptar);
             this.Controls.Add(this.lbl_titulo);
             this.Name = "Frm_EquiposEnsamblados";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Frm_EquiposEnsamblados_Load);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
@@ -168,7 +167,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.Controls.SetChildIndex(this.btn_aceptar, 0);
             this.Controls.SetChildIndex(this.txt_cod_p_ensamblado, 0);
             this.Controls.SetChildIndex(this.txt_precio, 0);
-            this.Controls.SetChildIndex(this.txt_stock, 0);
+            this.Controls.SetChildIndex(this.txt_nombre, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,6 +178,6 @@ namespace CLASE05.Formularios.EquiposEnsamblados
         public System.Windows.Forms.Button btn_aceptar;
         private System.Windows.Forms.Label lbl_titulo;
         public Clases.LabelText02 txt_precio;
-        public Clases.LabelText02 txt_stock;
+        public Clases.LabelText02 txt_nombre;
     }
 }

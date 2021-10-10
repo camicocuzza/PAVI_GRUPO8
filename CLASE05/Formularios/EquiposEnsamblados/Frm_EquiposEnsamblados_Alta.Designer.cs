@@ -39,16 +39,21 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             // 
             // btn_aceptar
             // 
-            this.btn_aceptar.Location = new System.Drawing.Point(155, 246);
+            this.btn_aceptar.Location = new System.Drawing.Point(152, 265);
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // txt_precio
             // 
-            this.txt_precio.Location = new System.Drawing.Point(-61, 161);
+            this.txt_precio.Location = new System.Drawing.Point(-48, 189);
+            this.txt_precio.Size = new System.Drawing.Size(406, 30);
             // 
-            // txt_stock
+            // txt_nombre
             // 
-            this.txt_stock.Location = new System.Drawing.Point(98, 161);
+            this.txt_nombre._Ancho = 50;
+            this.txt_nombre._Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
+            this.txt_nombre._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
+            this.txt_nombre.Location = new System.Drawing.Point(-48, 151);
+            this.txt_nombre.Size = new System.Drawing.Size(406, 30);
             // 
             // btn_cerrar
             // 
@@ -81,7 +86,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.ClientSize = new System.Drawing.Size(414, 321);
             this.Controls.Add(this.label1);
             this.Name = "Frm_EquiposEnsamblados_Alta";
-            this.Controls.SetChildIndex(this.txt_stock, 0);
+            this.Controls.SetChildIndex(this.txt_nombre, 0);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);

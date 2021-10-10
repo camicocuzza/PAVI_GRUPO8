@@ -20,28 +20,28 @@ namespace CLASE05.Negocios
         public DataTable BuscarEstadoProvincia(string patron, string columna)
         {
             string sql = @"SELECT id_estado_provincia, nombre_estado_provincia 
-                          FROM estado_provincia WHERE " + columna + " like '%" + patron + "%'";
+                          FROM estado_provincia WHERE eliminado = 0 AND " + columna + " like '%" + patron + "%'";
 
             return _BD.EjecutarSelect(sql);
         }
         public DataTable BuscarEstadoProvincia(string id_estado_provincia)
         {
             string sql = @"SELECT id_estado_provincia, nombre_estado_provincia 
-                          FROM estado_provincia WHERE id_estado_provincia = " + id_estado_provincia;
+                          FROM estado_provincia WHERE eliminado = 0 AND id_estado_provincia = " + id_estado_provincia;
 
             return _BD.EjecutarSelect(sql);
         }
         public DataTable RecuperarEstadoProvincia(string id_estado_provincia)
         {
             string sql = @"SELECT * 
-                          FROM estado_provincia WHERE id_estado_provincia = " + id_estado_provincia;
+                          FROM estado_provincia WHERE eliminado = 0 AND id_estado_provincia = " + id_estado_provincia;
 
             return _BD.EjecutarSelect(sql);
         }
         public DataTable RecuperarIdPais(string id_estado_provincia)
         {
             string sql = @"SELECT id_pais 
-                          FROM estado_provincia WHERE id_estado_provincia = " + id_estado_provincia;
+                          FROM estado_provincia WHERE eliminado = 0 AND id_estado_provincia = " + id_estado_provincia;
 
             return _BD.EjecutarSelect(sql);
         }
@@ -57,8 +57,9 @@ namespace CLASE05.Negocios
         {
             string sqlInsert = "";
 
-            sqlInsert = @"INSERT INTO estado_provincia (nombre_estado_provincia) VALUES (";
-            sqlInsert += "'" + nombre_estado_provincia + "')";
+            sqlInsert = @"INSERT INTO estado_provincia (nombre_estado_provincia, eliminado) VALUES (";
+            sqlInsert += "'" + nombre_estado_provincia + "'";
+            sqlInsert += ", 0)";
 
             _BD.Insertar(sqlInsert);
         }
@@ -74,7 +75,7 @@ namespace CLASE05.Negocios
         }
         public void Borrar()
         {
-            string sqlDelete = "DELETE FROM estado_provincia WHERE id_estado_provincia = " + id_estado_provincia;
+            string sqlDelete = "UPDATE estado_provincia SET eliminado = 1 WHERE id_estado_provincia = " + id_estado_provincia;
 
             _BD.Borrar(sqlDelete);
         }

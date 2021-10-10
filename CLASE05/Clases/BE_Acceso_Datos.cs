@@ -169,11 +169,13 @@ namespace CLASE05.Clases
             Cmd.Parameters.Add("@cod_prod_ensamblado", SqlDbType.NVarChar);
             Cmd.Parameters.Add("@cuit_cliente", SqlDbType.NVarChar);
             Cmd.Parameters.Add("@logo_cliente", SqlDbType.Image);
+            Cmd.Parameters.Add("@eliminado", SqlDbType.Bit);
             Cmd.Parameters["@cod_prod_ensamblado"].Value = cod_prod_en;
             Cmd.Parameters["@cuit_cliente"].Value = cuit_cliente;
             System.IO.MemoryStream ms = new System.IO.MemoryStream();
             imagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
             Cmd.Parameters["@logo_cliente"].Value = ms.GetBuffer();
+            Cmd.Parameters["@eliminado"].Value = 0;
             Cmd.ExecuteNonQuery();
             Cerrar();
         }

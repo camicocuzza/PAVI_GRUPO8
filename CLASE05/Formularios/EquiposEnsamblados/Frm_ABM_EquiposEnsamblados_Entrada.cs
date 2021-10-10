@@ -27,7 +27,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
            
             if (rb_todos.Checked == true)
             {
-                grid_equiposEnsamblados.Cargar(producto.BuscarEquipoEnsamblado(""));
+                grid_equiposEnsamblados.Cargar(producto.BuscarEnsambladoNombre(""));
                 return;
             }
             if (txt_patron.Text != string.Empty)

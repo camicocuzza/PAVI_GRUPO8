@@ -21,7 +21,7 @@ namespace CLASE05.Negocios
         public bool ValidarExistenciaNombre(string nombre_pais)
         {
             string sql = @"SELECT * FROM pais
-                          WHERE nombre_pais = '" + nombre_pais + "'";
+                          WHERE eliminado = 0 AND nombre_pais = '" + nombre_pais + "'";
 
             DataTable tabla = new DataTable();
             tabla = _BD.EjecutarSelect(sql);
@@ -38,7 +38,7 @@ namespace CLASE05.Negocios
         public int RecuperarId(string nombre_pais)
         {
             string sql = @"SELECT id_usuario FROM pais
-                         WHERE nombre_pais = '" + nombre_pais + "'";
+                         WHERE eliminado = 0 AND nombre_pais = '" + nombre_pais + "'";
 
             DataTable tabla = new DataTable();
             tabla = _BD.EjecutarSelect(sql);
@@ -51,21 +51,21 @@ namespace CLASE05.Negocios
         public DataTable BuscarPais(string patron, string columna)
         {
             string sql = @"SELECT id_pais, nombre_pais 
-                          FROM pais WHERE " + columna + " like '%" + patron + "%'";
+                          FROM pais WHERE eliminado = 0 AND " + columna + " like '%" + patron + "%'";
 
             return _BD.EjecutarSelect(sql);
         }
         public DataTable BuscarPais(string id_pais)
         {
             string sql = @"SELECT id_pais, nombre_pais 
-                          FROM pais WHERE id_pais = " + id_pais;
+                          FROM pais WHERE eliminado = 0 AND id_pais = " + id_pais;
 
             return _BD.EjecutarSelect(sql);
         }
         public DataTable RecuperarPais(string id_pais)
         {
             string sql = @"SELECT * 
-                          FROM pais WHERE id_pais = " + id_pais;
+                          FROM pais WHERE eliminado = 0 AND id_pais = " + id_pais;
 
             return _BD.EjecutarSelect(sql);
         }
@@ -73,8 +73,9 @@ namespace CLASE05.Negocios
         {
             string sqlInsert = "";
 
-            sqlInsert = @"INSERT INTO pais (nombre_pais) VALUES (";
-            sqlInsert += "'" + nombre_pais + "')";
+            sqlInsert = @"INSERT INTO pais (nombre_pais, eliminado) VALUES (";
+            sqlInsert += "'" + nombre_pais + "'";
+            sqlInsert += ", 0)";
 
             _BD.Insertar(sqlInsert);
         }
@@ -90,7 +91,7 @@ namespace CLASE05.Negocios
         }
         public void Borrar()
         {
-            string sqlDelete = "DELETE FROM pais WHERE id_pais = " + id_pais;
+            string sqlDelete = "UPDATE pais SET eliminado = 1 WHERE id_pais = " + id_pais;
 
             _BD.Borrar(sqlDelete);
         }

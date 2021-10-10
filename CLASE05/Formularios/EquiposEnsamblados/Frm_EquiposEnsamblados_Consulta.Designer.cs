@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grid_articulos = new CLASE05.Clases.Grid01();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_detalle = new System.Windows.Forms.Button();
@@ -39,6 +39,8 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             // txt_cod_p_ensamblado
             // 
             this.txt_cod_p_ensamblado.Enabled = false;
+            this.txt_cod_p_ensamblado.Location = new System.Drawing.Point(38, 112);
+            this.txt_cod_p_ensamblado.Size = new System.Drawing.Size(389, 30);
             // 
             // btn_aceptar
             // 
@@ -48,10 +50,17 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             // txt_precio
             // 
             this.txt_precio.Enabled = false;
+            this.txt_precio.Location = new System.Drawing.Point(38, 188);
+            this.txt_precio.Size = new System.Drawing.Size(389, 30);
             // 
-            // txt_stock
+            // txt_nombre
             // 
-            this.txt_stock.Enabled = false;
+            this.txt_nombre._Ancho = 50;
+            this.txt_nombre._Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
+            this.txt_nombre._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
+            this.txt_nombre.Enabled = false;
+            this.txt_nombre.Location = new System.Drawing.Point(38, 150);
+            this.txt_nombre.Size = new System.Drawing.Size(389, 30);
             // 
             // btn_cerrar
             // 
@@ -74,8 +83,8 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.grid_articulos._tamannoLetraHeader = 9;
             this.grid_articulos.AllowUserToAddRows = false;
             this.grid_articulos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_articulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_articulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.grid_articulos.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_articulos.Location = new System.Drawing.Point(38, 264);
@@ -126,7 +135,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.Controls.SetChildIndex(this.btn_aceptar, 0);
             this.Controls.SetChildIndex(this.txt_cod_p_ensamblado, 0);
             this.Controls.SetChildIndex(this.txt_precio, 0);
-            this.Controls.SetChildIndex(this.txt_stock, 0);
+            this.Controls.SetChildIndex(this.txt_nombre, 0);
             this.Controls.SetChildIndex(this.grid_articulos, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.btn_detalle, 0);

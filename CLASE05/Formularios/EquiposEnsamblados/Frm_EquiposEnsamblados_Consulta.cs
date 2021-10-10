@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
         {
             txt_cod_p_ensamblado._Text = tabla.Rows[0]["cod_prod_ensamblado"].ToString();
             txt_precio._Text = tabla.Rows[0]["precio"].ToString();
-            txt_stock._Text = tabla.Rows[0]["stock"].ToString();
+            txt_nombre._Text = tabla.Rows[0]["nombre"].ToString();
 
         }
 

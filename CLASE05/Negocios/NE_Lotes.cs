@@ -23,7 +23,7 @@ namespace CLASE05.Negocios
             string sql = "";
 
             sql = @"SELECT num_lote, nro_remito_proveedor, fecha_compra 
-                          FROM lote WHERE " + columna + " like '%" + patron + "%'";
+                          FROM lote WHERE eliminado = 0 AND " + columna + " like '%" + patron + "%'";
 
             return _BD.EjecutarSelect(sql);
         }
@@ -31,7 +31,7 @@ namespace CLASE05.Negocios
         public DataTable RecuperarLote(string num_lote)
         {
             string sql = @"SELECT * 
-                          FROM lote WHERE num_lote = '" + num_lote + "'";
+                          FROM lote WHERE eliminado = 0 AND num_lote = '" + num_lote + "'";
 
             return _BD.EjecutarSelect(sql);
         }
@@ -39,10 +39,11 @@ namespace CLASE05.Negocios
         {
             string sqlInsert = "";
 
-            sqlInsert = @"INSERT INTO lote (num_lote, nro_remito_proveedor, fecha_compra) VALUES (";
+            sqlInsert = @"INSERT INTO lote (num_lote, nro_remito_proveedor, fecha_compra, eliminado) VALUES (";
             sqlInsert += "'" + num_lote + "'";
             sqlInsert += ", '" + nro_remito_proveedor + "'";
-            sqlInsert += ", '" + fecha_compra + "')";
+            sqlInsert += ", '" + fecha_compra + "'";
+            sqlInsert += ", 0)";
 
             _BD.Insertar(sqlInsert);
         }
@@ -62,7 +63,7 @@ namespace CLASE05.Negocios
 
         public void Borrar()
         {
-            string sqlDelete = "DELETE FROM lote WHERE num_lote = '" + num_lote + "'";
+            string sqlDelete = "UPDATE lote SET eliminado = 1 WHERE num_lote = '" + num_lote + "'";
 
             _BD.Borrar(sqlDelete);
         }

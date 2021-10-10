@@ -108,7 +108,7 @@ namespace CLASE05.Negocios
             string sqlInsert = "";
 
             sqlInsert = @"INSERT INTO cliente (cuit_cliente, razon_social, limite_credito, nombre_contacto, 
-                                           legajo_empleado, direccion, id_estado_provincia, ciudad) VALUES (";
+                                           legajo_empleado, direccion, id_estado_provincia, ciudad, eliminado) VALUES (";
 
             sqlInsert += "'" + cuit_cliente + "'";
             sqlInsert += ", '" + razon_social + "'";
@@ -118,7 +118,7 @@ namespace CLASE05.Negocios
             sqlInsert += ", '" + direccion + "'";
             sqlInsert += ", " + id_estado_provincia;
             sqlInsert += ", '" + ciudad + "'";
-            sqlInsert += ", eliminado = 0)";
+            sqlInsert += ", 0)";
 
             _BD.Insertar(sqlInsert);
         }
@@ -142,7 +142,7 @@ namespace CLASE05.Negocios
         public void Borrar()
         {
             //string sqlDelete = "DELETE FROM cliente WHERE cuit_cliente = '" + cuit_cliente + "'";
-            string sqlDelete = "UPDATE articulo SET eliminado = 1 WHERE cuit_cliente = '" + cuit_cliente + "'";
+            string sqlDelete = "UPDATE cliente SET eliminado = 1 WHERE cuit_cliente = '" + cuit_cliente + "'";
 
             _BD.Borrar(sqlDelete);
         }

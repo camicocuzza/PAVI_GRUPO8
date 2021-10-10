@@ -55,10 +55,13 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             // 
             this.txt_precio.Location = new System.Drawing.Point(5, 150);
             // 
-            // txt_stock
+            // txt_nombre
             // 
-            this.txt_stock.Location = new System.Drawing.Point(212, 151);
-            this.txt_stock.Size = new System.Drawing.Size(261, 30);
+            this.txt_nombre._Ancho = 50;
+            this.txt_nombre._Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
+            this.txt_nombre._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
+            this.txt_nombre.Location = new System.Drawing.Point(212, 151);
+            this.txt_nombre.Size = new System.Drawing.Size(358, 30);
             // 
             // btn_cerrar
             // 
@@ -213,7 +216,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.Controls.Add(this.txt_cantidad);
             this.Name = "Frm_EquiposEnsamblados_Modificacion";
             this.Load += new System.EventHandler(this.Frm_EquiposEnsamblados_Modificacion_Load);
-            this.Controls.SetChildIndex(this.txt_stock, 0);
+            this.Controls.SetChildIndex(this.txt_nombre, 0);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);

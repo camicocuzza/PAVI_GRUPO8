@@ -118,14 +118,14 @@ namespace CLASE05.Negocios
             Grid01 Grid_Detalle_Ensamblado)
         {
             string sqlInsert = @"INSERT INTO factura 
-                (id_tipo_factura, fecha, monto_total, cuit_cliente, legajo_empleado) VALUES (";
+                (id_tipo_factura, fecha, monto_total, cuit_cliente, legajo_empleado, eliminado) VALUES (";
 
             sqlInsert += id_tipo_factura;         
             sqlInsert += ", GETDATE()";
             sqlInsert += ", " + total_venta;
             sqlInsert += ", '" + cuit_cliente + "'";
             sqlInsert += ", " + legajo_empleado;
-            sqlInsert += ", eliminado = 0)";
+            sqlInsert += ", 0)";
 
 
             _BD.IniciarTransaccion();
@@ -139,7 +139,7 @@ namespace CLASE05.Negocios
                 for (int i = 0; i < Grid_Detalle_Articulo.Rows.Count - 1; i++)
                 {
                     string sqlInsertDA = @"INSERT INTO detalle_factura_articulo (cod_articulo, num_factura, id_tipo_factura, 
-                                        cantidad, precio) VALUES (";
+                                        cantidad, precio, eliminado) VALUES (";
 
                     //Grilla: cod_articulo, nombre, cantidad, precio
                     sqlInsertDA += Grid_Detalle_Articulo.Rows[i].Cells[0].Value.ToString();
@@ -147,7 +147,7 @@ namespace CLASE05.Negocios
                     sqlInsertDA += ", " + id_tipo_factura;
                     sqlInsertDA += ", " + Grid_Detalle_Articulo.Rows[i].Cells[2].Value.ToString();
                     sqlInsertDA += ", " + Grid_Detalle_Articulo.Rows[i].Cells[3].Value.ToString().Replace(',', '.');
-                    sqlInsertDA += ", eliminado = 0)";
+                    sqlInsertDA += ", 0)";
 
                     _BD.Insertar(sqlInsertDA, BE_Acceso_Datos.RecuperacionPk.no_recuperar);
                     
@@ -165,14 +165,14 @@ namespace CLASE05.Negocios
                 for (int i = 0; i < Grid_Detalle_Ensamblado.Rows.Count - 1; i++)
                 {
                     string sqlInsertDE = @"INSERT INTO detalle_factura_prodEnsamblado (cod_prod_ensamblado, num_factura, id_tipo_factura, 
-                                        cantidad, precio) VALUES (";
+                                        cantidad, precio, eliminado) VALUES (";
 
                     sqlInsertDE += "'" + Grid_Detalle_Ensamblado.Rows[i].Cells[0].Value.ToString() + "'";
                     sqlInsertDE += ", " + num_factura;
                     sqlInsertDE += ", " + id_tipo_factura;
                     sqlInsertDE += ", " + Grid_Detalle_Ensamblado.Rows[i].Cells[2].Value.ToString();
                     sqlInsertDE += ", " + Grid_Detalle_Ensamblado.Rows[i].Cells[3].Value.ToString().Replace(',', '.');
-                    sqlInsertDE += ", eliminado = 0)";
+                    sqlInsertDE += ", 0)";
 
                     _BD.Insertar(sqlInsertDE, BE_Acceso_Datos.RecuperacionPk.no_recuperar);
 

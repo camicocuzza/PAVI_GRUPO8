@@ -52,7 +52,7 @@ namespace CLASE05.Negocios
         {
             string sqlInsert = "";
 
-            sqlInsert = @"INSERT INTO articulo (cod_articulo, num_serie, num_lote, precio, tiempo_envio, plazo_pago, nombre, id_rubro, id_pais, cuit_proveedor) VALUES (";
+            sqlInsert = @"INSERT INTO articulo (cod_articulo, num_serie, num_lote, precio, tiempo_envio, plazo_pago, nombre, id_rubro, id_pais, cuit_proveedor, eliminado) VALUES (";
             sqlInsert += "'" + cod_articulo + "'";
             sqlInsert += ", '" + num_serie + "'";
             sqlInsert += ", '" + num_lote + "'";
@@ -63,9 +63,8 @@ namespace CLASE05.Negocios
             sqlInsert += ", " + id_rubro;
             sqlInsert += ", " + id_pais;
             sqlInsert += ", '" + cuit_proveedor + "'";
-            sqlInsert += ", eliminado = 0)";
+            sqlInsert += ", 0)";
 
-            MessageBox.Show(sqlInsert);
             _BD.Insertar(sqlInsert);
         }
 

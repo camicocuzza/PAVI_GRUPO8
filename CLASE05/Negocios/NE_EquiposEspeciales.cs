@@ -21,7 +21,7 @@ namespace CLASE05.Negocios
         public DataTable BuscarEquipoEspecial (string patron, string columna)
         {
             string sql = @"SELECT cod_prod_ensamblado, cuit_cliente 
-                          FROM equipo_especial WHERE " + columna + " like '%" + patron + "%'";
+                          FROM equipo_especial WHERE eliminado = 0 AND " + columna + " like '%" + patron + "%'";
 
             return _BD.EjecutarSelect(sql);
         }
@@ -29,7 +29,7 @@ namespace CLASE05.Negocios
         public DataTable RecuperarEquipo(string cod_prod_ensamblado)
         {
             string sql = @"SELECT * 
-                          FROM equipo_especial WHERE cod_prod_ensamblado = '" + cod_prod_ensamblado + "'";
+                          FROM equipo_especial WHERE eliminado = 0 AND cod_prod_ensamblado = '" + cod_prod_ensamblado + "'";
 
             return _BD.EjecutarSelect(sql);
         }
@@ -46,7 +46,7 @@ namespace CLASE05.Negocios
 
         public void Borrar()
         {
-            string sqlDelete = "DELETE FROM equipo_especial WHERE cod_prod_ensamblado = '" + cod_prod_ensamblado + "'";
+            string sqlDelete = "UPDATE equipo_especial SET eliminado = 1 WHERE cod_prod_ensamblado = '" + cod_prod_ensamblado + "'";
 
             _BD.Borrar(sqlDelete);
         }

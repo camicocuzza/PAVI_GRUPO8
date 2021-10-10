@@ -16,7 +16,7 @@ namespace CLASE05.Negocios
         {
             string sql = @"SELECT s.cantidad 
                           FROM producto_ensamblado e JOIN stock_prod_ensamblado s ON e.cod_prod_ensamblado = s.cod_prod_ensamblado
-                          WHERE e.cod_prod_ensamblado = '" + cod_prod_ensamblado + "' " +
+                          WHERE e.cod_prod_ensamblado = '" + cod_prod_ensamblado + "' AND s.eliminado = 0 " +
                           "AND s.fecha = (SELECT max(s1.fecha) FROM stock_prod_ensamblado s1 " +
                                           "WHERE s1.cod_prod_ensamblado = s.cod_prod_ensamblado)";
 
@@ -27,10 +27,11 @@ namespace CLASE05.Negocios
         {
             string sqlInsert = "";
 
-            sqlInsert = @"INSERT INTO stock_prod_ensamblado (cod_prod_ensamblado, fecha, cantidad) VALUES (";
+            sqlInsert = @"INSERT INTO stock_prod_ensamblado (cod_prod_ensamblado, fecha, cantidad, eliminado) VALUES (";
             sqlInsert += "'" + cod_prod_ensamblado + "'";
             sqlInsert += ", '" + fecha + "'";
-            sqlInsert += ", " + cantidad + ")";
+            sqlInsert += ", " + cantidad;
+            sqlInsert += ", 0)";
 
             _BD.Insertar(sqlInsert);
         }
@@ -41,10 +42,11 @@ namespace CLASE05.Negocios
             int stockanterior = int.Parse(this.ObtenerStock(cod_prod_ensamblado).Rows[0][0].ToString());
             int stockactual = stockanterior - cantidad;
 
-            sqlInsert = @"INSERT INTO stock_prod_ensamblado (cod_prod_ensamblado, fecha, cantidad) VALUES (";
+            sqlInsert = @"INSERT INTO stock_prod_ensamblado (cod_prod_ensamblado, fecha, cantidad, eliminado) VALUES (";
             sqlInsert += "'" + cod_prod_ensamblado + "'";
             sqlInsert += ", '" + fecha + "'";
-            sqlInsert += ", " + stockactual + ")";
+            sqlInsert += ", " + stockactual;
+            sqlInsert += ", 0)";
 
             MessageBox.Show(sqlInsert);
             _BD.Insertar(sqlInsert);

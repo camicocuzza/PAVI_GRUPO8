@@ -34,6 +34,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             // txt_cod_p_ensamblado
             // 
             this.txt_cod_p_ensamblado.Enabled = false;
+            this.txt_cod_p_ensamblado.Size = new System.Drawing.Size(283, 30);
             // 
             // btn_aceptar
             // 
@@ -43,10 +44,17 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             // txt_precio
             // 
             this.txt_precio.Enabled = false;
+            this.txt_precio.Location = new System.Drawing.Point(-59, 188);
+            this.txt_precio.Size = new System.Drawing.Size(383, 30);
             // 
-            // txt_stock
+            // txt_nombre
             // 
-            this.txt_stock.Enabled = false;
+            this.txt_nombre._Ancho = 50;
+            this.txt_nombre._Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
+            this.txt_nombre._TipoDato = CLASE05.Clases.LabelText02.TipoDato.texto;
+            this.txt_nombre.Enabled = false;
+            this.txt_nombre.Location = new System.Drawing.Point(-59, 150);
+            this.txt_nombre.Size = new System.Drawing.Size(383, 30);
             // 
             // btn_cerrar
             // 
@@ -65,7 +73,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this._PosiciónVisible = true;
             this._Titulo = "Baja de Equipo Ensamblado";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(414, 360);
+            this.ClientSize = new System.Drawing.Size(414, 342);
             this.Name = "Frm_EquiposEnsamblados_Baja";
             this.Load += new System.EventHandler(this.Frm_EquiposEnsamblados_Baja_Load);
             this.ResumeLayout(false);

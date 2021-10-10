@@ -15,19 +15,19 @@ namespace CLASE05.Negocios
 
         public void CargarCombo(ref ComboBox01 combo)
         {
-            combo.DisplayMember = "cod_prod_ensamblado";
+            combo.DisplayMember = "nombre";
             combo.ValueMember = "cod_prod_ensamblado";
-            combo.DataSource = _BD.EjecutarSelect("SELECT cod_prod_ensamblado FROM producto_ensamblado");
+            combo.DataSource = _BD.EjecutarSelect("SELECT cod_prod_ensamblado FROM producto_ensamblado WHERE eliminado = 0");
         }
         public string RecuperarPrecioProdEnsamblado(string cod_prod_ensamblado)
         {
-            string sql = "SELECT precio FROM producto_ensamblado WHERE cod_prod_ensamblado = " + cod_prod_ensamblado;
+            string sql = "SELECT precio FROM producto_ensamblado WHERE eliminado = 0 AND cod_prod_ensamblado = " + cod_prod_ensamblado;
             return _BD.EjecutarSelect(sql).Rows[0][0].ToString();
         }
         public DataTable BuscarDetalles(string cod_prod_ensamblado)
         {
             string sql = @"SELECT cod_articulo, cantidad 
-                          FROM detalle_prod_ensamblado WHERE cod_prod_ensamblado = '" + cod_prod_ensamblado + "'";
+                          FROM detalle_prod_ensamblado WHERE eliminado = 0 AND cod_prod_ensamblado = '" + cod_prod_ensamblado + "'";
 
             return _BD.EjecutarSelect(sql);
         }
