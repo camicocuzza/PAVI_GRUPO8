@@ -23,10 +23,9 @@ namespace CLASE05.Formularios.Facturas
         private void btn_eliminar_venta_Click(object sender, EventArgs e)
         {
             
-            if (MessageBox.Show("¿Está seguro de que desea eliminar la factura nro " + num_factura + "?", "Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Está seguro de que desea eliminar la venta nro " + num_factura + "?", "Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                ne_facturas.BorrarFactura(num_factura, fecha);
-                MessageBox.Show("Se eliminó correctamente la factura nro " + num_factura, "Importante");
+                ne_facturas.BorrarFactura(num_factura, fecha, grid_articulos, grid_ensamblados);                
                 this.Dispose();
             }
             else

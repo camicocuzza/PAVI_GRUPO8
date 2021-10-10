@@ -95,19 +95,19 @@ namespace CLASE05.Formularios.Facturas
             //d.cod_prod_ensamblado, a.cod_prod_ensamblado, d.cantidad, d.precio, d.cantidad* d.precio as subtotal
             for (int i = 0; i < tabla_detallesArticulos.Rows.Count; i++)
             {
-                grid_articulos.Rows.Add(tabla_detallesArticulos.Rows[0]["cod_articulo"].ToString()
-                                         , tabla_detallesArticulos.Rows[0]["nombre"].ToString()
-                                         , tabla_detallesArticulos.Rows[0]["cantidad"].ToString()
-                                         , tabla_detallesArticulos.Rows[0]["precio"].ToString()
-                                         , tabla_detallesArticulos.Rows[0]["subtotal"].ToString());
+                grid_articulos.Rows.Add(tabla_detallesArticulos.Rows[i]["cod_articulo"].ToString()
+                                         , tabla_detallesArticulos.Rows[i]["nombre"].ToString()
+                                         , tabla_detallesArticulos.Rows[i]["cantidad"].ToString()
+                                         , tabla_detallesArticulos.Rows[i]["precio"].ToString()
+                                         , tabla_detallesArticulos.Rows[i]["subtotal"].ToString());
             }
             for (int i = 0; i < tabla_detallesEnsamblados.Rows.Count; i++)
             {
-                grid_ensamblados.Rows.Add(tabla_detallesEnsamblados.Rows[0]["cod_prod_ensamblado"].ToString()
-                                         , tabla_detallesEnsamblados.Rows[0]["cod_prod_ensamblado"].ToString()
-                                         , tabla_detallesEnsamblados.Rows[0]["cantidad"].ToString()
-                                         , tabla_detallesEnsamblados.Rows[0]["precio"].ToString()
-                                         , tabla_detallesEnsamblados.Rows[0]["subtotal"].ToString());
+                grid_ensamblados.Rows.Add(tabla_detallesEnsamblados.Rows[i]["cod_prod_ensamblado"].ToString()
+                                         , tabla_detallesEnsamblados.Rows[i]["nombre"].ToString()
+                                         , tabla_detallesEnsamblados.Rows[i]["cantidad"].ToString()
+                                         , tabla_detallesEnsamblados.Rows[i]["precio"].ToString()
+                                         , tabla_detallesEnsamblados.Rows[i]["subtotal"].ToString());
             }
             cmb_tipo_factura.SelectedValue = id_tipo_factura;
             CalcularTotalVenta();
