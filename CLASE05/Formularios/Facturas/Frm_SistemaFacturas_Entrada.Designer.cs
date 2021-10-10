@@ -49,6 +49,7 @@ namespace CLASE05.Formularios.Facturas
             this.btn_alta.FlatAppearance.BorderSize = 0;
             this.btn_alta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btn_alta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btn_alta.Location = new System.Drawing.Point(548, 392);
             this.btn_alta.Click += new System.EventHandler(this.btn_alta_Click);
             // 
             // btn_modificar
@@ -57,7 +58,8 @@ namespace CLASE05.Formularios.Facturas
             this.btn_modificar.FlatAppearance.BorderSize = 0;
             this.btn_modificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btn_modificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.btn_modificar.Location = new System.Drawing.Point(547, 391);
+            this.btn_modificar.Location = new System.Drawing.Point(12, 389);
+            this.btn_modificar.Visible = false;
             this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // btn_borrar
@@ -79,6 +81,7 @@ namespace CLASE05.Formularios.Facturas
             this.btn_consultar.FlatAppearance.BorderSize = 0;
             this.btn_consultar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btn_consultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btn_consultar.Location = new System.Drawing.Point(486, 391);
             this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click);
             // 
             // groupBox1

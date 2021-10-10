@@ -111,6 +111,7 @@ namespace CLASE05.Formularios.Facturas
             this.btnMostrarFactura.FlatAppearance.BorderSize = 2;
             this.btnMostrarFactura.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.btnMostrarFactura.Location = new System.Drawing.Point(441, 564);
+            this.btnMostrarFactura.Click += new System.EventHandler(this.btnMostrarFactura_Click);
             // 
             // btnGuardar
             // 

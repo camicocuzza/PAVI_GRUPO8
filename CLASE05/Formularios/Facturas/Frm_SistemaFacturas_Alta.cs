@@ -52,7 +52,8 @@ namespace CLASE05.Formularios.Facturas
             this.Inicio();
             cuit_cliente = txt_cuit_cliente.Text;
             this.RecuperarDatosCliente(cuit_cliente);
-            
+            txt_num_factura.Text = num_factura;
+
         }
         private void btnMostrarFactura_Click(object sender, EventArgs e)
         {

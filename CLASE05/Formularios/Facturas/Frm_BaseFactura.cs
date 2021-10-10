@@ -111,6 +111,7 @@ namespace CLASE05.Formularios.Facturas
                                          , tabla_detallesEnsamblados.Rows[i]["subtotal"].ToString());
             }
             cmb_tipo_factura.SelectedValue = id_tipo_factura;
+            txt_num_factura.Text = num_factura;
             CalcularTotalVenta();
         }
         public void CalcularTotalVenta()

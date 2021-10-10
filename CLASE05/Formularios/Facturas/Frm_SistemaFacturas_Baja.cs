@@ -31,5 +31,27 @@ namespace CLASE05.Formularios.Facturas
             else
                 MessageBox.Show("Eliminación cancelada");
         }
+
+        private void btnMostrarFactura_Click(object sender, EventArgs e)
+        {
+            IList<string> parametros = new List<string>
+            {
+                txt_fechaActual.Text,
+                txt_cuit_cliente.Text,
+                txt_razon_social._Text,
+                ne_clientes.ObtenerProvincia_Pais(cuit_cliente).Rows[0][0].ToString(),
+                ne_clientes.ObtenerProvincia_Pais(cuit_cliente).Rows[0][1].ToString(),
+                num_factura,
+                ne_clientes.RecuperarCliente(txt_cuit_cliente.Text).Rows[0][5].ToString(),
+                txt_total_venta.Text.Substring(1),
+                ne_clientes.RecuperarCliente(txt_cuit_cliente.Text).Rows[0][7].ToString()
+            };
+
+            Frm_VentaFactura ventaFactura = new Frm_VentaFactura(num_factura, parametros)
+            {
+                Text = "Visualización de Factura"
+            };
+            ventaFactura.ShowDialog();
+        }
     }
 }

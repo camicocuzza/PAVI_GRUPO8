@@ -332,12 +332,6 @@
     <Compile Include="Formularios\Facturas\Frm_SistemaFacturas_Entrada.Designer.cs">
       <DependentUpon>Frm_SistemaFacturas_Entrada.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Facturas\Frm_SistemaFacturas_Modificacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Facturas\Frm_SistemaFacturas_Modificacion.Designer.cs">
-      <DependentUpon>Frm_SistemaFacturas_Modificacion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Facturas\Frm_VentaFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -619,9 +613,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Facturas\Frm_SistemaFacturas_Entrada.resx">
       <DependentUpon>Frm_SistemaFacturas_Entrada.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Facturas\Frm_SistemaFacturas_Modificacion.resx">
-      <DependentUpon>Frm_SistemaFacturas_Modificacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Facturas\Frm_VentaFactura.resx">
       <DependentUpon>Frm_VentaFactura.cs</DependentUpon>

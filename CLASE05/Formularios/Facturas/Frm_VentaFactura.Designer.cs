@@ -64,10 +64,10 @@ namespace CLASE05.Formularios.Facturas
             // rvListado
             // 
             this.rvListado.LocalReport.ReportEmbeddedResource = "CLASE05.Reportes.VentaFactura.rdlc";
-            this.rvListado.Location = new System.Drawing.Point(10, 36);
+            this.rvListado.Location = new System.Drawing.Point(14, 36);
             this.rvListado.Name = "rvListado";
             this.rvListado.ServerReport.BearerToken = null;
-            this.rvListado.Size = new System.Drawing.Size(829, 547);
+            this.rvListado.Size = new System.Drawing.Size(825, 547);
             this.rvListado.TabIndex = 2;
             // 
             // txtEmail
