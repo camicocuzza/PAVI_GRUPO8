@@ -17,6 +17,7 @@ using CLASE05.Formularios.EquiposEspeciales;
 using CLASE05.Formularios.Lotes;
 using CLASE05.Formularios.Empleados;
 using CLASE05.Formularios.Proveedores;
+using CLASE05.Formularios.Facturas;
 
 namespace CLASE05.Formularios.InicioSistema
 {
@@ -179,6 +180,17 @@ namespace CLASE05.Formularios.InicioSistema
         {
             Frm_ABM_Usuario_Entrada frm_usuario = new Frm_ABM_Usuario_Entrada();
             frm_usuario.ShowDialog();
-        }       
+        }
+
+        private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_SistemaFacturas_Entrada frm_facturas = new Frm_SistemaFacturas_Entrada();
+            frm_facturas.ShowDialog();
+        }
     }
 }
