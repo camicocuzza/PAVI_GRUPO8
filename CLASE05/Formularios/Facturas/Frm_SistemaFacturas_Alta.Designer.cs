@@ -57,6 +57,10 @@ namespace CLASE05.Formularios.Facturas
             this.cmb_ensamblados.DisplayMember = "cod_prod_ensamblado";
             this.cmb_ensamblados.ValueMember = "cod_prod_ensamblado";
             // 
+            // txt_fechaActual
+            // 
+            this.txt_fechaActual.Text = "10/10/202";
+            // 
             // btn_buscar
             // 
             this.btn_buscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
@@ -92,6 +96,7 @@ namespace CLASE05.Formularios.Facturas
             this.btnMostrarFactura.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btnMostrarFactura.FlatAppearance.BorderSize = 2;
             this.btnMostrarFactura.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.btnMostrarFactura.Click += new System.EventHandler(this.btnMostrarFactura_Click);
             // 
             // btnGuardar
             // 

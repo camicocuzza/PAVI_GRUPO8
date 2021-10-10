@@ -1,6 +1,7 @@
 ﻿using CLASE05.Clases;
 using CLASE05.Negocios;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace CLASE05.Formularios.Facturas
@@ -46,7 +47,33 @@ namespace CLASE05.Formularios.Facturas
             ne_facturas.InsertarFactura(cmb_tipo_factura.SelectedIndex + 1, txt_fechaActual.Text, txt_total_venta.Text.Replace("$", "").Replace(",", "."), txt_cuit_cliente.Text,
                 txt_legajo_empleado.Text, grid_articulos, grid_ensamblados);
 
-            this.Inicio();   
+            this.num_factura = ne_facturas.num_factura;
+
+            this.Inicio();
+            cuit_cliente = txt_cuit_cliente.Text;
+            this.RecuperarDatosCliente(cuit_cliente);
+            
+        }
+        private void btnMostrarFactura_Click(object sender, EventArgs e)
+        {
+            IList<string> parametros = new List<string>
+            {
+                txt_fechaActual.Text,
+                txt_cuit_cliente.Text,
+                txt_razon_social._Text,
+                ne_clientes.ObtenerProvincia_Pais(cuit_cliente).Rows[0][0].ToString(),
+                ne_clientes.ObtenerProvincia_Pais(cuit_cliente).Rows[0][1].ToString(),
+                num_factura,
+                ne_clientes.RecuperarCliente(txt_cuit_cliente.Text).Rows[0][5].ToString(),
+                txt_total_venta.Text.Substring(1),
+                ne_clientes.RecuperarCliente(txt_cuit_cliente.Text).Rows[0][7].ToString()
+            };
+
+            Frm_VentaFactura ventaFactura = new Frm_VentaFactura(num_factura, parametros)
+            {
+                Text = "Visualización de Factura"
+            };
+            ventaFactura.ShowDialog();
         }
     }
 

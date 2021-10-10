@@ -12,6 +12,7 @@ namespace CLASE05.Formularios.Articulos
 {
     public partial class Frm_Articulo_Alta : CLASE05.Formularios.Articulos.Frm_Articulo
     {
+        NE_Stock ne_stock = new NE_Stock();
         public Frm_Articulo_Alta()
         {
             InitializeComponent();
@@ -45,6 +46,7 @@ namespace CLASE05.Formularios.Articulos
                 articulo.cuit_proveedor = cmb_proveedor.SelectedValue.ToString();
 
                 articulo.Insertar();
+                ne_stock.Insertar(txt_cod_articulo._Text, _TE.RecuperarFechaSistema().ToString(), 1);
                 MessageBox.Show("Se grabó correctamente", "Importante");
                 this.Dispose();
             }

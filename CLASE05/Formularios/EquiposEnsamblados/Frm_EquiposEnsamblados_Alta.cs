@@ -12,6 +12,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
 {
     public partial class Frm_EquiposEnsamblados_Alta : CLASE05.Formularios.EquiposEnsamblados.Frm_EquiposEnsamblados
     {
+        NE_Stock_Ensamblados ne_stock_ens = new NE_Stock_Ensamblados();
         public Frm_EquiposEnsamblados_Alta()
         {
             InitializeComponent();
@@ -32,6 +33,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
 
 
                 equipo.Insertar();
+                ne_stock_ens.Insertar(txt_cod_p_ensamblado._Text, _TE.RecuperarFechaSistema().ToString(), 1);
                 MessageBox.Show("Se grabó correctamente", "Importante");
                 this.Dispose();
             }

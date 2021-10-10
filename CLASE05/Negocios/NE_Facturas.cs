@@ -15,7 +15,8 @@ namespace CLASE05.Negocios
         TratamientosEspeciales _TE = new TratamientosEspeciales();
         NE_Stock ne_stock = new NE_Stock();
         NE_Stock_Ensamblados ne_stock_ens = new NE_Stock_Ensamblados();
-        NE_EquiposEnsamblados ne_ens = new NE_EquiposEnsamblados();
+
+        public string num_factura { get; set; }
         //num_factura, id_tipo_factura, fecha, monto_total, cuit_cliente, legajo_empleado
         public DataTable BuscarFactura(string patron, string columna)
         {
@@ -100,6 +101,18 @@ namespace CLASE05.Negocios
 
             return _BD.EjecutarSelect(sql);
         }
+        public DataTable RecuperarDetallesArticulos(string num_factura)
+        {
+            string sql = @"SELECT d.cod_articulo, a.nombre, d.cantidad, d.precio, d.cantidad * d.precio as subtotal
+                            FROM factura f, detalle_factura_articulo d, articulo a
+                            WHERE d.cod_articulo = a.cod_articulo AND
+	                        f.num_factura = d.num_factura AND
+	                        f.id_tipo_factura = d.id_tipo_factura AND
+	                        f.id_tipo_factura = d.id_tipo_factura AND 
+                            f.num_factura = " + num_factura + " AND d.eliminado = 0";
+
+            return _BD.EjecutarSelect(sql);
+        }
         public DataTable RecuperarDetallesEnsamblados(string num_factura, string id_tipo_factura)
         {
             string sql = @"SELECT d.cod_prod_ensamblado, e.cod_prod_ensamblado, d.cantidad, d.precio, d.cantidad * d.precio as subtotal
@@ -109,6 +122,18 @@ namespace CLASE05.Negocios
 	                    f.id_tipo_factura = d.id_tipo_factura AND
 	                    f.id_tipo_factura = d.id_tipo_factura AND 
 	                    f.num_factura = " + num_factura + " AND f.id_tipo_factura = " + id_tipo_factura + " AND d.eliminado = 0";
+
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable RecuperarDetallesEnsamblados(string num_factura)
+        {
+            string sql = @"SELECT d.cod_prod_ensamblado, e.cod_prod_ensamblado, d.cantidad, d.precio, d.cantidad * d.precio as subtotal
+                        FROM factura f, detalle_factura_prodEnsamblado d, producto_ensamblado e
+                        WHERE d.cod_prod_ensamblado = e.cod_prod_ensamblado AND
+	                    f.num_factura = d.num_factura AND
+	                    f.id_tipo_factura = d.id_tipo_factura AND
+	                    f.id_tipo_factura = d.id_tipo_factura AND 
+	                    f.num_factura = " + num_factura + " AND d.eliminado = 0";
 
             return _BD.EjecutarSelect(sql);
         }
@@ -132,7 +157,7 @@ namespace CLASE05.Negocios
             _BD.Insertar(sqlInsert, BE_Acceso_Datos.RecuperacionPk.no_recuperar);
 
             //recuperar el número
-            string num_factura = this.Recuperar_num_factura(cuit_cliente, fecha).Rows[0][0].ToString();
+            num_factura = this.Recuperar_num_factura(cuit_cliente, fecha).Rows[0][0].ToString();
 
             if (Grid_Detalle_Articulo.Rows.Count > 1)
             {
@@ -188,6 +213,8 @@ namespace CLASE05.Negocios
             if (_BD.CerrarTransaccion() == BE_Acceso_Datos.EstadoTransaccion.correcto)
             {
                 MessageBox.Show("Se grabó correctamente la venta Nro. " + num_factura);
+              
+               
             }
             else
             {
@@ -271,6 +298,22 @@ namespace CLASE05.Negocios
             string sql = @"SELECT * 
                           FROM factura WHERE eliminado = 1";
 
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable DataSourceEns(string num_factura)
+        {
+            string sql = @"select * , d.cantidad* d.precio as subtotal
+                        from factura f, detalle_factura_prodEnsamblado d, producto_ensamblado a
+                        where f.num_factura = d.num_factura AND a.cod_prod_ensamblado = d.cod_prod_ensamblado AND f.num_factura = " + num_factura;
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable DataSourceArt(string num_factura)
+        {
+            string sql = @"select * , d.cantidad * d.precio as subtotal
+                        from factura f, detalle_factura_articulo d, articulo a
+                        where f.num_factura = d.num_factura AND a.cod_articulo = d.cod_articulo AND f.num_factura = " + num_factura;
             return _BD.EjecutarSelect(sql);
         }
     }

@@ -96,6 +96,16 @@ namespace CLASE05.Negocios
 
             return _BD.EjecutarSelect(sql);
         }
+        public DataTable ObtenerProvincia_Pais(string cuit_cliente)
+        {
+            string sql = @"SELECT e.nombre_estado_provincia, p.nombre_pais
+                          FROM cliente c, estado_provincia e, pais p
+                          WHERE c.id_estado_provincia = e.id_estado_provincia
+                          AND e.id_pais = p.id_pais 
+                          AND cuit_cliente = '" + cuit_cliente + "'";
+
+            return _BD.EjecutarSelect(sql);
+        }
         public DataTable RecuperarEliminados()
         {
             string sql = @"SELECT * 
