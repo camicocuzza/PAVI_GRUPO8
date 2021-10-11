@@ -72,7 +72,7 @@ namespace CLASE05.Formularios.Facturas
             this.rvListado.ShowPromptAreaButton = false;
             this.rvListado.ShowRefreshButton = false;
             this.rvListado.ShowStopButton = false;
-            this.rvListado.Size = new System.Drawing.Size(811, 547);
+            this.rvListado.Size = new System.Drawing.Size(817, 547);
             this.rvListado.TabIndex = 2;
             // 
             // txtEmail
@@ -113,7 +113,7 @@ namespace CLASE05.Formularios.Facturas
             this.btnEmail.Name = "btnEmail";
             this.btnEmail.Size = new System.Drawing.Size(121, 29);
             this.btnEmail.TabIndex = 27;
-            this.btnEmail.Text = "Enviar por E-Mail";
+            this.btnEmail.Text = "Enviar e-mail";
             this.btnEmail.UseVisualStyleBackColor = false;
             this.btnEmail.Click += new System.EventHandler(this.BtnEmail_Click);
             // 

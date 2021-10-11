@@ -106,8 +106,12 @@ namespace CLASE05.Formularios.Facturas
 
         private void BtnPDF_Click(object sender, EventArgs e)
         {
-            Byte[] bytes = this.rvListado.LocalReport.Render("PDF");
+            //Byte[] bytes = this.rvListado.LocalReport.Render("PDF");
+            var deviceInfo = @"<DeviceInfo>
+                            <EmbedFonts>None</EmbedFonts>
+                            </DeviceInfo>";
 
+            byte[] bytes = rvListado.LocalReport.Render("PDF", deviceInfo);
             SaveFileDialog guardar = new SaveFileDialog
             {
                 FileName = "Factura [" + num_factura.ToString() + "]",
@@ -128,7 +132,7 @@ namespace CLASE05.Formularios.Facturas
             {
                 CargarInforme("OPERACIÓN CANCELADA", false, false);
             }
-        }
+        }       
         private void BtnEmail_Click(object sender, EventArgs e)
         {
             if (txtEmail.Text == "Correo Electrónico")
@@ -142,11 +146,15 @@ namespace CLASE05.Formularios.Facturas
 
             if (ValidarEmail(txtEmail.Text))
             {
-                Byte[] bytes = this.rvListado.LocalReport.Render("PDF");
+                //Byte[] bytes = this.rvListado.LocalReport.Render("PDF");
+                var deviceInfo = @"<DeviceInfo>
+                                <EmbedFonts>None</EmbedFonts>
+                                </DeviceInfo>";
 
-                string nombreRemitente = "SYSTEMCODE";
-                string emailRemitente = "systemcodetest@gmail.com";
-                string claveRemitente = "riopc13579";
+                byte[] bytes = rvListado.LocalReport.Render("PDF", deviceInfo);
+                string nombreRemitente = "Mayortic Tecnologías";
+                string emailRemitente = "mayortic.cba@gmail.com";
+                string claveRemitente = "mayortic123";
 
                 string emailDestinatario = txtEmail.Text;
 
@@ -154,7 +162,7 @@ namespace CLASE05.Formularios.Facturas
                 correo.To.Add(new MailAddress(emailDestinatario));
                 correo.Subject = "Factura Número " + num_factura.ToString();
                 correo.Attachments.Add(new Attachment(new MemoryStream(bytes), "Factura [" + num_factura.ToString() + "].pdf"));
-                correo.Body = "Estimado, se le adjunta la factura correspondiente a su compra. Saludos!";
+                correo.Body = "Estimad@, se le adjunta la factura correspondiente a su compra. ¡Saludos!";
 
                 try
                 {

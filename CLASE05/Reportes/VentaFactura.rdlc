@@ -951,7 +951,7 @@
           <BackgroundColor>LightGrey</BackgroundColor>
         </Style>
       </Body>
-      <Width>7.7394in</Width>
+      <Width>8.25in</Width>
       <Page>
         <PageHeader>
           <Height>7.20246cm</Height>
@@ -962,8 +962,8 @@
               <Source>Embedded</Source>
               <Value>logo_mayortic7</Value>
               <Sizing>FitProportional</Sizing>
-              <Top>0.48949cm</Top>
-              <Left>8.69616cm</Left>
+              <Top>0.45421cm</Top>
+              <Left>7.1085cm</Left>
               <Height>2.31254cm</Height>
               <Width>2.33233cm</Width>
               <Style>
@@ -1016,8 +1016,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>3.1929cm</Top>
-              <Left>2.14973cm</Left>
+              <Top>3.15762cm</Top>
+              <Left>0.56207cm</Left>
               <Height>1.12917cm</Height>
               <Width>15.42521cm</Width>
               <ZIndex>1</ZIndex>
@@ -1337,8 +1337,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.48949cm</Top>
-              <Left>16.04961cm</Left>
+              <Top>0.45421cm</Top>
+              <Left>14.46195cm</Left>
               <Height>0.6cm</Height>
               <Width>3.16558cm</Width>
               <ZIndex>10</ZIndex>
@@ -1373,8 +1373,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.48949cm</Top>
-              <Left>13.77646cm</Left>
+              <Top>0.45421cm</Top>
+              <Left>12.1888cm</Left>
               <Height>0.6cm</Height>
               <Width>2.23787cm</Width>
               <ZIndex>11</ZIndex>
