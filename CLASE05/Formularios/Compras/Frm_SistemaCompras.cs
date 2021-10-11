@@ -13,6 +13,7 @@ namespace CLASE05.Formularios.Compras
     {
         public NE_Proveedores proveedor = new NE_Proveedores();
         public NE_Articulos articulo = new NE_Articulos();
+        public NE_Compras compra = new NE_Compras();
         public string _Titulo
         {
             get { return lbl_titulo.Text; }

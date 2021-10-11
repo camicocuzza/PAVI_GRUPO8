@@ -48,6 +48,10 @@ namespace CLASE05.Formularios.Compras
             // 
             this.txt_total.Text = "$0";
             // 
+            // btn_grabar
+            // 
+            this.btn_grabar.Click += new System.EventHandler(this.btn_grabar_Click);
+            // 
             // btn_cerrar
             // 
             this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;

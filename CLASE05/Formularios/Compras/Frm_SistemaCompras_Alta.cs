@@ -14,7 +14,7 @@ namespace CLASE05.Formularios.Compras
     {
         public enum ResultadoBusqueda { encontre, no_encontre }
 
-        public string precio_articulo { get; set; }
+        public double precio_articulo { get; set; }
         public Frm_SistemaCompras_Alta()
         {
             InitializeComponent();
@@ -78,7 +78,8 @@ namespace CLASE05.Formularios.Compras
                 MessageBox.Show("Este artículo ya está cargado");
                 return;
             }
-            precio_articulo = articulo.BuscarPrecio(cmb_articulo.SelectedValue.ToString());
+            string precio_sin_descuento = articulo.BuscarPrecio(cmb_articulo.SelectedValue.ToString());
+            precio_articulo = double.Parse(precio_sin_descuento) - (double.Parse(precio_sin_descuento) * 0.2);
             grid_articulos.Rows.Add(cmb_articulo.SelectedValue.ToString(), cmb_articulo.Text, precio_articulo, txt_cantidad._Text);
         }
 
@@ -130,6 +131,11 @@ namespace CLASE05.Formularios.Compras
             {
                 cmb_proveedor.Enabled = true;
             }
+        }
+
+        private void btn_grabar_Click(object sender, EventArgs e)
+        {
+            compra.AgregarCompra(cmb_proveedor.SelectedValue.ToString(), txt_fecha._Text, txt_total.Text, grid_articulos);
         }
     }
 }
