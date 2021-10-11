@@ -96,7 +96,8 @@ namespace CLASE05.Formularios.Articulos
             // 
             // Frm_Articulo_Consulta
             // 
-            this._PosiciónVisible = true;
+            this._FormularioMovil = true;
+            this._PosiciónVisible = false;
             this._Titulo = "Datos del Artículo";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(584, 424);

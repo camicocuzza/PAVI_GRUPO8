@@ -156,6 +156,7 @@ namespace CLASE05.Formularios.Facturas
             // Frm_VentaFactura
             // 
             this._FormularioMovil = true;
+            this._PosiciónVisible = false;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(842, 675);
             this.Controls.Add(this.txtEmail);

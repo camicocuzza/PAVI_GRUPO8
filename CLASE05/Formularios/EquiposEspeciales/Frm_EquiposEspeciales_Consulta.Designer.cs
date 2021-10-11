@@ -82,7 +82,8 @@ namespace CLASE05.Formularios.EquiposEspeciales
             // 
             // Frm_EquiposEspeciales_Consulta
             // 
-            this._PosiciónVisible = true;
+            this._FormularioMovil = true;
+            this._PosiciónVisible = false;
             this._Titulo = "Datos del equipo especial";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(420, 464);

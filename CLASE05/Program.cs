@@ -26,7 +26,7 @@ namespace CLASE05
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Frm_Escritorio());
+            Application.Run(new Frm_Escritorio());
             //Application.Run(new Frm_Login());
             //Application.Run(new FrmLogin());
             //Application.Run(new Frm_ABM_Usuario_Entrada());
@@ -45,7 +45,7 @@ namespace CLASE05
             //Application.Run(new Frm_SistemaFacturas_Entrada());
             //Application.Run(new Frm_SistemaFacturas_Alta());
             //Application.Run(new Frm_VentaFactura());
-            Application.Run(new FrmBase_Prueba_ABM_Entrada());
+            //Application.Run(new FrmBase_Prueba_ABM_Entrada());
         }
     }
 }

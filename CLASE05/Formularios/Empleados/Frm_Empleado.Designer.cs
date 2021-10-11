@@ -346,7 +346,7 @@ namespace CLASE05.Formularios.Empleados
             // Frm_Empleado
             // 
             this._FormularioMovil = true;
-            this._PosiciónVisible = true;
+            this._PosiciónVisible = false;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(546, 446);
             this.Controls.Add(this.txt_nombre);

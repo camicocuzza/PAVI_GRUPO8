@@ -43,7 +43,13 @@
             this.lotesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stockartículosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.stockequiposEnsambladosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stockequiposEspecialesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gráficosEstadísticosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_clientes = new System.Windows.Forms.Button();
@@ -69,12 +75,6 @@
             this.btn_especiales = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stockartículosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.stockequiposEnsambladosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stockequiposEspecialesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
@@ -103,7 +103,7 @@
             this.salirToolStripMenuItem,
             this.salirDeSistemaConLoginActivoToolStripMenuItem});
             this.archivoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.archivoToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.archivoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(75, 25);
             this.archivoToolStripMenuItem.Text = "Archivo";
@@ -112,9 +112,9 @@
             // 
             this.salirToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.salirToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.Silver;
+            this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -122,9 +122,9 @@
             // 
             this.salirDeSistemaConLoginActivoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.salirDeSistemaConLoginActivoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.salirDeSistemaConLoginActivoToolStripMenuItem.ForeColor = System.Drawing.Color.Silver;
+            this.salirDeSistemaConLoginActivoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.salirDeSistemaConLoginActivoToolStripMenuItem.Name = "salirDeSistemaConLoginActivoToolStripMenuItem";
-            this.salirDeSistemaConLoginActivoToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
+            this.salirDeSistemaConLoginActivoToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.salirDeSistemaConLoginActivoToolStripMenuItem.Text = "Cerrar sesión";
             this.salirDeSistemaConLoginActivoToolStripMenuItem.Click += new System.EventHandler(this.salirDeSistemaConLoginActivoToolStripMenuItem_Click);
             // 
@@ -140,7 +140,7 @@
             this.proveedoresToolStripMenuItem,
             this.inventarioToolStripMenuItem});
             this.aBMToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.aBMToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.aBMToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.aBMToolStripMenuItem.Name = "aBMToolStripMenuItem";
             this.aBMToolStripMenuItem.Size = new System.Drawing.Size(87, 25);
             this.aBMToolStripMenuItem.Text = "Registros";
@@ -148,7 +148,7 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.usuariosToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.usuariosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
@@ -157,7 +157,7 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.clientesToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.clientesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.clientesToolStripMenuItem.Text = "Clientes";
@@ -166,7 +166,7 @@
             // artículosToolStripMenuItem
             // 
             this.artículosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.artículosToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.artículosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.artículosToolStripMenuItem.Name = "artículosToolStripMenuItem";
             this.artículosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.artículosToolStripMenuItem.Text = "Artículos";
@@ -178,7 +178,7 @@
             this.equiposToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ensambladosToolStripMenuItem,
             this.especialesToolStripMenuItem});
-            this.equiposToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.equiposToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.equiposToolStripMenuItem.Name = "equiposToolStripMenuItem";
             this.equiposToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.equiposToolStripMenuItem.Text = "Equipos";
@@ -186,25 +186,25 @@
             // ensambladosToolStripMenuItem
             // 
             this.ensambladosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.ensambladosToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.ensambladosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.ensambladosToolStripMenuItem.Name = "ensambladosToolStripMenuItem";
-            this.ensambladosToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.ensambladosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.ensambladosToolStripMenuItem.Text = "Ensamblados";
             this.ensambladosToolStripMenuItem.Click += new System.EventHandler(this.ensambladosToolStripMenuItem_Click);
             // 
             // especialesToolStripMenuItem
             // 
             this.especialesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.especialesToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.especialesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.especialesToolStripMenuItem.Name = "especialesToolStripMenuItem";
-            this.especialesToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.especialesToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.especialesToolStripMenuItem.Text = "Especiales";
             this.especialesToolStripMenuItem.Click += new System.EventHandler(this.especialesToolStripMenuItem_Click);
             // 
             // lotesToolStripMenuItem
             // 
             this.lotesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.lotesToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lotesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.lotesToolStripMenuItem.Name = "lotesToolStripMenuItem";
             this.lotesToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.lotesToolStripMenuItem.Text = "Lotes";
@@ -213,7 +213,7 @@
             // empleadosToolStripMenuItem
             // 
             this.empleadosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.empleadosToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.empleadosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
             this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.empleadosToolStripMenuItem.Text = "Empleados";
@@ -222,11 +222,47 @@
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.proveedoresToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.proveedoresToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
             this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
+            // 
+            // inventarioToolStripMenuItem
+            // 
+            this.inventarioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.inventarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stockartículosToolStripMenuItem1,
+            this.stockequiposEnsambladosToolStripMenuItem,
+            this.stockequiposEspecialesToolStripMenuItem});
+            this.inventarioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
+            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.inventarioToolStripMenuItem.Text = "Inventario";
+            // 
+            // stockartículosToolStripMenuItem1
+            // 
+            this.stockartículosToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.stockartículosToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.stockartículosToolStripMenuItem1.Name = "stockartículosToolStripMenuItem1";
+            this.stockartículosToolStripMenuItem1.Size = new System.Drawing.Size(231, 26);
+            this.stockartículosToolStripMenuItem1.Text = "Artículos";
+            // 
+            // stockequiposEnsambladosToolStripMenuItem
+            // 
+            this.stockequiposEnsambladosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.stockequiposEnsambladosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.stockequiposEnsambladosToolStripMenuItem.Name = "stockequiposEnsambladosToolStripMenuItem";
+            this.stockequiposEnsambladosToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
+            this.stockequiposEnsambladosToolStripMenuItem.Text = "Equipos Ensamblados";
+            // 
+            // stockequiposEspecialesToolStripMenuItem
+            // 
+            this.stockequiposEspecialesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.stockequiposEspecialesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.stockequiposEspecialesToolStripMenuItem.Name = "stockequiposEspecialesToolStripMenuItem";
+            this.stockequiposEspecialesToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
+            this.stockequiposEspecialesToolStripMenuItem.Text = "Equipos Especiales";
             // 
             // procesosToolStripMenuItem
             // 
@@ -235,15 +271,33 @@
             this.comprasToolStripMenuItem,
             this.ventasToolStripMenuItem});
             this.procesosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.procesosToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.procesosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
             this.procesosToolStripMenuItem.Size = new System.Drawing.Size(84, 25);
             this.procesosToolStripMenuItem.Text = "Procesos";
             // 
+            // comprasToolStripMenuItem
+            // 
+            this.comprasToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.comprasToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.comprasToolStripMenuItem.Text = "Compras";
+            this.comprasToolStripMenuItem.Click += new System.EventHandler(this.comprasToolStripMenuItem_Click);
+            // 
+            // ventasToolStripMenuItem
+            // 
+            this.ventasToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.ventasToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.ventasToolStripMenuItem.Text = "Ventas";
+            this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
+            // 
             // reporteToolStripMenuItem
             // 
             this.reporteToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.reporteToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.reporteToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
             this.reporteToolStripMenuItem.Size = new System.Drawing.Size(84, 25);
             this.reporteToolStripMenuItem.Text = "Reportes";
@@ -251,7 +305,7 @@
             // gráficosEstadísticosToolStripMenuItem
             // 
             this.gráficosEstadísticosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gráficosEstadísticosToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.gráficosEstadísticosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.gráficosEstadísticosToolStripMenuItem.Name = "gráficosEstadísticosToolStripMenuItem";
             this.gráficosEstadísticosToolStripMenuItem.Size = new System.Drawing.Size(163, 25);
             this.gráficosEstadísticosToolStripMenuItem.Text = "Gráficos Estadísticos";
@@ -269,7 +323,7 @@
             this.btn_clientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clientes.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_clientes.Location = new System.Drawing.Point(1468, 130);
+            this.btn_clientes.Location = new System.Drawing.Point(1455, 163);
             this.btn_clientes.Name = "btn_clientes";
             this.btn_clientes.Size = new System.Drawing.Size(90, 90);
             this.btn_clientes.TabIndex = 52;
@@ -290,7 +344,7 @@
             this.btn_compras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_compras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_compras.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_compras.Location = new System.Drawing.Point(1487, 380);
+            this.btn_compras.Location = new System.Drawing.Point(1474, 413);
             this.btn_compras.Name = "btn_compras";
             this.btn_compras.Size = new System.Drawing.Size(74, 69);
             this.btn_compras.TabIndex = 50;
@@ -304,7 +358,7 @@
             this.label26.BackColor = System.Drawing.Color.Transparent;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label26.Location = new System.Drawing.Point(1484, 449);
+            this.label26.Location = new System.Drawing.Point(1471, 482);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(73, 20);
             this.label26.TabIndex = 76;
@@ -317,7 +371,7 @@
             this.label29.BackColor = System.Drawing.Color.Transparent;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label29.Location = new System.Drawing.Point(1486, 221);
+            this.label29.Location = new System.Drawing.Point(1473, 254);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(66, 20);
             this.label29.TabIndex = 73;
@@ -337,6 +391,7 @@
             this.label32.TabIndex = 70;
             this.label32.Text = "Ensamblados";
             this.label32.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label32.Visible = false;
             // 
             // btn_ventas
             // 
@@ -352,7 +407,7 @@
             this.btn_ventas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_ventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ventas.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_ventas.Location = new System.Drawing.Point(1478, 254);
+            this.btn_ventas.Location = new System.Drawing.Point(1465, 287);
             this.btn_ventas.Name = "btn_ventas";
             this.btn_ventas.Size = new System.Drawing.Size(80, 80);
             this.btn_ventas.TabIndex = 85;
@@ -366,7 +421,7 @@
             this.label39.BackColor = System.Drawing.Color.Transparent;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label39.Location = new System.Drawing.Point(1488, 338);
+            this.label39.Location = new System.Drawing.Point(1475, 371);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(60, 20);
             this.label39.TabIndex = 86;
@@ -386,7 +441,7 @@
             this.btn_usuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_usuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_usuarios.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_usuarios.Location = new System.Drawing.Point(1457, 764);
+            this.btn_usuarios.Location = new System.Drawing.Point(1461, 779);
             this.btn_usuarios.Name = "btn_usuarios";
             this.btn_usuarios.Size = new System.Drawing.Size(83, 90);
             this.btn_usuarios.TabIndex = 101;
@@ -411,6 +466,7 @@
             this.btn_empleados.Size = new System.Drawing.Size(80, 62);
             this.btn_empleados.TabIndex = 95;
             this.btn_empleados.UseVisualStyleBackColor = false;
+            this.btn_empleados.Visible = false;
             this.btn_empleados.Click += new System.EventHandler(this.btn_empleados_Click);
             // 
             // label23
@@ -426,6 +482,7 @@
             this.label23.TabIndex = 99;
             this.label23.Text = "Artículos";
             this.label23.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label23.Visible = false;
             // 
             // label36
             // 
@@ -440,6 +497,7 @@
             this.label36.TabIndex = 97;
             this.label36.Text = "Empleados";
             this.label36.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label36.Visible = false;
             // 
             // label37
             // 
@@ -448,7 +506,7 @@
             this.label37.BackColor = System.Drawing.Color.Transparent;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label37.Location = new System.Drawing.Point(1464, 837);
+            this.label37.Location = new System.Drawing.Point(1468, 852);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(72, 20);
             this.label37.TabIndex = 96;
@@ -473,6 +531,7 @@
             this.btn_articulos.Size = new System.Drawing.Size(76, 61);
             this.btn_articulos.TabIndex = 105;
             this.btn_articulos.UseVisualStyleBackColor = false;
+            this.btn_articulos.Visible = false;
             this.btn_articulos.Click += new System.EventHandler(this.btn_articulos_Click);
             // 
             // btn_ensamblados
@@ -493,6 +552,7 @@
             this.btn_ensamblados.Size = new System.Drawing.Size(98, 97);
             this.btn_ensamblados.TabIndex = 103;
             this.btn_ensamblados.UseVisualStyleBackColor = false;
+            this.btn_ensamblados.Visible = false;
             this.btn_ensamblados.Click += new System.EventHandler(this.btn_ensamblados_Click);
             // 
             // btn_inventario
@@ -509,7 +569,7 @@
             this.btn_inventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_inventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_inventario.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_inventario.Location = new System.Drawing.Point(1481, 490);
+            this.btn_inventario.Location = new System.Drawing.Point(1468, 523);
             this.btn_inventario.Name = "btn_inventario";
             this.btn_inventario.Size = new System.Drawing.Size(80, 80);
             this.btn_inventario.TabIndex = 111;
@@ -534,6 +594,7 @@
             this.btn_proveedores.Size = new System.Drawing.Size(65, 60);
             this.btn_proveedores.TabIndex = 110;
             this.btn_proveedores.UseVisualStyleBackColor = false;
+            this.btn_proveedores.Visible = false;
             this.btn_proveedores.Click += new System.EventHandler(this.btn_proveedores_Click);
             // 
             // label44
@@ -549,6 +610,7 @@
             this.label44.TabIndex = 114;
             this.label44.Text = "Proveedores";
             this.label44.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label44.Visible = false;
             // 
             // label46
             // 
@@ -557,7 +619,7 @@
             this.label46.BackColor = System.Drawing.Color.Transparent;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label46.Location = new System.Drawing.Point(1480, 569);
+            this.label46.Location = new System.Drawing.Point(1467, 602);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(79, 20);
             this.label46.TabIndex = 112;
@@ -578,7 +640,7 @@
             this.btn_reportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_reportes.ForeColor = System.Drawing.Color.Silver;
-            this.btn_reportes.Location = new System.Drawing.Point(997, 181);
+            this.btn_reportes.Location = new System.Drawing.Point(1006, 173);
             this.btn_reportes.Name = "btn_reportes";
             this.btn_reportes.Size = new System.Drawing.Size(80, 80);
             this.btn_reportes.TabIndex = 118;
@@ -592,7 +654,7 @@
             this.label47.BackColor = System.Drawing.Color.Transparent;
             this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label47.Location = new System.Drawing.Point(1002, 264);
+            this.label47.Location = new System.Drawing.Point(1011, 256);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(75, 20);
             this.label47.TabIndex = 121;
@@ -617,6 +679,7 @@
             this.btn_especiales.Size = new System.Drawing.Size(75, 61);
             this.btn_especiales.TabIndex = 124;
             this.btn_especiales.UseVisualStyleBackColor = false;
+            this.btn_especiales.Visible = false;
             this.btn_especiales.Click += new System.EventHandler(this.btn_especiales_Click);
             // 
             // label1
@@ -632,65 +695,12 @@
             this.label1.TabIndex = 125;
             this.label1.Text = "Especiales";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Visible = false;
             // 
             // fileSystemWatcher1
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
-            // 
-            // inventarioToolStripMenuItem
-            // 
-            this.inventarioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.inventarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.stockartículosToolStripMenuItem1,
-            this.stockequiposEnsambladosToolStripMenuItem,
-            this.stockequiposEspecialesToolStripMenuItem});
-            this.inventarioToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
-            this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
-            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-            this.inventarioToolStripMenuItem.Text = "Inventario";
-            // 
-            // stockartículosToolStripMenuItem1
-            // 
-            this.stockartículosToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.stockartículosToolStripMenuItem1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.stockartículosToolStripMenuItem1.Name = "stockartículosToolStripMenuItem1";
-            this.stockartículosToolStripMenuItem1.Size = new System.Drawing.Size(231, 26);
-            this.stockartículosToolStripMenuItem1.Text = "Artículos";
-            // 
-            // stockequiposEnsambladosToolStripMenuItem
-            // 
-            this.stockequiposEnsambladosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.stockequiposEnsambladosToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
-            this.stockequiposEnsambladosToolStripMenuItem.Name = "stockequiposEnsambladosToolStripMenuItem";
-            this.stockequiposEnsambladosToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
-            this.stockequiposEnsambladosToolStripMenuItem.Text = "Equipos Ensamblados";
-            // 
-            // stockequiposEspecialesToolStripMenuItem
-            // 
-            this.stockequiposEspecialesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.stockequiposEspecialesToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
-            this.stockequiposEspecialesToolStripMenuItem.Name = "stockequiposEspecialesToolStripMenuItem";
-            this.stockequiposEspecialesToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
-            this.stockequiposEspecialesToolStripMenuItem.Text = "Equipos Especiales";
-            // 
-            // comprasToolStripMenuItem
-            // 
-            this.comprasToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.comprasToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
-            this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
-            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-            this.comprasToolStripMenuItem.Text = "Compras";
-            this.comprasToolStripMenuItem.Click += new System.EventHandler(this.comprasToolStripMenuItem_Click);
-            // 
-            // ventasToolStripMenuItem
-            // 
-            this.ventasToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.ventasToolStripMenuItem.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-            this.ventasToolStripMenuItem.Text = "Ventas";
-            this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
             // 
             // Frm_Escritorio
             // 
@@ -725,6 +735,7 @@
             this.Controls.Add(this.btn_ensamblados);
             this.Controls.Add(this.btn_usuarios);
             this.ForeColor = System.Drawing.Color.Gainsboro;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Frm_Escritorio";

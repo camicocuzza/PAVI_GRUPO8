@@ -240,7 +240,8 @@ namespace CLASE05.Formularios.Facturas
             // 
             // Frm_SistemaFacturas_Entrada
             // 
-            this._PosiciónVisible = true;
+            this._FormularioMovil = true;
+            this._PosiciónVisible = false;
             this._titulo = "Sistema de Facturación";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(669, 439);

@@ -58,7 +58,8 @@ namespace CLASE05.Formularios.Usuarios
             // 
             // Frm_Usuario_Modificacion
             // 
-            this._PosiciónVisible = true;
+            this._FormularioMovil = true;
+            this._PosiciónVisible = false;
             this._Titulo = "Modificaciones de Usuario";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(432, 384);

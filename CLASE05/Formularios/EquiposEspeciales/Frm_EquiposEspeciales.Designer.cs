@@ -148,7 +148,8 @@ namespace CLASE05.Formularios.EquiposEspeciales
             // 
             // Frm_EquiposEspeciales
             // 
-            this._PosiciónVisible = true;
+            this._FormularioMovil = true;
+            this._PosiciónVisible = false;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(420, 444);
             this.Controls.Add(this.label1);

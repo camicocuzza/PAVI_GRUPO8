@@ -197,7 +197,8 @@ namespace CLASE05.Formularios.Facturas
             // 
             // Frm_SistemaFacturas_Baja
             // 
-            this._PosiciónVisible = true;
+            this._FormularioMovil = true;
+            this._PosiciónVisible = false;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1063, 610);
             this.Controls.Add(this.btn_eliminar_venta);

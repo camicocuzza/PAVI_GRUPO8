@@ -34,7 +34,6 @@ namespace CLASE05.Formularios.FrmBASE
         public FrmBase()
         {
             InitializeComponent();
-            _PosiciónVisible = false;           
         }
                 
         private void btn_minimizar_MouseMove(object sender, MouseEventArgs e)

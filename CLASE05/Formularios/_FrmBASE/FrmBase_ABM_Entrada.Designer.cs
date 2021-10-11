@@ -166,6 +166,7 @@
             // FrmBase_ABM_Entrada
             // 
             this._FormularioMovil = true;
+            this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(669, 439);

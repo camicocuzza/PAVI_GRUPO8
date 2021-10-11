@@ -234,7 +234,8 @@ namespace CLASE05.Formularios.Articulos
             // 
             // Frm_ABM_Articulos_Entrada
             // 
-            this._PosiciónVisible = true;
+            this._FormularioMovil = true;
+            this._PosiciónVisible = false;
             this._titulo = "Artículos";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(669, 439);

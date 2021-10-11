@@ -63,7 +63,8 @@ namespace CLASE05.Formularios.Proveedores
             // 
             // Frm_Proveedor_Modificacion
             // 
-            this._PosiciónVisible = true;
+            this._FormularioMovil = true;
+            this._PosiciónVisible = false;
             this._Titulo = "Modificación de proveedor";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(547, 434);

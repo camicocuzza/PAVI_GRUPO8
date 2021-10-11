@@ -90,7 +90,8 @@ namespace CLASE05.Formularios.Empleados
             // 
             // Frm_Empleado_Baja
             // 
-            this._PosiciónVisible = true;
+            this._FormularioMovil = true;
+            this._PosiciónVisible = false;
             this._Titulo = "Baja de empleado";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(546, 446);

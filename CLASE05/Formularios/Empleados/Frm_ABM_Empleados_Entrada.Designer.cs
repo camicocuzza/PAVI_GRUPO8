@@ -232,7 +232,8 @@ namespace CLASE05.Formularios.Empleados
             // 
             // Frm_ABM_Empleados_Entrada
             // 
-            this._PosiciónVisible = true;
+            this._FormularioMovil = true;
+            this._PosiciónVisible = false;
             this._titulo = "Empleados";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(669, 439);

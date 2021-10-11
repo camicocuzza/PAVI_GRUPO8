@@ -332,7 +332,8 @@ namespace CLASE05.Formularios._FrmBASE
             // 
             // FrmBase_Prueba_ABM_Entrada
             // 
-            this._PosiciónVisible = true;
+            this._FormularioMovil = true;
+            this._PosiciónVisible = false;
             this._titulo = "Clientes";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));

@@ -113,7 +113,8 @@ namespace CLASE05.Formularios.EquiposEspeciales
             // 
             // Frm_EquiposEspeciales_Modificacion
             // 
-            this._PosiciónVisible = true;
+            this._FormularioMovil = true;
+            this._PosiciónVisible = false;
             this._Titulo = "Modificación de Equipo Especial";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(454, 483);

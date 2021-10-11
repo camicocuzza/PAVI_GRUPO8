@@ -92,6 +92,9 @@
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FrmBase_MouseUp);
             this.ResumeLayout(false);
             this.PerformLayout();
+            this._FormularioMovil = true;
+            this._PosiciónVisible = false;
+
 
         }
 
