@@ -11,6 +11,8 @@ using CLASE05.Formularios.Lotes;
 using CLASE05.Formularios.Proveedores;
 using CLASE05.Formularios.EquiposEnsamblados;
 using CLASE05.Formularios.EquiposEspeciales;
+using CLASE05.Formularios.Compras;
+
 
 namespace CLASE05
 {
@@ -24,7 +26,7 @@ namespace CLASE05
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Escritorio());
+            //Application.Run(new Frm_Escritorio());
             //Application.Run(new Frm_Login());
             //Application.Run(new FrmLogin());
             //Application.Run(new Frm_ABM_Usuario_Entrada());
@@ -40,6 +42,8 @@ namespace CLASE05
             //Application.Run(new Frm_ABM_Proveedores_Entrada());
             //Application.Run(new Frm_ABM_Lote_Entrada());
             //Application.Run(new Frm_Proveedor_Consulta());
+            //Application.Run(new Frm_SistemaCompras_Entrada());
+            Application.Run(new Frm_SistemaCompras_Alta());
 
         }
     }

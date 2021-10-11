@@ -29,6 +29,7 @@ namespace CLASE05.Formularios.Proveedores
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Proveedor_Baja));
             this.SuspendLayout();
             // 
             // txt_razon_social
@@ -37,11 +38,15 @@ namespace CLASE05.Formularios.Proveedores
             // 
             // cmb_empleado
             // 
+            this.cmb_empleado.DisplayMember = "legajo_empleado";
             this.cmb_empleado.Enabled = false;
+            this.cmb_empleado.ValueMember = "legajo_empleado";
             // 
             // cmb_estado_provincia
             // 
+            this.cmb_estado_provincia.DisplayMember = "nombre_estado_provincia";
             this.cmb_estado_provincia.Enabled = false;
+            this.cmb_estado_provincia.ValueMember = "id_estado_provincia";
             // 
             // txt_ciudad
             // 
@@ -67,14 +72,17 @@ namespace CLASE05.Formularios.Proveedores
             // btn_cerrar
             // 
             this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_cerrar.Location = new System.Drawing.Point(510, 2);
             // 
             // btn_minimizar
             // 
             this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_minimizar.Location = new System.Drawing.Point(440, 2);
             // 
             // btn_maximizar
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_maximizar.Location = new System.Drawing.Point(475, 2);
             // 
             // Frm_Proveedor_Baja
             // 

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CLASE05.Negocios
 {
-    class NE_Articulos
+    public class NE_Articulos
     {
         public string cod_articulo { get; set; }
         public string num_serie { get; set; }
@@ -25,6 +25,12 @@ namespace CLASE05.Negocios
 
         BE_Acceso_Datos _BD = new BE_Acceso_Datos();
 
+        public void CargarComboXProveedor(ref ComboBox01 combo, string cuit_proveedor)
+        {
+            combo.DisplayMember = "nombre";
+            combo.ValueMember = "cod_articulo";
+            combo.DataSource = _BD.EjecutarSelect("SELECT cod_articulo, nombre FROM articulo WHERE cuit_proveedor = '" + cuit_proveedor + "'");
+        }
         public DataTable BuscarArticulo(string patron, string columna)
         {
             string sql = "";

@@ -171,6 +171,24 @@
     <Compile Include="Formularios\Clientes\Frm_Cliente_Modificacion.Designer.cs">
       <DependentUpon>Frm_Cliente_Modificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Compras\Frm_SistemaCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\Frm_SistemaCompras.Designer.cs">
+      <DependentUpon>Frm_SistemaCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Compras\Frm_SistemaCompras_Alta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\Frm_SistemaCompras_Alta.Designer.cs">
+      <DependentUpon>Frm_SistemaCompras_Alta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Compras\Frm_SistemaCompras_Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\Frm_SistemaCompras_Entrada.Designer.cs">
+      <DependentUpon>Frm_SistemaCompras_Entrada.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Empleados\Frm_ABM_Empleados_Entrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -423,6 +441,7 @@
     <Compile Include="Formularios\Usuarios\Frm_Usuario_Modificacion.Designer.cs">
       <DependentUpon>Frm_Usuario_Modificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Negocios\NE_Compras.cs" />
     <Compile Include="Negocios\NE_Proveedores.cs" />
     <Compile Include="Negocios\NE_Empleados.cs" />
     <Compile Include="Negocios\NE_Articulos.cs" />
@@ -479,6 +498,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Clientes\Frm_Cliente_Modificacion.resx">
       <DependentUpon>Frm_Cliente_Modificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\Frm_SistemaCompras.resx">
+      <DependentUpon>Frm_SistemaCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\Frm_SistemaCompras_Alta.resx">
+      <DependentUpon>Frm_SistemaCompras_Alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\Frm_SistemaCompras_Entrada.resx">
+      <DependentUpon>Frm_SistemaCompras_Entrada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Empleados\Frm_ABM_Empleados_Entrada.resx">
       <DependentUpon>Frm_ABM_Empleados_Entrada.cs</DependentUpon>
