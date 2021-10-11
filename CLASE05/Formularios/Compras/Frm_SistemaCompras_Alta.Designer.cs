@@ -32,6 +32,10 @@ namespace CLASE05.Formularios.Compras
             this.btn_nueva_compra = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // btn_eliminar_a
+            // 
+            this.btn_eliminar_a.Click += new System.EventHandler(this.btn_eliminar_a_Click);
+            // 
             // btn_agregar
             // 
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
@@ -39,6 +43,10 @@ namespace CLASE05.Formularios.Compras
             // cmb_proveedor
             // 
             this.cmb_proveedor.SelectedIndexChanged += new System.EventHandler(this.cmb_proveedor_SelectedIndexChanged);
+            // 
+            // txt_total
+            // 
+            this.txt_total.Text = "$0";
             // 
             // btn_cerrar
             // 
@@ -91,7 +99,7 @@ namespace CLASE05.Formularios.Compras
             this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.Controls.SetChildIndex(this.txt_fecha, 0);
             this.Controls.SetChildIndex(this.label6, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
+            this.Controls.SetChildIndex(this.txt_total, 0);
             this.Controls.SetChildIndex(this.btn_grabar, 0);
             this.Controls.SetChildIndex(this.txt_fecha_inicio, 0);
             this.Controls.SetChildIndex(this.txt_direccion, 0);

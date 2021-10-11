@@ -44,7 +44,7 @@ namespace CLASE05.Formularios.Compras
             this.txt_fecha = new CLASE05.Clases.LabelText02();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_total = new System.Windows.Forms.TextBox();
             this.btn_grabar = new System.Windows.Forms.Button();
             this.grid_articulos = new CLASE05.Clases.Grid01();
             this.txt_fecha_inicio = new CLASE05.Clases.LabelText02();
@@ -90,6 +90,7 @@ namespace CLASE05.Formularios.Compras
             this.btn_eliminar_a.TabIndex = 92;
             this.btn_eliminar_a.Text = "Eliminar";
             this.btn_eliminar_a.UseVisualStyleBackColor = false;
+            this.btn_eliminar_a.Click += new System.EventHandler(this.btn_eliminar_a_Click);
             // 
             // button1
             // 
@@ -264,20 +265,21 @@ namespace CLASE05.Formularios.Compras
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label6.Location = new System.Drawing.Point(521, 418);
+            this.label6.Location = new System.Drawing.Point(505, 419);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 17);
             this.label6.TabIndex = 98;
             this.label6.Text = "Total";
             // 
-            // textBox1
+            // txt_total
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.MenuText;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(567, 414);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(86, 25);
-            this.textBox1.TabIndex = 99;
+            this.txt_total.BackColor = System.Drawing.SystemColors.MenuText;
+            this.txt_total.Enabled = false;
+            this.txt_total.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txt_total.Location = new System.Drawing.Point(551, 414);
+            this.txt_total.Name = "txt_total";
+            this.txt_total.Size = new System.Drawing.Size(102, 25);
+            this.txt_total.TabIndex = 99;
             // 
             // btn_grabar
             // 
@@ -393,7 +395,7 @@ namespace CLASE05.Formularios.Compras
             this.Controls.Add(this.txt_fecha_inicio);
             this.Controls.Add(this.grid_articulos);
             this.Controls.Add(this.btn_grabar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_total);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_fecha);
@@ -428,7 +430,7 @@ namespace CLASE05.Formularios.Compras
             this.Controls.SetChildIndex(this.txt_fecha, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.label6, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
+            this.Controls.SetChildIndex(this.txt_total, 0);
             this.Controls.SetChildIndex(this.btn_grabar, 0);
             this.Controls.SetChildIndex(this.grid_articulos, 0);
             this.Controls.SetChildIndex(this.txt_fecha_inicio, 0);
@@ -456,7 +458,7 @@ namespace CLASE05.Formularios.Compras
         protected System.Windows.Forms.Label label1;
         protected System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label6;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox txt_total;
         public System.Windows.Forms.Button btn_grabar;
         public Clases.LabelText02 txt_fecha_inicio;
         public Clases.LabelText02 txt_direccion;

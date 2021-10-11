@@ -67,7 +67,7 @@ namespace CLASE05.Formularios.Compras
             }
             AgregarFilaGrilla();
             cmb_proveedor.Enabled = false;
-            
+            CalcularTotal();  
 
         }
 
@@ -113,6 +113,23 @@ namespace CLASE05.Formularios.Compras
             }
         }
 
-        
+        private void btn_eliminar_a_Click(object sender, EventArgs e)
+        {
+            if (grid_articulos.CurrentCell.RowIndex == -1)
+            {
+                MessageBox.Show("Falta seleccionar artículo", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+            if(MessageBox.Show("Esta seguro de borrar el artículo", "Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Question)== DialogResult.Yes)
+            {
+                grid_articulos.Rows.Remove(grid_articulos.Rows[grid_articulos.CurrentRow.Index]);
+                CalcularTotal();
+            }
+            
+            if(grid_articulos.Rows.Count == 0)
+            {
+                cmb_proveedor.Enabled = true;
+            }
+        }
     }
 }
