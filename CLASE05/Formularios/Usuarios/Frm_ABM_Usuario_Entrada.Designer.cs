@@ -29,11 +29,10 @@ namespace CLASE05.Formularios.Usuarios
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rb_id_usuario = new System.Windows.Forms.RadioButton();
             this.btn_blan_patron = new System.Windows.Forms.Button();
             this.rb_n_usuario = new System.Windows.Forms.RadioButton();
-            this.txt_id_usuario = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_patron = new System.Windows.Forms.MaskedTextBox();
             this.grid_usuarios = new CLASE05.Clases.Grid01();
@@ -164,20 +163,6 @@ namespace CLASE05.Formularios.Usuarios
             this.rb_n_usuario.Text = "Nombre";
             this.rb_n_usuario.UseVisualStyleBackColor = true;
             // 
-            // txt_id_usuario
-            // 
-            this.txt_id_usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.txt_id_usuario.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_id_usuario.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.txt_id_usuario.Location = new System.Drawing.Point(139, 387);
-            this.txt_id_usuario.Mask = "99999";
-            this.txt_id_usuario.Name = "txt_id_usuario";
-            this.txt_id_usuario.Size = new System.Drawing.Size(48, 25);
-            this.txt_id_usuario.TabIndex = 17;
-            this.txt_id_usuario.Visible = false;
-            this.txt_id_usuario.Click += new System.EventHandler(this.txt_id_usuario_Click);
-            this.txt_id_usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_patron_KeyPress);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -207,8 +192,8 @@ namespace CLASE05.Formularios.Usuarios
             this.grid_usuarios._tamannoLetraHeader = 9;
             this.grid_usuarios.AllowUserToAddRows = false;
             this.grid_usuarios.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_usuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_usuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.grid_usuarios.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_usuarios.Location = new System.Drawing.Point(12, 204);
@@ -259,7 +244,6 @@ namespace CLASE05.Formularios.Usuarios
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(669, 439);
             this.Controls.Add(this.grid_usuarios);
-            this.Controls.Add(this.txt_id_usuario);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Frm_ABM_Usuario_Entrada";
             this.Load += new System.EventHandler(this.Frm_ABM_Usuario_Load);
@@ -268,7 +252,6 @@ namespace CLASE05.Formularios.Usuarios
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
-            this.Controls.SetChildIndex(this.txt_id_usuario, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.btn_alta, 0);
@@ -287,7 +270,6 @@ namespace CLASE05.Formularios.Usuarios
         private System.Windows.Forms.RadioButton rb_id_usuario;
         private System.Windows.Forms.Button btn_blan_patron;
         private System.Windows.Forms.RadioButton rb_n_usuario;
-        private System.Windows.Forms.MaskedTextBox txt_id_usuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox txt_patron;
         private Clases.Grid01 grid_usuarios;

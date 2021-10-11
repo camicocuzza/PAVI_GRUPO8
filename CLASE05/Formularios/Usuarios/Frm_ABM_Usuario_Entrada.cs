@@ -25,7 +25,6 @@ namespace CLASE05.Formularios.Usuarios
         private void btn_blan_patron_Click(object sender, EventArgs e)
         {
             txt_patron.Text = string.Empty;
-            txt_id_usuario.Text = string.Empty;
             rb_id_usuario.Checked = false;
             rb_n_usuario.Checked = false;
         }
@@ -143,12 +142,7 @@ namespace CLASE05.Formularios.Usuarios
         {
             txt_patron.SelectionStart = txt_patron.Text.Length;
         }
-
-        private void txt_id_usuario_Click(object sender, EventArgs e)
-        {
-            txt_id_usuario.SelectionStart = txt_id_usuario.Text.Length;
-        }
-
+        
         private void txt_patron_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13)
@@ -177,7 +171,7 @@ namespace CLASE05.Formularios.Usuarios
                 if (rb_id_usuario.Checked == true)
                 {
                     columna = "id_usuario";
-                    cuadroTexto = txt_id_usuario;
+                    cuadroTexto = txt_patron;
                 }
                 if (cuadroTexto.Text == "")
                 {
