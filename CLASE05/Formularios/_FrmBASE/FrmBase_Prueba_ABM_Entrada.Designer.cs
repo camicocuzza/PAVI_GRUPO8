@@ -30,7 +30,7 @@ namespace CLASE05.Formularios._FrmBASE
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBase_Prueba_ABM_Entrada));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -45,8 +45,10 @@ namespace CLASE05.Formularios._FrmBASE
             this.label2 = new System.Windows.Forms.Label();
             this.txt_patron = new System.Windows.Forms.MaskedTextBox();
             this.grid_clientes = new CLASE05.Clases.Grid01();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_clientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_alta
@@ -308,8 +310,8 @@ namespace CLASE05.Formularios._FrmBASE
             this.grid_clientes._tamannoLetraHeader = 9;
             this.grid_clientes.AllowUserToAddRows = false;
             this.grid_clientes.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_clientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_clientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.grid_clientes.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_clientes.Location = new System.Drawing.Point(53, 235);
@@ -318,19 +320,37 @@ namespace CLASE05.Formularios._FrmBASE
             this.grid_clientes.Size = new System.Drawing.Size(699, 190);
             this.grid_clientes.TabIndex = 10;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(851, 474);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmBase_Prueba_ABM_Entrada
             // 
             this._PosiciónVisible = true;
             this._titulo = "Clientes";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(851, 475);
             this.Controls.Add(this.grid_clientes);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "FrmBase_Prueba_ABM_Entrada";
+            this.Controls.SetChildIndex(this.pictureBox1, 0);
+            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.button2, 0);
+            this.Controls.SetChildIndex(this.button3, 0);
+            this.Controls.SetChildIndex(this.button4, 0);
+            this.Controls.SetChildIndex(this.grid_clientes, 0);
             this.Controls.SetChildIndex(this.btn_alta, 0);
             this.Controls.SetChildIndex(this.btn_modificar, 0);
             this.Controls.SetChildIndex(this.btn_borrar, 0);
@@ -341,14 +361,10 @@ namespace CLASE05.Formularios._FrmBASE
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
-            this.Controls.SetChildIndex(this.button3, 0);
-            this.Controls.SetChildIndex(this.button4, 0);
-            this.Controls.SetChildIndex(this.grid_clientes, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_clientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,5 +386,6 @@ namespace CLASE05.Formularios._FrmBASE
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox txt_patron;
         private Clases.Grid01 grid_clientes;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
