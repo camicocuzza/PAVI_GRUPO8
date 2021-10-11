@@ -476,6 +476,12 @@
     <Compile Include="Formularios\Usuarios\Frm_Usuario_Modificacion.Designer.cs">
       <DependentUpon>Frm_Usuario_Modificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\_FrmBASE\FrmBase_Prueba_ABM_Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\_FrmBASE\FrmBase_Prueba_ABM_Entrada.Designer.cs">
+      <DependentUpon>FrmBase_Prueba_ABM_Entrada.cs</DependentUpon>
+    </Compile>
     <Compile Include="Negocios\NE_DetalleFactura_EquiposEnsamblados.cs" />
     <Compile Include="Negocios\NE_Facturas.cs" />
     <Compile Include="Negocios\NE_DetalleFactura_Articulos.cs" />
@@ -507,6 +513,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clases\TextBox02.resx">
       <DependentUpon>TextBox02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\_FrmBASE\FrmBase_Prueba_ABM_Entrada.resx">
+      <DependentUpon>FrmBase_Prueba_ABM_Entrada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\VentaFactura.rdlc" />
     <EmbeddedResource Include="Formularios\Articulos\Frm_ABM_Articulos_Entrada.resx">
