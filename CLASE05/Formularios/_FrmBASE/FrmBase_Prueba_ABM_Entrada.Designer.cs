@@ -30,7 +30,7 @@ namespace CLASE05.Formularios._FrmBASE
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBase_Prueba_ABM_Entrada));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -264,7 +264,7 @@ namespace CLASE05.Formularios._FrmBASE
             this.btn_blan_patron.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btn_blan_patron.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_blan_patron.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.btn_blan_patron.Location = new System.Drawing.Point(414, 41);
+            this.btn_blan_patron.Location = new System.Drawing.Point(431, 41);
             this.btn_blan_patron.Name = "btn_blan_patron";
             this.btn_blan_patron.Size = new System.Drawing.Size(36, 35);
             this.btn_blan_patron.TabIndex = 34;
@@ -289,16 +289,16 @@ namespace CLASE05.Formularios._FrmBASE
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(7, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 17);
+            this.label2.Size = new System.Drawing.Size(130, 17);
             this.label2.TabIndex = 32;
-            this.label2.Text = "Patrón Búsqueda";
+            this.label2.Text = "Patrón de Búsqueda";
             // 
             // txt_patron
             // 
             this.txt_patron.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txt_patron.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_patron.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_patron.Location = new System.Drawing.Point(125, 48);
+            this.txt_patron.Location = new System.Drawing.Point(153, 48);
             this.txt_patron.Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
             this.txt_patron.Name = "txt_patron";
             this.txt_patron.Size = new System.Drawing.Size(253, 25);
@@ -310,8 +310,8 @@ namespace CLASE05.Formularios._FrmBASE
             this.grid_clientes._tamannoLetraHeader = 9;
             this.grid_clientes.AllowUserToAddRows = false;
             this.grid_clientes.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_clientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_clientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grid_clientes.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_clientes.Location = new System.Drawing.Point(53, 235);
