@@ -53,9 +53,11 @@ namespace CLASE05.Formularios.Lotes
             // 
             // btn_aceptar
             // 
-            this.btn_aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btn_aceptar.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_aceptar.ForeColor = System.Drawing.Color.Silver;
+            this.btn_aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.btn_aceptar.FlatAppearance.BorderSize = 0;
+            this.btn_aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btn_aceptar.ForeColor = System.Drawing.Color.White;
             this.btn_aceptar.Location = new System.Drawing.Point(165, 269);
             this.btn_aceptar.Name = "btn_aceptar";
             this.btn_aceptar.Size = new System.Drawing.Size(104, 30);
@@ -139,7 +141,7 @@ namespace CLASE05.Formularios.Lotes
             // 
             this.lbl_titulo.AutoSize = true;
             this.lbl_titulo.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Bold);
-            this.lbl_titulo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbl_titulo.ForeColor = System.Drawing.Color.White;
             this.lbl_titulo.Location = new System.Drawing.Point(35, 61);
             this.lbl_titulo.Name = "lbl_titulo";
             this.lbl_titulo.Size = new System.Drawing.Size(81, 31);
@@ -149,6 +151,7 @@ namespace CLASE05.Formularios.Lotes
             // Frm_Lote
             // 
             this._FormularioMovil = true;
+            this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(438, 341);
             this.Controls.Add(this.lbl_titulo);
