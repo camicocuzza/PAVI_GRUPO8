@@ -13,6 +13,7 @@ namespace CLASE05.Negocios
     public class NE_Compras
     {
         BE_Acceso_Datos _BD = new BE_Acceso_Datos();
+        NE_Stock _Stock = new NE_Stock();
 
 
         public DataTable BuscarCompra(string patron, string columna)
@@ -36,7 +37,7 @@ namespace CLASE05.Negocios
             sqlInsert += ", " + monto_total + ")";
 
             _BD.IniciarTransaccion();
-            _BD.Insertar(sqlInsert);
+            _BD.Insertar(sqlInsert, BE_Acceso_Datos.RecuperacionPk.no_recuperar);
 
             for (int i = 0; i < grid_articulos.Rows.Count; i++)
             {
