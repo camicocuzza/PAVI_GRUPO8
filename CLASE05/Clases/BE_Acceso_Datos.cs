@@ -13,6 +13,7 @@ namespace CLASE05.Clases
     {
         public enum EstadoTransaccion { correcto, error }
         public enum TipoConexion { transaccion, simple }
+        public enum RecuperacionPk { recuperar, no_recuperar }
 
         SqlConnection Conexion = new SqlConnection();
         SqlCommand Cmd = new SqlCommand();
@@ -114,11 +115,46 @@ namespace CLASE05.Clases
             return ControlTransaccion;
         }
 
+        private string EjecutarNoSelect(string sql, RecuperacionPk RecuperarId)
+        {
+            Conectar();
+            Cmd.CommandText = sql;
+            try
+            {
+                Cmd.ExecuteNonQuery();
+                if (RecuperarId == RecuperacionPk.recuperar)
+                {
+                    DataTable tabla = new DataTable();
+                    Cmd.CommandText = "SELECT SCOPE_IDENTITY()";
+                    tabla.Load(Cmd.ExecuteReader());
+                    Cerrar();
+                    return tabla.Rows[0][0].ToString();
+                }
+                {
+                    Cerrar();
+                    return "";
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error en ejecución de comando.\n\n"
+                 + sql
+                 + "\n Mensaje del error: \n" + e.Message);
+                ControlTransaccion = EstadoTransaccion.error;
+                Cerrar();
+                return "";
+            }
+
+        }
         public void Insertar(string sql)
         {
             EjecutarNoSelect(sql);
-        }
+        }   
 
+        public string Insertar(string sql, RecuperacionPk RecuperarId)
+        {
+            return EjecutarNoSelect(sql, RecuperarId);
+        }
         public void Borrar(string sql)
         {
             EjecutarNoSelect(sql);
