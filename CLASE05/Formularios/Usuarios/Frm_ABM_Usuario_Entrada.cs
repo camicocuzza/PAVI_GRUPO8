@@ -28,10 +28,6 @@ namespace CLASE05.Formularios.Usuarios
             txt_id_usuario.Text = string.Empty;
             rb_id_usuario.Checked = false;
             rb_n_usuario.Checked = false;
-
-            //txt_id_usuario.Enabled = false;
-            //txt_patron.Enabled = false;
-            // btn_buscar.Enabled = true;
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
@@ -42,7 +38,7 @@ namespace CLASE05.Formularios.Usuarios
             MaskedTextBox cuadroTexto = new MaskedTextBox();
             cuadroTexto.Text = "";
 
-            if (rb_id_usuario.Checked == false & rb_n_usuario.Checked == false & rb_todos.Checked == false)
+            if (rb_id_usuario.Checked == false & rb_n_usuario.Checked == false & rb_todos.Checked == false & rb_eliminados.Checked == false)
             {
                 MessageBox.Show("No hay parámetros de búsqueda", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -50,6 +46,11 @@ namespace CLASE05.Formularios.Usuarios
             if (rb_todos.Checked == true)
             {
                 grid_usuarios.Cargar(usu.BuscarUsuario("", rb_id_usuario.Text));
+                return;
+            }
+            if (rb_eliminados.Checked == true)
+            {
+                grid_usuarios.Cargar(usu.ObtenerEliminados());
                 return;
             }
             if (rb_n_usuario.Checked == true)
@@ -203,6 +204,18 @@ namespace CLASE05.Formularios.Usuarios
                     }
                 }
                 return;
+            }
+        }
+
+        private void grid_usuarios_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {            
+            if (usu.EstaEliminado(grid_usuarios.CurrentRow.Cells[0].Value.ToString()) == true)
+            {
+                if (MessageBox.Show("¿Desea restaurar el usuario '" + grid_usuarios.CurrentRow.Cells[1].Value.ToString() + "'?", "Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    usu.RestaurarEliminado(grid_usuarios.CurrentRow.Cells[0].Value.ToString());
+                    MessageBox.Show("Se restauró correctamente el usuario '" + grid_usuarios.CurrentRow.Cells[1].Value.ToString() + "'", "Importante"); 
+                }
             }
         }
     }

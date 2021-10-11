@@ -114,14 +114,30 @@ namespace CLASE05.Negocios
         }
         public void Borrar()
         {
-            //string sqlDelete = "DELETE FROM usuario WHERE id_usuario = " + id_usuario;
             string sqlDelete = "UPDATE usuario SET eliminado = 1 WHERE id_usuario = " + id_usuario;
             _BD.Borrar(sqlDelete);
         }
-
-        public DataTable RecuperarEliminados()
+        public void RestaurarEliminado(string id_usuario)
+        {            
+            string sql = "UPDATE usuario SET eliminado = 0 WHERE id_usuario = " + id_usuario;
+            _BD.Borrar(sql);
+        }
+        public bool EstaEliminado(string id_usuario)
         {
-            string sql = @"SELECT * 
+            bool var = false;
+            string sql = @"SELECT eliminado FROM usuario
+                         WHERE id_usuario = " + id_usuario;
+            
+            DataTable tabla = _BD.EjecutarSelect(sql);
+            if (tabla.Rows[0][0].ToString()=="True")
+            {
+                var = true;
+            }
+            return var;
+        }
+            public DataTable ObtenerEliminados()
+        {
+            string sql = @"SELECT id_usuario, n_usuario
                           FROM usuario WHERE eliminado = 1";
 
             return _BD.EjecutarSelect(sql);

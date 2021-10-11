@@ -39,6 +39,7 @@ namespace CLASE05.Formularios.Usuarios
             this.grid_usuarios = new CLASE05.Clases.Grid01();
             this.label4 = new System.Windows.Forms.Label();
             this.rb_todos = new System.Windows.Forms.RadioButton();
+            this.rb_eliminados = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_usuarios)).BeginInit();
             this.SuspendLayout();
@@ -82,6 +83,7 @@ namespace CLASE05.Formularios.Usuarios
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rb_eliminados);
             this.groupBox1.Controls.Add(this.rb_todos);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.rb_id_usuario);
@@ -100,6 +102,7 @@ namespace CLASE05.Formularios.Usuarios
             this.groupBox1.Controls.SetChildIndex(this.rb_id_usuario, 0);
             this.groupBox1.Controls.SetChildIndex(this.label4, 0);
             this.groupBox1.Controls.SetChildIndex(this.rb_todos, 0);
+            this.groupBox1.Controls.SetChildIndex(this.rb_eliminados, 0);
             // 
             // btn_buscar
             // 
@@ -215,6 +218,7 @@ namespace CLASE05.Formularios.Usuarios
             this.grid_usuarios.ReadOnly = true;
             this.grid_usuarios.Size = new System.Drawing.Size(645, 178);
             this.grid_usuarios.TabIndex = 7;
+            this.grid_usuarios.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_usuarios_CellContentDoubleClick);
             // 
             // label4
             // 
@@ -237,6 +241,18 @@ namespace CLASE05.Formularios.Usuarios
             this.rb_todos.TabStop = true;
             this.rb_todos.Text = "Todos";
             this.rb_todos.UseVisualStyleBackColor = true;
+            // 
+            // rb_eliminados
+            // 
+            this.rb_eliminados.AutoSize = true;
+            this.rb_eliminados.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.rb_eliminados.Location = new System.Drawing.Point(475, 45);
+            this.rb_eliminados.Name = "rb_eliminados";
+            this.rb_eliminados.Size = new System.Drawing.Size(94, 21);
+            this.rb_eliminados.TabIndex = 31;
+            this.rb_eliminados.TabStop = true;
+            this.rb_eliminados.Text = "Eliminados";
+            this.rb_eliminados.UseVisualStyleBackColor = true;
             // 
             // Frm_ABM_Usuario_Entrada
             // 
@@ -277,5 +293,6 @@ namespace CLASE05.Formularios.Usuarios
         private Clases.Grid01 grid_usuarios;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton rb_todos;
+        private System.Windows.Forms.RadioButton rb_eliminados;
     }
 }
