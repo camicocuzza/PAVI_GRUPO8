@@ -54,8 +54,7 @@ namespace CLASE05.Clases
         public void _CargarConJoin(int seleccion)
         {
             BE_Acceso_Datos _BD = new BE_Acceso_Datos();
-            seleccion += 1;
-
+            
             //string sql = @"SELECT e." + _tabla_cargar_pk + ", e." + _tabla_cargar_descriptor + " FROM " + _tabla_cargar_combo + " e";
             //sql += " INNER JOIN " + _tabla_join + " p ON e." + _tabla_join_pk + " = p." + _tabla_join_pk;
             //sql += " WHERE p." + _tabla_join_pk + " = " + seleccion;

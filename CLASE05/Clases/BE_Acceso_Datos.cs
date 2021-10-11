@@ -157,9 +157,17 @@ namespace CLASE05.Clases
         {
             EjecutarNoSelect(sql);
         }
+        public string Modificar(string sql, RecuperacionPk RecuperarId)
+        {
+            return EjecutarNoSelect(sql, RecuperarId);
+        }
         public void Borrar(string sql)
         {
             EjecutarNoSelect(sql);
+        }
+        public string Borrar(string sql, RecuperacionPk RecuperarId)
+        {
+            return EjecutarNoSelect(sql, RecuperarId);
         }
 
         public void InsertarEquipoEspecial(string cod_prod_en, string cuit_cliente, PictureBox imagen)

@@ -110,6 +110,7 @@ namespace CLASE05.Formularios.Facturas
             this.btnNuevaVenta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btnNuevaVenta.FlatAppearance.BorderSize = 2;
             this.btnNuevaVenta.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click);
             // 
             // cmb_tipo_factura
             // 
@@ -137,6 +138,7 @@ namespace CLASE05.Formularios.Facturas
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1063, 625);
             this.Name = "Frm_SistemaFacturas_Alta";
+            this.Load += new System.EventHandler(this.Frm_SistemaFacturas_Alta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

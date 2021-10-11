@@ -14,7 +14,13 @@ namespace CLASE05.Formularios.Facturas
         {
             InitializeComponent();
         }
+        private void Frm_SistemaFacturas_Alta_Load(object sender, EventArgs e)
+        {
+            Inicio();
+            btnMostrarFactura.Enabled = false;
+            btnGuardar.Enabled = true;
 
+        }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (txt_cuit_cliente.Text.Length < 13)
@@ -48,12 +54,10 @@ namespace CLASE05.Formularios.Facturas
                 txt_legajo_empleado.Text, grid_articulos, grid_ensamblados);
 
             this.num_factura = ne_facturas.num_factura;
-
-            this.Inicio();
-            cuit_cliente = txt_cuit_cliente.Text;
-            this.RecuperarDatosCliente(cuit_cliente);
+            
             txt_num_factura.Text = num_factura;
-
+            btnMostrarFactura.Enabled = true;
+            btnGuardar.Enabled = false;
         }
         private void btnMostrarFactura_Click(object sender, EventArgs e)
         {
@@ -75,6 +79,15 @@ namespace CLASE05.Formularios.Facturas
                 Text = "Visualización de Factura"
             };
             ventaFactura.ShowDialog();
+        }
+
+        private void btnNuevaVenta_Click(object sender, EventArgs e)
+        {
+            this.Inicio();
+            limpiarformulario();
+            btnMostrarFactura.Enabled = false;
+            btnGuardar.Enabled = true;
+
         }
     }
 

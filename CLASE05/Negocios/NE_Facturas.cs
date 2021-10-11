@@ -115,7 +115,7 @@ namespace CLASE05.Negocios
         }
         public DataTable RecuperarDetallesEnsamblados(string num_factura, string id_tipo_factura)
         {
-            string sql = @"SELECT d.cod_prod_ensamblado, e.cod_prod_ensamblado, d.cantidad, d.precio, d.cantidad * d.precio as subtotal
+            string sql = @"SELECT d.cod_prod_ensamblado, e.nombre, d.cantidad, d.precio, d.cantidad * d.precio as subtotal
                         FROM factura f, detalle_factura_prodEnsamblado d, producto_ensamblado e
                         WHERE d.cod_prod_ensamblado = e.cod_prod_ensamblado AND
 	                    f.num_factura = d.num_factura AND
@@ -127,7 +127,7 @@ namespace CLASE05.Negocios
         }
         public DataTable RecuperarDetallesEnsamblados(string num_factura)
         {
-            string sql = @"SELECT d.cod_prod_ensamblado, e.cod_prod_ensamblado, d.cantidad, d.precio, d.cantidad * d.precio as subtotal
+            string sql = @"SELECT d.cod_prod_ensamblado, e.nombre, d.cantidad, d.precio, d.cantidad * d.precio as subtotal
                         FROM factura f, detalle_factura_prodEnsamblado d, producto_ensamblado e
                         WHERE d.cod_prod_ensamblado = e.cod_prod_ensamblado AND
 	                    f.num_factura = d.num_factura AND
@@ -227,12 +227,12 @@ namespace CLASE05.Negocios
             string sqlDelete = @"UPDATE factura SET eliminado = 1 WHERE num_factura = " + num_factura;
 
             _BD.IniciarTransaccion();
-            _BD.Borrar(sqlDelete);         
+            _BD.Borrar(sqlDelete, BE_Acceso_Datos.RecuperacionPk.no_recuperar);         
 
 
             string sqlDeleteDA = @"UPDATE detalle_factura_articulo SET eliminado = 1  
                                             WHERE num_factura = " + num_factura;
-            _BD.Borrar(sqlDeleteDA);
+            _BD.Borrar(sqlDeleteDA, BE_Acceso_Datos.RecuperacionPk.no_recuperar);
 
             //string sqlDeleteStock = @"UPDATE stock SET eliminado = 1 WHERE fecha = '" + fecha + "'";
             //_BD.Borrar(sqlDeleteStock);
@@ -240,7 +240,7 @@ namespace CLASE05.Negocios
 
             string sqlDeleteDE = @"UPDATE detalle_factura_prodEnsamblado SET eliminado = 1 
                                             WHERE num_factura = " + num_factura;
-            _BD.Borrar(sqlDeleteDE);
+            _BD.Borrar(sqlDeleteDE, BE_Acceso_Datos.RecuperacionPk.no_recuperar);
 
 
             //string sqlDeleteStockEns = @"UPDATE stock_prod_ensamblado SET eliminado = 1 WHERE fecha = '" + fecha + "'";
@@ -258,10 +258,15 @@ namespace CLASE05.Negocios
                     int cantidadanterior = int.Parse(tablastock.Rows[0]["cantidad"].ToString());
                     int nuevaCantidad = cantidadanterior + cantidadVendida;
 
-                    string sqlmodifstock = "UPDATE stock SET fecha = 1/1/2000 WHERE cod_articulo = '" + Grid_Detalle_Articulo.Rows[i].Cells[0].Value.ToString() + "' AND fecha = '" + fecha + "'";
-                    _BD.Modificar(sqlmodifstock);
-                    
-                    ne_stock.Insertar(Grid_Detalle_Articulo.Rows[i].Cells[0].Value.ToString(), _TE.RecuperarFechaSistema(), nuevaCantidad);
+                    string sqldeletestock = "DELETE FROM stock WHERE cod_articulo = '" + Grid_Detalle_Articulo.Rows[i].Cells[0].Value.ToString() + "' AND fecha = '" + fecha + "'";
+                    _BD.Modificar(sqldeletestock, BE_Acceso_Datos.RecuperacionPk.no_recuperar);
+
+                    string sqlStock = @"INSERT INTO stock (cod_articulo, fecha, cantidad, eliminado) VALUES(";
+                    sqlStock += "'" + Grid_Detalle_Articulo.Rows[i].Cells[0].Value.ToString() + "'";
+                    sqlStock += ", '" + _TE.RecuperarFechaSistema() + "'";
+                    sqlStock += ", " + nuevaCantidad;
+                    sqlStock += ", 0)";
+                    _BD.Insertar(sqlStock, BE_Acceso_Datos.RecuperacionPk.no_recuperar);
                 }
             }
 
@@ -276,10 +281,15 @@ namespace CLASE05.Negocios
                     int cantidadanterior = int.Parse(tablastock.Rows[0]["cantidad"].ToString());
                     int nuevaCantidad = cantidadanterior + cantidadVendida;
 
-                    string sqlmodifstock = "UPDATE stock_prod_ensamblado SET fecha = 1/1/2000 WHERE cod_prod_ensamblado = '" + Grid_Detalle_Articulo.Rows[i].Cells[0].Value.ToString() + "' AND fecha = '" + fecha + "'";
-                    _BD.Modificar(sqlmodifstock);
+                    string sqldeletestock = "DELETE FROM stock_prod_ensamblado WHERE cod_prod_ensamblado = '" + Grid_Detalle_Ensamblado.Rows[i].Cells[0].Value.ToString() + "' AND fecha = '" + fecha + "'";
+                    _BD.Modificar(sqldeletestock, BE_Acceso_Datos.RecuperacionPk.no_recuperar);
 
-                    ne_stock_ens.Insertar(Grid_Detalle_Ensamblado.Rows[i].Cells[0].Value.ToString(), _TE.RecuperarFechaSistema(), nuevaCantidad);
+                    string sqlStock = @"INSERT INTO stock_prod_ensamblado (cod_prod_ensamblado, fecha, cantidad, eliminado) VALUES(";
+                    sqlStock += "'" + Grid_Detalle_Ensamblado.Rows[i].Cells[0].Value.ToString() + "'";
+                    sqlStock += ", '" + _TE.RecuperarFechaSistema() + "'";
+                    sqlStock += ", " + nuevaCantidad;
+                    sqlStock += ", 0)";
+                    _BD.Insertar(sqlStock, BE_Acceso_Datos.RecuperacionPk.no_recuperar);
                 }
             }
 
