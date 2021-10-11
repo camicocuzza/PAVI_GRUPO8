@@ -19,7 +19,7 @@ namespace CLASE05.Formularios.Usuarios
 
         private void Frm_ABM_Usuario_Load(object sender, EventArgs e)
         {
-            this.grid_usuarios.Formatear("Id, 75, C; Nombre de usuario, 200, I");
+            this.grid_usuarios.Formatear("ID, 75, C; Nombre de usuario, 200, I");
         }
 
         private void btn_blan_patron_Click(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace CLASE05.Formularios.Usuarios
             }
             if (rb_todos.Checked == true)
             {
-                grid_usuarios.Cargar(usu.BuscarUsuario("", rb_id_usuario.Text));
+                grid_usuarios.Cargar(usu.BuscarUsuario("", "id_usuario"));
                 return;
             }
             if (rb_eliminados.Checked == true)
@@ -55,12 +55,21 @@ namespace CLASE05.Formularios.Usuarios
             if (rb_n_usuario.Checked == true)
             {
                 columna = "n_usuario";
-                cuadroTexto = txt_patron;
+                cuadroTexto = txt_patron;               
             }
             if (rb_id_usuario.Checked == true)
             {
                 columna = "id_usuario";
                 cuadroTexto = txt_patron;
+                if (txt_patron.Text != "")
+                {
+                    grid_usuarios.Cargar(usu.BuscarUsuario(cuadroTexto.Text));
+                    if (grid_usuarios.Rows.Count == 0)
+                    {
+                        MessageBox.Show("Búsqueda sin resultados", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    return;
+                }
             }
             if (cuadroTexto.Text == "")
             {
@@ -141,6 +150,12 @@ namespace CLASE05.Formularios.Usuarios
         private void txt_patron_Click(object sender, EventArgs e)
         {
             txt_patron.SelectionStart = txt_patron.Text.Length;
+            if (rb_id_usuario.Checked == true)
+            {
+                txt_patron.Mask = "999999";
+            }            
+            else
+                txt_patron.Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";            
         }
         
         private void txt_patron_KeyPress(object sender, KeyPressEventArgs e)
@@ -198,6 +213,14 @@ namespace CLASE05.Formularios.Usuarios
                     usu.RestaurarEliminado(grid_usuarios.CurrentRow.Cells[0].Value.ToString());
                     MessageBox.Show("Se restauró correctamente el usuario '" + grid_usuarios.CurrentRow.Cells[1].Value.ToString() + "'", "Importante"); 
                 }
+            }
+        }
+
+        private void rb_id_usuario_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rb_id_usuario.Checked == true)
+            {
+                txt_patron.Text = "";
             }
         }
     }

@@ -41,20 +41,7 @@ namespace CLASE05.Negocios
                 return false;
             }
         }
-        public string RecuperarCuit(string razon_social, string nombre_contacto)
-        {
-            string sql = @"SELECT cuit_cliente FROM cliente
-                         WHERE razon_social = '" + razon_social + "'" 
-                        + " AND nombre_contacto = '" + nombre_contacto + "' AND eliminado = 0";
-
-            DataTable tabla = new DataTable();
-            tabla = _BD.EjecutarSelect(sql);
-
-            if (tabla.Rows.Count == 1)
-                return tabla.Rows[0][0].ToString();
-            else
-                return "";
-        }
+       
         public string RecuperarCuit(string razon_social)
         {
             string sql = @"SELECT cuit_cliente FROM usuario
@@ -77,7 +64,7 @@ namespace CLASE05.Negocios
         }
         public DataTable BuscarCliente(string cuit_cliente)
         {
-            string sql = @"SELECT cuit_cliente, razon_social,
+            string sql = @"SELECT cuit_cliente, razon_social, limite_credito, nombre_contacto, legajo_empleado
                           FROM cliente WHERE cuit_cliente = '" + cuit_cliente + "' AND eliminado = 0";
 
             return _BD.EjecutarSelect(sql);

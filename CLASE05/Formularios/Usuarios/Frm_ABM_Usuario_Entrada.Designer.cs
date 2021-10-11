@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.Usuarios
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rb_id_usuario = new System.Windows.Forms.RadioButton();
             this.btn_blan_patron = new System.Windows.Forms.Button();
             this.rb_n_usuario = new System.Windows.Forms.RadioButton();
@@ -49,6 +49,7 @@ namespace CLASE05.Formularios.Usuarios
             this.btn_alta.FlatAppearance.BorderSize = 0;
             this.btn_alta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btn_alta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btn_alta.Location = new System.Drawing.Point(489, 440);
             this.btn_alta.Click += new System.EventHandler(this.btn_alta_Click);
             // 
             // btn_modificar
@@ -57,6 +58,7 @@ namespace CLASE05.Formularios.Usuarios
             this.btn_modificar.FlatAppearance.BorderSize = 0;
             this.btn_modificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btn_modificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btn_modificar.Location = new System.Drawing.Point(550, 440);
             this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // btn_borrar
@@ -65,6 +67,7 @@ namespace CLASE05.Formularios.Usuarios
             this.btn_borrar.FlatAppearance.BorderSize = 0;
             this.btn_borrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btn_borrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btn_borrar.Location = new System.Drawing.Point(607, 437);
             this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
             // 
             // label1
@@ -78,6 +81,7 @@ namespace CLASE05.Formularios.Usuarios
             this.btn_consultar.FlatAppearance.BorderSize = 0;
             this.btn_consultar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btn_consultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btn_consultar.Location = new System.Drawing.Point(427, 439);
             this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click);
             // 
             // groupBox1
@@ -90,7 +94,7 @@ namespace CLASE05.Formularios.Usuarios
             this.groupBox1.Controls.Add(this.rb_n_usuario);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txt_patron);
-            this.groupBox1.Size = new System.Drawing.Size(645, 117);
+            this.groupBox1.Size = new System.Drawing.Size(645, 160);
             this.groupBox1.Controls.SetChildIndex(this.btn_buscar, 0);
             this.groupBox1.Controls.SetChildIndex(this.txt_patron, 0);
             this.groupBox1.Controls.SetChildIndex(this.label2, 0);
@@ -104,7 +108,7 @@ namespace CLASE05.Formularios.Usuarios
             // btn_buscar
             // 
             this.btn_buscar.FlatAppearance.BorderSize = 0;
-            this.btn_buscar.Location = new System.Drawing.Point(554, 81);
+            this.btn_buscar.Location = new System.Drawing.Point(554, 123);
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             this.btn_buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_patron_KeyPress);
             // 
@@ -124,13 +128,14 @@ namespace CLASE05.Formularios.Usuarios
             // 
             this.rb_id_usuario.AutoSize = true;
             this.rb_id_usuario.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.rb_id_usuario.Location = new System.Drawing.Point(438, 46);
+            this.rb_id_usuario.Location = new System.Drawing.Point(19, 128);
             this.rb_id_usuario.Name = "rb_id_usuario";
-            this.rb_id_usuario.Size = new System.Drawing.Size(90, 21);
+            this.rb_id_usuario.Size = new System.Drawing.Size(40, 21);
             this.rb_id_usuario.TabIndex = 16;
             this.rb_id_usuario.TabStop = true;
-            this.rb_id_usuario.Text = "id_usuario";
+            this.rb_id_usuario.Text = "ID";
             this.rb_id_usuario.UseVisualStyleBackColor = true;
+            this.rb_id_usuario.CheckedChanged += new System.EventHandler(this.rb_id_usuario_CheckedChanged);
             // 
             // btn_blan_patron
             // 
@@ -143,7 +148,7 @@ namespace CLASE05.Formularios.Usuarios
             this.btn_blan_patron.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btn_blan_patron.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_blan_patron.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.btn_blan_patron.Location = new System.Drawing.Point(270, 56);
+            this.btn_blan_patron.Location = new System.Drawing.Point(426, 41);
             this.btn_blan_patron.Name = "btn_blan_patron";
             this.btn_blan_patron.Size = new System.Drawing.Size(36, 35);
             this.btn_blan_patron.TabIndex = 18;
@@ -155,7 +160,7 @@ namespace CLASE05.Formularios.Usuarios
             // 
             this.rb_n_usuario.AutoSize = true;
             this.rb_n_usuario.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.rb_n_usuario.Location = new System.Drawing.Point(343, 46);
+            this.rb_n_usuario.Location = new System.Drawing.Point(95, 128);
             this.rb_n_usuario.Name = "rb_n_usuario";
             this.rb_n_usuario.Size = new System.Drawing.Size(77, 21);
             this.rb_n_usuario.TabIndex = 12;
@@ -167,7 +172,7 @@ namespace CLASE05.Formularios.Usuarios
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 67);
+            this.label2.Location = new System.Drawing.Point(16, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 17);
             this.label2.TabIndex = 14;
@@ -178,10 +183,10 @@ namespace CLASE05.Formularios.Usuarios
             this.txt_patron.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txt_patron.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_patron.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_patron.Location = new System.Drawing.Point(137, 64);
+            this.txt_patron.Location = new System.Drawing.Point(137, 48);
             this.txt_patron.Mask = "CCCCCCCCCCCCCCCCCCCC";
             this.txt_patron.Name = "txt_patron";
-            this.txt_patron.Size = new System.Drawing.Size(129, 25);
+            this.txt_patron.Size = new System.Drawing.Size(261, 25);
             this.txt_patron.TabIndex = 11;
             this.txt_patron.Click += new System.EventHandler(this.txt_patron_Click);
             this.txt_patron.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_patron_KeyPress);
@@ -192,11 +197,11 @@ namespace CLASE05.Formularios.Usuarios
             this.grid_usuarios._tamannoLetraHeader = 9;
             this.grid_usuarios.AllowUserToAddRows = false;
             this.grid_usuarios.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_usuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_usuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grid_usuarios.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_usuarios.Location = new System.Drawing.Point(12, 204);
+            this.grid_usuarios.Location = new System.Drawing.Point(12, 247);
             this.grid_usuarios.Name = "grid_usuarios";
             this.grid_usuarios.ReadOnly = true;
             this.grid_usuarios.Size = new System.Drawing.Size(645, 178);
@@ -207,17 +212,17 @@ namespace CLASE05.Formularios.Usuarios
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(340, 20);
+            this.label4.Location = new System.Drawing.Point(16, 97);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 17);
+            this.label4.Size = new System.Drawing.Size(76, 17);
             this.label4.TabIndex = 27;
-            this.label4.Text = "Columna de búsqueda";
+            this.label4.Text = "Buscar por:";
             // 
             // rb_todos
             // 
             this.rb_todos.AutoSize = true;
             this.rb_todos.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.rb_todos.Location = new System.Drawing.Point(343, 81);
+            this.rb_todos.Location = new System.Drawing.Point(202, 128);
             this.rb_todos.Name = "rb_todos";
             this.rb_todos.Size = new System.Drawing.Size(64, 21);
             this.rb_todos.TabIndex = 30;
@@ -229,7 +234,7 @@ namespace CLASE05.Formularios.Usuarios
             // 
             this.rb_eliminados.AutoSize = true;
             this.rb_eliminados.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.rb_eliminados.Location = new System.Drawing.Point(438, 81);
+            this.rb_eliminados.Location = new System.Drawing.Point(304, 128);
             this.rb_eliminados.Name = "rb_eliminados";
             this.rb_eliminados.Size = new System.Drawing.Size(94, 21);
             this.rb_eliminados.TabIndex = 31;
@@ -242,7 +247,7 @@ namespace CLASE05.Formularios.Usuarios
             this._PosiciónVisible = true;
             this._titulo = "Usuarios";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(669, 439);
+            this.ClientSize = new System.Drawing.Size(669, 499);
             this.Controls.Add(this.grid_usuarios);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Frm_ABM_Usuario_Entrada";

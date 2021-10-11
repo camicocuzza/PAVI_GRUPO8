@@ -46,13 +46,22 @@ namespace CLASE05.Formularios.Clientes
             }
             if (rb_todos.Checked == true)
             {
-                grid_clientes.Cargar(cli.BuscarCliente("", rb_cuit_cliente.Text));
+                grid_clientes.Cargar(cli.BuscarCliente("", "cuit_cliente"));
                 return;
             }
             if (rb_cuit_cliente.Checked == true)
             {
                 columna = "cuit_cliente";
-                cuadroTexto = txt_cuit_cliente;
+                cuadroTexto = txt_patron;
+                if (txt_patron.Text.Length == 13)
+                {
+                    grid_clientes.Cargar(cli.BuscarCliente(cuadroTexto.Text));
+                    if (grid_clientes.Rows.Count == 0)
+                    {
+                        MessageBox.Show("Búsqueda sin resultados", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);                        
+                    }
+                    return;
+                }
             }
             if (rb_razon_social.Checked == true)
             {
@@ -121,8 +130,6 @@ namespace CLASE05.Formularios.Clientes
             Frm_Cliente_Baja frm_baja = new Frm_Cliente_Baja();
             frm_baja.cuit_cliente = grid_clientes.CurrentRow.Cells[0].Value.ToString();
             frm_baja.ShowDialog();
-
-            //grid_clientes.Rows.Clear();
         }
         private void btn_consultar_Click(object sender, EventArgs e)
         {
@@ -146,13 +153,28 @@ namespace CLASE05.Formularios.Clientes
         }
         private void txt_patron_Click(object sender, EventArgs e)
         {
-            txt_patron.SelectionStart = txt_patron.Text.Length;
-            if(rb_legajo_empleado.Checked == true)
+            txt_patron.SelectionStart = 0;
+            if (rb_legajo_empleado.Checked == true)
             {
                 txt_patron.Mask = "999999";
             }
+            if (rb_cuit_cliente.Checked == true)
+            {
+                txt_patron.Mask = "99-99999999-9";
+            }
             else
                 txt_patron.Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
+        }  
+        private void rb_cuit_cliente_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rb_cuit_cliente.Checked == true)
+            {
+                txt_patron.Mask = "99-99999999-9";               
+            }
+            else
+            {               
+                txt_patron.Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
+            }
         }
     }    
     
