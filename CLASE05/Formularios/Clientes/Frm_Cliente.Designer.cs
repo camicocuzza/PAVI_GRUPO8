@@ -290,9 +290,11 @@ namespace CLASE05.Formularios.Clientes
             // 
             // btn_aceptar
             // 
-            this.btn_aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btn_aceptar.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_aceptar.ForeColor = System.Drawing.Color.Silver;
+            this.btn_aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.btn_aceptar.FlatAppearance.BorderSize = 0;
+            this.btn_aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btn_aceptar.ForeColor = System.Drawing.Color.White;
             this.btn_aceptar.Location = new System.Drawing.Point(197, 474);
             this.btn_aceptar.Name = "btn_aceptar";
             this.btn_aceptar.Size = new System.Drawing.Size(104, 30);

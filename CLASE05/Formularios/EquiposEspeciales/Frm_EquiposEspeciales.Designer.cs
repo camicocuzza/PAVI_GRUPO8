@@ -57,7 +57,7 @@ namespace CLASE05.Formularios.EquiposEspeciales
             // 
             this.lbl_titulo.AutoSize = true;
             this.lbl_titulo.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Bold);
-            this.lbl_titulo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbl_titulo.ForeColor = System.Drawing.Color.White;
             this.lbl_titulo.Location = new System.Drawing.Point(35, 52);
             this.lbl_titulo.Name = "lbl_titulo";
             this.lbl_titulo.Size = new System.Drawing.Size(81, 31);
@@ -70,9 +70,11 @@ namespace CLASE05.Formularios.EquiposEspeciales
             // 
             // btn_aceptar
             // 
-            this.btn_aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btn_aceptar.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_aceptar.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.btn_aceptar.FlatAppearance.BorderSize = 0;
+            this.btn_aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btn_aceptar.ForeColor = System.Drawing.Color.White;
             this.btn_aceptar.Location = new System.Drawing.Point(159, 388);
             this.btn_aceptar.Name = "btn_aceptar";
             this.btn_aceptar.Size = new System.Drawing.Size(95, 31);
@@ -84,7 +86,7 @@ namespace CLASE05.Formularios.EquiposEspeciales
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(56, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 17);
@@ -100,6 +102,8 @@ namespace CLASE05.Formularios.EquiposEspeciales
             this.cmb_equipos._tabla_cargar_combo = "producto_ensamblado";
             this.cmb_equipos._tabla_cargar_descriptor = "cod_prod_ensamblado";
             this.cmb_equipos._tabla_cargar_pk = "cod_prod_ensamblado";
+            this.cmb_equipos._tabla_join = null;
+            this.cmb_equipos._tabla_join_pk = null;
             this.cmb_equipos._Validable = true;
             this.cmb_equipos.BackColor = System.Drawing.SystemColors.WindowText;
             this.cmb_equipos.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
@@ -119,6 +123,8 @@ namespace CLASE05.Formularios.EquiposEspeciales
             this.cmb_clientes._tabla_cargar_combo = "cliente";
             this.cmb_clientes._tabla_cargar_descriptor = "razon_social";
             this.cmb_clientes._tabla_cargar_pk = "cuit_cliente";
+            this.cmb_clientes._tabla_join = null;
+            this.cmb_clientes._tabla_join_pk = null;
             this.cmb_clientes._Validable = true;
             this.cmb_clientes.BackColor = System.Drawing.SystemColors.WindowText;
             this.cmb_clientes.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
@@ -133,7 +139,7 @@ namespace CLASE05.Formularios.EquiposEspeciales
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(133, 154);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 17);
@@ -152,7 +158,6 @@ namespace CLASE05.Formularios.EquiposEspeciales
             this.Controls.Add(this.btn_aceptar);
             this.Controls.Add(this.lbl_titulo);
             this.Name = "Frm_EquiposEspeciales";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Frm_EquiposEspeciales_Load);
             this.Controls.SetChildIndex(this.lbl_titulo, 0);
             this.Controls.SetChildIndex(this.btn_aceptar, 0);

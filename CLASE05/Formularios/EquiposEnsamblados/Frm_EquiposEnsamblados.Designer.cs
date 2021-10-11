@@ -68,7 +68,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.txt_cod_p_ensamblado._Validable = true;
             this.txt_cod_p_ensamblado.BackColor = System.Drawing.Color.Transparent;
             this.txt_cod_p_ensamblado.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txt_cod_p_ensamblado.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_cod_p_ensamblado.ForeColor = System.Drawing.Color.White;
             this.txt_cod_p_ensamblado.Location = new System.Drawing.Point(41, 112);
             this.txt_cod_p_ensamblado.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cod_p_ensamblado.Name = "txt_cod_p_ensamblado";
@@ -77,9 +77,11 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             // 
             // btn_aceptar
             // 
-            this.btn_aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btn_aceptar.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_aceptar.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.btn_aceptar.FlatAppearance.BorderSize = 0;
+            this.btn_aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btn_aceptar.ForeColor = System.Drawing.Color.White;
             this.btn_aceptar.Location = new System.Drawing.Point(143, 286);
             this.btn_aceptar.Name = "btn_aceptar";
             this.btn_aceptar.Size = new System.Drawing.Size(95, 31);
@@ -91,7 +93,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             // 
             this.lbl_titulo.AutoSize = true;
             this.lbl_titulo.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Bold);
-            this.lbl_titulo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbl_titulo.ForeColor = System.Drawing.Color.White;
             this.lbl_titulo.Location = new System.Drawing.Point(35, 52);
             this.lbl_titulo.Name = "lbl_titulo";
             this.lbl_titulo.Size = new System.Drawing.Size(81, 31);
@@ -115,7 +117,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.txt_precio._Validable = true;
             this.txt_precio.BackColor = System.Drawing.Color.Transparent;
             this.txt_precio.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txt_precio.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_precio.ForeColor = System.Drawing.Color.White;
             this.txt_precio.Location = new System.Drawing.Point(41, 150);
             this.txt_precio.Margin = new System.Windows.Forms.Padding(4);
             this.txt_precio.Name = "txt_precio";
@@ -140,7 +142,7 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.txt_nombre._Validable = true;
             this.txt_nombre.BackColor = System.Drawing.Color.Transparent;
             this.txt_nombre.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txt_nombre.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_nombre.ForeColor = System.Drawing.Color.White;
             this.txt_nombre.Location = new System.Drawing.Point(38, 188);
             this.txt_nombre.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nombre.Name = "txt_nombre";
