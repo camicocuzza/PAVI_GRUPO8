@@ -18,6 +18,7 @@ namespace CLASE05.Formularios.Compras
             get { return lbl_titulo.Text; }
             set { lbl_titulo.Text = value; }
         }
+
         public Frm_SistemaCompras()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace CLASE05.Formularios.Compras
 
         private void Frm_SistemaCompras_Load(object sender, EventArgs e)
         {
-            grid_articulos.Formatear("Código Artículo, 100, C; Nombre, 235, C; Precio, 100, D");
+            grid_articulos.Formatear("Código Artículo, 70, C; Nombre, 201, C; Precio, 82, D; Cantidad, 82, D");
         }
     }
 }

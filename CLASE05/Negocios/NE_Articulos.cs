@@ -91,6 +91,15 @@ namespace CLASE05.Negocios
             _BD.Modificar(sqlUpdate);
         }
 
+        public string BuscarPrecio(string cod_articulo)
+        {
+            string sql = @"SELECT precio 
+                          FROM articulo WHERE cod_articulo = '" + cod_articulo + "'";
+
+            DataTable tabla = _BD.EjecutarSelect(sql);
+            return tabla.Rows[0]["precio"].ToString();
+        }
+
         public void Borrar()
         {
             string sqlDelete = "DELETE FROM articulo WHERE cod_articulo = '" + cod_articulo + "'";

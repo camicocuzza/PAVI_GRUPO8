@@ -12,6 +12,9 @@ namespace CLASE05.Formularios.Compras
 {
     public partial class Frm_SistemaCompras_Alta : CLASE05.Formularios.Compras.Frm_SistemaCompras
     {
+        public enum ResultadoBusqueda { encontre, no_encontre }
+
+        public string precio_articulo { get; set; }
         public Frm_SistemaCompras_Alta()
         {
             InitializeComponent();
@@ -19,11 +22,14 @@ namespace CLASE05.Formularios.Compras
 
         private void Frm_SistemaCompras_Alta_Load(object sender, EventArgs e)
         {
+            TratamientosEspeciales TE = new TratamientosEspeciales();
             cmb_proveedor._Cargar();
+            txt_fecha._Text = TE.RecuperarFechaSistema();
         }
 
         private void cmb_proveedor_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             if(cmb_proveedor.SelectedIndex != -1)
             {
                 CargarProveedor(proveedor.RecuperarProveedor(cmb_proveedor.SelectedValue.ToString()));
@@ -49,7 +55,43 @@ namespace CLASE05.Formularios.Compras
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
+            if(cmb_articulo.SelectedIndex == -1)
+            {
+                MessageBox.Show("No seleccionó artículo", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if(txt_cantidad._Text == "")
+            {
+                MessageBox.Show("Complete la cantidad", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            AgregarFilaGrilla();
+            cmb_proveedor.Enabled = false;
+            
 
+        }
+
+        private void AgregarFilaGrilla()
+        {
+            if(BuscarArticulo(cmb_articulo.SelectedValue.ToString())== ResultadoBusqueda.encontre)
+            {
+                MessageBox.Show("Este artículo ya está cargado");
+                return;
+            }
+            precio_articulo = articulo.BuscarPrecio(cmb_articulo.SelectedValue.ToString());
+            grid_articulos.Rows.Add(cmb_articulo.SelectedValue.ToString(), cmb_articulo.Text, precio_articulo, txt_cantidad._Text);
+        }
+
+        private ResultadoBusqueda BuscarArticulo(string id_articulo)
+        {
+            for (int i = 0; i < grid_articulos.Rows.Count; i++)
+            {
+                if (grid_articulos.Rows[i].Cells[0].Value.ToString()==id_articulo)
+                {
+                    return ResultadoBusqueda.encontre;
+                }
+            }
+            return ResultadoBusqueda.no_encontre;
         }
 
         private void btn_nueva_compra_Click(object sender, EventArgs e)
@@ -70,5 +112,7 @@ namespace CLASE05.Formularios.Compras
                 }
             }
         }
+
+        
     }
 }
