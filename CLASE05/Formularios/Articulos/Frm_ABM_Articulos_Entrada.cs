@@ -18,7 +18,7 @@ namespace CLASE05.Formularios.Articulos
 
         private void Frm_ABM_Articulos_Entrada_Load(object sender, EventArgs e)
         {
-            this.grid_articulos.Formatear("cod_articulo, 75, C; lote, 100, I; precio, 100, I; nombre, 170, I; id_pais, 75, I; cuit_proveedor, 150, I");
+            this.grid_articulos.Formatear("Código, 75, C; lote, 100, I; Precio, 100, I; Nombre, 170, I; Id país, 75, I; CUIT proveedor, 150, I");
         }
 
         private void rb_n_usuario_CheckedChanged(object sender, EventArgs e)

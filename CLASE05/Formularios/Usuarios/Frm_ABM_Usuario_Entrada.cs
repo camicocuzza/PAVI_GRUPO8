@@ -19,7 +19,7 @@ namespace CLASE05.Formularios.Usuarios
 
         private void Frm_ABM_Usuario_Load(object sender, EventArgs e)
         {
-            this.grid_usuarios.Formatear("id, 75, C; n_usuario, 200, I");
+            this.grid_usuarios.Formatear("Id, 75, C; Nombre de usuario, 200, I");
         }
 
         private void btn_blan_patron_Click(object sender, EventArgs e)
@@ -55,13 +55,13 @@ namespace CLASE05.Formularios.Usuarios
             }
             if (rb_n_usuario.Checked == true)
             {
-                columna = rb_n_usuario.Text;
+                columna = "n_usuario";
                 cuadroTexto = txt_patron;
             }
             if (rb_id_usuario.Checked == true)
             {
-                columna = rb_id_usuario.Text;
-                cuadroTexto = txt_id_usuario;
+                columna = "id_usuario";
+                cuadroTexto = txt_patron;
             }
             if (cuadroTexto.Text == "")
             {
@@ -120,7 +120,6 @@ namespace CLASE05.Formularios.Usuarios
             frm_baja.id_usuario = grid_usuarios.CurrentRow.Cells[0].Value.ToString();
             frm_baja.ShowDialog();
 
-            grid_usuarios.Rows.Clear();
         }
 
         private void btn_consultar_Click(object sender, EventArgs e)
@@ -139,16 +138,6 @@ namespace CLASE05.Formularios.Usuarios
             frm_consulta.id_usuario = grid_usuarios.CurrentRow.Cells[0].Value.ToString();
             frm_consulta.ShowDialog();
 
-        }
-
-        private void rb_n_usuario_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-        
-        private void rb_id_usuario_CheckedChanged(object sender, EventArgs e)
-        {
-           
         }
         private void txt_patron_Click(object sender, EventArgs e)
         {
@@ -182,12 +171,12 @@ namespace CLASE05.Formularios.Usuarios
                 }
                 if (rb_n_usuario.Checked == true)
                 {
-                    columna = rb_n_usuario.Text;
+                    columna = "n_usuario";
                     cuadroTexto = txt_patron;
                 }
                 if (rb_id_usuario.Checked == true)
                 {
-                    columna = rb_id_usuario.Text;
+                    columna = "id_usuario";
                     cuadroTexto = txt_id_usuario;
                 }
                 if (cuadroTexto.Text == "")
@@ -206,7 +195,6 @@ namespace CLASE05.Formularios.Usuarios
                 return;
             }
         }
-
         private void grid_usuarios_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {            
             if (usu.EstaEliminado(grid_usuarios.CurrentRow.Cells[0].Value.ToString()) == true)

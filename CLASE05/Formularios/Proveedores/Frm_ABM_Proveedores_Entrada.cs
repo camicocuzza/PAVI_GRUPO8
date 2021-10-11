@@ -18,7 +18,7 @@ namespace CLASE05.Formularios.Proveedores
 
         private void Frm_ABM_Proveedores_Entrada_Load(object sender, EventArgs e)
         {
-            this.grid_proveedores.Formatear("CUIT, 100, C; Razon social, 250, I; Fecha inicio de operación, 150, I");
+            this.grid_proveedores.Formatear("CUIT, 100, C; Razón social, 250, I; Fecha inicio de operación, 150, I");
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)

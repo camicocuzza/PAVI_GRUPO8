@@ -28,7 +28,7 @@ namespace CLASE05.Formularios.Clientes
 
         private void Frm_ABM_Cliente_Entrada_Load(object sender, EventArgs e)
         {
-            this.grid_clientes.Formatear("cuit_cliente, 100, C; razon_social, 130, I; limite_credito, 100, I; nombre_contacto, 130, I; legajo_empleado, 120, I") ;
+            this.grid_clientes.Formatear("CUIT, 100, C; Razón social, 130, I; Límite de crédito, 100, I; Nombre contacto, 130, I; Legajo empleado, 120, I") ;
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
@@ -51,22 +51,22 @@ namespace CLASE05.Formularios.Clientes
             }
             if (rb_cuit_cliente.Checked == true)
             {
-                columna = rb_cuit_cliente.Text;
+                columna = "cuit_cliente";
                 cuadroTexto = txt_cuit_cliente;
             }
             if (rb_razon_social.Checked == true)
             {
-                columna = rb_razon_social.Text;
+                columna = "razon_social";
                 cuadroTexto = txt_patron;
             }
             if (rb_nombre_contacto.Checked == true)
             {
-                columna = rb_nombre_contacto.Text;
+                columna = "nombre_contacto";
                 cuadroTexto = txt_patron;
             }
             if (rb_legajo_empleado.Checked == true)
             {
-                columna = rb_legajo_empleado.Text;
+                columna = "legajo_empleado";
                 cuadroTexto = txt_patron;
             }
             if (cuadroTexto.Text == "")
