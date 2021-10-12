@@ -29,7 +29,7 @@ namespace CLASE05.Negocios
         {
             combo.DisplayMember = "nombre";
             combo.ValueMember = "cod_articulo";
-            combo.DataSource = _BD.EjecutarSelect("SELECT cod_articulo, nombre FROM articulo WHERE cuit_proveedor = '" + cuit_proveedor + "'");
+            combo.DataSource = _BD.EjecutarSelect("SELECT cod_articulo, nombre FROM articulo WHERE cuit_proveedor = '" + cuit_proveedor + "' AND eliminado = 0");
         }
         public void CargarCombo(ref ComboBox01 combo)
         {

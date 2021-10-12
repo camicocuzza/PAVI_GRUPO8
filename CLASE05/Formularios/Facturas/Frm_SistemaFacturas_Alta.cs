@@ -58,6 +58,12 @@ namespace CLASE05.Formularios.Facturas
             txt_num_factura.Text = num_factura;
             btnMostrarFactura.Enabled = true;
             btnGuardar.Enabled = false;
+            txt_legajo_empleado.Enabled = false;
+            cmb_tipo_factura.Enabled = false;
+            btn_agregar_articulo.Enabled = false;
+            btn_agregar_ensamblado.Enabled = false;
+            btn_quitar_articulo.Enabled = false;
+            btn_quitar_ensamblado.Enabled = false;
         }
         private void btnMostrarFactura_Click(object sender, EventArgs e)
         {
@@ -66,8 +72,8 @@ namespace CLASE05.Formularios.Facturas
                 txt_fechaActual.Text,
                 txt_cuit_cliente.Text,
                 txt_razon_social._Text,
-                ne_clientes.ObtenerProvincia_Pais(cuit_cliente).Rows[0][0].ToString(),
-                ne_clientes.ObtenerProvincia_Pais(cuit_cliente).Rows[0][1].ToString(),
+                ne_clientes.ObtenerProvincia_Pais(txt_cuit_cliente.Text).Rows[0][0].ToString(),
+                ne_clientes.ObtenerProvincia_Pais(txt_cuit_cliente.Text).Rows[0][1].ToString(),
                 num_factura,
                 ne_clientes.RecuperarCliente(txt_cuit_cliente.Text).Rows[0][5].ToString(),
                 txt_total_venta.Text.Substring(1),
@@ -87,6 +93,12 @@ namespace CLASE05.Formularios.Facturas
             limpiarformulario();
             btnMostrarFactura.Enabled = false;
             btnGuardar.Enabled = true;
+            txt_legajo_empleado.Enabled = true;
+            cmb_tipo_factura.Enabled = true;
+            btn_agregar_articulo.Enabled = true;
+            btn_agregar_ensamblado.Enabled = true;
+            btn_quitar_articulo.Enabled = true;
+            btn_quitar_ensamblado.Enabled = true;
 
         }
     }

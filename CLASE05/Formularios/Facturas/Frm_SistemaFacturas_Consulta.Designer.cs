@@ -37,72 +37,47 @@ namespace CLASE05.Formularios.Facturas
             this.label2.Size = new System.Drawing.Size(213, 31);
             this.label2.Text = "Datos de la venta";
             // 
-            // txt_limite
-            // 
-            this.txt_limite.ForeColor = System.Drawing.Color.White;
-            // 
             // txt_cuit_cliente
             // 
             this.txt_cuit_cliente.Enabled = false;
-            this.txt_cuit_cliente.ForeColor = System.Drawing.Color.White;
             // 
             // cmb_pais
             // 
             this.cmb_pais.DisplayMember = "nombre_pais";
-            this.cmb_pais.ForeColor = System.Drawing.Color.White;
             this.cmb_pais.ValueMember = "id_pais";
             // 
             // cmb_estado_provincia
             // 
             this.cmb_estado_provincia.DisplayMember = "nombre_estado_provincia";
-            this.cmb_estado_provincia.ForeColor = System.Drawing.Color.White;
             this.cmb_estado_provincia.ValueMember = "id_estado_provincia";
-            // 
-            // txt_razon_social
-            // 
-            this.txt_razon_social.ForeColor = System.Drawing.Color.White;
             // 
             // txt_total_venta
             // 
-            this.txt_total_venta.ForeColor = System.Drawing.Color.White;
             this.txt_total_venta.Location = new System.Drawing.Point(900, 551);
             // 
             // txt_cantidad_articulo
             // 
             this.txt_cantidad_articulo.Enabled = false;
-            this.txt_cantidad_articulo.ForeColor = System.Drawing.Color.White;
             // 
             // cmb_articulos
             // 
             this.cmb_articulos.DisplayMember = "nombre";
             this.cmb_articulos.Enabled = false;
-            this.cmb_articulos.ForeColor = System.Drawing.Color.White;
             this.cmb_articulos.ValueMember = "cod_articulo";
             // 
             // cmb_ensamblados
             // 
             this.cmb_ensamblados.DisplayMember = "cod_prod_ensamblado";
             this.cmb_ensamblados.Enabled = false;
-            this.cmb_ensamblados.ForeColor = System.Drawing.Color.White;
             this.cmb_ensamblados.ValueMember = "cod_prod_ensamblado";
             // 
             // txt_cantidad_ensamblado
             // 
             this.txt_cantidad_ensamblado.Enabled = false;
-            this.txt_cantidad_ensamblado.ForeColor = System.Drawing.Color.White;
             // 
             // txt_fechaActual
             // 
-            this.txt_fechaActual.ForeColor = System.Drawing.Color.White;
             this.txt_fechaActual.Text = "7/10/2021 02:05:07";
-            // 
-            // lbl_estado_provincia
-            // 
-            this.lbl_estado_provincia.ForeColor = System.Drawing.Color.White;
-            // 
-            // lbl_pais
-            // 
-            this.lbl_pais.ForeColor = System.Drawing.Color.White;
             // 
             // btn_buscar
             // 
@@ -111,42 +86,9 @@ namespace CLASE05.Formularios.Facturas
             this.btn_buscar.FlatAppearance.BorderSize = 2;
             this.btn_buscar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             // 
-            // label8
-            // 
-            this.label8.ForeColor = System.Drawing.Color.White;
-            // 
-            // label9
-            // 
-            this.label9.ForeColor = System.Drawing.Color.White;
-            // 
-            // label3
-            // 
-            this.label3.ForeColor = System.Drawing.Color.White;
-            // 
-            // label10
-            // 
-            this.label10.ForeColor = System.Drawing.Color.White;
-            // 
-            // label7
-            // 
-            this.label7.ForeColor = System.Drawing.Color.White;
-            // 
             // label11
             // 
-            this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(897, 528);
-            // 
-            // label1
-            // 
-            this.label1.ForeColor = System.Drawing.Color.White;
-            // 
-            // label5
-            // 
-            this.label5.ForeColor = System.Drawing.Color.White;
-            // 
-            // label6
-            // 
-            this.label6.ForeColor = System.Drawing.Color.White;
             // 
             // btn_agregar_articulo
             // 
@@ -162,14 +104,6 @@ namespace CLASE05.Formularios.Facturas
             this.btn_agregar_ensamblado.FlatAppearance.BorderSize = 2;
             this.btn_agregar_ensamblado.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             // 
-            // label13
-            // 
-            this.label13.ForeColor = System.Drawing.Color.White;
-            // 
-            // label14
-            // 
-            this.label14.ForeColor = System.Drawing.Color.White;
-            // 
             // btn_quitar_ensamblado
             // 
             this.btn_quitar_ensamblado.Enabled = false;
@@ -183,10 +117,6 @@ namespace CLASE05.Formularios.Facturas
             this.btn_quitar_articulo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.btn_quitar_articulo.FlatAppearance.BorderSize = 2;
             this.btn_quitar_articulo.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            // 
-            // label16
-            // 
-            this.label16.ForeColor = System.Drawing.Color.White;
             // 
             // btnMostrarFactura
             // 
@@ -215,59 +145,24 @@ namespace CLASE05.Formularios.Facturas
             this.btnNuevaVenta.Size = new System.Drawing.Size(10, 29);
             this.btnNuevaVenta.Visible = false;
             // 
-            // txt_precio_ensamblado
-            // 
-            this.txt_precio_ensamblado.ForeColor = System.Drawing.Color.White;
-            // 
-            // txt_precio_articulo
-            // 
-            this.txt_precio_articulo.ForeColor = System.Drawing.Color.White;
-            // 
             // txt_legajo_empleado
             // 
-            this.txt_legajo_empleado.ForeColor = System.Drawing.Color.White;
-            // 
-            // label12
-            // 
-            this.label12.ForeColor = System.Drawing.Color.White;
+            this.txt_legajo_empleado.Enabled = false;
             // 
             // cmb_tipo_factura
             // 
             this.cmb_tipo_factura.DisplayMember = "nombre";
             this.cmb_tipo_factura.Enabled = false;
-            this.cmb_tipo_factura.ForeColor = System.Drawing.Color.White;
             this.cmb_tipo_factura.ValueMember = "id_tipo_factura";
-            // 
-            // label17
-            // 
-            this.label17.ForeColor = System.Drawing.Color.White;
             // 
             // txt_stock_articulo
             // 
-            this.txt_stock_articulo.ForeColor = System.Drawing.Color.White;
             this.txt_stock_articulo.Visible = false;
             // 
             // label15
             // 
             this.label15.Enabled = false;
-            this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Visible = false;
-            // 
-            // txt_stock_ensamblado
-            // 
-            this.txt_stock_ensamblado.ForeColor = System.Drawing.Color.White;
-            // 
-            // label18
-            // 
-            this.label18.ForeColor = System.Drawing.Color.White;
-            // 
-            // label19
-            // 
-            this.label19.ForeColor = System.Drawing.Color.White;
-            // 
-            // txt_num_factura
-            // 
-            this.txt_num_factura.ForeColor = System.Drawing.Color.White;
             // 
             // btn_cerrar
             // 

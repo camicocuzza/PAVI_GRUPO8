@@ -25,10 +25,11 @@ namespace CLASE05.Formularios.Compras
         {
             InitializeComponent();
         }
+        
 
         private void Frm_SistemaCompras_Load(object sender, EventArgs e)
         {
-            grid_articulos.Formatear("Código Artículo, 70, C; Nombre, 201, C; Precio, 82, D; Cantidad, 82, D");
+            grid_articulos.Formatear("Código Artículo, 75, C; Nombre, 201, C; Precio, 80, D; Cantidad, 80, C");
             txt_total.Text = "$0";
             cmb_proveedor._Cargar();
         }
@@ -80,12 +81,102 @@ namespace CLASE05.Formularios.Compras
 
             for(int i = 0; i < detalles_compra.Rows.Count; i++)
             {
-                grid_articulos.Rows.Add(detalles_compra.Rows[0]["cod_articulo"].ToString()
-                    , articulo.RecuperarNombreArticulo(detalles_compra.Rows[0]["cod_articulo"].ToString())
-                    , detalles_compra.Rows[0]["precio"].ToString()
-                    , detalles_compra.Rows[0]["cantidad"].ToString());
+                grid_articulos.Rows.Add(detalles_compra.Rows[i]["cod_articulo"].ToString()
+                    , articulo.RecuperarNombreArticulo(detalles_compra.Rows[i]["cod_articulo"].ToString())
+                    , detalles_compra.Rows[i]["precio"].ToString()
+                    , detalles_compra.Rows[i]["cantidad"].ToString());
             }
             
+
+        }
+
+        private void txt_cuit_p_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_direccion_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_fecha_inicio_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grid_articulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_grabar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_total_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_fecha_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_minimizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmb_proveedor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmb_articulo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_cantidad_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_titulo_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -70,16 +70,19 @@ namespace CLASE05.Formularios.Articulos
             // 
             // btn_aceptar
             // 
+            this.btn_aceptar.FlatAppearance.BorderSize = 0;
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // cmb_lote
             // 
             this.cmb_lote.DisplayMember = "num_lote";
+            this.cmb_lote.Enabled = false;
             this.cmb_lote.ValueMember = "num_lote";
             // 
             // cmb_proveedor
             // 
             this.cmb_proveedor.DisplayMember = "razon_social";
+            this.cmb_proveedor.Enabled = false;
             this.cmb_proveedor.ValueMember = "cuit_proveedor";
             // 
             // btn_cerrar
@@ -96,8 +99,6 @@ namespace CLASE05.Formularios.Articulos
             // 
             // Frm_Articulo_Consulta
             // 
-            this._FormularioMovil = true;
-            this._PosiciónVisible = false;
             this._Titulo = "Datos del Artículo";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(584, 424);

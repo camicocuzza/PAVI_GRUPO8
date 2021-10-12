@@ -61,7 +61,9 @@ namespace CLASE05.Formularios.Compras
             // btn_minimizar
             // 
             this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_minimizar.ForeColor = System.Drawing.Color.White;
             this.btn_minimizar.Location = new System.Drawing.Point(716, 2);
+            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
             // 
             // btn_maximizar
             // 
@@ -72,12 +74,13 @@ namespace CLASE05.Formularios.Compras
             // 
             this.lbl_titulo.AutoSize = true;
             this.lbl_titulo.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Bold);
-            this.lbl_titulo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbl_titulo.ForeColor = System.Drawing.Color.White;
             this.lbl_titulo.Location = new System.Drawing.Point(29, 30);
             this.lbl_titulo.Name = "lbl_titulo";
             this.lbl_titulo.Size = new System.Drawing.Size(81, 31);
             this.lbl_titulo.TabIndex = 56;
             this.lbl_titulo.Text = "Titulo";
+            this.lbl_titulo.Click += new System.EventHandler(this.lbl_titulo_Click);
             // 
             // btn_eliminar_a
             // 
@@ -113,12 +116,13 @@ namespace CLASE05.Formularios.Compras
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(309, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 21);
             this.label1.TabIndex = 90;
             this.label1.Text = "Agregar Artículo";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cmb_articulo
             // 
@@ -134,12 +138,13 @@ namespace CLASE05.Formularios.Compras
             this.cmb_articulo._Validable = false;
             this.cmb_articulo.BackColor = System.Drawing.SystemColors.WindowText;
             this.cmb_articulo.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.cmb_articulo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.cmb_articulo.ForeColor = System.Drawing.Color.White;
             this.cmb_articulo.FormattingEnabled = true;
             this.cmb_articulo.Location = new System.Drawing.Point(374, 128);
             this.cmb_articulo.Name = "cmb_articulo";
             this.cmb_articulo.Size = new System.Drawing.Size(187, 25);
             this.cmb_articulo.TabIndex = 87;
+            this.cmb_articulo.SelectedIndexChanged += new System.EventHandler(this.cmb_articulo_SelectedIndexChanged);
             // 
             // btn_agregar
             // 
@@ -154,17 +159,19 @@ namespace CLASE05.Formularios.Compras
             this.btn_agregar.TabIndex = 86;
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(310, 131);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 17);
             this.label2.TabIndex = 85;
             this.label2.Text = "Artículo";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txt_cantidad
             // 
@@ -183,23 +190,25 @@ namespace CLASE05.Formularios.Compras
             this.txt_cantidad._Validable = false;
             this.txt_cantidad.BackColor = System.Drawing.Color.Transparent;
             this.txt_cantidad.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txt_cantidad.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_cantidad.ForeColor = System.Drawing.Color.White;
             this.txt_cantidad.Location = new System.Drawing.Point(490, 126);
             this.txt_cantidad.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(206, 30);
             this.txt_cantidad.TabIndex = 88;
+            this.txt_cantidad.Load += new System.EventHandler(this.txt_cantidad_Load);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(59, 203);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 17);
             this.label4.TabIndex = 94;
             this.label4.Text = "Proveedor";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // cmb_proveedor
             // 
@@ -215,23 +224,25 @@ namespace CLASE05.Formularios.Compras
             this.cmb_proveedor._Validable = true;
             this.cmb_proveedor.BackColor = System.Drawing.SystemColors.InfoText;
             this.cmb_proveedor.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.cmb_proveedor.ForeColor = System.Drawing.Color.Gainsboro;
+            this.cmb_proveedor.ForeColor = System.Drawing.Color.White;
             this.cmb_proveedor.FormattingEnabled = true;
             this.cmb_proveedor.Location = new System.Drawing.Point(136, 200);
             this.cmb_proveedor.Name = "cmb_proveedor";
             this.cmb_proveedor.Size = new System.Drawing.Size(154, 25);
             this.cmb_proveedor.TabIndex = 93;
+            this.cmb_proveedor.SelectedIndexChanged += new System.EventHandler(this.cmb_proveedor_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(31, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(179, 21);
             this.label3.TabIndex = 95;
             this.label3.Text = "Seleccionar Proveedor";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txt_fecha
             // 
@@ -251,12 +262,13 @@ namespace CLASE05.Formularios.Compras
             this.txt_fecha.BackColor = System.Drawing.Color.Transparent;
             this.txt_fecha.Enabled = false;
             this.txt_fecha.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txt_fecha.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_fecha.ForeColor = System.Drawing.Color.White;
             this.txt_fecha.Location = new System.Drawing.Point(-16, 89);
             this.txt_fecha.Margin = new System.Windows.Forms.Padding(4);
             this.txt_fecha.Name = "txt_fecha";
             this.txt_fecha.Size = new System.Drawing.Size(257, 30);
             this.txt_fecha.TabIndex = 96;
+            this.txt_fecha.Load += new System.EventHandler(this.txt_fecha_Load);
             // 
             // label5
             // 
@@ -271,22 +283,25 @@ namespace CLASE05.Formularios.Compras
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(505, 419);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 17);
             this.label6.TabIndex = 98;
             this.label6.Text = "Total";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txt_total
             // 
             this.txt_total.BackColor = System.Drawing.SystemColors.MenuText;
             this.txt_total.Enabled = false;
             this.txt_total.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txt_total.ForeColor = System.Drawing.Color.White;
             this.txt_total.Location = new System.Drawing.Point(551, 414);
             this.txt_total.Name = "txt_total";
             this.txt_total.Size = new System.Drawing.Size(102, 25);
             this.txt_total.TabIndex = 99;
+            this.txt_total.TextChanged += new System.EventHandler(this.txt_total_TextChanged);
             // 
             // btn_grabar
             // 
@@ -301,6 +316,7 @@ namespace CLASE05.Formularios.Compras
             this.btn_grabar.TabIndex = 100;
             this.btn_grabar.Text = "Grabar Compra";
             this.btn_grabar.UseVisualStyleBackColor = false;
+            this.btn_grabar.Click += new System.EventHandler(this.btn_grabar_Click);
             // 
             // grid_articulos
             // 
@@ -317,6 +333,7 @@ namespace CLASE05.Formularios.Compras
             this.grid_articulos.ReadOnly = true;
             this.grid_articulos.Size = new System.Drawing.Size(479, 158);
             this.grid_articulos.TabIndex = 102;
+            this.grid_articulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_articulos_CellContentClick);
             // 
             // txt_fecha_inicio
             // 
@@ -336,12 +353,13 @@ namespace CLASE05.Formularios.Compras
             this.txt_fecha_inicio.BackColor = System.Drawing.Color.Transparent;
             this.txt_fecha_inicio.Enabled = false;
             this.txt_fecha_inicio.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txt_fecha_inicio.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_fecha_inicio.ForeColor = System.Drawing.Color.White;
             this.txt_fecha_inicio.Location = new System.Drawing.Point(-15, 281);
             this.txt_fecha_inicio.Margin = new System.Windows.Forms.Padding(4);
             this.txt_fecha_inicio.Name = "txt_fecha_inicio";
             this.txt_fecha_inicio.Size = new System.Drawing.Size(257, 30);
             this.txt_fecha_inicio.TabIndex = 104;
+            this.txt_fecha_inicio.Load += new System.EventHandler(this.txt_fecha_inicio_Load);
             // 
             // txt_direccion
             // 
@@ -361,12 +379,13 @@ namespace CLASE05.Formularios.Compras
             this.txt_direccion.BackColor = System.Drawing.Color.Transparent;
             this.txt_direccion.Enabled = false;
             this.txt_direccion.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txt_direccion.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_direccion.ForeColor = System.Drawing.Color.White;
             this.txt_direccion.Location = new System.Drawing.Point(-15, 319);
             this.txt_direccion.Margin = new System.Windows.Forms.Padding(4);
             this.txt_direccion.Name = "txt_direccion";
             this.txt_direccion.Size = new System.Drawing.Size(305, 30);
             this.txt_direccion.TabIndex = 105;
+            this.txt_direccion.Load += new System.EventHandler(this.txt_direccion_Load);
             // 
             // txt_cuit_p
             // 
@@ -386,12 +405,13 @@ namespace CLASE05.Formularios.Compras
             this.txt_cuit_p.BackColor = System.Drawing.Color.Transparent;
             this.txt_cuit_p.Enabled = false;
             this.txt_cuit_p.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txt_cuit_p.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_cuit_p.ForeColor = System.Drawing.Color.White;
             this.txt_cuit_p.Location = new System.Drawing.Point(-15, 243);
             this.txt_cuit_p.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cuit_p.Name = "txt_cuit_p";
             this.txt_cuit_p.Size = new System.Drawing.Size(260, 30);
             this.txt_cuit_p.TabIndex = 106;
+            this.txt_cuit_p.Load += new System.EventHandler(this.txt_cuit_p_Load);
             // 
             // Frm_SistemaCompras
             // 
@@ -419,6 +439,7 @@ namespace CLASE05.Formularios.Compras
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_cantidad);
             this.Controls.Add(this.lbl_titulo);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Frm_SistemaCompras";
             this.Load += new System.EventHandler(this.Frm_SistemaCompras_Load);
             this.Controls.SetChildIndex(this.lbl_titulo, 0);

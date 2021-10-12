@@ -55,7 +55,12 @@ namespace CLASE05.Formularios.Compras
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-            if(cmb_articulo.SelectedIndex == -1)
+            if (cmb_proveedor.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione proveedor", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (cmb_articulo.SelectedIndex == -1)
             {
                 MessageBox.Show("No seleccionó artículo", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -111,6 +116,7 @@ namespace CLASE05.Formularios.Compras
                 {
                     ((Grid01)item).Rows.Clear();
                 }
+                cmb_proveedor.Enabled = true;
             }
         }
 
