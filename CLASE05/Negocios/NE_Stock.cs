@@ -7,11 +7,13 @@ using CLASE05.Clases;
 using System.Data;
 using System.Windows.Forms;
 
+
 namespace CLASE05.Negocios
 {
     class NE_Stock
     {
         BE_Acceso_Datos _BD = new BE_Acceso_Datos();
+        
         public DataTable ObtenerStock(string cod_articulo)
         {
             string sql = @"SELECT s.cantidad 

@@ -24,6 +24,13 @@ namespace CLASE05.Negocios
         public string cuit_proveedor { get; set; }
 
         BE_Acceso_Datos _BD = new BE_Acceso_Datos();
+
+        public void CargarComboXProveedor(ref ComboBox01 combo, string cuit_proveedor)
+        {
+            combo.DisplayMember = "nombre";
+            combo.ValueMember = "cod_articulo";
+            combo.DataSource = _BD.EjecutarSelect("SELECT cod_articulo, nombre FROM articulo WHERE cuit_proveedor = '" + cuit_proveedor + "'");
+        }
         public void CargarCombo(ref ComboBox01 combo)
         {
             combo.DisplayMember = "nombre";
@@ -46,6 +53,13 @@ namespace CLASE05.Negocios
                           FROM articulo WHERE cod_articulo = '" + cod_articulo + "' AND eliminado = 0";
 
             return _BD.EjecutarSelect(sql);
+        }
+        public string RecuperarNombreArticulo(string cod_articulo)
+        {
+            string sql = @"SELECT nombre 
+                          FROM articulo WHERE cod_articulo = '" + cod_articulo + "'";
+
+            return _BD.EjecutarSelect(sql).Rows[0]["nombre"].ToString();
         }
 
         public void Insertar()
@@ -97,6 +111,15 @@ namespace CLASE05.Negocios
             return _BD.EjecutarSelect(sql);
         }
         
+        public string BuscarPrecio(string cod_articulo)
+        {
+            string sql = @"SELECT precio 
+                          FROM articulo WHERE cod_articulo = '" + cod_articulo + "'";
+
+            DataTable tabla = _BD.EjecutarSelect(sql);
+            return tabla.Rows[0]["precio"].ToString();
+        }
+
         public void Borrar()
         {
             //string sqlDelete = "DELETE FROM articulo WHERE cod_articulo = '" + cod_articulo + "'";

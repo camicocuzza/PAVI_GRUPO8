@@ -13,6 +13,8 @@ using CLASE05.Formularios.EquiposEnsamblados;
 using CLASE05.Formularios.EquiposEspeciales;
 using CLASE05.Formularios.Facturas;
 using CLASE05.Formularios._FrmBASE;
+using CLASE05.Formularios.Compras;
+
 
 namespace CLASE05
 {

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CLASE05.Negocios
 {
-    class NE_Proveedores
+    public class NE_Proveedores
     {
         public string cuit_proveedor { get; set; }
         public string razon_social { get; set; }
@@ -36,6 +36,13 @@ namespace CLASE05.Negocios
         {
             string sql = @"SELECT * 
                           FROM proveedor WHERE eliminado = 0 AND cuit_proveedor = '" + cuit_proveedor + "'";
+
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable RecuperarProveedor_Compra(string cuit_proveedor)
+        {
+            string sql = @"SELECT cuit_proveedor, fecha_inicio_operacion, direccion 
+                          FROM proveedor WHERE cuit_proveedor = '" + cuit_proveedor + "'";
 
             return _BD.EjecutarSelect(sql);
         }
