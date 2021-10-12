@@ -185,20 +185,14 @@ namespace CLASE05.Formularios.InicioSistema
 
         private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Frm_SistemaCompras_Entrada frm_compras = new Frm_SistemaCompras_Entrada();
+            frm_compras.ShowDialog();
         }
 
         private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_SistemaFacturas_Entrada frm_facturas = new Frm_SistemaFacturas_Entrada();
             frm_facturas.ShowDialog();
-        }
-        }
-
-        private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Frm_SistemaCompras_Entrada frm_compras = new Frm_SistemaCompras_Entrada();
-            frm_compras.ShowDialog();
-        }
+        }        
     }
 }
