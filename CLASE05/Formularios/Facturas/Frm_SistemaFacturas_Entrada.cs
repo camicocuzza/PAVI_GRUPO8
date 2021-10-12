@@ -33,7 +33,7 @@ namespace CLASE05.Formularios.Facturas
         }      
         private void Frm_SistemaFacturas_Entrada_Load(object sender, EventArgs e)
         {
-            this.grid_facturas.Formatear("num_factura, 100, C; id_tipo_factura, 100, I; fecha, 80, I; monto_total, 100, I; cuit_cliente, 90, I; legajo_empleado, 120, I");
+            this.grid_facturas.Formatear("Nro. Venta, 100, C; ID Tipo Factura, 100, I; Fecha, 80, I; Monto Total, 100, I; CUIT Cliente, 90, I; Legajo empleado, 120, I");
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace CLASE05.Formularios.Facturas
             MaskedTextBox cuadroTexto = new MaskedTextBox();
             cuadroTexto.Text = "";
 
-            if (rb_cuit_cliente.Checked == false & rb_num_factura.Checked == false & rb_todas.Checked == false & rb_legajo_empleado.Checked == false)
+            if (rb_cuit_cliente.Checked == false & rb_num_factura.Checked == false & rb_todas.Checked == false & rb_legajo_empleado.Checked == false & rb_fecha.Checked == false)
             {
                 MessageBox.Show("No hay parámetros de búsqueda", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -59,20 +59,37 @@ namespace CLASE05.Formularios.Facturas
                 }
                 return;
             }
+            if (rb_fecha.Checked == true)
+            {
+                if (txt_patron.Text == string.Empty)
+                {
+                    MessageBox.Show("Falta completar la fecha", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+
+                string[] f = txt_patron.Text.Split('/');
+
+                string fecha_buscar = f[2] + "-" + f[1] + "-" + f[0];
+
+                grid_facturas.Cargar(ne_facturas.BuscarPorFecha(fecha_buscar));
+                if (grid_facturas.Rows.Count == 0)
+                    MessageBox.Show("Búsqueda sin resultados", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             if (rb_cuit_cliente.Checked == true)
             {
-                columna = rb_cuit_cliente.Text;
+                columna = "cuit_cliente";
                 cuadroTexto = txt_patron;
             }
             if (rb_num_factura.Checked == true)
             {
-                columna = rb_num_factura.Text;
+                columna = "num_factura";
                 cuadroTexto = txt_patron;               
             }
           
             if (rb_legajo_empleado.Checked == true)
             {
-                columna = rb_legajo_empleado.Text;
+                columna = "legajo_empleado";
                 cuadroTexto = txt_patron;
             }
             if (cuadroTexto.Text == "")
@@ -91,7 +108,6 @@ namespace CLASE05.Formularios.Facturas
             }
             return;
         }
-
         private void btn_consultar_Click(object sender, EventArgs e)
         {
             if (grid_facturas.Rows.Count == 0)
@@ -152,6 +168,52 @@ namespace CLASE05.Formularios.Facturas
             frm_bajas.fecha = grid_facturas.CurrentRow.Cells[2].Value.ToString();
             frm_bajas.ShowDialog();
             
+        }
+
+        private void txt_patron_Click(object sender, EventArgs e)
+        {
+            if(rb_cuit_cliente.Checked == false && rb_fecha.Checked == false)
+            {
+                txt_patron.Mask = "999999999";
+                txt_patron.SelectionStart = txt_patron.Text.Length;
+                txt_patron.Focus();
+            }
+            if (rb_fecha.Checked == true)
+            {
+                txt_patron.Mask = "99/99/9999";
+                txt_patron.SelectionStart = 0;
+                txt_patron.Focus();
+            }
+            if (rb_cuit_cliente.Checked == true)
+            {
+                txt_patron.Mask = "99-99999999-9";
+                txt_patron.SelectionStart = 0;
+                txt_patron.Focus();
+            }
+        }
+
+        private void rb_cuit_cliente_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rb_cuit_cliente.Checked == true)
+            {
+                txt_patron.Mask = "99-99999999-9";                
+            }
+        }
+
+        private void rb_num_factura_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rb_num_factura.Checked == true || rb_legajo_empleado.Checked == true || rb_todas.Checked == true) 
+            {
+                txt_patron.Mask = "999999999";
+            }
+        }
+
+        private void rb_fecha_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rb_fecha.Checked == true)
+            {
+                txt_patron.Mask = "99/99/9999";
+            }
         }
     }
 }

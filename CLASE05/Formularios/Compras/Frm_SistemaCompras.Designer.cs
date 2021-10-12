@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.Compras
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.btn_eliminar_a = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -81,9 +81,11 @@ namespace CLASE05.Formularios.Compras
             // 
             // btn_eliminar_a
             // 
-            this.btn_eliminar_a.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btn_eliminar_a.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_eliminar_a.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_eliminar_a.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.btn_eliminar_a.FlatAppearance.BorderSize = 0;
+            this.btn_eliminar_a.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_eliminar_a.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btn_eliminar_a.ForeColor = System.Drawing.Color.White;
             this.btn_eliminar_a.Location = new System.Drawing.Point(610, 341);
             this.btn_eliminar_a.Name = "btn_eliminar_a";
             this.btn_eliminar_a.Size = new System.Drawing.Size(86, 30);
@@ -94,9 +96,11 @@ namespace CLASE05.Formularios.Compras
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(702, 341);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 30);
@@ -139,9 +143,11 @@ namespace CLASE05.Formularios.Compras
             // 
             // btn_agregar
             // 
-            this.btn_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btn_agregar.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.btn_agregar.FlatAppearance.BorderSize = 0;
+            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btn_agregar.ForeColor = System.Drawing.Color.White;
             this.btn_agregar.Location = new System.Drawing.Point(715, 126);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(71, 30);
@@ -284,9 +290,11 @@ namespace CLASE05.Formularios.Compras
             // 
             // btn_grabar
             // 
-            this.btn_grabar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btn_grabar.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_grabar.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_grabar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.btn_grabar.FlatAppearance.BorderSize = 0;
+            this.btn_grabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_grabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btn_grabar.ForeColor = System.Drawing.Color.White;
             this.btn_grabar.Location = new System.Drawing.Point(670, 411);
             this.btn_grabar.Name = "btn_grabar";
             this.btn_grabar.Size = new System.Drawing.Size(118, 30);
@@ -300,8 +308,8 @@ namespace CLASE05.Formularios.Compras
             this.grid_articulos._tamannoLetraHeader = 9;
             this.grid_articulos.AllowUserToAddRows = false;
             this.grid_articulos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_articulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_articulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grid_articulos.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_articulos.Location = new System.Drawing.Point(313, 177);

@@ -25,6 +25,13 @@ namespace CLASE05.Negocios
 
             return _BD.EjecutarSelect(sql);
         }
+        public DataTable BuscarPorFecha(string fecha)
+        {
+            string sql = @"SELECT num_factura, id_tipo_factura, fecha, monto_total, cuit_cliente, legajo_empleado 
+                            FROM factura WHERE convert(date, fecha, 103) = '" + fecha + "'";
+
+            return _BD.EjecutarSelect(sql);
+        }
         public DataTable BuscarTodas()
         {
             string sql = @"SELECT num_factura, id_tipo_factura, fecha, monto_total, cuit_cliente, legajo_empleado   

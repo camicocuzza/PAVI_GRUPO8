@@ -35,10 +35,16 @@ namespace CLASE05.Formularios.Compras
             // 
             // btn_eliminar_a
             // 
+            this.btn_eliminar_a.FlatAppearance.BorderSize = 0;
             this.btn_eliminar_a.Click += new System.EventHandler(this.btn_eliminar_a_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
             // 
             // btn_agregar
             // 
+            this.btn_agregar.FlatAppearance.BorderSize = 0;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // cmb_proveedor
@@ -53,6 +59,7 @@ namespace CLASE05.Formularios.Compras
             // 
             // btn_grabar
             // 
+            this.btn_grabar.FlatAppearance.BorderSize = 0;
             this.btn_grabar.Click += new System.EventHandler(this.btn_grabar_Click);
             // 
             // btn_cerrar
@@ -72,9 +79,11 @@ namespace CLASE05.Formularios.Compras
             // 
             // btn_nueva_compra
             // 
-            this.btn_nueva_compra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.btn_nueva_compra.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nueva_compra.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_nueva_compra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.btn_nueva_compra.FlatAppearance.BorderSize = 0;
+            this.btn_nueva_compra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_nueva_compra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btn_nueva_compra.ForeColor = System.Drawing.Color.White;
             this.btn_nueva_compra.Location = new System.Drawing.Point(45, 411);
             this.btn_nueva_compra.Name = "btn_nueva_compra";
             this.btn_nueva_compra.Size = new System.Drawing.Size(118, 30);

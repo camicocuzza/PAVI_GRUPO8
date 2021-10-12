@@ -35,7 +35,7 @@
             // lblEtiqueta
             // 
             this.lblEtiqueta.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblEtiqueta.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblEtiqueta.ForeColor = System.Drawing.Color.White;
             this.lblEtiqueta.Location = new System.Drawing.Point(0, 4);
             this.lblEtiqueta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEtiqueta.Name = "lblEtiqueta";
@@ -51,7 +51,7 @@
             this.TxtDato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.TxtDato.Culture = new System.Globalization.CultureInfo("en-US");
             this.TxtDato.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.TxtDato.ForeColor = System.Drawing.Color.Gainsboro;
+            this.TxtDato.ForeColor = System.Drawing.Color.White;
             this.TxtDato.Location = new System.Drawing.Point(151, 3);
             this.TxtDato.Name = "TxtDato";
             this.TxtDato.Size = new System.Drawing.Size(73, 25);

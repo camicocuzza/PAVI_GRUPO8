@@ -91,11 +91,13 @@ namespace CLASE05.Formularios.Facturas
             // btn_minimizar
             // 
             this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_minimizar.ForeColor = System.Drawing.Color.White;
             this.btn_minimizar.Location = new System.Drawing.Point(956, 2);
             // 
             // btn_maximizar
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_maximizar.ForeColor = System.Drawing.Color.White;
             this.btn_maximizar.Location = new System.Drawing.Point(991, 2);
             // 
             // label2
@@ -129,7 +131,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_limite.BackColor = System.Drawing.Color.Transparent;
             this.txt_limite.Enabled = false;
             this.txt_limite.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txt_limite.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_limite.ForeColor = System.Drawing.Color.White;
             this.txt_limite.Location = new System.Drawing.Point(-96, 301);
             this.txt_limite.Margin = new System.Windows.Forms.Padding(4);
             this.txt_limite.Name = "txt_limite";
@@ -141,7 +143,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_cuit_cliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txt_cuit_cliente.Culture = new System.Globalization.CultureInfo("en-US");
             this.txt_cuit_cliente.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.txt_cuit_cliente.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_cuit_cliente.ForeColor = System.Drawing.Color.White;
             this.txt_cuit_cliente.Location = new System.Drawing.Point(54, 204);
             this.txt_cuit_cliente.Mask = "99-99999999-9";
             this.txt_cuit_cliente.Name = "txt_cuit_cliente";
@@ -164,7 +166,7 @@ namespace CLASE05.Formularios.Facturas
             this.cmb_pais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.cmb_pais.Enabled = false;
             this.cmb_pais.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.cmb_pais.ForeColor = System.Drawing.Color.Gainsboro;
+            this.cmb_pais.ForeColor = System.Drawing.Color.White;
             this.cmb_pais.FormattingEnabled = true;
             this.cmb_pais.Location = new System.Drawing.Point(54, 352);
             this.cmb_pais.Name = "cmb_pais";
@@ -175,7 +177,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.lbl_estado_provincia.BackColor = System.Drawing.Color.Transparent;
             this.lbl_estado_provincia.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lbl_estado_provincia.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbl_estado_provincia.ForeColor = System.Drawing.Color.White;
             this.lbl_estado_provincia.Location = new System.Drawing.Point(52, 384);
             this.lbl_estado_provincia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_estado_provincia.Name = "lbl_estado_provincia";
@@ -199,7 +201,7 @@ namespace CLASE05.Formularios.Facturas
             this.cmb_estado_provincia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.cmb_estado_provincia.Enabled = false;
             this.cmb_estado_provincia.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.cmb_estado_provincia.ForeColor = System.Drawing.Color.Gainsboro;
+            this.cmb_estado_provincia.ForeColor = System.Drawing.Color.White;
             this.cmb_estado_provincia.FormattingEnabled = true;
             this.cmb_estado_provincia.Location = new System.Drawing.Point(55, 404);
             this.cmb_estado_provincia.Name = "cmb_estado_provincia";
@@ -210,7 +212,7 @@ namespace CLASE05.Formularios.Facturas
             // lbl_pais
             // 
             this.lbl_pais.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lbl_pais.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbl_pais.ForeColor = System.Drawing.Color.White;
             this.lbl_pais.Location = new System.Drawing.Point(51, 333);
             this.lbl_pais.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_pais.Name = "lbl_pais";
@@ -237,7 +239,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_ciudad.BackColor = System.Drawing.Color.Transparent;
             this.txt_ciudad.Enabled = false;
             this.txt_ciudad.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txt_ciudad.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_ciudad.ForeColor = System.Drawing.Color.White;
             this.txt_ciudad.Location = new System.Drawing.Point(-97, 452);
             this.txt_ciudad.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ciudad.Name = "txt_ciudad";
@@ -262,7 +264,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_razon_social.BackColor = System.Drawing.Color.Transparent;
             this.txt_razon_social.Enabled = false;
             this.txt_razon_social.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txt_razon_social.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_razon_social.ForeColor = System.Drawing.Color.White;
             this.txt_razon_social.Location = new System.Drawing.Point(-97, 251);
             this.txt_razon_social.Margin = new System.Windows.Forms.Padding(4);
             this.txt_razon_social.Name = "txt_razon_social";
@@ -292,7 +294,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(26, 155);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
@@ -305,7 +307,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(52, 183);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
@@ -318,7 +320,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(52, 235);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -331,7 +333,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(52, 285);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
@@ -344,7 +346,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(52, 436);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
@@ -357,7 +359,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(897, 544);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
@@ -392,7 +394,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_total_venta.Culture = new System.Globalization.CultureInfo("en-US");
             this.txt_total_venta.Enabled = false;
             this.txt_total_venta.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.txt_total_venta.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_total_venta.ForeColor = System.Drawing.Color.White;
             this.txt_total_venta.Location = new System.Drawing.Point(900, 567);
             this.txt_total_venta.Name = "txt_total_venta";
             this.txt_total_venta.Size = new System.Drawing.Size(122, 25);
@@ -403,7 +405,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(555, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -416,7 +418,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(555, 281);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -429,7 +431,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(452, 100);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
@@ -443,7 +445,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_cantidad_articulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txt_cantidad_articulo.Culture = new System.Globalization.CultureInfo("en-US");
             this.txt_cantidad_articulo.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.txt_cantidad_articulo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_cantidad_articulo.ForeColor = System.Drawing.Color.White;
             this.txt_cantidad_articulo.Location = new System.Drawing.Point(455, 174);
             this.txt_cantidad_articulo.Mask = "9999999";
             this.txt_cantidad_articulo.Name = "txt_cantidad_articulo";
@@ -455,7 +457,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(452, 151);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
@@ -478,7 +480,7 @@ namespace CLASE05.Formularios.Facturas
             this.cmb_articulos._Validable = true;
             this.cmb_articulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.cmb_articulos.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.cmb_articulos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.cmb_articulos.ForeColor = System.Drawing.Color.White;
             this.cmb_articulos.FormattingEnabled = true;
             this.cmb_articulos.Location = new System.Drawing.Point(559, 67);
             this.cmb_articulos.Name = "cmb_articulos";
@@ -538,7 +540,7 @@ namespace CLASE05.Formularios.Facturas
             this.cmb_ensamblados._Validable = true;
             this.cmb_ensamblados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.cmb_ensamblados.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.cmb_ensamblados.ForeColor = System.Drawing.Color.Gainsboro;
+            this.cmb_ensamblados.ForeColor = System.Drawing.Color.White;
             this.cmb_ensamblados.FormattingEnabled = true;
             this.cmb_ensamblados.Location = new System.Drawing.Point(558, 306);
             this.cmb_ensamblados.Name = "cmb_ensamblados";
@@ -551,7 +553,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_cantidad_ensamblado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txt_cantidad_ensamblado.Culture = new System.Globalization.CultureInfo("en-US");
             this.txt_cantidad_ensamblado.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.txt_cantidad_ensamblado.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_cantidad_ensamblado.ForeColor = System.Drawing.Color.White;
             this.txt_cantidad_ensamblado.Location = new System.Drawing.Point(455, 416);
             this.txt_cantidad_ensamblado.Mask = "9999999";
             this.txt_cantidad_ensamblado.Name = "txt_cantidad_ensamblado";
@@ -563,7 +565,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(452, 393);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
@@ -576,7 +578,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(452, 342);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
@@ -591,7 +593,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_fechaActual.Culture = new System.Globalization.CultureInfo("en-US");
             this.txt_fechaActual.Enabled = false;
             this.txt_fechaActual.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.txt_fechaActual.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_fechaActual.ForeColor = System.Drawing.Color.White;
             this.txt_fechaActual.Location = new System.Drawing.Point(280, 52);
             this.txt_fechaActual.Name = "txt_fechaActual";
             this.txt_fechaActual.Size = new System.Drawing.Size(97, 25);
@@ -639,7 +641,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(276, 27);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
@@ -709,7 +711,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_precio_ensamblado.Culture = new System.Globalization.CultureInfo("en-US");
             this.txt_precio_ensamblado.Enabled = false;
             this.txt_precio_ensamblado.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.txt_precio_ensamblado.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_precio_ensamblado.ForeColor = System.Drawing.Color.White;
             this.txt_precio_ensamblado.Location = new System.Drawing.Point(455, 365);
             this.txt_precio_ensamblado.Name = "txt_precio_ensamblado";
             this.txt_precio_ensamblado.Size = new System.Drawing.Size(97, 25);
@@ -721,7 +723,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_precio_articulo.Culture = new System.Globalization.CultureInfo("en-US");
             this.txt_precio_articulo.Enabled = false;
             this.txt_precio_articulo.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.txt_precio_articulo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_precio_articulo.ForeColor = System.Drawing.Color.White;
             this.txt_precio_articulo.Location = new System.Drawing.Point(455, 123);
             this.txt_precio_articulo.Name = "txt_precio_articulo";
             this.txt_precio_articulo.Size = new System.Drawing.Size(97, 25);
@@ -732,7 +734,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_legajo_empleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txt_legajo_empleado.Culture = new System.Globalization.CultureInfo("en-US");
             this.txt_legajo_empleado.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.txt_legajo_empleado.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_legajo_empleado.ForeColor = System.Drawing.Color.White;
             this.txt_legajo_empleado.Location = new System.Drawing.Point(54, 508);
             this.txt_legajo_empleado.Mask = "999999";
             this.txt_legajo_empleado.Name = "txt_legajo_empleado";
@@ -743,7 +745,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(52, 487);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
@@ -766,7 +768,7 @@ namespace CLASE05.Formularios.Facturas
             this.cmb_tipo_factura._Validable = true;
             this.cmb_tipo_factura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.cmb_tipo_factura.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.cmb_tipo_factura.ForeColor = System.Drawing.Color.Gainsboro;
+            this.cmb_tipo_factura.ForeColor = System.Drawing.Color.White;
             this.cmb_tipo_factura.FormattingEnabled = true;
             this.cmb_tipo_factura.Location = new System.Drawing.Point(219, 109);
             this.cmb_tipo_factura.Name = "cmb_tipo_factura";
@@ -778,7 +780,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(215, 86);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
@@ -793,7 +795,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_stock_articulo.Culture = new System.Globalization.CultureInfo("en-US");
             this.txt_stock_articulo.Enabled = false;
             this.txt_stock_articulo.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.txt_stock_articulo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_stock_articulo.ForeColor = System.Drawing.Color.White;
             this.txt_stock_articulo.Location = new System.Drawing.Point(878, 67);
             this.txt_stock_articulo.Mask = "9999999";
             this.txt_stock_articulo.Name = "txt_stock_articulo";
@@ -804,7 +806,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label15.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(875, 45);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
@@ -819,7 +821,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_stock_ensamblado.Culture = new System.Globalization.CultureInfo("en-US");
             this.txt_stock_ensamblado.Enabled = false;
             this.txt_stock_ensamblado.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.txt_stock_ensamblado.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_stock_ensamblado.ForeColor = System.Drawing.Color.White;
             this.txt_stock_ensamblado.Location = new System.Drawing.Point(878, 306);
             this.txt_stock_ensamblado.Mask = "9999999";
             this.txt_stock_ensamblado.Name = "txt_stock_ensamblado";
@@ -830,7 +832,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label18.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label18.ForeColor = System.Drawing.Color.White;
             this.label18.Location = new System.Drawing.Point(875, 284);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
@@ -843,7 +845,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label19.ForeColor = System.Drawing.Color.White;
             this.label19.Location = new System.Drawing.Point(48, 86);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
@@ -858,7 +860,7 @@ namespace CLASE05.Formularios.Facturas
             this.txt_num_factura.Culture = new System.Globalization.CultureInfo("en-US");
             this.txt_num_factura.Enabled = false;
             this.txt_num_factura.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.txt_num_factura.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_num_factura.ForeColor = System.Drawing.Color.White;
             this.txt_num_factura.Location = new System.Drawing.Point(55, 109);
             this.txt_num_factura.Name = "txt_num_factura";
             this.txt_num_factura.Size = new System.Drawing.Size(158, 25);
@@ -866,8 +868,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             // Frm_BaseFactura
             // 
-            this._FormularioMovil = true;
-            this._PosiciónVisible = false;
+            this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1063, 613);
             this.Controls.Add(this.label19);
@@ -992,7 +993,6 @@ namespace CLASE05.Formularios.Facturas
         public Clases.LabelText02 txt_ciudad;
         public Clases.LabelText02 txt_razon_social;
         public System.Windows.Forms.MaskedTextBox txt_total_venta;
-        private System.Windows.Forms.Label label4;
         public System.Windows.Forms.MaskedTextBox txt_cantidad_articulo;
         public Clases.ComboBox01 cmb_articulos;
         public Clases.ComboBox01 cmb_ensamblados;
@@ -1034,5 +1034,6 @@ namespace CLASE05.Formularios.Facturas
         public System.Windows.Forms.Label label18;
         public System.Windows.Forms.Label label19;
         public System.Windows.Forms.MaskedTextBox txt_num_factura;
+        public System.Windows.Forms.Label label4;
     }
 }

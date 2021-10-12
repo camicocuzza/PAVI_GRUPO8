@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.Compras
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rb_proveedor = new System.Windows.Forms.RadioButton();
             this.rb_num_compra = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -219,6 +219,8 @@ namespace CLASE05.Formularios.Compras
             this.cmb_proveedores._tabla_join = null;
             this.cmb_proveedores._tabla_join_pk = null;
             this.cmb_proveedores._Validable = true;
+            this.cmb_proveedores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.cmb_proveedores.ForeColor = System.Drawing.Color.White;
             this.cmb_proveedores.FormattingEnabled = true;
             this.cmb_proveedores.Location = new System.Drawing.Point(365, 53);
             this.cmb_proveedores.Name = "cmb_proveedores";
@@ -232,8 +234,8 @@ namespace CLASE05.Formularios.Compras
             this.grid_compras._tamannoLetraHeader = 9;
             this.grid_compras.AllowUserToAddRows = false;
             this.grid_compras.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_compras.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_compras.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.grid_compras.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_compras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_compras.Location = new System.Drawing.Point(12, 226);

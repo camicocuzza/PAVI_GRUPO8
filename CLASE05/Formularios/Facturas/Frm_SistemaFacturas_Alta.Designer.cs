@@ -34,8 +34,8 @@ namespace CLASE05.Formularios.Facturas
             // 
             // label2
             // 
-            this.label2.Size = new System.Drawing.Size(161, 31);
-            this.label2.Text = "Alta Facturas";
+            this.label2.Size = new System.Drawing.Size(182, 31);
+            this.label2.Text = "Agregar Venta";
             // 
             // cmb_pais
             // 
@@ -134,8 +134,6 @@ namespace CLASE05.Formularios.Facturas
             // 
             // Frm_SistemaFacturas_Alta
             // 
-            this._FormularioMovil = true;
-            this._PosiciónVisible = false;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1063, 625);
             this.Name = "Frm_SistemaFacturas_Alta";
