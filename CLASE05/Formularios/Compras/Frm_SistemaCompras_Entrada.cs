@@ -6,11 +6,13 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using CLASE05.Negocios;
+using CLASE05.Clases;
 
 namespace CLASE05.Formularios.Compras
 {
     public partial class Frm_SistemaCompras_Entrada : CLASE05.Formularios.FrmBASE.FrmBase_ABM_Entrada
     {
+        TratamientosEspeciales _TE = new TratamientosEspeciales();
         public Frm_SistemaCompras_Entrada()
         {
             InitializeComponent();
@@ -86,7 +88,7 @@ namespace CLASE05.Formularios.Compras
             }
             if (rb_num_compra.Checked == true)
             {
-                if (txt_numero.Text == string.Empty)
+                if (txt_numero._Text == string.Empty)
                 {
                     MessageBox.Show("Falta completar el número", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
@@ -98,12 +100,17 @@ namespace CLASE05.Formularios.Compras
             }
             if (rb_fecha.Checked == true)
             {
-                if (txt_fecha.Text == string.Empty)
+                if (txt_fecha._Text == string.Empty)
                 {
                     MessageBox.Show("Falta completar la fecha", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                grid_compras.Cargar(compras.BuscarCompra(txt_fecha._Text, "fecha"));
+
+                string [] f = txt_fecha._Text.Split('/');
+
+                string fecha_buscar = f[2] + "-" + f[1] + "-" + f[0];     
+
+                grid_compras.Cargar(compras.BuscarPorFecha(fecha_buscar));
                 if (grid_compras.Rows.Count == 0)
                     MessageBox.Show("No se encontró ninguna compra", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;

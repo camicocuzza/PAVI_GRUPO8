@@ -25,7 +25,12 @@ namespace CLASE05.Negocios
             sql = @"SELECT num_compra, cuit_proveedor, fecha, monto_total 
                           FROM compra WHERE " + columna + " like '%" + patron + "%' AND eliminado = 0";
 
-
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable BuscarPorFecha(string fecha)
+        {
+            string sql = @"SELECT num_compra, cuit_proveedor, fecha, monto_total
+                            FROM compra WHERE convert(date, fecha, 103) = '" + fecha + "'";
 
             return _BD.EjecutarSelect(sql);
         }
@@ -43,11 +48,8 @@ namespace CLASE05.Negocios
             sql = @"SELECT cod_articulo, cantidad, precio 
                           FROM detalle_compra WHERE num_compra = '" + num_compra + "' AND eliminado = 0";
 
-
-
             return _BD.EjecutarSelect(sql);
         }
-
         public void AgregarCompra(string cuit_proveedor, string fecha, string monto_total, Grid01 grid_articulos)
         {
             string sqlInsert = "INSERT INTO compra (cuit_proveedor, fecha, monto_total, eliminado) VALUES (";

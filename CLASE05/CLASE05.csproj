@@ -507,7 +507,6 @@
       <DependentUpon>Frm_Usuario_Modificacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Negocios\NE_Compras.cs" />
-    <Compile Include="Negocios\NE_Facturas.cs" />
     <Compile Include="Formularios\_FrmBASE\FrmBase_Prueba_ABM_Entrada.cs">
       <SubType>Form</SubType>
     </Compile>

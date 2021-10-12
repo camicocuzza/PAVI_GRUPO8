@@ -105,6 +105,7 @@ namespace CLASE05.Formularios.Compras
             // 
             // btn_buscar
             // 
+            this.btn_buscar.FlatAppearance.BorderSize = 0;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // btn_cerrar
