@@ -125,5 +125,13 @@ namespace CLASE05.Clases
             }
         }
 
+        public string RecuperarFechaSistema()
+        {
+            BE_Acceso_Datos _BD = new BE_Acceso_Datos();
+
+            string sql = "SELECT convert(char(11), GETDATE(), 103)";
+            return _BD.EjecutarSelect(sql).Rows[0][0].ToString();
+        }
+
     }
 }
