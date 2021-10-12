@@ -29,6 +29,7 @@ namespace CLASE05.Formularios.Compras
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_SistemaCompras_Alta));
             this.btn_nueva_compra = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -42,6 +43,8 @@ namespace CLASE05.Formularios.Compras
             // 
             // cmb_proveedor
             // 
+            this.cmb_proveedor.DisplayMember = "razon_social";
+            this.cmb_proveedor.ValueMember = "cuit_proveedor";
             this.cmb_proveedor.SelectedIndexChanged += new System.EventHandler(this.cmb_proveedor_SelectedIndexChanged);
             // 
             // txt_total
@@ -89,6 +92,7 @@ namespace CLASE05.Formularios.Compras
             this.Controls.Add(this.btn_nueva_compra);
             this.Name = "Frm_SistemaCompras_Alta";
             this.Load += new System.EventHandler(this.Frm_SistemaCompras_Alta_Load);
+            this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.txt_cantidad, 0);
             this.Controls.SetChildIndex(this.btn_agregar, 0);
             this.Controls.SetChildIndex(this.cmb_articulo, 0);

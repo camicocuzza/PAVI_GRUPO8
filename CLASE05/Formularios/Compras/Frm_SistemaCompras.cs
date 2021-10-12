@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using CLASE05.Negocios;
+using CLASE05.Formularios.Articulos;
 
 namespace CLASE05.Formularios.Compras
 {
@@ -19,7 +20,7 @@ namespace CLASE05.Formularios.Compras
             get { return lbl_titulo.Text; }
             set { lbl_titulo.Text = value; }
         }
-
+        public string num_compra { get; set; }
         public Frm_SistemaCompras()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace CLASE05.Formularios.Compras
         {
             grid_articulos.Formatear("Código Artículo, 70, C; Nombre, 201, C; Precio, 82, D; Cantidad, 82, D");
             txt_total.Text = "$0";
+            cmb_proveedor._Cargar();
         }
 
         public void CalcularTotal()
@@ -47,6 +49,44 @@ namespace CLASE05.Formularios.Compras
         private void btn_eliminar_a_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (grid_articulos.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay artículos agregados", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+            if (grid_articulos.CurrentCell.RowIndex == -1)
+            {
+                MessageBox.Show("Falta seleccionar un artículo", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+            Frm_Articulo_Consulta frm_articulo = new Frm_Articulo_Consulta();
+            frm_articulo.cod_articulo = grid_articulos.CurrentRow.Cells[0].Value.ToString();
+            frm_articulo.ShowDialog();
+        }
+        public void CargarFormulario(DataTable tabla_proveedor, DataTable tabla_compra)
+        {
+            txt_fecha._Text = tabla_compra.Rows[0]["fecha"].ToString();
+            cmb_proveedor.SelectedValue = double.Parse(tabla_compra.Rows[0]["cuit_proveedor"].ToString());
+            txt_cuit_p._Text = tabla_compra.Rows[0]["cuit_proveedor"].ToString();
+            txt_fecha_inicio._Text = tabla_proveedor.Rows[0]["fecha_inicio_operacion"].ToString();
+            txt_direccion._Text = tabla_proveedor.Rows[0]["direccion"].ToString();
+            txt_total.Text = tabla_compra.Rows[0]["monto_total"].ToString();
+
+            DataTable detalles_compra = compra.BuscarDetalleCompra(num_compra);
+
+            for(int i = 0; i < detalles_compra.Rows.Count; i++)
+            {
+                grid_articulos.Rows.Add(detalles_compra.Rows[0]["cod_articulo"].ToString()
+                    , articulo.RecuperarNombreArticulo(detalles_compra.Rows[0]["cod_articulo"].ToString())
+                    , detalles_compra.Rows[0]["precio"].ToString()
+                    , detalles_compra.Rows[0]["cantidad"].ToString());
+            }
+            
+
         }
     }
 }

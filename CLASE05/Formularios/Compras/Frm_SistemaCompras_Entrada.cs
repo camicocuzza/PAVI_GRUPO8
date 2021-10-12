@@ -123,5 +123,45 @@ namespace CLASE05.Formularios.Compras
 
            
         }
+
+        private void btn_consultar_Click(object sender, EventArgs e)
+        {
+            if (grid_compras.Rows.Count == 0)
+            {
+                MessageBox.Show("Falta buscar registros", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+            if (grid_compras.CurrentCell.RowIndex == -1)
+            {
+                MessageBox.Show("Falta seleccionar un registro", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+            Frm_SistemaCompras_Consulta frm_consulta = new Frm_SistemaCompras_Consulta();
+            frm_consulta.num_compra = grid_compras.CurrentRow.Cells[0].Value.ToString();
+            frm_consulta.ShowDialog();
+        }
+
+        private void btn_alta_Click(object sender, EventArgs e)
+        {
+            Frm_SistemaCompras_Alta frm_altas = new Frm_SistemaCompras_Alta();
+            frm_altas.ShowDialog();
+        }
+
+        private void btn_borrar_Click(object sender, EventArgs e)
+        {
+            if (grid_compras.Rows.Count == 0)
+            {
+                MessageBox.Show("Falta buscar registros", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+            if (grid_compras.CurrentCell.RowIndex == -1)
+            {
+                MessageBox.Show("Falta seleccionar un registro", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+            Frm_SistemaCompras_Baja frm_baja = new Frm_SistemaCompras_Baja();
+            frm_baja.num_compra = grid_compras.CurrentRow.Cells[0].Value.ToString();
+            frm_baja.ShowDialog();
+        }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace CLASE05.Formularios.Compras
 {
-    partial class Frm_SistemaCompras_Consulta
+    partial class Frm_SistemaCompras_Baja
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -37,7 +37,6 @@ namespace CLASE05.Formularios.Compras
             // 
             // cmb_articulo
             // 
-            this.cmb_articulo.Enabled = false;
             this.cmb_articulo.Visible = false;
             // 
             // btn_agregar
@@ -54,7 +53,7 @@ namespace CLASE05.Formularios.Compras
             // 
             // txt_fecha
             // 
-            this.txt_fecha._Etiqueta = "Fecha ";
+            this.txt_fecha._Etiqueta = "Fecha";
             // 
             // label1
             // 
@@ -68,17 +67,17 @@ namespace CLASE05.Formularios.Compras
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(640, 422);
+            this.label6.Location = new System.Drawing.Point(638, 424);
             // 
             // txt_total
             // 
-            this.txt_total.Location = new System.Drawing.Point(686, 417);
+            this.txt_total.Location = new System.Drawing.Point(684, 419);
             this.txt_total.Text = "$0";
             // 
             // btn_grabar
             // 
-            this.btn_grabar.Location = new System.Drawing.Point(353, 422);
-            this.btn_grabar.Text = "Aceptar";
+            this.btn_grabar.Location = new System.Drawing.Point(356, 425);
+            this.btn_grabar.Text = "Eliminar Compra";
             this.btn_grabar.Click += new System.EventHandler(this.btn_grabar_Click);
             // 
             // label2
@@ -97,14 +96,14 @@ namespace CLASE05.Formularios.Compras
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             // 
-            // Frm_SistemaCompras_Consulta
+            // Frm_SistemaCompras_Baja
             // 
             this._PosiciónVisible = true;
-            this._Titulo = "Datos de la compra";
+            this._Titulo = "Eliminar Compra";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(823, 467);
-            this.Name = "Frm_SistemaCompras_Consulta";
-            this.Load += new System.EventHandler(this.Frm_SistemaCompras_Consulta_Load);
+            this.Name = "Frm_SistemaCompras_Baja";
+            this.Load += new System.EventHandler(this.Frm_SistemaCompras_Baja_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

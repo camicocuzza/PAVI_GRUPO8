@@ -50,6 +50,13 @@ namespace CLASE05.Negocios
 
             return _BD.EjecutarSelect(sql);
         }
+        public string RecuperarNombreArticulo(string cod_articulo)
+        {
+            string sql = @"SELECT nombre 
+                          FROM articulo WHERE cod_articulo = '" + cod_articulo + "'";
+
+            return _BD.EjecutarSelect(sql).Rows[0]["nombre"].ToString();
+        }
 
         public void Insertar()
         {

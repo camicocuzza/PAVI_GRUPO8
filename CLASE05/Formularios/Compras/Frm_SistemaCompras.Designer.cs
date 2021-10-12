@@ -103,6 +103,7 @@ namespace CLASE05.Formularios.Compras
             this.button1.TabIndex = 91;
             this.button1.Text = "Ver detalle";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -196,7 +197,7 @@ namespace CLASE05.Formularios.Compras
             // 
             // cmb_proveedor
             // 
-            this.cmb_proveedor._ComboSinSeleccion = true;
+            this.cmb_proveedor._ComboSinSeleccion = false;
             this.cmb_proveedor._MensajeError = "Seleccionar rubro";
             this.cmb_proveedor._Nombre_campo = null;
             this.cmb_proveedor._Nombre_tabla = "";

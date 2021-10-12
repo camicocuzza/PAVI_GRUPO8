@@ -146,6 +146,12 @@ namespace CLASE05.Formularios.Compras
                 return;
             }
             compra.AgregarCompra(cmb_proveedor.SelectedValue.ToString(), txt_fecha._Text, txt_total.Text, grid_articulos);
+            this.Dispose();
+        }
+
+        private void cmb_articulo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+      
         }
     }
 }

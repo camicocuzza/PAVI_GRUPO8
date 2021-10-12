@@ -160,11 +160,20 @@ namespace CLASE05.Clases
             EjecutarNoSelect(sql);
         }
 
+        public string Borrar(string sql, RecuperacionPk RecuperarId)
+        {
+            return EjecutarNoSelect(sql, RecuperarId);
+        }
+
         public void Modificar(string sql)
         {
             EjecutarNoSelect(sql);
         }
 
+        public void Modificar(string sql, RecuperacionPk RecuperarId)
+        {
+            EjecutarNoSelect(sql);
+        }
         public void InsertarEquipoEspecial(string cod_prod_en, string cuit_cliente, PictureBox imagen)
         {
             Conectar();

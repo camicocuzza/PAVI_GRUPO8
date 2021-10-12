@@ -183,6 +183,12 @@
     <Compile Include="Formularios\Compras\Frm_SistemaCompras_Alta.Designer.cs">
       <DependentUpon>Frm_SistemaCompras_Alta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Compras\Frm_SistemaCompras_Baja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\Frm_SistemaCompras_Baja.Designer.cs">
+      <DependentUpon>Frm_SistemaCompras_Baja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Compras\Frm_SistemaCompras_Consulta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -448,6 +454,7 @@
       <DependentUpon>Frm_Usuario_Modificacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Negocios\NE_Compras.cs" />
+    <Compile Include="Negocios\NE_Facturas.cs" />
     <Compile Include="Negocios\NE_Proveedores.cs" />
     <Compile Include="Negocios\NE_Empleados.cs" />
     <Compile Include="Negocios\NE_Articulos.cs" />
@@ -458,6 +465,7 @@
     <Compile Include="Negocios\NE_Estados_Provincias.cs" />
     <Compile Include="Negocios\NE_Paises.cs" />
     <Compile Include="Negocios\NE_Stock.cs" />
+    <Compile Include="Negocios\NE_Stock_Ensamblados.cs" />
     <Compile Include="Negocios\NE_Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -511,6 +519,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Compras\Frm_SistemaCompras_Alta.resx">
       <DependentUpon>Frm_SistemaCompras_Alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\Frm_SistemaCompras_Baja.resx">
+      <DependentUpon>Frm_SistemaCompras_Baja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Compras\Frm_SistemaCompras_Consulta.resx">
       <DependentUpon>Frm_SistemaCompras_Consulta.cs</DependentUpon>
