@@ -140,7 +140,8 @@ namespace CLASE05.Formularios.InicioSistema
 
         private void btn_compras_Click(object sender, EventArgs e)
         {
-
+            Frm_SistemaCompras_Entrada frm_compras = new Frm_SistemaCompras_Entrada();
+            frm_compras.ShowDialog();
         }
 
         private void btn_proveedores_Click(object sender, EventArgs e)
@@ -163,7 +164,8 @@ namespace CLASE05.Formularios.InicioSistema
 
         private void btn_ventas_Click(object sender, EventArgs e)
         {
-
+            Frm_SistemaFacturas_Entrada frm_facturas = new Frm_SistemaFacturas_Entrada();
+            frm_facturas.ShowDialog();
         }
 
         private void btn_empleados_Click(object sender, EventArgs e)

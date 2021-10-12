@@ -75,7 +75,6 @@
             this.btn_especiales = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
@@ -115,7 +114,7 @@
             this.salirToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -125,7 +124,7 @@
             this.salirDeSistemaConLoginActivoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.salirDeSistemaConLoginActivoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.salirDeSistemaConLoginActivoToolStripMenuItem.Name = "salirDeSistemaConLoginActivoToolStripMenuItem";
-            this.salirDeSistemaConLoginActivoToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.salirDeSistemaConLoginActivoToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
             this.salirDeSistemaConLoginActivoToolStripMenuItem.Text = "Cerrar sesión";
             this.salirDeSistemaConLoginActivoToolStripMenuItem.Click += new System.EventHandler(this.salirDeSistemaConLoginActivoToolStripMenuItem_Click);
             // 
@@ -151,7 +150,7 @@
             this.usuariosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.usuariosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
@@ -160,7 +159,7 @@
             this.clientesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.clientesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -169,7 +168,7 @@
             this.artículosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.artículosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.artículosToolStripMenuItem.Name = "artículosToolStripMenuItem";
-            this.artículosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.artículosToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.artículosToolStripMenuItem.Text = "Artículos";
             this.artículosToolStripMenuItem.Click += new System.EventHandler(this.artículosToolStripMenuItem_Click);
             // 
@@ -181,7 +180,7 @@
             this.especialesToolStripMenuItem});
             this.equiposToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.equiposToolStripMenuItem.Name = "equiposToolStripMenuItem";
-            this.equiposToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.equiposToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.equiposToolStripMenuItem.Text = "Equipos";
             // 
             // ensambladosToolStripMenuItem
@@ -189,7 +188,7 @@
             this.ensambladosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ensambladosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.ensambladosToolStripMenuItem.Name = "ensambladosToolStripMenuItem";
-            this.ensambladosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.ensambladosToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
             this.ensambladosToolStripMenuItem.Text = "Ensamblados";
             this.ensambladosToolStripMenuItem.Click += new System.EventHandler(this.ensambladosToolStripMenuItem_Click);
             // 
@@ -198,7 +197,7 @@
             this.especialesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.especialesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.especialesToolStripMenuItem.Name = "especialesToolStripMenuItem";
-            this.especialesToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.especialesToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
             this.especialesToolStripMenuItem.Text = "Especiales";
             this.especialesToolStripMenuItem.Click += new System.EventHandler(this.especialesToolStripMenuItem_Click);
             // 
@@ -207,7 +206,7 @@
             this.lotesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.lotesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.lotesToolStripMenuItem.Name = "lotesToolStripMenuItem";
-            this.lotesToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.lotesToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.lotesToolStripMenuItem.Text = "Lotes";
             this.lotesToolStripMenuItem.Click += new System.EventHandler(this.lotesToolStripMenuItem_Click);
             // 
@@ -216,7 +215,7 @@
             this.empleadosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.empleadosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.empleadosToolStripMenuItem.Text = "Empleados";
             this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
@@ -225,7 +224,7 @@
             this.proveedoresToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.proveedoresToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
             // 
@@ -238,7 +237,7 @@
             this.stockequiposEspecialesToolStripMenuItem});
             this.inventarioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
-            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.inventarioToolStripMenuItem.Text = "Inventario";
             // 
             // stockartículosToolStripMenuItem1
@@ -338,7 +337,6 @@
             this.btn_compras.BackgroundImage = global::CLASE05.Properties.Resources.icon_camionabast;
             this.btn_compras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_compras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_compras.Enabled = false;
             this.btn_compras.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btn_compras.FlatAppearance.BorderSize = 0;
             this.btn_compras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -358,7 +356,7 @@
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.Color.Transparent;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label26.ForeColor = System.Drawing.Color.White;
             this.label26.Location = new System.Drawing.Point(1471, 482);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(73, 20);
@@ -371,7 +369,7 @@
             this.label29.AutoSize = true;
             this.label29.BackColor = System.Drawing.Color.Transparent;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label29.ForeColor = System.Drawing.Color.White;
             this.label29.Location = new System.Drawing.Point(1473, 254);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(66, 20);
@@ -385,7 +383,7 @@
             this.label32.AutoSize = true;
             this.label32.BackColor = System.Drawing.Color.Transparent;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label32.ForeColor = System.Drawing.Color.White;
             this.label32.Location = new System.Drawing.Point(1064, 837);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(106, 20);
@@ -401,7 +399,6 @@
             this.btn_ventas.BackgroundImage = global::CLASE05.Properties.Resources.icon_compra_venta__2_;
             this.btn_ventas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_ventas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ventas.Enabled = false;
             this.btn_ventas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btn_ventas.FlatAppearance.BorderSize = 0;
             this.btn_ventas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -421,7 +418,7 @@
             this.label39.AutoSize = true;
             this.label39.BackColor = System.Drawing.Color.Transparent;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label39.ForeColor = System.Drawing.Color.White;
             this.label39.Location = new System.Drawing.Point(1475, 371);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(60, 20);
@@ -441,7 +438,7 @@
             this.btn_usuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_usuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_usuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_usuarios.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_usuarios.ForeColor = System.Drawing.Color.White;
             this.btn_usuarios.Location = new System.Drawing.Point(1461, 779);
             this.btn_usuarios.Name = "btn_usuarios";
             this.btn_usuarios.Size = new System.Drawing.Size(83, 90);
@@ -476,7 +473,7 @@
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label23.ForeColor = System.Drawing.Color.White;
             this.label23.Location = new System.Drawing.Point(970, 837);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(70, 20);
@@ -491,7 +488,7 @@
             this.label36.AutoSize = true;
             this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label36.ForeColor = System.Drawing.Color.White;
             this.label36.Location = new System.Drawing.Point(480, 631);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(89, 20);
@@ -506,7 +503,7 @@
             this.label37.AutoSize = true;
             this.label37.BackColor = System.Drawing.Color.Transparent;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label37.ForeColor = System.Drawing.Color.White;
             this.label37.Location = new System.Drawing.Point(1468, 852);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(72, 20);
@@ -526,7 +523,7 @@
             this.btn_articulos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_articulos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_articulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_articulos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_articulos.ForeColor = System.Drawing.Color.White;
             this.btn_articulos.Location = new System.Drawing.Point(976, 775);
             this.btn_articulos.Name = "btn_articulos";
             this.btn_articulos.Size = new System.Drawing.Size(76, 61);
@@ -547,7 +544,7 @@
             this.btn_ensamblados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_ensamblados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_ensamblados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ensamblados.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_ensamblados.ForeColor = System.Drawing.Color.White;
             this.btn_ensamblados.Location = new System.Drawing.Point(1072, 757);
             this.btn_ensamblados.Name = "btn_ensamblados";
             this.btn_ensamblados.Size = new System.Drawing.Size(98, 97);
@@ -604,7 +601,7 @@
             this.label44.AutoSize = true;
             this.label44.BackColor = System.Drawing.Color.Transparent;
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label44.ForeColor = System.Drawing.Color.White;
             this.label44.Location = new System.Drawing.Point(353, 631);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(98, 20);
@@ -619,7 +616,7 @@
             this.label46.AutoSize = true;
             this.label46.BackColor = System.Drawing.Color.Transparent;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label46.ForeColor = System.Drawing.Color.White;
             this.label46.Location = new System.Drawing.Point(1467, 602);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(79, 20);
@@ -653,7 +650,7 @@
             this.label47.AutoSize = true;
             this.label47.BackColor = System.Drawing.Color.Transparent;
             this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label47.ForeColor = System.Drawing.Color.White;
             this.label47.Location = new System.Drawing.Point(1011, 256);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(75, 20);
@@ -673,7 +670,7 @@
             this.btn_especiales.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_especiales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_especiales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_especiales.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_especiales.ForeColor = System.Drawing.Color.White;
             this.btn_especiales.Location = new System.Drawing.Point(1200, 779);
             this.btn_especiales.Name = "btn_especiales";
             this.btn_especiales.Size = new System.Drawing.Size(75, 61);
@@ -688,7 +685,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(1196, 837);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 20);
