@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.Compras
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.btn_eliminar_a = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -197,7 +197,7 @@ namespace CLASE05.Formularios.Compras
             // 
             // cmb_proveedor
             // 
-            this.cmb_proveedor._ComboSinSeleccion = false;
+            this.cmb_proveedor._ComboSinSeleccion = true;
             this.cmb_proveedor._MensajeError = "Seleccionar rubro";
             this.cmb_proveedor._Nombre_campo = null;
             this.cmb_proveedor._Nombre_tabla = "";
@@ -300,8 +300,8 @@ namespace CLASE05.Formularios.Compras
             this.grid_articulos._tamannoLetraHeader = 9;
             this.grid_articulos.AllowUserToAddRows = false;
             this.grid_articulos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_articulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_articulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.grid_articulos.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_articulos.Location = new System.Drawing.Point(313, 177);
