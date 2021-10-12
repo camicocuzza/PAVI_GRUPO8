@@ -53,7 +53,7 @@ namespace CLASE05.Negocios
             string sqlInsert = "INSERT INTO compra (cuit_proveedor, fecha, monto_total, eliminado) VALUES (";
 
             sqlInsert += "'" + cuit_proveedor + "'";
-            sqlInsert += ", '" + fecha + "'";
+            sqlInsert += ", GETDATE()";
             sqlInsert += ", " + monto_total.Replace(',', '.');
             sqlInsert += ", 0)";
 

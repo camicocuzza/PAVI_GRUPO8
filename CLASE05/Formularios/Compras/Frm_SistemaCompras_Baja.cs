@@ -26,7 +26,6 @@ namespace CLASE05.Formularios.Compras
             if (MessageBox.Show("¿Está seguro de que desea eliminar la compra "+ num_compra + "?", "Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 compra.BorrarCompra(num_compra, txt_fecha._Text, grid_articulos);
-                MessageBox.Show("Se eliminó correctamente la compra" + num_compra, "Importante");
                 this.Dispose();
             }
             else

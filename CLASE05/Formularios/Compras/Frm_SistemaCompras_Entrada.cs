@@ -64,7 +64,7 @@ namespace CLASE05.Formularios.Compras
 
         private void Frm_SistemaCompras_Entrada_Load(object sender, EventArgs e)
         {
-            grid_compras.Formatear("Número de compra, 100, C; Cuit Proveedor, 250, C; Fecha, 100, D; Monto total, 150, D");
+            grid_compras.Formatear("Número de compra, 100, C; Cuit Proveedor, 250, C; Fecha, 110, D; Monto total, 110, D");
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
