@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.Compras
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.btn_eliminar_a = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -299,8 +299,8 @@ namespace CLASE05.Formularios.Compras
             this.grid_articulos._tamannoLetraHeader = 9;
             this.grid_articulos.AllowUserToAddRows = false;
             this.grid_articulos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_articulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_articulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grid_articulos.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_articulos.Location = new System.Drawing.Point(313, 177);
@@ -449,7 +449,6 @@ namespace CLASE05.Formularios.Compras
         public System.Windows.Forms.Button button1;
         public Clases.ComboBox01 cmb_articulo;
         public System.Windows.Forms.Button btn_agregar;
-        private System.Windows.Forms.Label label2;
         public Clases.LabelText02 txt_cantidad;
         private System.Windows.Forms.Label label4;
         public Clases.ComboBox01 cmb_proveedor;
@@ -464,5 +463,6 @@ namespace CLASE05.Formularios.Compras
         public Clases.LabelText02 txt_direccion;
         public Clases.LabelText02 txt_cuit_p;
         public Clases.Grid01 grid_articulos;
+        public System.Windows.Forms.Label label2;
     }
 }

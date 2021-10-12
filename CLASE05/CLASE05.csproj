@@ -183,6 +183,12 @@
     <Compile Include="Formularios\Compras\Frm_SistemaCompras_Alta.Designer.cs">
       <DependentUpon>Frm_SistemaCompras_Alta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Compras\Frm_SistemaCompras_Consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\Frm_SistemaCompras_Consulta.Designer.cs">
+      <DependentUpon>Frm_SistemaCompras_Consulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Compras\Frm_SistemaCompras_Entrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -505,6 +511,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Compras\Frm_SistemaCompras_Alta.resx">
       <DependentUpon>Frm_SistemaCompras_Alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\Frm_SistemaCompras_Consulta.resx">
+      <DependentUpon>Frm_SistemaCompras_Consulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Compras\Frm_SistemaCompras_Entrada.resx">
       <DependentUpon>Frm_SistemaCompras_Entrada.cs</DependentUpon>

@@ -135,6 +135,16 @@ namespace CLASE05.Formularios.Compras
 
         private void btn_grabar_Click(object sender, EventArgs e)
         {
+            if(cmb_proveedor.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccionar proveedor");
+                return;
+            }
+            if(grid_articulos.Rows.Count == 0)
+            {
+                MessageBox.Show("Agregar artículo/s");
+                return;
+            }
             compra.AgregarCompra(cmb_proveedor.SelectedValue.ToString(), txt_fecha._Text, txt_total.Text, grid_articulos);
         }
     }
