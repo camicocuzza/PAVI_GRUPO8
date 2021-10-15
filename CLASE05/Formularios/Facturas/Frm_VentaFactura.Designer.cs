@@ -64,7 +64,7 @@ namespace CLASE05.Formularios.Facturas
             // rvListado
             // 
             this.rvListado.LocalReport.ReportEmbeddedResource = "CLASE05.Reportes.VentaFactura.rdlc";
-            this.rvListado.Location = new System.Drawing.Point(14, 36);
+            this.rvListado.Location = new System.Drawing.Point(49, 36);
             this.rvListado.Name = "rvListado";
             this.rvListado.ServerReport.BearerToken = null;
             this.rvListado.ShowBackButton = false;
@@ -72,15 +72,15 @@ namespace CLASE05.Formularios.Facturas
             this.rvListado.ShowPromptAreaButton = false;
             this.rvListado.ShowRefreshButton = false;
             this.rvListado.ShowStopButton = false;
-            this.rvListado.Size = new System.Drawing.Size(817, 547);
+            this.rvListado.Size = new System.Drawing.Size(741, 547);
             this.rvListado.TabIndex = 2;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(20, 605);
+            this.txtEmail.Location = new System.Drawing.Point(49, 605);
             this.txtEmail.MaxLength = 255;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(375, 20);
+            this.txtEmail.Size = new System.Drawing.Size(346, 20);
             this.txtEmail.TabIndex = 24;
             this.txtEmail.Text = "Correo Electrónico";
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -109,9 +109,9 @@ namespace CLASE05.Formularios.Facturas
             this.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmail.ForeColor = System.Drawing.Color.White;
-            this.btnEmail.Location = new System.Drawing.Point(274, 634);
+            this.btnEmail.Location = new System.Drawing.Point(290, 634);
             this.btnEmail.Name = "btnEmail";
-            this.btnEmail.Size = new System.Drawing.Size(121, 29);
+            this.btnEmail.Size = new System.Drawing.Size(105, 29);
             this.btnEmail.TabIndex = 27;
             this.btnEmail.Text = "Enviar e-mail";
             this.btnEmail.UseVisualStyleBackColor = false;
@@ -127,7 +127,7 @@ namespace CLASE05.Formularios.Facturas
             this.btnPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPDF.ForeColor = System.Drawing.Color.White;
-            this.btnPDF.Location = new System.Drawing.Point(147, 634);
+            this.btnPDF.Location = new System.Drawing.Point(163, 634);
             this.btnPDF.Name = "btnPDF";
             this.btnPDF.Size = new System.Drawing.Size(121, 29);
             this.btnPDF.TabIndex = 26;
@@ -145,9 +145,9 @@ namespace CLASE05.Formularios.Facturas
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
-            this.btnImprimir.Location = new System.Drawing.Point(20, 634);
+            this.btnImprimir.Location = new System.Drawing.Point(49, 634);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(121, 29);
+            this.btnImprimir.Size = new System.Drawing.Size(108, 29);
             this.btnImprimir.TabIndex = 25;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = false;
@@ -155,8 +155,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             // Frm_VentaFactura
             // 
-            this._FormularioMovil = true;
-            this._PosiciónVisible = false;
+            this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(842, 675);
             this.Controls.Add(this.txtEmail);
