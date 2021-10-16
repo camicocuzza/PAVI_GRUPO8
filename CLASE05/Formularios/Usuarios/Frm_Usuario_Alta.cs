@@ -19,11 +19,6 @@ namespace CLASE05.Formularios.Usuarios
         }
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
-            //N1  validar los datos del formulario
-            //N1 la validacion de todo ok => realizo validación especifica
-            //----N2 -------si la validacion especifica da ok => grabo
-            //----N2 -------la validacion especifica da error => ir a corregir el error
-            //N1 si validacion da error => ir a corregir el error
             TratamientosEspeciales _TE = new TratamientosEspeciales();
 
             if(usu.ValidarExistenciaNombre(txt_n_usuario._Text) == true)
@@ -35,17 +30,7 @@ namespace CLASE05.Formularios.Usuarios
 
             if (_TE.Validar(this.Controls) == TratamientosEspeciales.RespuestaValidacion.Correcta)
             {
-                // VALIDACION ESPECIFICA
-                //if (_TE.ValidarEmail(txt_email._Text) == TratamientosEspeciales.RespuestaValidacion.Error)
-                //{
-                //    MessageBox.Show("El formato de correo es invalido");
-                //    txt_email.Focus();
-                //    return;
-                //}
-
-                // GRABAR NUEVO REGISTRO           
-
-                
+                // GRABAR NUEVO REGISTRO  
                 usu.n_usuario = txt_n_usuario._Text;
                 usu.password = txt_password._Text;
                 

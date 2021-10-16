@@ -677,6 +677,7 @@
             <Border>
               <Style>None</Style>
             </Border>
+            <BackgroundColor>White</BackgroundColor>
           </Style>
         </PageHeader>
         <PageFooter>

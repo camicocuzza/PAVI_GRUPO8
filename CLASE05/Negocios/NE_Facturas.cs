@@ -333,20 +333,19 @@ namespace CLASE05.Negocios
                         where f.num_factura = d.num_factura AND a.cod_articulo = d.cod_articulo AND f.num_factura = " + num_factura;
             return _BD.EjecutarSelect(sql);
         }
-
-        public DataTable DataSourceReporte_Ventas()
-        {
-            string sql = @"SELECT c.cuit_cliente, c.razon_social, f.num_factura, f.fecha, f.monto_total, MONTH(f.fecha) as mes, YEAR(f.fecha) as año
-                        FROM factura f JOIN cliente c ON f.cuit_cliente = c.cuit_cliente
-                        ORDER BY f.fecha";
-            return _BD.EjecutarSelect(sql);
-        }
-
         public DataTable DataSourceReporte_Ventas_Fecha(string mes, string año)
         {
             string sql = @"SELECT c.cuit_cliente, c.razon_social, f.num_factura, f.fecha, f.monto_total
                            FROM factura f JOIN cliente c ON f.cuit_cliente = c.cuit_cliente
                            WHERE MONTH(f.fecha) = " + mes + " AND YEAR(f.fecha) = " + año +
+                           " ORDER BY f.fecha";
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable DataSourceReporte_Ventas_Año(string año)
+        {
+            string sql = @"SELECT c.cuit_cliente, c.razon_social, f.num_factura, f.fecha, f.monto_total
+                           FROM factura f JOIN cliente c ON f.cuit_cliente = c.cuit_cliente
+                           WHERE YEAR(f.fecha) = " + año +
                            " ORDER BY f.fecha";
             return _BD.EjecutarSelect(sql);
         }
