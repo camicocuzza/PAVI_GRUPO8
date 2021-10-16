@@ -31,12 +31,14 @@ namespace CLASE05.Formularios.Reportes
         {
             this.tab_ventas = new System.Windows.Forms.TabControl();
             this.pag_ventasFecha = new System.Windows.Forms.TabPage();
+            this.btn_cargarVentasFecha = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmb_año = new CLASE05.Clases.ComboBox01();
             this.cmb_mes = new CLASE05.Clases.ComboBox01();
             this.rv_ventasFecha = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tab_ventasCliente = new System.Windows.Forms.TabPage();
+            this.btn_cargarVentasCliente = new System.Windows.Forms.Button();
             this.rv_ventasCliente = new Microsoft.Reporting.WinForms.ReportViewer();
             this.cmb_clientes = new CLASE05.Clases.ComboBox01();
             this.label3 = new System.Windows.Forms.Label();
@@ -74,6 +76,7 @@ namespace CLASE05.Formularios.Reportes
             // pag_ventasFecha
             // 
             this.pag_ventasFecha.BackColor = System.Drawing.Color.DimGray;
+            this.pag_ventasFecha.Controls.Add(this.btn_cargarVentasFecha);
             this.pag_ventasFecha.Controls.Add(this.label2);
             this.pag_ventasFecha.Controls.Add(this.label1);
             this.pag_ventasFecha.Controls.Add(this.cmb_año);
@@ -85,6 +88,16 @@ namespace CLASE05.Formularios.Reportes
             this.pag_ventasFecha.Size = new System.Drawing.Size(785, 618);
             this.pag_ventasFecha.TabIndex = 0;
             this.pag_ventasFecha.Text = "Ventas por fecha";
+            // 
+            // btn_cargarVentasFecha
+            // 
+            this.btn_cargarVentasFecha.Location = new System.Drawing.Point(502, 45);
+            this.btn_cargarVentasFecha.Name = "btn_cargarVentasFecha";
+            this.btn_cargarVentasFecha.Size = new System.Drawing.Size(75, 23);
+            this.btn_cargarVentasFecha.TabIndex = 8;
+            this.btn_cargarVentasFecha.Text = "Cargar";
+            this.btn_cargarVentasFecha.UseVisualStyleBackColor = true;
+            this.btn_cargarVentasFecha.Click += new System.EventHandler(this.btn_cargarVentasFecha_Click);
             // 
             // label2
             // 
@@ -177,7 +190,7 @@ namespace CLASE05.Formularios.Reportes
             // 
             // rv_ventasFecha
             // 
-            this.rv_ventasFecha.LocalReport.ReportEmbeddedResource = "CLASE05.Reportes.VentaFactura.rdlc";
+            this.rv_ventasFecha.LocalReport.ReportEmbeddedResource = "CLASE05.Reportes.Ventas.Reporte_Ventas_Fecha.rdlc";
             this.rv_ventasFecha.Location = new System.Drawing.Point(37, 112);
             this.rv_ventasFecha.Name = "rv_ventasFecha";
             this.rv_ventasFecha.ServerReport.BearerToken = null;
@@ -192,6 +205,7 @@ namespace CLASE05.Formularios.Reportes
             // tab_ventasCliente
             // 
             this.tab_ventasCliente.BackColor = System.Drawing.Color.DimGray;
+            this.tab_ventasCliente.Controls.Add(this.btn_cargarVentasCliente);
             this.tab_ventasCliente.Controls.Add(this.rv_ventasCliente);
             this.tab_ventasCliente.Controls.Add(this.cmb_clientes);
             this.tab_ventasCliente.Controls.Add(this.label3);
@@ -201,6 +215,16 @@ namespace CLASE05.Formularios.Reportes
             this.tab_ventasCliente.Size = new System.Drawing.Size(785, 618);
             this.tab_ventasCliente.TabIndex = 1;
             this.tab_ventasCliente.Text = "Ventas por cliente";
+            // 
+            // btn_cargarVentasCliente
+            // 
+            this.btn_cargarVentasCliente.Location = new System.Drawing.Point(304, 34);
+            this.btn_cargarVentasCliente.Name = "btn_cargarVentasCliente";
+            this.btn_cargarVentasCliente.Size = new System.Drawing.Size(75, 23);
+            this.btn_cargarVentasCliente.TabIndex = 11;
+            this.btn_cargarVentasCliente.Text = "Cargar";
+            this.btn_cargarVentasCliente.UseVisualStyleBackColor = true;
+            this.btn_cargarVentasCliente.Click += new System.EventHandler(this.btn_cargarVentasCliente_Click);
             // 
             // rv_ventasCliente
             // 
@@ -279,5 +303,7 @@ namespace CLASE05.Formularios.Reportes
         private System.Windows.Forms.Label label3;
         private Microsoft.Reporting.WinForms.ReportViewer rv_ventasCliente;
         private Clases.ComboBox01 cmb_clientes;
+        private System.Windows.Forms.Button btn_cargarVentasFecha;
+        private System.Windows.Forms.Button btn_cargarVentasCliente;
     }
 }

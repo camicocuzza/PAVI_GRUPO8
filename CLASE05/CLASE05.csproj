@@ -562,7 +562,8 @@
     <EmbeddedResource Include="Formularios\_FrmBASE\FrmBase_Prueba_ABM_Entrada.resx">
       <DependentUpon>FrmBase_Prueba_ABM_Entrada.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\Ventas\Reporte_Ventas.rdlc" />
+    <EmbeddedResource Include="Reportes\Ventas\Reporte_Ventas_Cliente.rdlc" />
+    <EmbeddedResource Include="Reportes\Ventas\Reporte_Ventas_Fecha.rdlc" />
     <EmbeddedResource Include="Reportes\Ventas\VentaFactura.rdlc" />
     <EmbeddedResource Include="Formularios\Articulos\Frm_ABM_Articulos_Entrada.resx">
       <DependentUpon>Frm_ABM_Articulos_Entrada.cs</DependentUpon>

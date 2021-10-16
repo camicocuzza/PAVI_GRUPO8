@@ -9,12 +9,12 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Reporte_VentasTableAdapter" GeneratorDataComponentClassName="Reporte_VentasTableAdapter" Name="Reporte_Ventas" UserDataComponentName="Reporte_VentasTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BD3K3G08_2021ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BD3K3G08_2021ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT c.cuit_cliente, c.razon_social, f.num_factura, f.fecha, f.monto_total
+                    <CommandText>SELECT c.cuit_cliente, c.razon_social, f.num_factura, f.fecha, f.monto_total, MONTH(f.fecha) as mes, YEAR(f.fecha) as año
 FROM factura f JOIN cliente c ON f.cuit_cliente = c.cuit_cliente
-ORDER BY f.fecha</CommandText>
+ORDER BY año, mes</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -26,6 +26,8 @@ ORDER BY f.fecha</CommandText>
               <Mapping SourceColumn="num_factura" DataSetColumn="num_factura" />
               <Mapping SourceColumn="fecha" DataSetColumn="fecha" />
               <Mapping SourceColumn="monto_total" DataSetColumn="monto_total" />
+              <Mapping SourceColumn="mes" DataSetColumn="mes" />
+              <Mapping SourceColumn="año" DataSetColumn="año" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -57,6 +59,8 @@ ORDER BY f.fecha</CommandText>
               <xs:element name="num_factura" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnum_factura" msprop:Generator_ColumnPropNameInRow="num_factura" msprop:Generator_ColumnPropNameInTable="num_facturaColumn" msprop:Generator_UserColumnName="num_factura" type="xs:int" />
               <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
               <xs:element name="monto_total" msprop:Generator_ColumnVarNameInTable="columnmonto_total" msprop:Generator_ColumnPropNameInRow="monto_total" msprop:Generator_ColumnPropNameInTable="monto_totalColumn" msprop:Generator_UserColumnName="monto_total" type="xs:double" minOccurs="0" />
+              <xs:element name="mes" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnmes" msprop:Generator_ColumnPropNameInRow="mes" msprop:Generator_ColumnPropNameInTable="mesColumn" msprop:Generator_UserColumnName="mes" type="xs:int" minOccurs="0" />
+              <xs:element name="año" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnaño" msprop:Generator_ColumnPropNameInRow="año" msprop:Generator_ColumnPropNameInTable="añoColumn" msprop:Generator_UserColumnName="año" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

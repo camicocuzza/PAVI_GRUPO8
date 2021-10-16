@@ -91,7 +91,7 @@ namespace CLASE05.Negocios
             string sql = @"SELECT f.id_tipo_factura, f.numero_factura, c.cuit_cliente, c.razon_social,  FORMAT(f.fecha, 'dd/MM/yyyy') as fecha
                          FROM factura f, cliente c, empleado e
                          WHERE f.cuit_cliente = c.cuit_cliente AND f.legajo_empleado = e.legajo_empleado
-                        AND f.fecha BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "' AND f.eliminado = 0";
+                         AND f.fecha BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "' AND f.eliminado = 0";
 
             return _BD.EjecutarSelect(sql);
         }
@@ -331,6 +331,31 @@ namespace CLASE05.Negocios
             string sql = @"select * , d.cantidad * d.precio as subtotal
                         from factura f, detalle_factura_articulo d, articulo a
                         where f.num_factura = d.num_factura AND a.cod_articulo = d.cod_articulo AND f.num_factura = " + num_factura;
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable DataSourceReporte_Ventas()
+        {
+            string sql = @"SELECT c.cuit_cliente, c.razon_social, f.num_factura, f.fecha, f.monto_total, MONTH(f.fecha) as mes, YEAR(f.fecha) as año
+                        FROM factura f JOIN cliente c ON f.cuit_cliente = c.cuit_cliente
+                        ORDER BY f.fecha";
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable DataSourceReporte_Ventas_Fecha(string mes, string año)
+        {
+            string sql = @"SELECT c.cuit_cliente, c.razon_social, f.num_factura, f.fecha, f.monto_total
+                           FROM factura f JOIN cliente c ON f.cuit_cliente = c.cuit_cliente
+                           WHERE MONTH(f.fecha) = " + mes + " AND YEAR(f.fecha) = " + año +
+                           " ORDER BY f.fecha";
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable DataSourceReporte_Ventas_Cliente(string cuit_cliente)
+        {
+            string sql = @"SELECT c.cuit_cliente, c.razon_social, f.num_factura, f.fecha, f.monto_total
+                           FROM factura f JOIN cliente c ON f.cuit_cliente = c.cuit_cliente
+                           WHERE f.cuit_cliente = '" + cuit_cliente +
+                           "' ORDER BY f.fecha";
             return _BD.EjecutarSelect(sql);
         }
     }

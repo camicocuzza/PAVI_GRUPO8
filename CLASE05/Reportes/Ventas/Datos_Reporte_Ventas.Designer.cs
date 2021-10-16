@@ -289,6 +289,10 @@ namespace CLASE05.Reportes.Ventas {
             
             private global::System.Data.DataColumn columnmonto_total;
             
+            private global::System.Data.DataColumn columnmes;
+            
+            private global::System.Data.DataColumn columnaño;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public Reporte_VentasDataTable() {
@@ -364,6 +368,22 @@ namespace CLASE05.Reportes.Ventas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn mesColumn {
+                get {
+                    return this.columnmes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn añoColumn {
+                get {
+                    return this.columnaño;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -399,14 +419,16 @@ namespace CLASE05.Reportes.Ventas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Reporte_VentasRow AddReporte_VentasRow(string cuit_cliente, string razon_social, System.DateTime fecha, double monto_total) {
+            public Reporte_VentasRow AddReporte_VentasRow(string cuit_cliente, string razon_social, System.DateTime fecha, double monto_total, int mes, int año) {
                 Reporte_VentasRow rowReporte_VentasRow = ((Reporte_VentasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         cuit_cliente,
                         razon_social,
                         null,
                         fecha,
-                        monto_total};
+                        monto_total,
+                        mes,
+                        año};
                 rowReporte_VentasRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowReporte_VentasRow);
                 return rowReporte_VentasRow;
@@ -434,6 +456,8 @@ namespace CLASE05.Reportes.Ventas {
                 this.columnnum_factura = base.Columns["num_factura"];
                 this.columnfecha = base.Columns["fecha"];
                 this.columnmonto_total = base.Columns["monto_total"];
+                this.columnmes = base.Columns["mes"];
+                this.columnaño = base.Columns["año"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -449,6 +473,10 @@ namespace CLASE05.Reportes.Ventas {
                 base.Columns.Add(this.columnfecha);
                 this.columnmonto_total = new global::System.Data.DataColumn("monto_total", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmonto_total);
+                this.columnmes = new global::System.Data.DataColumn("mes", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmes);
+                this.columnaño = new global::System.Data.DataColumn("año", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnaño);
                 this.columncuit_cliente.AllowDBNull = false;
                 this.columncuit_cliente.MaxLength = 50;
                 this.columnrazon_social.MaxLength = 50;
@@ -457,6 +485,8 @@ namespace CLASE05.Reportes.Ventas {
                 this.columnnum_factura.AutoIncrementStep = -1;
                 this.columnnum_factura.AllowDBNull = false;
                 this.columnnum_factura.ReadOnly = true;
+                this.columnmes.ReadOnly = true;
+                this.columnaño.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -669,6 +699,38 @@ namespace CLASE05.Reportes.Ventas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int mes {
+                get {
+                    try {
+                        return ((int)(this[this.tableReporte_Ventas.mesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'mes\' de la tabla \'Reporte_Ventas\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReporte_Ventas.mesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int año {
+                get {
+                    try {
+                        return ((int)(this[this.tableReporte_Ventas.añoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'año\' de la tabla \'Reporte_Ventas\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReporte_Ventas.añoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Israzon_socialNull() {
                 return this.IsNull(this.tableReporte_Ventas.razon_socialColumn);
             }
@@ -701,6 +763,30 @@ namespace CLASE05.Reportes.Ventas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setmonto_totalNull() {
                 this[this.tableReporte_Ventas.monto_totalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsmesNull() {
+                return this.IsNull(this.tableReporte_Ventas.mesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetmesNull() {
+                this[this.tableReporte_Ventas.mesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsañoNull() {
+                return this.IsNull(this.tableReporte_Ventas.añoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetañoNull() {
+                this[this.tableReporte_Ventas.añoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -868,6 +954,8 @@ namespace CLASE05.Reportes.Ventas.Datos_Reporte_VentasTableAdapters {
             tableMapping.ColumnMappings.Add("num_factura", "num_factura");
             tableMapping.ColumnMappings.Add("fecha", "fecha");
             tableMapping.ColumnMappings.Add("monto_total", "monto_total");
+            tableMapping.ColumnMappings.Add("mes", "mes");
+            tableMapping.ColumnMappings.Add("año", "año");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -884,8 +972,9 @@ namespace CLASE05.Reportes.Ventas.Datos_Reporte_VentasTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT c.cuit_cliente, c.razon_social, f.num_factura, f.fecha, f.monto_total\r\nFRO" +
-                "M factura f JOIN cliente c ON f.cuit_cliente = c.cuit_cliente\r\nORDER BY f.fecha";
+            this._commandCollection[0].CommandText = "SELECT c.cuit_cliente, c.razon_social, f.num_factura, f.fecha, f.monto_total, MON" +
+                "TH(f.fecha) as mes, YEAR(f.fecha) as año\r\nFROM factura f JOIN cliente c ON f.cui" +
+                "t_cliente = c.cuit_cliente\r\nORDER BY año, mes";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
