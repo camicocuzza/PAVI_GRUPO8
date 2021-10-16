@@ -368,6 +368,12 @@
     <Compile Include="Formularios\Facturas\Frm_VentaFactura.Designer.cs">
       <DependentUpon>Frm_VentaFactura.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Reportes\Frm_Reporte_Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Frm_Reporte_Ventas.Designer.cs">
+      <DependentUpon>Frm_Reporte_Ventas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\_FrmBASE\FrmBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -535,6 +541,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatosFactura.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\Ventas\Datos_Reporte_Ventas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datos_Reporte_Ventas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Clases\ComboBox01.resx">
       <DependentUpon>ComboBox01.cs</DependentUpon>
@@ -545,9 +556,13 @@
     <EmbeddedResource Include="Clases\TextBox02.resx">
       <DependentUpon>TextBox02.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Frm_Reporte_Ventas.resx">
+      <DependentUpon>Frm_Reporte_Ventas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\_FrmBASE\FrmBase_Prueba_ABM_Entrada.resx">
       <DependentUpon>FrmBase_Prueba_ABM_Entrada.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\Reporte_Ventas.rdlc" />
     <EmbeddedResource Include="Reportes\Ventas\VentaFactura.rdlc" />
     <EmbeddedResource Include="Formularios\Articulos\Frm_ABM_Articulos_Entrada.resx">
       <DependentUpon>Frm_ABM_Articulos_Entrada.cs</DependentUpon>
@@ -776,6 +791,17 @@
     </None>
     <None Include="Reportes\Ventas\DatosFactura.xss">
       <DependentUpon>DatosFactura.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\Ventas\Datos_Reporte_Ventas.xsc">
+      <DependentUpon>Datos_Reporte_Ventas.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\Ventas\Datos_Reporte_Ventas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Datos_Reporte_Ventas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\Ventas\Datos_Reporte_Ventas.xss">
+      <DependentUpon>Datos_Reporte_Ventas.xsd</DependentUpon>
     </None>
     <None Include="Resources\images %281%29.png" />
   </ItemGroup>
