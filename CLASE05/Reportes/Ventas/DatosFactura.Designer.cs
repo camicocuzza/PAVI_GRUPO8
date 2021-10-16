@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace CLASE05.Reportes {
+namespace CLASE05.Reportes.Ventas {
     
     
     /// <summary>
@@ -2555,7 +2555,7 @@ namespace CLASE05.Reportes {
         }
     }
 }
-namespace CLASE05.Reportes.DatosFacturaTableAdapters {
+namespace CLASE05.Reportes.Ventas.DatosFacturaTableAdapters {
     
     
     /// <summary>

@@ -530,7 +530,7 @@
     <Compile Include="Negocios\NE_Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reportes\DatosFactura.Designer.cs">
+    <Compile Include="Reportes\Ventas\DatosFactura.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DatosFactura.xsd</DependentUpon>
@@ -548,7 +548,7 @@
     <EmbeddedResource Include="Formularios\_FrmBASE\FrmBase_Prueba_ABM_Entrada.resx">
       <DependentUpon>FrmBase_Prueba_ABM_Entrada.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\VentaFactura.rdlc" />
+    <EmbeddedResource Include="Reportes\Ventas\VentaFactura.rdlc" />
     <EmbeddedResource Include="Formularios\Articulos\Frm_ABM_Articulos_Entrada.resx">
       <DependentUpon>Frm_ABM_Articulos_Entrada.cs</DependentUpon>
     </EmbeddedResource>
@@ -766,15 +766,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Reportes\DatosFactura.xsc">
+    <None Include="Reportes\Ventas\DatosFactura.xsc">
       <DependentUpon>DatosFactura.xsd</DependentUpon>
     </None>
-    <None Include="Reportes\DatosFactura.xsd">
+    <None Include="Reportes\Ventas\DatosFactura.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DatosFactura.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Reportes\DatosFactura.xss">
+    <None Include="Reportes\Ventas\DatosFactura.xss">
       <DependentUpon>DatosFactura.xsd</DependentUpon>
     </None>
     <None Include="Resources\images %281%29.png" />
@@ -877,6 +877,9 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reportes\Artículos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

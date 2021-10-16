@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using CLASE05.Reportes;
+using CLASE05.Reportes.Ventas;
 using System.IO;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
@@ -42,7 +42,7 @@ namespace CLASE05.Formularios.Facturas
                 new ReportParameter("ciudad", parametros[8].ToString())               
             };
 
-            this.rvListado.LocalReport.ReportEmbeddedResource = "CLASE05.Reportes.VentaFactura.rdlc";
+            this.rvListado.LocalReport.ReportEmbeddedResource = "CLASE05.Reportes.Ventas.VentaFactura.rdlc";
             this.rvListado.LocalReport.DataSources.Clear();
             this.rvListado.LocalReport.DataSources.Add(reporteArt);
             this.rvListado.LocalReport.DataSources.Add(reporteEns);

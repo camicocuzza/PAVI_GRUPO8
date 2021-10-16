@@ -94,7 +94,7 @@ namespace CLASE05.Formularios.Facturas
             this.lblInformes.ForeColor = System.Drawing.Color.White;
             this.lblInformes.Location = new System.Drawing.Point(401, 605);
             this.lblInformes.Name = "lblInformes";
-            this.lblInformes.Size = new System.Drawing.Size(430, 58);
+            this.lblInformes.Size = new System.Drawing.Size(389, 58);
             this.lblInformes.TabIndex = 28;
             this.lblInformes.Text = "INFORME";
             this.lblInformes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
