@@ -153,7 +153,8 @@ namespace CLASE05.Formularios.InicioSistema
 
         private void btn_reportes_Click(object sender, EventArgs e)
         {
-
+            Frm_BaseReportes frm_basereportes = new Frm_BaseReportes();
+            frm_basereportes.ShowDialog();
         }
 
         private void btn_clientes_Click(object sender, EventArgs e)
