@@ -155,28 +155,6 @@ namespace CLASE05.Formularios.Reportes
             this.cmb_año.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_año.ForeColor = System.Drawing.Color.White;
             this.cmb_año.FormattingEnabled = true;
-            this.cmb_año.Items.AddRange(new object[] {
-            "2010",
-            "2011",
-            "2012",
-            "2013",
-            "2014",
-            "2015",
-            "2016",
-            "2017",
-            "2018",
-            "2019",
-            "2020",
-            "2021",
-            "2022",
-            "2023",
-            "2024",
-            "2025",
-            "2026",
-            "2027",
-            "2028",
-            "2029",
-            "2030"});
             this.cmb_año.Location = new System.Drawing.Point(107, 64);
             this.cmb_año.Name = "cmb_año";
             this.cmb_año.Size = new System.Drawing.Size(124, 25);

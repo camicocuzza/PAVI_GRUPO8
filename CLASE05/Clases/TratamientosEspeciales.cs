@@ -103,6 +103,14 @@ namespace CLASE05.Clases
             string sql = "SELECT GETDATE()"; 
             return _BD.EjecutarSelect(sql).Rows[0][0].ToString();
         }
+        public string RecuperarAñoSistema()
+        {
+            BE_Acceso_Datos _BD = new BE_Acceso_Datos();
+
+            string sql = "SELECT YEAR(GETDATE())";
+            return _BD.EjecutarSelect(sql).Rows[0][0].ToString();
+        }
+
 
         public string FormatearDato(string dato, string TipoDato)
         {

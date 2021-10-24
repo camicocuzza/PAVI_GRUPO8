@@ -32,7 +32,11 @@ namespace CLASE05.Formularios.Reportes
                 MessageBox.Show("Complete el año", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-
+            if (txt_mes._Text !="" && int.Parse(txt_mes._Text) >= 13)
+            {
+                MessageBox.Show("Ingrese mes válido", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             NE_Compras compra = new NE_Compras();
             ReportDataSource datos;
 

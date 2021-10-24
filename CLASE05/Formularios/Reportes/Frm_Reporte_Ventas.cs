@@ -24,24 +24,30 @@ namespace CLASE05.Formularios.Reportes
         private void Frm_Reporte_Ventas_Load(object sender, EventArgs e)
         {
             cmb_clientes._Cargar();
+            cargarComboAño();
             this._FormularioMovil = true;
         }
 
+        private void cargarComboAño()
+        {
+            cmb_año.DisplayMember = "Text";
+            cmb_año.ValueMember = "Value";
+            int val = 0;
+            for (int i = 2010; i <= DateTime.Now.Year; i++)
+            {
+                cmb_año.Items.Add(new { Text = i.ToString(), Value=val.ToString() });
+                val++;
+            }
+        }
         private void btn_cargarVentasFecha_Click(object sender, EventArgs e)
         {
             if (cmb_año.SelectedIndex == -1)
             {
                 MessageBox.Show("Seleccionar año", "Importante");
                 return;
-            }
-            //if (cmb_mes.SelectedIndex == -1)
-            //{
-            //    MessageBox.Show("Seleccionar mes", "Importante");
-            //    return;
-            //}
-            
+            }            
             int mes = cmb_mes.SelectedIndex + 1;
-            int año = cmb_año.SelectedIndex + 2010;
+            int año = int.Parse(cmb_año.Text);
             ReportDataSource reporteVentas;
 
             if (cmb_mes.SelectedIndex == -1)
