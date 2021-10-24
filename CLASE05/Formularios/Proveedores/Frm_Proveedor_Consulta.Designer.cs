@@ -85,7 +85,6 @@ namespace CLASE05.Formularios.Proveedores
             // 
             // Frm_Proveedor_Consulta
             // 
-            this._PosiciónVisible = true;
             this._Titulo = "Datos del proveedor";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(547, 434);

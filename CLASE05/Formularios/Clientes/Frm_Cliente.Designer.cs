@@ -329,7 +329,6 @@ namespace CLASE05.Formularios.Clientes
             // Frm_Cliente
             // 
             this._FormularioMovil = true;
-            this._PosiciónVisible = false;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(516, 516);
@@ -354,7 +353,6 @@ namespace CLASE05.Formularios.Clientes
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
-            this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.Controls.SetChildIndex(this.txt_nombre_contacto, 0);
             this.Controls.SetChildIndex(this.txt_direccion, 0);
             this.Controls.SetChildIndex(this.txt_razon_social, 0);

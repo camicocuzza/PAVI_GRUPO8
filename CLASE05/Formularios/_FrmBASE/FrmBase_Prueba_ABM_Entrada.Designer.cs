@@ -333,7 +333,6 @@ namespace CLASE05.Formularios._FrmBASE
             // FrmBase_Prueba_ABM_Entrada
             // 
             this._FormularioMovil = true;
-            this._PosiciónVisible = false;
             this._titulo = "Clientes";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
@@ -358,7 +357,6 @@ namespace CLASE05.Formularios._FrmBASE
             this.Controls.SetChildIndex(this.btn_consultar, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
-            this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);

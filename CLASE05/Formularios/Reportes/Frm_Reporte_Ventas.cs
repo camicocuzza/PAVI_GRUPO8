@@ -24,6 +24,7 @@ namespace CLASE05.Formularios.Reportes
         private void Frm_Reporte_Ventas_Load(object sender, EventArgs e)
         {
             cmb_clientes._Cargar();
+            this._FormularioMovil = true;
         }
 
         private void btn_cargarVentasFecha_Click(object sender, EventArgs e)

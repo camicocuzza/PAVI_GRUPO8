@@ -96,7 +96,6 @@ namespace CLASE05.Formularios.Clientes
             // Frm_Cliente_Consulta
             // 
             this._FormularioMovil = true;
-            this._PosiciónVisible = false;
             this._Titulo = "Datos de Cliente";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(516, 516);

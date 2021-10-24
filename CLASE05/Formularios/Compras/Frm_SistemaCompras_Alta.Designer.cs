@@ -94,7 +94,6 @@ namespace CLASE05.Formularios.Compras
             // 
             // Frm_SistemaCompras_Alta
             // 
-            this._PosiciónVisible = true;
             this._Titulo = "Agregar Compra";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(824, 464);
@@ -113,7 +112,6 @@ namespace CLASE05.Formularios.Compras
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
-            this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.Controls.SetChildIndex(this.txt_fecha, 0);
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.txt_total, 0);

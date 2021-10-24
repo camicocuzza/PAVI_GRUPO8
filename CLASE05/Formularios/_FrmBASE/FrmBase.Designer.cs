@@ -32,7 +32,6 @@
             this.btn_minimizar = new System.Windows.Forms.Button();
             this.btn_maximizar = new System.Windows.Forms.Button();
             this.btn_cerrar = new System.Windows.Forms.Button();
-            this.lbl_posicion = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_minimizar
@@ -70,18 +69,11 @@
             this.btn_cerrar.MouseLeave += new System.EventHandler(this.btn_cerrar_MouseLeave);
             this.btn_cerrar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_cerrar_MouseMove);
             // 
-            // lbl_posicion
-            // 
-            resources.ApplyResources(this.lbl_posicion, "lbl_posicion");
-            this.lbl_posicion.ForeColor = System.Drawing.Color.Silver;
-            this.lbl_posicion.Name = "lbl_posicion";
-            // 
             // FrmBase
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.Controls.Add(this.lbl_posicion);
             this.Controls.Add(this.btn_minimizar);
             this.Controls.Add(this.btn_maximizar);
             this.Controls.Add(this.btn_cerrar);
@@ -91,10 +83,6 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmBase_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FrmBase_MouseUp);
             this.ResumeLayout(false);
-            this.PerformLayout();
-            this._FormularioMovil = true;
-            this._PosiciónVisible = false;
-
 
         }
 
@@ -102,6 +90,5 @@
         public System.Windows.Forms.Button btn_cerrar;
         public System.Windows.Forms.Button btn_minimizar;
         public System.Windows.Forms.Button btn_maximizar;
-        public System.Windows.Forms.Label lbl_posicion;
     }
 }

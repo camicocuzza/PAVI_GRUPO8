@@ -155,7 +155,6 @@ namespace CLASE05.Formularios.Usuarios
             // Frm_Usuario
             // 
             this._FormularioMovil = true;
-            this._PosiciónVisible = false;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(442, 384);
@@ -172,7 +171,6 @@ namespace CLASE05.Formularios.Usuarios
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
             this.Controls.SetChildIndex(this.btn_aceptar, 0);
             this.Controls.SetChildIndex(this.txt_n_usuario, 0);
-            this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.Controls.SetChildIndex(this.txt_id_usuario, 0);
             this.Controls.SetChildIndex(this.txt_password, 0);
             this.ResumeLayout(false);

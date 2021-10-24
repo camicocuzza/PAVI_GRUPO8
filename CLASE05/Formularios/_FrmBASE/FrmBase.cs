@@ -16,13 +16,6 @@ namespace CLASE05.Formularios.FrmBASE
         int posicionX, posicionY;
 
         public bool _FormularioMovil { get; set; }
-
-        public bool _PosiciónVisible
-        {
-            get { return lbl_posicion.Visible; }
-            set { lbl_posicion.Visible = value; }
-        }
-
         public bool Pp_minimizarVisible
         {
             set { btn_minimizar.Visible = value; }
@@ -75,7 +68,6 @@ namespace CLASE05.Formularios.FrmBASE
             {
                 this.Location = new Point(this.Location.X + e.X - posicionX, this.Location.Y + e.Y - posicionY);
                 this.Refresh();
-                lbl_posicion.Text = "X: " + this.Location.X + "; Y: " + this.Location.Y;
             }
         }
         private void FrmBase_MouseUp(object sender, MouseEventArgs e)

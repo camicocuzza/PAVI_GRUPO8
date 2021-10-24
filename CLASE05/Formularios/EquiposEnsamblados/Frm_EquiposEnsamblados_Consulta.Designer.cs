@@ -119,7 +119,6 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             // 
             // Frm_EquiposEnsamblados_Consulta
             // 
-            this._PosiciónVisible = true;
             this._Titulo = "Datos del equipo ensamblado";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(595, 526);
@@ -131,7 +130,6 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
-            this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.Controls.SetChildIndex(this.btn_aceptar, 0);
             this.Controls.SetChildIndex(this.txt_cod_p_ensamblado, 0);
             this.Controls.SetChildIndex(this.txt_precio, 0);

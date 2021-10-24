@@ -70,7 +70,6 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             // 
             // Frm_EquiposEnsamblados_Baja
             // 
-            this._PosiciónVisible = true;
             this._Titulo = "Baja de Equipo Ensamblado";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(414, 342);

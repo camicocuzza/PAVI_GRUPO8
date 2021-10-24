@@ -71,7 +71,7 @@ namespace CLASE05.Formularios.Reportes
             this.tab_ventas.Location = new System.Drawing.Point(1, 2);
             this.tab_ventas.Name = "tab_ventas";
             this.tab_ventas.SelectedIndex = 0;
-            this.tab_ventas.Size = new System.Drawing.Size(756, 656);
+            this.tab_ventas.Size = new System.Drawing.Size(756, 627);
             this.tab_ventas.TabIndex = 2;
             this.tab_ventas.Tag = "";
             // 
@@ -89,7 +89,7 @@ namespace CLASE05.Formularios.Reportes
             this.pag_ventasFecha.Location = new System.Drawing.Point(4, 22);
             this.pag_ventasFecha.Name = "pag_ventasFecha";
             this.pag_ventasFecha.Padding = new System.Windows.Forms.Padding(3);
-            this.pag_ventasFecha.Size = new System.Drawing.Size(748, 630);
+            this.pag_ventasFecha.Size = new System.Drawing.Size(748, 601);
             this.pag_ventasFecha.TabIndex = 0;
             this.pag_ventasFecha.Text = "Ventas por fecha";
             // 
@@ -218,6 +218,8 @@ namespace CLASE05.Formularios.Reportes
             // 
             // rv_ventasFecha
             // 
+            this.rv_ventasFecha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.rv_ventasFecha.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rv_ventasFecha.LocalReport.ReportEmbeddedResource = "CLASE05.Reportes.Ventas.Reporte_Ventas_Fecha.rdlc";
             this.rv_ventasFecha.Location = new System.Drawing.Point(12, 116);
@@ -228,7 +230,7 @@ namespace CLASE05.Formularios.Reportes
             this.rv_ventasFecha.ShowPromptAreaButton = false;
             this.rv_ventasFecha.ShowRefreshButton = false;
             this.rv_ventasFecha.ShowStopButton = false;
-            this.rv_ventasFecha.Size = new System.Drawing.Size(724, 507);
+            this.rv_ventasFecha.Size = new System.Drawing.Size(724, 478);
             this.rv_ventasFecha.TabIndex = 3;
             // 
             // tab_ventasCliente
@@ -242,7 +244,7 @@ namespace CLASE05.Formularios.Reportes
             this.tab_ventasCliente.Location = new System.Drawing.Point(4, 22);
             this.tab_ventasCliente.Name = "tab_ventasCliente";
             this.tab_ventasCliente.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_ventasCliente.Size = new System.Drawing.Size(748, 630);
+            this.tab_ventasCliente.Size = new System.Drawing.Size(748, 487);
             this.tab_ventasCliente.TabIndex = 1;
             this.tab_ventasCliente.Text = "Ventas por cliente";
             // 
@@ -320,9 +322,8 @@ namespace CLASE05.Formularios.Reportes
             // 
             // Frm_Reporte_Ventas
             // 
-            this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(759, 659);
+            this.ClientSize = new System.Drawing.Size(759, 630);
             this.Controls.Add(this.tab_ventas);
             this.Name = "Frm_Reporte_Ventas";
             this.Load += new System.EventHandler(this.Frm_Reporte_Ventas_Load);
@@ -330,14 +331,12 @@ namespace CLASE05.Formularios.Reportes
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
-            this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.tab_ventas.ResumeLayout(false);
             this.pag_ventasFecha.ResumeLayout(false);
             this.pag_ventasFecha.PerformLayout();
             this.tab_ventasCliente.ResumeLayout(false);
             this.tab_ventasCliente.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

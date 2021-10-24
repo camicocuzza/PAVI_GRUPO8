@@ -155,7 +155,6 @@ namespace CLASE05.Formularios.Facturas
             // 
             // Frm_VentaFactura
             // 
-            this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(842, 675);
             this.Controls.Add(this.txtEmail);
@@ -169,7 +168,6 @@ namespace CLASE05.Formularios.Facturas
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
-            this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.Controls.SetChildIndex(this.rvListado, 0);
             this.Controls.SetChildIndex(this.btnImprimir, 0);
             this.Controls.SetChildIndex(this.btnPDF, 0);

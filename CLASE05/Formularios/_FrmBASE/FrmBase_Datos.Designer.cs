@@ -74,7 +74,6 @@ namespace CLASE05.Formularios.FrmBASE
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
-            this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

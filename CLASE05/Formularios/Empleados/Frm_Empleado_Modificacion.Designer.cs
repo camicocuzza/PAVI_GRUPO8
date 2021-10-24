@@ -53,7 +53,6 @@ namespace CLASE05.Formularios.Empleados
             // 
             // Frm_Empleado_Modificacion
             // 
-            this._PosiciónVisible = true;
             this._Titulo = "Modificación de empleado";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(546, 446);

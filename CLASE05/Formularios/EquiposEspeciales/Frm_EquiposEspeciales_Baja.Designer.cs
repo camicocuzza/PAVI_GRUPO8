@@ -93,7 +93,6 @@ namespace CLASE05.Formularios.EquiposEspeciales
             // 
             // Frm_EquiposEspeciales_Baja
             // 
-            this._PosiciónVisible = true;
             this._Titulo = "Baja de Equipo Especial";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(420, 456);
@@ -105,7 +104,6 @@ namespace CLASE05.Formularios.EquiposEspeciales
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
-            this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.Controls.SetChildIndex(this.cmb_equipos, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.cmb_clientes, 0);

@@ -21,6 +21,7 @@ namespace CLASE05.Formularios.Reportes
         {
             cmb_proveedores._Cargar();
             this.rv01.RefreshReport();
+            this._FormularioMovil = true;
         }
 
         private void btn_cargarComprasFecha_Click(object sender, EventArgs e)

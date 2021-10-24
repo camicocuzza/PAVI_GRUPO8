@@ -244,7 +244,6 @@ namespace CLASE05.Formularios.Usuarios
             // 
             // Frm_ABM_Usuario_Entrada
             // 
-            this._PosiciónVisible = true;
             this._titulo = "Usuarios";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(669, 499);
@@ -253,7 +252,6 @@ namespace CLASE05.Formularios.Usuarios
             this.Name = "Frm_ABM_Usuario_Entrada";
             this.Load += new System.EventHandler(this.Frm_ABM_Usuario_Load);
             this.Controls.SetChildIndex(this.btn_consultar, 0);
-            this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);

@@ -92,7 +92,6 @@ namespace CLASE05.Formularios.Clientes
             // Frm_Cliente_Alta
             // 
             this._FormularioMovil = true;
-            this._PosiciónVisible = false;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(516, 516);
             this.Name = "Frm_Cliente_Alta";

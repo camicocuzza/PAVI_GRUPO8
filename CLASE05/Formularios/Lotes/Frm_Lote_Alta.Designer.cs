@@ -50,7 +50,6 @@ namespace CLASE05.Formularios.Lotes
             // Frm_Lote_Alta
             // 
             this._FormularioMovil = true;
-            this._PosiciónVisible = false;
             this._Titulo = "Alta de Lote";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(438, 341);

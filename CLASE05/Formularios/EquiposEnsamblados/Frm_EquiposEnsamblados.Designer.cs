@@ -151,7 +151,6 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             // 
             // Frm_EquiposEnsamblados
             // 
-            this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(414, 360);
             this.Controls.Add(this.txt_nombre);
@@ -164,7 +163,6 @@ namespace CLASE05.Formularios.EquiposEnsamblados
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
-            this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.Controls.SetChildIndex(this.lbl_titulo, 0);
             this.Controls.SetChildIndex(this.btn_aceptar, 0);
             this.Controls.SetChildIndex(this.txt_cod_p_ensamblado, 0);

@@ -78,7 +78,6 @@ namespace CLASE05.Formularios.Clientes
             // 
             // Frm_Cliente_Modificacion
             // 
-            this._PosiciónVisible = true;
             this._Titulo = "Modificación de Clientes";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(516, 516);

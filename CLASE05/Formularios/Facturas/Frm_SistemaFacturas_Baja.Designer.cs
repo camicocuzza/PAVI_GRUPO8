@@ -359,7 +359,6 @@ namespace CLASE05.Formularios.Facturas
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
-            this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.Controls.SetChildIndex(this.label12, 0);
             this.Controls.SetChildIndex(this.txt_legajo_empleado, 0);
             this.Controls.SetChildIndex(this.cmb_tipo_factura, 0);

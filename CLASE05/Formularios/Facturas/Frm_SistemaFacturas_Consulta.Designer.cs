@@ -178,14 +178,9 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_maximizar.Location = new System.Drawing.Point(989, 2);
-            // 
-            // lbl_posicion
-            // 
-            this.lbl_posicion.ForeColor = System.Drawing.Color.White;
-            // 
+            //
             // Frm_SistemaFacturas_Consulta
             // 
-            this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1063, 596);
             this.Name = "Frm_SistemaFacturas_Consulta";

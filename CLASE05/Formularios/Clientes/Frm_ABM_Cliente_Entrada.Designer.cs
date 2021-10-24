@@ -272,7 +272,6 @@ namespace CLASE05.Formularios.Clientes
             // Frm_ABM_Cliente_Entrada
             // 
             this._FormularioMovil = true;
-            this._PosiciónVisible = false;
             this._titulo = "Clientes";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(669, 488);
@@ -289,7 +288,6 @@ namespace CLASE05.Formularios.Clientes
             this.Controls.SetChildIndex(this.btn_modificar, 0);
             this.Controls.SetChildIndex(this.btn_borrar, 0);
             this.Controls.SetChildIndex(this.btn_consultar, 0);
-            this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);

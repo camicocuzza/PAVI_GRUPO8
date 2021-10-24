@@ -98,7 +98,6 @@ namespace CLASE05.Formularios.Compras
             // 
             // Frm_SistemaCompras_Baja
             // 
-            this._PosiciónVisible = true;
             this._Titulo = "Eliminar Compra";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(823, 467);

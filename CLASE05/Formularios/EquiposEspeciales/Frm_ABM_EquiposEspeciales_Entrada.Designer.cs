@@ -218,7 +218,6 @@ namespace CLASE05.Formularios.EquiposEspeciales
             // 
             // Frm_ABM_EquiposEspeciales_Entrada
             // 
-            this._PosiciónVisible = true;
             this._titulo = "Equipos Especiales";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(669, 439);
@@ -233,7 +232,6 @@ namespace CLASE05.Formularios.EquiposEspeciales
             this.Controls.SetChildIndex(this.btn_modificar, 0);
             this.Controls.SetChildIndex(this.btn_borrar, 0);
             this.Controls.SetChildIndex(this.btn_consultar, 0);
-            this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);

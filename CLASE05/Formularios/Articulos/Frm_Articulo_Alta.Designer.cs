@@ -64,7 +64,6 @@ namespace CLASE05.Formularios.Articulos
             // 
             // Frm_Articulo_Alta
             // 
-            this._PosiciónVisible = true;
             this._Titulo = "Alta de Artículo";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(584, 424);

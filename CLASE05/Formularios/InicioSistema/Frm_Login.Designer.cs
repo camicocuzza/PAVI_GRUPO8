@@ -61,10 +61,7 @@
             this.btn_maximizar.FlatAppearance.BorderSize = 0;
             this.btn_maximizar.Location = new System.Drawing.Point(474, 2);
             this.btn_maximizar.Visible = false;
-            // 
-            // lbl_posicion
-            // 
-            this.lbl_posicion.Location = new System.Drawing.Point(12, 4);
+            
             // 
             // gb_login
             // 
@@ -209,7 +206,6 @@
             this.Controls.Add(this.gb_login);
             this.Name = "Frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);

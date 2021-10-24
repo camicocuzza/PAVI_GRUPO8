@@ -151,7 +151,6 @@ namespace CLASE05.Formularios.Lotes
             // Frm_Lote
             // 
             this._FormularioMovil = true;
-            this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(438, 341);
             this.Controls.Add(this.lbl_titulo);
@@ -163,7 +162,6 @@ namespace CLASE05.Formularios.Lotes
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
-            this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.Controls.SetChildIndex(this.btn_aceptar, 0);
             this.Controls.SetChildIndex(this.txt_n_lote, 0);
             this.Controls.SetChildIndex(this.txt_n_remito, 0);

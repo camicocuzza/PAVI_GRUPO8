@@ -262,7 +262,6 @@ namespace CLASE05.Formularios.Facturas
             // 
             // Frm_SistemaFacturas_Entrada
             // 
-            this._PosiciónVisible = true;
             this._titulo = "Sistema Ventas";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(669, 497);
@@ -277,7 +276,6 @@ namespace CLASE05.Formularios.Facturas
             this.Controls.SetChildIndex(this.btn_modificar, 0);
             this.Controls.SetChildIndex(this.btn_borrar, 0);
             this.Controls.SetChildIndex(this.btn_consultar, 0);
-            this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);

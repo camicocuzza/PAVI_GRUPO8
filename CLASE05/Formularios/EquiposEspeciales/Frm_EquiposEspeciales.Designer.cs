@@ -149,7 +149,6 @@ namespace CLASE05.Formularios.EquiposEspeciales
             // Frm_EquiposEspeciales
             // 
             this._FormularioMovil = true;
-            this._PosiciónVisible = false;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(420, 444);
             this.Controls.Add(this.label1);
@@ -165,7 +164,6 @@ namespace CLASE05.Formularios.EquiposEspeciales
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
-            this.Controls.SetChildIndex(this.lbl_posicion, 0);
             this.Controls.SetChildIndex(this.cmb_equipos, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.cmb_clientes, 0);
