@@ -868,6 +868,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             // Frm_BaseFactura
             // 
+            this._FormularioMovil = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1063, 613);
             this.Controls.Add(this.label19);

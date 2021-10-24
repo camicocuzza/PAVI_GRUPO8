@@ -32,6 +32,7 @@ namespace CLASE05.Formularios.Compras
             grid_articulos.Formatear("Código Artículo, 75, C; Nombre, 201, C; Precio, 80, D; Cantidad, 80, C");
             txt_total.Text = "$0";
             cmb_proveedor._Cargar();
+            this._FormularioMovil = true;
         }
 
         public void CalcularTotal()

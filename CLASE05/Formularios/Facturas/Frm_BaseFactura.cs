@@ -38,6 +38,7 @@ namespace CLASE05.Formularios.Facturas
         private void Frm_BaseFactura_Load(object sender, EventArgs e)
         {
             Inicio();
+            this._FormularioMovil = true;
         }
         public void Inicio()
         {

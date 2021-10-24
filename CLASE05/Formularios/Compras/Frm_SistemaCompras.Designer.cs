@@ -415,6 +415,7 @@ namespace CLASE05.Formularios.Compras
             // 
             // Frm_SistemaCompras
             // 
+            this._FormularioMovil = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(823, 467);

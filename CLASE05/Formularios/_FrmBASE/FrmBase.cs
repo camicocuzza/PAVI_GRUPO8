@@ -27,6 +27,7 @@ namespace CLASE05.Formularios.FrmBASE
         public FrmBase()
         {
             InitializeComponent();
+            this._FormularioMovil = true;
         }
                 
         private void btn_minimizar_MouseMove(object sender, MouseEventArgs e)
