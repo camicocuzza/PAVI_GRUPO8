@@ -36,11 +36,11 @@ namespace CLASE05.Formularios.Reportes
             this.cmb_proveedores = new CLASE05.Clases.ComboBox01();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.txt_mes = new CLASE05.Clases.LabelText02();
             this.txt_año = new CLASE05.Clases.LabelText02();
             this.rv01 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btn_cargarComprasFecha = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.txt_mes = new CLASE05.Clases.LabelText02();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -84,7 +84,7 @@ namespace CLASE05.Formularios.Reportes
             this.btn_cargarComprasProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cargarComprasProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btn_cargarComprasProveedor.ForeColor = System.Drawing.Color.White;
-            this.btn_cargarComprasProveedor.Location = new System.Drawing.Point(501, 79);
+            this.btn_cargarComprasProveedor.Location = new System.Drawing.Point(501, 76);
             this.btn_cargarComprasProveedor.Name = "btn_cargarComprasProveedor";
             this.btn_cargarComprasProveedor.Size = new System.Drawing.Size(131, 30);
             this.btn_cargarComprasProveedor.TabIndex = 30;
@@ -161,30 +161,6 @@ namespace CLASE05.Formularios.Reportes
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Compras por fecha";
             // 
-            // txt_mes
-            // 
-            this.txt_mes._Ancho = 2;
-            this.txt_mes._Decimales = 0;
-            this.txt_mes._Etiqueta = "Mes";
-            this.txt_mes._Mask = "99";
-            this.txt_mes._MensajeError = null;
-            this.txt_mes._Nombre_campo = null;
-            this.txt_mes._Nombre_tabla = null;
-            this.txt_mes._ReadOnly = false;
-            this.txt_mes._StartEnCero = false;
-            this.txt_mes._Text = "";
-            this.txt_mes._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.txt_mes._TipoDato = CLASE05.Clases.LabelText02.TipoDato.numero;
-            this.txt_mes._Validable = true;
-            this.txt_mes.BackColor = System.Drawing.Color.Transparent;
-            this.txt_mes.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txt_mes.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_mes.Location = new System.Drawing.Point(199, 75);
-            this.txt_mes.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_mes.Name = "txt_mes";
-            this.txt_mes.Size = new System.Drawing.Size(228, 30);
-            this.txt_mes.TabIndex = 29;
-            // 
             // txt_año
             // 
             this.txt_año._Ancho = 4;
@@ -246,6 +222,30 @@ namespace CLASE05.Formularios.Reportes
             this.label3.TabIndex = 26;
             this.label3.Text = "Reporte de compras por mes y año";
             // 
+            // txt_mes
+            // 
+            this.txt_mes._Ancho = 2;
+            this.txt_mes._Decimales = 0;
+            this.txt_mes._Etiqueta = "Mes";
+            this.txt_mes._Mask = "99";
+            this.txt_mes._MensajeError = null;
+            this.txt_mes._Nombre_campo = null;
+            this.txt_mes._Nombre_tabla = null;
+            this.txt_mes._ReadOnly = false;
+            this.txt_mes._StartEnCero = false;
+            this.txt_mes._Text = "";
+            this.txt_mes._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txt_mes._TipoDato = CLASE05.Clases.LabelText02.TipoDato.numero;
+            this.txt_mes._Validable = true;
+            this.txt_mes.BackColor = System.Drawing.Color.Transparent;
+            this.txt_mes.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txt_mes.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_mes.Location = new System.Drawing.Point(199, 75);
+            this.txt_mes.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_mes.Name = "txt_mes";
+            this.txt_mes.Size = new System.Drawing.Size(228, 30);
+            this.txt_mes.TabIndex = 29;
+            // 
             // tabControl1
             // 
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -261,7 +261,6 @@ namespace CLASE05.Formularios.Reportes
             // 
             // Frm_Reporte_Compras
             // 
-            this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(675, 729);
             this.Controls.Add(this.tabControl1);
