@@ -34,6 +34,30 @@ namespace CLASE05.Negocios
 
             return _BD.EjecutarSelect(sql);
         }
+        public DataTable BuscarCompra_x_mesAño(string mes, string año)
+        {
+            string sql = @"SELECT p.cuit_proveedor, p.razon_social, c.num_compra, c.fecha, c.monto_total
+                           FROM compra c JOIN proveedor p ON c.cuit_proveedor = p.cuit_proveedor
+                           WHERE MONTH(c.fecha) = " + mes + " AND YEAR(c.fecha) = " + año +
+                           " ORDER BY c.fecha";
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable BuscarCompra_x_Año(string año)
+        {
+            string sql = @"SELECT p.cuit_proveedor, p.razon_social, c.num_compra, c.fecha, c.monto_total
+                           FROM compra c JOIN proveedor p ON c.cuit_proveedor = p.cuit_proveedor
+                           WHERE YEAR(c.fecha) = " + año +
+                           " ORDER BY c.fecha";
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable BuscarCompra_x_proveedor(string cuit_proveedor)
+        {
+            string sql = @"SELECT p.cuit_proveedor, p.razon_social, c.num_compra, c.fecha, c.monto_total
+                           FROM compra c JOIN proveedor p ON c.cuit_proveedor = p.cuit_proveedor
+                           WHERE c.cuit_proveedor = " + cuit_proveedor +
+                           " ORDER BY c.fecha";
+            return _BD.EjecutarSelect(sql);
+        }
         public DataTable RecuperarCompra(string num_compra)
         {
             string sql = @"SELECT * 
