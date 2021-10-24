@@ -75,6 +75,7 @@
             this.btn_especiales = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.comprasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
@@ -296,6 +297,8 @@
             // 
             // reporteToolStripMenuItem
             // 
+            this.reporteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.comprasToolStripMenuItem1});
             this.reporteToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.reporteToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
@@ -699,6 +702,15 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
+            // comprasToolStripMenuItem1
+            // 
+            this.comprasToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.comprasToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.comprasToolStripMenuItem1.Name = "comprasToolStripMenuItem1";
+            this.comprasToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.comprasToolStripMenuItem1.Text = "Compras";
+            this.comprasToolStripMenuItem1.Click += new System.EventHandler(this.comprasToolStripMenuItem1_Click);
+            // 
             // Frm_Escritorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -794,6 +806,7 @@
         private System.Windows.Forms.ToolStripMenuItem stockequiposEspecialesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem1;
     }
 }
 

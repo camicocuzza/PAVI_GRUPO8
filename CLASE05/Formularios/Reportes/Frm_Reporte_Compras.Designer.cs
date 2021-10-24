@@ -30,6 +30,10 @@ namespace CLASE05.Formularios.Reportes
         private void InitializeComponent()
         {
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btn_cargarComprasProveedor = new System.Windows.Forms.Button();
+            this.rv02 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmb_proveedores = new CLASE05.Clases.ComboBox01();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.txt_mes = new CLASE05.Clases.LabelText02();
@@ -38,10 +42,6 @@ namespace CLASE05.Formularios.Reportes
             this.btn_cargarComprasFecha = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.cmb_proveedores = new CLASE05.Clases.ComboBox01();
-            this.label2 = new System.Windows.Forms.Label();
-            this.rv02 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.btn_cargarComprasProveedor = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -50,17 +50,17 @@ namespace CLASE05.Formularios.Reportes
             // btn_cerrar
             // 
             this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_cerrar.Location = new System.Drawing.Point(736, 2);
+            this.btn_cerrar.Location = new System.Drawing.Point(638, 2);
             // 
             // btn_minimizar
             // 
             this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_minimizar.Location = new System.Drawing.Point(666, 2);
+            this.btn_minimizar.Location = new System.Drawing.Point(568, 2);
             // 
             // btn_maximizar
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_maximizar.Location = new System.Drawing.Point(701, 2);
+            this.btn_maximizar.Location = new System.Drawing.Point(603, 2);
             // 
             // tabPage2
             // 
@@ -73,9 +73,67 @@ namespace CLASE05.Formularios.Reportes
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(761, 688);
+            this.tabPage2.Size = new System.Drawing.Size(663, 688);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Compras por proveedor";
+            // 
+            // btn_cargarComprasProveedor
+            // 
+            this.btn_cargarComprasProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.btn_cargarComprasProveedor.FlatAppearance.BorderSize = 0;
+            this.btn_cargarComprasProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cargarComprasProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btn_cargarComprasProveedor.ForeColor = System.Drawing.Color.White;
+            this.btn_cargarComprasProveedor.Location = new System.Drawing.Point(501, 79);
+            this.btn_cargarComprasProveedor.Name = "btn_cargarComprasProveedor";
+            this.btn_cargarComprasProveedor.Size = new System.Drawing.Size(131, 30);
+            this.btn_cargarComprasProveedor.TabIndex = 30;
+            this.btn_cargarComprasProveedor.Text = "Generar Reporte";
+            this.btn_cargarComprasProveedor.UseVisualStyleBackColor = false;
+            this.btn_cargarComprasProveedor.Click += new System.EventHandler(this.btn_cargarComprasProveedor_Click);
+            // 
+            // rv02
+            // 
+            this.rv02.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rv02.Location = new System.Drawing.Point(6, 128);
+            this.rv02.Name = "rv02";
+            this.rv02.ServerReport.BearerToken = null;
+            this.rv02.Size = new System.Drawing.Size(651, 554);
+            this.rv02.TabIndex = 29;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(54, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 17);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Proveedor";
+            // 
+            // cmb_proveedores
+            // 
+            this.cmb_proveedores._ComboSinSeleccion = true;
+            this.cmb_proveedores._MensajeError = null;
+            this.cmb_proveedores._Nombre_campo = null;
+            this.cmb_proveedores._Nombre_tabla = null;
+            this.cmb_proveedores._tabla_cargar_combo = "proveedor";
+            this.cmb_proveedores._tabla_cargar_descriptor = "razon_social";
+            this.cmb_proveedores._tabla_cargar_pk = "cuit_proveedor";
+            this.cmb_proveedores._tabla_join = null;
+            this.cmb_proveedores._tabla_join_pk = null;
+            this.cmb_proveedores._Validable = true;
+            this.cmb_proveedores.BackColor = System.Drawing.SystemColors.InfoText;
+            this.cmb_proveedores.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
+            this.cmb_proveedores.ForeColor = System.Drawing.Color.White;
+            this.cmb_proveedores.FormattingEnabled = true;
+            this.cmb_proveedores.Location = new System.Drawing.Point(131, 76);
+            this.cmb_proveedores.Name = "cmb_proveedores";
+            this.cmb_proveedores.Size = new System.Drawing.Size(207, 25);
+            this.cmb_proveedores.TabIndex = 27;
             // 
             // label1
             // 
@@ -91,15 +149,15 @@ namespace CLASE05.Formularios.Reportes
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.tabPage1.Controls.Add(this.txt_mes);
             this.tabPage1.Controls.Add(this.txt_año);
             this.tabPage1.Controls.Add(this.rv01);
             this.tabPage1.Controls.Add(this.btn_cargarComprasFecha);
             this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.txt_mes);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(761, 688);
+            this.tabPage1.Size = new System.Drawing.Size(663, 688);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Compras por fecha";
             // 
@@ -121,7 +179,7 @@ namespace CLASE05.Formularios.Reportes
             this.txt_mes.BackColor = System.Drawing.Color.Transparent;
             this.txt_mes.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_mes.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_mes.Location = new System.Drawing.Point(265, 75);
+            this.txt_mes.Location = new System.Drawing.Point(199, 75);
             this.txt_mes.Margin = new System.Windows.Forms.Padding(4);
             this.txt_mes.Name = "txt_mes";
             this.txt_mes.Size = new System.Drawing.Size(228, 30);
@@ -145,7 +203,7 @@ namespace CLASE05.Formularios.Reportes
             this.txt_año.BackColor = System.Drawing.Color.Transparent;
             this.txt_año.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_año.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_año.Location = new System.Drawing.Point(29, 75);
+            this.txt_año.Location = new System.Drawing.Point(0, 75);
             this.txt_año.Margin = new System.Windows.Forms.Padding(4);
             this.txt_año.Name = "txt_año";
             this.txt_año.Size = new System.Drawing.Size(228, 30);
@@ -159,7 +217,7 @@ namespace CLASE05.Formularios.Reportes
             this.rv01.Location = new System.Drawing.Point(6, 128);
             this.rv01.Name = "rv01";
             this.rv01.ServerReport.BearerToken = null;
-            this.rv01.Size = new System.Drawing.Size(749, 554);
+            this.rv01.Size = new System.Drawing.Size(651, 554);
             this.rv01.TabIndex = 27;
             // 
             // btn_cargarComprasFecha
@@ -169,7 +227,7 @@ namespace CLASE05.Formularios.Reportes
             this.btn_cargarComprasFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cargarComprasFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btn_cargarComprasFecha.ForeColor = System.Drawing.Color.White;
-            this.btn_cargarComprasFecha.Location = new System.Drawing.Point(599, 75);
+            this.btn_cargarComprasFecha.Location = new System.Drawing.Point(501, 75);
             this.btn_cargarComprasFecha.Name = "btn_cargarComprasFecha";
             this.btn_cargarComprasFecha.Size = new System.Drawing.Size(131, 30);
             this.btn_cargarComprasFecha.TabIndex = 9;
@@ -198,72 +256,14 @@ namespace CLASE05.Formularios.Reportes
             this.tabControl1.Location = new System.Drawing.Point(2, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(769, 714);
+            this.tabControl1.Size = new System.Drawing.Size(671, 714);
             this.tabControl1.TabIndex = 2;
-            // 
-            // cmb_proveedores
-            // 
-            this.cmb_proveedores._ComboSinSeleccion = true;
-            this.cmb_proveedores._MensajeError = null;
-            this.cmb_proveedores._Nombre_campo = null;
-            this.cmb_proveedores._Nombre_tabla = null;
-            this.cmb_proveedores._tabla_cargar_combo = "proveedor";
-            this.cmb_proveedores._tabla_cargar_descriptor = "razon_social";
-            this.cmb_proveedores._tabla_cargar_pk = "cuit_proveedor";
-            this.cmb_proveedores._tabla_join = null;
-            this.cmb_proveedores._tabla_join_pk = null;
-            this.cmb_proveedores._Validable = true;
-            this.cmb_proveedores.BackColor = System.Drawing.SystemColors.InfoText;
-            this.cmb_proveedores.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
-            this.cmb_proveedores.ForeColor = System.Drawing.Color.White;
-            this.cmb_proveedores.FormattingEnabled = true;
-            this.cmb_proveedores.Location = new System.Drawing.Point(131, 76);
-            this.cmb_proveedores.Name = "cmb_proveedores";
-            this.cmb_proveedores.Size = new System.Drawing.Size(207, 25);
-            this.cmb_proveedores.TabIndex = 27;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(54, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 17);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Proveedor";
-            // 
-            // rv02
-            // 
-            this.rv02.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rv02.Location = new System.Drawing.Point(6, 128);
-            this.rv02.Name = "rv02";
-            this.rv02.ServerReport.BearerToken = null;
-            this.rv02.Size = new System.Drawing.Size(749, 554);
-            this.rv02.TabIndex = 29;
-            // 
-            // btn_cargarComprasProveedor
-            // 
-            this.btn_cargarComprasProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
-            this.btn_cargarComprasProveedor.FlatAppearance.BorderSize = 0;
-            this.btn_cargarComprasProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cargarComprasProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btn_cargarComprasProveedor.ForeColor = System.Drawing.Color.White;
-            this.btn_cargarComprasProveedor.Location = new System.Drawing.Point(599, 76);
-            this.btn_cargarComprasProveedor.Name = "btn_cargarComprasProveedor";
-            this.btn_cargarComprasProveedor.Size = new System.Drawing.Size(131, 30);
-            this.btn_cargarComprasProveedor.TabIndex = 30;
-            this.btn_cargarComprasProveedor.Text = "Generar Reporte";
-            this.btn_cargarComprasProveedor.UseVisualStyleBackColor = false;
-            this.btn_cargarComprasProveedor.Click += new System.EventHandler(this.btn_cargarComprasProveedor_Click);
             // 
             // Frm_Reporte_Compras
             // 
             this._PosiciónVisible = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(773, 729);
+            this.ClientSize = new System.Drawing.Size(675, 729);
             this.Controls.Add(this.tabControl1);
             this.Name = "Frm_Reporte_Compras";
             this.Load += new System.EventHandler(this.Frm_Reporte_Compras_Load);
