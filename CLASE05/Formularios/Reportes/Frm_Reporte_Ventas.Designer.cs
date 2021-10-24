@@ -52,26 +52,26 @@ namespace CLASE05.Formularios.Reportes
             // btn_cerrar
             // 
             this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_cerrar.Location = new System.Drawing.Point(722, 2);
+            this.btn_cerrar.Location = new System.Drawing.Point(638, 2);
             // 
             // btn_minimizar
             // 
             this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_minimizar.Location = new System.Drawing.Point(652, 2);
+            this.btn_minimizar.Location = new System.Drawing.Point(568, 2);
             // 
             // btn_maximizar
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_maximizar.Location = new System.Drawing.Point(687, 2);
+            this.btn_maximizar.Location = new System.Drawing.Point(603, 2);
             // 
             // tab_ventas
             // 
             this.tab_ventas.Controls.Add(this.pag_ventasFecha);
             this.tab_ventas.Controls.Add(this.tab_ventasCliente);
-            this.tab_ventas.Location = new System.Drawing.Point(1, 2);
+            this.tab_ventas.Location = new System.Drawing.Point(2, 12);
             this.tab_ventas.Name = "tab_ventas";
             this.tab_ventas.SelectedIndex = 0;
-            this.tab_ventas.Size = new System.Drawing.Size(756, 627);
+            this.tab_ventas.Size = new System.Drawing.Size(671, 714);
             this.tab_ventas.TabIndex = 2;
             this.tab_ventas.Tag = "";
             // 
@@ -89,7 +89,7 @@ namespace CLASE05.Formularios.Reportes
             this.pag_ventasFecha.Location = new System.Drawing.Point(4, 22);
             this.pag_ventasFecha.Name = "pag_ventasFecha";
             this.pag_ventasFecha.Padding = new System.Windows.Forms.Padding(3);
-            this.pag_ventasFecha.Size = new System.Drawing.Size(748, 601);
+            this.pag_ventasFecha.Size = new System.Drawing.Size(663, 688);
             this.pag_ventasFecha.TabIndex = 0;
             this.pag_ventasFecha.Text = "Ventas por fecha";
             // 
@@ -108,7 +108,7 @@ namespace CLASE05.Formularios.Reportes
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(306, 68);
+            this.label5.Location = new System.Drawing.Point(273, 68);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 19);
             this.label5.TabIndex = 23;
@@ -131,7 +131,7 @@ namespace CLASE05.Formularios.Reportes
             this.btn_cargarVentasFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cargarVentasFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btn_cargarVentasFecha.ForeColor = System.Drawing.Color.White;
-            this.btn_cargarVentasFecha.Location = new System.Drawing.Point(605, 80);
+            this.btn_cargarVentasFecha.Location = new System.Drawing.Point(526, 83);
             this.btn_cargarVentasFecha.Name = "btn_cargarVentasFecha";
             this.btn_cargarVentasFecha.Size = new System.Drawing.Size(131, 30);
             this.btn_cargarVentasFecha.TabIndex = 8;
@@ -211,18 +211,16 @@ namespace CLASE05.Formularios.Reportes
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.cmb_mes.Location = new System.Drawing.Point(368, 64);
+            this.cmb_mes.Location = new System.Drawing.Point(335, 64);
             this.cmb_mes.Name = "cmb_mes";
             this.cmb_mes.Size = new System.Drawing.Size(129, 25);
             this.cmb_mes.TabIndex = 4;
             // 
             // rv_ventasFecha
             // 
-            this.rv_ventasFecha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.rv_ventasFecha.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rv_ventasFecha.LocalReport.ReportEmbeddedResource = "CLASE05.Reportes.Ventas.Reporte_Ventas_Fecha.rdlc";
-            this.rv_ventasFecha.Location = new System.Drawing.Point(12, 116);
+            this.rv_ventasFecha.Location = new System.Drawing.Point(6, 119);
             this.rv_ventasFecha.Name = "rv_ventasFecha";
             this.rv_ventasFecha.ServerReport.BearerToken = null;
             this.rv_ventasFecha.ShowBackButton = false;
@@ -230,7 +228,7 @@ namespace CLASE05.Formularios.Reportes
             this.rv_ventasFecha.ShowPromptAreaButton = false;
             this.rv_ventasFecha.ShowRefreshButton = false;
             this.rv_ventasFecha.ShowStopButton = false;
-            this.rv_ventasFecha.Size = new System.Drawing.Size(724, 478);
+            this.rv_ventasFecha.Size = new System.Drawing.Size(651, 563);
             this.rv_ventasFecha.TabIndex = 3;
             // 
             // tab_ventasCliente
@@ -244,7 +242,7 @@ namespace CLASE05.Formularios.Reportes
             this.tab_ventasCliente.Location = new System.Drawing.Point(4, 22);
             this.tab_ventasCliente.Name = "tab_ventasCliente";
             this.tab_ventasCliente.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_ventasCliente.Size = new System.Drawing.Size(748, 487);
+            this.tab_ventasCliente.Size = new System.Drawing.Size(663, 688);
             this.tab_ventasCliente.TabIndex = 1;
             this.tab_ventasCliente.Text = "Ventas por cliente";
             // 
@@ -253,7 +251,7 @@ namespace CLASE05.Formularios.Reportes
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(50, 68);
+            this.label2.Location = new System.Drawing.Point(50, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 17);
             this.label2.TabIndex = 24;
@@ -277,7 +275,7 @@ namespace CLASE05.Formularios.Reportes
             this.btn_cargarVentasCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cargarVentasCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btn_cargarVentasCliente.ForeColor = System.Drawing.Color.White;
-            this.btn_cargarVentasCliente.Location = new System.Drawing.Point(605, 80);
+            this.btn_cargarVentasCliente.Location = new System.Drawing.Point(526, 83);
             this.btn_cargarVentasCliente.Name = "btn_cargarVentasCliente";
             this.btn_cargarVentasCliente.Size = new System.Drawing.Size(131, 30);
             this.btn_cargarVentasCliente.TabIndex = 11;
@@ -288,7 +286,7 @@ namespace CLASE05.Formularios.Reportes
             // rv_ventasCliente
             // 
             this.rv_ventasCliente.LocalReport.ReportEmbeddedResource = "CLASE05.Reportes.Ventas.Reporte_Ventas_Cliente.rdlc";
-            this.rv_ventasCliente.Location = new System.Drawing.Point(12, 116);
+            this.rv_ventasCliente.Location = new System.Drawing.Point(6, 119);
             this.rv_ventasCliente.Name = "rv_ventasCliente";
             this.rv_ventasCliente.ServerReport.BearerToken = null;
             this.rv_ventasCliente.ShowBackButton = false;
@@ -296,7 +294,7 @@ namespace CLASE05.Formularios.Reportes
             this.rv_ventasCliente.ShowPromptAreaButton = false;
             this.rv_ventasCliente.ShowRefreshButton = false;
             this.rv_ventasCliente.ShowStopButton = false;
-            this.rv_ventasCliente.Size = new System.Drawing.Size(724, 507);
+            this.rv_ventasCliente.Size = new System.Drawing.Size(651, 563);
             this.rv_ventasCliente.TabIndex = 10;
             // 
             // cmb_clientes
@@ -315,7 +313,7 @@ namespace CLASE05.Formularios.Reportes
             this.cmb_clientes.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_clientes.ForeColor = System.Drawing.Color.White;
             this.cmb_clientes.FormattingEnabled = true;
-            this.cmb_clientes.Location = new System.Drawing.Point(119, 62);
+            this.cmb_clientes.Location = new System.Drawing.Point(119, 63);
             this.cmb_clientes.Name = "cmb_clientes";
             this.cmb_clientes.Size = new System.Drawing.Size(224, 25);
             this.cmb_clientes.TabIndex = 9;
@@ -323,7 +321,7 @@ namespace CLASE05.Formularios.Reportes
             // Frm_Reporte_Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(759, 630);
+            this.ClientSize = new System.Drawing.Size(675, 729);
             this.Controls.Add(this.tab_ventas);
             this.Name = "Frm_Reporte_Ventas";
             this.Load += new System.EventHandler(this.Frm_Reporte_Ventas_Load);

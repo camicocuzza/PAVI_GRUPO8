@@ -276,7 +276,6 @@ namespace CLASE05.Formularios.Reportes
             this.tabPage1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
