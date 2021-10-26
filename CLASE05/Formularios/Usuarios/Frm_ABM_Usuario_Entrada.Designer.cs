@@ -265,7 +265,6 @@ namespace CLASE05.Formularios.Usuarios
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_usuarios)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

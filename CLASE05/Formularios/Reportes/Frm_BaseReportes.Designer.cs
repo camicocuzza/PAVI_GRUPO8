@@ -71,7 +71,6 @@ namespace CLASE05.Formularios.Reportes
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 12.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Silver;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -102,7 +101,6 @@ namespace CLASE05.Formularios.Reportes
             // lbl_titulo
             // 
             this.lbl_titulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_titulo.AutoSize = true;
             this.lbl_titulo.Font = new System.Drawing.Font("Microsoft JhengHei", 12.75F, System.Drawing.FontStyle.Bold);
             this.lbl_titulo.ForeColor = System.Drawing.Color.White;
             this.lbl_titulo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -115,7 +113,6 @@ namespace CLASE05.Formularios.Reportes
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.ForeColor = System.Drawing.Color.DimGray;
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -154,7 +151,6 @@ namespace CLASE05.Formularios.Reportes
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
             this.Controls.SetChildIndex(this.gb_login, 0);
             this.gb_login.ResumeLayout(false);
-            this.gb_login.PerformLayout();
             this.ResumeLayout(false);
 
         }

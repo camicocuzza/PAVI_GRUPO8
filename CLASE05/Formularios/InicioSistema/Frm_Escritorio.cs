@@ -36,7 +36,9 @@ namespace CLASE05.Formularios.InicioSistema
             InitializeComponent();
         }
 
-        private void Frm_Escritorio_Load(object sender, EventArgs e)
+        Frm_ABM_Usuario_Entrada abm_usu_open;        
+
+            private void Frm_Escritorio_Load(object sender, EventArgs e)
         {
             Screen screen = Screen.FromControl(this);
             int x = screen.WorkingArea.X - screen.Bounds.X;
@@ -191,8 +193,19 @@ namespace CLASE05.Formularios.InicioSistema
 
         private void btn_usuarios_Click(object sender, EventArgs e)
         {
-            Frm_ABM_Usuario_Entrada frm_usuario = new Frm_ABM_Usuario_Entrada();
-            frm_usuario.Show();
+                if (abm_usu_open == null)
+                {
+                abm_usu_open = new Frm_ABM_Usuario_Entrada();
+                // To make absolutely sure:
+                abm_usu_open.FormClosed += (o, ea) => abm_usu_open = null;
+                }
+                else
+                {
+                abm_usu_open.WindowState = FormWindowState.Normal;
+                }
+            abm_usu_open.Show();                        
+            //Frm_ABM_Usuario_Entrada frm_usuario = new Frm_ABM_Usuario_Entrada();
+            //frm_usuario.Show();
         }
 
         private void comprasToolStripMenuItem_Click(object sender, EventArgs e)

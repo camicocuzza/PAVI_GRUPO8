@@ -15,8 +15,7 @@ namespace CLASE05.Formularios.Usuarios
         public Frm_ABM_Usuario_Entrada()
         {
             InitializeComponent();
-        }
-
+        }     
         private void Frm_ABM_Usuario_Load(object sender, EventArgs e)
         {
             this.grid_usuarios.Formatear("ID, 75, C; Nombre de usuario, 200, I");
@@ -215,7 +214,6 @@ namespace CLASE05.Formularios.Usuarios
                 }
             }
         }
-
         private void rb_id_usuario_CheckedChanged(object sender, EventArgs e)
         {
             if (rb_id_usuario.Checked == true)
@@ -223,6 +221,7 @@ namespace CLASE05.Formularios.Usuarios
                 txt_patron.Text = "";
             }
         }
+
     }
 }
 
