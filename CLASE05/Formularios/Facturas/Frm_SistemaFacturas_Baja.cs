@@ -51,7 +51,7 @@ namespace CLASE05.Formularios.Facturas
             {
                 Text = "Visualización de Factura"
             };
-            ventaFactura.ShowDialog();
+            ventaFactura.Show();
         }
     }
 }

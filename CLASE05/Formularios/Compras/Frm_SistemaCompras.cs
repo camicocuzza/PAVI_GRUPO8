@@ -24,8 +24,7 @@ namespace CLASE05.Formularios.Compras
         public Frm_SistemaCompras()
         {
             InitializeComponent();
-        }
-        
+        }       
 
         private void Frm_SistemaCompras_Load(object sender, EventArgs e)
         {
@@ -67,7 +66,7 @@ namespace CLASE05.Formularios.Compras
             }
             Frm_Articulo_Consulta frm_articulo = new Frm_Articulo_Consulta();
             frm_articulo.cod_articulo = grid_articulos.CurrentRow.Cells[0].Value.ToString();
-            frm_articulo.ShowDialog();
+            frm_articulo.Show();
         }
         public void CargarFormulario(DataTable tabla_proveedor, DataTable tabla_compra)
         {

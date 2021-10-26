@@ -39,14 +39,12 @@ namespace CLASE05.Formularios.FrmBASE
             // 
             // btn_minimizar
             // 
-            this.btn_minimizar.Enabled = false;
             this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_minimizar.Location = new System.Drawing.Point(411, 2);
             // 
             // btn_maximizar
             // 
             this.btn_maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_maximizar.Enabled = false;
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_maximizar.Location = new System.Drawing.Point(445, 2);
             // 
@@ -63,7 +61,6 @@ namespace CLASE05.Formularios.FrmBASE
             // 
             // FrmBase_Datos
             // 
-            this._FormularioMovil = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(516, 516);

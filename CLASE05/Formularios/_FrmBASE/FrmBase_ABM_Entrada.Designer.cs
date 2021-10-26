@@ -48,13 +48,11 @@
             // btn_minimizar
             // 
             this.btn_minimizar.BackgroundImage = global::CLASE05.Properties.Resources.btn_minimizar;
-            this.btn_minimizar.Enabled = false;
             this.btn_minimizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_minimizar.Location = new System.Drawing.Point(564, 1);
             // 
             // btn_maximizar
             // 
-            this.btn_maximizar.Enabled = false;
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_maximizar.Location = new System.Drawing.Point(599, 1);
             // 
@@ -165,7 +163,6 @@
             // 
             // FrmBase_ABM_Entrada
             // 
-            this._FormularioMovil = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(669, 439);
@@ -189,7 +186,6 @@
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

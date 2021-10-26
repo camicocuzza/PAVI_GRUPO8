@@ -649,6 +649,7 @@
             // 
             // btn_reportes
             // 
+            this.btn_reportes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_reportes.BackColor = System.Drawing.Color.Transparent;
             this.btn_reportes.BackgroundImage = global::CLASE05.Properties.Resources.icon_reportes__3_;
             this.btn_reportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -754,11 +755,13 @@
             this.Controls.Add(this.btn_ensamblados);
             this.Controls.Add(this.btn_usuarios);
             this.ForeColor = System.Drawing.Color.Gainsboro;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_Escritorio";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.Frm_Escritorio_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

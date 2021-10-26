@@ -33,19 +33,23 @@ namespace CLASE05.Formularios.FrmBASE
         private void btn_minimizar_MouseMove(object sender, MouseEventArgs e)
         {
             this.btn_minimizar.BackgroundImage = CLASE05.Properties.Resources.btn_minimizar;
+            this.btn_minimizar.FlatAppearance.BorderSize = 4;
         }
 
         private void btn_minimizar_MouseLeave(object sender, EventArgs e)
         {
             this.btn_minimizar.BackgroundImage = CLASE05.Properties.Resources.btn_minimizar;
+            this.btn_minimizar.FlatAppearance.BorderSize = 1;
         }
         private void btn_maximizar_MouseMove(object sender, MouseEventArgs e)
         {
             this.btn_maximizar.BackgroundImage = CLASE05.Properties.Resources.btn_maximizar;
+            this.btn_maximizar.FlatAppearance.BorderSize = 4;
         }
         private void btn_maximizar_MouseLeave(object sender, EventArgs e)
         {
             this.btn_maximizar.BackgroundImage = CLASE05.Properties.Resources.btn_maximizar;
+            this.btn_maximizar.FlatAppearance.BorderSize = 1;
         }
         private void btn_cerrar_MouseMove(object sender, MouseEventArgs e)
         {

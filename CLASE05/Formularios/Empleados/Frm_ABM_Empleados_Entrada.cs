@@ -63,13 +63,13 @@ namespace CLASE05.Formularios.Empleados
             }
             Frm_Empleado_Consulta frm_consulta = new Frm_Empleado_Consulta();
             frm_consulta.legajo_empleado = grid_empleados.CurrentRow.Cells[0].Value.ToString();
-            frm_consulta.ShowDialog();
+            frm_consulta.Show();
         }
 
         private void btn_alta_Click(object sender, EventArgs e)
         {
             Frm_Empleado_Alta frm_altas = new Frm_Empleado_Alta();
-            frm_altas.ShowDialog();
+            frm_altas.Show();
         }
 
         private void btn_modificar_Click(object sender, EventArgs e)
@@ -86,7 +86,7 @@ namespace CLASE05.Formularios.Empleados
             }
             Frm_Empleado_Modificacion frm_modificacion = new Frm_Empleado_Modificacion();
             frm_modificacion.legajo_empleado = grid_empleados.CurrentRow.Cells[0].Value.ToString();
-            frm_modificacion.ShowDialog();
+            frm_modificacion.Show();
         }
 
         private void btn_borrar_Click(object sender, EventArgs e)
@@ -103,7 +103,7 @@ namespace CLASE05.Formularios.Empleados
             }
             Frm_Empleado_Baja frm_baja = new Frm_Empleado_Baja();
             frm_baja.legajo_empleado = grid_empleados.CurrentRow.Cells[0].Value.ToString();
-            frm_baja.ShowDialog();
+            frm_baja.Show();
         }
 
         private void txt_patron_Click(object sender, EventArgs e)

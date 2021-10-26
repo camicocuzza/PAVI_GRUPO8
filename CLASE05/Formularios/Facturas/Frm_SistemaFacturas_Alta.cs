@@ -84,7 +84,7 @@ namespace CLASE05.Formularios.Facturas
             {
                 Text = "Visualización de Factura"
             };
-            ventaFactura.ShowDialog();
+            ventaFactura.Show();
         }
 
         private void btnNuevaVenta_Click(object sender, EventArgs e)

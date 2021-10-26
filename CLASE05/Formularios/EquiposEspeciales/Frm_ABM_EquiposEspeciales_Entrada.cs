@@ -61,7 +61,7 @@ namespace CLASE05.Formularios.EquiposEspeciales
             }
             Frm_EquiposEspeciales_Modificacion frm_modificacion = new Frm_EquiposEspeciales_Modificacion();
             frm_modificacion.cod_prod_ensamblado = grid_equiposEspeciales.CurrentRow.Cells[0].Value.ToString();
-            frm_modificacion.ShowDialog();
+            frm_modificacion.Show();
         }
 
         private void btn_borrar_Click(object sender, EventArgs e)
@@ -78,13 +78,13 @@ namespace CLASE05.Formularios.EquiposEspeciales
             }
             Frm_EquiposEspeciales_Baja frm_baja = new Frm_EquiposEspeciales_Baja();
             frm_baja.cod_prod_ensamblado = grid_equiposEspeciales.CurrentRow.Cells[0].Value.ToString();
-            frm_baja.ShowDialog();
+            frm_baja.Show();
         }
 
         private void btn_alta_Click(object sender, EventArgs e)
         {
             Frm_EquiposEspeciales_Alta frm_altas = new Frm_EquiposEspeciales_Alta();
-            frm_altas.ShowDialog();
+            frm_altas.Show();
         }
 
         private void btn_blan_patron_Click(object sender, EventArgs e)
@@ -106,7 +106,7 @@ namespace CLASE05.Formularios.EquiposEspeciales
             }
             Frm_EquiposEspeciales_Consulta frm_consulta = new Frm_EquiposEspeciales_Consulta();
             frm_consulta.cod_prod_ensamblado = grid_equiposEspeciales.CurrentRow.Cells[0].Value.ToString();
-            frm_consulta.ShowDialog();
+            frm_consulta.Show();
         }
 
         private void txt_patron_Click(object sender, EventArgs e)

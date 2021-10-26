@@ -18,13 +18,13 @@ namespace CLASE05.Formularios.Reportes
         private void btn_rpt_compras_Click(object sender, EventArgs e)
         {
             Frm_Reporte_Compras frm_reporte_compras = new Frm_Reporte_Compras();
-            frm_reporte_compras.ShowDialog();
+            frm_reporte_compras.Show();
         }
 
         private void btn_rpt_ventas_Click(object sender, EventArgs e)
         {
             Frm_Reporte_Ventas frm_reporte_ventas = new Frm_Reporte_Ventas();
-            frm_reporte_ventas.ShowDialog();
+            frm_reporte_ventas.Show();
         }
     }
 }

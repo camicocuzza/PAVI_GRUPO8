@@ -91,7 +91,7 @@ namespace CLASE05.Formularios.Usuarios
         private void btn_alta_Click(object sender, EventArgs e)
         {
             Frm_Usuario_Alta frm_altas = new Frm_Usuario_Alta();
-            frm_altas.ShowDialog();
+            frm_altas.Show();
         }
 
         private void btn_modificar_Click(object sender, EventArgs e)
@@ -109,7 +109,7 @@ namespace CLASE05.Formularios.Usuarios
 
             Frm_Usuario_Modificacion frm_modificar = new Frm_Usuario_Modificacion();
             frm_modificar.id_usuario = grid_usuarios.CurrentRow.Cells[0].Value.ToString();
-            frm_modificar.ShowDialog();
+            frm_modificar.Show();
         }
         private void btn_borrar_Click(object sender, EventArgs e)
         {
@@ -126,7 +126,7 @@ namespace CLASE05.Formularios.Usuarios
 
             Frm_Usuario_Baja frm_baja = new Frm_Usuario_Baja();
             frm_baja.id_usuario = grid_usuarios.CurrentRow.Cells[0].Value.ToString();
-            frm_baja.ShowDialog();
+            frm_baja.Show();
 
         }
 
@@ -144,7 +144,7 @@ namespace CLASE05.Formularios.Usuarios
             }
             Frm_Usuario_Consulta frm_consulta = new Frm_Usuario_Consulta();
             frm_consulta.id_usuario = grid_usuarios.CurrentRow.Cells[0].Value.ToString();
-            frm_consulta.ShowDialog();
+            frm_consulta.Show();
 
         }
         private void txt_patron_Click(object sender, EventArgs e)

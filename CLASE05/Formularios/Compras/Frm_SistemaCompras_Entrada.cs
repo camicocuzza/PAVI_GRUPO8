@@ -145,13 +145,13 @@ namespace CLASE05.Formularios.Compras
             }
             Frm_SistemaCompras_Consulta frm_consulta = new Frm_SistemaCompras_Consulta();
             frm_consulta.num_compra = grid_compras.CurrentRow.Cells[0].Value.ToString();
-            frm_consulta.ShowDialog();
+            frm_consulta.Show();
         }
 
         private void btn_alta_Click(object sender, EventArgs e)
         {
             Frm_SistemaCompras_Alta frm_altas = new Frm_SistemaCompras_Alta();
-            frm_altas.ShowDialog();
+            frm_altas.Show();
         }
 
         private void btn_borrar_Click(object sender, EventArgs e)
@@ -168,7 +168,7 @@ namespace CLASE05.Formularios.Compras
             }
             Frm_SistemaCompras_Baja frm_baja = new Frm_SistemaCompras_Baja();
             frm_baja.num_compra = grid_compras.CurrentRow.Cells[0].Value.ToString();
-            frm_baja.ShowDialog();
+            frm_baja.Show();
         }
     }
 }

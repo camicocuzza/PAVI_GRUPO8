@@ -52,7 +52,7 @@ namespace CLASE05.Formularios.Lotes
         private void btn_alta_Click(object sender, EventArgs e)
         {
             Frm_Lote_Alta frm_altas = new Frm_Lote_Alta();
-            frm_altas.ShowDialog();
+            frm_altas.Show();
         }
 
         private void btn_modificar_Click(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace CLASE05.Formularios.Lotes
 
             Frm_Lote_Modificacion frm_modificacion = new Frm_Lote_Modificacion();
             frm_modificacion.num_lote = grid_lotes.CurrentRow.Cells[0].Value.ToString();
-            frm_modificacion.ShowDialog();
+            frm_modificacion.Show();
         }
 
         private void btn_borrar_Click(object sender, EventArgs e)
@@ -87,7 +87,7 @@ namespace CLASE05.Formularios.Lotes
             }
             Frm_Lote_Baja frm_baja = new Frm_Lote_Baja();
             frm_baja.num_lote = grid_lotes.CurrentRow.Cells[0].Value.ToString();
-            frm_baja.ShowDialog();
+            frm_baja.Show();
         }
 
         private void btn_blan_patron_Click(object sender, EventArgs e)
@@ -109,7 +109,7 @@ namespace CLASE05.Formularios.Lotes
             }
             Frm_Lote_Consulta frm_consulta = new Frm_Lote_Consulta();
             frm_consulta.num_lote = grid_lotes.CurrentRow.Cells[0].Value.ToString();
-            frm_consulta.ShowDialog();
+            frm_consulta.Show();
         }
 
         private void txt_patron_Click(object sender, EventArgs e)

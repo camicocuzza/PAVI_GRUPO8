@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.Facturas
         private void btn_alta_Click(object sender, EventArgs e)
         {
             Frm_SistemaFacturas_Alta frm_altas = new Frm_SistemaFacturas_Alta();
-            frm_altas.ShowDialog();
+            frm_altas.Show();
         }      
         private void Frm_SistemaFacturas_Entrada_Load(object sender, EventArgs e)
         {
@@ -125,7 +125,7 @@ namespace CLASE05.Formularios.Facturas
             frm_consulta.id_tipo_factura = grid_facturas.CurrentRow.Cells[1].Value.ToString();
             frm_consulta.cuit_cliente = grid_facturas.CurrentRow.Cells[4].Value.ToString();
             frm_consulta.fecha = grid_facturas.CurrentRow.Cells[2].Value.ToString();
-            frm_consulta.ShowDialog();            
+            frm_consulta.Show();            
         }
 
         private void btn_modificar_Click(object sender, EventArgs e)
@@ -166,7 +166,7 @@ namespace CLASE05.Formularios.Facturas
             frm_bajas.id_tipo_factura = grid_facturas.CurrentRow.Cells[1].Value.ToString();
             frm_bajas.cuit_cliente = grid_facturas.CurrentRow.Cells[4].Value.ToString();
             frm_bajas.fecha = grid_facturas.CurrentRow.Cells[2].Value.ToString();
-            frm_bajas.ShowDialog();
+            frm_bajas.Show();
             
         }
 
