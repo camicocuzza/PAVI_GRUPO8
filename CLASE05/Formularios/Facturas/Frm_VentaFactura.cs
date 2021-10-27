@@ -29,13 +29,20 @@ namespace CLASE05.Formularios.Facturas
             ReportDataSource reporteArt = new ReportDataSource("DataFacturaArt", ne_factura.DataSourceArt(num_factura));
             ReportDataSource reporteEns = new ReportDataSource("DataFacturaEns", ne_factura.DataSourceEns(num_factura));
             IList<ReportParameter> param = new List<ReportParameter>
-            {                
-                new ReportParameter("mes", parametros[0].ToString()),
-                new ReportParameter("año", parametros[1].ToString()),
-                new ReportParameter("cuit", parametros[2].ToString())        
+            {
+                new ReportParameter("fecha", parametros[0].ToString()),
+                new ReportParameter("cuit_cliente", parametros[1].ToString()),
+                new ReportParameter("razon_social", parametros[2].ToString()),
+                new ReportParameter("estado_provincia", parametros[3].ToString()),
+                new ReportParameter("pais", parametros[4].ToString()),
+                new ReportParameter("num_factura", parametros[5].ToString()),            
+                new ReportParameter("domicilio", parametros[6].ToString()),
+                new ReportParameter("monto_total", parametros[7].ToString()),
+                new ReportParameter("ciudad", parametros[8].ToString())
+                      
             };
 
-            this.rvListado.LocalReport.ReportEmbeddedResource = "CLASE05.Reportes.Ventas.VentaFactura.rdlc";
+            this.rvListado.LocalReport.ReportEmbeddedResource = "CLASE05.Informes.Reportes.Ventas.VentaFactura.rdlc";
             this.rvListado.LocalReport.DataSources.Clear();
             this.rvListado.LocalReport.DataSources.Add(reporteArt);
             this.rvListado.LocalReport.DataSources.Add(reporteEns);

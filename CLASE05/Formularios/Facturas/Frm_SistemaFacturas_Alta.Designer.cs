@@ -59,14 +59,9 @@ namespace CLASE05.Formularios.Facturas
             // 
             // txt_fechaActual
             // 
-            this.txt_fechaActual.Text = "10/10/202";
-            // 
-            // btn_buscar
-            // 
-            this.btn_buscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
-            this.btn_buscar.FlatAppearance.BorderSize = 2;
-            this.btn_buscar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            // 
+            this.txt_fechaActual.Size = new System.Drawing.Size(95, 25);
+            this.txt_fechaActual.Text = "10/10/2020";
+           
             // btn_agregar_articulo
             // 
             this.btn_agregar_articulo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
@@ -116,6 +111,11 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.cmb_tipo_factura.DisplayMember = "nombre";
             this.cmb_tipo_factura.ValueMember = "id_tipo_factura";
+            // 
+            // cmb_cliente
+            // 
+            this.cmb_cliente.DisplayMember = "razon_social";
+            this.cmb_cliente.ValueMember = "cuit_cliente";
             // 
             // btn_cerrar
             // 

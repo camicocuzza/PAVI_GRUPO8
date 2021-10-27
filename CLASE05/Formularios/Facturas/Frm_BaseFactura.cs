@@ -49,6 +49,7 @@ namespace CLASE05.Formularios.Facturas
             cmb_tipo_factura._Cargar();
             cmb_pais._Cargar();
             cmb_estado_provincia._Cargar();
+            cmb_cliente._Cargar();
             txt_fechaActual.Text = _TE.RecuperarFechaSistema().Substring(0,10);
         }
 
@@ -80,7 +81,8 @@ namespace CLASE05.Formularios.Facturas
             DataTable tabla_IdPais = ne_prov.RecuperarIdPais(id_estado_provincia);
             string id_pais = tabla_IdPais.Rows[0]["id_pais"].ToString();           
             txt_cuit_cliente.Text = tabla.Rows[0]["cuit_cliente"].ToString();
-            txt_razon_social._Text = tabla.Rows[0]["razon_social"].ToString();
+            //txt_razon_social._Text = tabla.Rows[0]["razon_social"].ToString();
+            cmb_cliente.SelectedValue = tabla.Rows[0]["cuit_cliente"].ToString();
             txt_limite._Text = tabla.Rows[0]["limite_credito"].ToString();
             txt_legajo_empleado.Text = tabla.Rows[0]["legajo_empleado"].ToString();
             cmb_pais.SelectedValue = id_pais.ToString();
@@ -284,16 +286,8 @@ namespace CLASE05.Formularios.Facturas
                                      , double.Parse(txt_cantidad_ensamblado.Text) * double.Parse(txt_precio_ensamblado.Text));
         }
         private void btn_buscar_Click(object sender, EventArgs e)
-        {            
-            if (txt_cuit_cliente.Text.Length < 13)
-            {
-                MessageBox.Show("Ingresar CUIT completo de cliente", "importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }            
-            if (txt_cuit_cliente.Text != "")
-                if (RecuperarDatosCliente(txt_cuit_cliente.Text) == EstadoCarga.incorrecto)
-                    return;
-            txt_cuit_cliente.Enabled = false;
+        {
+            cmb_cliente.SelectedIndex = -1;
         }
         private void txt_cantidad_ensamblado_Click(object sender, EventArgs e)
         {
@@ -337,7 +331,14 @@ namespace CLASE05.Formularios.Facturas
             }
             txt_total_venta.Text = "$0";
             txt_fechaActual.Text = _TE.RecuperarFechaSistema();
-            txt_cuit_cliente.Enabled = true;
+        }
+
+        private void cmb_cliente_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (cmb_cliente.SelectedIndex != -1)
+            {
+                RecuperarDatosCliente(cmb_cliente.SelectedValue.ToString());
+            }
         }
     }
 }

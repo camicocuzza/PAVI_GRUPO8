@@ -37,10 +37,6 @@ namespace CLASE05.Formularios.Facturas
             this.label2.Size = new System.Drawing.Size(213, 31);
             this.label2.Text = "Datos de la venta";
             // 
-            // txt_cuit_cliente
-            // 
-            this.txt_cuit_cliente.Enabled = false;
-            // 
             // cmb_pais
             // 
             this.cmb_pais.DisplayMember = "nombre_pais";
@@ -78,13 +74,6 @@ namespace CLASE05.Formularios.Facturas
             // txt_fechaActual
             // 
             this.txt_fechaActual.Text = "7/10/2021 02:05:07";
-            // 
-            // btn_buscar
-            // 
-            this.btn_buscar.Enabled = false;
-            this.btn_buscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
-            this.btn_buscar.FlatAppearance.BorderSize = 2;
-            this.btn_buscar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             // 
             // label11
             // 
@@ -164,6 +153,12 @@ namespace CLASE05.Formularios.Facturas
             this.label15.Enabled = false;
             this.label15.Visible = false;
             // 
+            // cmb_cliente
+            // 
+            this.cmb_cliente.DisplayMember = "razon_social";
+            this.cmb_cliente.Enabled = false;
+            this.cmb_cliente.ValueMember = "cuit_cliente";
+            // 
             // btn_cerrar
             // 
             this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
@@ -178,7 +173,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.btn_maximizar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_maximizar.Location = new System.Drawing.Point(989, 2);
-            //
+            // 
             // Frm_SistemaFacturas_Consulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

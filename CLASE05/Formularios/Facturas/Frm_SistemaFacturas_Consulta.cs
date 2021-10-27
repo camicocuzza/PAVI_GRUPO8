@@ -25,10 +25,10 @@ namespace CLASE05.Formularios.Facturas
             IList<string> parametros = new List<string>
             {
                 txt_fechaActual.Text,
-                txt_cuit_cliente.Text,
-                txt_razon_social._Text,
-                ne_clientes.ObtenerProvincia_Pais(cuit_cliente).Rows[0][0].ToString(),
-                ne_clientes.ObtenerProvincia_Pais(cuit_cliente).Rows[0][1].ToString(),
+                cmb_cliente.SelectedValue.ToString(),
+                cmb_cliente.Text,
+                ne_clientes.ObtenerProvincia_Pais(txt_cuit_cliente.Text).Rows[0][0].ToString(),
+                ne_clientes.ObtenerProvincia_Pais(txt_cuit_cliente.Text).Rows[0][1].ToString(),
                 num_factura,
                 ne_clientes.RecuperarCliente(txt_cuit_cliente.Text).Rows[0][5].ToString(),
                 txt_total_venta.Text.Substring(1),

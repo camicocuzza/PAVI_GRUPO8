@@ -37,11 +37,8 @@ namespace CLASE05.Formularios.Facturas
             this.cmb_estado_provincia = new CLASE05.Clases.ComboBox01();
             this.lbl_pais = new System.Windows.Forms.Label();
             this.txt_ciudad = new CLASE05.Clases.LabelText02();
-            this.txt_razon_social = new CLASE05.Clases.LabelText02();
-            this.btn_buscar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -79,6 +76,8 @@ namespace CLASE05.Formularios.Facturas
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.txt_num_factura = new System.Windows.Forms.MaskedTextBox();
+            this.cmb_cliente = new CLASE05.Clases.ComboBox01();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grid_articulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_ensamblados)).BeginInit();
             this.SuspendLayout();
@@ -142,12 +141,13 @@ namespace CLASE05.Formularios.Facturas
             // 
             this.txt_cuit_cliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txt_cuit_cliente.Culture = new System.Globalization.CultureInfo("en-US");
+            this.txt_cuit_cliente.Enabled = false;
             this.txt_cuit_cliente.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
             this.txt_cuit_cliente.ForeColor = System.Drawing.Color.White;
-            this.txt_cuit_cliente.Location = new System.Drawing.Point(54, 204);
+            this.txt_cuit_cliente.Location = new System.Drawing.Point(54, 255);
             this.txt_cuit_cliente.Mask = "99-99999999-9";
             this.txt_cuit_cliente.Name = "txt_cuit_cliente";
-            this.txt_cuit_cliente.Size = new System.Drawing.Size(220, 25);
+            this.txt_cuit_cliente.Size = new System.Drawing.Size(321, 25);
             this.txt_cuit_cliente.TabIndex = 67;
             this.txt_cuit_cliente.Click += new System.EventHandler(this.txt_cuit_cliente_Click);
             // 
@@ -246,50 +246,6 @@ namespace CLASE05.Formularios.Facturas
             this.txt_ciudad.Size = new System.Drawing.Size(474, 30);
             this.txt_ciudad.TabIndex = 62;
             // 
-            // txt_razon_social
-            // 
-            this.txt_razon_social._Ancho = 50;
-            this.txt_razon_social._Decimales = 2;
-            this.txt_razon_social._Etiqueta = "";
-            this.txt_razon_social._Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
-            this.txt_razon_social._MensajeError = "Razón social está vacía";
-            this.txt_razon_social._Nombre_campo = null;
-            this.txt_razon_social._Nombre_tabla = null;
-            this.txt_razon_social._ReadOnly = false;
-            this.txt_razon_social._StartEnCero = false;
-            this.txt_razon_social._Text = "";
-            this.txt_razon_social._TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.txt_razon_social._TipoDato = CLASE05.Clases.LabelText02.TipoDato.mascaraEditada;
-            this.txt_razon_social._Validable = true;
-            this.txt_razon_social.BackColor = System.Drawing.Color.Transparent;
-            this.txt_razon_social.Enabled = false;
-            this.txt_razon_social.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txt_razon_social.ForeColor = System.Drawing.Color.White;
-            this.txt_razon_social.Location = new System.Drawing.Point(-97, 251);
-            this.txt_razon_social.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_razon_social.Name = "txt_razon_social";
-            this.txt_razon_social.Size = new System.Drawing.Size(473, 30);
-            this.txt_razon_social.TabIndex = 58;
-            // 
-            // btn_buscar
-            // 
-            this.btn_buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
-            this.btn_buscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_buscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
-            this.btn_buscar.FlatAppearance.BorderSize = 2;
-            this.btn_buscar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buscar.ForeColor = System.Drawing.Color.White;
-            this.btn_buscar.Location = new System.Drawing.Point(280, 203);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(97, 25);
-            this.btn_buscar.TabIndex = 69;
-            this.btn_buscar.TabStop = false;
-            this.btn_buscar.Text = "Buscar";
-            this.btn_buscar.UseVisualStyleBackColor = false;
-            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
-            // 
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.Transparent;
@@ -308,26 +264,13 @@ namespace CLASE05.Formularios.Facturas
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(52, 183);
+            this.label9.Location = new System.Drawing.Point(52, 234);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(130, 20);
             this.label9.TabIndex = 71;
             this.label9.Text = "CUIT";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(52, 235);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 20);
-            this.label3.TabIndex = 72;
-            this.label3.Text = "Razón social";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label10
             // 
@@ -594,9 +537,9 @@ namespace CLASE05.Formularios.Facturas
             this.txt_fechaActual.Enabled = false;
             this.txt_fechaActual.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F);
             this.txt_fechaActual.ForeColor = System.Drawing.Color.White;
-            this.txt_fechaActual.Location = new System.Drawing.Point(280, 52);
+            this.txt_fechaActual.Location = new System.Drawing.Point(299, 52);
             this.txt_fechaActual.Name = "txt_fechaActual";
-            this.txt_fechaActual.Size = new System.Drawing.Size(97, 25);
+            this.txt_fechaActual.Size = new System.Drawing.Size(78, 25);
             this.txt_fechaActual.TabIndex = 97;
             // 
             // btn_quitar_ensamblado
@@ -642,7 +585,7 @@ namespace CLASE05.Formularios.Facturas
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(276, 27);
+            this.label16.Location = new System.Drawing.Point(295, 28);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(122, 20);
@@ -866,11 +809,47 @@ namespace CLASE05.Formularios.Facturas
             this.txt_num_factura.Size = new System.Drawing.Size(158, 25);
             this.txt_num_factura.TabIndex = 125;
             // 
+            // cmb_cliente
+            // 
+            this.cmb_cliente._ComboSinSeleccion = true;
+            this.cmb_cliente._MensajeError = "No se ha seleccionado estado/provincia";
+            this.cmb_cliente._Nombre_campo = null;
+            this.cmb_cliente._Nombre_tabla = null;
+            this.cmb_cliente._tabla_cargar_combo = "cliente";
+            this.cmb_cliente._tabla_cargar_descriptor = "razon_social";
+            this.cmb_cliente._tabla_cargar_pk = "cuit_cliente";
+            this.cmb_cliente._tabla_join = "";
+            this.cmb_cliente._tabla_join_pk = "";
+            this.cmb_cliente._Validable = true;
+            this.cmb_cliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.cmb_cliente.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cmb_cliente.ForeColor = System.Drawing.Color.White;
+            this.cmb_cliente.FormattingEnabled = true;
+            this.cmb_cliente.Location = new System.Drawing.Point(55, 203);
+            this.cmb_cliente.Name = "cmb_cliente";
+            this.cmb_cliente.Size = new System.Drawing.Size(320, 25);
+            this.cmb_cliente.TabIndex = 129;
+            this.cmb_cliente.Tag = "";
+            this.cmb_cliente.SelectionChangeCommitted += new System.EventHandler(this.cmb_cliente_SelectionChangeCommitted);
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(52, 180);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 20);
+            this.label3.TabIndex = 72;
+            this.label3.Text = "Razón social";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Frm_BaseFactura
             // 
-            this._FormularioMovil = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1063, 613);
+            this.Controls.Add(this.cmb_cliente);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.txt_num_factura);
             this.Controls.Add(this.txt_stock_ensamblado);
@@ -909,7 +888,6 @@ namespace CLASE05.Formularios.Facturas
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.txt_limite);
             this.Controls.Add(this.txt_cuit_cliente);
             this.Controls.Add(this.cmb_pais);
@@ -918,14 +896,12 @@ namespace CLASE05.Formularios.Facturas
             this.Controls.Add(this.lbl_pais);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txt_ciudad);
-            this.Controls.Add(this.txt_razon_social);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
             this.Name = "Frm_BaseFactura";
             this.Load += new System.EventHandler(this.Frm_BaseFactura_Load);
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.txt_razon_social, 0);
             this.Controls.SetChildIndex(this.txt_ciudad, 0);
             this.Controls.SetChildIndex(this.label9, 0);
             this.Controls.SetChildIndex(this.lbl_pais, 0);
@@ -934,7 +910,6 @@ namespace CLASE05.Formularios.Facturas
             this.Controls.SetChildIndex(this.cmb_pais, 0);
             this.Controls.SetChildIndex(this.txt_cuit_cliente, 0);
             this.Controls.SetChildIndex(this.txt_limite, 0);
-            this.Controls.SetChildIndex(this.btn_buscar, 0);
             this.Controls.SetChildIndex(this.label8, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.label10, 0);
@@ -963,9 +938,6 @@ namespace CLASE05.Formularios.Facturas
             this.Controls.SetChildIndex(this.btnNuevaVenta, 0);
             this.Controls.SetChildIndex(this.btnGuardar, 0);
             this.Controls.SetChildIndex(this.btnMostrarFactura, 0);
-            this.Controls.SetChildIndex(this.btn_cerrar, 0);
-            this.Controls.SetChildIndex(this.btn_maximizar, 0);
-            this.Controls.SetChildIndex(this.btn_minimizar, 0);
             this.Controls.SetChildIndex(this.label12, 0);
             this.Controls.SetChildIndex(this.txt_legajo_empleado, 0);
             this.Controls.SetChildIndex(this.cmb_tipo_factura, 0);
@@ -976,6 +948,10 @@ namespace CLASE05.Formularios.Facturas
             this.Controls.SetChildIndex(this.txt_stock_ensamblado, 0);
             this.Controls.SetChildIndex(this.txt_num_factura, 0);
             this.Controls.SetChildIndex(this.label19, 0);
+            this.Controls.SetChildIndex(this.cmb_cliente, 0);
+            this.Controls.SetChildIndex(this.btn_cerrar, 0);
+            this.Controls.SetChildIndex(this.btn_maximizar, 0);
+            this.Controls.SetChildIndex(this.btn_minimizar, 0);
             ((System.ComponentModel.ISupportInitialize)(this.grid_articulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_ensamblados)).EndInit();
             this.ResumeLayout(false);
@@ -990,7 +966,6 @@ namespace CLASE05.Formularios.Facturas
         public Clases.ComboBox01 cmb_pais;
         public Clases.ComboBox01 cmb_estado_provincia;
         public Clases.LabelText02 txt_ciudad;
-        public Clases.LabelText02 txt_razon_social;
         public System.Windows.Forms.MaskedTextBox txt_total_venta;
         public System.Windows.Forms.MaskedTextBox txt_cantidad_articulo;
         public Clases.ComboBox01 cmb_articulos;
@@ -999,10 +974,8 @@ namespace CLASE05.Formularios.Facturas
         public System.Windows.Forms.MaskedTextBox txt_fechaActual;
         public System.Windows.Forms.Label lbl_estado_provincia;
         public System.Windows.Forms.Label lbl_pais;
-        public System.Windows.Forms.Button btn_buscar;
         public System.Windows.Forms.Label label8;
         public System.Windows.Forms.Label label9;
-        public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label10;
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.Label label11;
@@ -1034,5 +1007,7 @@ namespace CLASE05.Formularios.Facturas
         public System.Windows.Forms.Label label19;
         public System.Windows.Forms.MaskedTextBox txt_num_factura;
         public System.Windows.Forms.Label label4;
+        public Clases.ComboBox01 cmb_cliente;
+        public System.Windows.Forms.Label label3;
     }
 }

@@ -37,8 +37,8 @@ namespace CLASE05.Formularios.Facturas
             IList<string> parametros = new List<string>
             {
                 txt_fechaActual.Text,
-                txt_cuit_cliente.Text,
-                txt_razon_social._Text,
+                cmb_cliente.SelectedValue.ToString(),
+                cmb_cliente.Text,
                 ne_clientes.ObtenerProvincia_Pais(cuit_cliente).Rows[0][0].ToString(),
                 ne_clientes.ObtenerProvincia_Pais(cuit_cliente).Rows[0][1].ToString(),
                 num_factura,

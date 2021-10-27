@@ -63,7 +63,7 @@ namespace CLASE05.Formularios.Facturas
             // 
             // rvListado
             // 
-            this.rvListado.LocalReport.ReportEmbeddedResource = "CLASE05.Reportes.VentaFactura.rdlc";
+            this.rvListado.LocalReport.ReportEmbeddedResource = "CLASE05.Informes.Reportes.Ventas.VentaFactura.rdlc";
             this.rvListado.Location = new System.Drawing.Point(49, 36);
             this.rvListado.Name = "rvListado";
             this.rvListado.ServerReport.BearerToken = null;

@@ -23,7 +23,7 @@ namespace CLASE05.Formularios.Facturas
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txt_cuit_cliente.Text.Length < 13)
+            if (cmb_cliente.SelectedIndex == -1)
             {
                 MessageBox.Show("Falta seleccionar cliente para la facturación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -64,14 +64,15 @@ namespace CLASE05.Formularios.Facturas
             btn_agregar_ensamblado.Enabled = false;
             btn_quitar_articulo.Enabled = false;
             btn_quitar_ensamblado.Enabled = false;
+            cmb_cliente.Enabled = false;
         }
         private void btnMostrarFactura_Click(object sender, EventArgs e)
         {
             IList<string> parametros = new List<string>
             {
                 txt_fechaActual.Text,
-                txt_cuit_cliente.Text,
-                txt_razon_social._Text,
+                cmb_cliente.SelectedValue.ToString(),
+                cmb_cliente.Text,
                 ne_clientes.ObtenerProvincia_Pais(txt_cuit_cliente.Text).Rows[0][0].ToString(),
                 ne_clientes.ObtenerProvincia_Pais(txt_cuit_cliente.Text).Rows[0][1].ToString(),
                 num_factura,
@@ -99,6 +100,7 @@ namespace CLASE05.Formularios.Facturas
             btn_agregar_ensamblado.Enabled = true;
             btn_quitar_articulo.Enabled = true;
             btn_quitar_ensamblado.Enabled = true;
+            cmb_cliente.Enabled = true;
 
         }
     }
