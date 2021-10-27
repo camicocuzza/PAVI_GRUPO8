@@ -91,10 +91,18 @@ namespace CLASE05.Formularios.FrmBASE
 
         private void btn_maximizar_Click(object sender, EventArgs e)
         {
-            if(this.WindowState == FormWindowState.Maximized)
+            if (this.WindowState == FormWindowState.Maximized)
                 this.WindowState = FormWindowState.Normal;
             else
+            {
+                Screen screen = Screen.FromControl(this);
+                int x = screen.WorkingArea.X - screen.Bounds.X;
+                int y = screen.WorkingArea.Y - screen.Bounds.Y;
+                this.MaximizedBounds = new Rectangle(x, y,
+                    screen.WorkingArea.Width, screen.WorkingArea.Height);
+                this.MaximumSize = screen.WorkingArea.Size;
                 this.WindowState = FormWindowState.Maximized;
+            }
         }
        
         public void cerrar()

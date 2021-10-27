@@ -365,7 +365,7 @@ namespace CLASE05.Negocios
                             WHERE f.num_factura = d.num_factura AND d.cod_articulo = a.cod_articulo
                             AND f.fecha BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "' AND f.eliminado = 0" +
                             " GROUP BY d.cod_articulo, a.nombre" +
-                            " ORDER BY d.cod_articulo";
+                            " ORDER BY len(d.cod_articulo), d.cod_articulo";
             return _BD.EjecutarSelect(sql);
         }
         public DataTable Estadisticas_Ventas_Clientes(string fechaDesde, string fechaHasta)
@@ -374,8 +374,7 @@ namespace CLASE05.Negocios
                             FROM factura f
                             JOIN cliente c ON f.cuit_cliente = c.cuit_cliente
                             WHERE f.fecha BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "' AND f.eliminado = 0" +
-                            " GROUP BY c.razon_social, c.cuit_cliente" +
-                            " ORDER BY c.cuit_cliente";
+                            " GROUP BY c.razon_social, c.cuit_cliente";
 
             return _BD.EjecutarSelect(sql);
         }

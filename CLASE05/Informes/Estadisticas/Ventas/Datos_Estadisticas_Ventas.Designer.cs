@@ -1297,7 +1297,7 @@ namespace CLASE05.Informes.Estadisticas.Ventas.Datos_Estadisticas_VentasTableAda
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT d.cod_articulo, a.nombre, SUM(d.cantidad) AS CantidadVendida\r\nFROM detalle" +
                 "_factura_articulo d\r\nJOIN articulo a ON d.cod_articulo = a.cod_articulo\r\nGROUP B" +
-                "Y d.cod_articulo, a.nombre\r\nORDER BY d.cod_articulo;\r\n";
+                "Y d.cod_articulo, a.nombre\r\nORDER BY len(d.cod_articulo);\r\n";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

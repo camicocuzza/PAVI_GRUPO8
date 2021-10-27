@@ -16,7 +16,7 @@
 FROM detalle_factura_articulo d
 JOIN articulo a ON d.cod_articulo = a.cod_articulo
 GROUP BY d.cod_articulo, a.nombre
-ORDER BY d.cod_articulo;
+ORDER BY len(d.cod_articulo);
 </CommandText>
                     <Parameters />
                   </DbCommand>
