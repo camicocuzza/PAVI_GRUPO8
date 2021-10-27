@@ -524,6 +524,11 @@
     <Compile Include="Formularios\Usuarios\Frm_Usuario_Modificacion.Designer.cs">
       <DependentUpon>Frm_Usuario_Modificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Informes\Estadísticas\Datos_Estadisticas_Ventas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datos_Estadisticas_Ventas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Negocios\NE_Compras.cs" />
     <Compile Include="Formularios\_FrmBASE\FrmBase_Prueba_ABM_Entrada.cs">
       <SubType>Form</SubType>
@@ -548,17 +553,17 @@
     <Compile Include="Negocios\NE_Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reportes\Compras\Datos_Reporte_Compras.Designer.cs">
+    <Compile Include="Informes\Reportes\Compras\Datos_Reporte_Compras.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Datos_Reporte_Compras.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\Ventas\DatosFactura.Designer.cs">
+    <Compile Include="Informes\Reportes\Ventas\DatosFactura.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DatosFactura.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\Ventas\Datos_Reporte_Ventas.Designer.cs">
+    <Compile Include="Informes\Reportes\Ventas\Datos_Reporte_Ventas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Datos_Reporte_Ventas.xsd</DependentUpon>
@@ -585,11 +590,12 @@
     <EmbeddedResource Include="Formularios\_FrmBASE\FrmBase_Prueba_ABM_Entrada.resx">
       <DependentUpon>FrmBase_Prueba_ABM_Entrada.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\Compras\Reporte_Compras_Fecha.rdlc" />
-    <EmbeddedResource Include="Reportes\Compras\Reporte_Compras_Proveedor.rdlc" />
-    <EmbeddedResource Include="Reportes\Ventas\Reporte_Ventas_Cliente.rdlc" />
-    <EmbeddedResource Include="Reportes\Ventas\Reporte_Ventas_Fecha.rdlc" />
-    <EmbeddedResource Include="Reportes\Ventas\VentaFactura.rdlc" />
+    <EmbeddedResource Include="Informes\Estadísticas\Ventas_Articulos_Periodo.rdlc" />
+    <EmbeddedResource Include="Informes\Reportes\Compras\Reporte_Compras_Fecha.rdlc" />
+    <EmbeddedResource Include="Informes\Reportes\Compras\Reporte_Compras_Proveedor.rdlc" />
+    <EmbeddedResource Include="Informes\Reportes\Ventas\Reporte_Ventas_Cliente.rdlc" />
+    <EmbeddedResource Include="Informes\Reportes\Ventas\Reporte_Ventas_Fecha.rdlc" />
+    <EmbeddedResource Include="Informes\Reportes\Ventas\VentaFactura.rdlc" />
     <EmbeddedResource Include="Formularios\Articulos\Frm_ABM_Articulos_Entrada.resx">
       <DependentUpon>Frm_ABM_Articulos_Entrada.cs</DependentUpon>
     </EmbeddedResource>
@@ -787,6 +793,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Informes\Estadísticas\Datos_Estadisticas_Ventas.xsc">
+      <DependentUpon>Datos_Estadisticas_Ventas.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\Estadísticas\Datos_Estadisticas_Ventas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Datos_Estadisticas_Ventas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\Estadísticas\Datos_Estadisticas_Ventas.xss">
+      <DependentUpon>Datos_Estadisticas_Ventas.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -807,37 +824,37 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Reportes\Compras\Datos_Reporte_Compras.xsc">
+    <None Include="Informes\Reportes\Compras\Datos_Reporte_Compras.xsc">
       <DependentUpon>Datos_Reporte_Compras.xsd</DependentUpon>
     </None>
-    <None Include="Reportes\Compras\Datos_Reporte_Compras.xsd">
+    <None Include="Informes\Reportes\Compras\Datos_Reporte_Compras.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>Datos_Reporte_Compras.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Reportes\Compras\Datos_Reporte_Compras.xss">
+    <None Include="Informes\Reportes\Compras\Datos_Reporte_Compras.xss">
       <DependentUpon>Datos_Reporte_Compras.xsd</DependentUpon>
     </None>
-    <None Include="Reportes\Ventas\DatosFactura.xsc">
+    <None Include="Informes\Reportes\Ventas\DatosFactura.xsc">
       <DependentUpon>DatosFactura.xsd</DependentUpon>
     </None>
-    <None Include="Reportes\Ventas\DatosFactura.xsd">
+    <None Include="Informes\Reportes\Ventas\DatosFactura.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DatosFactura.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Reportes\Ventas\DatosFactura.xss">
+    <None Include="Informes\Reportes\Ventas\DatosFactura.xss">
       <DependentUpon>DatosFactura.xsd</DependentUpon>
     </None>
-    <None Include="Reportes\Ventas\Datos_Reporte_Ventas.xsc">
+    <None Include="Informes\Reportes\Ventas\Datos_Reporte_Ventas.xsc">
       <DependentUpon>Datos_Reporte_Ventas.xsd</DependentUpon>
     </None>
-    <None Include="Reportes\Ventas\Datos_Reporte_Ventas.xsd">
+    <None Include="Informes\Reportes\Ventas\Datos_Reporte_Ventas.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>Datos_Reporte_Ventas.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Reportes\Ventas\Datos_Reporte_Ventas.xss">
+    <None Include="Informes\Reportes\Ventas\Datos_Reporte_Ventas.xss">
       <DependentUpon>Datos_Reporte_Ventas.xsd</DependentUpon>
     </None>
     <None Include="Resources\images %281%29.png" />
@@ -926,9 +943,7 @@
   <ItemGroup>
     <None Include="Resources\icon_factura %283%29.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reportes\Artículos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using CLASE05.Reportes.Ventas;
+using CLASE05.Informes.Reportes.Ventas;
 using System.IO;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
@@ -64,7 +64,7 @@ namespace CLASE05.Formularios.Reportes
                 new ReportParameter("mes", mes.ToString()),
                 new ReportParameter("año", año.ToString())
             };
-            this.rv_ventasFecha.LocalReport.ReportEmbeddedResource = "CLASE05.Reportes.Ventas.Reporte_Ventas_Fecha.rdlc";
+            this.rv_ventasFecha.LocalReport.ReportEmbeddedResource = "CLASE05.Informes.Reportes.Ventas.Reporte_Ventas_Fecha.rdlc";
             this.rv_ventasFecha.LocalReport.DataSources.Clear();
             this.rv_ventasFecha.LocalReport.DataSources.Add(reporteVentas);
             this.rv_ventasFecha.LocalReport.SetParameters(parametros);
@@ -84,7 +84,7 @@ namespace CLASE05.Formularios.Reportes
                 new ReportParameter("cuit_cliente", cmb_clientes.SelectedValue.ToString()),
                 new ReportParameter("razon_social", cmb_clientes.Text)
             };
-            this.rv_ventasCliente.LocalReport.ReportEmbeddedResource = "CLASE05.Reportes.Ventas.Reporte_Ventas_Cliente.rdlc";
+            this.rv_ventasCliente.LocalReport.ReportEmbeddedResource = "CLASE05.Informes.Reportes.Ventas.Reporte_Ventas_Cliente.rdlc";
             this.rv_ventasCliente.LocalReport.DataSources.Clear();
             this.rv_ventasCliente.LocalReport.DataSources.Add(reporteVentas);
             this.rv_ventasCliente.LocalReport.SetParameters(parametros);

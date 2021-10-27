@@ -53,7 +53,7 @@ namespace CLASE05.Formularios.Reportes
             ReportParameter[] parametro = new ReportParameter[2];
             parametro[0] = new ReportParameter("año", txt_año._Text);
             parametro[1] = new ReportParameter("mes", txt_mes._Text);
-            this.rv01.LocalReport.ReportEmbeddedResource = "CLASE05.Reportes.Compras.Reporte_Compras_Fecha.rdlc";
+            this.rv01.LocalReport.ReportEmbeddedResource = "CLASE05.Informes.Reportes.Compras.Reporte_Compras_Fecha.rdlc";
             this.rv01.LocalReport.SetParameters(parametro);
             this.rv01.LocalReport.DataSources.Clear();
             this.rv01.LocalReport.DataSources.Add(datos);
@@ -72,7 +72,7 @@ namespace CLASE05.Formularios.Reportes
             ReportParameter[] parametro = new ReportParameter[2];
             parametro[0] = new ReportParameter("cuit_proveedor", cmb_proveedores.SelectedValue.ToString());
             parametro[1] = new ReportParameter("razon_social", cmb_proveedores.Text);
-            this.rv02.LocalReport.ReportEmbeddedResource = "CLASE05.Reportes.Compras.Reporte_Compras_Proveedor.rdlc";
+            this.rv02.LocalReport.ReportEmbeddedResource = "CLASE05.Informes.Reportes.Compras.Reporte_Compras_Proveedor.rdlc";
             this.rv02.LocalReport.SetParameters(parametro);
             this.rv02.LocalReport.DataSources.Clear();
             this.rv02.LocalReport.DataSources.Add(datos);

@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace CLASE05.Reportes.Compras {
+namespace CLASE05.Informes.Reportes.Compras {
     
     
     /// <summary>

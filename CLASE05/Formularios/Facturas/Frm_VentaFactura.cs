@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using CLASE05.Reportes.Ventas;
+using CLASE05.Informes.Reportes.Ventas;
 using System.IO;
 using System.Net.Mail;
 using System.Text.RegularExpressions;

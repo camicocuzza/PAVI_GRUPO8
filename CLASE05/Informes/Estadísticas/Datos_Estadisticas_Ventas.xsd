@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Datos_Estadisticas_Ventas" targetNamespace="http://tempuri.org/Datos_Estadisticas_Ventas.xsd" xmlns:mstns="http://tempuri.org/Datos_Estadisticas_Ventas.xsd" xmlns="http://tempuri.org/Datos_Estadisticas_Ventas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BD3K3G08_2021ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BD3K3G08_2021ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CLASE05.Properties.Settings.GlobalReference.Default.BD3K3G08_2021ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VentasArticulosTableAdapter" GeneratorDataComponentClassName="VentasArticulosTableAdapter" Name="VentasArticulos" UserDataComponentName="VentasArticulosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BD3K3G08_2021ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT d.cod_articulo, a.nombre, COUNT(a.cod_articulo) AS CantidadVendida
+FROM detalle_factura_articulo d
+JOIN articulo a ON d.cod_articulo = a.cod_articulo
+GROUP BY d.cod_articulo, a.nombre;
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="cod_articulo" DataSetColumn="cod_articulo" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="CantidadVendida" DataSetColumn="CantidadVendida" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VentasClientesTableAdapter" GeneratorDataComponentClassName="VentasClientesTableAdapter" Name="VentasClientes" UserDataComponentName="VentasClientesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BD3K3G08_2021ConnectionString (Settings)" DbObjectName="BD3K3G08_2021.dbo.cliente" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT c.razon_social, c.cuit_cliente, COUNT(c.cuit_cliente) AS CantidadVentas, SUM(f.monto_total) AS Total
+FROM factura f
+JOIN cliente c ON f.cuit_cliente = c.cuit_cliente
+GROUP BY c.razon_social, c.cuit_cliente;</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="razon_social" DataSetColumn="razon_social" />
+              <Mapping SourceColumn="cuit_cliente" DataSetColumn="cuit_cliente" />
+              <Mapping SourceColumn="CantidadVentas" DataSetColumn="CantidadVentas" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Datos_Estadisticas_Ventas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Datos_Estadisticas_Ventas" msprop:Generator_UserDSName="Datos_Estadisticas_Ventas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VentasArticulos" msprop:Generator_TableClassName="VentasArticulosDataTable" msprop:Generator_TableVarName="tableVentasArticulos" msprop:Generator_TablePropName="VentasArticulos" msprop:Generator_RowDeletingName="VentasArticulosRowDeleting" msprop:Generator_RowChangingName="VentasArticulosRowChanging" msprop:Generator_RowEvHandlerName="VentasArticulosRowChangeEventHandler" msprop:Generator_RowDeletedName="VentasArticulosRowDeleted" msprop:Generator_UserTableName="VentasArticulos" msprop:Generator_RowChangedName="VentasArticulosRowChanged" msprop:Generator_RowEvArgName="VentasArticulosRowChangeEvent" msprop:Generator_RowClassName="VentasArticulosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_articulo" msprop:Generator_ColumnVarNameInTable="columncod_articulo" msprop:Generator_ColumnPropNameInRow="cod_articulo" msprop:Generator_ColumnPropNameInTable="cod_articuloColumn" msprop:Generator_UserColumnName="cod_articulo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CantidadVendida" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCantidadVendida" msprop:Generator_ColumnPropNameInRow="CantidadVendida" msprop:Generator_ColumnPropNameInTable="CantidadVendidaColumn" msprop:Generator_UserColumnName="CantidadVendida" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VentasClientes" msprop:Generator_TableClassName="VentasClientesDataTable" msprop:Generator_TableVarName="tableVentasClientes" msprop:Generator_TablePropName="VentasClientes" msprop:Generator_RowDeletingName="VentasClientesRowDeleting" msprop:Generator_RowChangingName="VentasClientesRowChanging" msprop:Generator_RowEvHandlerName="VentasClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="VentasClientesRowDeleted" msprop:Generator_UserTableName="VentasClientes" msprop:Generator_RowChangedName="VentasClientesRowChanged" msprop:Generator_RowEvArgName="VentasClientesRowChangeEvent" msprop:Generator_RowClassName="VentasClientesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="razon_social" msprop:Generator_ColumnVarNameInTable="columnrazon_social" msprop:Generator_ColumnPropNameInRow="razon_social" msprop:Generator_ColumnPropNameInTable="razon_socialColumn" msprop:Generator_UserColumnName="razon_social" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cuit_cliente" msprop:Generator_ColumnVarNameInTable="columncuit_cliente" msprop:Generator_ColumnPropNameInRow="cuit_cliente" msprop:Generator_ColumnPropNameInTable="cuit_clienteColumn" msprop:Generator_UserColumnName="cuit_cliente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CantidadVentas" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCantidadVentas" msprop:Generator_ColumnPropNameInRow="CantidadVentas" msprop:Generator_ColumnPropNameInTable="CantidadVentasColumn" msprop:Generator_UserColumnName="CantidadVentas" type="xs:int" minOccurs="0" />
+              <xs:element name="Total" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:VentasClientes" />
+      <xs:field xpath="mstns:cuit_cliente" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
