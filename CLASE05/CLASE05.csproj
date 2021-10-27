@@ -530,7 +530,7 @@
     <Compile Include="Formularios\Usuarios\Frm_Usuario_Modificacion.Designer.cs">
       <DependentUpon>Frm_Usuario_Modificacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Informes\Estadísticas\Datos_Estadisticas_Ventas.Designer.cs">
+    <Compile Include="Informes\Estadisticas\Ventas\Datos_Estadisticas_Ventas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Datos_Estadisticas_Ventas.xsd</DependentUpon>
@@ -599,7 +599,8 @@
     <EmbeddedResource Include="Formularios\_FrmBASE\FrmBase_Prueba_ABM_Entrada.resx">
       <DependentUpon>FrmBase_Prueba_ABM_Entrada.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Informes\Estadísticas\Ventas_Articulos_Periodo.rdlc" />
+    <EmbeddedResource Include="Informes\Estadisticas\Ventas\Ventas_Articulos_Periodo.rdlc" />
+    <EmbeddedResource Include="Informes\Estadisticas\Ventas\Ventas_Clientes_Periodo.rdlc" />
     <EmbeddedResource Include="Informes\Reportes\Compras\Reporte_Compras_Fecha.rdlc" />
     <EmbeddedResource Include="Informes\Reportes\Compras\Reporte_Compras_Proveedor.rdlc" />
     <EmbeddedResource Include="Informes\Reportes\Ventas\Reporte_Ventas_Cliente.rdlc" />
@@ -802,15 +803,15 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Informes\Estadísticas\Datos_Estadisticas_Ventas.xsc">
+    <None Include="Informes\Estadisticas\Ventas\Datos_Estadisticas_Ventas.xsc">
       <DependentUpon>Datos_Estadisticas_Ventas.xsd</DependentUpon>
     </None>
-    <None Include="Informes\Estadísticas\Datos_Estadisticas_Ventas.xsd">
+    <None Include="Informes\Estadisticas\Ventas\Datos_Estadisticas_Ventas.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>Datos_Estadisticas_Ventas.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Informes\Estadísticas\Datos_Estadisticas_Ventas.xss">
+    <None Include="Informes\Estadisticas\Ventas\Datos_Estadisticas_Ventas.xss">
       <DependentUpon>Datos_Estadisticas_Ventas.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />

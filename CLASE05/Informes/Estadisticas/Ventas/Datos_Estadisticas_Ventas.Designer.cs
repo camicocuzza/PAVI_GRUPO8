@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace CLASE05.Informes.Estadísticas {
+namespace CLASE05.Informes.Estadisticas.Ventas {
     
     
     /// <summary>
@@ -1152,7 +1152,7 @@ namespace CLASE05.Informes.Estadísticas {
         }
     }
 }
-namespace CLASE05.Informes.Estadísticas.Datos_Estadisticas_VentasTableAdapters {
+namespace CLASE05.Informes.Estadisticas.Ventas.Datos_Estadisticas_VentasTableAdapters {
     
     
     /// <summary>
