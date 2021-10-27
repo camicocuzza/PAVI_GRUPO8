@@ -361,19 +361,21 @@ namespace CLASE05.Negocios
         public DataTable Estadisticas_Ventas_Articulos(string fechaDesde, string fechaHasta)
         {
             string sql = @"SELECT d.cod_articulo, a.nombre, SUM(d.cantidad) AS CantidadVendida
-                            FROM detalle_factura_articulo d
-                            JOIN articulo a ON d.cod_articulo = a.cod_articulo
-                            WHERE f.fecha BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "' AND f.eliminado = 0" +
-                            " GROUP BY d.cod_articulo, a.nombre";
+                            FROM factura f, detalle_factura_articulo d, articulo a 
+                            WHERE f.num_factura = d.num_factura AND d.cod_articulo = a.cod_articulo
+                            AND f.fecha BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "' AND f.eliminado = 0" +
+                            " GROUP BY d.cod_articulo, a.nombre" +
+                            " ORDER BY d.cod_articulo";
             return _BD.EjecutarSelect(sql);
         }
         public DataTable Estadisticas_Ventas_Clientes(string fechaDesde, string fechaHasta)
         {
-            string sql = @"SELECT c.razon_social, c.cuit_cliente, COUNT(c.cuit_cliente) AS CantidadVentas, SUM(f.monto_total) AS MontoTotal
+            string sql = @"SELECT c.cuit_cliente, c.razon_social, COUNT(c.cuit_cliente) AS CantidadVentas, SUM(f.monto_total) AS MontoTotal
                             FROM factura f
                             JOIN cliente c ON f.cuit_cliente = c.cuit_cliente
                             WHERE f.fecha BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "' AND f.eliminado = 0" +
-                            " GROUP BY c.razon_social, c.cuit_cliente";
+                            " GROUP BY c.razon_social, c.cuit_cliente" +
+                            " ORDER BY c.cuit_cliente";
 
             return _BD.EjecutarSelect(sql);
         }

@@ -46,7 +46,7 @@ namespace CLASE05.Formularios.Estadísticas
 
             ReportDataSource reporteVentas;
 
-            reporteVentas = new ReportDataSource("Datos_Estadisticas_Ventas", ne_factura.Estadisticas_Ventas_Articulos(txt_fechaDesde_articulos.Text, txt_fechaHasta_articulos.Text));
+            reporteVentas = new ReportDataSource("DatosVentasArticulos", ne_factura.Estadisticas_Ventas_Articulos(txt_fechaDesde_articulos.Text, txt_fechaHasta_articulos.Text));
 
             IList<ReportParameter> parametros = new List<ReportParameter>
             {
@@ -81,7 +81,7 @@ namespace CLASE05.Formularios.Estadísticas
 
             ReportDataSource reporteVentas;
 
-            reporteVentas = new ReportDataSource("Datos_Estadisticas_Ventas", ne_factura.Estadisticas_Ventas_Articulos(txt_fechaDesde_articulos.Text, txt_fechaHasta_articulos.Text));
+            reporteVentas = new ReportDataSource("DatosVentasClientes", ne_factura.Estadisticas_Ventas_Articulos(txt_fechaDesde_articulos.Text, txt_fechaHasta_articulos.Text));
 
             IList<ReportParameter> parametros = new List<ReportParameter>
             {
