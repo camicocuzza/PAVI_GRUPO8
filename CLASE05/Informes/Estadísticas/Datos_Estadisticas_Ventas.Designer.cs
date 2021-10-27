@@ -599,7 +599,7 @@ namespace CLASE05.Informes.Estadísticas {
             
             private global::System.Data.DataColumn columnCantidadVentas;
             
-            private global::System.Data.DataColumn columnTotal;
+            private global::System.Data.DataColumn columnMontoTotal;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -660,9 +660,9 @@ namespace CLASE05.Informes.Estadísticas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TotalColumn {
+            public global::System.Data.DataColumn MontoTotalColumn {
                 get {
-                    return this.columnTotal;
+                    return this.columnMontoTotal;
                 }
             }
             
@@ -703,13 +703,13 @@ namespace CLASE05.Informes.Estadísticas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public VentasClientesRow AddVentasClientesRow(string razon_social, string cuit_cliente, int CantidadVentas, double Total) {
+            public VentasClientesRow AddVentasClientesRow(string razon_social, string cuit_cliente, int CantidadVentas, double MontoTotal) {
                 VentasClientesRow rowVentasClientesRow = ((VentasClientesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         razon_social,
                         cuit_cliente,
                         CantidadVentas,
-                        Total};
+                        MontoTotal};
                 rowVentasClientesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowVentasClientesRow);
                 return rowVentasClientesRow;
@@ -742,7 +742,7 @@ namespace CLASE05.Informes.Estadísticas {
                 this.columnrazon_social = base.Columns["razon_social"];
                 this.columncuit_cliente = base.Columns["cuit_cliente"];
                 this.columnCantidadVentas = base.Columns["CantidadVentas"];
-                this.columnTotal = base.Columns["Total"];
+                this.columnMontoTotal = base.Columns["MontoTotal"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -754,8 +754,8 @@ namespace CLASE05.Informes.Estadísticas {
                 base.Columns.Add(this.columncuit_cliente);
                 this.columnCantidadVentas = new global::System.Data.DataColumn("CantidadVentas", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCantidadVentas);
-                this.columnTotal = new global::System.Data.DataColumn("Total", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTotal);
+                this.columnMontoTotal = new global::System.Data.DataColumn("MontoTotal", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMontoTotal);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncuit_cliente}, true));
                 this.columnrazon_social.MaxLength = 50;
@@ -763,7 +763,7 @@ namespace CLASE05.Informes.Estadísticas {
                 this.columncuit_cliente.Unique = true;
                 this.columncuit_cliente.MaxLength = 50;
                 this.columnCantidadVentas.ReadOnly = true;
-                this.columnTotal.ReadOnly = true;
+                this.columnMontoTotal.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1032,17 +1032,17 @@ namespace CLASE05.Informes.Estadísticas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public double Total {
+            public double MontoTotal {
                 get {
                     try {
-                        return ((double)(this[this.tableVentasClientes.TotalColumn]));
+                        return ((double)(this[this.tableVentasClientes.MontoTotalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Total\' de la tabla \'VentasClientes\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'MontoTotal\' de la tabla \'VentasClientes\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVentasClientes.TotalColumn] = value;
+                    this[this.tableVentasClientes.MontoTotalColumn] = value;
                 }
             }
             
@@ -1072,14 +1072,14 @@ namespace CLASE05.Informes.Estadísticas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTotalNull() {
-                return this.IsNull(this.tableVentasClientes.TotalColumn);
+            public bool IsMontoTotalNull() {
+                return this.IsNull(this.tableVentasClientes.MontoTotalColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTotalNull() {
-                this[this.tableVentasClientes.TotalColumn] = global::System.Convert.DBNull;
+            public void SetMontoTotalNull() {
+                this[this.tableVentasClientes.MontoTotalColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1450,7 +1450,7 @@ namespace CLASE05.Informes.Estadísticas.Datos_Estadisticas_VentasTableAdapters 
             tableMapping.ColumnMappings.Add("razon_social", "razon_social");
             tableMapping.ColumnMappings.Add("cuit_cliente", "cuit_cliente");
             tableMapping.ColumnMappings.Add("CantidadVentas", "CantidadVentas");
-            tableMapping.ColumnMappings.Add("Total", "Total");
+            tableMapping.ColumnMappings.Add("MontoTotal", "MontoTotal");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1468,8 +1468,8 @@ namespace CLASE05.Informes.Estadísticas.Datos_Estadisticas_VentasTableAdapters 
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT c.razon_social, c.cuit_cliente, COUNT(c.cuit_cliente) AS CantidadVentas, S" +
-                "UM(f.monto_total) AS Total\r\nFROM factura f\r\nJOIN cliente c ON f.cuit_cliente = c" +
-                ".cuit_cliente\r\nGROUP BY c.razon_social, c.cuit_cliente;";
+                "UM(f.monto_total) AS MontoTotal\r\nFROM factura f\r\nJOIN cliente c ON f.cuit_client" +
+                "e = c.cuit_cliente\r\nGROUP BY c.razon_social, c.cuit_cliente;";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

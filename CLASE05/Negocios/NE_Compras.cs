@@ -17,7 +17,6 @@ namespace CLASE05.Negocios
         NE_Stock _Stock = new NE_Stock();
         TratamientosEspeciales _TE = new TratamientosEspeciales();
 
-
         public DataTable BuscarCompra(string patron, string columna)
         {
             string sql = "";
@@ -30,7 +29,7 @@ namespace CLASE05.Negocios
         public DataTable BuscarPorFecha(string fecha)
         {
             string sql = @"SELECT num_compra, cuit_proveedor, fecha, monto_total
-                            FROM compra WHERE convert(date, fecha, 103) = '" + fecha + "'";
+                            FROM compra WHERE convert(date, fecha, 103) = '" + fecha + " AND eliminado = 0" ;
 
             return _BD.EjecutarSelect(sql);
         }
@@ -38,7 +37,7 @@ namespace CLASE05.Negocios
         {
             string sql = @"SELECT p.cuit_proveedor, p.razon_social, c.num_compra, c.fecha, c.monto_total
                            FROM compra c JOIN proveedor p ON c.cuit_proveedor = p.cuit_proveedor
-                           WHERE MONTH(c.fecha) = " + mes + " AND YEAR(c.fecha) = " + año +
+                           WHERE MONTH(c.fecha) = " + mes + " AND YEAR(c.fecha) = " + año + " AND c.eliminado = 0" +
                            " ORDER BY c.fecha";
             return _BD.EjecutarSelect(sql);
         }
@@ -46,7 +45,7 @@ namespace CLASE05.Negocios
         {
             string sql = @"SELECT p.cuit_proveedor, p.razon_social, c.num_compra, c.fecha, c.monto_total
                            FROM compra c JOIN proveedor p ON c.cuit_proveedor = p.cuit_proveedor
-                           WHERE YEAR(c.fecha) = " + año +
+                           WHERE YEAR(c.fecha) = " + año + " AND c.eliminado = 0" +
                            " ORDER BY c.fecha";
             return _BD.EjecutarSelect(sql);
         }
@@ -54,7 +53,7 @@ namespace CLASE05.Negocios
         {
             string sql = @"SELECT p.cuit_proveedor, p.razon_social, c.num_compra, c.fecha, c.monto_total
                            FROM compra c JOIN proveedor p ON c.cuit_proveedor = p.cuit_proveedor
-                           WHERE c.cuit_proveedor = " + cuit_proveedor +
+                           WHERE c.cuit_proveedor = " + cuit_proveedor + " AND c.eliminado = 0" +
                            " ORDER BY c.fecha";
             return _BD.EjecutarSelect(sql);
         }

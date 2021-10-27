@@ -31,10 +31,10 @@ GROUP BY d.cod_articulo, a.nombre;
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VentasClientesTableAdapter" GeneratorDataComponentClassName="VentasClientesTableAdapter" Name="VentasClientes" UserDataComponentName="VentasClientesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BD3K3G08_2021ConnectionString (Settings)" DbObjectName="BD3K3G08_2021.dbo.cliente" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BD3K3G08_2021ConnectionString (Settings)" DbObjectName="BD3K3G08_2021.dbo.cliente" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT c.razon_social, c.cuit_cliente, COUNT(c.cuit_cliente) AS CantidadVentas, SUM(f.monto_total) AS Total
+                    <CommandText>SELECT c.razon_social, c.cuit_cliente, COUNT(c.cuit_cliente) AS CantidadVentas, SUM(f.monto_total) AS MontoTotal
 FROM factura f
 JOIN cliente c ON f.cuit_cliente = c.cuit_cliente
 GROUP BY c.razon_social, c.cuit_cliente;</CommandText>
@@ -47,7 +47,7 @@ GROUP BY c.razon_social, c.cuit_cliente;</CommandText>
               <Mapping SourceColumn="razon_social" DataSetColumn="razon_social" />
               <Mapping SourceColumn="cuit_cliente" DataSetColumn="cuit_cliente" />
               <Mapping SourceColumn="CantidadVentas" DataSetColumn="CantidadVentas" />
-              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+              <Mapping SourceColumn="MontoTotal" DataSetColumn="MontoTotal" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -98,7 +98,7 @@ GROUP BY c.razon_social, c.cuit_cliente;</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="CantidadVentas" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCantidadVentas" msprop:Generator_ColumnPropNameInRow="CantidadVentas" msprop:Generator_ColumnPropNameInTable="CantidadVentasColumn" msprop:Generator_UserColumnName="CantidadVentas" type="xs:int" minOccurs="0" />
-              <xs:element name="Total" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:double" minOccurs="0" />
+              <xs:element name="MontoTotal" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMontoTotal" msprop:Generator_ColumnPropNameInRow="MontoTotal" msprop:Generator_ColumnPropNameInTable="MontoTotalColumn" msprop:Generator_UserColumnName="MontoTotal" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
