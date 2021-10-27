@@ -9,13 +9,14 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VentasArticulosTableAdapter" GeneratorDataComponentClassName="VentasArticulosTableAdapter" Name="VentasArticulos" UserDataComponentName="VentasArticulosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BD3K3G08_2021ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BD3K3G08_2021ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT d.cod_articulo, a.nombre, COUNT(a.cod_articulo) AS CantidadVendida
+                    <CommandText>SELECT d.cod_articulo, a.nombre, SUM(d.cantidad) AS CantidadVendida
 FROM detalle_factura_articulo d
 JOIN articulo a ON d.cod_articulo = a.cod_articulo
-GROUP BY d.cod_articulo, a.nombre;
+GROUP BY d.cod_articulo, a.nombre
+ORDER BY d.cod_articulo;
 </CommandText>
                     <Parameters />
                   </DbCommand>
@@ -37,7 +38,8 @@ GROUP BY d.cod_articulo, a.nombre;
                     <CommandText>SELECT c.razon_social, c.cuit_cliente, COUNT(c.cuit_cliente) AS CantidadVentas, SUM(f.monto_total) AS MontoTotal
 FROM factura f
 JOIN cliente c ON f.cuit_cliente = c.cuit_cliente
-GROUP BY c.razon_social, c.cuit_cliente;</CommandText>
+GROUP BY c.razon_social, c.cuit_cliente
+ORDER BY c.cuit_cliente;</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -59,7 +61,7 @@ GROUP BY c.razon_social, c.cuit_cliente;</CommandText>
   <xs:element name="Datos_Estadisticas_Ventas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Datos_Estadisticas_Ventas" msprop:Generator_UserDSName="Datos_Estadisticas_Ventas">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="VentasArticulos" msprop:Generator_TableClassName="VentasArticulosDataTable" msprop:Generator_TableVarName="tableVentasArticulos" msprop:Generator_TablePropName="VentasArticulos" msprop:Generator_RowDeletingName="VentasArticulosRowDeleting" msprop:Generator_RowChangingName="VentasArticulosRowChanging" msprop:Generator_RowEvHandlerName="VentasArticulosRowChangeEventHandler" msprop:Generator_RowDeletedName="VentasArticulosRowDeleted" msprop:Generator_UserTableName="VentasArticulos" msprop:Generator_RowChangedName="VentasArticulosRowChanged" msprop:Generator_RowEvArgName="VentasArticulosRowChangeEvent" msprop:Generator_RowClassName="VentasArticulosRow">
+        <xs:element name="VentasArticulos" msprop:Generator_TableClassName="VentasArticulosDataTable" msprop:Generator_TableVarName="tableVentasArticulos" msprop:Generator_RowChangedName="VentasArticulosRowChanged" msprop:Generator_TablePropName="VentasArticulos" msprop:Generator_RowDeletingName="VentasArticulosRowDeleting" msprop:Generator_RowChangingName="VentasArticulosRowChanging" msprop:Generator_RowEvHandlerName="VentasArticulosRowChangeEventHandler" msprop:Generator_RowDeletedName="VentasArticulosRowDeleted" msprop:Generator_RowClassName="VentasArticulosRow" msprop:Generator_UserTableName="VentasArticulos" msprop:Generator_RowEvArgName="VentasArticulosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cod_articulo" msprop:Generator_ColumnVarNameInTable="columncod_articulo" msprop:Generator_ColumnPropNameInRow="cod_articulo" msprop:Generator_ColumnPropNameInTable="cod_articuloColumn" msprop:Generator_UserColumnName="cod_articulo">
@@ -80,7 +82,7 @@ GROUP BY c.razon_social, c.cuit_cliente;</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VentasClientes" msprop:Generator_TableClassName="VentasClientesDataTable" msprop:Generator_TableVarName="tableVentasClientes" msprop:Generator_TablePropName="VentasClientes" msprop:Generator_RowDeletingName="VentasClientesRowDeleting" msprop:Generator_RowChangingName="VentasClientesRowChanging" msprop:Generator_RowEvHandlerName="VentasClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="VentasClientesRowDeleted" msprop:Generator_UserTableName="VentasClientes" msprop:Generator_RowChangedName="VentasClientesRowChanged" msprop:Generator_RowEvArgName="VentasClientesRowChangeEvent" msprop:Generator_RowClassName="VentasClientesRow">
+        <xs:element name="VentasClientes" msprop:Generator_TableClassName="VentasClientesDataTable" msprop:Generator_TableVarName="tableVentasClientes" msprop:Generator_RowChangedName="VentasClientesRowChanged" msprop:Generator_TablePropName="VentasClientes" msprop:Generator_RowDeletingName="VentasClientesRowDeleting" msprop:Generator_RowChangingName="VentasClientesRowChanging" msprop:Generator_RowEvHandlerName="VentasClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="VentasClientesRowDeleted" msprop:Generator_RowClassName="VentasClientesRow" msprop:Generator_UserTableName="VentasClientes" msprop:Generator_RowEvArgName="VentasClientesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="razon_social" msprop:Generator_ColumnVarNameInTable="columnrazon_social" msprop:Generator_ColumnPropNameInRow="razon_social" msprop:Generator_ColumnPropNameInTable="razon_socialColumn" msprop:Generator_UserColumnName="razon_social" minOccurs="0">

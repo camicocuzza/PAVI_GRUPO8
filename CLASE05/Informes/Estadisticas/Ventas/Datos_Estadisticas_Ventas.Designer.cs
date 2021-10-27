@@ -1295,9 +1295,9 @@ namespace CLASE05.Informes.Estadisticas.Ventas.Datos_Estadisticas_VentasTableAda
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT d.cod_articulo, a.nombre, COUNT(a.cod_articulo) AS CantidadVendida\r\nFROM d" +
-                "etalle_factura_articulo d\r\nJOIN articulo a ON d.cod_articulo = a.cod_articulo\r\nG" +
-                "ROUP BY d.cod_articulo, a.nombre;\r\n";
+            this._commandCollection[0].CommandText = "SELECT d.cod_articulo, a.nombre, SUM(d.cantidad) AS CantidadVendida\r\nFROM detalle" +
+                "_factura_articulo d\r\nJOIN articulo a ON d.cod_articulo = a.cod_articulo\r\nGROUP B" +
+                "Y d.cod_articulo, a.nombre\r\nORDER BY d.cod_articulo;\r\n";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1469,7 +1469,8 @@ namespace CLASE05.Informes.Estadisticas.Ventas.Datos_Estadisticas_VentasTableAda
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT c.razon_social, c.cuit_cliente, COUNT(c.cuit_cliente) AS CantidadVentas, S" +
                 "UM(f.monto_total) AS MontoTotal\r\nFROM factura f\r\nJOIN cliente c ON f.cuit_client" +
-                "e = c.cuit_cliente\r\nGROUP BY c.razon_social, c.cuit_cliente;";
+                "e = c.cuit_cliente\r\nGROUP BY c.razon_social, c.cuit_cliente\r\nORDER BY c.cuit_cli" +
+                "ente;";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
