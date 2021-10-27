@@ -63,17 +63,17 @@ namespace CLASE05.Formularios.Estadísticas
         private void btn_cargarVentasClientes_Click(object sender, EventArgs e)
         {
             //VALIDAR FECHAS
-            if (_TE.ValidarFecha(txt_fechaDesde_articulos.Text) == TratamientosEspeciales.RespuestaValidacion.Error)
+            if (_TE.ValidarFecha(txt_fechaDesde_clientes.Text) == TratamientosEspeciales.RespuestaValidacion.Error)
             {
                 MessageBox.Show("Fecha Desde inválida", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            if (_TE.ValidarFecha(txt_fechaHasta_articulos.Text) == TratamientosEspeciales.RespuestaValidacion.Error)
+            if (_TE.ValidarFecha(txt_fechaHasta_clientes.Text) == TratamientosEspeciales.RespuestaValidacion.Error)
             {
                 MessageBox.Show("Fecha Hasta inválida", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            if (DateTime.Parse(txt_fechaDesde_articulos.Text) >= DateTime.Parse(txt_fechaHasta_articulos.Text))
+            if (DateTime.Parse(txt_fechaDesde_clientes.Text) >= DateTime.Parse(txt_fechaHasta_clientes.Text))
             {
                 MessageBox.Show("La fecha desde debe ser anterior a la fecha hasta", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -81,12 +81,12 @@ namespace CLASE05.Formularios.Estadísticas
 
             ReportDataSource reporteVentas;
 
-            reporteVentas = new ReportDataSource("DatosVentasClientes", ne_factura.Estadisticas_Ventas_Articulos(txt_fechaDesde_articulos.Text, txt_fechaHasta_articulos.Text));
+            reporteVentas = new ReportDataSource("DatosVentasClientes", ne_factura.Estadisticas_Ventas_Clientes(txt_fechaDesde_clientes.Text, txt_fechaHasta_clientes.Text));
 
             IList<ReportParameter> parametros = new List<ReportParameter>
             {
-                new ReportParameter("fechaDesde",txt_fechaDesde_articulos.Text),
-                new ReportParameter("fechaHasta", txt_fechaHasta_articulos.Text)
+                new ReportParameter("fechaDesde",txt_fechaDesde_clientes.Text),
+                new ReportParameter("fechaHasta", txt_fechaHasta_clientes.Text)
             };
             this.rv_ventasClientes.LocalReport.ReportEmbeddedResource = "CLASE05.Informes.Estadisticas.Ventas.Ventas_Clientes_Periodo.rdlc";
             this.rv_ventasClientes.LocalReport.DataSources.Clear();

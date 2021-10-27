@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using CLASE05.Formularios.Estadísticas;
 
 namespace CLASE05.Formularios.Reportes
 {
@@ -25,6 +26,13 @@ namespace CLASE05.Formularios.Reportes
         {
             Frm_Reporte_Ventas frm_reporte_ventas = new Frm_Reporte_Ventas();
             frm_reporte_ventas.Show();
+        }
+
+        private void btn_est_ventas_Click(object sender, EventArgs e)
+        {
+            Frm_Estadisticas_Ventas frm_estadisticas_ventas = new Frm_Estadisticas_Ventas();
+            frm_estadisticas_ventas.Show();
+       
         }
     }
 }

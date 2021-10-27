@@ -663,6 +663,7 @@
                     <Style>
                       <FontFamily>Eurostile ExtendedTwo</FontFamily>
                       <FontWeight>Normal</FontWeight>
+                      <Format>d</Format>
                       <TextDecoration>None</TextDecoration>
                     </Style>
                   </TextRun>
@@ -679,6 +680,7 @@
                     <Style>
                       <FontFamily>Eurostile ExtendedTwo</FontFamily>
                       <FontWeight>Normal</FontWeight>
+                      <Format>d</Format>
                       <TextDecoration>None</TextDecoration>
                     </Style>
                   </TextRun>

@@ -374,7 +374,7 @@ namespace CLASE05.Negocios
                             FROM factura f
                             JOIN cliente c ON f.cuit_cliente = c.cuit_cliente
                             WHERE f.fecha BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "' AND f.eliminado = 0" +
-                            " GROUP BY c.razon_social, c.cuit_cliente";
+                            " GROUP BY c.cuit_cliente, c.razon_social";
 
             return _BD.EjecutarSelect(sql);
         }

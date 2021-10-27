@@ -676,9 +676,9 @@
             this.label47.ForeColor = System.Drawing.Color.White;
             this.label47.Location = new System.Drawing.Point(1011, 256);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(75, 20);
+            this.label47.Size = new System.Drawing.Size(72, 20);
             this.label47.TabIndex = 121;
-            this.label47.Text = "Reportes";
+            this.label47.Text = "Informes";
             this.label47.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btn_especiales

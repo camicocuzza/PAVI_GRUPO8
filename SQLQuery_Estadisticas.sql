@@ -14,7 +14,15 @@ ORDER BY len(d.cod_articulo), a.cod_articulo;
 
 
 
-SELECT c.cuit_cliente, c.razon_social, COUNT(c.cuit_cliente) AS CantidadVentas, SUM(f.monto_total) AS Total
+SELECT c.cuit_cliente, c.razon_social, COUNT(c.cuit_cliente) AS CantidadVentas, SUM(f.monto_total) AS MontoTotal
 FROM factura f
 JOIN cliente c ON f.cuit_cliente = c.cuit_cliente
-GROUP BY c.razon_social, c.cuit_cliente
+WHERE  f.eliminado = 0
+GROUP BY c.razon_social, c.cuit_cliente;
+
+
+SELECT c.cuit_cliente, c.razon_social, COUNT(c.cuit_cliente) AS CantidadVentas, SUM(f.monto_total) AS MontoTotal
+                            FROM factura f
+                            JOIN cliente c ON f.cuit_cliente = c.cuit_cliente
+                            WHERE f.fecha BETWEEN '01/01/2000' AND '01/01/2023' AND f.eliminado = 0
+                            GROUP BY c.cuit_cliente, c.razon_social;

@@ -1469,8 +1469,7 @@ namespace CLASE05.Informes.Estadisticas.Ventas.Datos_Estadisticas_VentasTableAda
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT c.razon_social, c.cuit_cliente, COUNT(c.cuit_cliente) AS CantidadVentas, S" +
                 "UM(f.monto_total) AS MontoTotal\r\nFROM factura f\r\nJOIN cliente c ON f.cuit_client" +
-                "e = c.cuit_cliente\r\nGROUP BY c.razon_social, c.cuit_cliente\r\nORDER BY c.cuit_cli" +
-                "ente;";
+                "e = c.cuit_cliente\r\nGROUP BY c.cuit_cliente, c.razon_social;\r\n";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
