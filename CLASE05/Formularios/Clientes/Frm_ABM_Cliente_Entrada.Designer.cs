@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.Clientes
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
             this.rb_cuit_cliente = new System.Windows.Forms.RadioButton();
             this.btn_blan_patron = new System.Windows.Forms.Button();
@@ -235,8 +235,11 @@ namespace CLASE05.Formularios.Clientes
             this.grid_clientes._tamannoLetraHeader = 9;
             this.grid_clientes.AllowUserToAddRows = false;
             this.grid_clientes.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_clientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_clientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grid_clientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grid_clientes.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_clientes.Location = new System.Drawing.Point(10, 248);
@@ -271,7 +274,6 @@ namespace CLASE05.Formularios.Clientes
             // 
             // Frm_ABM_Cliente_Entrada
             // 
-            this._FormularioMovil = true;
             this._titulo = "Clientes";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(669, 488);

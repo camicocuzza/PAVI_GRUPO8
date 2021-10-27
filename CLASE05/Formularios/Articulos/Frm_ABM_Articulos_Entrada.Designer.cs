@@ -45,6 +45,7 @@ namespace CLASE05.Formularios.Articulos
             // 
             // btn_alta
             // 
+            this.btn_alta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_alta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btn_alta.FlatAppearance.BorderSize = 0;
             this.btn_alta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
@@ -53,6 +54,7 @@ namespace CLASE05.Formularios.Articulos
             // 
             // btn_modificar
             // 
+            this.btn_modificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_modificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btn_modificar.FlatAppearance.BorderSize = 0;
             this.btn_modificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
@@ -61,6 +63,7 @@ namespace CLASE05.Formularios.Articulos
             // 
             // btn_borrar
             // 
+            this.btn_borrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_borrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btn_borrar.FlatAppearance.BorderSize = 0;
             this.btn_borrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
@@ -74,6 +77,7 @@ namespace CLASE05.Formularios.Articulos
             // 
             // btn_consultar
             // 
+            this.btn_consultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_consultar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btn_consultar.FlatAppearance.BorderSize = 0;
             this.btn_consultar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
@@ -102,6 +106,7 @@ namespace CLASE05.Formularios.Articulos
             // 
             // btn_buscar
             // 
+            this.btn_buscar.FlatAppearance.BorderSize = 0;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // btn_cerrar
@@ -124,6 +129,9 @@ namespace CLASE05.Formularios.Articulos
             this.grid_articulos.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grid_articulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grid_articulos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grid_articulos.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_articulos.Location = new System.Drawing.Point(12, 223);
@@ -234,7 +242,6 @@ namespace CLASE05.Formularios.Articulos
             // 
             // Frm_ABM_Articulos_Entrada
             // 
-            this._FormularioMovil = true;
             this._titulo = "Artículos";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(669, 439);
@@ -256,7 +263,6 @@ namespace CLASE05.Formularios.Articulos
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_articulos)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

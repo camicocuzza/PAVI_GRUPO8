@@ -101,6 +101,7 @@ namespace CLASE05.Formularios.Lotes
             // 
             // btn_buscar
             // 
+            this.btn_buscar.FlatAppearance.BorderSize = 0;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // btn_cerrar
@@ -123,6 +124,9 @@ namespace CLASE05.Formularios.Lotes
             this.grid_lotes.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grid_lotes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grid_lotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grid_lotes.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_lotes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_lotes.Location = new System.Drawing.Point(12, 223);
@@ -232,7 +236,6 @@ namespace CLASE05.Formularios.Lotes
             // 
             // Frm_ABM_Lote_Entrada
             // 
-            this._FormularioMovil = true;
             this._titulo = "Lotes";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(669, 439);
@@ -254,7 +257,6 @@ namespace CLASE05.Formularios.Lotes
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_lotes)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

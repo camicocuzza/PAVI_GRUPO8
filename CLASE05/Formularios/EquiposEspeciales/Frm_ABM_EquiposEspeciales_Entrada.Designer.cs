@@ -99,6 +99,7 @@ namespace CLASE05.Formularios.EquiposEspeciales
             // 
             // btn_buscar
             // 
+            this.btn_buscar.FlatAppearance.BorderSize = 0;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // btn_cerrar
@@ -121,6 +122,9 @@ namespace CLASE05.Formularios.EquiposEspeciales
             this.grid_equiposEspeciales.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grid_equiposEspeciales.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grid_equiposEspeciales.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grid_equiposEspeciales.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_equiposEspeciales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_equiposEspeciales.Location = new System.Drawing.Point(12, 223);
@@ -239,7 +243,6 @@ namespace CLASE05.Formularios.EquiposEspeciales
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_equiposEspeciales)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

@@ -95,6 +95,7 @@
             // 
             // btn_alta
             // 
+            this.btn_alta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_alta.BackColor = System.Drawing.Color.Transparent;
             this.btn_alta.BackgroundImage = global::CLASE05.Properties.Resources.btn_añadir__8_;
             this.btn_alta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -112,6 +113,7 @@
             // 
             // btn_modificar
             // 
+            this.btn_modificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_modificar.BackColor = System.Drawing.Color.Transparent;
             this.btn_modificar.BackgroundImage = global::CLASE05.Properties.Resources.btn_modificar__1_;
             this.btn_modificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -129,6 +131,7 @@
             // 
             // btn_borrar
             // 
+            this.btn_borrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_borrar.BackColor = System.Drawing.Color.Transparent;
             this.btn_borrar.BackgroundImage = global::CLASE05.Properties.Resources.btn_eliminar__2_;
             this.btn_borrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -146,6 +149,7 @@
             // 
             // btn_consultar
             // 
+            this.btn_consultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_consultar.BackColor = System.Drawing.Color.Transparent;
             this.btn_consultar.BackgroundImage = global::CLASE05.Properties.Resources.btn_consultar__3_;
             this.btn_consultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

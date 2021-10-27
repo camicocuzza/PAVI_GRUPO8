@@ -99,6 +99,7 @@ namespace CLASE05.Formularios.Proveedores
             // 
             // btn_buscar
             // 
+            this.btn_buscar.FlatAppearance.BorderSize = 0;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // btn_cerrar
@@ -207,6 +208,9 @@ namespace CLASE05.Formularios.Proveedores
             this.grid_proveedores.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grid_proveedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grid_proveedores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grid_proveedores.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_proveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_proveedores.Location = new System.Drawing.Point(10, 223);
@@ -217,7 +221,6 @@ namespace CLASE05.Formularios.Proveedores
             // 
             // Frm_ABM_Proveedores_Entrada
             // 
-            this._FormularioMovil = true;
             this._titulo = "Proveedores";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(669, 439);
@@ -239,7 +242,6 @@ namespace CLASE05.Formularios.Proveedores
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_proveedores)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

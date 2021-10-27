@@ -29,7 +29,7 @@ namespace CLASE05.Formularios.Facturas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rb_todas = new System.Windows.Forms.RadioButton();
             this.rb_cuit_cliente = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -214,8 +214,11 @@ namespace CLASE05.Formularios.Facturas
             this.grid_facturas._tamannoLetraHeader = 9;
             this.grid_facturas.AllowUserToAddRows = false;
             this.grid_facturas.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_facturas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_facturas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grid_facturas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grid_facturas.BackgroundColor = System.Drawing.Color.Silver;
             this.grid_facturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_facturas.Location = new System.Drawing.Point(12, 258);
@@ -283,7 +286,6 @@ namespace CLASE05.Formularios.Facturas
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_facturas)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
