@@ -76,7 +76,7 @@ namespace CLASE05.Formularios.Clientes
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(2, 102);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -111,7 +111,7 @@ namespace CLASE05.Formularios.Clientes
             // 
             this.lbl_estado_provincia.BackColor = System.Drawing.Color.Transparent;
             this.lbl_estado_provincia.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lbl_estado_provincia.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbl_estado_provincia.ForeColor = System.Drawing.Color.White;
             this.lbl_estado_provincia.Location = new System.Drawing.Point(2, 372);
             this.lbl_estado_provincia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_estado_provincia.Name = "lbl_estado_provincia";
@@ -146,7 +146,7 @@ namespace CLASE05.Formularios.Clientes
             // lbl_pais
             // 
             this.lbl_pais.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lbl_pais.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbl_pais.ForeColor = System.Drawing.Color.White;
             this.lbl_pais.Location = new System.Drawing.Point(2, 331);
             this.lbl_pais.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_pais.Name = "lbl_pais";
@@ -328,7 +328,6 @@ namespace CLASE05.Formularios.Clientes
             // 
             // Frm_Cliente
             // 
-            this._FormularioMovil = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(516, 516);
