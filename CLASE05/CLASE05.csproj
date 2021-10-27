@@ -943,7 +943,9 @@
   <ItemGroup>
     <None Include="Resources\icon_factura %283%29.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Formularios\Estadísticas\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

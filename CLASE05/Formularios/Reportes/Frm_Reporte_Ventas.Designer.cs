@@ -66,6 +66,9 @@ namespace CLASE05.Formularios.Reportes
             // 
             // tab_ventas
             // 
+            this.tab_ventas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tab_ventas.Controls.Add(this.pag_ventasFecha);
             this.tab_ventas.Controls.Add(this.tab_ventasCliente);
             this.tab_ventas.Location = new System.Drawing.Point(2, 12);
@@ -196,6 +199,9 @@ namespace CLASE05.Formularios.Reportes
             // 
             // rv_ventasFecha
             // 
+            this.rv_ventasFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.rv_ventasFecha.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rv_ventasFecha.LocalReport.ReportEmbeddedResource = "CLASE05.Reportes.Ventas.Reporte_Ventas_Fecha.rdlc";
             this.rv_ventasFecha.Location = new System.Drawing.Point(6, 119);
@@ -263,6 +269,9 @@ namespace CLASE05.Formularios.Reportes
             // 
             // rv_ventasCliente
             // 
+            this.rv_ventasCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.rv_ventasCliente.LocalReport.ReportEmbeddedResource = "CLASE05.Reportes.Ventas.Reporte_Ventas_Cliente.rdlc";
             this.rv_ventasCliente.Location = new System.Drawing.Point(6, 119);
             this.rv_ventasCliente.Name = "rv_ventasCliente";
@@ -300,8 +309,14 @@ namespace CLASE05.Formularios.Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(675, 729);
+            this.ControlBox = false;
             this.Controls.Add(this.tab_ventas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_Reporte_Ventas";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.Frm_Reporte_Ventas_Load);
             this.Controls.SetChildIndex(this.tab_ventas, 0);
             this.Controls.SetChildIndex(this.btn_cerrar, 0);
