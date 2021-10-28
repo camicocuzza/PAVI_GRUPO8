@@ -24,6 +24,14 @@ namespace CLASE05.Negocios
 
             return _BD.EjecutarSelect(sql);
         }
+        public DataTable grid_StockArticulos(string patron, string columna)
+        {
+            string sql = @"SELECT a.cod_articulo, a.nombre, s.cantidad, s.fecha 
+                          FROM articulo a JOIN stock s ON a.cod_articulo = s.cod_articulo
+                          WHERE " + columna + " like '%" + patron + "%' AND s.eliminado = 0 ";
+
+            return _BD.EjecutarSelect(sql);
+        }
 
         public void Insertar(string cod_articulo, string fecha, int cantidad)
         {

@@ -22,6 +22,14 @@ namespace CLASE05.Negocios
 
             return _BD.EjecutarSelect(sql);
         }
+        public DataTable grid_StockEnsamblados(string patron, string columna)
+        {
+            string sql = @"SELECT e.cod_prod_ensamblado, e.nombre, s.cantidad, s.fecha 
+                          FROM producto_ensamblado e JOIN stock_prod_ensamblado s ON e.cod_prod_ensamblado = s.cod_prod_ensamblado
+                          WHERE " + columna + " like '%" + patron + "%' AND s.eliminado = 0 ";
+
+            return _BD.EjecutarSelect(sql);
+        }
 
         public void Insertar(string cod_prod_ensamblado, string fecha, int cantidad)
         {
