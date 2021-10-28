@@ -37,22 +37,21 @@ namespace CLASE05.Formularios.InicioSistema
         public Frm_Escritorio()
         {
             InitializeComponent();
+            Screen screen = Screen.FromControl(this);
+            int x = screen.WorkingArea.X - screen.Bounds.X;
+            int y = screen.WorkingArea.Y - screen.Bounds.Y;
+            this.MaximizedBounds = new Rectangle(x, y,
+                screen.WorkingArea.Width, screen.WorkingArea.Height);
+            this.MaximumSize = screen.WorkingArea.Size;
+            this.WindowState = FormWindowState.Maximized;
         }
 
-        Frm_ABM_Usuario_Entrada abm_usu_open;        
+        Frm_ABM_Usuario_Entrada abm_usu_open;
 
-            private void Frm_Escritorio_Load(object sender, EventArgs e)
-        {
-            //Screen screen = Screen.FromControl(this);
-            //int x = screen.WorkingArea.X - screen.Bounds.X;
-            //int y = screen.WorkingArea.Y - screen.Bounds.Y;
-            //this.MaximizedBounds = new Rectangle(x, y,
-            //    screen.WorkingArea.Width, screen.WorkingArea.Height);
-            //this.MaximumSize = screen.WorkingArea.Size;
-            //this.WindowState = FormWindowState.Maximized;
-
+        private void Frm_Escritorio_Load(object sender, EventArgs e)
+        {           
             this.Plogin();
-        }
+        }      
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
