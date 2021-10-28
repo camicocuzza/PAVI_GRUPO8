@@ -363,19 +363,28 @@
             </ChartLegends>
             <Palette>Custom</Palette>
             <ChartCustomPaletteColors>
+              <ChartCustomPaletteColor>LightSteelBlue</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#ffdfb0</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#ffc2c9</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>PowderBlue</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#feffc4</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#cfeed0</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#e8c1ef</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#c2c5ff</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#ff9898</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#f4cdb4</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#d6f2d9</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#e6e6e6</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#d1969d</ChartCustomPaletteColor>
               <ChartCustomPaletteColor>Plum</ChartCustomPaletteColor>
               <ChartCustomPaletteColor>LightCoral</ChartCustomPaletteColor>
-              <ChartCustomPaletteColor>LightSteelBlue</ChartCustomPaletteColor>
-              <ChartCustomPaletteColor>NavajoWhite</ChartCustomPaletteColor>
-              <ChartCustomPaletteColor>#dbeed5</ChartCustomPaletteColor>
-              <ChartCustomPaletteColor>LightGoldenrodYellow</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#faf494</ChartCustomPaletteColor>
               <ChartCustomPaletteColor>#faced0</ChartCustomPaletteColor>
-              <ChartCustomPaletteColor>LightPink</ChartCustomPaletteColor>
-              <ChartCustomPaletteColor>LightSalmon</ChartCustomPaletteColor>
-              <ChartCustomPaletteColor>PowderBlue</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#e58e6c</ChartCustomPaletteColor>
               <ChartCustomPaletteColor>CornflowerBlue</ChartCustomPaletteColor>
-              <ChartCustomPaletteColor>PaleGoldenrod</ChartCustomPaletteColor>
-              <ChartCustomPaletteColor>MediumSpringGreen</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#8dd49e</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#8ce0dd</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#dd6edb</ChartCustomPaletteColor>
               <ChartCustomPaletteColor>MediumTurquoise</ChartCustomPaletteColor>
             </ChartCustomPaletteColors>
             <ChartBorderSkin>

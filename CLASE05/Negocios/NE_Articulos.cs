@@ -42,7 +42,8 @@ namespace CLASE05.Negocios
             string sql = "";
 
             sql = @"SELECT cod_articulo, num_lote, precio, nombre, id_pais, cuit_proveedor 
-                          FROM articulo WHERE " + columna + " like '%" + patron + "%' AND eliminado = 0";
+                          FROM articulo WHERE " + columna + " like '%" + patron + "%' AND eliminado = 0 " +
+                          "ORDER BY len(cod_articulo), cod_articulo";
 
             return _BD.EjecutarSelect(sql);
         }
