@@ -24,11 +24,31 @@ namespace CLASE05.Negocios
 
             return _BD.EjecutarSelect(sql);
         }
-        public DataTable grid_StockArticulos(string patron, string columna)
+        public DataTable BuscarGrilla(string patron, string columna)
         {
             string sql = @"SELECT a.cod_articulo, a.nombre, s.cantidad, s.fecha 
                           FROM articulo a JOIN stock s ON a.cod_articulo = s.cod_articulo
-                          WHERE " + columna + " like '%" + patron + "%' AND s.eliminado = 0 ";
+                          WHERE " + columna + " like '%" + patron + "%' AND s.eliminado = 0" +
+                          " ORDER BY s.fecha";
+
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable BuscarPorCodigo(string codigo)
+        {
+            string sql = @"SELECT a.cod_articulo, a.nombre, s.cantidad, s.fecha 
+                          FROM articulo a JOIN stock s ON a.cod_articulo = s.cod_articulo
+                          WHERE a.cod_articulo = " + codigo + " AND s.eliminado = 0" +
+                          " ORDER BY s.fecha";
+
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable BuscarPorFecha(string fecha)
+        {
+            string sql = @"SELECT a.cod_articulo, a.nombre, s.cantidad, s.fecha 
+                          FROM articulo a JOIN stock s ON a.cod_articulo = s.cod_articulo
+                          WHERE convert(date, s.fecha, 103) = '" + fecha + "'" +
+                          " ORDER BY s.fecha ";
 
             return _BD.EjecutarSelect(sql);
         }

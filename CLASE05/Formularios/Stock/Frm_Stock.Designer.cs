@@ -29,23 +29,11 @@ namespace CLASE05.Formularios.Stock
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rb_todos_articulo = new System.Windows.Forms.RadioButton();
-            this.rb_fecha_articulo = new System.Windows.Forms.RadioButton();
-            this.rb_n_articulo = new System.Windows.Forms.RadioButton();
-            this.label4 = new System.Windows.Forms.Label();
-            this.rb_cod_articulo = new System.Windows.Forms.RadioButton();
-            this.btn_blan_art = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_patron_art = new System.Windows.Forms.MaskedTextBox();
-            this.btn_buscar_articulos = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.grid_stock_ensamblados = new CLASE05.Clases.Grid01();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rb_todos_ensamblado = new System.Windows.Forms.RadioButton();
             this.rb_fecha_ensamblado = new System.Windows.Forms.RadioButton();
@@ -56,15 +44,27 @@ namespace CLASE05.Formularios.Stock
             this.label6 = new System.Windows.Forms.Label();
             this.txt_patron_ens = new System.Windows.Forms.MaskedTextBox();
             this.btn_buscar_ens = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.grid_stock_articulos = new CLASE05.Clases.Grid01();
-            this.grid_stock_ensamblados = new CLASE05.Clases.Grid01();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rb_todos_articulo = new System.Windows.Forms.RadioButton();
+            this.rb_fecha_articulo = new System.Windows.Forms.RadioButton();
+            this.rb_n_articulo = new System.Windows.Forms.RadioButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.rb_cod_articulo = new System.Windows.Forms.RadioButton();
+            this.btn_blan_art = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_patron_art = new System.Windows.Forms.MaskedTextBox();
+            this.btn_buscar_articulos = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_stock_articulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_stock_ensamblados)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_stock_articulos)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_cerrar
@@ -84,26 +84,16 @@ namespace CLASE05.Formularios.Stock
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(1, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(666, 623);
             this.tabControl1.TabIndex = 5;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.tabPage1.Controls.Add(this.grid_stock_articulos);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(658, 597);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Artículos";
             // 
             // tabPage2
             // 
@@ -118,159 +108,24 @@ namespace CLASE05.Formularios.Stock
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ensamblados";
             // 
-            // groupBox1
+            // grid_stock_ensamblados
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.groupBox1.Controls.Add(this.rb_todos_articulo);
-            this.groupBox1.Controls.Add(this.rb_fecha_articulo);
-            this.groupBox1.Controls.Add(this.rb_n_articulo);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.rb_cod_articulo);
-            this.groupBox1.Controls.Add(this.btn_blan_art);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txt_patron_art);
-            this.groupBox1.Controls.Add(this.btn_buscar_articulos);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft JhengHei", 12.75F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(6, 62);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(645, 136);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Restricciones de Búsqueda";
-            // 
-            // rb_todos_articulo
-            // 
-            this.rb_todos_articulo.AutoSize = true;
-            this.rb_todos_articulo.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.rb_todos_articulo.Location = new System.Drawing.Point(287, 89);
-            this.rb_todos_articulo.Name = "rb_todos_articulo";
-            this.rb_todos_articulo.Size = new System.Drawing.Size(64, 21);
-            this.rb_todos_articulo.TabIndex = 40;
-            this.rb_todos_articulo.TabStop = true;
-            this.rb_todos_articulo.Text = "Todos";
-            this.rb_todos_articulo.UseVisualStyleBackColor = true;
-            // 
-            // rb_fecha_articulo
-            // 
-            this.rb_fecha_articulo.AutoSize = true;
-            this.rb_fecha_articulo.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.rb_fecha_articulo.Location = new System.Drawing.Point(206, 89);
-            this.rb_fecha_articulo.Name = "rb_fecha_articulo";
-            this.rb_fecha_articulo.Size = new System.Drawing.Size(62, 21);
-            this.rb_fecha_articulo.TabIndex = 39;
-            this.rb_fecha_articulo.TabStop = true;
-            this.rb_fecha_articulo.Text = "Fecha";
-            this.rb_fecha_articulo.UseVisualStyleBackColor = true;
-            // 
-            // rb_n_articulo
-            // 
-            this.rb_n_articulo.AutoSize = true;
-            this.rb_n_articulo.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.rb_n_articulo.Location = new System.Drawing.Point(110, 89);
-            this.rb_n_articulo.Name = "rb_n_articulo";
-            this.rb_n_articulo.Size = new System.Drawing.Size(80, 21);
-            this.rb_n_articulo.TabIndex = 38;
-            this.rb_n_articulo.TabStop = true;
-            this.rb_n_articulo.Text = "Nombre ";
-            this.rb_n_articulo.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 67);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 17);
-            this.label4.TabIndex = 37;
-            this.label4.Text = "Buscar por:";
-            // 
-            // rb_cod_articulo
-            // 
-            this.rb_cod_articulo.AutoSize = true;
-            this.rb_cod_articulo.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.rb_cod_articulo.Location = new System.Drawing.Point(19, 89);
-            this.rb_cod_articulo.Name = "rb_cod_articulo";
-            this.rb_cod_articulo.Size = new System.Drawing.Size(74, 21);
-            this.rb_cod_articulo.TabIndex = 36;
-            this.rb_cod_articulo.TabStop = true;
-            this.rb_cod_articulo.Text = "Código ";
-            this.rb_cod_articulo.UseVisualStyleBackColor = true;
-            // 
-            // btn_blan_art
-            // 
-            this.btn_blan_art.BackColor = System.Drawing.Color.Transparent;
-            this.btn_blan_art.BackgroundImage = global::CLASE05.Properties.Resources.btn_eliminar__7_;
-            this.btn_blan_art.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_blan_art.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.btn_blan_art.FlatAppearance.BorderSize = 0;
-            this.btn_blan_art.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.btn_blan_art.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.btn_blan_art.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_blan_art.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.btn_blan_art.Location = new System.Drawing.Point(287, 34);
-            this.btn_blan_art.Name = "btn_blan_art";
-            this.btn_blan_art.Size = new System.Drawing.Size(36, 35);
-            this.btn_blan_art.TabIndex = 35;
-            this.btn_blan_art.TabStop = false;
-            this.btn_blan_art.UseVisualStyleBackColor = false;
-            this.btn_blan_art.Click += new System.EventHandler(this.btn_blan_art_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 17);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Patrón de Búsqueda";
-            // 
-            // txt_patron_art
-            // 
-            this.txt_patron_art.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.txt_patron_art.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_patron_art.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txt_patron_art.Location = new System.Drawing.Point(152, 41);
-            this.txt_patron_art.Mask = "aaaaaaaaaaaaaaaaaaaa";
-            this.txt_patron_art.Name = "txt_patron_art";
-            this.txt_patron_art.Size = new System.Drawing.Size(129, 25);
-            this.txt_patron_art.TabIndex = 33;
-            // 
-            // btn_buscar_articulos
-            // 
-            this.btn_buscar_articulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
-            this.btn_buscar_articulos.FlatAppearance.BorderSize = 0;
-            this.btn_buscar_articulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_buscar_articulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btn_buscar_articulos.ForeColor = System.Drawing.Color.White;
-            this.btn_buscar_articulos.Location = new System.Drawing.Point(552, 100);
-            this.btn_buscar_articulos.Name = "btn_buscar_articulos";
-            this.btn_buscar_articulos.Size = new System.Drawing.Size(85, 30);
-            this.btn_buscar_articulos.TabIndex = 0;
-            this.btn_buscar_articulos.Text = "Buscar";
-            this.btn_buscar_articulos.UseVisualStyleBackColor = false;
-            this.btn_buscar_articulos.Click += new System.EventHandler(this.btn_buscar_articulos_Click);
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(20, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(289, 31);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Historial Stock Artículos";
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(20, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(352, 31);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Historial Stock Ensamblados";
+            this.grid_stock_ensamblados._formatoLetraHeader = System.Drawing.FontStyle.Bold;
+            this.grid_stock_ensamblados._tamannoLetraHeader = 9;
+            this.grid_stock_ensamblados.AllowUserToAddRows = false;
+            this.grid_stock_ensamblados.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_stock_ensamblados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.grid_stock_ensamblados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grid_stock_ensamblados.BackgroundColor = System.Drawing.Color.Silver;
+            this.grid_stock_ensamblados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_stock_ensamblados.Location = new System.Drawing.Point(6, 204);
+            this.grid_stock_ensamblados.Name = "grid_stock_ensamblados";
+            this.grid_stock_ensamblados.ReadOnly = true;
+            this.grid_stock_ensamblados.Size = new System.Drawing.Size(645, 386);
+            this.grid_stock_ensamblados.TabIndex = 10;
             // 
             // groupBox2
             // 
@@ -362,7 +217,7 @@ namespace CLASE05.Formularios.Stock
             this.btn_blan_ens.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btn_blan_ens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_blan_ens.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.btn_blan_ens.Location = new System.Drawing.Point(287, 34);
+            this.btn_blan_ens.Location = new System.Drawing.Point(443, 34);
             this.btn_blan_ens.Name = "btn_blan_ens";
             this.btn_blan_ens.Size = new System.Drawing.Size(36, 35);
             this.btn_blan_ens.TabIndex = 35;
@@ -386,9 +241,9 @@ namespace CLASE05.Formularios.Stock
             this.txt_patron_ens.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_patron_ens.ForeColor = System.Drawing.Color.Gainsboro;
             this.txt_patron_ens.Location = new System.Drawing.Point(152, 41);
-            this.txt_patron_ens.Mask = "aaaaaaaaaaaaaaaaaaaa";
+            this.txt_patron_ens.Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
             this.txt_patron_ens.Name = "txt_patron_ens";
-            this.txt_patron_ens.Size = new System.Drawing.Size(129, 25);
+            this.txt_patron_ens.Size = new System.Drawing.Size(285, 25);
             this.txt_patron_ens.TabIndex = 33;
             // 
             // btn_buscar_ens
@@ -406,14 +261,37 @@ namespace CLASE05.Formularios.Stock
             this.btn_buscar_ens.UseVisualStyleBackColor = false;
             this.btn_buscar_ens.Click += new System.EventHandler(this.btn_buscar_ens_Click);
             // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(20, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(352, 31);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Historial Stock Ensamblados";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage1.Controls.Add(this.grid_stock_articulos);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(658, 597);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Artículos";
+            // 
             // grid_stock_articulos
             // 
             this.grid_stock_articulos._formatoLetraHeader = System.Drawing.FontStyle.Bold;
             this.grid_stock_articulos._tamannoLetraHeader = 9;
             this.grid_stock_articulos.AllowUserToAddRows = false;
             this.grid_stock_articulos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_stock_articulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid_stock_articulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.grid_stock_articulos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -425,24 +303,149 @@ namespace CLASE05.Formularios.Stock
             this.grid_stock_articulos.Size = new System.Drawing.Size(645, 386);
             this.grid_stock_articulos.TabIndex = 9;
             // 
-            // grid_stock_ensamblados
+            // label1
             // 
-            this.grid_stock_ensamblados._formatoLetraHeader = System.Drawing.FontStyle.Bold;
-            this.grid_stock_ensamblados._tamannoLetraHeader = 9;
-            this.grid_stock_ensamblados.AllowUserToAddRows = false;
-            this.grid_stock_ensamblados.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid_stock_ensamblados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.grid_stock_ensamblados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.grid_stock_ensamblados.BackgroundColor = System.Drawing.Color.Silver;
-            this.grid_stock_ensamblados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_stock_ensamblados.Location = new System.Drawing.Point(6, 204);
-            this.grid_stock_ensamblados.Name = "grid_stock_ensamblados";
-            this.grid_stock_ensamblados.ReadOnly = true;
-            this.grid_stock_ensamblados.Size = new System.Drawing.Size(645, 386);
-            this.grid_stock_ensamblados.TabIndex = 10;
+            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(20, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(289, 31);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Historial Stock Artículos";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.groupBox1.Controls.Add(this.rb_todos_articulo);
+            this.groupBox1.Controls.Add(this.rb_fecha_articulo);
+            this.groupBox1.Controls.Add(this.rb_n_articulo);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.rb_cod_articulo);
+            this.groupBox1.Controls.Add(this.btn_blan_art);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txt_patron_art);
+            this.groupBox1.Controls.Add(this.btn_buscar_articulos);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft JhengHei", 12.75F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(6, 62);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(645, 136);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Restricciones de Búsqueda";
+            // 
+            // rb_todos_articulo
+            // 
+            this.rb_todos_articulo.AutoSize = true;
+            this.rb_todos_articulo.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.rb_todos_articulo.Location = new System.Drawing.Point(287, 89);
+            this.rb_todos_articulo.Name = "rb_todos_articulo";
+            this.rb_todos_articulo.Size = new System.Drawing.Size(64, 21);
+            this.rb_todos_articulo.TabIndex = 40;
+            this.rb_todos_articulo.TabStop = true;
+            this.rb_todos_articulo.Text = "Todos";
+            this.rb_todos_articulo.UseVisualStyleBackColor = true;
+            // 
+            // rb_fecha_articulo
+            // 
+            this.rb_fecha_articulo.AutoSize = true;
+            this.rb_fecha_articulo.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.rb_fecha_articulo.Location = new System.Drawing.Point(206, 89);
+            this.rb_fecha_articulo.Name = "rb_fecha_articulo";
+            this.rb_fecha_articulo.Size = new System.Drawing.Size(62, 21);
+            this.rb_fecha_articulo.TabIndex = 39;
+            this.rb_fecha_articulo.TabStop = true;
+            this.rb_fecha_articulo.Text = "Fecha";
+            this.rb_fecha_articulo.UseVisualStyleBackColor = true;
+            // 
+            // rb_n_articulo
+            // 
+            this.rb_n_articulo.AutoSize = true;
+            this.rb_n_articulo.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.rb_n_articulo.Location = new System.Drawing.Point(110, 89);
+            this.rb_n_articulo.Name = "rb_n_articulo";
+            this.rb_n_articulo.Size = new System.Drawing.Size(80, 21);
+            this.rb_n_articulo.TabIndex = 38;
+            this.rb_n_articulo.TabStop = true;
+            this.rb_n_articulo.Text = "Nombre ";
+            this.rb_n_articulo.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(16, 67);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 17);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Buscar por:";
+            // 
+            // rb_cod_articulo
+            // 
+            this.rb_cod_articulo.AutoSize = true;
+            this.rb_cod_articulo.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.rb_cod_articulo.Location = new System.Drawing.Point(19, 89);
+            this.rb_cod_articulo.Name = "rb_cod_articulo";
+            this.rb_cod_articulo.Size = new System.Drawing.Size(74, 21);
+            this.rb_cod_articulo.TabIndex = 36;
+            this.rb_cod_articulo.TabStop = true;
+            this.rb_cod_articulo.Text = "Código ";
+            this.rb_cod_articulo.UseVisualStyleBackColor = true;
+            // 
+            // btn_blan_art
+            // 
+            this.btn_blan_art.BackColor = System.Drawing.Color.Transparent;
+            this.btn_blan_art.BackgroundImage = global::CLASE05.Properties.Resources.btn_eliminar__7_;
+            this.btn_blan_art.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_blan_art.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btn_blan_art.FlatAppearance.BorderSize = 0;
+            this.btn_blan_art.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btn_blan_art.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btn_blan_art.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_blan_art.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btn_blan_art.Location = new System.Drawing.Point(443, 34);
+            this.btn_blan_art.Name = "btn_blan_art";
+            this.btn_blan_art.Size = new System.Drawing.Size(36, 35);
+            this.btn_blan_art.TabIndex = 35;
+            this.btn_blan_art.TabStop = false;
+            this.btn_blan_art.UseVisualStyleBackColor = false;
+            this.btn_blan_art.Click += new System.EventHandler(this.btn_blan_art_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(16, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 17);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Patrón de Búsqueda";
+            // 
+            // txt_patron_art
+            // 
+            this.txt_patron_art.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txt_patron_art.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_patron_art.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txt_patron_art.Location = new System.Drawing.Point(152, 41);
+            this.txt_patron_art.Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
+            this.txt_patron_art.Name = "txt_patron_art";
+            this.txt_patron_art.Size = new System.Drawing.Size(285, 25);
+            this.txt_patron_art.TabIndex = 33;
+            // 
+            // btn_buscar_articulos
+            // 
+            this.btn_buscar_articulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.btn_buscar_articulos.FlatAppearance.BorderSize = 0;
+            this.btn_buscar_articulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscar_articulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btn_buscar_articulos.ForeColor = System.Drawing.Color.White;
+            this.btn_buscar_articulos.Location = new System.Drawing.Point(552, 100);
+            this.btn_buscar_articulos.Name = "btn_buscar_articulos";
+            this.btn_buscar_articulos.Size = new System.Drawing.Size(85, 30);
+            this.btn_buscar_articulos.TabIndex = 0;
+            this.btn_buscar_articulos.Text = "Buscar";
+            this.btn_buscar_articulos.UseVisualStyleBackColor = false;
+            this.btn_buscar_articulos.Click += new System.EventHandler(this.btn_buscar_articulos_Click);
             // 
             // Frm_Stock
             // 
@@ -456,14 +459,14 @@ namespace CLASE05.Formularios.Stock
             this.Controls.SetChildIndex(this.btn_maximizar, 0);
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_stock_ensamblados)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grid_stock_articulos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_stock_ensamblados)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -16,6 +16,7 @@ using CLASE05.Formularios._FrmBASE;
 using CLASE05.Formularios.Compras;
 using CLASE05.Formularios.Reportes;
 using CLASE05.Formularios.Estadísticas;
+using CLASE05.Formularios.Stock;
 
 
 
@@ -54,6 +55,7 @@ namespace CLASE05
             //Application.Run(new Frm_Reporte_Ventas());
             //Application.Run(new Frm_Reporte_Compras());
             //Application.Run(new Frm_Estadisticas_Ventas());
+            //Application.Run(new Frm_Stock());
         }
     }
 }

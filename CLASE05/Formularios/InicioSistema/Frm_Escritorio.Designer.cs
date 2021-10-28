@@ -43,10 +43,6 @@
             this.lotesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stockartículosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.stockequiposEnsambladosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stockequiposEspecialesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,6 +50,8 @@
             this.comprasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gráficosEstadísticosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comprasToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventasToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_clientes = new System.Windows.Forms.Button();
             this.btn_compras = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
@@ -77,8 +75,7 @@
             this.btn_especiales = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.comprasToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventasToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
@@ -154,7 +151,7 @@
             this.usuariosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.usuariosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
@@ -163,7 +160,7 @@
             this.clientesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.clientesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -172,7 +169,7 @@
             this.artículosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.artículosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.artículosToolStripMenuItem.Name = "artículosToolStripMenuItem";
-            this.artículosToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.artículosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.artículosToolStripMenuItem.Text = "Artículos";
             this.artículosToolStripMenuItem.Click += new System.EventHandler(this.artículosToolStripMenuItem_Click);
             // 
@@ -184,7 +181,7 @@
             this.especialesToolStripMenuItem});
             this.equiposToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.equiposToolStripMenuItem.Name = "equiposToolStripMenuItem";
-            this.equiposToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.equiposToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.equiposToolStripMenuItem.Text = "Equipos";
             // 
             // ensambladosToolStripMenuItem
@@ -210,7 +207,7 @@
             this.lotesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.lotesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.lotesToolStripMenuItem.Name = "lotesToolStripMenuItem";
-            this.lotesToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.lotesToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.lotesToolStripMenuItem.Text = "Lotes";
             this.lotesToolStripMenuItem.Click += new System.EventHandler(this.lotesToolStripMenuItem_Click);
             // 
@@ -219,7 +216,7 @@
             this.empleadosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.empleadosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.empleadosToolStripMenuItem.Text = "Empleados";
             this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
@@ -228,45 +225,9 @@
             this.proveedoresToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.proveedoresToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
-            // 
-            // inventarioToolStripMenuItem
-            // 
-            this.inventarioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.inventarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.stockartículosToolStripMenuItem1,
-            this.stockequiposEnsambladosToolStripMenuItem,
-            this.stockequiposEspecialesToolStripMenuItem});
-            this.inventarioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
-            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
-            this.inventarioToolStripMenuItem.Text = "Inventario";
-            // 
-            // stockartículosToolStripMenuItem1
-            // 
-            this.stockartículosToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.stockartículosToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.stockartículosToolStripMenuItem1.Name = "stockartículosToolStripMenuItem1";
-            this.stockartículosToolStripMenuItem1.Size = new System.Drawing.Size(231, 26);
-            this.stockartículosToolStripMenuItem1.Text = "Artículos";
-            // 
-            // stockequiposEnsambladosToolStripMenuItem
-            // 
-            this.stockequiposEnsambladosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.stockequiposEnsambladosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.stockequiposEnsambladosToolStripMenuItem.Name = "stockequiposEnsambladosToolStripMenuItem";
-            this.stockequiposEnsambladosToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
-            this.stockequiposEnsambladosToolStripMenuItem.Text = "Equipos Ensamblados";
-            // 
-            // stockequiposEspecialesToolStripMenuItem
-            // 
-            this.stockequiposEspecialesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.stockequiposEspecialesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.stockequiposEspecialesToolStripMenuItem.Name = "stockequiposEspecialesToolStripMenuItem";
-            this.stockequiposEspecialesToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
-            this.stockequiposEspecialesToolStripMenuItem.Text = "Equipos Especiales";
             // 
             // procesosToolStripMenuItem
             // 
@@ -314,7 +275,7 @@
             this.comprasToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.comprasToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.comprasToolStripMenuItem1.Name = "comprasToolStripMenuItem1";
-            this.comprasToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.comprasToolStripMenuItem1.Size = new System.Drawing.Size(143, 26);
             this.comprasToolStripMenuItem1.Text = "Compras";
             this.comprasToolStripMenuItem1.Click += new System.EventHandler(this.comprasToolStripMenuItem1_Click);
             // 
@@ -323,7 +284,7 @@
             this.ventasToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ventasToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
-            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(143, 26);
             this.ventasToolStripMenuItem1.Text = "Ventas";
             this.ventasToolStripMenuItem1.Click += new System.EventHandler(this.ventasToolStripMenuItem1_Click);
             // 
@@ -338,6 +299,23 @@
             this.gráficosEstadísticosToolStripMenuItem.Name = "gráficosEstadísticosToolStripMenuItem";
             this.gráficosEstadísticosToolStripMenuItem.Size = new System.Drawing.Size(163, 25);
             this.gráficosEstadísticosToolStripMenuItem.Text = "Gráficos Estadísticos";
+            // 
+            // comprasToolStripMenuItem2
+            // 
+            this.comprasToolStripMenuItem2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.comprasToolStripMenuItem2.ForeColor = System.Drawing.Color.White;
+            this.comprasToolStripMenuItem2.Name = "comprasToolStripMenuItem2";
+            this.comprasToolStripMenuItem2.Size = new System.Drawing.Size(143, 26);
+            this.comprasToolStripMenuItem2.Text = "Compras";
+            // 
+            // ventasToolStripMenuItem2
+            // 
+            this.ventasToolStripMenuItem2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.ventasToolStripMenuItem2.ForeColor = System.Drawing.Color.White;
+            this.ventasToolStripMenuItem2.Name = "ventasToolStripMenuItem2";
+            this.ventasToolStripMenuItem2.Size = new System.Drawing.Size(143, 26);
+            this.ventasToolStripMenuItem2.Text = "Ventas";
+            this.ventasToolStripMenuItem2.Click += new System.EventHandler(this.ventasToolStripMenuItem2_Click);
             // 
             // btn_clientes
             // 
@@ -589,7 +567,6 @@
             this.btn_inventario.BackgroundImage = global::CLASE05.Properties.Resources.icon_inventario__9_;
             this.btn_inventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_inventario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_inventario.Enabled = false;
             this.btn_inventario.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.btn_inventario.FlatAppearance.BorderSize = 0;
             this.btn_inventario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -728,22 +705,14 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // comprasToolStripMenuItem2
+            // inventarioToolStripMenuItem
             // 
-            this.comprasToolStripMenuItem2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.comprasToolStripMenuItem2.ForeColor = System.Drawing.Color.White;
-            this.comprasToolStripMenuItem2.Name = "comprasToolStripMenuItem2";
-            this.comprasToolStripMenuItem2.Size = new System.Drawing.Size(180, 26);
-            this.comprasToolStripMenuItem2.Text = "Compras";
-            // 
-            // ventasToolStripMenuItem2
-            // 
-            this.ventasToolStripMenuItem2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.ventasToolStripMenuItem2.ForeColor = System.Drawing.Color.White;
-            this.ventasToolStripMenuItem2.Name = "ventasToolStripMenuItem2";
-            this.ventasToolStripMenuItem2.Size = new System.Drawing.Size(180, 26);
-            this.ventasToolStripMenuItem2.Text = "Ventas";
-            this.ventasToolStripMenuItem2.Click += new System.EventHandler(this.ventasToolStripMenuItem2_Click);
+            this.inventarioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.inventarioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
+            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.inventarioToolStripMenuItem.Text = "Inventario";
+            this.inventarioToolStripMenuItem.Click += new System.EventHandler(this.inventarioToolStripMenuItem_Click);
             // 
             // Frm_Escritorio
             // 
@@ -836,16 +805,13 @@
         public System.Windows.Forms.Button btn_especiales;
         private System.Windows.Forms.Label label1;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
-        private System.Windows.Forms.ToolStripMenuItem inventarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem stockartículosToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem stockequiposEnsambladosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem stockequiposEspecialesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem inventarioToolStripMenuItem;
     }
 }
 

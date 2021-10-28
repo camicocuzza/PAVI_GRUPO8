@@ -21,6 +21,8 @@ using CLASE05.Formularios.Compras;
 using CLASE05.Formularios.Facturas;
 using CLASE05.Formularios.Reportes;
 using CLASE05.Formularios.Estadísticas;
+using CLASE05.Formularios.Stock;
+
 
 namespace CLASE05.Formularios.InicioSistema
 {
@@ -41,13 +43,13 @@ namespace CLASE05.Formularios.InicioSistema
 
             private void Frm_Escritorio_Load(object sender, EventArgs e)
         {
-            Screen screen = Screen.FromControl(this);
-            int x = screen.WorkingArea.X - screen.Bounds.X;
-            int y = screen.WorkingArea.Y - screen.Bounds.Y;
-            this.MaximizedBounds = new Rectangle(x, y,
-                screen.WorkingArea.Width, screen.WorkingArea.Height);
-            this.MaximumSize = screen.WorkingArea.Size;
-            this.WindowState = FormWindowState.Maximized;
+            //Screen screen = Screen.FromControl(this);
+            //int x = screen.WorkingArea.X - screen.Bounds.X;
+            //int y = screen.WorkingArea.Y - screen.Bounds.Y;
+            //this.MaximizedBounds = new Rectangle(x, y,
+            //    screen.WorkingArea.Width, screen.WorkingArea.Height);
+            //this.MaximumSize = screen.WorkingArea.Size;
+            //this.WindowState = FormWindowState.Maximized;
 
             this.Plogin();
         }
@@ -189,7 +191,8 @@ namespace CLASE05.Formularios.InicioSistema
 
         private void btn_inventario_Click(object sender, EventArgs e)
         {
-
+            Frm_Stock frm_stock = new Frm_Stock();
+            frm_stock.Show();
         }
 
         private void btn_usuarios_Click(object sender, EventArgs e)
@@ -237,6 +240,12 @@ namespace CLASE05.Formularios.InicioSistema
         {
             Frm_Estadisticas_Ventas frm_estadisticas_ventas = new Frm_Estadisticas_Ventas();
             frm_estadisticas_ventas.Show();
+        }
+
+        private void inventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Stock frm_stock = new Frm_Stock();
+            frm_stock.Show();
         }
     }
 }

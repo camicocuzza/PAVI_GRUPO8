@@ -22,11 +22,40 @@ namespace CLASE05.Negocios
 
             return _BD.EjecutarSelect(sql);
         }
-        public DataTable grid_StockEnsamblados(string patron, string columna)
+        public DataTable BuscarActual(string cod_prod_ensamblado)
         {
             string sql = @"SELECT e.cod_prod_ensamblado, e.nombre, s.cantidad, s.fecha 
                           FROM producto_ensamblado e JOIN stock_prod_ensamblado s ON e.cod_prod_ensamblado = s.cod_prod_ensamblado
-                          WHERE " + columna + " like '%" + patron + "%' AND s.eliminado = 0 ";
+                          WHERE e.cod_prod_ensamblado = '" + cod_prod_ensamblado + "' AND s.eliminado = 0 " +
+                          "AND s.fecha = (SELECT max(s1.fecha) FROM stock_prod_ensamblado s1 " +
+                                          "WHERE s1.cod_prod_ensamblado = s.cod_prod_ensamblado)";
+
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable BuscarGrilla(string patron, string columna)
+        {
+            string sql = @"SELECT e.cod_prod_ensamblado, e.nombre, s.cantidad, s.fecha 
+                          FROM producto_ensamblado e JOIN stock_prod_ensamblado s ON e.cod_prod_ensamblado = s.cod_prod_ensamblado
+                          WHERE " + columna + " like '%" + patron + "%' AND s.eliminado = 0 " +
+                          "ORDER BY s.fecha";
+
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable BuscarPorCodigo(string codigo)
+        {
+            string sql = @"SELECT e.cod_prod_ensamblado, e.nombre, s.cantidad, s.fecha 
+                          FROM producto_ensamblado e JOIN stock_prod_ensamblado s ON e.cod_prod_ensamblado = s.cod_prod_ensamblado
+                          WHERE a.cod_prod_ensamblado = '" + codigo + "' AND s.eliminado = 0 " +
+                          "ORDER BY s.fecha";
+
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable BuscarPorFecha(string fecha)
+        {
+            string sql = @"SELECT e.cod_prod_ensamblado, e.nombre, s.cantidad, s.fecha 
+                          FROM producto_ensamblado e JOIN stock_prod_ensamblado s ON e.cod_prod_ensamblado = s.cod_prod_ensamblado                          
+                          WHERE convert(date, s.fecha, 103) = '" + fecha + "' " +
+                          "ORDER BY s.fecha";
 
             return _BD.EjecutarSelect(sql);
         }

@@ -61,7 +61,6 @@ namespace CLASE05.Formularios.InicioSistema
             txt_usuario.Text = "";
             txt_clave.Text = "";
             this.Dispose();
-            Application.Exit();
         }
 
         private void txt_clave_KeyPress(object sender, KeyPressEventArgs e)
