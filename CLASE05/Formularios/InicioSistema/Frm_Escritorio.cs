@@ -20,6 +20,7 @@ using CLASE05.Formularios.Proveedores;
 using CLASE05.Formularios.Compras;
 using CLASE05.Formularios.Facturas;
 using CLASE05.Formularios.Reportes;
+using CLASE05.Formularios.Estadísticas;
 
 namespace CLASE05.Formularios.InicioSistema
 {
@@ -230,6 +231,12 @@ namespace CLASE05.Formularios.InicioSistema
         {
             Frm_Reporte_Ventas frm_reporte_ventas = new Frm_Reporte_Ventas();
             frm_reporte_ventas.Show();
+        }
+
+        private void ventasToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Frm_Estadisticas_Ventas frm_estadisticas_ventas = new Frm_Estadisticas_Ventas();
+            frm_estadisticas_ventas.Show();
         }
     }
 }
