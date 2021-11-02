@@ -332,6 +332,12 @@
     <Compile Include="Formularios\EquiposEspeciales\Frm_EquiposEspeciales_Modificacion.Designer.cs">
       <DependentUpon>Frm_EquiposEspeciales_Modificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadísticas\Frm_Estadisticas_Compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadísticas\Frm_Estadisticas_Compras.Designer.cs">
+      <DependentUpon>Frm_Estadisticas_Compras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estadísticas\Frm_Estadisticas_Ventas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -536,6 +542,11 @@
     <Compile Include="Formularios\Usuarios\Frm_Usuario_Modificacion.Designer.cs">
       <DependentUpon>Frm_Usuario_Modificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Informes\Estadisticas\Compras\Datos_Estadisticas_Compras.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datos_Estadisticas_Compras.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Informes\Estadisticas\Ventas\Datos_Estadisticas_Ventas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -590,6 +601,9 @@
     <EmbeddedResource Include="Clases\TextBox02.resx">
       <DependentUpon>TextBox02.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadísticas\Frm_Estadisticas_Compras.resx">
+      <DependentUpon>Frm_Estadisticas_Compras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadísticas\Frm_Estadisticas_Ventas.resx">
       <DependentUpon>Frm_Estadisticas_Ventas.cs</DependentUpon>
     </EmbeddedResource>
@@ -608,6 +622,9 @@
     <EmbeddedResource Include="Formularios\_FrmBASE\FrmBase_Prueba_ABM_Entrada.resx">
       <DependentUpon>FrmBase_Prueba_ABM_Entrada.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Estadisticas\Compras\Compras_Articulos_Periodo.rdlc" />
+    <EmbeddedResource Include="Informes\Estadisticas\Compras\Compras_Mes.rdlc" />
+    <EmbeddedResource Include="Informes\Estadisticas\Compras\Compras_Proveedores_Periodo.rdlc" />
     <EmbeddedResource Include="Informes\Estadisticas\Ventas\Ventas_Articulos_Periodo.rdlc" />
     <EmbeddedResource Include="Informes\Estadisticas\Ventas\Ventas_Clientes_Periodo.rdlc" />
     <EmbeddedResource Include="Informes\Reportes\Compras\Reporte_Compras_Fecha.rdlc" />
@@ -812,6 +829,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Informes\Estadisticas\Compras\Datos_Estadisticas_Compras.xsc">
+      <DependentUpon>Datos_Estadisticas_Compras.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\Estadisticas\Compras\Datos_Estadisticas_Compras.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Datos_Estadisticas_Compras.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\Estadisticas\Compras\Datos_Estadisticas_Compras.xss">
+      <DependentUpon>Datos_Estadisticas_Compras.xsd</DependentUpon>
+    </None>
     <None Include="Informes\Estadisticas\Ventas\Datos_Estadisticas_Ventas.xsc">
       <DependentUpon>Datos_Estadisticas_Ventas.xsd</DependentUpon>
     </None>

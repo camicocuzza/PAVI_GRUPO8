@@ -168,5 +168,34 @@ namespace CLASE05.Negocios
                                                     "WHERE f1.cuit_proveedor = f.cuit_proveedor)";
             return _BD.EjecutarSelect(sql);
         }
+        public DataTable Estadisticas_Compras_Articulos(string fechaDesde, string fechaHasta)
+        {
+            string sql = @"SELECT d.cod_articulo, a.nombre, SUM(d.cantidad) AS CantidadComprada
+                            FROM compra c, detalle_compra d, articulo a 
+                            WHERE c.num_compra = d.num_compra AND d.cod_articulo = a.cod_articulo
+                            AND c.fecha BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "' AND c.eliminado = 0" +
+                            " GROUP BY d.cod_articulo, a.nombre" +
+                            " ORDER BY len(d.cod_articulo), d.cod_articulo";
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable Estadisticas_Compras_Proveedores(string fechaDesde, string fechaHasta)
+        {
+            string sql = @"SELECT p.cuit_proveedor, p.razon_social, COUNT(p.cuit_proveedor) AS CantidadCompras, SUM(c.monto_total) AS MontoTotal
+                            FROM compra c
+                            JOIN proveedor p ON c.cuit_proveedor = p.cuit_proveedor
+                            WHERE c.fecha BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "' AND c.eliminado = 0" +
+                            " GROUP BY p.cuit_proveedor, p.razon_social";
+
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable Estadisticas_Compras_año(string año)
+        {
+            string sql = @"SELECT month(c.fecha) mes, COUNT(month(c.fecha)) AS CantidadCompras, SUM(c.monto_total) AS MontoTotal
+                            FROM compra c
+                            WHERE year(c.fecha) = " + año + " AND c.eliminado = 0" +
+                            " GROUP BY month(c.fecha)";
+
+            return _BD.EjecutarSelect(sql);
+        }
     }
 }
