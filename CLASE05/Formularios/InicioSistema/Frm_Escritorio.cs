@@ -246,5 +246,11 @@ namespace CLASE05.Formularios.InicioSistema
             Frm_Stock frm_stock = new Frm_Stock();
             frm_stock.Show();
         }
+
+        private void comprasToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Frm_Estadisticas_Compras frm_estadisticas_compras = new Frm_Estadisticas_Compras();
+            frm_estadisticas_compras.Show();
+        }
     }
 }

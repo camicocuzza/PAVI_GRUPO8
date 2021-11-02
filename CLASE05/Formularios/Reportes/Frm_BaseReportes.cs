@@ -34,5 +34,11 @@ namespace CLASE05.Formularios.Reportes
             frm_estadisticas_ventas.Show();
        
         }
+
+        private void btn_est_compras_Click(object sender, EventArgs e)
+        {
+            Frm_Estadisticas_Compras frm_estadisticas_compras = new Frm_Estadisticas_Compras();
+            frm_estadisticas_compras.Show();
+        }
     }
 }

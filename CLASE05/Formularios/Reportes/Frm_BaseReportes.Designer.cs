@@ -31,6 +31,12 @@ namespace CLASE05.Formularios.Reportes
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_rpt_compras = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btn_rpt_ventas = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.gb_login = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,17 +44,11 @@ namespace CLASE05.Formularios.Reportes
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_est_ventas = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btn_rpt_compras = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btn_rpt_ventas = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.gb_login.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_cerrar
@@ -84,106 +84,6 @@ namespace CLASE05.Formularios.Reportes
             this.tabPage1.Size = new System.Drawing.Size(547, 266);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Reportes";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.tabPage2.Controls.Add(this.gb_login);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(547, 266);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Estadísticas";
-            // 
-            // gb_login
-            // 
-            this.gb_login.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gb_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.gb_login.Controls.Add(this.label1);
-            this.gb_login.Controls.Add(this.btn_est_compras);
-            this.gb_login.Controls.Add(this.lbl_titulo);
-            this.gb_login.Controls.Add(this.label5);
-            this.gb_login.Controls.Add(this.btn_est_ventas);
-            this.gb_login.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb_login.Location = new System.Drawing.Point(-4, -12);
-            this.gb_login.Name = "gb_login";
-            this.gb_login.Size = new System.Drawing.Size(555, 290);
-            this.gb_login.TabIndex = 17;
-            this.gb_login.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 12.75F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(13, 73);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(234, 22);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Seleccione tipo de reporte:";
-            // 
-            // btn_est_compras
-            // 
-            this.btn_est_compras.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_est_compras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
-            this.btn_est_compras.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btn_est_compras.FlatAppearance.BorderSize = 0;
-            this.btn_est_compras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_est_compras.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_est_compras.ForeColor = System.Drawing.Color.White;
-            this.btn_est_compras.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_est_compras.Location = new System.Drawing.Point(150, 129);
-            this.btn_est_compras.Name = "btn_est_compras";
-            this.btn_est_compras.Size = new System.Drawing.Size(236, 37);
-            this.btn_est_compras.TabIndex = 1;
-            this.btn_est_compras.Text = "Estadística Compras";
-            this.btn_est_compras.UseVisualStyleBackColor = false;
-            // 
-            // lbl_titulo
-            // 
-            this.lbl_titulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_titulo.Font = new System.Drawing.Font("Microsoft JhengHei", 12.75F, System.Drawing.FontStyle.Bold);
-            this.lbl_titulo.ForeColor = System.Drawing.Color.White;
-            this.lbl_titulo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_titulo.Location = new System.Drawing.Point(225, 28);
-            this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(115, 22);
-            this.lbl_titulo.TabIndex = 13;
-            this.lbl_titulo.Text = "Estadísticas";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(110, 36);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(331, 20);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "______________________________________________";
-            // 
-            // btn_est_ventas
-            // 
-            this.btn_est_ventas.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_est_ventas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
-            this.btn_est_ventas.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btn_est_ventas.FlatAppearance.BorderSize = 0;
-            this.btn_est_ventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_est_ventas.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_est_ventas.ForeColor = System.Drawing.Color.White;
-            this.btn_est_ventas.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_est_ventas.Location = new System.Drawing.Point(150, 190);
-            this.btn_est_ventas.Name = "btn_est_ventas";
-            this.btn_est_ventas.Size = new System.Drawing.Size(236, 37);
-            this.btn_est_ventas.TabIndex = 2;
-            this.btn_est_ventas.Text = "Estadística Ventas";
-            this.btn_est_ventas.UseVisualStyleBackColor = false;
-            this.btn_est_ventas.Click += new System.EventHandler(this.btn_est_ventas_Click);
             // 
             // groupBox1
             // 
@@ -275,6 +175,107 @@ namespace CLASE05.Formularios.Reportes
             this.btn_rpt_ventas.UseVisualStyleBackColor = false;
             this.btn_rpt_ventas.Click += new System.EventHandler(this.btn_rpt_ventas_Click);
             // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage2.Controls.Add(this.gb_login);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(547, 266);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Estadísticas";
+            // 
+            // gb_login
+            // 
+            this.gb_login.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gb_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.gb_login.Controls.Add(this.label1);
+            this.gb_login.Controls.Add(this.btn_est_compras);
+            this.gb_login.Controls.Add(this.lbl_titulo);
+            this.gb_login.Controls.Add(this.label5);
+            this.gb_login.Controls.Add(this.btn_est_ventas);
+            this.gb_login.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gb_login.Location = new System.Drawing.Point(-4, -12);
+            this.gb_login.Name = "gb_login";
+            this.gb_login.Size = new System.Drawing.Size(555, 290);
+            this.gb_login.TabIndex = 17;
+            this.gb_login.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 12.75F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Silver;
+            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label1.Location = new System.Drawing.Point(13, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(234, 22);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Seleccione tipo de reporte:";
+            // 
+            // btn_est_compras
+            // 
+            this.btn_est_compras.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_est_compras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.btn_est_compras.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btn_est_compras.FlatAppearance.BorderSize = 0;
+            this.btn_est_compras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_est_compras.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_est_compras.ForeColor = System.Drawing.Color.White;
+            this.btn_est_compras.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btn_est_compras.Location = new System.Drawing.Point(150, 129);
+            this.btn_est_compras.Name = "btn_est_compras";
+            this.btn_est_compras.Size = new System.Drawing.Size(236, 37);
+            this.btn_est_compras.TabIndex = 1;
+            this.btn_est_compras.Text = "Estadística Compras";
+            this.btn_est_compras.UseVisualStyleBackColor = false;
+            this.btn_est_compras.Click += new System.EventHandler(this.btn_est_compras_Click);
+            // 
+            // lbl_titulo
+            // 
+            this.lbl_titulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_titulo.Font = new System.Drawing.Font("Microsoft JhengHei", 12.75F, System.Drawing.FontStyle.Bold);
+            this.lbl_titulo.ForeColor = System.Drawing.Color.White;
+            this.lbl_titulo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbl_titulo.Location = new System.Drawing.Point(225, 28);
+            this.lbl_titulo.Name = "lbl_titulo";
+            this.lbl_titulo.Size = new System.Drawing.Size(115, 22);
+            this.lbl_titulo.TabIndex = 13;
+            this.lbl_titulo.Text = "Estadísticas";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label5.Location = new System.Drawing.Point(110, 36);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(331, 20);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "______________________________________________";
+            // 
+            // btn_est_ventas
+            // 
+            this.btn_est_ventas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_est_ventas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.btn_est_ventas.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btn_est_ventas.FlatAppearance.BorderSize = 0;
+            this.btn_est_ventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_est_ventas.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_est_ventas.ForeColor = System.Drawing.Color.White;
+            this.btn_est_ventas.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btn_est_ventas.Location = new System.Drawing.Point(150, 190);
+            this.btn_est_ventas.Name = "btn_est_ventas";
+            this.btn_est_ventas.Size = new System.Drawing.Size(236, 37);
+            this.btn_est_ventas.TabIndex = 2;
+            this.btn_est_ventas.Text = "Estadística Ventas";
+            this.btn_est_ventas.UseVisualStyleBackColor = false;
+            this.btn_est_ventas.Click += new System.EventHandler(this.btn_est_ventas_Click);
+            // 
             // Frm_BaseReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,9 +288,9 @@ namespace CLASE05.Formularios.Reportes
             this.Controls.SetChildIndex(this.btn_minimizar, 0);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.gb_login.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

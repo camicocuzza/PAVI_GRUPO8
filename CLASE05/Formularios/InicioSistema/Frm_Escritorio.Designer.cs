@@ -314,15 +314,16 @@
             this.comprasToolStripMenuItem2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.comprasToolStripMenuItem2.ForeColor = System.Drawing.Color.White;
             this.comprasToolStripMenuItem2.Name = "comprasToolStripMenuItem2";
-            this.comprasToolStripMenuItem2.Size = new System.Drawing.Size(143, 26);
+            this.comprasToolStripMenuItem2.Size = new System.Drawing.Size(180, 26);
             this.comprasToolStripMenuItem2.Text = "Compras";
+            this.comprasToolStripMenuItem2.Click += new System.EventHandler(this.comprasToolStripMenuItem2_Click);
             // 
             // ventasToolStripMenuItem2
             // 
             this.ventasToolStripMenuItem2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ventasToolStripMenuItem2.ForeColor = System.Drawing.Color.White;
             this.ventasToolStripMenuItem2.Name = "ventasToolStripMenuItem2";
-            this.ventasToolStripMenuItem2.Size = new System.Drawing.Size(143, 26);
+            this.ventasToolStripMenuItem2.Size = new System.Drawing.Size(180, 26);
             this.ventasToolStripMenuItem2.Text = "Ventas";
             this.ventasToolStripMenuItem2.Click += new System.EventHandler(this.ventasToolStripMenuItem2_Click);
             // 
