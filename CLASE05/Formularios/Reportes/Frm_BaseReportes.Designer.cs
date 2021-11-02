@@ -111,9 +111,9 @@ namespace CLASE05.Formularios.Reportes
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(13, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(234, 22);
+            this.label2.Size = new System.Drawing.Size(255, 22);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Seleccione tipo de reporte:";
+            this.label2.Text = "Seleccione tipo de informe:";
             // 
             // btn_rpt_compras
             // 
@@ -212,9 +212,9 @@ namespace CLASE05.Formularios.Reportes
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label1.Location = new System.Drawing.Point(13, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(234, 22);
+            this.label1.Size = new System.Drawing.Size(272, 22);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Seleccione tipo de reporte:";
+            this.label1.Text = "Seleccione tipo de informe:";
             // 
             // btn_est_compras
             // 
