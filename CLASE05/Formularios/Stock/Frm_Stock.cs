@@ -22,8 +22,8 @@ namespace CLASE05.Formularios.Stock
 
         private void Frm_Stock_Load(object sender, EventArgs e)
         {
-            this.grid_stock_articulos.Formatear("Código, 75, C; Nombre, 170, I; Cantidad, 75, I; Fecha, 150, I");
-            this.grid_stock_ensamblados.Formatear("Código, 75, C; Nombre, 170, I; Cantidad, 75, I; Fecha, 150, I");
+            this.grid_stock_articulos.Formatear("Código, 100, C; Nombre, 270, I; Cantidad, 75, C; Fecha, 150, I");
+            this.grid_stock_ensamblados.Formatear("Código, 100, C; Nombre, 270, I; Cantidad, 75, C; Fecha, 150, I");
         }
 
         private void btn_buscar_articulos_Click(object sender, EventArgs e)
@@ -35,7 +35,11 @@ namespace CLASE05.Formularios.Stock
                 grid_stock_articulos.Cargar(ne_stockArt.BuscarGrilla("", "s.cod_articulo"));
                 return;
             }
-           
+            if (rb_actual_art.Checked == true)
+            {
+                grid_stock_articulos.Cargar(ne_stockArt.BuscarActualGrilla());
+                return;
+            }
             if (rb_fecha_articulo.Checked == true)
             {
                 if (txt_patron_art.Text == string.Empty)
@@ -63,11 +67,12 @@ namespace CLASE05.Formularios.Stock
                 {
                     grid_stock_articulos.Cargar(ne_stockArt.BuscarPorCodigo(txt_patron_art.Text));
                     return;
-                }
+                }                
                 if (rb_n_articulo.Checked == true)
                     columna = "a.nombre";
                 if (rb_fecha_articulo.Checked == true)
                     columna = "s.fecha";
+                
 
                 grid_stock_articulos.Cargar(ne_stockArt.BuscarGrilla(txt_patron_art.Text, columna));
                 if (grid_stock_articulos.Rows.Count == 0)
@@ -86,7 +91,12 @@ namespace CLASE05.Formularios.Stock
                 grid_stock_ensamblados.Cargar(ne_stockEns.BuscarGrilla("", "s.cod_prod_ensamblado"));
                 return;
             }
-            
+
+            if (rb_actual_ens.Checked == true)
+            {
+                grid_stock_ensamblados.Cargar(ne_stockEns.BuscarActualGrilla());
+                return;
+            }
             if (rb_fecha_ensamblado.Checked == true)
             {
                 if (txt_patron_ens.Text == string.Empty)

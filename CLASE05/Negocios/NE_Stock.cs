@@ -33,6 +33,22 @@ namespace CLASE05.Negocios
 
             return _BD.EjecutarSelect(sql);
         }
+        public DataTable BuscarActualGrilla()
+        {
+            string sql = @"select stock.cod_articulo, a.nombre, stock.cantidad, stock.fecha
+                        from stock
+                        join articulo a on stock.cod_articulo = a.cod_articulo join
+                        (
+                            select cod_articulo, max(fecha) as max_dt
+                            from stock
+                            group by cod_articulo
+                        ) t
+                        on stock.cod_articulo= t.cod_articulo and stock.fecha = t.max_dt
+                        order by len(stock.cod_articulo), stock.cod_articulo";
+
+            return _BD.EjecutarSelect(sql);
+        }
+        
         public DataTable BuscarPorCodigo(string codigo)
         {
             string sql = @"SELECT a.cod_articulo, a.nombre, s.cantidad, s.fecha 
